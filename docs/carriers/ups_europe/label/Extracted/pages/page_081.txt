@@ -1,0 +1,93 @@
+Appendix A
+MaxiCode™ Specifications
+Example 2 (Customer Data)
+Using Data Identifiers, the additional customer data 
+would be formatted as follows:
+Customer data may be added to the MaxiCode™ 
+data string. The example below shows how to 
+add a purchase order or invoice number using 
+the following data string.
+06<GS>	
+
+Data Identifier (DI) 
+Format Header
+The first part of the message would remain 
+unchanged.
+10K123456789	
+
+Data Identifier 10K and 
+Customer’s Invoice Number
+<RS>	
+End of Data Identifier Format
+[)><RS>	
+Message Header 
+<EOT>	
+End of Transmission
+01<GS>96	
+
+Transportation Data 
+Format Header
+841706672<GS>	
+Postal Code
+840<GS>	
+Country Code
+001<GS>	
+Class of Service
+MaxiCode™ data string holds about 100 characters 
+of data. The amount of data available for additional 
+customer information will depend upon the number 
+of optional data elements used.
+1Z12345675<GS>	 Tracking Number
+UPSN<GS>	
+SCAC
+1X2X3X<GS>	
+UPS Account Number
+187<GS>	
+Julian Day of Pickup
+<GS>	
+
+Place holder for 
+Shipment ID Number
+1/1<GS>	
+Package N/X
+10<GS>	
+Package Weight
+N<GS>	
+Address Validation
+19 SOUTH ST<GS>	 
+SHIP TO Street Address
+SALT LAKE CITY	
+
+SHIP TO City
+<GS>UT<RS>	
+SHIP TO State
+<EOT>	
+End of Transmission
+[[)><RS>01<GS>96841706672<GS>840<GS>001<GS
+>1Z12345673<GS>UPSN<GS>1X2X3X<GS>187<GS>
+<GS>1/1<GS>10<GS>N<GS>19 SOUTH ST<GS>SALT 
+LAKE CITY<GS>UT<RS><EOT>
+Using Application Identifiers, the additional 
+customer data would be formatted as follows:
+05Gs	
+
+Application Identifier (AI) 
+Format Header
+400123456789	
+
+Application Identifier 400 
+and Customer’s Purchase 
+Order Number
+Rs	
+
+End of Application 
+Identifier Format
+Eot	
+
+End of Transmission
+— OR —
+79
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

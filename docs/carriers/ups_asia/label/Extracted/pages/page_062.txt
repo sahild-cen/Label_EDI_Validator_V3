@@ -1,0 +1,55 @@
+Appendix B
+Barcode Specifications — Code 128
+Code 128 Character
+	
+ 1X	
+3X	
+2X
+	
+(2X)	
+(2X)	
+(1X)
+	 1	
+2	
+3	
+4	
+5	
+6	
+7	
+8	
+9	
+10	
+11
+MODULES
+1 Code 128 Character = 11 Modules
+1X = 1 Module
+Code 128 Dimensional Tolerances
+	
+P
+	
+X	
+	
+3X	
+	
+2X
+	
+b	
+s	
+b	
+s	
+b	
+s
+	
+e	
+	
+e
+	
+	
+e	
+	
+e
+58
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

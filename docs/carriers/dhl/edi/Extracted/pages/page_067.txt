@@ -1,0 +1,48 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 70  
+Group 
+Occurrence 
+Usage 
+Description 
+SG70 
+4 
+C 
+ EQD-EQN-MEA                                                                                                
+Function: A group of segments to specify equipment in which goods are transported.   
+ 
+SG 70 - EQD 
+Segment 
+Occurrence 
+Usage 
+Description 
+EQD 
+1 
+M 
+ Equipment Details                                                                                 
+Function:   To identify a unit of equipment. The type of pallets etc. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8053 
+M 
+AN..3 
+Equipment Type code 
+ 
+Example:  
+EQD+EFP’ 
+ 
+Note 8053: 
+Use:  ‘EFP’  – Changeable Pallet 
+                                   ‘EYP’ – Changeable Box 
+                                   ‘FPN’ – Pallet 
+                                   ‘BPN’ – Box Pallet WT’ – Weight.  
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 67 of 115

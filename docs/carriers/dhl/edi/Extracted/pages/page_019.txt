@@ -1,0 +1,89 @@
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Shipment Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to indicate all data on shipment level. 
+CNI 
+ 
+ 
+ 
+CNI - Consignment information 
+• 
+A segment to indicate consignments included in the 
+consolidation using the transport document/message number. 
+DTM 
+ 
+ 
+DTM - A segment to indicate date and time such as expected delivery 
+CNT 
+ 
+ 
+CNT – Control Totals within the Shipment 
+TSR 
+ 
+ 
+TSR, Transport service requirements 
+• 
+A segment indicating products 
+MOA 
+ 
+ 
+MOA, Monetary amounts 
+• 
+A segment to indicate a monetary value for an entire shipment, 
+e.g. declared customs value, cash on delivery or insurance. 
+FTX 
+ 
+ 
+FTX, Free text 
+• 
+A segment to specify free form or process available 
+supplementary information, such consignment remarks 
+Segment 
+Group 2 
+SG31 
+ 
+ 
+A group of segments to specify terms of delivery 
+TOD 
+ 
+TOD, Terms of delivery 
+• 
+A segment to indicate product features 
+LOC 
+ 
+Place/location identification 
+• 
+A segment to identify a location related to the incoterms 
+SG32 
+ 
+ 
+A group of segments containing a references and constants which apply to entire c
+or shipment. 
+RFF 
+ 
+RFF, To identify a reference used by a party 
+SG33 
+GOR 
+ 
+GOR, A segment to indicate applicable governmental procedures related to import
+transport of the goods. 
+SG34 
+ 
+A group of segments to indicate documents. 
+DOC 
+Documents 
+• 
+A segment to indicate accompanying documents for customs 
+clearance 
+DTM 
+A segment to indicate date and time related to invoice. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 19 of 115

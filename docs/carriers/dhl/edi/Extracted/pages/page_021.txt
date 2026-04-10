@@ -1,0 +1,118 @@
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Shipment Item Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to describe the goods items for which transport is undertaken. 
+ 
+ 
+ 
+ 
+GID 
+ 
+ 
+GID - Goods item details 
+• 
+A segment to identify a goods item for which transport is 
+undertaken. 
+SG52 
+ 
+ 
+A group of segments to specify measurements applicable to a goods 
+item 
+ 
+MEA 
+ 
+A segment to specify measurements, applicable to a goods item 
+ 
+ 
+ 
+ 
+SG53 
+ 
+ 
+A group of segments to specify dimensions applicable to a goods item. 
+ 
+DIM 
+ 
+DIM, Dimensions 
+• 
+A segment to specify dimensions, applicable to a goods item. 
+ 
+SG54 
+ 
+ 
+A group of segments to identify references to a goods item. 
+ 
+RFF 
+ 
+RFF, To identify a goods items references used by a party. 
+Segment 
+ 
+SG55 
+ 
+ 
+A group of segments to specify marks and numbers of a goods item. 
+Group 50 
+ 
+PCI 
+ 
+PCI, Package identification 
+• 
+A segment to indicate the type of markings on the item. 
+ 
+GIN 
+ 
+GIN, Goods identity number 
+• 
+A segment containing the bar coded identification code (e.g. 
+CEN License plate). 
+ 
+ 
+ 
+ 
+SG65 
+ 
+ 
+A segment group to indicate dangerous goods information. 
+ 
+DGS 
+ 
+DGS, Dangerous goods 
+• 
+A segment to indicate the details of the dangerous goods within 
+the item. 
+ 
+FTX 
+ 
+FTX, Free text 
+• 
+A segment to indicate the technical name of the dangerous 
+goods. 
+ 
+SG67 
+ 
+A group of segments to specify measurements applicable to the 
+dangerous goods within the item. 
+ 
+ 
+MEA 
+MEA, Measurements 
+• 
+A segment to specify measurements applicable to the 
+dangerous goods within the item. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 21 of 115

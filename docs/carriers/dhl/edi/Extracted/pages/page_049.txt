@@ -1,0 +1,55 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 34 - DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+1 
+O 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+3:200906011500:203’ 
+ 
+Note: 
+This segment is used for specifying the document date/time 
+Note 2005:  
+Use: 
+ ‘3’ – Commercial Invoice date/time 
+ 
+Note 2380: 
+With ‘3’ in preceding element, this is Invoice Date of the Commercial Invoice. The 
+specified format is mandatory. 
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+‘102’ for the date mask CCYYMMDD 
+. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 49 of 115

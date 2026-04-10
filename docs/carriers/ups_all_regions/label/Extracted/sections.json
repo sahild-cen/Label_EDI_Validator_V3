@@ -1,0 +1,1112 @@
+[
+  {
+    "title": "Effective January 1, 2024",
+    "content": "Version 1.5\n© 2024 United Parcel Service of America, Inc. UPS, the UPS brandmark and the color \nbrown are trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 1
+  },
+  {
+    "title": "Table of Contents",
+    "content": "Page\nWhat's New  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2\nState Department Licensed Shipments  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3\n• UPS World Ease™ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7\n• UPS Trade Direct™ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  23\n• UPS™ Worldwide Economy .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36\n• International Special Commodities  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46\n• UPS Proactive Response™ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  47\n• Refrigeration Service .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  54\n• Dry Ice and Biological Substances .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  56\n• UPS® Premier .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  59\nInternational Shipping Documentation  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  63\n• UPS Paperless™ Invoice .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  64\n• International Forms - Image Upload . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  67\n• UPS Returns Pack and Collect™ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69\n• UPS Returns Exchange™ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  71\nAppendix A  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  75\nAppendix B .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  76\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\n1\nUPS Guide to Labeling\nSupplement",
+    "page": 2
+  },
+  {
+    "title": "UPS Contractual Services",
+    "content": "Introduction\nWhat’s New\nThe World Ease single label (without Over-Label) will now\nbe a new label option supported for customers that want to\nsimplify their label generation process. The new consolidated\nlabel will include the UPS Import Site Information on the\nsame label as the final destination. See page 17.\nFor additional service details, please refer to the UPS \nRate and Service Guide.\nAll  UPS Worldwide Economy labels must display EDI on the \nlabels.\nPlee note that all UPS labels featured in this guide are for \nvisual representation only and should not be used as real \nshipping labels.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n2\nSupplement",
+    "page": 3
+  },
+  {
+    "title": "State Department License Shipments",
+    "content": "Label Format Requirements\nIntroduction\n\u0007\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t AES:\nPosition \t\n4\t\n=\t Space\nPositions \t 5-20\t\n=\t Up to 16 alphanumeric\n• \u0007\nFont Size                                  = 10 pt.\nAir Freight\nUPS offers the ability to ship export-controlled \narticles that require State Department License (SDL) \nor license Exemption. For SDL or SDL exemption \nshipments, the shipping label must contain \nadditional information to assist UPS in processing \nyour shipment.\nFor SDL shipments, sent via Air Freight the \"SDL\" \nindication and the ITN must print in the routing \nsection of the label.\n• SDL\nITN number will print as follows on the next line:\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t AES\nPosition \t\n4\t\n=\t Space\nPositions \t 5-20\t\n=\t Up to 16 alphanumeric\nInternational Documentation Indicators\nWhen shipping export-controlled articles \nthat require SDL or license exemption special \nInternational Documentation Indicators must be \nprinted on the label to alert UPS Operations about \nthe type of shipment.  For all State Department \nLicensed or Exempted shipments the indicator on \nthe label should be:\n• \u0007\nSDL\nFont Size = 10 pt.\n• \u0007\nFont Size = 10 pt. bold\nNOTE:  If  a license exemption is provided an\nexemption legend is required to print on the label.\nWhen asking UPS to complete an AES filing for a \nState Department License, an Electronic Export \nInformation (EEI) indicator is required on the label:\n• \u0007\nData Content\n\nPositions \t\n      1-20                     = Up to 20 characters\n• \u0007\nEEI (formaly known as  SED - Shipper Export \nDeclaration)\nPDF417 Barcode\n• \u0007\nFont Size = 10 pt. bold\nWhen the Shipper has authorized UPS to complete \nAES filing on their behalf, the following must be \npresent on the label:\n• Routing Instruction = POA(Power of Attorney)\nWhen SDL shipments use a UPS service that \nrequires a PDF417, the PDF417 barcode must print \non the shipping label.  For details on the PDF417 \nbarcode, please refer to the PDF417 Barcode \nSymbology document.\n• Font Size = 10 pt.\n• Location = \u0007\nImmediately below the larger \ndocumentation indicator\nAdditional Routing Instructions\nNOTE: When POA, EEI, and/or CO are printed in \ncombination, they must be separated by a forward \nslash (e.g., /). For label example see page 13.   When \napplicable, the indicators listed above must print on \nall labels in a shipment.\nTAX IDENTIFICATION TYPE AND NUMBER\nFor SDL shipments, when a shipper authorizes \nUPS to complete AES filing, for an international \nshipment, the text shown below must print left-\njustified; the tax ID type and the EIN .\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t EIN:  or DUNS:\nPosition \t\n6\t\n=\t Space\nPositions \t 8-21\t\n=\t Up to 15 alphanumeric\n• \u0007\nFont Size = 10 pt.\nWhen the shipper has completed AES filing and \nhas the Internal Transaction Number (ITN), the \nnumber must print on the label. The ITN number \nmust always take precedence over the printing of \nreference numbers on the address label.\n3\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\nSupplement",
+    "page": 4
+  },
+  {
+    "title": "State Department License Shipments",
+    "content": "SDL shipment with AES filing completed - ITN included",
+    "page": 5
+  },
+  {
+    "title": "15 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 15 LBS\nSTREET ADDRESS\nSHP  DWT: 25 LBS\nCHICAGO  IL 60607\nDATE: 11 JAN 2020\nUNITED STATES\nSHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 5
+  },
+  {
+    "title": "UPS EXPRESS",
+    "content": "TRACKING #:\n1Z 1X2 X3X 66 1234 5676",
+    "page": 5
+  },
+  {
+    "title": "1",
+    "content": "BILLING: P/P",
+    "page": 5
+  },
+  {
+    "title": "INV",
+    "content": "DESC: DOCUMENTS\nSDL/POA\nAES X23456789012345\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n4\nSupplement",
+    "page": 5
+  },
+  {
+    "title": "State Department License Shipments",
+    "content": "SDL Shipment - Shipper Requests UPS to complete AES filing",
+    "page": 6
+  },
+  {
+    "title": "38 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP #: 1X2X 3X7R CDG\nSHP  WT: 38 LBS\nSTREET ADDRESS\nSHP  DWT: 38 LBS\nDATE: 11 JAN 2020\nCHICAGO  IL 60607\nUNITED STATES\nSHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 6
+  },
+  {
+    "title": "CHN 710 0-00",
+    "content": "TRACKING #:",
+    "page": 6
+  },
+  {
+    "title": "INV",
+    "content": "DESC: AUTO PARTS\nEIN: 123456789\nSDL/EEI/POA\nBILLING: P/P\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions or\nother mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route\nthe shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that the\ncommodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n5\nSupplement",
+    "page": 6
+  },
+  {
+    "title": "State Department License Shipments",
+    "content": "AIR FREIGHT: SDL Shipments with AES filing complete - ITN included\nDATE: 11 JAN 2020\nCONTACT NAME\nPHONE NUMBER\nORIGIN:  ATL\nCOMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\nROSWELL GA US 30076\nCONTACT NAME\nPHONE NUMBER\nSHIP\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS\nEXTENDED ADDRESS",
+    "page": 7
+  },
+  {
+    "title": "UPS AIR FREIGHT DIRECT",
+    "content": "SHIPMENT/PRO #:  906 766 744 4\nBILLING: OTH/DDP/S\nCUSTOMS CLEARANCE\nSDL\nAES X20034567890\n18.5A 01/2020\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n6\nSupplement",
+    "page": 7
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "Label Format Requirements\nfor final distribution.\nUPS World Ease™ General Rules\nUPS World Ease™ Label\nUPS World Ease™ service allows shippers to \ncombine multiple shipments for multiple receivers \ninto one large shipment. It moves and clears \ncustoms as one transaction then is split and \ndelivered to multiple receivers.  UPS World Ease™ \npackages can also be addressed to UPS Access \nPoint™  destinations.\nThe UPS World Ease™ label is divided into two \ndistinct sections contained on a single 4\" x 11\" label. \nThe first section is the upper part of the label (4\" x \n6\"), which contains the final destination information \nfor the shipment. The second section of the label (4\" \nx 5\") contains the UPS import site information and \nis referred to as the over-label. The over-label must \nbe perforated allowing the customer to remove the \n4\" x 5\" portion and position the label horizontally \nover the Ship To Address section exposing only the \nUPS Service Title, Tracking Number, Service Icon \nand all the information beneath it. See example \nlabel on page 9. The material must be constructed \nin a manner which allows UPS to remove the over-\nlabel at the import site without damaging the \nMaxiCode™, Postal Barcode, or shipping information \non the final destination label.\nUPS World Ease™ Paper Documentation \nFinal Destination Block — \n\n4\" x 6\" Portion of the label\nAll Shipments must have the same ship date, \nimporter of record and billing option. UPS \nExpress Plus™, UPS Express™ and UPS Saver™ \nservice levels may be combined within a Master \nShipment as allowed by the origin/destination \npair and shipper's Port of Entry (POE) table. All \nChild Shipments within a Master Shipment for \nUPS Expedited™ and UPS® Standard service \nlevels must contain the same service level. All \nChild Shipments must clear in the same port as \nthe Summary Shipment (document box). The \ndocument box is a UPS-supplied green-colored \nbox that is processed as the lead shipment of the \nconsolidated movement. The document box will \nalways be a single-piece shipment. The shipping \nsystem will automatically create the document box \nshipment after completion of the last shipment \nof a Consolidated UPS World Ease™ movement \ncontaining paper documents. The document box \nwill contain all import documentation required to \nclear customs.\nThis section contains the final destination \ninformation for the shipment. All data formatting \nand placement of the information follows the \ncurrent UPS Guide to Labeling. In addition, an \nindicator must print directly to the right (preceded \nby a dash) of the documentation indicator in the top \nright corner of the Additional Routing Instructions \nBlock. All labels including the document box will \ndisplay the same indicator.  \nFor shipments containing paper documents; which \ndo not qualify for Paper Invoice, the formatting rules \nare:\n• Indicator Font Size = 16 pt. bold\n• Document Indicator Text = INV-CC\nImport Site Block — \n\n4\" x 5\" Portion of the Label (Over-Label)\nCustomers using the contractual UPS Paperless™ \nInvoice service have an option to eliminate \nthe document box, CID, and master invoice if \nno paper documents are necessary for import \nclearance.  When a document box is NOT \nrequired the shipping system will automatically \ncreate a Summary Label. The Summary Label \nwill be applied adjacent to the shipping label \nof the last package of the shipment. A specific \ndocumentation indicator will be used to designate \nthe inclusion or omission of a document box in a \nconsolidated UPS World Ease™  shipment using \nPaperless Invoice.\nThis section contains the UPS import site \ninformation for the consolidated shipment \ncontaining paper documents and/or non-paper \nitems; which do not qualify for Paperless Invoice \nService.\n• The lead package must be a UPS World Ease™\ndocument box (Doc Box)\n• All labels (Doc Box and Child Shipment Labels\nFor customers shipping to the European Union \n(EU), Child Shipments destined to all 27 EU \ncountries can be combined into one Master \nShipment for  a consolidated customs clearance. \nIndividual shipments must originate from a single \npick-up point in a non-European Union country \nand must clear in a single port of entry in the EU\nmust have an over-label with the same document \nindicator in the bottom right corner\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n7\nSupplement",
+    "page": 8
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "Label Format Requirements\n• All of the thermal over-labels must display the\nsame port of entry in the “Sort To” field\n• The lead package (doc box) over-label must print\nSHIP TO INFORMATION\nThis block contains the import site information. \n\nAll characters must be in bold, uppercase letters.\nTitle positioned to the far left:\n• \u0007\nLine 1 = SORT\n• \u0007\nLine 2 = TO:\n“PKG# 1 of___” (input total number of packages \nincluding document box).  In the next segment \non right print the text “TRKG # ___” input the last 3 \ndigits of the document box tracking number.\n• The child packages must print “PKG # ___” (input\n• \u0007\nFont Size = 16 pt. bold\nThe font size may be reduced based on printer \ntype and space available to accommodate the \ncomplete text.\npackage number).  In the next segment on right \nprint the text TRKG # ___ (all followed by the last 3 \ndigits of the document box 1Z tracking number)\nUPS Import Site information must print to the right \n\nof the \"SORT TO:\" text separated by a vertical line:\n• Line 1 = UPS, 16 pt. bold\n• Line 2 = Port Name, 16 pt. bold\n• Line 3 = Country Name, 14 pt. bold\n• Line 3 = Postal Code, 14 pt. bold\nThe import site information can be found in the \n\nPort of Entry (POE) table. Contact your UPS Account \nExecutive for information on POE tables.\n• When required, UPS World Ease™  shipments\n   must have a Master Invoice and the associated\n   Consolidated Invoice Detail (CID). (see page 16)\nPACKAGE COUNT \nThe package count indicates the number of the \npackage N, related to the number of packages \nin the entire shipment X (e.g., N of X). Only N will \nprint on the over-label except, when the shipment \nis the Document Box. The complete N of X for the \nconsolidated shipment must print only on the \ndocument box.\nDOCUMENT BOX\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\nPosition \t\n5\t\n=\t Space\nPositions \t\n6-8\t\n=\t Up to three numeric\nPosition \t\n9\t\n=\t Space\nPositions \t 10-11\t\n=\t OF\nINSTRUCTION TEXT\nThis block contains instructions for the customer \n\nand UPS Operations. The customer text explains \n\nto the customer how to apply the over-label to \n\nthe package. This text will be translated when \nappropriate. The UPS text informs Operations \n\nwhen to remove the over-label. The over-label \n\nwill be removed at the import site. The UPS text \nmust always be in English.\nPosition \t\n12\t\n=\t Space\nPositions \t 13-15\t\n=\t Up to three numeric\nCUSTOMER TEXT\n• \u0007\nFont Size                                  = 12 pt.\n• \u0007\nTitle  = CUSTOMER:\n• For Example:  PKG# 1 OF 10\n• \u0007\nFont Size = 8 pt. bold\nALL OTHER PACKAGES OF A SHIPMENT\n• Text  =  *\u0007\nAPPLY THIS LABEL OVER THE ADDRESS \nLABEL DIRECTLY ABOVE THE UPS SERVICE \nNAME.\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\nPosition \t\n5\t\n=\t Space\n*\u0007\nTHE 1Z TRACKING NUMBER AND THE \nBARCODE SHOULD BE VISIBLE.\nPositions \t\n6-8\t\n=\t Up to three numeric\n*SEE BACK OF LABEL FOR EXAMPLE.\n• Font Size                                  = 14 pt.\n• \u0007\nFont Size = 8 pt.\n• For Example:  PKG# 3\nUPS TEXT\n• \u0007\nTitle  = UPS IMPORT:\nTRACKING NUMBER\nThe last three digits of the shipment’s document box \n1Z tracking number will print on each over-label.\n• \u0007\nFont Size   = 8 pt. bold\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t TRKG#\n• Text = \u0007\nREMOVE THIS OVER-LABEL AFTER CUSTOMS \nCLEARANCE.\nPosition \t\n6\t\n=\t Space\n• \u0007\nFont Size  = 8 pt.\nPositions \t\n7-9\t\n=\t Three numeric\n• \u0007\nFont Size = \u0007\nDocument box: 12 pt. All others: 14 pt.\n• For Example:  TRKG# 763\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\n8\nSupplement",
+    "page": 9
+  },
+  {
+    "title": "UPS World Ease™  Specifications",
+    "content": "UPS World Ease™  Label - Document Box\nINTERNATIONAL SHIPPING NOTICE\nThis block will contain the International Shipping \nNotice text and will appear on the over-label. The text \nwill appear to the far left of the label, printed vertically. \nThe notice must also appear on the main label. Please \nrefer to the International Shipping Notice text in the \nUPS Guide to Labeling.\n• \u0007\nFont Size = 4 pt.\nOver Label as applied to Doc Box Label\n\nDocument Box Label\nPKG# 1 OF 2\nTRKG# 410\nPackage  \n1 OF__\nSORT\nUPS\nNARITA\nTO:\nJAPAN  2828691\nPort of \nEntry\nCUSTOMER:\n*APPLY THIS LABEL OVER THE ADDRESS\n  LABEL DIRECTLY ABOVE THE UPS SERVICE\n  NAME.\n*THE 1Z TRACKING NUMBER AND THE\n  BARCODE SHOULD BE VISIBLE.\n*SEE BACK OF LABEL FOR EXAMPLE.",
+    "page": 10
+  },
+  {
+    "title": "JPN 699 9-00",
+    "content": "SM\nUPS IMPORT:\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nCLEARANCE.\nUPS World Ease\nUPS World Ease\nSM\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\nstopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\nDiversion contrary to law is prohibited.\nTRACKING #:",
+    "page": 10
+  },
+  {
+    "title": "2\nUPS EXPEDITED\n1Z 1X2 X3X 67 0000 5410",
+    "content": "Billing\nINV-CC\nBILLING: P/P\nDESC: SHOES\nOption\nPOA / CO\n18.5A 01/2020\nDocumentation \nIndicator\nGeneral\nDescriptIon\nof Goods\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\n9\nSupplement",
+    "page": 10
+  },
+  {
+    "title": "UPS World Ease™  Specifications",
+    "content": "UPS World Ease™  Label - Child Shipment\nOver Label as applied to a Child Shipment Label\nChild Shipment Label\nTracking\n60 KG\n1 OF 2\nCONTACT NAME\nPHONE NUMBER\nPKG# 2\nTRKG# 410\nCOMPANY NAME\nSTREET ADDRESS\n60386  FRANKFURT\nPackage \nNumber\nSHP#: 1X2X3X33 3TS\nSHP WT: 60 KG\nDATE: 11 JAN 2020\nGERMANY\nSORT\nUPS\nNARITA\nNumber \n(Last 3 \ndigits)\nSHIP\nCONTACT NAME\nTO:\nTO:\nPHONE NUMBER\nJAPAN  2828691\nCOMPANY NAME\nEXTENDED ADDRESS\nCUSTOMER:\nSTREET ADDRESS\nTOKYO 1000004\nJAPAN",
+    "page": 11
+  },
+  {
+    "title": "JPN 106 1-00",
+    "content": "*APPLY THIS LABEL OVER THE ADDRESS\n  LABEL DIRECTLY ABOVE THE UPS SERVICE\n  NAME.\n*THE 1Z TRACKING NUMBER AND THE\n  BARCODE SHOULD BE VISIBLE.\n*SEE BACK OF LABEL FOR EXAMPLE.",
+    "page": 11
+  },
+  {
+    "title": "JPN 699 9-00",
+    "content": "SM\nUPS IMPORT:\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nCLEARANCE.\nTRACKING #:\nUPS EXPEDITED\n1Z 1X2 X3X 67 0000 5394",
+    "page": 11
+  },
+  {
+    "title": "2",
+    "content": "UPS World Ease\nUPS World Ease\nSM\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\nstopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\nDiversion contrary to law is prohibited.\nTRACKING #:",
+    "page": 11
+  },
+  {
+    "title": "2\nUPS EXPEDITED\n1Z 1X2 X3X 67 0000 5394",
+    "content": "BILLING: P/P\nDESC: SHOES",
+    "page": 11
+  },
+  {
+    "title": "INV-CC\nPOA / CO",
+    "content": "18.5A 01/2020\nINV-CC\nBILLING: P/P\nDESC: SHOES\nPOA / CO\n18.5A 01/2020\nUPS World Ease\nNAME.",
+    "page": 11
+  },
+  {
+    "title": "SORT",
+    "content": "CUSTOMER:\nUPS IMPORT:\nCLEARANCE.\nDiversion contrary to law is prohibited.",
+    "page": 11
+  },
+  {
+    "title": "TO:\nNARITA",
+    "content": "BARCODE SHOULD BE VISIBLE.\n*SEE BACK OF LABEL FOR EXAMPLE.\n*THE 1Z TRACKING NUMBER AND THE\n*APPLY THIS LABEL OVER THE ADDRESS",
+    "page": 11
+  },
+  {
+    "title": "JAPAN  2828691",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air",
+    "page": 11
+  },
+  {
+    "title": "PKG# 2\nTRKG# 410",
+    "content": "stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nLABEL DIRECTLY ABOVE THE UPS SERVICE\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the",
+    "page": 11
+  },
+  {
+    "title": "JPN 696 9-00",
+    "content": "UPS World Ease\nUPS Guide to Labeling\n10\n© 2024 United Parcel Service of America, Inc. UPS and the UPS \nbrandmark are trademarks of United Parcel Service of America, Inc. \nAll rights reserved.\nSupplement",
+    "page": 11
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "Label Format Requirements\nUPS World Ease™ Paperless Invoice\nFinal Destination Block — \n\n4\" x 6\" Portion of the Label\nPACKAGE COUNT \nThe package count indicates the number of the \npackage N, related to the number of packages \nin the entire shipment X (e.g., N of X). Only N will \nprint on the over-label except, when the shipment \nis the Document Box. The complete N of X for the \nconsolidated shipment must print only on the \ndocument box.\nDOCUMENT BOX\nThis section contains the final destination \ninformation for the shipment. All data formatting \nand placement of the information follows the \ncurrent UPS Guide to Labeling. In addition, an \nindicator must print directly to the right (preceded \nby a dash) of the documentation indicator in \nthe top right corner of the Additional Routing \nInstructions Block. All labels including the \ndocument box will display the same indicator.\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\nPosition \t\n5\t\n=\t Space\nFor  all Paperless Invoice shipments that require a \nDocument Box the following rules apply:\nPositions \t\n6-8\t\n=\t Up to three numeric\n• Indicator Font Size = 16 pt. bold\nPosition \t\n9\t\n=\t Space\n• Document Indicator Text = EDI-CCP\nPositions \t 10-11\t\n=\t OF\nPosition \t\n12\t\n=\t Space\nPositions \t 13-15\t\n=\t Up to three numeric\n• \u0007\nFont Size = 12 pt.\nImport Site Block — \n\n4\" x 5\" Portion of the Label (Over-Label)\n• For Example:  PKG# 1 OF 10\nALL OTHER PACKAGES OF A SHIPMENT\nThis section contains the UPS import site \ninformation for the Paperless Invoice consolidated \nshipment containing a document box.\n• The lead package must be a UPS World Ease™\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\nDocument Box (Doc Box)\nPosition \t\n5\t\n=\t Space\n•  All labels (Doc Box and Child Shipment\nPositions \t\n6-8\t\n=\t Up to three numeric\n• Font Size = 14 pt.\n• For Example:  PKG# 3\nLabels) must have the same documentation \nindicator (EDI-CCP) on the bottom right corner of \nthe shipping label\n• All thermal over-labels must display the\nsame port of entry in the “Sort To” field\n• The lead package (doc box) over-label must print\n“PKG# 1 of___” (total number of packages \nincluding document box) \nIn the next segment on right print the text “TRKG \n# ___”  (the last 3 digits of the document box \ntracking number)\n• The child packages must print “PKG # ___” (input\npackage number).  In the next segment on right \nprint the text TRKG # ___ (all followed by the last 3 \ndigits of the document box 1Z tracking number)\n• When required, UPS World Ease™  shipments\n   must have a Master Invoice and the associated\n   Consolidated Invoice Detail (CID). (see page 16)\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n11\nSupplement",
+    "page": 12
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™  Label -Paperless Invoice\n1 LBS\n1 OF 1\nCONTACT NAME\nPHONE NUMBER\n5 LBS\n1 OF 1\nCONTACT NAME\nPHONE NUMBER\nWORLDEASE US SHIPPER\nSHP #: 1X2X3X 9TT\nWORLDEASE US SHIPPER\nSHP #: 1X2X3X 9X4\n1 UPS WAY\nSHP WT: 49 LBS\n1 UPS WAY\nSHP WT: 49 LBS\nLOS ANGELES CA 90001\nLOS ANGELES CA 90001\nSHP DWT: 49 LBS\nDATE: 11 JAN 2020\nUNITES STATES\nSHP DWT: 49 LBS\nDATE: 11 JAN 2020\nUNITES STATES\nCONTACT NAME\nUPS CUSTOMS CLEARANCE\nPHONE NUMBER\nSHIP\nTO:\nPHONE NUMBER\nSHIP\nTO:\nCOMPANY NAME\nCOMPANY NAME\nEXTENDED ADDRESS\nKENNEDYSTABE\n51147 KOLN\nSTREET ADDRESS\n41460 NEUSS\nGERMANY\nGERMANY",
+    "page": 13
+  },
+  {
+    "title": "DEU 415 9-00",
+    "content": "UPS EXPEDITED\nUPS EXPEDITED\nTRACKING #:\n1Z 1X2 X3X 67 0000 5401",
+    "page": 13
+  },
+  {
+    "title": "2",
+    "content": "TRACKING #:\n1Z 1X2 X3X 67 0000 5741",
+    "page": 13
+  },
+  {
+    "title": "2",
+    "content": "Documentation\nBILLING: P/P\nDESC: DOCUMENT BOX",
+    "page": 13
+  },
+  {
+    "title": "EDI-CCP\nPOA / CO",
+    "content": "Indicator\nBILLING: P/P\nDESC: COMPUTER EQUIPMENT",
+    "page": 13
+  },
+  {
+    "title": "EDI-CCP\nPOA",
+    "content": "18.5A 01/2020\n18.5A 01/2020\nPackage Count\n(N of X)\nUPS World Ease\nUPS World Ease\nNAME.\nPackage Count",
+    "page": 13
+  },
+  {
+    "title": "TO:",
+    "content": "NAME.\nCUSTOMER:\nNumber\nUPS IMPORT:\nCLEARANCE.",
+    "page": 13
+  },
+  {
+    "title": "SORT",
+    "content": "CUSTOMER:\nUPS IMPORT:\nCLEARANCE.\nDiversion contrary to law is prohibited.\nDiversion contrary to law is prohibited.",
+    "page": 13
+  },
+  {
+    "title": "UPS",
+    "content": "BARCODE SHOULD BE VISIBLE.\nBARCODE SHOULD BE VISIBLE.\n*SEE BACK OF LABEL FOR EXAMPLE.",
+    "page": 13
+  },
+  {
+    "title": "COLOGNE",
+    "content": "*THE 1Z TRACKING NUMBER AND THE\n*SEE BACK OF LABEL FOR EXAMPLE.\n*THE 1Z TRACKING NUMBER AND THE\n*APPLY THIS LABEL OVER THE ADDRESS\n*APPLY THIS LABEL OVER THE ADDRESS\nGERMANY 51147\nLABEL DIRECTLY ABOVE THE UPS SERVICE\nGERMANY 51147\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air",
+    "page": 13
+  },
+  {
+    "title": "PKG# 1 OF 2\nTRKG# 401",
+    "content": "stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the",
+    "page": 13
+  },
+  {
+    "title": "PKG# 2\nTRKG# 401",
+    "content": "LABEL DIRECTLY ABOVE THE UPS SERVICE\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nstopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the",
+    "page": 13
+  },
+  {
+    "title": "DEU 510 9-00",
+    "content": "UPS World Ease\nUPS World Ease\nUPS World Ease\nUPS World Ease\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n12\nSupplement",
+    "page": 13
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "Label Format Requirements\n• Font Size = 12 pt.\nImport Site Block — \n\n4\" x 5\" Portion of the Label (Over-Label)\n• For Example:  TRKG# 763\nThis section contains the UPS import site information \nfor Paperless Invoice shipments NOT requiring a \ndocument box. The following rules apply:\n• A shipping label and a Summary Label will be\nSHIP TO INFORMATION\nThis block contains the import site information. All \ncharacters must be in bold, uppercase letters. Title \npositioned to the far left:\n• \u0007\nLine 1 = SORT\napplied to the last package in the consolidated \nshipment\n• \u0007\nLine 2 = TO:\n•  All labels except the Summary label, must have\n• Font Size = 16 pt. bold\nan over-label\n•  All shipping labels will use the same documention \nindicator\n(EDI-CCV ) in the bottom right corner\nThe font size may be reduced based on printer type \nand space available to accommodate the complete \ntext.\n• The Summary Label will print the total number of\nUPS Import Site information must print to the right \nof SORT TO: title separated by a vertical line:\npackages in the consolidated shipment \"TOTAL \nPKG #:\"\n• \u0007\nLine 1 = UPS, 16 pt. bold\n• The child packages must print “PKG # ___” (input\n• \u0007\nLine 2 = Port Name, 16 pt. bold\n• \u0007\nLine 3 = Country Name, 14 pt. bold\n• \u0007\nLine 3 = Postal Code, 14 pt. bold\npackage number).  In the next segment on right \nprint the text TRKG # ___ (all followed by the last 3 \ndigits of the Virtual 1Z tracking number)\nThe import site information can be found in the \nPort of Entry (POE) table. Contact your UPS Account\nExecutive for information on POE tables.\n•  When required, UPS World Ease™  shipments\n   must have a Master Invoice and the associated\n   Consolidated Invoice Detail (CID). (see page 16)\nSpecifications for the UPS World Ease™  \nPaperless Invoice Summary Label\nSHIPPERS INSTRUCTIONS\n• \u0007\nPlease Apply This Label to Package # ___ (Blank \nindicates the value of the last package or total \nnumber of packages in the consolidated shipment)\nPACKAGE COUNT \nThe package count indicates the number of the \npackage N, related to the number of packages in the \nentire shipment X (e.g., N of X). Only N will print on \nthe over-labels.  The summary label will only include \nthe total number of packages in the consolidated \nshipment.\n• \u0007\nFont Size 12 pt. Bold\nALL PACKAGES OF A SHIPMENT\nSERVICE TITLE\n• UPS World Ease\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\n• Font Size 16 pt. Bold\nPosition \t\n5\t\n=\t Space\nPACKAGE COUNT\nPositions \t\n6-8\t\n=\t Up to three numeric\n• Font Size = 14 pt.\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t TOTAL\n• For Example:  PKG# 3\nPosition \t\n6\t\n=\t Space\nPositions \t\n7-9\t\n=\t PKG\nPosition         9-10\t\n=\t #:\nPositions \t\n11\t\n=\t Space\nTRACKING NUMBER\nThe last three digits of the shipment’s virtual \ndocument box 1Z tracking number will print on each \nover-label\nPosition \t 12-14\t\n=\t Three numeric\n• \u0007\nFont Size                                  = 12 pt.\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t TRKG#\n• For Example:  PKG #: 123\nPosition \t\n6\t\n=\t Space\nPositions \t\n7-9\t\n=\t Three numeric\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n13\nSupplement",
+    "page": 14
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "Label Format Requirements\nTRACKING NUMBER\nThe last three digits of the shipment’s virtual \ndocument box 1Z tracking number will print on the \nsummary label\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t TRKG\nPosition \t\n5\t\n=\t Space\nPosition           6-7\t\n=\t #:\nPositions \t\n8\t\n=\t Space\nPosition         9-11\t\n=\t Three numeric\n• \u0007\nFont Size                                  = 12 pt.\n• For Example:  TRKG #: 123\nDOCUMENTATION INDICATOR\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t EDI\nPosition \t\n4\t\n=\t - (Dash)\nPosition           5-7  \t\n=\t CCV\n• \u0007\nFont Size                                  = 16 pt. Bold\n• For Example:  EDI-CCV\nGLOBAL CUSTOMS CLEARANCE NUMBER (GCC#)\nThe shipment’s virtual document box 1Z tracking \nnumber will be used to calculate the GCC# which is \nthe same as the Shipment Number.  See Appendix D \nof the UPS Guide to Labeling.\n• \u0007\nData Content\n\nPositions         1-3\t\n=\t GCC\nPosition               4\t\n\t\n=\t Space\nPositions         5-6  \t\n=\t #:\nPosition               7\t\n\t\n=\t Space\nPositions \t 8-13\t\n=\t Alphanumeric\nPosition            14\t\t\n=\t Space\nPositions \t 15-19\t\n=\t Alphanumeric\n• \u0007\nFont Size                                  = 12 pt.\n• For Example:  GCC #: 1X2X3X 9WB3K\nUPS Guide to Labeling\n14\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 15
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS  World Ease™  Label - Paperless Invoice\nPLEASE APPLY THIS LABEL TO PACKAGE # 6\n5 LBS\n1 OF 5\n19 LBS\n1 OF 1\nCONTACT NAME\nPHONE NUMBER\nCONTACT NAME\nPHONE NUMBER\nWORLDEASE US SHIPPER\nWORLDEASE US SHIPPER\nSHP #: 1X2X3X 19K\nSHP #: 1X2X3X 9VM\n1 UPS WAY\n1 UPS WAY\nSHP WT: 49 LBS\nSHP WT: 49 LBS\nUPS World Ease\nLOS ANGELES CA 90001\nLOS ANGELES CA 90001\nSHP DWT: 49 LBS\nDATE: 11 JAN 2020\nSHP DWT: 49 LBS\nDATE: 11 JAN 2020\nUNITES STATES\nUNITES STATES\nTOTAL PKG #: 6\nCONTACT NAME\nCONTACT NAME\nTRKG #: 775\nSHIP\nTO:\nSHIP\nTO:\nPHONE NUMBER\nPHONE NUMBER\nEDI-CCV\nCOMPANY NAME\nCOMPANY NAME\nEXTENDED ADDRESS\nEXTENDED ADDRESS\nGCC #: 1X2X3X 333WB\nSTREET ADDRESS\nFRIEDBURG  61169\nSTREET ADDRESS\n28033  MADRID\nGERMANY\nSPAIN",
+    "page": 16
+  },
+  {
+    "title": "ESP 285 4-40",
+    "content": "UPS EXPEDITED\nUPS EXPEDITED\nTRACKING #:\nTRACKING #:\n1Z 1X2 X3X 67 0000 7927\n1Z 1X2 X3X 67 0000 5607",
+    "page": 16
+  },
+  {
+    "title": "2",
+    "content": "BILLING: P/P\nDESC: COPPER PIPES\nBILLING: P/P\nDESC: COPPER PIPES\nEDI-CCV\nPOA / CO\nEDI-CCV\nPOA / CO\n18.5A 01/2020\n18.5A 01/2020\nUPS World Ease\nUPS World Ease\nUPS World Ease\nTO:\nTO:\nNAME.\nNAME.\nSORT\nSORT\nCUSTOMER:\nCUSTOMER:\nUPS IMPORT:\nUPS IMPORT:\nCLEARANCE.\nCLEARANCE.\nDiversion contrary to law is prohibited.\nDiversion contrary to law is prohibited.\nRegulations.  Diversion contrary to law is prohibited.\nUPS\nUPS\nBARCODE SHOULD BE VISIBLE.\nBARCODE SHOULD BE VISIBLE.\nCOLOGNE\nCOLOGNE\n*SEE BACK OF LABEL FOR EXAMPLE.\n*SEE BACK OF LABEL FOR EXAMPLE.\n*THE 1Z TRACKING NUMBER AND THE\n*THE 1Z TRACKING NUMBER AND THE\n*APPLY THIS LABEL OVER THE ADDRESS\n*APPLY THIS LABEL OVER THE ADDRESS\nGERMANY 51147\nGERMANY 51147\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\nPKG# 1\nTRKG# 775\nPKG# 6\nTRKG# 775\nstopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nstopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nLABEL DIRECTLY ABOVE THE UPS SERVICE\nLABEL DIRECTLY ABOVE THE UPS SERVICE\nthe shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\nREMOVE THIS OVER-LABEL AFTER CUSTOMS\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\ntechnology or software were exported from the US in accordance with the Export Administration Regulations.\nother mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nagent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding\nthe International Carriage of Goods By Road.  Except as otherwise governed by international conventions or\nforwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that the\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nare no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for\ncommodities, technology or software were exported from the US in accordance with the Export Administration",
+    "page": 16
+  },
+  {
+    "title": "DEU 510 9-00",
+    "content": "UPS World Ease\nUPS World Ease\nUPS World Ease\nUPS World Ease\nUPS World Ease\nUPS World Ease\nFirst Child Package\nLast Child Package\nSummary Label\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\n15\nSupplement",
+    "page": 16
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™  Over Label MaxiCode™ - Requirements\nMAXICODE™ (OVER LABEL)\nThe MaxiCode™ symbology must print directly above the pre-printed “UPS World Ease™” text on the over-label. \nThe MaxiCode™ data string must contain the following information:\nField Name\t\nDescription\t\nRemarks\nShip To Postal Code\t\n(an 5)1\t\nPostal code of import site\nShip To ISO Country Code\t\n(n 3)\t\nISO Country Code of import site\nClass of Service (3 digits)\t\n(n 3)\nTracking Number \t\n(an 10)\t\nTracking number of the package\nthe over-label will be used on\nUPS SCAC (Standard Carrier Alpha Code)\t UPSN\nUPS Account Number\t\n(an 6)\nJulian Day of Pickup \t\n(n 3)\t\nPickup date\nShipment ID Number\t\n(an 30)\t\nLeave blank for over-label\nPackage in Shipment \t\n(n 1…3/n1…3)\t\nWill always be 1/1 for over-label*\nPackage Weight\t\n(n 1…3)2\t\nWeight of package being processed.\nFor the document box, populate the\nweight with 1 pound or 1 kilogram.\nAddress Validation (Y or N) \t\n(a 1)\t\nAlways set no “N”\nShip To Address\t\n(an 35)\t\nLeave blank\nShip To City\t\n(an 20)\t\nImport site city name\nShip To State/Province/County\t\n(a 2)\t\nConditional (Required for Canada,\nIreland and United States)\n*See UPS GTL Appendix A for Shipping Label MaxiCode™ Specifications.\n1\u0007\nFor non-U.S. postal codes, (an 6 — fixed length), if less than six, pad with trailing spaces, if greater than six, truncate \n\nfrom the right.\n2Round up to the next pound or kilogram. The minimum weight must be 1 LB or 1 KG.\nPOSTAL BARCODE AND UPS ROUTING CODE\n• \u0007\nMust all print to the right of the MaxiCode™ symbology\n• \u0007\nMust all reflect the UPS import site information\nUPS World Ease™ Service Combination and Requirements\nDoc Box Label and \nPackage\nDocumentation \nIndicator\nSummary Label\nCustomer Additional \nDocuments in Doc Box\nMaster Invioce\nConsolidated \nInvoice Details \n(CID)\nUPS World Ease™ with \nDocBox (No Paperless)\nR\nR\nR\nINV-CC\nN\nO\nPaperless UPS World \nEase™ with DocBox\nR\nO\nO\nEDI-CCP\nN\nO\nN\nN\nN\nEDI-CCV\nR\nN\nPaperless UPS World \nEase™ without DocBox \n(Virtual Doc Box )\n• R = Required          • O = Optional, Customer Related          • N = Not Available\nNote: Master Invoice and the associated Consolidated Invoice Detail (CID) is required for label testing\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\n16\nUPS Guide to Labeling\nSupplement",
+    "page": 17
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™  Single Label - Requirements\nUPS World Ease™ Single Label Requirement\nFinal Destination and Import Site Blocks —\nthe UPS import site information section, for the child \nshipments. The complete N of X for the consolidated \nshipment must print only on the document box.\n• \u0007\nData Content\n\nPositions \t\n  1\t\n=\t 1 numeric\nThe UPS World Ease™ has two distinct sections \ncontained on a single 4\" x 6\" or 4\" x 8\" (option)\nthermal or laser label.\nPosition \t\n2\t\n=\t Space\nPositions \t\n3-4\t\n=\t OF\nFor UPS Access Point shipments only the  4\" x 8\" \nlabel is supported.\nPosition \t\n5\t\n=\t Space\nPositions \t\n6-8\t\n=\t Up to three numeric\n• \u0007\nFont Size                                  = 12 pt.\nThe first section contains the final destination \ninformation for the shipment.\n• For Example:  1 OF 10\n•\t\nSHIP TO:\nALL OTHER PACKAGES OF A SHIPMENT\n•\t\nFont Sizes (variable) this is done to prevent\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t PKG#\nover-writing the new World Ease Routing Code \nImport Site Box\nPosition \t\n5\t\n=\t Space\nPositions \t\n6-8\t\n=\t Up to three numeric\n• Font Size                                 = 12 pt.\n• For Example:  PKG# 3\n“SHIP TO” text = 10 pt. bold\n       Address Lines = 10 pt.\n       Postal Code Line = 12 pt. bold\n       Country Line = 12 pt. bold\nTHE LABEL INCLUDES A BOX WITH TWO ROWS \nAND A SEPARATOR LINE:\nTRACKING NUMBER\nThe last three digits of the shipment’s document box \n1Z tracking number.\n• \u0007\nData Content\n• \u0007\nTracking Data Content\nPositions \t\n1-5\t\n=\t TRKG#\nTop: Text UPS WORLD EASE\n  Bottom: UPS Routing Code for the UPS Import Site\nPosition \t\n6\t\n=\t Space\n• \u0007\nFont Size  = 10 pt.\nPositions \t\n7-9\t\n=\t Three numeric\n• \u0007\nFont Size                                  = 12 pt.\nThis prints to the right of the SHIP TO address just \nabove the Postal Code Line.\n• Service printed to the right of the Tracking # \nseparated by a vertical line:\nLine 1 = UPS WORLD EASE\n• \u0007\nFont Size  = 10 pt.\nThe second section contains the UPS import site \ninformation for the Paperless Invoice consolidated \nshipment containing paper documents.\n• The lead package must be a UPS World Ease™ \ndocument box (Doc Box)\n• All labels must have the same documentation \nindicator on the bottom right corner of the shipping \nlabel\nPORT OF ENTRY INFORMATION\nThis block contains the import site information. \nAll characters must be in uppercase letters. Title \npositioned to the far left:\nFirst Block\n• All labels must display the\nsame port of entry in the “Sort To” field\nLine 1 = SORT \n\n   Line 2 = TO:\nSecond Block\n   Line 1 = Port Name\n   Line 2 = Country Name Postal Code\n• The Doc Box label must print  “1 of ___\"  and on \nright (count of packages) print the text “TRKG # \n___”  (the last 3 digits of the document box tracking \nnumber)\n• \u0007\nFont Size  = 10 pt.\nThird Block\n   Line 1 = UPS ROUTING CODE (in the URC file).\n•   When required, UPS World Ease™  shipments\n   must have a Master Invoice and the associated\n   Consolidated Invoice Detail (CID). (see page 16)\n• Font Size = 16 pt. bold\nNote: The font size may be reduced to accommodate \nthe complete text.\nThe import site information can be found in the Port \nof Entry table. Contact your UPS Account Executive\nDOCUMENT BOX:\nPACKAGE COUNT \nThe package count indicates the number of the \npackage N, related to the number of packages in the \nentire shipment X (e.g., N of X). Only N will print on\nfor information on POE tables.\n17\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 18
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™   Single Label - Document Box\n18\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 19
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™   Single Label - Child Shipment\n19\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 20
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™   Single Label - Summary Label\nGLOBAL CUSTOMS CLEARANCE NUMBER (GCC#)\nSpecifications for the UPS World Ease™  \nSingle Label Invoice Summary Label\nSHIPPERS INSTRUCTIONS\nThe shipment’s virtual document box 1Z tracking \nnumber will be used to calculate the GCC# which is \nthe same as the Shipment Number.  See Appendix D \nof the UPS Guide to Labeling.\n• \u0007\nData Content\n\nPositions         1-3\t\n=\t GCC\nPosition               4\t\n\t\n=\t Space\n• \u0007\nPlease Apply This Label to Package # ___ (Blank \nindicates the value of the last package or \ntotal number of packages in the consolidated \nshipment)\nPositions         5-6  \t\n=\t #:\n• \u0007\nFont Size 12 pt. Bold\nPosition               7\t\n\t\n=\t Space\nSERVICE TITLE\nPositions \t 8-13\t\n=\t Alphanumeric\n• UPS World Ease\nPosition            14\t\t\n=\t Space\n• Font Size 16 pt. Bold\nPositions \t 15-19\t\n=\t Alphanumeric\n• \u0007\nFont Size                                  = 12 pt.\nPACKAGE/PALLET COUNT\n• For Example:  GCC #: 1X2X3X 9WB3K\n• \u0007\nData Content\n\nPositions\t\n1-5 = TOTAL\nPosition\t\n    6 = Space\nPositions           7-13 = PKG/PLT\n   Position          13-14 = #:\n   Positions               15 = Space\n   Position          16-18 = Three numeric\n• Font Size = 12 pt.\n• For Example: PKG/PLT #: 123\nTRACKING NUMBER\nThe last three digits of the shipment’s virtual \ndocument box 1Z tracking number will print on \nthe summary label\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t TRKG\nPosition \t\n5\t\n=\t Space\nPosition           6-7\t\n=\t #:\nPositions \t\n8\t\n=\t Space\nPosition         9-11\t\n=\t Three numeric\n• \u0007\nFont Size                                  = 12 pt.\n• For Example:  TRKG #: 123\nDOCUMENTATION INDICATOR\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t EDI\nPosition \t\n4\t\n=\t - (Dash)\nPosition           5-7  \t\n=\t CCV\n• \u0007\nFont Size                                  = 16 pt. Bold\n• For Example:  EDI-CCV\n20\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 21
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™   Single Label - Summary Label\nThe Summary Label for the new Single Label will remain unchanged other than the Over-Label \nportion no longer applies.\n21\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 22
+  },
+  {
+    "title": "UPS World Ease™ Specifications",
+    "content": "UPS World Ease™   Single Label - UPS Access Point™\nThis 4\" x 8\" label should used all data formatting and placement of the information follows the \ncurrent UPS Access Point™  requirements located in the UPS Guide to Labeling.\n22\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 23
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements",
+    "page": 24
+  },
+  {
+    "title": "UPS Trade Direct™ General Rules",
+    "content": "A UPS Trade Direct™ (TD) consolidated movement \nmay consist of UPS small package shipments or TD \nLess-Than-Truckload (LTL)/Truckload (TL) shipments \nand TD Customs Clearance Documents.\nA consolidated TD movement may originate from \nan origin location such as the shipper’s location \nor the origin Container Freight Station (CFS) to a \ndestination CFS.\nOnce the consolidated movement reaches the \ndestination CFS, the UPS Small \n\nPackage shipments and/or LTL/TL shipments will \nbe decon­\nsolidated and forwarded to the ultimate\nconsignee(s).\nThis section will address the six types of labels \nthat may be produced for a UPS Trade Direct™  \nmovement. \n• \u0007\nUPS Small Package Label\n• \u0007\nUPS Less-Than-Truckload (LTL) / Truck Load (TL ) \nLabel\n• \u0007\nUPS  Package Pallet Label\n• \u0007\nUPS  Carton Labels\n• \u0007\nUPS Express Freight\n• \u0007\nUPS SurePost\nAll barcodes must use the Code 128 format and \nfollow speci­\nfications defined in the current\nUPS Guide to Labeling.\nNOTE:  The terms Consolidated Movement Number \n(CM) and Unique Shipment Identifier (USI) are \nsynonymous.  The terms LTL Number and Sub-Pro \nNumber are synonymous.\nUPS Guide to Labeling\n23\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 24
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nUPS Trade Direct™ - Small Package Label\n• \u0007\nData Content\n\nPositions \t 1-16 \t\n= \tCM SHIPMENT ID#:\nPosition \t\n17 \t\n= \tSpace\nPositions \t 18-26 \t\n= \t9 numeric\nPosition \t\n27 \t\n= \tCheck Digit\nUPS Trade Direct™ small package labels are the \nindividual labels that are created, at either an export \nor import location and are applied to each package for \ndelivery by UPS.\n• \u0007\nFont Size = 10 pt.\n• \u0007\nFor Example:  84000028T\nNOTE: Check digit can be numeric or the letter \"T\" \n\nSee Appendix A for the Check Digit Calculation example.\nSmall package labels must follow the specifications \noutlined in the UPS Guide to Labeling. In addition, the \nConsolidated Movement (CM) Shipment ID number \nmust print in the Additional Routing Instructions \nBlock immediately below the Billing Options line. (See \nAppendix A)\nSmall Package - UPS Trade Direct™ Label",
+    "page": 25
+  },
+  {
+    "title": "15 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\nKALAMAZOO MI  49009\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 25
+  },
+  {
+    "title": "UPS GROUND\n 1Z 1X2 X3X 03 0000 5772",
+    "content": "TRACKING #:\nCM SHIPMENT ID#: 840000028T\n18.5A 01/2020\nUPS Guide to Labeling\n24\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks of \nUnited Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 25
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nUPS Trade Direct™ - LTL/TL Pallet Label\n• \u0007\nMonth abbreviation table:\n\nJAN\t\nAPR\t\nJUL\t\nOCT\nFEB\t\nMAY\t\nAUG\t\nNOV\nUPS Trade Direct™  - LTL/TL pallet labels are produced for \nmovements that are created for LTL and TL modes. All \nlabel text must be uppercase.\nMAR\t\nJUN\t\nSEP\t\nDEC\nPackage Information Block\nADDRESSES\nThe Ship From and Ship To address format must follow \nthe specifications outlined in the current \n\nUPS Guide to Labeling.\nConsolidated Movement Block\nThe Consolidated Movement Block must appear below \nthe Ship To address separated by a horizontal line. This \nblock contains port codes and service level separated by \na vertical line.\nPort codes for air movements will be three characters. \nPort codes for ocean movements \n\nwill be five characters.\nAIR PORT CODES\nPALLET COUNT\nThe pallet count indicates the number of this pallet, \n\nN related to the number of total pallets in the shipment X \n(e.g., N of X). The pallet count appears on the first line in \nthe upper right corner of the label. The data format is as \nfollows:\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t ORIGIN AIRPORT CODE\nPosition \t\n4\t\n=\t /\n• \u0007\nData Content\n\nPositions \t\n1-3\t\n=\t Up to three numeric\nPositions \t\n5-7\t\n=\t DESTINATION AIRPORT\nPosition\t\n4\t\n=\t Space\nCODE\nPositions \t\n5-6\t\n=\t OF\nPosition \t\n7\t\n=\t Space\n• \u0007\nFont Size = 30 pt. bold\nPositions \t 8 -10\t\n=\t Up to three numeric\nOCEAN PORT CODES\n• \u0007\nFont Size                                 = 10 pt. bold\n• \u0007\nFor Example:  1 OF 999\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t ORIGIN PORT CODE\nPosition \t\n6\t\n=\t /\nPositions \t 7-11\t\n=\t DESTINATION PORT CODE\n• \u0007\nFont Size                                  = 30 pt. bold\nCROSS BORDER CODES\nSHIPMENT WEIGHT\nThe total actual weight of the shipment will appear \n(rounded to the next whole pound, or kilogram) directly \nbeneath the pallet count. The format will \n\nbe as follows:\n• \u0007\nData Content\nPositions\t\n1-3\t\n= ORIGIN AIRPORT CODE\n• \u0007\nData Content\n\nPositions \t\n1-7\t\n=\t SHP WT:\nPosition    \t\n4\t\n= /\nPosition\t\n8\t\n=\t Space\nPositions\t\n5-7\t\n= (Leave Blank)\nPositions \t 9-13\t\n=\t Up to five numeric\n• Font Size = 30 pt. bold\nPosition\t\n14\t\n=\t Space\n• \u0007\nFor Example:  \u0007\nSDF/         |      STD\nPositions \t 15-17\t\n=\t LBS or KG\n• \u0007\nFont Size                                  = 8 pt.\nSERVICE LEVEL\n• \u0007\nFor Example:  \u0007\nSHP WT: 100 LBS\n\nSHP WT: 120 KG\n• \u0007\nData Content\n\nPositions \t\n1-3 \t\n=\t SERVICE LEVEL\n• \u0007\nFont Size                                  = 30 pt. bold\n• \u0007\nFor Example:  \u0007\nHKG/LAX      |      EXP\n\nJPT YO/USLAX      |      STD\nSHIPMENT DATE \nThe Shipment Date must be displayed below \n\nthe Shipment Weight.\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t DATE:\nPosition \t\n6\t\n=\t Space\nPositions \t 7-17\t\n=\t DD MMM YYYY\n• \u0007\nFont Size                                  = 8 pt.\n• \u0007\nFor Example:  DATE: 28 JUN 2017\nUPS Guide to Labeling\n25\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks \nof United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 26
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nSub-Pro Number Barcode Block\nLegal Text Block\nThe Legal Text Block contains the International \nShipping Notice and is located at the bottom of the \nlabel.\nHUMAN READABLE SHIPMENT ID NUMBER\nThe Sub-Pro Number human readable interpretation \nwill appear immediately below the Consolidated \nMovement Block. The Sub-Pro Number must be \nformatted as shown in the examples below.\nPlease refer to the International Shipping Notice text \nin the UPS Guide to Labeling.\n• \u0007\nData Content\n\nPositions\t\n1-10\t\n=\t SUB-PRO #:\nPosition\t\n11\t\n=\t Space\nPositions\t 12-14\t\n=\t Trade Direct Region\nCode (See Appendix A)\n\nPositions\t 15-16\t\n=\t System Code\nPositions\t 17-22\t\n=\t Trade Direct Shipper #\nPositions\t 23-29\t\n=\t Sequence Number\nPosition\t\n30\t\n=\t Check Digit\n• \u0007\nFont Size                                  = 10 pt.\n• \u0007\nFor Example:  \n\nSUB-PRO #: 93009123ABC00000012\nSHIPMENT ID BARCODE\nThe Shipment ID barcode will display directly below \nthe human readable Shipment ID.\nCustomer Information Block (Optional)\nOptional information may be entered in the \nCustomer Information Block as follows:\n• \u0007\nData Content\nText = CONSOLIDATED MOVEMENT #:\n\n   Positions 1-35\t\n = CONSOLIDATED MOVEMENT\nNUMBER\nText = DESC:\n\n    Positions 1-35 \t\n= DESCRIPTION OF GOODS\nText = \t\nSHIPPER REF:\nPositions 1-35\t\n = SHIPPER REFERENCE \t\nNUMBER\nText = \t\nCONS REF:\nPositions 1-35\t\n = CONSIGNEE REFERENCE NUMBERS\n• \u0007\nFont Size = 10 pt.\nUPS Guide to Labeling\n26\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 27
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "LTL/TL Pallet Label",
+    "page": 28
+  },
+  {
+    "title": "1 OF 5",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSHP WT: 1250 LBS\nEXTENDED ADDRESS\nDATE: 11 JAN 2020\nSTREET ADDRESS\nSHANGHAI 200120\nCHINA\nCONTACT NAME\nPHONE NUMBER\nSHIP\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 28
+  },
+  {
+    "title": "EXP",
+    "content": "SUB-PRO #: 93409123ABC00000012\nCONSOLIDATED MOVEMENT #:840000028T\nDESC: COMPUTER PARTS\nCONS REF:  AA114A135787575RU988434UE945534UR34\nSHIPPER REF: 12345RU33EE339339393938947598604R49\n18.5A 01/2020\nUPS Guide to Labeling\n27\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 28
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nUPS Trade Direct™ - Package Pallet Label\nSHIPMENT ID BARCODE\nThe Shipment ID barcode will display directly below \nthe human readable Shipment ID.\nAdditional Routing Instructions Block\nThe package pallet label is produced for the UPS \nservice provider to help identify loose packages that \nwill be processed through the regular UPS system. \nThese packages are segregated on a separate pallet \nand identified with this label.\nPackage Information Block\nThe Additional Routing Instructions block contains \npiece counts and reference numbers.\nPIECE COUNTS SECTION\nGround Piece Count\nADDRESSES\nThe label will contain a Ship From and Ship To \naddress. The Ship To address will always be the UPS \nfacility processing the packages.\n• \u0007\nData Content\n\nPositions \t 1-7\t\n=\t GROUND:\nPosition\t\n8\t\n=\t Space\nPositions \t\n9-11\t\n=\t Up to three numeric\nPACKAGE PALLET LABEL TITLE\nThe title will appear in the top left corner \n\nof the label.\nPosition \t\n12\t\n=\t Space\nPositions \t\n13-18\t\n=\t PIECES\n• \u0007\nData Content\n\nPositions 1-20      \t\n= PACKAGE PALLET LABEL\n• \u0007\nFont Size                            = 10 pt. bold\n• Font Size                                  = 12 pt. bold\nSHIPMENT WEIGHT (Right Justified)\n• \u0007\nData Content\n\nPositions \t 1-7\t\n=\t SHP WT:\nPosition\t\n8\t\n=\t Space\nPositions \t\n9-12\t\n=\t Up to four numeric\nPosition\t\n13\t\n=\t Space\nPALLET COUNT\nThe pallet count indicates the number of this pallet \nN, related to the total number of package pallets in \nthe entire shipment X (e.g., N of X). The pallet count \nappears on the first line in the upper right corner of \nthe label.\nPositions \t\n14-16\t\n=\t LBS or KG\n• \u0007\nFont Size                            = 10 pt. bold\n• \u0007\nData Content\n\nPositions \t\n1-4\t\n=\t Up to four numeric\n• \u0007\nFor Example:  SHP WT: 1000 KG\nPosition\t\n5\t\n=\t Space\nAIR PIECE COUNT\nPositions \t\n6-7\t\n=\t OF\nPosition \t\n8\t\n=\t Space\n• \u0007\nData Content\n\nPositions \t 1-4\t\n=\t AIR:\nPositions \t 9-12\t\n=\t Up to four numeric\nPosition \t\n5\t\n=\t Space\n• Font Size = 10 pt. bold\nPositions \t 6-8\t\n=\t Up to three numeric\n• For Example:  1 OF 9999\nPosition \t\n9\t\n=\t Space\nShipment ID Barcode Block\nPositions \t\n10-15\t\n=\t PIECES\n• \u0007\nFont Size                            = 10 pt. bold\nTOTAL PIECE COUNT\nHUMAN READABLE SHIPMENT ID NUMBER\nThe human readable interpretation of the Shipment \nID will appear immediately below the Ship To \naddress separated by a horizontal line.\n• \u0007\nData Content\n\nPositions \t\n1-12\t\n=\t TOTAL COUNT:\nPosition\t\n13\t\n=\t Space\n• \u0007\nData Content\n\nPositions \t 1-16 \t\n= \tCM SHIPMENT ID#:\nPositions \t\n14-17\t\n=\t Up to four numeric\nPosition \t\n17 \t\n= \tSpace\nPosition \t\n18\t\n=\t Space\nPositions \t 18-26 \t\n= \t9 numeric\nPositions \t\n19-24\t\n=\t PIECES\nPosition \t\n27 \t\n= \tCheck Digit\n• \u0007\nFont Size                            = 10 pt. bold\n• \u0007\nFont Size                                  = 10 pt.\n• \u0007\nFor Example:  84000028T\nUPS Guide to Labeling\n28\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 29
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements",
+    "page": 30
+  },
+  {
+    "title": "PACKAGE PALLET LABEL",
+    "content": "1 OF 999\nCONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\nSHANGHAI 200120\nCHINA\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 30
+  },
+  {
+    "title": "UNITED STATES",
+    "content": "CM SHIPMENT ID#: 840000028T\nSHP WT: 2500 LBS\nGROUND:  34 PIECES\nAIR:  54 PIECES\nTOTAL COUNT: 88 PIECES\nREF #1: 93009123ABC00000012\nREF #2: 3490489034893\n18.5A 01/2020\nUPS Guide to Labeling\n29\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 30
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nPosition\t\n30\t\n=\t Check Digit\nUPS Trade Direct™ - Carton Label\n• \u0007\nFont Size                                  = 10 pt.\n• \u0007\nFor Example:  \n\nSUB-PRO #: 93009123ABC00000012\nCONSOLIDATED MOVEMENT SHIPMENT ID NUMBER\nThe carton label is optional. It may be applied to \neach carton to help identify the movement and any \nspecial restrictions..  This label contains only human \nreadable information.  No symbology will appear on \nthis label.\n• \u0007\nData Content\n\nPositions \t 1-16 \t\n= \tCM SHIPMENT ID#:\nPackage Information Block\nPosition \t\n17 \t\n= \tSpace\nPositions \t 18-26 \t\n= \t9 numeric\nPosition \t\n27 \t\n= \tCheck Digit\n• \u0007\nFont Size                                  = 10 pt.\nADDRESSES\nThe Ship From and Ship To address formats must \nfollow the specifications outlined in the current UPS \nGuide to Labeling.\n• \u0007\nFor Example:  84000028T\nHAZARDOUS MATERIAL INDICATOR (when \napplicable)\nLTL CARTON LABEL TITLE\nThe title will appear in the top left corner \n\nof the label.\n• \u0007\nData Content\n\nPositions \t   1-18\t\n=\t HAZARDOUS MATERIAL\n• \u0007\nData Content\n\nPositions 1-16\t\n                         =  LTL CARTON LABEL\n• \u0007\nFont Size                                  = 10 pt.\n• Font Size                                    = 12 pt. bold\nREFERENCE NUMBERS\nThe Reference #1 and #2 fields are optional \n\nand may be up to 35 characters\n• \u0007\nData Content\nPositions \t\n1-7\t\n=\t REF #1:\nPosition \t\n8\t\n=\t Space\nCARTON COUNT\nThe carton count indicates the number of this \ncarton N, related to the total number of cartons \nin the entire LTL/TL shipment X (e.g., N of X). The \ncarton count appears on the first line in the upper \nright corner of the label.\nPositions \t 9-43\t\n=\t Up to 35 alphanumeric\n• Font Size:                                = 10 pt.\n• \u0007\nData Content\n\nPositions \t\n1-5\t\n=\t Up to five numeric\n• \u0007\nFor Example:  REF #1: 93009123ABC00000012\nPosition\t\n6\t\n=\t Space\nPositions \t\n7-8\t\n=\t OF\nPosition \t\n9\t\n=\t Space\nPositions \t 10-14\t\n=\t Up to five numeric\n• Font Size                                 = 12 pt. bold\n• For Example:  1 OF 99999\nAdditional Routing Instructions Block\nThe Additional Routing Instructions Block \ncontains billing, reference and hazardous material\ninformation.\nBILLING OPTION\nThe billing option must follow the specifications \noutlined in the current UPS Guide to Labeling.\nSub Pro Number\n• \u0007\nData Content\n\nPositions\t\n1-10\t\n=\t SUB-PRO #:\nPosition\t\n11\t\n=\t Space\nPositions\t 12-14\t\n=\t Region Code\nPositions\t 15-16\t\n=\t System Code\nPositions\t 17-22\t\n=\t Trade Direct Shipper #\nPositions\t 23-29\t\n=\t Sequence Number\nUPS Guide to Labeling\n30\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 31
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "LTL Carton Label",
+    "page": 32
+  },
+  {
+    "title": "1 OF 999\nLTL CARTON LABEL",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\n1400 S JEFFERSON\nCHICAGO IL 60607",
+    "page": 32
+  },
+  {
+    "title": "REF #1: 93009123ABC00000012\nREF #2: 34904890348931",
+    "content": "UPS Guide to Labeling\n31\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are \ntrademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 32
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "UPS  Worldwide  Express  Freight™  &  UPS  Worldwide  Express  Freight™  Midday Services\nPickup Attempt, the following text must print before the \nconsignee's name in the \"Ship To\" address:\nUPS Trade Direct™ - UPS Worldwide Express \nFreight™\n• Text = HOLD FOR PICKUP\n• For Example: \"HOLD FOR PICKUP - D SCHMIDT\"\nNOTE:  A dash must separate the text\nThe UPS Worldwide Express Freight™ service provides \ncustomers with a solution for palletized shipments.  This \nguaranteed product has similar transit times as UPS World­\nwide Express Saver™ package and provides customers with \na similar experience to other small package services.\nLIFTGATE\nIf a liftgate is required to make the delivery, the following \ntext must print:\nUPS Worldwide Express Freight™ Midday\n• Text                                            = LIFT\n• Font Size                                 = \u0007\n 10 pt. bold\nThe UPS Worldwide Express Freight™ Midday service pro­\nvides customers with a solution for palletized shipments.  \nThe service is guaranteed by either noon or 2 P.M. depend­\ning apon destination postal code.\nIMPORT CONTROL/RETURN SERVICE\nIf the the shipment is being returned by Import Control/\nReturn Service, and Import Control/Return Service - 1 \nPickup Attempt, the following text must print:\n• Text = IMPORT CONTROL - PAYMENT GUARANTEED\n• Font Size                                 = \u0007\n 10 pt. bold\nNOTE:  A PDF417 must print on the label when required. \nFor details on the PDF417 Barcode, please refer to the \nPDF417 Barcode Symbology document.\nText Requirements\nIf the the shipment is being returned by Import Control/\nReturn Service 1 Pickup Attempt, and requires a liftgate the \nfollowing text must print:\n• Text                                            = PU LIFT\n• Font Size                                 = \u0007\n10 pt. bold\nHOLD FOR PICKUP\nIf the shipment is being deliveried to a UPS facility where \na consignee will pick up the shipment, or the shipment \nis at the UPS facility and the consignee wants to return \nthe shipment using Import Control/Return Service 1\nService Indicators, Icons and MaxiCode™ Class of Service\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS EXPRESS FREIGHT™\t\nE1\t\n1P\t\n417\nSaturday Delivery\t\nE2\t\n1PS\t\n418\nDelivery Confirmation Signature Required\t\nE3\t\n1P\t\n419\nDelivery Confirmation Adult Signature Required \t\nE4\t\n1P\t\n420\nImport Control/Return Service\t\nE5\t\n1P\t\n421\nSaturday Delivery, Delivery Confirmation Signature Required\t\nE6\t\n1PS\t\n422\nSaturday Delivery, Delivery Confirmation Adult Signature Required\t\nE7\t\n1PS\t\n423\nImport Control/Return Service, Saturday Delivery\t\nE8\t\n1PS\t\n424\nImport Control/Return Service - 1 Pickup Attempt\t\nE9\t\n1P\t\n425\nImport Control/Return Service - 1 Pickup Attempt, Saturday Delivery\t\nEA\t\n1PS\t\n426\nUPS EXPRESS FREIGHT™ MIDDAY\t\nEQ\t\n1\t\n439\nSaturday Delivery\t\nER\t\n1S\t\n440\nDelivery Confirmation Signature Required\t\nES\t\n1\t\n441\nDelivery Confirmation Adult Signature Required \t\nET\t\n1\t\n442\nImport Control/Return Service\t\nEV\t\n1\t\n443\nSaturday Delivery, Delivery Confirmation Signature Required\t\nEW\t\n1S\t\n444\nSaturday Delivery, Delivery Confirmation Adult Signature Required\t\nEX\t\n1S\t\n445\nImport Control/Return Service, Saturday Delivery\t\nEY\t\n1S\t\n446\nImport Control/Return Service - 1 Pickup Attempt\t\nEZ\t\n1\t\n447\nImport Control/Return Service - 1 Pickup Attempt, Saturday Delivery     F0\t\n1S\t\n448\nNOTE: Saturday Delivery is only valid in United States and Canada.\nUPS Guide to Labeling\n32\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 33
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "UPS Worldwide Express Freight™ Label\nUnique Shipment Identifier (USI)\n\nThe USI Number is a mandatory field that must print left justified\n• \u0007\nData Content\n\nPositions \t\n1-4 \t\n= \tUSI:\nPosition \t\n5 \t\n= \tSpace\nPositions \t 6-14 \t\n= \t9 numeric\nPosition \t\n15 \t\n= \tCheck Digit\n• \u0007\nFont Size = 10 pt.\n• \u0007\nFor Example:  84000028T\nNOTE: Check digit can be numeric or the letter \"T\" \n\nSee Appendix A for the Check Digit Calculation example.",
+    "page": 34
+  },
+  {
+    "title": "203 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT\nSHP WT: 203 KG\nSTREET ADDRESS\nDATE: 11 JAN 2020\nPOSTAL CODE LINE\nGERMANY\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 34
+  },
+  {
+    "title": "UPS EXPRESS FREIGHT",
+    "content": "1Z 1X2 X3X E1 0000 5403\nTRACKING #:",
+    "page": 34
+  },
+  {
+    "title": "1P",
+    "content": "BILLING: P/P",
+    "page": 34
+  },
+  {
+    "title": "INV",
+    "content": "DESC: CLOTHING\nUSI: 840000028T\n18.5A 01/2020\n33\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 34
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "Label Format Requirements\nUPS Trade Direct™ - UPS SurePost™\n\nThe  UPS SurePost™  service is contract based and it's available \nas an economy ground residential service, targeted towards \nretail shippers.  This service combines the consistency and \nreliability of the UPS® Ground network with final delivery \ntypically provided by the U.S. Postal Service (USPS). \nCustomers have the ability to ship using any of the following \nfour USPS delivery product types:\nUPS SurePost™ labels must follow the specifications outlined \nin the Supplement UPS SurePost™ Guide to Labeling. In \naddition, the Unique Shipment Identifier (USI) number must \nprint in the UPS Address Block right justified on the same line \nas the USPS Ship To five digit postal code. (See Appendix A)\n\n\n\nUnique Shipment Identifier (USI)\n\nThe USI Number is a mandatory field that must print left \njustified\n• \t\nLess than 1 lb (under 16 oz)\n• \t\n1 lb or Greater (1-70 lbs)\n• \u0007\nData Content\n\nPositions \t\n1-4 \t\n= \t\nUSI:\nPosition \t\n5 \t\n= \t\nSpace\n• Bound Printed Matter (1-15 lbs)\nPositions \t\n6-14 \t\n= \t\n9 numeric\n• Media (1-70 lbs)\nPosition \t\n15 \t\n= \t\nCheck Digit\n• \u0007\nFont Size = 10 pt.\n• \u0007\nFor Example:  84000028T\nNOTE:  The total dimension of the package cannot exceed 130 \ninches (Length * twice width * twice height) if SurePost Less \nthan 1 lb or SurePost 1 lb or Greater is selected. The package \ncannot exceed 108 inches if SurePost Bound Printed Matter or \nSurePost Media is selected in the UPS Service box.\nNOTE: Check digit can be numeric or the letter \"T\" \n\nSee Appendix A for the Check Digit Calculation example.\n34\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 35
+  },
+  {
+    "title": "UPS Trade Direct™ Specifications",
+    "content": "UPS SurePost™ Label\n1 OF 1\n10.2 OZ\nCOMPANY NAME\nSTREET ADDRESS\nROSWELL GA  30076\nUSPS 53562\nUSI: 840000028T\nSHIP\nTO:",
+    "page": 36
+  },
+  {
+    "title": "UPS SUREPOST",
+    "content": "TRACKING #: 1Z 1X2 X3X YN 1234 5678\nPS LIGHTWEIGHT\nReturn Service Requested\nU.S. POSTAGE PAID\nUSPS DELIVER TO:\neVS\nUPS\nCONTACT NAME\nSTREET ADDRESS\nEXTENDED ADDRESS\nMIDDLETON WI 53562",
+    "page": 36
+  },
+  {
+    "title": "USPS TRACKING # eVS",
+    "content": "9274 8123 4567 8958 1000 0000 18\n35\nUPS Guide to Labeling\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 36
+  },
+  {
+    "title": "UPS™ Worldwide Economy  Specifications",
+    "content": "Label Format Requirements\nIntroduction\nUPS Routing Code\nAn additional letter must be appended to the end of the UPS \nRouting Code depending on the UPS™ Worldwide Economy \nservice option selected.  If UPS™ Economy DDP service is \nselected, a space and the letter \"P\" are appended to the UPS\nRouting Code.\nUPS™ Worldwide Economy service is a single-piece                      \nnon-guaranteed shipment which provides customers with an \ninternational cross-border economy product. Customers are \noffered 2 options,  UPS™ Economy DDP and  UPS™ Economy \nDDU, for UPS™ Worldwide Economy shipments. Customers \nwill be provided with a similar experience to existing products \nwithin the UPS™ Worldwide portfolio.\nFor Example: \n\n\t\nIND 010 9-00 P\nIf UPS™ Economy DDU service is selected, a space and the letter \n\"U\" are appended to the UPS Routing Code.\nCustomers have the option to consolidate UPS™ Worldwide \nEconomy packages into a single Master Shipment. Customers \nalso have the option to transport UPS™ Worldwide Economy \npackages directly to an export or vendor site without creating a \nMaster Shipment.\nFor Example: \n\n\t\nDEU 091 0-00 U\nUPS™ Worldwide Economy and Master Shipment labels must \nfollow the specifications outlined in the UPS Guide to Labeling. \nIn addition, for UPS™ Worldwide Economy, an additional \nletter must be appended to the end of the UPS Routing code \ndepending on the option selected.\nBilling Options\nFor UPS™ Economy DDP (Delivered Duties Paid) shipments, \nDuties and Taxes are paid up-front on behalf of the consignee.  \nValid billing options include Prepaid (P/P), Free Domicile (F/D), \nand Freight Collect (F/C) via the Shipper or a Third Party Payor.\nNOTE: Only select domestic and EU transborder services are \nvalid options for a Master Shipment. (See Pg. 34)\nLabel Format Requirements\nFor UPS™ Economy DDU (Delivered Duties Unpaid) shipments, \nDuties and Taxes are paid at time of delivery. Valid billing options \ninclude Prepaid (P/P) and Freight Collect (F/C) via the Shipper or \na Third Party Payor.\nWhen using the UPS™ Worldwide Economy service, the Service \nIndicators and MaxiCode™ Class of Service codes listed in this \ndocument must be used.\nPDF417 Barcode\nWhen UPS™ Worldwide Economy is used, the PDF417 barcode \nmust print on the shipping label.  For details on the PDF417 \nbarcode, please refer to the PDF417 barcode symbology \ndocument.\nPackage Weight\n\nThe package weight must be printed on all UPS™ Worldwide \nEconomy labels.  UPS™ Economy DDP shipments from the U.S. \nor Canada must display weight in pounds. UPS™ Economy \nDDU shipments from the U.S. or Canada must display weight in \nounces to the tenth. \n\t\n• \u0007\n\u0007\nFor Example:  16.9 OZ\nNote: UPS Worldwide Economy labels must display EDI on the\n• \u0007\n\u0007\nMaxiCode's weight field must contain \"1\"\nlabels.\nUPS™ Economy DDU and DDP shipments from outside the U.S. \nor Canada must display weight in kilograms to the tenth. A scale \nmay have two or more decimals and will need to be rounded up \nto the nearest tenth.  Any value other than zero in the hundredth \nposition requires the weight to be rounded up. \n\t\n• \u0007\n\u0007\nExample #1: 3.02 ounces would be 3.1 OZ\n• \u0007\n\u0007\nExample #2: 1.091 kilograms would be 1.1 KGS\nService Indicators, Icons and MaxiCode™  Class of Service for International Movements\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS™ ECONOMY DDP\t\n                                              FC                    Black Square\t\n459\nUPS™ ECONOMY DDU\t\n                                              FD                    Black Square\t\n460\nUPS Guide to Labeling\n36\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 37
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ Economy DDP  - International Forward Movement Label  - U.S. Origin\nUPS Guide to Labeling\n37\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 38
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ Economy DDP  - International Forward Movement Label  - Non-U.S. Origin\nUPS Guide to Labeling\n38\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 39
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ Economy DDU - International Forward Movement Label - U.S. Origin\nUPS Guide to Labeling\n39\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 40
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ Economy DDU - International Forward Movement Label - Non U.S. Origin\nUPS Guide to Labeling\n40\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 41
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ International  to US - SurePost YW\nUPS Guide to Labeling\n41\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 42
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ International  to US - SurePost YT\nUPS Guide to Labeling\n42\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 43
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "UPS™ International  to US - Mail Innovations DDP\nUPS Guide to Labeling\n43\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 44
+  },
+  {
+    "title": "UPS™ Worldwide Economy Specifications",
+    "content": "Master Shipment - Valid Service Code Table\nService Code Table (Domestic)\nService\n          Code\nUPS Next Day Air™ / UPS Express™\t\n\t\n      1DA\nUPS Next Day Air™ Early / UPS Express Plus™\t\n      EAM\nUPS Next Day Air™ Saver / UPS Saver™\t        \t\n      1DS\nUPS 2nd Day Air™\t\n\t\n\t \t\t\n\t\n      2DA\nUPS 2nd Day Air™ AM\t\n\t \t\t\n\t\n      2DM\nUPS 3 Day Select™ \t\n\t \t\t\n\t\n      3DS\nUPS Express™ 1200\t\n\t \t\t\n\t\n      EXM\nUPS® Ground / UPS® Standard            \t\n\t\n      GND\nUPS Access Point™ Economy \t\t\n\t\n      LCO\nUPS Today Standard™ \t\n\t      \t\n\t\n      TDT\nUPS Today Dedicated Courier™\t\n\t\n      TDC\nUPS Today Express™\t\n\t \t\t\n\t\n      TDE\nUPS Today Express Saver™\t \t    \t\n\t\n     TDS\nService Code Tabel (EU Transborder)\nService\t\n\t \t\t\n                         Code\nUPS® Standard\t\t\n\t \t\t\n       \t\n       EXD\nUPS Express™\t \t\n                                \t\n       EXP\nUPS Saver™\t\n\t\n\t \t       \t\n\t\n       EXS\nUPS Express Plus™\t\n\t      \t\n            \t\n       EAM\nUPS Worldwide Express Freight™\t\n\t\n       WFP\nUPS Worldwide Express Freight™ Midday\t\n       WFM\nNOTE: ‘Goods not in free circulation’ (GNIFC) option is not allowed for a Master Shipment containing UPS™ Worldwide \nEconomy shipments\n44\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nUPS Guide to Labeling\nSupplement",
+    "page": 45
+  },
+  {
+    "title": "International Special Commodities",
+    "content": "Label Format Requirements\nOverview\nLabel Format Requirements\nWhen shipping ISC, the following text must print \ncentered in the Additional Routing Instructions block \nof the label immediately below the documentation \nindicators.\n• \u0007\nRouting Instruction = ISC\n• \u0007\nFont Size                       = 10 pt. bold\nInternational Special Commodities (ISC) service is \noffered by contract only.  An ISC contract allows the \nshipper to send certain restricted articles such as:  \nalcoholic beverages, perishables, seeds, tobacco and \nplants.  For ISC shipments, the shipping label must \ncontain additional information to meet regulatory \nrequirements and assist UPS in processing the \nshipment.",
+    "page": 46
+  },
+  {
+    "title": "50 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 50 LBS\nSTREET ADDRESS\nCHICAGO IL  60607\nDATE: 11 JAN 2020\nSHP DWT: 50 LBS\nUNITED STATES\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 46
+  },
+  {
+    "title": "UPS STANDARD",
+    "content": "TRACKING #:\n1Z 1X2 X3X 68 0000 5409",
+    "page": 46
+  },
+  {
+    "title": "INV",
+    "content": "BILLING: P/P\nDESC: SEEDS\nISC\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s\nliability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by\ninternational conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment\nand UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported\nfrom the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n45\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 46
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "Label Format Requirements\nIntroduction\nThe Proactive Response indicator box must print only \nfor shipments with the following origin/destination \nlocations:\nUS/US; US/PR; PR/US; PR/PR\n• \u0007\nIndicator            =  P\n• Text Color\t\n          =  White\n• \u0007\nFont Size\t\n            =  28 pt. bold\nUPS Proactive Response™ service provides strict \n(24 hour and 7 day ) monitoring of packages and \nintervention including refrigeration or dry ice \nreplenishment at UPS facilities. UPS Proactive \nResponse™ shipment labels must contain additional \ninformation to assist UPS in processing the shipment \naccurately. This is a contract service.\n• Black Square \t\n   =  0.35 inches x 0.35 inches\n• Left justification\nLabel Format Requirements\nUPS Returns™\nThe following text must print in the Package \nInformation Block of a UPS Proactive Response™  label\nfor all origins and destinations.\n• Data Content       PRO\n• Font Size          =  16 pt. bold\n\u0007\nWhen UPS Returns™ is selected as the shipping \noption with UPS Proactive Response™, unique Service \nIndicators and MaxiCode™  Class of Service codes \nlisted in the tables below must be used.\nUnited States and Puerto Rico Service Indicators, Icons and MaxiCode™  Class of Service\nService Title\t\n                                                                                                      Service Indicator     Service Icon      Class of Service\nUPS NEXT DAY AIR™ EARLY\t\nV2\t\n1+\t\n866\nUPS NEXT DAY AIR™\t\nV3\t\n1\t\n867\nInternational Service Indicators, Icons and MaxiCode™ Class of Service\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS EXPRESS PLUS™\t\nV5\t\n1+\t\n869\nUPS EXPRESS™ (NA1)\t\nV8\t\n1\t\n872\nUPS EXPRESS™ (NA1), Saturday Delivery\t\nYG\t\n1 S\t\n975\nUPS EXPRESS™\t\nV4\t\n1\t\n868\nUPS EXPRESS™, Saturday Delivery\t\nY9\t\n1 S\t\n969\nUPS SAVER™\t\nV6\t\n1P\t\n870\nUPS EXPRESS™ 12:00\t\nQ8\t\n1 \t\n744\nNote: UPS EXPRESS™ 12:00 service is only offered in Germany (DE to DE)\nUPS Premium Care™                                                                                                                                                                             \nWhen using the UPS Returns™ service with UPS Proactive Response™ and UPS Premium Care™ services, the Service \nIndicators and MaxiCode™ Class of Service codes listed in the tables below must be used.\nNOTE: UPS Premium Care™ is only for Canada to Canada Shipments.\nWhen using the UPS Premium Care™ is selected the following text must print in the Additional Routing Instructions \nBlock:\n• Text \t\n                  =  COC-ADULT SIGNATURE REQUIRED\n• Font Size        =  10 pt. bold\nUPS Premium Care™ Returns Service Indicators, Icons and MaxiCode™ Class of Service\nService  Title                                                                          Service  Indicactor   Service  Icon    Class of  Service\nUPS EXPRESS PLUS™\t\n                                                                                       EM\t                        1+\t\n                  436\nUPS EXPRESS™\t\nEL\t\n1\t\n435\nUPS SAVER™                                                                                                                                                                                                  EN\t\n1P\t\n437\nUPS Guide to Labeling\n46\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 47
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "UPS Premium Care™ Proactive Returns Label",
+    "page": 48
+  },
+  {
+    "title": "8 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 48
+  },
+  {
+    "title": "RS",
+    "content": "STREET ADDRESS\nMISSISSAUGA ON L4V1X5",
+    "page": 48
+  },
+  {
+    "title": "PRO",
+    "content": "SHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 48
+  },
+  {
+    "title": "CAN 400 5-00",
+    "content": "TRACKING #:",
+    "page": 48
+  },
+  {
+    "title": "1P",
+    "content": "BILLING: P/P\nCOC-ADULT SIGNATURE REQUIRED\nDESC: MEDICAL SUPPLIES\n18.5A 01/2020\nRETURN SERVICE\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n47\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 48
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "United States Domestic Label with COD, Refrigeration and Adult Signature Required",
+    "page": 49
+  },
+  {
+    "title": "13 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSTREET ADDRESS",
+    "page": 49
+  },
+  {
+    "title": "COD",
+    "content": "CHICAGO IL  60607\nCONTACT NAME\nSHIP",
+    "page": 49
+  },
+  {
+    "title": "PRO\nRFG",
+    "content": "PHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 49
+  },
+  {
+    "title": "UPS NEXT DAY AIR EARLY\n1Z 1X2 X3X AA 0000 5601",
+    "content": "TRACKING #:",
+    "page": 49
+  },
+  {
+    "title": "1",
+    "content": "COD CASHIERS CK/MO ONLY $ 1,037.12\nADULT SIGNATURE REQUIRED-MIN 21\n18.5A 01/2020\nUPS Guide to Labeling\n48\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 49
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "United States Domestic Label with Return Service",
+    "page": 50
+  },
+  {
+    "title": "15 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSTREET ADDRESS\nMESA AZ 85206",
+    "page": 50
+  },
+  {
+    "title": "RS\nPRO",
+    "content": "CONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 50
+  },
+  {
+    "title": "UPS NEXT DAY AIR\n1Z 1X2 X3X V3 0000 6705",
+    "content": "TRACKING #:",
+    "page": 50
+  },
+  {
+    "title": "1",
+    "content": "DESC: MEDICAL SUPPLIES\nRETURN SERVICE\n12.5A 04/2019\nUPS Guide to Labeling\n49\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 50
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "International Label",
+    "page": 51
+  },
+  {
+    "title": "8 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSTREET ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 8 KG\nCHICAGO IL  60607\nUNITED STATES\nDATE: 11 JAN 2020\nSHP DWT: 49 KG\nSHIP",
+    "page": 51
+  },
+  {
+    "title": "PRO",
+    "content": "CONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 51
+  },
+  {
+    "title": "DEU 091 0-00",
+    "content": "TRACKING #:",
+    "page": 51
+  },
+  {
+    "title": "1P",
+    "content": "BILLING: P/P",
+    "page": 51
+  },
+  {
+    "title": "INV",
+    "content": "DESC: LASER PRINTER\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\n51\nUPS Guide to Labeling\nSupplement",
+    "page": 51
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "International Label with Return Service",
+    "page": 52
+  },
+  {
+    "title": "5 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSHP#: 1X2X 3X33 3TT \nSHP WT: 5 LBS\nSTREET ADDRESS\n60386  FRANKFURT\nGERMANY\nDATE: 11 JAN 2020\nSHP DWT: 5 LBS\nCONTACT NAME\nSHIP",
+    "page": 52
+  },
+  {
+    "title": "PRO",
+    "content": "PHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 52
+  },
+  {
+    "title": "UPS EXPRESS",
+    "content": "TRACKING #: 1Z 1X2 X3X V4 0000 5400",
+    "page": 52
+  },
+  {
+    "title": "1",
+    "content": "BILLING: P/P",
+    "page": 52
+  },
+  {
+    "title": "KEY-RS",
+    "content": "DESC: SURGICAL EQUIPMENT\nRETURN SERVICE - PAYMENT GUARANTEED\n18.5A 01/2020\n4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X V4 0000 5400\nSHP #:1X2X 3X33 3TT",
+    "page": 52
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability\nfor loss or damage to cargo.  International carriage by road may be subject to the Convention on the\nContract for the International Carriage of Goods By Road.  Except as otherwise governed by international\nconventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this\nshipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS\nreserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper\nauthorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the\nUS, shipper certifies that the commodities, technology or software were exported from the US in accordance\nwith the Export Administration Regulations.  Diversion contrary to law is prohibited.\n18.5A 01/2020\nUPS Guide to Labeling\n51\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 52
+  },
+  {
+    "title": "UPS Proactive Response™",
+    "content": "International Label with Return Service",
+    "page": 53
+  },
+  {
+    "title": "5 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSHP#: 1X2X 3X33 3TT \nSHP WT: 5 LBS\nSTREET ADDRESS\n60386  FRANKFURT\nGERMANY\nDATE: 11 JAN 2020\nSHP DWT: 5 LBS\nCONTACT NAME\nSHIP",
+    "page": 53
+  },
+  {
+    "title": "PRO",
+    "content": "PHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 53
+  },
+  {
+    "title": "UPS EXPRESS",
+    "content": "TRACKING #: 1Z 1X2 X3X V4 0000 5400",
+    "page": 53
+  },
+  {
+    "title": "1",
+    "content": "BILLING: P/P",
+    "page": 53
+  },
+  {
+    "title": "KEY-RS",
+    "content": "DESC: SURGICAL EQUIPMENT\nRETURN SERVICE - PAYMENT GUARANTEED\n18.5A 01/2020\n4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X V4 0000 5400\nSHP #:1X2X 3X33 3TT",
+    "page": 53
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air\ncarriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability\nfor loss or damage to cargo.  International carriage by road may be subject to the Convention on the\nContract for the International Carriage of Goods By Road.  Except as otherwise governed by international\nconventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this\nshipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS\nreserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper\nauthorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the\nUS, shipper certifies that the commodities, technology or software were exported from the US in accordance\nwith the Export Administration Regulations.  Diversion contrary to law is prohibited.\n18.5A 01/2020\nUPS Guide to Labeling\n52\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 53
+  },
+  {
+    "title": "Refrigeration Service",
+    "content": "Label Format Requirements\nIntroduction\nRefrigeration Service is offered as a contract service \nonly. This service allows a package to be refrigerated \nat certain UPS facilities if necessary.\nLabel Format Requirements\n\u0007\nThe refrigeration service indicator must print in the \ntop right corner of the shipping label.\n• \u0007\nData Content:\nText = RFG\n• \u0007\nFont Size = 16 pt. bold\nU.S.  Domestic Label",
+    "page": 54
+  },
+  {
+    "title": "5 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 54
+  },
+  {
+    "title": "RFG",
+    "content": "STREET ADDRESS\nKALAMAZOO MI  49009\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 54
+  },
+  {
+    "title": "UPS NEXT DAY AIR\n1Z 1X2 X3X 01 1234 5672",
+    "content": "TRACKING #:",
+    "page": 54
+  },
+  {
+    "title": "1",
+    "content": "18.5A 01/2020\nUPS Guide to Labeling\n53\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 54
+  },
+  {
+    "title": "Refrigeration Service",
+    "content": "International Label",
+    "page": 55
+  },
+  {
+    "title": "12 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\n60386  FRANKFURT\nSHP#: 1X2X 3X33 3TT\nSHP WT: 12 KG\nSHP DWT: 12 KG\nDATE: 11 JAN 2020\nGERMANY\nSHIP\nCONTACT NAME",
+    "page": 55
+  },
+  {
+    "title": "RFG",
+    "content": "TO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 55
+  },
+  {
+    "title": "GA 301 9-01",
+    "content": "TRACKING #:",
+    "page": 55
+  },
+  {
+    "title": "1+",
+    "content": "BILLING: P/P",
+    "page": 55
+  },
+  {
+    "title": "INV",
+    "content": "DESC: LASER PRINTER\nMRN: 12DE567890123456789012345678\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n54\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 55
+  },
+  {
+    "title": "Dry Ice and Biological Substances",
+    "content": "Label Format Requirements\nOverview\nDry Ice and Biological Substances are offered as \ncontract services.  When using these services, the \nlabel must contain additional information to meet \nregulatory requirements and assist UPS in processing \nthe shipment.\nAdditionally, an Audit Indicator line must print below \nthe Dry Ice line indicating whether an audit of the \npackage is necessary by UPS Operations. For more \ndetails on which packages will require an audit, \nplease refer to the UPS Rate and Service Guide.\nFor packages which require audit:\n• Routing Instruction = AUDIT REQUIRED\nNOTE:  Dry ice is a general service offering for \ncertain United States and Puerto Rico domestic \nshipments.\nFor packages which do not require audit:\n• Routing Instruction = NO AUDIT REQUIRED\n• Font Size = 10 pt.\nThe service may be used with UPS Returns™ or UPS \nImport Control™.  The label requirements can be \nfound in the main UPS Guide to Labeling document.\nAduits are performed for the following scenarios:\nDry Ice Label Format Requirements\nFor non-medical domestic air shipments:\nUnder 49CFR Regulations, if shipping above 5.5 lbs \nor less – no acceptance audit is performed.\nUnder IATA Regulations, regardless of weight – an \nacceptance audit is performed.\nWhen shipping dry ice, the data below must print \nin the Additional Routing Instructions block of \nthe label immediately below the Description of \nGoods.  The weight of the dry ice must always be in \nkilograms and must be rounded to the next tenth.\n• Data Content\nFor non-medical international shipments:\nPositions \t 1-29*\t\n=\t \u0007\nUN1845, DRY ICE, \nCLASS 9, 1 x\nUnder IATA Regulations, regardless of weight – an \nacceptance audit is performed.\nPosition \t\n30\t\n=\t Space\nFor medical domestic air shipments:\nPositions \t31-35\t\n=\t \u0007\nUp to five numeric \n(inclusive of decimal \npoint) representing \n\nthe weight of the dry ice\nUnder IATA Regulations, regardless of weight – an \nacceptance audit is performed.\nFor medical international shipments:\nin the package to \nwhich the label will be \naffixed.\nUnder IATA Regulations, regardless of weight – an \nacceptance audit is performed.\nPosition \t\n36\t\n=\t Space\nPositions \t37-38\t\n=\t KG\n• Font Size = 10 pt.\nPlease go to www.ups.com for more information \nregarding Dry Ice\n• For Example:  UN1845, DRY ICE, CLASS 9, 1 x 12.5 KG\nBIOLOGICAL SUBSTANCES LABEL FORMAT\nREQUIREMENTS\nNOTE: Positions 1-29 represent static text. This text \nwill be the same for all Dry Ice shipments.\nWhen shipping biological substances, the following \ntext must print centered in the Additional Routing \nInstructions block of the label immediately below \nthe Power of Attorney line.\n• Routing Instruction = ISC-BIO\n• Font Size = 10 pt. bold\nUPS Guide to Labeling\n55\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 56
+  },
+  {
+    "title": "Dry Ice and Biological Substances",
+    "content": "Dry Ice",
+    "page": 57
+  },
+  {
+    "title": "25 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3XTT M4H\nSHP WT: 25 LBS\nSTREET ADDRESS\nCHICAGO IL  60607\nDATE: 11 JAN 2020\nSHP DWT: 25 LBS\nUNITED STATES\nCONTACT NAME\nPHONE NUMBER\nSHIP\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 57
+  },
+  {
+    "title": "CAN 527 9-00",
+    "content": "TRACKING #:",
+    "page": 57
+  },
+  {
+    "title": "UPS EXPRESS\n1Z 1X2 X3X 66 9500 5404",
+    "content": "BILLING: P/P",
+    "page": 57
+  },
+  {
+    "title": "INV",
+    "content": "POA\n18.5A 01/2020\nDESC: MEDICATION\nUN 1845, DRY ICE, CLASS 9, 1 x 6 KG\nAUDIT REQUIRED\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n56\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 57
+  },
+  {
+    "title": "Dry Ice and Biological Substances",
+    "content": "Biological Substances",
+    "page": 58
+  },
+  {
+    "title": "30 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 30 LBS\nSTREET ADDRESS\nCHICAGO IL  60607\nDATE: 11 JAN 2020\nSHP DWT: 30 LBS\nUNITED STATES\nSHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 58
+  },
+  {
+    "title": "DEU 091 0-00",
+    "content": "TRACKING #:",
+    "page": 58
+  },
+  {
+    "title": "UPS EXPRESS\n1Z 1X2 X3X 66 0000 5403",
+    "content": "BILLING: P/P",
+    "page": 58
+  },
+  {
+    "title": "INV",
+    "content": "POA\nISC-BIO\nDESC: BLOOD SAMPLES\nUN 1845, DRY ICE, CLASS 9, 1 x 6 KG\nAUDIT REQUIRED\n18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n57\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 58
+  },
+  {
+    "title": "UPS® Premier",
+    "content": "Label Format Requirements\nIntroduction\nThe UPS® Premier indicator box must print using the \nfollowing guidelines:\n• \u0007\nIndicator            =  V\n• Text Color\t\n          =  White\n• \u0007\nFont Size\t\n            =  28 pt. bold\n• Black Square \t\n   =  0.35 inches x 0.35 inches\n• Left justification\nSee label images on the following pages.\nUPS® Premier is a contractual service by which \ncustomers can easily ship complex, sensitive packages \n(e.g., healthcare and pharmaceutical items) with the \nassurance that these packages will be treated with \nthe highest level of care.  UPS® Premier customers \nwill have the flexibility to choose not only from \nmultiple levels (Silver, Gold, & Platinum) to best \nsuit their shipping needs, but also from numerous \nspecial handling instructions to ensure the integrity \nof their shipments by prompting rapid response time \nshould such packages become distressed.  The Radio \nFrequency Identification (RFID) labels for UPS Premier \nSilver Packages and the Mesh Identifier for UPS Premier \nGold and Platinum Packages contribute to this rapid \nresponse.  UPS® Premier provides customers a high \nlevel of visibility into their critical shipments, resulting \nin greater reliability and confidence in UPS service.\nLabel Format Requirements\nThe following text must print in the Package \nInformation Block of a UPS® Premier label for all origins \nand destinations. The required text depends on the \nUPS® Premier service option selected.\nUPS® Premier Silver:\n• Data Content  =  SLV\n• Font Size           =  16 pt. bold\nUPS® Premier Gold:\n• Data Content  =  GLD\n• Font Size           =  16 pt. bold\nUPS® Premier Platinum:\n• Data Content  =  PLT\n• Font Size           =  16 pt. bold\nUPS Guide to Labeling\n58\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 59
+  },
+  {
+    "title": "UPS® Premier",
+    "content": "UPS® Premier Gold Return Label\nUPS Guide to Labeling\n59\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 60
+  },
+  {
+    "title": "UPS® Premier",
+    "content": "UPS® Premier Platinum United States Domestic Label with COD, Refrigeration and Adult\nSignature Required",
+    "page": 61
+  },
+  {
+    "title": "13 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSTREET ADDRESS",
+    "page": 61
+  },
+  {
+    "title": "COD",
+    "content": "CHICAGO IL  60607\nCONTACT NAME\nSHIP",
+    "page": 61
+  },
+  {
+    "title": "PLT\nRFG",
+    "content": "PHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 61
+  },
+  {
+    "title": "UPS NEXT DAY AIR EARLY\n1Z 1X2 X3X AA 0000 5601",
+    "content": "TRACKING #:",
+    "page": 61
+  },
+  {
+    "title": "+S",
+    "content": "COD CASHIERS CK/MO ONLY $ 1,037.12\nADULT SIGNATURE REQUIRED-MIN 21\n18.5A 01/2020\nUPS Guide to Labeling\n60\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 61
+  },
+  {
+    "title": "UPS® Premier",
+    "content": "UPS® Premier Silver International Label",
+    "page": 62
+  },
+  {
+    "title": "15 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 15 LBS\nSTREET ADDRESS\nSHP  DWT: 15 LBS\nCHICAGO IL 60607\nUNITED STATES",
+    "page": 62
+  },
+  {
+    "title": "DATE: 11 JAN 2020\nSLV",
+    "content": "CONTACT NAME\nSHIP\nTO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 62
+  },
+  {
+    "title": "V",
+    "content": "TRACKING #:",
+    "page": 62
+  },
+  {
+    "title": "1",
+    "content": "BILLING: P/P\nDESC: TOYS",
+    "page": 62
+  },
+  {
+    "title": "EDI",
+    "content": "18.5A 01/2020\nShipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for\nloss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions\nor other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to\nroute the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported from the US, shipper certifies that\nthe commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n61\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 62
+  },
+  {
+    "title": "International Shipping Documentation",
+    "content": "UPS Paperless™ Invoice\nIntroduction\nA PDF417 must print on the label when required. \nFor details on the PDF417 Barcode, please refer to \nthe PDF417 Barcode Symbology document.\nThe UPS Paperless™ Invoice allows shippers \nto submit a paperless commercial invoice for \ninternational movements.  The UPS Paperless™ \nInvoice is offered by contract only.  For paperless \nshipments, the shipping label must contain \nadditional information to assist UPS in processing \nyour shipment.\nInternational Documentation Indicators\nWhen the UPS Paperless™ Invoice is used, special \nInternational Documentation Indicators must be \nprinted on the label to alert UPS Operations that  \nthe shipment is paperless.  The indicators are:\n• \u0007\nEDI\n\nThe invoice is the only customs document \nrequired.\n• \u0007\nEDI-PULL\n\nThere are additional customs documents included \nwith the shipment.\n• \u0007\nEDI-IDIS\n\nThere are additional customs documents \nuploaded to International Document Imaging \nSystem\n• \u0007\nEDI-CCP\n\nThe paperless shipment is UPS World Ease™.\n• EDI-IDIS-RS\nThe paperless returns and Import Control shipment \nhave additional customs documents uploaded to \nthe international document imaging system.\n• EDI-RS\nThis is UPS Paperless Returns and Import Control \nShipment.\n• EDI-RS1\nThis is UPS Paperless Returns and Import Control \nShipment.\n• EDI-RS3\nThis is UPS Paperless Returns and Import Control \nShipment.\n• \u0007\nFont Size = 16 pt. bold\nPDF417 Barcode\nUPS Guide to Labeling\n62\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 63
+  },
+  {
+    "title": "UPS Paperless™ Invoice",
+    "content": "Paperless Shipment - Invoice Only  -  4\" x 4.25\" Label Format",
+    "page": 64
+  },
+  {
+    "title": "8 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 8 LBS\nSTREET ADDRESS\nCHICAGO IL  60607\nDATE: 17 MAY 2019\nSHP DWT: 8 LBS\nUNITED STATES\nSHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 64
+  },
+  {
+    "title": "UPS SAVER\n1Z 1X2 X3X 04 0000 5403",
+    "content": "TRACKING #:",
+    "page": 64
+  },
+  {
+    "title": "EDI-IDIS",
+    "content": "BILLING: P/P\nDESC: COMPUTER EQUIPMENT\nPOA\n12.5A 04/2019\n4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X  04 0000 5403\nSHP#:1X2X 3X33 3TT",
+    "page": 64
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal\nConvention may apply and limits UPS’s liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the\nInternational Carriage of Goods By Road.  Except as otherwise governed by international conventions or other mandatory law, the UPS Terms limit UPS’s liability for\ndamage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the\nshipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If\nexported from the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration\nRegulations.  Diversion contrary to law is prohibited.\n12.5A 04/2019\nUPS Guide to Labeling\n63\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 64
+  },
+  {
+    "title": "UPS Paperless™ Invoice",
+    "content": "Paperless Shipment - Invoice Only 4\" x 6' Label Format\n4\"x 6\" label format prints  the PDF417 Barcode at the bottom of the label",
+    "page": 65
+  },
+  {
+    "title": "12 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSHP#: 1X2X 3X33 3VP\nSHP WT: 50.5 KG\nSTREET ADDRESS\nEXTENDED ADDRESS\nDATE: 11 JAN 2020\nSHP DWT: 50.5 KG\nCHICAGO  IL 60607\nUNITED STATES\nSHIP\nCONTACT NAME\nTO:\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 65
+  },
+  {
+    "title": "UPS EXPRESS PLUS",
+    "content": "TRACKING #:\n1Z 1X2 X3X 54 0000 5408",
+    "page": 65
+  },
+  {
+    "title": "1+",
+    "content": "BILLING: P/P",
+    "page": 65
+  },
+  {
+    "title": "EDI",
+    "content": "DESC: ART\nREF 1:  ABCD1234\n18.5A 01/2020",
+    "page": 65
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s\nliability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by\ninternational conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment\nand UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported\nfrom the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\nUPS Guide to Labeling\n64\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 65
+  },
+  {
+    "title": "UPS Paperless™ Invoice",
+    "content": "Paperless Shipment - Additional Customs Documents",
+    "page": 66
+  },
+  {
+    "title": "38 KG\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\n60386  FRANKFURT\nSHP#: 1X2X 3X33 3TT\nSHP WT: 38 KG\nSHP DWT: 38 KG\nDATE: 11 JAN 2020\nGERMANY\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 66
+  },
+  {
+    "title": "UPS EXPEDITED\n1Z 1X2 X3X 67 0000 5410",
+    "content": "TRACKING #:",
+    "page": 66
+  },
+  {
+    "title": "EDI-PULL",
+    "content": "BILLING: P/P\nDESC: AUTO PARTS\n18.5A 01/2020\n4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X  67 0000 5410\nSHP#:1X2X 3X33 3TT",
+    "page": 66
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service\ncenters.  For international air carriage, the Warsaw Convention as amended\nor Montreal Convention may apply and limits UPS’s liability for loss or\ndamage to cargo.  International carriage by road may be subject to the\nConvention on the Contract for the International Carriage of Goods By Road.\nExcept as otherwise governed by international conventions or other\nmandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay\nof this shipment.  There are no stopping places agreed upon at the time of\nDATE:\nSHIPPER'S SIGNATURE:\n18.5A 01/2020\nUPS Guide to Labeling\n65\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 66
+  },
+  {
+    "title": "International Forms - Image Upload",
+    "content": "Label Format Requirements\nIntroduction\nInternational Documentation Indicator\nUPS allows customers to upload images of their \ninternational shipping documents.  The forms \ninclude the following:\n• \u0007\n Commercial Invoice\n• \u0007\n Shipper Export Declaration\n• \u0007\n US Certificate of Origin\nWhen uploading images of international forms, a  \nspecial International Documentation Indicator must \nbe printed on the label.  The indicator will alert UPS \nOperations that images for the shipment have been \nuploaded and paper forms may not be attached to \nthe package.  The indicator is:\n• \u0007\n NAFTA Certificate of Origin\n• \u0007\nEDI-IDIS\n• \u0007\n Packing List\n• \u0007\nFont Size = 16 pt. bold\n• \u0007\n Other customs forms\nUPS Saver - US to Germany Shipment\nCONTACT NAME",
+    "page": 67
+  },
+  {
+    "title": "8 LBS\n1 OF 1",
+    "content": "COMPANY NAME\nPHONE NUMBER\nEXTENDED ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 8 LBS\nSTREET ADDRESS\nSHP DWT: 49 LBS\nCHICAGO IL  60607\nDATE: 11 JAN 2020\nUNITED STATES\nSHIP\nCONTACT NAME\nPHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 67
+  },
+  {
+    "title": "DEU 091 0-00",
+    "content": "4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X 04 0000 5403\nSHP#: 1X2X 3X33 3TT",
+    "page": 67
+  },
+  {
+    "title": "UPS SAVER\n1Z 1X2 X3X 04 0000 5403",
+    "content": "TRACKING #:",
+    "page": 67
+  },
+  {
+    "title": "EDI-IDIS",
+    "content": "BILLING: P/P\nDESC: COMPUTER EQUIPMENT\n18.5A 01/2020",
+    "page": 67
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or\nMontreal Convention may apply and limits UPS’s liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on\nthe Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions or other mandatory law, the UPS\nTerms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and\nUPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent\nfor export control and customs purposes.  If exported from the US, shipper certifies that the commodities, technology or software were exported from the\nUS in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\n18.5A 01/2020\nUPS Guide to Labeling\n66\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 67
+  },
+  {
+    "title": "International Forms - Image Upload",
+    "content": "UPS Expedited - Germany to Japan Shipment\nCONTACT NAME\nPHONE NUMBER",
+    "page": 68
+  },
+  {
+    "title": "38 LBS\n1 OF 1",
+    "content": "COMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\n60386  FRANKFURT\nSHP#: 1X2X3X 7HP3K\nSHP WT: 38 KG\nSHP DWT: 38 KG\nDATE: 11 JAN 2020\nGERMANY\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 68
+  },
+  {
+    "title": "UPS EXPEDITED\n1Z 1X2 X3X 67 1100 5408",
+    "content": "TRACKING #:",
+    "page": 68
+  },
+  {
+    "title": "EDI-IDIS",
+    "content": "BILLING: P/P\nDESC: AUTO PARTS\nAES NOEEI 30.37(A)\n18.5A 01/2020\n4\"x 4.25\" label format prints  the PDF417 Barcode on 2nd  label\nBackup Document - Please Place on Package\nTR#: 1Z 1X2 X3X 67 1100 5408\nSHP#: 1X2X3X 7HP3K",
+    "page": 68
+  },
+  {
+    "title": "SAMPLE",
+    "content": "Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or\nMontreal Convention may apply and limits UPS’s liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on\nthe Contract for the International Carriage of Goods By Road.  Except as otherwise governed by international conventions or other mandatory law, the UPS\nTerms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment and\nUPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent\nfor export control and customs purposes.  If exported from the US, shipper certifies that the commodities, technology or software were exported from the\nUS in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.\n18.5A 01/2020\nUPS Guide to Labeling\n67\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 68
+  },
+  {
+    "title": "UPS Returns™  Pack and Collect Service",
+    "content": "Label Format Requirements\nIntroduction\nLabel Format Requirements\n\u0007\nThe label is created at a UPS facility - so creating a \nlabel is not required, but the service indicator will \nneed to be transmitted to UPS.\nThe UPS Returns™ Pack and Collect service is a \ncontractual returns service for the retrieval of high-\nvalue products from the original receiver for return \nto the shipper or to an alternate location.  The UPS \nReturns™ Pack and Collect service allows a shipper \nto initiate a next day collection leveraging UPS \nReturn Services RS1 and RS3 and a selection of \nspecially designed, UPS-branded UPS Returns Pack \nand Collect packaging.\nThe UPS service provider performs a basic visual \ninspection of the item to be returned and it is \npacked in the empty UPS-provided packaging.\nService Indicators, Icons and MaxiCode™ Class of Service for International \nMovements and Movements Outside of the United States and Puerto Rico\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS EXPRESS PLUS™\n1 Pickup Attempt\t\n5N\t\n1+\t\n181\n3 Pickup Attempts\t\n5P\t\n1+\t\n182\nUPS EXPRESS™\t\n\t 1 Pickup Attempt\t\n5T\t\n1\t\n186\n1 Pickup Attempt Saturday Delivery\t\n5Y\t\n1 S\t\n190\n3 Pickup Attempts\t\n5W\t\n1\t\n188\n3 Pickup Attempts, Saturday Delivery\t\n6A\t\n1 S\t\n202\nUPS SAVER™\n\t 1 Pickup Attempt\t\n6G\t\n1P\t\n207\n3 Pickup Attempts\t\n6H\t\n1P\t\n208\nUPS EXPEDITED™\n\t 1 Pickup Attempt\t\n6N\t\n2\t\n213\n3 Pickup Attempts\t\n6P\t\n2\t\n214\nUPS® STANDARD\n1 Pickup Attempt\t\n                                          6T                Black Square \t\n218\n3 Pickup Attempts\t\n                                         6W              Black Square \t\n220\nUPS EXPRESS™ 12:00\n1 Pickup Attempt                                                                                                                  Q0\t\n1\t\n736\n3 Pickup Attempts                                                                                                                Q1\t\n1 \t\n737\n*Note: UPS EXPRESS™ 12:00 service is only available in Germany (DE to DE shipments)\nUPS Guide to Labeling\n68\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 69
+  },
+  {
+    "title": "UPS Returns™  Pack and Collect",
+    "content": "Label Example\nCONTACT NAME\nPHONE NUMBER",
+    "page": 70
+  },
+  {
+    "title": "8 KG\n1 OF 1",
+    "content": "COMPANY NAME\nEXTENDED ADDRESS\nSTREET ADDRESS\nSHP#: 1X2X 3X33 3TT \nSHP WT: 8 KG\n75008 PARIS\nFRANCE\nDATE: 11 JAN 2020\nSHP DWT: 8 KG\nCONTACT NAME\nPHONE NUMBER\nSHIP\nTO:\nCOMPANY NAME\nEXTENDED ADDRESS",
+    "page": 70
+  },
+  {
+    "title": "UPS SAVER\n1Z 1X2 X3X 6H 0000 5407",
+    "content": "TRACKING #:",
+    "page": 70
+  },
+  {
+    "title": "1P",
+    "content": "BILLING: P/P",
+    "page": 70
+  },
+  {
+    "title": "KEY-RS3",
+    "content": "DESC: COMPUTER EQUIPMENT\nPACK AND COLLECT - BOX 3\n18.5A 01/2020\nUPS Guide to Labeling\n69\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 70
+  },
+  {
+    "title": "UPS Returns™ Exchange Service",
+    "content": "Label Format Requirements\nIntroduction\nAppropriate text must print in the Additional \nRouting Instructions block of the label.\nWhen the exchange item is similar, the routing \ninstructions is:\nEXCHANGE - LIKE ITEM ONLY\n\u0007\nThe UPS Returns™ Exchange service is a round-trip \ntransportation service designed to improve the \nexchange of merchandise between a shipper and \nreceiver.  It is a contractual, combined delivery/\npickup service for single-piece, single-part \nshipments and is targeted to high-value products.\nWhen the exchange item is not similar, the routing \ninstructions is:\nEXCHANGE - DRIVER INSTRUCTIONS INSIDE\n• Font Size = 10 pt.\nThe UPS service provider delivers the item and \nperforms a basic visual inspection of the item to \nbe returned.  The item is packed back into the \npackaging for the item that was delivered and is \nreturned to the shipper.\nIn addition, when a PDF417 barcode is required on \nthe label, it must either contain a forward or return \nindicator (refer to the UPS Guide to Labeling PDF417 \nSupplement for more information) .\nLabel Format Requirements\nThe UPS Returns™ pickup label requirements can be \nfound in the main UPS Guide to Labeling document.\n\u0007\nWhen using the UPS Returns™ Exchange service, the \nService Indicators and MaxiCode™ Class of Service \ncodes listed in this document must be used.\nService Indicators, Icons and MaxiCode™ Class of Service\n\nfor United States and Puerto Rico\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS NEXT DAY AIR™ EARLY\t\n6Y\t\n1+\t\n222\nAdult Signature\t\n7A\t\n1+\t\n234\nSaturday Delivery\t\n7G\t\n1+S\t\n239\nSaturday Delivery, Adult Signature\t\n7H\t\n1+S\t\n240\nUPS NEXT DAY AIR™\t\n7N\t\n1\t\n245\nAdult Signature\t\n7T\t\n1\t\n250\nShipper Release\t\n7Y\t\n1\t\n254\nSaturday Delivery\t\n7P\t\n1 S\t\n246\nSaturday Delivery, Adult Signature\t\n7W\t\n1 S\t\n252\nSaturday Delivery, Shipper Release\t\n8A\t\n1 S\t\n266\nUPS NEXT DAY AIR™ SAVER\t\n8G\t\n1P\t\n271\nAdult Signature\t\n8H\t\n1P\t\n272\nUPS 2ND DAY AIR™ A.M.\t\n8N\t\n2A\t\n277\nAdult Signature\t\n8P\t\n2A\t\n278\nUPS 2ND DAY AIR™ \t\n8T\t\n2\t\n282\nAdult Signature\t\n8Y\t\n2\t\n286\nShipper Release\t\n9G\t\n2\t\n303\nSaturday Delivery\t\n8W\t\n2 S\t\n284\nSaturday Delivery, Adult Signature\t\n9A\t\n2 S\t\n298\nSaturday Delivery, Shipper Release\t\n9H\t\n2 S\t\n304\nUPS 3 DAY SELECT™\t\n9N\t\n3\t\n309\nAdult Signature\t\n9P\t\n3\t\n310\nUPS® GROUND\t\n                                          9T               Black Square\t\n314\nAdult Signature\t\n                                           9W              Black Square \t\n316\nShipper Release\t\n                                           9Y               Black Square\t\n318\nUPS Guide to Labeling\n70\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 71
+  },
+  {
+    "title": "UPS Returns™ Exchange Service",
+    "content": "Label Format Requirements\nService Indicators, Icons and MaxiCode™ Class of Service\n\nfor International Movements and Movements Outside of the United States and Puerto Rico\nService Title\t\nService Indicator\t\nService Icon\t Class of Service\nUPS EXPRESS PLUS™\t\nHP\t\n1+\t\n534\nAdult Signature\t\nN5\t\n1+\t\n677\nSaturday Delivery\t\nN4\t\n1+S\t\n676\nSaturday Delivery, Adult Signature\t\nP3\t\n1+S\t\n707\nUPS EXPRESS™ (NA1)\t\nPH\t\n1\t\n720\nAdult Signature\t\nT4\t\n1\t\n836\nSaturday Delivery\t\nT5\t\n1 S\t\n837\nSaturday Delivery, Adult Signature\t\nAQ\t\n1 S\t\n343\nUPS EXPRESS™\t\nAS\t\n1\t\n345\nAdult Signature\t\nCQ\t\n1\t\n375\nSaturday Delivery\t\nAZ\t\n1 S\t\n351\nSaturday Delivery, Adult Signature\t\nCS\t\n1 S\t\n377\nUPS SAVER™\t\nDS\t\n1P\t\n409\nAdult Signature\t\nDV\t\n1P\t\n411\nUPS EXPEDITED™\t\nDW\t\n2\t\n412\nAdult Signature\t\nDX\t\n2\t\n413\nUPS® STANDARD\t\n                                          DY               Black Square\t\n414\nAdult Signature\t\n                                          DZ               Black Square\t\n415\nUPS EXPRESS™ 12:00\t\nQ2\t\n1\t\n738\nAdult Signature\t\nQ3\t\n1\t\n739\nNote: UPS UPS EXPRESS™ 12:00 is only available in Germany (DE to DE movements)\nUPS Guide to Labeling\n71\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 72
+  },
+  {
+    "title": "UPS Returns™ Exchange Service",
+    "content": "United States Domestic Label - Like Item Only\nForward Movement and Return movement labels",
+    "page": 73
+  },
+  {
+    "title": "30 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME\nSTREET ADDRESS\nTIMONIUM MD  21093\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 73
+  },
+  {
+    "title": "UPS GROUND\n1Z 1X2 X3X 9T 0000 5400",
+    "content": "TRACKING #:\nBILLING: P/P\nEXCHANGE - LIKE ITEM ONLY\n18.5A 01/2020",
+    "page": 73
+  },
+  {
+    "title": "30 LBS\n1 OF 1",
+    "content": "CONTACT NAME\nPHONE NUMBER\nCOMPANY NAME",
+    "page": 73
+  },
+  {
+    "title": "RS",
+    "content": "STREET ADDRESS\nALPHARETTA GA  30005\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 73
+  },
+  {
+    "title": "UPS GROUND\n1Z 1X2 X3X 90 0000 5402",
+    "content": "TRACKING #:\nBILLING: P/P\nDESC: BASKETBALLS\nRETURN SERVICES\n18.5A 01/2020\nUPS Guide to Labeling\n72\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 73
+  },
+  {
+    "title": "UPS Returns™ Exchange Service",
+    "content": "International Label - Driver Instructions Inside\nCONTACT NAME\nPHONE NUMBER",
+    "page": 74
+  },
+  {
+    "title": "20 KG\n1 OF 1",
+    "content": "COMPANY NAME\nSTREET ADDRESS\n60386  FRANKFURT\nGERMANY\nSHP#: 1X2X 3X33 9TT\nSHP WT: 20 KG\nSHP DWT: 20 KG\nDATE: 11 JAN 2020\nCONTACT NAME\nSHIP\nPHONE NUMBER\nTO:\nCOMPANY NAME",
+    "page": 74
+  },
+  {
+    "title": "FRA 196 3-75",
+    "content": "TRACKING #:",
+    "page": 74
+  },
+  {
+    "title": "UPS STANDARD\n 1Z 1X2 X3X DY 0000 5404",
+    "content": "BILLING: P/P\nEXCHANGE - DRIVER INSTRUCTIONS INSIDE",
+    "page": 74
+  },
+  {
+    "title": "DESC: CHINESE FABRIC\nEDI",
+    "content": "18.5A 01/2020\nUPS Guide to Labeling\n73\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark \n\nare trademarks of United Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 74
+  },
+  {
+    "title": "Appendix A",
+    "content": "UPS Trade Direct™ Service\nConsolidated Movement (CM) Shipment ID \nAssignment and Approval for Automated \nSystems\nnumber plus a check digit.  The check digit is selected \nfrom the string \"0123456789T\" using the MOD11 \nmethod.  A modulo of the nine digit base number and \nthe number 11 as a zero-based offset into the string of \npossible check digits.\nThe Consolidated Movement Shipment ID Numbers, \nalso known as the Unique Shipment Identifier (USI) are \nassigned on a per account basis.  Please contact your UPS \nTrade Direct™ Account Executive to obtain a range of \nnumbers for your automated system or for manual entry.\n• \u0007\nFor Example:  8674398414\nThe number four at the end of the example is the \ncheck digit.\n• \u0007\nExample #1\n867439841/11 = 78858164 with a remainder of 4\nThe remainder becomes the check digit and the \nshipment number is 8674398414.\n• \u0007\nExample #2\n\n840000028/11 = 76363638 with a remainder of 10\nIn order to receive a block of numbers, you will need \nto submit a block of 20 numbers beginning with \n1111111111 for verification of check digit calculation.  \nYour system is required to configure such that the \ncurrently issued block of numbers cannot be reused.  It \nis recommended that a low pool warning be displayed \nwhen the block is close to being exhausted.  The \nuser must be prevented from shipping if the block of \nnumbers has been exhausted.  To obtain validation of \nyour system generated Consolidated Movement (CM) \nShipment ID numbers, please contact your Trade Direct \nAccount Executive.\nIf the remainder is 10, the check digit is a \"T\".  The \nshipment number is 840000028T.\nCheck Digit Calculation for Trade Direct \nConsolidated Movement (CM) Shipment ID/ \nUnique Shipment Identifier (USI)\nThe Consolidated Movement Shipment ID Numbers, \nalso known as the Unique Shipment Identifier (USI), are \nassigned sequentially.  They consist of a nine digit\nSystem Code for Sub Pro Number\n\nThe system code is a two character alphanumeric \nidentification code that identifies the type of system \nused to generate the Sub Pro number.  This two character \ncode will remain numeric until all numeric possibilities \nare exhausted. Host customers and UPS Ready Vendors \nmust use \"09\".\nSub Pro Number - Trade Direct Region Codes\nService and Region\t\nDescription\t\nCode\nTDCB Southern Border\t\nConsolidated Movement with Origin Country of MX\t\n930\nTDCB Northern Border\t\nConsolidated Movement with Origin Country of CA\t\n931\nTDCB US Export\t\nConsolidated Movement with Origin Country of US\t\n932\nTrade Direct Ocean\t\nAny Consolidated Movement\t\n933\nTrade Direct Air\t\nAny Consolidated Movement\t\n\t\n\t\n934\nUPS Guide to Labeling\n74\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks of \nUnited Parcel Service of America, Inc. All rights reserved.\nSupplement",
+    "page": 75
+  },
+  {
+    "title": "Appendix B",
+    "content": "UPS Trade Direct™ Service\nCheck Digit Calculation for Trade Direct Sub Pro Number\nThe 19th digit of the Sub Pro number is a Mod-10 check digit.  This check digit is used by scanning systems and \ndata entry programs as a way to ensure that captured Sub Pro number is accurate and complete.\nCHECK DIGIT CALCULATION (Modified MOD 10)\n1) Convert all alpha characters to their numeric equivalents (see cross-reference table below)\n2) From left, add all odd positions\n3) From left, add all even positions and multiply by two\n4) Add results of steps 3 and 4\n5) Subtract result from next highest multiple of 10\n6) The remainder is your check digit. If the remainder is 10, the check digit is 0.\nALPHA TO NUMERIC CONVERSION TABLE\n A = 2\t\n F = 7\t\n K = 2\t\n P = 7\t\n U = 2\t\n Z = 7\nB = 3\t\n G = 8\t\n L = 3\t\n Q = 8\t\n V = 3\nC = 4\t\n H = 9\t\n M = 4\t\n R = 9\t\n W = 4\nD = 5\t\n I = 0\t\n N = 5\t\n S = 0\t\n X = 5\nE = 6\t\n J = 1\t\n O = 6\t\n T = 1\t\n Y = 6\nCHECK DIGIT EXAMPLE (note alpha to numeric conversion)\n1) Start with the Sub Pro number without check digit: 93009123ABC0000001\n2) Convert any alpha characters to their numeric equivalents: 930091232340000001\n3) From left, add all odd positions: \t\n\t\n\t\n26\n4) From left, add all even positions and multiply by two: \t 11 x 2 = 22\n5) Add results of steps 3 and 4: \t\n\t\n\t\n26 + 22 = 48\n6) Subtract result from next highest multiple of 10:\t\n50 - 48\n7) Remainder: \t\n2\n8) Check digit: \t\n2\t\n(if remainder is 10 the check digit is 0)\nResulting Sub Pro number with check digit:  93009123ABC00000012\nUPS Guide to Labeling\n75\n© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks \nof United Parcel Service of America, Inc. All rights reserved.\nSupplement\n76\n© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  \nare trademarks of United Parcel Service of America, Inc. All rights reserved.",
+    "page": 76
+  }
+]

@@ -1,0 +1,61 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7. LOOSE BBX LABEL SPECIFICATIONS 
+ 
+7.1. Purpose 
+The purpose of this document is to supplement the current Global SOP procedures with finer detail relative to 
+the specification, design, production and use of a Network-compliant Loose BBX Transport Label. 
+7.2. Objective 
+This guideline shall ensure that stakeholders: 
+• understand What a Loose BBX Transport Label is and its purpose, in the context of DHL Express 
+business segment 
+• know How to create a Loose BBX Transport Label and How to use it 
+• understand and comply with the business requirements for Label data and information 
+• understand the flexibility allowed by the design and its corresponding constraints 
+• are able to identify Label issues or non-compliance and initiate mitigation actions 
+7.3. Scope   
+This reference guide is directed at all DHL Functions and Facilities that are involved in the production or use of 
+Loose BBX Transport Labels and corresponding transportation and handling of Shipments, with specific 
+reference to the: 
+• 
+DHL Loose BBX Transport Label 
+• 
+All related Architectural elements (e.g. Identifiers, Barcodes) 
+• 
+Label Certification Guidelines 
+ 
+7.4.  Layout Overview (all segments) 
+The circled coloured numbers in the image below correspond to individual segments, which are described in 
+detail in the following sections. 
+NOTE: the Loose BBX Transport Label corresponds, in its essence, to a standard Transport Label, where a new 
+Custom’s Routing Address segment, identified through the new sub-segments 25-27, was added. Thus, the 
+below layout will only cover the added sub-segments, everything else remains standard (refer to page 12 for 
+related definitions). 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+57

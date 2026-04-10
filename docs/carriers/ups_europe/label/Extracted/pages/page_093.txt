@@ -1,0 +1,230 @@
+Appendix E
+ISO Country Codes (ISO 3166)
+Country Name (short name)	
+Official Name	
+Numeric Country Code	
+Alpha Country Code
+Congo, People’s Republic of	
+Republic of the Congo	
+178	
+CG
+Congo, The Democratic Republic of the	
+The Democratic Republic of the Congo	
+180	
+CD
+Cook Islands	
+	
+184	
+CK
+Costa Rica	
+Republic of Costa Rica	
+188	
+CR
+Côte d’Ivoire	
+Republic of Côte d’Ivoire	
+384	
+CI
+Croatia	
+Republic of Croatia	
+191	
+HR
+Curacao	
+	
+531	
+CW
+Cuba	
+Republic of Cuba	
+192	
+CU
+Cyprus	
+Republic of Cyprus	
+196	
+CY
+Czech Republic	
+	
+203	
+CZ
+Denmark	
+Kingdom of Denmark	
+208	
+DK
+Djibouti	
+Republic of Djibouti	
+262	
+DJ
+Dominica	
+Commonwealth of Dominica	
+212	
+DM
+Dominican Republic	
+	
+214	
+DO
+Ecuador	
+Republic of Ecuador	
+218	
+EC
+Egypt	
+Arab Republic of Egypt	
+818	
+EG
+El Salvador	
+Republic of El Salvador	
+222	
+SV
+Equatorial Guinea	
+Republic of Equatorial Guinea	
+226	
+GQ
+Eritrea	
+	
+232	
+ER
+Estonia	
+Republic of Estonia	
+233	
+EE
+Ethiopia	
+Federal Democratic Republic of Ethiopia	
+231	
+ET
+Falkland Islands (Malvinas)	
+	
+238	
+FK
+Faroe Islands	
+	
+234	
+FO
+Fiji	
+Republic of The Fiji Islands	
+242	
+FJ
+Finland	
+Republic of Finland	
+246	
+FI
+France	
+French Republic	
+250	
+FR
+French Guiana	
+	
+254	
+GF
+French Polynesia	
+	
+258	
+PF
+French Southern Territories	
+	
+260	
+TF
+Gabon	
+Gabonese Republic	
+266	
+GA
+Gambia	
+Republic of the Gambia	
+270	
+GM
+Georgia	
+	
+268	
+GE
+Germany	
+Federal Republic of Germany	
+276	
+DE
+Ghana	
+Republic of Ghana	
+288	
+GH
+Gibraltar	
+	
+292	
+GI
+Greece	
+Hellenic Republic	
+300	
+GR
+Greenland	
+	
+304	
+GL
+Grenada	
+	
+308	
+GD
+Guadeloupe	
+	
+312	
+GP
+Guam	
+	
+316	
+GU
+Guatemala	
+Republic of Guatemala	
+320	
+GT
+Guernsey	
+	
+831	
+GG
+Guinea	
+Republic of Guinea	
+324	
+GN
+Guinea-Bissau	
+Republic of Guinea-Bissau	
+624	
+GW
+Guyana	
+Republic of Guyana	
+328	
+GY
+Haiti	
+Republic of Haiti	
+332	
+HT
+Heard and McDonald Islands	
+	
+334	
+HM
+Holy See (Vatican City State)	
+	
+336	
+VA
+Honduras	
+Republic of Honduras	
+340	
+HN
+Hong Kong SAR, China	
+Hong Kong Special Administrative Region of China	 344	
+HK
+Hungary	
+Republic of Hungary	
+348	
+HU
+Iceland	
+Republic of Iceland	
+352	
+IS
+India	
+Republic of India	
+356	
+IN
+Indonesia	
+Republic of Indonesia	
+360	
+ID
+Iran, Islamic Republic of	
+Islamic Republic of Iran	
+364	
+IR
+91
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

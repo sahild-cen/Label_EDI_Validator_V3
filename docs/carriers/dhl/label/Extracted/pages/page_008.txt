@@ -1,0 +1,82 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Purpose 
+The purpose of this document is to supplement the current Global SOP procedures with finer detail to following 
+core DHL Express Document Types:  
+• 
+Transport Label 
+• 
+eWaybill 
+• 
+Loose BBX Transport Label 
+• 
+ACS Transport Label 
+1.1. Out of Scope 
+• 
+Manual House Waybill (HWB) 
+• 
+Master Waybill (MAWB) 
+ 
+2. Objective 
+The objective of this Reference guide is to ensure all stakeholders: 
+• 
+recognize and understand the business requirements on data and information on the Label 
+• 
+(customers) recognize and understand the specifications, which must be adhered to and met, to be 
+compliant with DHL EXPRESS’ Label Standards, before accepted utilization is possible 
+• 
+are able to identify issues and/or non-compliances with the Label and initiate mitigation actions 
+3. References 
+# 
+Document Name 
+Location/Link 
+R01 
+ISO/IEC 15459 Unique identifiers -- Part 1: Unique identifiers for transport 
+units  
+International Standard 
+International Standard 
+R02 
+ISO/IEC 16388 Automatic identification and data capture techniques -- 
+Code 39 Barcode symbology specification 
+International Standard 
+R03 
+ISO/IEC 15417 Automatic identification and data capture techniques -- 
+Code 128 Barcode symbology specification 
+ISO/IEC 15424 Information technology — Automatic 
+International Standard 
+R04 
+identification and data capture techniques — Data Carrier Identifiers 
+(including Symbology Identifiers) 
+ISO/IEC 15434 Automatic identification and data capture techniques -- 
+Syntax for high-capacity ADC media 
+International Standard 
+R05 
+ISO 15394 Packaging — Barcode and two-dimensional symbols for 
+shipping, transport and receiving labels 
+International Standard 
+R06 
+ISO/IEC 15416 Barcode print quality test specification — Linear symbols 
+R07 
+International Standard 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+7

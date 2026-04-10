@@ -1,0 +1,29 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 25 (Shipment Level) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG 25 
+9999 
+M 
+ CNI-DTM-TSR-MOA-FTX-SG31-SG33-SG43-SG50-SG70 
+Function: A group of segments  to give information about all consignments included in a voyage/flight or 
+ consolidation. 
+ 
+Note: 
+The data for each individual consignment has not been sent to the receiving partner by means of               
+single consignment based messages (e.g. booking and/or instruction messages) separate to the 
+IFCSUM message. For every consignment the complete structure of a single consignment based 
+message can be used starting with the segment CNI replacing the BGM.                                  
+Thus the extended form IFCSUM message has not the function of referencing but to show as full 
+a set of consignment data as is necessary to meet the requirements of type of consolidation 
+message being constructed e.g. Cargo vs. Full Freight. 
+Note on the Occurrence: 9999 is for the combination of Segment Group 25 (Shipment Level) and 
+Segment Group 25 (Invoice Level) 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 35 of 115

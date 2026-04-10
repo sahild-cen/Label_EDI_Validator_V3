@@ -1,0 +1,61 @@
+International Special Commodities
+Label Format Requirements
+Overview
+Label Format Requirements
+When shipping ISC, the following text must print 
+centered in the Additional Routing Instructions block 
+of the label immediately below the documentation 
+indicators.
+• 
+Routing Instruction = ISC
+• 
+Font Size                       = 10 pt. bold
+International Special Commodities (ISC) service is 
+offered by contract only.  An ISC contract allows the 
+shipper to send certain restricted articles such as:  
+alcoholic beverages, perishables, seeds, tobacco and 
+plants.  For ISC shipments, the shipping label must 
+contain additional information to meet regulatory 
+requirements and assist UPS in processing the 
+shipment.
+50 LBS
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3TT 
+SHP WT: 50 LBS
+STREET ADDRESS
+CHICAGO IL  60607
+DATE: 11 JAN 2020
+SHP DWT: 50 LBS
+UNITED STATES
+CONTACT NAME
+SHIP
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+WINDSOR ON  N8N2M1
+CANADA
+CAN 527 9-00
+UPS STANDARD
+TRACKING #:
+1Z 1X2 X3X 68 0000 5409
+INV
+BILLING: P/P
+DESC: SEEDS
+ISC
+18.5A 01/2020
+Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s
+liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by
+international conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment
+and UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported
+from the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.
+UPS Guide to Labeling
+45
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

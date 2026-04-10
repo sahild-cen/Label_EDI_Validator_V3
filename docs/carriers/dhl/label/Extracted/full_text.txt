@@ -1,0 +1,5441 @@
+=== PAGE 1 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<Global Standard Transport Labels and Waybills> 
+Author : <Paulo Ferro De Gouveia> 
+Function : <Global Technical Standards> 
+Category: Process 
+Document ID : 2-20230505-01 
+Maintained by : Network Operations 
+       
+Approval by : Network Operations ExCom 
+Effective date : 1/12/2024 
+Approval status : [Status] Approved 
+Approval date : 8/11/2024 
+ 
+Audience 
+The <Global Standard Transport Labels and Waybills> applies to the following function groups :  
+1. Network Operations 
+2. Customer Facing Solutions (ESS/ ESI) 
+Scope – Global/Regional/Country  
+ 
+ 
+Serial copy for CustomeXXX” only 
+ 
+Serial number:  
+Compliance 
+All locations where this activity is performed must comply with these guidelines.  
+If compliance cannot be achieved, local management must raise an exemption as per the Global SOP 
+Change/Exemption Request Process. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+ 
+ 
+DHL Express – Excellence. Simply delivered.
+
+=== PAGE 2 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Table of Contents  
+Audience 
+.................................................................................................................................................. 
+0 
+Compliance .............................................................................................................................................. 
+0 
+1. 
+Purpose ............................................................................................................................................ 
+7 
+1.1. 
+Out of Scope ................................................................................................................................. 
+7 
+2. 
+Objective .......................................................................................................................................... 
+7 
+3. 
+References ....................................................................................................................................... 
+7 
+4. 
+Definitions ........................................................................................................................................ 
+9 
+4.1. 
+Definitions .................................................................................................................................... 
+9 
+4.2. 
+Core Business Principles ............................................................................................................. 
+10 
+4.3. 
+Label Certification ...................................................................................................................... 
+10 
+4.4. 
+Documentation-related Principles ............................................................................................. 
+11 
+4.4.1. 
+Legend .................................................................................................................................... 
+11 
+5. 
+Transport Label – Segment Specifications ..................................................................................... 
+12 
+5.1. 
+Layout overview – DHL Transport Label (all segments) ............................................................. 
+12 
+5.1.1. 
+Standard Label Sample with operational data ....................................................................... 
+14 
+5.1.2. 
+Standard 2D-enabled Label Sample ....................................................................................... 
+15 
+5.2. 
+Product Name, Product Content Code and Version Name 
+........................................................ 
+17 
+5.2.1. 
+Product Name (Conditional) ................................................................................................... 
+17 
+5.2.1.1. 
+Highly-Compact Label ......................................................................................................... 
+17 
+5.2.2. 
+Product Content Code (mandatory) ....................................................................................... 
+17 
+5.2.3. 
+Printing Application, Date and Label Certification Identifier (mandatory) ............................ 
+17 
+5.2.3.1. 
+Permanent Label Certification Identifier (mandatory)....................................................... 
+18 
+5.2.3.2. 
+Temporary Label Certification Identifier ............................................................................ 
+18 
+5.2.4. 
+Label Printing Date (mandatory) ............................................................................................ 
+18 
+5.2.4.1. 
+Full Label Segment .............................................................................................................. 
+19 
+5.3. 
+DHL Logo (mandatory) ............................................................................................................... 
+19 
+5.4. 
+Ship ‘From’ Address and Customer Logo ................................................................................... 
+19 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+1
+
+=== PAGE 3 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.4.1. 
+‘From’ Address 
+........................................................................................................................ 
+19 
+5.4.1.1. 
+Highly-Compact Label ......................................................................................................... 
+20 
+5.5. 
+Customer Logo ........................................................................................................................... 
+20 
+5.6. 
+Consignor’s Contact (Conditional).............................................................................................. 
+21 
+5.7. 
+Service Area Code of Origin (mandatory) .................................................................................. 
+21 
+5.8. 
+‘Ship To’ Address (mandatory) ................................................................................................... 
+21 
+5.8.1. 
+Highly-Compact Version ......................................................................................................... 
+22 
+5.9. 
+Manual Sorting Section .............................................................................................................. 
+22 
+5.9.1. 
+Outbound Sort Code (Conditional) 
+......................................................................................... 
+23 
+5.9.2. 
+Destination Facility Code ........................................................................................................ 
+23 
+5.9.3. 
+Inbound Sort Code (Conditional) 
+............................................................................................ 
+24 
+5.10. 
+Product Features .................................................................................................................... 
+24 
+5.10.1. 
+Handling-relevant Feature Codes - HFC (Conditional) 
+........................................................ 
+24 
+5.10.2. 
+Delivery Date (conditional) ................................................................................................. 
+24 
+5.10.3. 
+Delivery Time (conditional) 
+................................................................................................. 
+25 
+5.10.4. 
+Handling-relevant Service Logos 
+......................................................................................... 
+25 
+5.10.4.1. 
+Medical EXPRESS Logo ........................................................................................................ 
+25 
+5.11. 
+Standard Shipment information 
+............................................................................................. 
+27 
+5.11.1. 
+Piece / Shipment Reference (optional) 
+............................................................................... 
+27 
+5.11.2. 
+Piece / Shipment Weight (conditional) 
+............................................................................... 
+27 
+5.11.2.1. 
+“Shipment Weight” – Shipper Declared vs DHL Actual ...................................................... 
+28 
+5.11.2.2. 
+Piece Weight ....................................................................................................................... 
+28 
+5.11.2.3. 
+Printing Structure 
+................................................................................................................ 
+28 
+5.11.2.4. 
+Examples ............................................................................................................................. 
+28 
+5.11.3. 
+Relative and Total Number of Pieces in Shipment (conditional) 
+........................................ 
+29 
+5.11.4. 
+Piece Weight Symbols 
+......................................................................................................... 
+29 
+5.11.4.1. 
+Germany (mandatory) - background .................................................................................. 
+30 
+5.11.4.1.1. 
+Scope ............................................................................................................................... 
+30 
+5.11.4.1.2. 
+Weight Symbols 
+............................................................................................................... 
+30 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+2
+
+=== PAGE 4 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11.4.1.3. 
+Business Rules ................................................................................................................. 
+30 
+5.11.4.1.1. 
+Standard Location of Weight Symbols ............................................................................ 
+31 
+5.11.4.1.1. 
+Special Location of Weight Symbols ............................................................................... 
+32 
+5.12. 
+2D Data Matrix – Customer Data ........................................................................................... 
+33 
+5.12.1. 
+Customer Data .................................................................................................................... 
+34 
+5.13. 
+Additional Shipment Information 
+........................................................................................... 
+34 
+1.1.1. 
+Content Description (mandatory) .......................................................................................... 
+35 
+1.1.1.1. 
+Neutral Content Descriptions ............................................................................................. 
+35 
+1.1.2. 
+Special or Conditional Information 
+......................................................................................... 
+36 
+1.1.3. 
+Not allowed on Transport Labels............................................................................................ 
+36 
+5.13.1. 
+Conditional Local Information ............................................................................................ 
+37 
+5.13.1.1. 
+Tax IDs (Brazil) - Conditional ............................................................................................... 
+37 
+5.13.2. 
+Dangerous Goods and Other Special Loads 
+........................................................................ 
+37 
+5.14. 
+Shipment Identifier / Waybill Number ................................................................................... 
+38 
+5.14.1. 
+Shipment Identifier / Waybill Number (mandatory) .......................................................... 
+38 
+5.14.2. 
+Shipment Identifier / Waybill Number barcode (Conditional) ........................................... 
+38 
+5.15. 
+Routing Information (mandatory) .......................................................................................... 
+38 
+5.15.1. 
+Routing Barcode Structure 
+.................................................................................................. 
+39 
+5.15.2. 
+Full Routing Barcode Examples 
+........................................................................................... 
+40 
+5.16. 
+Customer Segment ................................................................................................................. 
+42 
+5.17. 
+Piece Identifier Segment ........................................................................................................ 
+42 
+5.17.1. 
+Content ............................................................................................................................... 
+42 
+5.17.2. 
+Barcode and Plain Text ....................................................................................................... 
+43 
+5.17.3. 
+Data/Application Identifier ................................................................................................. 
+43 
+5.18. 
+Sample Labels ......................................................................................................................... 
+44 
+5.18.1. 
+ESS Label V2.8 - Size 6”x4” / A6 .......................................................................................... 
+44 
+5.18.2. 
+ESS Label V2.8 – Size 8”x 4” w. Customer Info ................................................................... 
+45 
+5.18.3. 
+ESS Label V3.0 – Size 8”x 4” w. 2D symbol (Customer Data) 
+.............................................. 
+47 
+6. 
+eWaybill – Segment Specifications ................................................................................................ 
+48 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+3
+
+=== PAGE 5 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+6.1. 
+eWaybill – Layout Overview (all segments) ............................................................................... 
+49 
+6.2. 
+Purpose – Working Title of Document (optional) ...................................................................... 
+50 
+6.3. 
+Sender’s Contact ........................................................................................................................ 
+50 
+6.4. 
+Consignee’s Contact ................................................................................................................... 
+51 
+6.5. 
+Country-Facility ID ...................................................................................................................... 
+51 
+6.6. 
+Product Information 
+................................................................................................................... 
+51 
+6.6.1. 
+Product Details (mandatory) .................................................................................................. 
+51 
+6.6.2. 
+Payer Details (mandatory) 
+...................................................................................................... 
+52 
+6.7. 
+Features and Services 
+................................................................................................................. 
+52 
+6.8. 
+Shipment-related Information ................................................................................................... 
+53 
+6.9. 
+Content Descriptions and Declarations...................................................................................... 
+53 
+6.10. 
+Weight – Declared and DHL-Measured .................................................................................. 
+54 
+6.10.1. 
+Shipment Weight (mandatory) ........................................................................................... 
+54 
+6.10.2. 
+Piece Weight ....................................................................................................................... 
+55 
+6.11. 
+Piece Counter.......................................................................................................................... 
+55 
+6.12. 
+Special Information 
+................................................................................................................. 
+55 
+6.13. 
+Customer’s Signature (optional) 
+............................................................................................. 
+56 
+6.14. 
+Piece Identifiers in Shipment (mandatory)............................................................................. 
+56 
+7. 
+LOOSE BBX LABEL SPECIFICATIONS 
+................................................................................................ 
+57 
+7.1. 
+Purpose 
+....................................................................................................................................... 
+57 
+7.2. 
+Objective .................................................................................................................................... 
+57 
+7.3. 
+Scope .......................................................................................................................................... 
+57 
+7.4. 
+Layout Overview (all segments) ................................................................................................. 
+57 
+7.5. 
+Import Point of Entry - Mandatory ............................................................................................ 
+59 
+7.6. 
+DHL Gateway Facility Identifier .................................................................................................. 
+59 
+7.7. 
+Mother House Waybill Number (MHWB) - Mandatory ............................................................. 
+59 
+8. 
+Specifications of Label Types, Fonts and Sizes 
+............................................................................... 
+60 
+8.1. 
+DHL ESS Label v2.8 ..................................................................................................................... 
+60 
+8.1.1. 
+Size and Orientation ............................................................................................................... 
+60 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+4
+
+=== PAGE 6 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.2. 
+Segment Fonts and Sizes ........................................................................................................ 
+61 
+8.1.3. 
+Considerations on A6 or 6”x4” (inch) Labels .......................................................................... 
+62 
+8.1.4. 
+Considerations on labels for 8” or A4 landscape print 
+........................................................... 
+63 
+8.1.5. 
+Considerations on Loose BBX Transport Labels ..................................................................... 
+64 
+8.1.5.1. 
+Segment Fonts and Sizes 
+..................................................................................................... 
+65 
+8.1.6. 
+Considerations on Highly-Compact (HC) Labels ..................................................................... 
+66 
+8.1.6.1. 
+Segment Fonts and Sizes 
+..................................................................................................... 
+67 
+8.1.7. 
+Considerations on 2D-enabled Transport Labels ................................................................... 
+68 
+8.1.7.1. 
+Segment Fonts and Sizes 
+..................................................................................................... 
+69 
+8.2. 
+eWaybill 
+...................................................................................................................................... 
+70 
+8.2.1. 
+Size and Orientation ............................................................................................................... 
+70 
+8.2.2. 
+Segment Fonts and Sizes ........................................................................................................ 
+71 
+9. 
+Specifications of Linear Barcodes .................................................................................................. 
+72 
+9.1. 
+General ....................................................................................................................................... 
+72 
+9.2. 
+Linear Barcode Symbology ......................................................................................................... 
+72 
+9.2.1. 
+Code 128 Barcodes ................................................................................................................. 
+72 
+9.2.2. 
+Code 39 Barcodes ................................................................................................................... 
+73 
+9.3. 
+Bi-Dimensional Barcode Symbologies 
+........................................................................................ 
+74 
+9.3.1. 
+What is a 2D Barcode ............................................................................................................. 
+74 
+9.3.2. 
+Data Matrix ............................................................................................................................. 
+75 
+9.3.2.1. 
+Definition............................................................................................................................. 
+75 
+9.3.2.2. 
+Scope ................................................................................................................................... 
+75 
+9.3.2.3. 
+Key parameters ................................................................................................................... 
+75 
+9.3.3. 
+QR Code .................................................................................................................................. 
+76 
+9.3.3.1. 
+Definition............................................................................................................................. 
+76 
+9.3.3.2. 
+Scope ................................................................................................................................... 
+76 
+9.3.3.3. 
+Key parameters ................................................................................................................... 
+76 
+10. 
+Specifications of Material 
+........................................................................................................... 
+77 
+10.1. 
+Specifications of Paper ........................................................................................................... 
+77 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+5
+
+=== PAGE 7 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+10.2. 
+Specifications of Label Thermal Adhesive .............................................................................. 
+77 
+10.2.1. 
+Description .......................................................................................................................... 
+77 
+10.2.2. 
+Application Example ........................................................................................................... 
+78 
+10.3. 
+Key Technical Data 
+.................................................................................................................. 
+78 
+10.3.1. 
+Specifications ...................................................................................................................... 
+78 
+10.3.2. 
+DHL Standard Specifications List 
+......................................................................................... 
+78 
+10.3.3. 
+Useful Life............................................................................................................................ 
+78 
+11. 
+Change Control 
+........................................................................................................................... 
+79 
+12. 
+Appendix 
+..................................................................................................................................... 
+82 
+12.1. 
+Acronyms and Symbols 
+........................................................................................................... 
+82 
+ 
+ 
+This document contains 84 numbered pages 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+6
+
+=== PAGE 8 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Purpose 
+The purpose of this document is to supplement the current Global SOP procedures with finer detail to following 
+core DHL Express Document Types:  
+• 
+Transport Label 
+• 
+eWaybill 
+• 
+Loose BBX Transport Label 
+• 
+ACS Transport Label 
+1.1. Out of Scope 
+• 
+Manual House Waybill (HWB) 
+• 
+Master Waybill (MAWB) 
+ 
+2. Objective 
+The objective of this Reference guide is to ensure all stakeholders: 
+• 
+recognize and understand the business requirements on data and information on the Label 
+• 
+(customers) recognize and understand the specifications, which must be adhered to and met, to be 
+compliant with DHL EXPRESS’ Label Standards, before accepted utilization is possible 
+• 
+are able to identify issues and/or non-compliances with the Label and initiate mitigation actions 
+3. References 
+# 
+Document Name 
+Location/Link 
+R01 
+ISO/IEC 15459 Unique identifiers -- Part 1: Unique identifiers for transport 
+units  
+International Standard 
+International Standard 
+R02 
+ISO/IEC 16388 Automatic identification and data capture techniques -- 
+Code 39 Barcode symbology specification 
+International Standard 
+R03 
+ISO/IEC 15417 Automatic identification and data capture techniques -- 
+Code 128 Barcode symbology specification 
+ISO/IEC 15424 Information technology — Automatic 
+International Standard 
+R04 
+identification and data capture techniques — Data Carrier Identifiers 
+(including Symbology Identifiers) 
+ISO/IEC 15434 Automatic identification and data capture techniques -- 
+Syntax for high-capacity ADC media 
+International Standard 
+R05 
+ISO 15394 Packaging — Barcode and two-dimensional symbols for 
+shipping, transport and receiving labels 
+International Standard 
+R06 
+ISO/IEC 15416 Barcode print quality test specification — Linear symbols 
+R07 
+International Standard 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+7
+
+=== PAGE 9 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ISO 3166-1, Codes for the representation of names of countries and their 
+subdivisions — Part 1: Country codes 
+International Standard 
+R08 
+ISO/IEC 15418, Information technology — EAN/UCC Application Identifiers 
+and Fact Data Identifiers and Maintenance 
+International Standard 
+R09 
+ISO/IEC 16022, Information technology — International symbology 
+specification — Data Matrix 
+International Standard 
+R10 
+ISO/IEC 18004, Information technology — Automatic identification and data 
+capture techniques — Barcode symbology — QR Code 
+International Standard 
+R11 
+R12 
+Global SOP DHL Transport Label Specifications 
+Global SOP Archive 
+R13 
+Global SOP Label Certification Guideline 
+Global BCRS 
+R14 
+Global SOP Data Matrix 2D Specifications 
+Global BCRS 
+R15 
+Global SOP Customer-Facing QR-Code Specifications 
+Global BCRS 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+8
+
+=== PAGE 10 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Definitions 
+4.1. Definitions 
+The following definitions are specific to this document: 
+Title 
+Description 
+DHL Transport 
+Label 
+The DHL Transport Label is a label which is printed and attached to a piece 
+and contains all handling-relevant information i.e. the one required to ship a 
+piece from a Shipper to a Consignee. It includes piece/shipment 
+identification, address information and DHL handling information.  
+This generic title includes: 
+• 
+ESS Label (includes all information, mostly a Customer Produced 
+Document as part of the Shipment Preparation Process, requiring no 
+DHL re-labeling). It also includes specific sections for Customers to 
+capture their bespoke information. 
+• 
+Network Label -> transport label without addresses and without 
+customers’ own segments 
+• 
+Routing Label -> small label containing DHL Handling Information only 
+and used by DHL to complement information provided by customers. 
+eWaybill 
+A document type reflecting agreed “conditions of contract of transport” 
+A Waybill is, by definition, NOT a label. 
+This doc-type was historically called “Archive Doc” and later “Waybill Doc”.  
+Multi-ply Waybill 
+(Multiply Waybill) 
+Business term used as a reference for DHL's own Waybills doc-type (also 
+named “Manual Waybill”). 
+The term “Multiply Waybill” denotes both the empty and filled-in forms. 
+Reprinting 
+Term for a 1:1 replacement of a (damaged) label by a new one 
+Relabeling 
+Term for tagging a package with a new label with additional or changed 
+supplementary information, e.g. Manual Sort Information.  
+License Plate 
+A Unique Identifier (code) assigned to a single transport unit by its issuer, in 
+accordance with ISO/IEC 15459-1. It is the Leading Industry Standard 
+Worldwide and acts as primary Piece Identifier (PID) standard for DHL 
+Express. As such, DHL’s equivalent business term is “Piece Identifier”. 
+Shipment 
+Identifier 
+Generic term for DHL Express identifiers at shipment level. Currently 
+implemented with the 10 NUM format (9 digits, plus 10th digit calculated with 
+MOD7). Other terms used within DHL are:  
+• 
+Air Waybill number (Air Express) 
+• 
+Waybill number (Air and Road Express) 
+• 
+Shipment number (Road Express) 
+• 
+Consignment number (Road Express, Freight), when the format 
+matches the standard 10 NUM with MOD7 check-digit, defined 
+above. 
+Reverse Video 
+Format 
+A technique used in documents, whereby white characters are printed on a 
+black background, as a visual aid to highlight an important section or piece of 
+text.  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+9
+
+=== PAGE 11 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+4.2. Core Business Principles 
+DHL Labels (e.g. Transport Labels and eWaybills) are key Network documents as they enable and support 
+efficient, physical handling of the shipment through to its delivery destination.  
+These Transport Label Specifications represent a Label Layout Specifications Document. They do NOT specify 
+or define the corresponding data elements (defined in DHL EXPRESS data Model) but solely, the requirements 
+that must be met by those (or systems) creating DHL-compliant labels.   
+4.3. Label Certification1 
+A DHL Label Certification is a pre-condition for a Transport Label to be released for production and use within 
+the DHL EXPRESS Network. Five core elements are essential to that purpose: 
+• Physical Label Layout (template) 
+o Customer labels must meet the Layout Requirements in order to optimize data readability and 
+processing 
+o Label Layouts are specified in this document and also cater for customer-specific requirements, 
+through continuous updates based on customer feedback 
+ 
+• Data / Information  
+o This element is vital because it covers the correct translation of the customer-driven (commercial) 
+service order into specific DHL Handling Information paired with the latest global reference data 
+o Due to its complexity and criticality, DHL strongly recommends this be NOT developed or managed 
+by customers -> therefore it is not detailed in these specifications 
+o Not all transport order data supplied by the customer must appear on the label. While a few data 
+elements (e.g. product) must always be coded, only product features that may be relevant for 
+sorting and delivery processes are shown on the label.  
+o The data and information on the Transport Label does not replace the need for the transport 
+order data. It enables however the piece to be physically moved through the network without the 
+need of the corresponding data.  
+o DHL offers, its customers, effective lookup solutions (e.g. GLSlabeldata) for automatically obtaining 
+the correct set of label data corresponding to the ordered service 
+• Rendering Solution 
+o DHL offers, its customers, effective rendering solutions (e.g. GLS Docrender) 
+o DHL solutions are strongly recommended because they use the latest business logic, templates 
+and data sources, which can’t be guaranteed by other solutions (e.g. customer-owned) -> as a 
+guiding principle, GLS is mandatory and ONLY GLS-rendered labels are acceptable  
+o Business owners of Label Rendering / Printing Applications must ensure compliance to the valid 
+Global SOP Standards is achieved 
+ 
+• Printing Solution 
+o The minimal requirements regarding printing quality are specified in this document => they are to 
+be met by customers prior to any usage in DHL’s network 
+o DHL’s Label Certification Competence Center offers specialized support to customers in all 
+development steps towards a compliant label  
+ 
+1 For details on the Certification Process and/ or related Criteria, refer to the specific Global SOP Label 
+Certification Guidelines 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+10
+
+=== PAGE 12 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+•  Label Certification Identifier  
+o A DHL Label Certification Identifier is a pre-condition for a Transport Label to be released for 
+production and use within the DHL EXPRESS network 
+o The use of DHL’s solutions (e.g. GLS w. lookup & rendering features) automatically ensures the 
+Label Certification Criteria is met 
+4.4. Documentation-related Principles 
+• 
+A mandatory-marked field implies that the content is ALWAYS mandatory. This implies that 
+its absence is Not acceptable because it impacts the quality of the label data/ info and thus of 
+the associated shipment/ piece handling processes. 
+• 
+A Conditional-marked field implies that the content is mandatory in some cases (e.g. for 
+a specific product) and optional in other cases. Further details accompany the specific 
+fields 
+• 
+An Optional-marked field indicates that the content is not required, but may be added if 
+data is available and brings value. Optional does not always imply that the field may 
+remain empty. Further details accompany the specific fields and may require that for 
+example they have to be populated with at least zeroes.  
+4.4.1. 
+Legend 
+ 
+Information valid solely for Customer Facing Solutions/ Systems (e.g. EDI and DHL ESS / ESI 
+solutions) 
+ 
+ 
+Cross-references are marked with this symbol. They are provided to indicate related chapters or to 
+refer to associated information. 
+ 
+ Product-specific information is marked with this symbol 
+ 
+ This symbol indicates country- or region-specific legal requirements 
+ 
+ 
+Important remarks are marked with a red exclamation mark. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+11
+
+=== PAGE 13 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5. Transport Label – Segment Specifications 
+Because several Data Elements and Fields are common to both the DHL Transport Label and the DHL 
+eWaybill, which build the core set of the Global Label Standards, the listing and definition of the respective 
+components will be sub-divided into Label- and Order-related.  
+As a note, a label consists of sections, which may further contain one or more segments. 
+The numbered sections of the DHL Transport Label as shown below refer to the following paragraphs where the 
+sections are described in more detail. The dimensions of the sections are described in the technical specification. 
+This chapter defines the contents of the sections and segments and their character (i.e. if they are mandatory, 
+conditional or optional).  
+• 
+Mandatory: means it must always appear independent of the scenario. If mandatory information is 
+not available, the whole label or a particular label section/segment should not be printed. (E.g.: no 
+DHL Transport Label must be printed without the Piece Identifier barcode) 
+• 
+Conditional: means it may be mandatory in some cases and optional in other cases. (e.g. 
+depending on product or country of origin) 
+• 
+Optional: means that the label field content is not mandatory, it does not have to be displayed on 
+the label. (E.g.: the customer logo)  
+Note: For the routing information, the optional content information does not always indicate that the dedicated 
+section or segment field remains empty/blank when printing the label. For instance, if the optional delivery date 
+or time features are not chosen, optional implies that zeroes are displayed in the routing barcode. 
+5.1. Layout overview 2– DHL Transport Label (all segments)  
+ 
+ 
+ 
+ 
+2 This page offers a structured overview of the Global SOP Standard Transport Label. Sub-sequent sections 
+explain in detail the specifications of each individually numbered segment. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+12
+
+=== PAGE 14 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+13
+
+=== PAGE 15 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.1.1. 
+ Standard Label Sample with operational data 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+14
+
+=== PAGE 16 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.1.2. 
+Standard 2D-enabled Label Sample 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+15
+
+=== PAGE 17 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+16
+
+=== PAGE 18 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2. Product Name, Product Content Code and Version Name  
+1 
+ 
+ 
+ 
+1 
+This section contains the name of the Product used (e.g. EXPRESS WORLDWIDE) and the three-letter Product 
+Content Code (e.g. WPX or EPL), in accordance with the DHL Express global product portfolio.  
+ 
+  This Reference Data is maintained in DHL’s Global Reference Databases. 
+ 
+5.2.1. 
+Product Name (Conditional) 
+The Global Product Name officially specifies the product under which the underlying transport service has been 
+sold to the customer and is to be printed here with the associated format “Product Short Name”. This is a text 
+string in upper-case letters, up to 20 chars long (reason for the Short Name). It may contain the full set of 7 bit 
+standard chars, including white space, upper/lower case chars and symbols such as a colon (“:”).  
+The conditional qualifier is applicable to the “Compact Label”, which use requires a formal approval (see below). 
+5.2.1.1. 
+Highly-Compact Label3 
+There are scenarios when, due to customer requirements for extra info or elements (e.g. additional barcodes) 
+on the label (e.g. in the customer-owned segment), there is the need to maximize the compactness of the info 
+on the remaining Label segments in order to free up space elsewhere.  
+In such cases and upon special approval by DHL EXPRESS, the Product Name may be omitted. 
+ 
+5.2.2. 
+Product Content Code (mandatory) 
+This is DHL’s internal code for the product under which a certain transport order will be processed. It always 
+consists of 3 upper-case characters. Different products may have the same Product Content Code 
+For declarable shipments, the Product Content Code must be printed in reverse video 4format (see image below, 
+in 5.2.3). 
+Product Name and Product Content Code can be determined based on the required (i) Service level (e.g. pre-
+9:00) and (ii) DOC or NON-DOC shipment.  
+ 
+5.2.3. 
+Printing Application, Date and Label Certification Identifier (mandatory) 
+ 
+The information herewith required has a mandatory char and aims at identifying both the label Printing 
+Application, the Printing Date and the associated Label Certification Identifier.  
+ 
+3 Refer to section 8.1.6 for further specific details on the Highly-Compact Label 
+4 Refer to Definitions section 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+17
+
+=== PAGE 19 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+There is no binding format for the Printing Application (e.g. “Express Logistics Platform - ELP”) but there is one 
+for its version: X.XX.XXX. It shall be located underneath the Product Short Name. 
+ 
+5.2.3.1. 
+Permanent Label Certification Identifier (mandatory) 
+ 
+All Label Certification Identifiers are managed centrally, by the GCoCL team and follow a sequential scheme. 
+There is a differentiation between permanently and temporary approved labels which still require some rework 
+and need to be reviewed after six month of approval. 
+ 
+Permanent Label Certification Identifier Convention:  
+ 
+ 
+ 
+ 
+ 
+ 
+Example 
+ 
+ 
+5.2.3.2. Temporary Label Certification Identifier 
+ 
+Temporary Label Certification Identifier Convention: 
+A temporary certification can be used for a limited period but must be reviewed after 6 months to fully adhere 
+to the DHL Express standards. It will follow a different naming convention starting with a fix suffix followed by a 
+serial number and date. Once fully compliant, the temporary ID will be changed to a permanent ID  
+ 
+ 
+The font size for the Certification Identifiers is of a 1.5mm font size or 5 points. 
+ 
+5.2.4. 
+Label Printing Date (mandatory) 
+ 
+The Label Printing Date, in accordance with the ISO 8601 standard, follows (sequence) the identification of the 
+Rendering Application and has the format yyyy-mm-dd5, where “YYYY” refers to the year, “mm” to the month 
+and “dd” to the date. 
+ 
+5 In the case of GLS it is based on the server’s date and time 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+18
+
+=== PAGE 20 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2.4.1. 
+Full Label Segment 
+ 
+The full format of this segment is, thus:  
+ ”[PRINTING APPLICATION]”/”[PRINTING DATE]”/”* [CERTIFICATION IDENTIFIER]* 
+ 
+5.3. DHL Logo (mandatory) 
+This section contains the carrier logo and is placed in the upper right corner of the label. Directly below the logo, 
+associated information can be printed (e.g. a particular DHL Country Organization). 
+ 
+ 
+For transport labels, the black & white version of the logo is sufficient. When using labels with a pre-printed logo, 
+the official DP DHL brand color specifications for the logo have to be followed.  
+Any DHL-owned customer automation system must be able to print the logo as an image.  Only if it 
+is not possible to insert images into the label, may the equivalent text be printed in plain text instead. 
+ 
+ 
+Always use the correct logo layout and specifications, as per the official DP-DHL Standard Brand and 
+Design Guidelines. 
+ 
+ 
+5.4. Ship ‘From’ Address and Customer Logo 
+5.4.1. 
+‘From’ Address 
+ 
+The “Ship From” section refers to the Consignor’s Address. It serves the purpose of supporting identification by 
+the carrier (e.g. for Pickup) as well as the Consignee. It does not necessarily reflect the return address in case 
+of failed delivery. If approved by DHL, a deviating address may be printed here.  
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+19
+
+=== PAGE 21 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The word “From” is to be printed in the upper left corner of this section. It may be written in a local language, 
+however for international shipments the English word “From” must appear as well. In this case only English, or 
+both languages (English and local language) may be used, separated by a “/” symbol. 
+ 
+The data Address elements and their definition are based upon the DHL Corporate Data Model, which is an 
+integrated view of the data produced and consumed across DHL’s organization. It unites, formalizes and 
+represents things important to DHL, as well as the rules governing them. 
+ 
+The maximum number of lines is restricted by DHL’s internal data flow and the maximum height of the block. 
+Each line contains a pre-defined maximum number of characters, with the highest value being 47 characters. 
+ 
+Additional information (e.g. floor number, county) is possible but the overall number of lines must not exceed 7, 
+for consistency with DHL’s data structure. 
+ 
+For international shipments, the Country Name shall be written in its own line.  
+ 
+For domestic pieces the Country Name may be printed in local language. For all cross-border pieces the 
+Country Name has to be printed in English (may be followed by local translation). The Country Name is 
+optional for domestic shipments BUT mandatory for cross-border shipments if ISO 3166 code is missing) 
+ 
+The Country Code follows the ISO 3166 two-character country code standard and must be used whenever 
+available as a quick reference for a number of DHL services. 
+ 
+5.4.1.1. 
+Highly-Compact Label 
+ 
+For these cases and upon formal DHL EXPRESS approval, the number of Sender Address lines can be limited 
+to 5 (from the allowed 7 lines) with the functional advantage that the font size can be kept high with the inherent 
+advantages in terms of readability. This is achievable with the following reference structure: 
+ 
+1. Address line 1: Receiver Company / Name 
+2. Address line 2: Building Name or equivalent 
+3. Address line 3: Street Name, Street Number 
+4. Address line 4: City Name, Postcode or equivalent for other Postal Location Formats (e.g. Suburb, County, State) 
+5. Country Code / Country Name 
+ 
+5.5. Customer Logo 
+The relative small font of the sender address offers space to the right of the segment. This is reserved for an 
+optional Customer Logo or alternatively for a DHL Initiative Logo (e.g. GoGreen) if customer agrees or asks for 
+it. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+20
+
+=== PAGE 22 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.6.  Consignor’s Contact (Conditional) 
+Shipper contact details are still critical operational information and will be captured and stored, in accordance 
+with GDPR, as part of the shipment preparation process. 
+ 
+As part of DHL’s ongoing process and systems improvements, this information is, however, no longer required 
+to be printed on the Transport Label. It is made available electronically to our relevant employees and operators 
+to perform their tasks and deliver the service expected of our customers. 
+ 
+ 
+ Note: in exceptional circumstances (e.g. for compliance with international regulations like the ICAO or IATA for goods 
+with UN Code UN3373) and only upon formal approval, specific contact details may have to be printed on the Transport 
+Label. 
+ 
+5.7.  Service Area Code of Origin (mandatory) 
+DHL Express needs the Service Area Code of Origin printed in this segment. This is a 3-digit, upper-case 
+letter, of a locally defined and globally recognized area where DHL services are provided. This data is maintained 
+in DHL Global Reference Databases. 
+ 
+ 
+5.8.  
+‘Ship To’ Address (mandatory) 
+ 
+Each piece requires a Ship To address. This is the agreed Delivery Point.  
+ 
+The word “To” may be written in local language, however for export shipments the English word “To” must 
+appear as well. Alternatively, both languages (English and domestic) may be used, separated with a “/”. 
+ 
+The Ship To address should be emphasized by adding hooks, i.e. thicker corners. The recommended size of 
+the hooks is 4 x 4mm and the line thickness is > 0.5mm. The area contained by the hooks shall include the 
+contact information. 
+ 
+For the structure of the Ship To address, refer to section 3.4.1 Ship From address 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+21
+
+=== PAGE 23 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ Any customer automation application has to offer a minimum of 5 lines for the Consignee address. 
+Further information such as floor number, county etc is possible but the overall number of lines must not exceed 
+7, for consistency with DHL’s data structure. 
+ 
+Delivery Country and the applicable Postal Location Format Elements (e.g. City and Postal Code) have to be 
+printed in bigger font. In case of lack of space, the two lines can be joined to one line.  
+ 
+7 
+Delivery Country and the applicable Postal Location Format Elements (e.g. City and Postal Code) 
+have to be printed in bigger font. In case of lack of space, the two lines can be joined to one line. 
+8 
+This area of the label is reserved for an optional Customer Logo or alternatively for a DHL Initiative Logo 
+(e.g. GoGreen) if customer agrees or asks for it. 
+9 
+Consignee’s Shipper contact details are still critical operational information and will be captured and 
+stored, in accordance with GDPR, as part of the shipment preparation. 
+As part of DHL’s ongoing process and systems improvements, this information is, however, no longer 
+required to be printed on the Transport Label. It is made available electronically to our relevant employess 
+and operators to perform their tasks and deliver the service expected of our customers. 
+  Note: in exceptional circumstances (e.g. for compliance with international regulations like the ICAO or IATA 
+for goods with UN Code UN3373) and only upon formal approval, specific contact details may have to be 
+printed on the Transport Label. 
+5.8.1. 
+Highly-Compact Version 
+ 
+In analogy to the Consignor’s Address segment, there may be the need to maximize the compactness of the 
+info on the remaining Label segments in order to free up space elsewhere.  
+ 
+For these cases and upon formal approval, the number of Consignor Address lines can be reduced to 5 with the 
+functional advantage that the font size can be kept high with the inherent advantages in terms of readability. 
+This is achievable with the following reference structure: 
+ 
+1. Address line 1: Receiver Company / Name 
+2. Address line 2: Building Name or equivalent 
+3. Address line 3: Street Name, Street Number 
+4. Address line 4: City Name, Postcode or equivalent for other Postal Location Formats (e.g. Suburb, County, State) 
+5. Country Code / Country Name 
+ 
+5.9.  
+Manual Sorting Section 
+DHL’s Manual Sort Information consists of the following three segments, from left to right: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+22
+
+=== PAGE 24 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Outbound Sort Code -> element 10 
+• 
+Destination Facility Code  -> element 11 
+• 
+Inbound Sort Code -> element 12 
+ 
+5.9.1. 
+ Outbound Sort Code (Conditional) 
+ 
+Each DHL Service Area can define an Outbound Sort Code per Destination Facility Code. Sort Codes consist 
+of up to four alphanumeric chars (numerals or capital letters). 
+ 
+DHL Outbound Sort Codes are mandatory when defined (which is not the case for all outbound facilities) and 
+must be printed on the label to support manual sorts. The corresponding information is available in DHL’s Global 
+Reference Database (GREF) which must be referred to for the latest valid values.  
+ 
+In cases where no Outbound Sort Code is defined by DHL Express in the country of origin, this field is to be 
+populated with a “.” This is equivalent to the statement that "." is only used if an effective attempt to look a sort 
+code up returned no value. 
+ 
+Whenever no attempt was made to determine the Outbound Sort Code, then this should be left blank. "." This 
+will also indicate to DHL that the label needs to be re-printed. 
+ 
+5.9.2. 
+  Destination Facility Code 
+ 
+This segment contains the complete DHL Facility Code, of the DHL Facility which will manage the Delivery and 
+consists of: 
+• Country Code (two-digit: capital letters according to ISO 3166) 
+• hyphen 
+• DHL Service Area Code (three-digit; capital letters or numerals) 
+• hyphen 
+• DHL Facility Code (three-digit; capital letters or numerals) 
+ 
+The Destination Facility Code depends on destination country, postal location type (e.g. post code) and product. 
+This data is kept constantly updated in DHL’s Global Reference databases. 
+ 
+ 
+In cases where a DHL Facility Code has not been specified or made available for a certain 
+destination or an Address cannot be matched with Geo Location Coordinates in GREF, only Country 
+Code and Service Area Code are to be printed (separated by a hyphen). Example: SG-SIN for 
+Service Area Singapore 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+23
+
+=== PAGE 25 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.9.3. 
+  Inbound Sort Code (Conditional) 
+12 
+ 
+DHL Inbound Sort Codes are mandatory and must be printed on the label when defined (not the case for all 
+inbound facilities). 
+ 
+  The Inbound Sort Code consists of up to 4 alphanumeric chars (numerals or capital letters). It depends on 
+destination country, Postcode and product and can serve as either: 
+ 
+• Consolidator: various facilities having the same Inbound Sort Code 
+• Separator: A facility sub-divided in areas, based on Postal Code and/or product 
+ 
+DHL may not require the Inbound Sort Code for all destinations, in which cases this field is to be populated with 
+a “.”.This is equivalent to the statement that "." is only used if an effective attempt to look a sort code up returned 
+no value. 
+ 
+Whenever no attempt was made to determine the Inbound Sort Code, then this should be left blank. "." This will 
+also indicate to DHL that the label needs to be re-printed. 
+ 
+ 
+5.10. 
+ 
+Product Features 
+5.10.1. Handling-relevant Feature Codes - HFC (Conditional) 
+ 
+Product Features encompass Handling and Date/Time Delivery features, which are shown on the label to 
+support DHL internal operational procedures. 
+13 
+14 
+15 
+   Day 
+  C – DTP   
+   31 
+ Time 
+X09 
+ 
+Only product features which are handling-relevant (i.e. impact the sorting and/or delivery processes) are shown 
+on the label (and printed left aligned). The Handling Feature Codes (e.g. “DTP”), translated from the chosen 
+Product and Service Codes (e.g. “DD”) are printed in reverse video format in this segment. 
+ 
+When defined through the Service Codes, HFCs are mandatory and must be printed as per the Global 
+Standard. 
+ 
+The translation from commercial products and services to handling codes is based on DHL’s reference 
+data (e.g. tools provided by DHL Express to our customers offer this capability). 
+ 
+Product features that are not handling-relevant appear only on the accompanying documentation, such as the 
+electronic information (EDI), the pickup- and delivery lists. 
+ 
+5.10.2. Delivery Date (conditional) 
+This field shows the delivery date feature (to be coded mandatorily in the routing barcode - – refer to section 
+3.12.1).  
+14 
+15 
+   Day 
+   31 
+ Time 
+X09 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+24
+
+=== PAGE 26 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The Delivery Date/Time information has a header, consisting of the words “Day” and “Time”, which may be 
+written in a local language. However, for international shipments, the English words “Day” and “Time” must 
+appear as well. 
+ 
+The separator “-” between Date and Time field is required whenever at least one of both features is chosen. 
+ 
+The specified Day of the Month is to be represented in 2 digit numeric format with leading zeroes.  
+This field may also contain non-numeric values, representing delivery instructions that cannot be combined with 
+a certain delivery date. 
+ 
+Examples: 
+Label Code 
+Delivery Date codes 
+Product 
+(In Routing 
+Barcode) 
+No fixed date delivery 
+All 
+00 
+(none) 
+Fixed day delivery (day of the month) 
+… 
+01 … 31 
+01 … 31 
+Delivery on appointment 
+… 
+51 
+A 
+Saturday only delivery 
+… 
+50 
+S 
+Hold at depot (no delivery) 
+… 
+52 
+H 
+…  
+... 
+... 
+... 
+The translation from commercial products and services to handling codes is based on DHL’s 
+reference data (e.g. tools provided by DHL Express to our customers offer this capability). 
+ 
+ 
+5.10.3. Delivery Time (conditional) 
+If a time window is chosen, the code corresponding to the time window is shown (to be always coded mandatorily 
+in the routing barcode – refer to section 3.12.1).  
+ 
+Examples: 
+Time Feature Text 
+(In Routing Barcode) 
+Handling Information 
+No fixed delivery time 
+0 
+(none) 
+Pre 09:00 
+1 
+“X09” 
+Pre 10:30 
+3 
+“X10” 
+Pre 12:00 
+2 
+“X12” 
+…  
+…  
+…  
+ 
+The translation from commercial products and services to handling codes is based on DHL’s 
+reference data (e.g. tools provided by DHL Express to our customers offer this capability). 
+5.10.4. Handling-relevant Service Logos 
+5.10.4.1. 
+Medical EXPRESS Logo 
+ 
+In addition to Handling Feature Codes, there are cases when extra information is judged valuable in ensuring 
+the optimal process management quality. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+25
+
+=== PAGE 27 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Some of those cases are Medical Express Shipments, which may contain life-saving commodities (e.g. vaccines, 
+medicines) and/or are temperature-sensitive and, as such, need to be identified, processed and delivered with 
+the highest possible priority and accuracy. 
+The addition of a Medical-related symbol (logo) to the area adjacent (above) to the scannable Piece Identifier 
+barcodes (refer to image below) will help keep it in full sight of the operations team at point of processing.  
+ 
+This new logo is unique6 to Medical Express shipments so that it continues to remain a distinct and the powerful 
+signal that priority is required. The chosen logo is the heart shape with a pulse line transitioning through it (refer 
+to image below).  
+ 
+ 
+A min area of 15*15 mm2 is specified for the logo and must be complied with, while the original proportions must 
+be kept. The location of the Medical EXPRESS Logo shall not impact or overlap the necessary quiet zones of 
+the adjacent barcodes. 
+ 
+6 The Medical EXPRESS Logo is specified in compliance with the applicable Corporate Branding guidelines 
+and is available, in the form of an approved graphical file, for operational use. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+26
+
+=== PAGE 28 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11. 
+Standard Shipment information 
+ 
+The Shipment Information section contains the following information elements: 
+ 
+5.11.1. Piece / Shipment Reference (optional) 
+ 
+A customer may refer to a package using specific identifier(s) (e.g. reference codes, which consist of sets of 
+alphanumeric chars). A Shipper’s Reference is one type of the more generic Shipment References, which is 
+under customer’s responsibility to manage. 
+ 
+Shipment References may be printed on the label, ideally in cases where DHL has received those references 
+with the transport order. All formats supported by the solution agreed with DHL can be printed on the label as 
+well. 
+ 
+Piece and Shipment References are usually qualified by specific Reference Type Codes (ex-Reference 
+Qualifiers), which give them a specific meaning. Refer to DHL EXPRESS Piece/Shipment Reference Standard. 
+ 
+5.11.2. Piece / Shipment Weight (conditional) 
+ 
+The weight of all single pieces (“Shipment Weight” = weight of all pieces building up a shipment) and of the 
+corresponding single(s) piece are to be printed here.  
+The lack of Shipment Weight may lead to issues in Customs processing and is therefore mandatory for 
+at least one package of each dutiable shipment.  
+As a minimum requirement, the label provided with the last piece must contain both the sum of the weight 
+of all pieces belonging to the shipment (legacy term “Shipment Weight”) and its corresponding single 
+piece weight. 
+ 
+Example:8/25 for the last piece label of a shipment, where “8” corresponds to the single piece weight and 
+“25” corresponds to the sum of all single pieces building up the associated shipment. The initial piece 
+labels would have the value “7/.”, where the “.” indicates that the total weight is not yet known. 
+For single-piece shipments, the weight needs to be printed only once (e.g. 13.4 kg instead of 13.4/13.4 kg)  
+The Transport Label always has to show the Dead Weight, NOT a calculated volumetric weight, 
+should it be available at the time of printing the label 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+27
+
+=== PAGE 29 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11.2.1. 
+“Shipment Weight” – Shipper Declared vs DHL Actual  
+Weight, as provided by the customer (e.g. “Original Shipper Declared Weight” through EDI / 2D Code / Manual 
+Waybill), has to be printed on the label if the printing occurs prior to DHL Reweigh processing, in this field. 
+ 
+When no weight was available at the time of printing the label, a “.” shall be printed to indicate that fact.  
+ 
+Customs recommends that, for easier customs processing, the full shipment weight i.e. the total weight of the 
+pieces making up the shipment, be printed on each package. This should be done where this information is 
+available when printing the label. 
+ 
+Note: the sum of all pieces weight is not always known at the time of printing a label. For this reason and in such 
+circumstances, it is acceptable that only the last piece label contains the set [Piece Weight] / [Total Piece 
+Weight]. 
+  
+Any customer automation application has to ensure that at least the last package of a shipment 
+contains the shipment weight. Wherever the shipment weight is known prior to printing the first label, 
+it must be printed on all labels. 
+ 
+ 
+5.11.2.2. 
+Piece Weight  
+ 
+Piece Weight is mandatory for Remote Pickup shipments and must be printed whenever available for multi-
+piece shipments. 
+ 
+Piece weight may be legally required in some countries, for health and security reasons. 
+ 
+5.11.2.3. 
+Printing Structure 
+ 
+a) 
+Measuring Unit 
+The weight can be stated in kg or in lbs, alternatively. The measuring unit has to be printed following the 
+weight value. In case of combined piece/shipment weight it is only required behind the shipment weight. 
+The measuring unit for both weights must be the same in all cases. 
+b) 
+Value  
+The weight value must be a valid number, with no more than one decimal digit  
+c) 
+Header Text 
+• 
+The header text for a piece weight is “Piece Weight” 
+• 
+The header text for a shipment weight is “Shipment Weight” 
+• 
+Where both piece and shipment weights are printed, the header text is to be contracted to 
+“Piece/Shipment Weight”. 
+ 
+Abbreviations such as “Shpt” for Shipment or “Pce” for Piece are allowed. For domestic shipments, the English 
+terms may be translated into local language. 
+ 
+5.11.2.4. 
+Examples 
+Piece / Shipment Weight:  
+a) Printing both piece and shipment weight 
+5.5 / 33.8 kg  
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+28
+
+=== PAGE 30 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+b) Printing shipment weight only 7 
+Shipment Weight:  
+33.8 kg 
+ 
+ 
+Piece Weight:  
+c) Printing piece weight only 
+8.0 lb 
+ 
+ 
+d) Printing weight for one-piece shipments 
+Piece / Shpt  Weight:  
+2.7 kg 
+5.11.3. Relative and Total Number of Pieces in Shipment (conditional) 
+DHL needs the exact number of pieces to be transported and billed. This entry is predominantly mandatory, as 
+it reduces the risk of delays in customs processing. 
+ 
+The overall criticality of the availability of the piece count varies between “very high” for non-doc and “moderate” 
+for “doc” shipments. The piece count should be suppressed if its correctness cannot be guaranteed.  
+ 
+ 
+The following rules apply: 
+1. 
+Any single-piece shipment has to carry the string "1/1", where a piece counter is separated with 
+a slash « / » from the  total number of pieces. 
+2. 
+As a minimum, the label provided with the last piece must contain both the total number of 
+pieces belonging to the shipment and its final single count (e.g. 12/12) 
+3. 
+DHL’s approval is explicitly required for a permanent suppression, on account level, of the 
+relative and/or total number of pieces. 
+a. Any missing number is then to be replaced by a “.” (dot) 
+b. Example: “3/.” Indicates the third piece of a shipment where the total number of 
+pieces is not known at the time of printing the label 
+c. As a summary: 
+i. 
+“X/.” is the syntax for all labels as long as the total planned number of 
+pieces is not known  
+ii. 
+“X/Y” is the syntax for all labels as soon as the total planned number of 
+pieces is known 
+iii. 
+“Y/Y” is the syntax for the last piece label of a shipment 
+ 
+ 
+5.11.4. Piece Weight Symbols 
+ 
+Customers, Regulators or Standard Bodies sometimes require additional information to be added to Transport 
+Labels. This is, for example, the case with Germany, where a new law was passed (1st July 2024) requiring that 
+specific icons or symbols are applied to warn users about piece weight being above specific thresholds. It is not 
+to exclude that similar rules may also apply, in the future, to other countries or handling processes.  
+ 
+ 
+7 This legacy term refers to the sum of all pieces weight. The Waybill Document (see section 6.10) must 
+display, at a minimum, the shipment weight. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+29
+
+=== PAGE 31 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11.4.1. 
+Germany (mandatory) - background 
+ 
+A federal law requires that, besides a clear indication of each piece’s weight on the Transport Label, additional 
+specific icons or symbols be displayed, when certain conditions are met. This has the purpose of ensuring: 
+• 
+users become aware of a piece weight being above specific thresholds  
+• 
+pieces are handled safely, potentially, through the use of appropriate equipment 
+ 
+This rule applies to all deliveries with a final destination in Germany (DE), whether they are domestic or  
+international shipments. In the future, similar rules might also cover pickups and other handling processes.  
+The rule does not apply to shipments in transit via Germany. 
+ 
+5.11.4.1.1. Scope 
+ 
+The changes will be implemented across all Transport Label templates (e.g. ECOM, NETW and DUO). 
+ 
+5.11.4.1.2. Weight Symbols 
+ 
+Weight Symbols  
+  
+  
+ 
+ 
+5.11.4.1.3. Business Rules 
+ 
+The following business logic and rules apply:  
+ 
+1) The Weight Symbols shall be applied for all shipments delivered in Germany (DE), on all the respective 
+Transport Labels 
+ 
+2) Only “PIECE_WEIGHT” (Customer-Declared Piece Weight) will be used to determine the weight symbol 
+rendering; “SHIPMENT_WEIGHT” will not be considered 
+ 
+a) If PIECE_WEIGHT is less than 10 kg or 22 lb, no Weight Symbol will be displayed  
+ 
+b) If PIECE_WEIGHT is equal to or greater than 10 kg or 22 lb but less than 20 kg or 44 lb, a "10+ kg" 
+symbol shall be displayed on the Transport Label 
+ 
+c) If PIECE_WEIGHT is equal or greater than 20 kg or 44 lb, a "20+ kg" symbol shall be displayed on the 
+Transport Label 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+30
+
+=== PAGE 32 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+3) The  Weight Symbols shall be applied irrespective of the original unit of measurement provided by the 
+Customer (e.g. kilogram (kg) or pound (lb) in the WEIGHT_UOM message field 
+ 
+Summary 
+ 
+No  Piece Weight Specification  
+ 
+Weight Range  
+Weight Icon Printed  
+1 Less than 10 kg or 22 lb  
+0.100 to 9.999 kg  
+No Icon printed  
+0.100 to 21.999 lb  
+  
+2 Equal to or greater than 10 kg or 22 
+10.000 to 19.999 kg  
+lb but less than 20 kg or 44 lb  
+22.000 to 43.999 lb  
+  
+3 Equal to or greater than 20 kg or 44 
+20.000 kg or   
+lb 
+44.000 lb and above  
+  
+5.11.4.1.1. Standard Location of Weight Symbols 
+ 
+The new Weight Symbol shall be located in the current segment containing the Piece and Shipment Weights, 
+on their left side.  
+ 
+To ensure that the weight icon is easily visible in all distinct templates and does not overlap with other shipment 
+fields, fine adjustments and variations of the Symbol locations are acceptable.  
+ 
+Implementation of deviations from the Global SOP Standard Transport Label and respective Weight Symbol 
+location require pre-approval from Global SOP or from the Global Competence Center for Labels and Barcodes. 
+ 
+Next, two samples showcasing the application of the Weight Symbols on a standard 8x4 label and a smaller 6x4 
+label:  
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+31
+
+=== PAGE 33 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+5.11.4.1.1. Special8 Location of Weight Symbols 
+ 
+ECOM26_711_001  
+Due to limited available space on the ECOM26_711_001 template, the new Weight Symbol will be printed to 
+the right of the Pce/Shpt Weight segment:  
+  
+ 
+8 Implementation of deviations from the Global SOP Standard Transport Label and respective Weight Symbol 
+location require pre-approval from Global SOP or from the Global Competence Center for Labels and 
+Barcodes. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+32
+
+=== PAGE 34 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+5.12. 
+2D Data Matrix – Customer Data 
+ 
+Data Matrix is a powerful two-dimensional matrix symbology selected for encoding operational data to be used 
+in the operational landscape. It is made up of square modules arranged in a square or rectangle shaped pattern.  
+ 
+For further details on both the symbology and key 2D code parameters, refer to section 9.3. “ Bi-Dimensional 
+Barcode Symbologies”. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+33
+
+=== PAGE 35 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+ 
+The method for storing data in 2D Codes is specified in the ISO/IEC 15434 (specification and syntax for 
+automatic identification and data capture techniques commonly used in 2D barcodes such as Data Matrix.). This 
+ISO/IEC standard features the possible use of multiple segments with different contents and might be seen as 
+the file system of the code. 
+ 
+      The following segments are available and they are always in the sequence below. Only the first is mandatory   
+      but both the public and open segments are in systematical use by DHL EXPRESS: 
+• 
+Public segment: standardized package data shared between customer, service providers and DHL 
+• 
+Open segment: open segment in pseudo EDIFACT DHL data structure shared between service 
+providers and DHL 
+• 
+Customer segment: segments with customer data not used by DHL 
+5.12.1. Customer Data 
+The 2D symbol under use contains encoded operational data, which is obtained through the concatenation of 
+the above listed segments’ data. 
+ 
+The exhaustive list of encoded shipment data elements can be referenced through the Global SOP “Data Matrix 
+2D Specifications”.  
+ 
+ 
+5.13. 
+Additional Shipment Information 
+Customers may wish, in certain cases and for various reasons, to add and/or print additional information (e.g.  
+a country-mandatory Export Declaration) on the label. The same may apply for internal reasons. 
+ 
+The Global Label Standard is equipped with distinct segments that cater for the need of additional information.  
+ 
+The image below identifies those info elements (which extend the format, previously limited to the area adjacent 
+– segment 17a - to the Waybill Barcode). 
+ 
+ 
+9 Refer to sections 5.18 and 8.1 for further details on this capability and related specifications. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+34
+
+=== PAGE 36 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.1.1. 
+Content Description (mandatory) 
+ 
+ 
+The set of segments (17) is reserved for such information and consists of: 
+• 
+(17a) placed right to the Waybill barcode – supports 150 chars 
+• 
+(17b) which goes across the whole label width – supports 300 chars 
+ 
+The font size is to be chosen, within the physical constraints specific to each template version, in such a way 
+that at least 300 chars can be printed in both sections 17a and 17b. 
+ 
+Note: practical usage so far has taught that keeping segment 17a associated with the content description is 
+a good approach, in case there are additional requirements for regulatory information (see example below, 
+where the regulatory information was placed in segment 17b). 
+ 
+ The following practical guidance is to be observed: 
+ 
+• 
+ 
+“Content Description” or related Information (mandatory) 
+o 
+To be located primarily in segment 17a, starting in Line 1 (“Special_Info1) 
+o 
+Exceptional scenario: Should there be a scenario where the required content description 
+extends beyond the pre-defined number of characters for segment 17a, then IF there is no 
+Regulatory Information using segment 17b, the content description can be located in the 
+segment 17b 
+• 
+General Regulatory Information 
+o 
+To be located in Segment 17b, starting in Line 2 (Special_InfoA1) 
+ 
+ 
+1.1.1.1. 
+Neutral Content Descriptions 
+There is a requirement from specific shippers, who wish to “neutralize” the Goods Description on the Transport 
+Label to help with what they perceive as a security threat during physical shipment handling.  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+35
+
+=== PAGE 37 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+For selected and approved customers, who meet the defined Neutral Content Label criteria, the respective 
+content descriptions on the Transport Labels can be replaced with a “Neutral Content Description” text, defined 
+as “CTD – see data”). The “CTD – see data” string must be printed with bold font and with a min 3mm character 
+height. 
+ 
+The location of the “Neutral Content Description” complies with the guidance of the previous section (“Content 
+Description”). 
+ 
+1.1.2. 
+Special or Conditional Information 
+ 
+• 
+Special/ Conditional Information (see examples below) 
+o 
+To be, as a guiding principle, located in segment 17b 
+o 
+Dangerous Goods Declarations are to be located in segment 17a 
+o 
+The guiding principle follows however the primacy of the General Regulatory Information, in 
+which case the Special Information, if existent, can be moved to the “Piece Content” line (refer 
+to first image, above, in this section). It would then also take precedence over any piece-related 
+contents. 
+o 
+Should two data elements need to be printed in the “Piece Content” line (e.g. they can be 
+concatenated in the same line if separated by specific captions and a “/” separator (e.g. CNP-
+12345678 / IE-987654321) 
+o 
+A Tax ID can also be understood and represented as a Shipment Reference with the 
+associated Reference Type, in which case it would not be placed here but rather in the 
+Piece / Shipment Reference segment. 
+ 
+1.1.3. 
+Not allowed on Transport Labels 
+• 
+   Account Numbers / Customs Value / Shipment Insurance Value <- must be excluded 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+36
+
+=== PAGE 38 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+o 
+Neither Account Numbers nor Customs Value or Shipment Insurance Values are allowed on 
+the Transport Label 
+o 
+Moreover, any data elements not explicitly stated and required on Global SOP Standard  
+Transport Label are, by definition, not allowed and must be excluded. 
+ 
+ 
+5.13.1. Conditional Local Information 
+In some countries, additional information is legally required on the label, usually for a small percentage of the 
+shipping volume. Any information of this kind may be added to these specifications.  
+ 
+Depending on the size of the information required, it may be inserted (sometimes making the label longer or 
+even requiring a separate label to be used). Any potential separate label has to carry the Piece Identifier in 
+human-readable form and respective barcode in addition. Wherever such a case fits into one of the existing 
+segments it is described in the respective context.  
+All other cases are described in this chapter. 
+ 
+5.13.1.1. 
+Tax IDs (Brazil) - Conditional 
+ 
+Labels for packages shipped from addresses in Brazil need to display the Tax IDs (Called CNPJ/CPF 
+and IE/RG) for both origin and destination: this is an approved exception, strictly subject to central 
+endorsement, through the DHL EXPRESS Label Certification Body. 
+ 
+Upon DHL EXPRESS’ approval, these numbers need to be printed as part of the respective addresses (if free 
+address lines are available) or to be printed in segment 17, with at least the font size of the consignee address. 
+ 
+Note: In this special case (BR), the TAX ID can also be understood and represented as a Shipment Reference 
+with the associated Reference Type, in which case it would not be placed in this segment but rather in the Piece 
+/ Shipment Reference segment. 
+ 
+ 
+5.13.2. Dangerous Goods and Other Special Loads 
+Dangerous goods and other special loads (Live Animals – Perishable Cargo – Human Remains) by law require 
+additional information that may be printed in the shipment information segment or as a separate label.  
+DHL Express does not offer an unconditional transport of dangerous goods and other special loads. 
+Prohibited Commodities are excluded from transportation. 
+ 
+ 
+The “Prohibited and Restricted Commodities Policy10” defines, categorizes and lists what can and cannot be 
+transported by DHL EXPRESS. Goods are therein defined into two categories: 
+• 
+Prohibited 
+• 
+Restricted 
+ 
+For additional information on Mandatory / Conditional Legal Entries required on the eWaybill or Transport 
+Label for Special Loads, refer to the following documents (DHL Guidelines and Regulations): 
+ 
+10 The definition and listing of “Prohibited and Restricted Commodities” are subject, at any time, to updates 
+through the corresponding Regulators. Please always refer to the latest International Standard version for 
+use purposes. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+37
+
+=== PAGE 39 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Prohibited and Restricted Commodities Policy -> DP-DHL Policy 
+• 
+ICAO/IATA DG – IATA AVI – IATA PER – IATA HUM Regulations: International regulations 
+for the transport of Dangerous Goods, Live Animals, Perishable Cargo and Human Remains 
+by Air 
+ 
+ 
+ 
+• 
+ADR: European Agreement concerning the International Carriage of Dangerous Goods by 
+Road 
+• 
+IMDG code: International Maritime Dangerous Goods Code  for the transport of Dangerous 
+Goods by Sea 
+• 
+RID : Regulations concerning the International carriage of Dangerous Goods by Rail 
+ 
+ 
+5.14. 
+Shipment Identifier / Waybill Number  
+ 
+5.14.1. Shipment Identifier / Waybill Number (mandatory) 
+ 
+The Shipment Identifier (proxy for the Waybill Number) is mandatory for all DHL Express products on the 
+Transport Label. Its omission requires explicit approval by DHL. 
+ 
+The Shipment Identifier must be printed in groups of four digits, with the grouping sequence starting at the end 
+and being built towards the left side (equivalent to the mandatory grouping of the Piece Identifier). 
+ 
+5.14.2. Shipment Identifier / Waybill Number barcode (Conditional)  
+The Waybill Number barcode is always printed in the Standard Code 39 symbology with the syntax and human-
+readable format as specified in the DHL EXPRESS Global SOP Barcode Specifications. 
+ See section 8.2.2 for technical Code 39 specifications and chapter 7 for DHL-specific requirements. 
+5.15. 
+Routing Information (mandatory) 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+38
+
+=== PAGE 40 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The DHL ISO Routing Code contains destination country, destination Postcode, transport products and 
+associated product features. When a routing field is optional, the content is not required. 
+ 
+ 
+In the context of the routing barcode, optional does not always imply that the routing field may remain 
+empty. Some routing fields must always be populated at least with zeroes. If data is available, though, 
+such a field should always be filled. 
+The Postcode, the region specific fields and the + separator after the product/feature block are the only optional 
+fields which must be omitted if the data is not available.  
+ 
+5.15.1. Routing Barcode Structure 
+The following international ISO standards are supported when coding routing information in barcodes.  
+• 
+The ASC MH 10 routing barcode starts with the ASC MH 10 Data Identifier "2L" and is coded in barcode 
+symbology Code 128.  
+• 
+The GS1 routing barcode starts with the GS1 Application Identifier "403" and is coded in barcode 
+symbology GS1-128.  
+Both standards are complementary and can co-exist without restriction (they do not differ in content but only in 
+their technical structure). However, DHL Express-internal applications will only produce ASC MH 10 
+routing barcodes starting with 2L. 
+ 
+A distinction has to be made between the information which will be captured and the information, which will 
+actually be printed out on the barcode. This distinction is mainly relevant for applications which need an 
+indication on the output side. 
+ 
+Example: At data content level, a calendar date for delivery is not chosen for the selected product, so the 
+delivery date information will not be captured. The delivery date is optional, as it does not always have to be 
+captured. However, at barcode level, the delivery date digits are mandatory as the delivery date field may not 
+remain empty/blank and the field must be populated with zeroes if no valid information is available. 
+All routing information appears both in human and bar-coded format except for the parenthesis 
+around the Data Identifier which only appear in human readable format – not in the barcode. 
+ 
+The printout level is either mandatory or optional, it means the whole barcode is either printed or not printed 
+(with the possible exception of a country-specific extension).  
+ 
+A product/feature block always consists of 8 digits, regardless of which products and features have 
+been chosen. 
+ 
+ 
+The table below details out ASC MH and GS1 barcode routing structures 
+SECTION 
+ASC MH 10 
+GS1 
+String 
+LEFT 
+PARENTHESIS 
+( 
+Mandatory 
+(only in plain text – not in 
+barcode!) 
+“2L” 
+“403” 
+Mandatory 
+DATA / 
+APPLICATION 
+IDENTIFIER 
+RIGHT 
+PARENTHESIS 
+) 
+Mandatory 
+(only in plain text – not in 
+barcode!) 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+39
+
+=== PAGE 41 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+SECTION 
+ASC MH 10 
+GS1 
+String 
+2 upper-case alpha 
+chars 
+ISO COUNTRY 
+CODE 
+3 numeric digits 
+Mandatory 
+For domestic shipments as well 
+POST CODE 
+ 
+Conditional 
+(Mandatory where existent) 
+Postcode of Consignee address. Variable length, max. 
+12 chars; The Postcode may never contain spaces or 
+symbols  
+Remains empty in case of country with no Postcode 
+system. In case of known DHL Service Area Code (3 
+chars) or a DHL Delivery Facility Identifier (6 chars), this 
+can be coded here, separated from the country code by 
+a colon “:”. 
+“+” char 
+Mandatory 
+FIELD 
+SEPARATOR 
+2 numeric digits (fixed length) 
+Mandatory 
+PRODUCT 
+CODE 
+DELIVERY 
+DATE 
+2 numeric digits (fixed length) 
+Mandatory 
+If no date specified, put two 
+zeroes. 
+DELIVERY 
+TIME  
+1 numeric digit (fixed length) 
+Mandatory 
+(if no delivery time, put one zero) 
+Mandatory 
+(if no feature, put three zeroes) 
+HANDLING 
+FEATURE 
+CODE(S) 
+3 digit numeric number with leading zeroes (fixed 
+length) 
+Sum of values of product features 
+FIELD 
+SEPARATOR 
+“+” char 
+ 
+Optional 
+May remain empty 
+FNC1 (Special 
+Code 128 symbol, in 
+all three code sets.) 
+Variable up to 6 numeric chars or up to 2 alphabetic 
+chars, for domestic use only. 
+Optional 
+May remain empty 
+COUNTRY-
+SPECIFIC 
+CODES 
+ 
+ 
+Example of a routing code: 2LBE3500+11311002123456 
+ 
+(2L) 
+BE 
+3500 
++ 
+11 
+31 
+1 
+002 
+123456 
+Data 
+Identifier 
+Postcode 
+code 
+Field 
+separator 
+Product 
+code 
+Delivery 
+Date 
+Delivery 
+Time 
+Product 
+Feature 
+ISO 
+Country 
+Code 
+Region 
+specific 
+codes 
+ 
+When none of the above features is chosen, the code is “000”. 
+ 
+5.15.2. Full Routing Barcode Examples  
+ 
+ 
+a) 
+ASC MH 10 
+EUROPACK piece, without any features but with region specific routing information: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+40
+
+=== PAGE 42 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Country 
+Postcode
+code 
+ 
+Product 
+Date 
+Time 
+Feature 
+Domestic 
+routing code 
+2L DE 
+81541 
++ 
+05 
+00 
+0 
+000 
+556677 
+ 
+Germany 
+ 
+ 
+DOM 
+EUROPACK  
+No fixed 
+date 
+No fixed 
+time 
+No 
+features 
+Street and house 
+number 
+ 
+ECONOMY SELECT shipment, to be held at depot, dutiable: 
+ 
+ 
+Product 
+Date 
+Time 
+Feature 
+ 
+Country 
+Postcode
+code 
+2L 
+CH 
+3000 
++ 57 
+52 
+0 
+001 
+ 
+Switzerland 
+ 
+ 
+ECONOMY 
+SELECT 
+Hold at 
+depot 
+No fixed 
+time 
+Customs 
+Clearance 
+ 
+EXPRESS WORLDWIDE shipment, to be delivered on the 10th (future feature), in time code 1, with customs 
+clearance (code 001) and two future product feature with codes 016 and 064: 
+ 
+Product 
+Date 
+Time 
+Feature 
+ 
+Country 
+Postcode
+code 
+2L 
+NL 
+1023FG 
++ 
+48 
+10 
+1 
+081 
+Time code 1 81= 
+ 
+The Netherlands 
+ 
+ 
+EXPRESS 
+WORLDWIDE 
+1+16+64 
+Delivery at 
+10th of 
+month 
+ 
+ECONOMY SELECT shipment, to be held at depot, dutiable: 
+ 
+ 
+AI 
+Country 
+Postcode  
+Product 
+Date 
+Time 
+Feature 
+FNC1 
+403 
+756 
+3000 
++ 
+57 
+52 
+0 
+001 
+Start 
+char 
+ 
+Switzerland 
+ 
+ 
+ECONOMY 
+SELECT 
+Hold at 
+depot 
+Customs 
+Clearance 
+No 
+fixed 
+time 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+41
+
+=== PAGE 43 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.16. 
+Customer Segment 
+ 
+This section is reserved and can be used by the shipper (or customer) for information and own purposes (e.g. 
+for parties involved in the logistics chain). Its standard location is directly above the Piece Identifier segment. 
+These contents are transparent for DHL. 
+ 
+DHL imposes no restrictions in size or content of this segment, as long as the information printed in it does not 
+interfere with any other information on the label.  
+ 
+This section may contain barcodes (see sample image below) but none are allowed that could be interpreted as 
+one of the following content types: 
+ 
+ 
+• DHL Waybill Number (10 digits, numeric, barcode in Code 39) 
+ 
+• DHL Routing Code (Data Identifier 2L / Application Identifier 403) 
+ 
+• Piece Identifier (Data Identifier J, 1J …, nJ / Application Identifier 00) 
+ 
+NOTES. The objective of the highest-possible level of standardization is valid also for this segment. In specific 
+exceptional business scenarios, upon customer requirement, a relocation of the Customer Segment is possible, 
+requires however an explicit approval from DHL EXPRESS.  
+• 
+The potential new location must remain in the lower area of the label, below the Handling Feature Codes’ 
+segment, close to the existing barcode segments, ideally directly above segment 20 (Waybill barcode) 
+• 
+A different approach is to locate the customer-owned segment beyond the boundaries of the standard 
+layout. In this case, the customer-owned segment is no longer part of the label and shall not be defined 
+herein. To reinforce that fact, DHL requires that a thick line, with a min of 2 mm, be drawn to visually  
+separate the specific boundaries of the label from external elements. To prevent detrimental effects on 
+the PID scanning performance, only locations above the label upper boundary are acceptable. 
+5.17. 
+Piece Identifier Segment 
+ 
+Each piece of each shipment shipped with DHL requires a Piece Identifier as its unique identifier. Any ISO 
+15459-compliant Piece Identifier may be used.  
+ 
+5.17.1. Content 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+42
+
+=== PAGE 44 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The Piece Identifier: 
+• 
+must not contain more than 35 chars (excluding the Data Identifier “J”)  
+• 
+may only contain numeric and upper case alphabetic chars drawn from ISO/IEC  646 – they 
+must not include any lower case char or punctuation mark 
+• 
+must start with a string of chars representing an issuing agency assigned by ISO  
+ 
+DHL EXPRESS issued Piece Identifiers (LPs) usually begin with either a “JD00…“ or a “JD01…” format prefix. 
+ 
+In the specific case of the JD01 LP-types, its length i.e. the number of characters following the Data Identifier 
+“(J)” is exactly 20 – see example, below. 
+ 
+ 
+5.17.2. Barcode and Plain Text 
+ 
+A Piece Identifier must be printed as a barcode. Its content must be repeated in plain text below the barcode.  
+ 
+Although, according to the official standard, both Code 128 and Code 39 are allowed to encode Piece 
+Identifier numbers, any barcode produced by a CAS system or any DHL internal software has to use 
+Code 128. 
+ 
+ 
+5.17.3. Data/Application Identifier 
+ 
+The Data Identifier (for ASC MH 10 data fields) or Application Identifier (for GS1 data fields) is an ISO-specified 
+string of chars that identifies the content of the data that follows. 
+ 
+All DHL issued Piece Identifiers will be of type ASC MH10, using Data Identifier “J”. 
+ 
+For readability reasons of ASC MH10 Piece Identifiers, DHL EXPRESS requires that the human-readable code 
+be grouped in such a way that blocks of four digits follow the (Sub-) Issuing Agency Code. Those are built 
+upwards (from left to right) so that the last four digits also form a group. 
+ 
+This way of printing Piece Identifier in groups of four digits is mandatory for all DHL-owned 
+customer automation software. 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+43
+
+=== PAGE 45 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The Data Identifier preceding the Piece Identifier is NOT part of the Piece Identifier. It does not have 
+to be considered when determining the Piece Identifier length. Two Piece Identifiers are identical if 
+their only difference is a deviating data identifier (e.g. “J” versus “2J”).  
+ 
+However, the Data Identifier always has to be printed on the label both in human readable and bar-
+coded format. The bar-coded Data Identifier must not include the parentheses which are used for clarity 
+only.  
+(The bar-coded form of the data identifier and Piece Identifier is then “JJD01…….”. & the human 
+readable form should be in the form “(J)JD01 …..”.) 
+5.18. 
+Sample Labels 
+The following labels serve solely as an illustration of the label structure and content. 
+ 
+5.18.1. ESS Label V2.8 - Size 6”x4” / A6 
+ 
+Example with multiple Services 
+ 
+This DHL A6 ESS Label (length: 160 mm / width: 100mm) should be the format (length) chosen to guarantee 
+best-possible balance of compactness and quality for scanners. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+44
+
+=== PAGE 46 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.18.2. ESS Label V2.8 – Size 8”x 4” w. Customer Info 
+Where the label length is not subject to other constraints, a length of 8 inches easily allows for an additional 
+segment with customer-specific information. If required, the label can even be made longer than this. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+45
+
+=== PAGE 47 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+46
+
+=== PAGE 48 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.18.3. ESS Label V3.0 – Size 8”x 4” w. 2D symbol (Customer Data) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+47
+
+=== PAGE 49 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+6. eWaybill – Segment Specifications 
+ 
+A Global Standard eWaybill is required for all shipments, either in printed or electronical form, whenever the 
+associated paperwork needs to be archived (imaged) and indexed. It is a Document type containing all 
+information and data relevant for correctly billing a customer or supporting Data Entry, Billing-related Invoice 
+Validation processing or even to be used as a Customer Receipt.   
+Due to distinct functions taken by the eWaybill Type and audiences, the Reference Purpose is to be printed as 
+working Title (see image below) and shall vary accordingly (e.g. “Waybill”, “DHL Copy – please hand to Courier”, 
+“Customer Receipt”). 
+This is a document type at shipment level, which is never to be appended (or visible in) to a package because 
+it is not a transport label! It is also not required for all products in printed form – see Global SOP for further 
+details. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+48
+
+=== PAGE 50 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+6.1. eWaybill – Layout Overview (all segments11) 
+17a 
+ 
+ 
+11 This page offers a structured overview of the Global SOP Standard Electronic Waybill (eWB). Sub-sequent 
+sections explain in detail the specifications of each individually numbered segment. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+49
+
+=== PAGE 51 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+Note: Only the segments which are not common to both the Global Standard Label and the “eWaybill”, will be 
+defined and described in the following sections. 
+ 
+The eWaybill in this specification has been designed to allow for both Transport Label and eWaybill printing on 
+the same printer. It is, however, also allowed to print the eWaybill on a normal A4 / Letter size document, 
+provided that all specified information is available and the Waybill Barcode is printed. 
+6.2. Purpose – Working Title of Document (optional) 
+The intended purpose (e.g. “eWaybill Doc”) of the document will be printed here, with an alpha-numeric format.  
+ 
+This information indicates the purpose of the document, which may vary depending on the intended use and/or 
+targeted user type (e.g. Customer or DHL Staff). More than one purpose can be selected at the time of rendering, 
+with the result that “several” documents with distinct “purposes” are created. 
+ 
+Examples of the targeted users and associated “purposes” are: 
+• 
+DHL OPS -> “DHL Copy – please hand to Courier” 
+• 
+Customer -> “Customer Copy” 
+• 
+DHL Billing -> “Waybill Doc” 
+ 
+The format of this segment is: 
+• 
+[“Waybill Doc”] 
+• 
+[INTENDED PURPOSE] 
+• 
+ [STATUS]”/”[PRINTING APPLICATION]”/”[PRINTING DATE]”/” [CERTIFICATION 
+IDENTIFIER] 
+o 
+where “Status” can have the following values and will be controlled by a specific parameter: 
+• 
+“Validated by DHL” 
+• 
+“” -> left blank 
+• 
+where the “Certification Identifier” adopts the same syntax of the Transport Label (see 5.2.3) 
+6.3. Sender’s Contact 
+ 
+The Sender’s Contact information in this segment supports the following optional elements in addition to the 
+label (refer to chapter 4): 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+50
+
+=== PAGE 52 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Local language translation of Contact Name 
+• 
+Account Number – Identifies the Shipper’s Account Number 
+• 
+Reference – Identifies the set of Piece/ Shipment References 
+6.4.  
+Consignee’s Contact 
+ 
+ 
+The Consignee’s Contact information in this segment supports the following optional elements, in addition to the 
+label (refer to chapter 4): 
+ 
+• 
+Local language translation of Contact Name 
+• 
+Account Number – Identifies the Consignee’s Account Number 
+6.5. Country-Facility ID 
+ 
+The DHL Country Code and Facility Identifier for both Original and Destination locations will be displayed here, 
+with the following format: 
+ 
+• 
+[ORIGIN COUNTRY CODE]-[ORIGIN SERVICE AREA CODE] [ORIGIN FACILITY CODE], in 
+correspondence to the DHL Facility managing the Shipper’s GEO Area 
+ 
+• 
+[DESTINATION COUNTRY CODE]-[DESTINATION SERVICE AREA CODE] [DESTINATION 
+FACILITY CODE], in correspondence to the definition applied to the corresponding Transport 
+Label and to the DHL Facility managing the Consignee’s GEO Area 
+6.6. Product Information 
+6.6.1. 
+Product Details (mandatory) 
+ 
+The Product chosen by the customer will be printed here, with the following data elements and format: 
+• 
+[Network Product Code] Global Product Name (Product Sort Code) 
+ 
+Referring to the example above, the product is being identified with the following elements: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+51
+
+=== PAGE 53 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+o 
+“[P]” – NETWORK PRODUCT CODE 
+o 
+“EXPRESS WORLDWIDE” – GLOBAL PRODUCT NAME 
+o 
+“(48)” – PRODUCT SORT CODE 
+6.6.2. 
+Payer Details (mandatory) 
+ 
+Payment-related information, captured by the shipping applications in association with the specific shipment 
+scenarios corresponding to the payment codes, will be presented with the following format: 
+  
+  , where: 
+ 
+• “FRT:”  (FREIGHT) PAYER ACCOUNT NUMBER (depending on service) 
+• “DHL Billing Service:” BILLING SERVICE INDICATOR  
+• “Duty Payer:” DUTY PAYER ACCOUNT NUMBER 
+• “Taxes Payer:” TAX PAYER ACCOUNT NUMBER 
+o 
+where both Identifiers always match* and depend on the service selected 
+o 
+*DHL does not split between Duty and VAT Billing and related accounts, so they are 
+always equivalent. For this reason, a single line “Duty/ VAT A/C” is also acceptable 
+ 
+The Service selected in combination with the account number in the Duty Payer A/C# and Tax Payer A/C # 
+fields, determines who will pay what. 
+ 
+DTU – with no account number mentioned is the default DHL service and Consignee always pays. 
+ 
+Where the Consignee account number is required but not yet known (e.g. in case of the Basic Feature “Duty 
+and Taxes Unpaid”), the line will just state “Duty: REC / Tax: REC”. 
+6.7.  
+Features and Services 
+DHL will consider, by default, that all context-related Charge Codes are applicable except for the so-called Basic 
+Features (i.e. the ones being part of the product). 
+ 
+ All services as ordered by the customer, to be grouped into one or more columns (see example next) to 
+accommodate the following data elements: 
+ 
+“GLOBAL 
+SERVICE 
+ 
+“VALUE OF SERVICE” 
+NAME”  
+ 
+“PRODUCT SERVICE 
+CODE” 
+ 
+“CURRENCY 
+CODE” 
+ 
+Delivery Signature 
+ 
+S 
+ 
+1 000.00 
+ 
+EUR 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+52
+
+=== PAGE 54 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Some systems use specific/ distinct formats for values and decimal digit representations. For this reason, the 
+format “# ### ### ###.###” will be used hereafter as standard for currency values. 
+ 
+Charge Amount values will follow the format 1999.01 as “1[space]999.01”, where a single “space” will have the 
+role of a digit group separator in place of a comma.  
+ 
+The Currency Code shall comply with the ISO 4217 Currency Code Standard. 
+6.8.  Shipment-related Information 
+ 
+Additional Shipment-related information may be added to this segment as required, in which case additional 
+lines, within the pre-defined limit, can be used. 
+ 
+The following data elements are foreseen 13(and possible) as per DHL EXPRESS Standards: 
+ 
+• 
+“Declared Value for Customs” – CUSTOMS VALUE 
+o 
+indicates the declared customs value, if non-doc shipment 
+o 
+Format: <# ### ### ###.##>, where currency code is mandatory 
+ 
+• 
+“Declared Value for Insurance:” – DECLARED VALUE FOR INSURANCE 
+o 
+Format: <# ### ### ###.##>, where currency code is mandatory 
+o 
+Default value is that of the Shipper’s Country Currency Code  
+ 
+• 
+“Commodity ID:” - COMMODITY IDENTIFIER 
+o 
+as per DHL’s Global Commodity Code Standard 
+ 
+• 
+“Commercial Invoice Number:” – COMMERCIAL INVOICE NUMBER 
+o 
+as per DHL’s Global Commercial Standards 
+ 
+6.9.  
+Content Descriptions and Declarations 
+ 
+ 
+13 Contrary to the Global Standard Transport Label, where non-piece-handling data elements are to be omitted 
+(by default), here, all data elements supporting the full description of the Customer’s Transport Order are 
+wished for. The above structure has been closely aligned with Global Billing and other key stakeholder 
+teams. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+53
+
+=== PAGE 55 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+This segments 17a and 17b contain information on the shipment contents, their description and regulatory 
+declarations. Additional data elements or information may be added. 
+The format is the following: 
+• 
+“Content 1:” – <CONTENT TITLE ROW 1><CONTENT DESCRIPTION ROW 1> 
+• 
+“Content 2:” – <CONTENT TITLE ROW 2><CONTENT DESCRIPTION ROW 2> 
+• 
+… 
+• 
+“Export Information:” – EXPORT INFORMATION 
+• 
+“EEI:” – ELECTRONIC EXPORT INFORMATION (OR INDICATOR) 
+ 
+Regulatory declaration in regards to Dangerous Good information is mandatory and is to be located in Segment 
+17a, starting in Line 1 (SPECIAL_INFO1).  
+ 
+17a 
+ 
+6.10. 
+Weight – Declared and DHL-Measured 
+6.10.1. Shipment Weight (mandatory) 
+ 
+The “shipment weight”, legacy term corresponding to the addition of the individual piece weights, is to be printed 
+in this segment, with the following format: 
+ 
+•  [SHIPPER DECLARED SHIPMENT WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+ 
+• 
+[DHL SHIPMENT WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+o 
+Content optional -> subject to availability of value at the time of rendering 
+Its value must correspond to the dead weight plus package dimensions OR the applicable volumetric weight, to 
+allow for charge calculation based on that document. 
+ 
+Should the volumetric weight NOT be available at the time of rendering the document, then it may be omitted. 
+ 
+Weight, as provided by the shipper (e.g. “Shipper Declared Weight” through EDI / 2D Code / Manual Waybill), 
+has to be printed on the label IF the printing occurs prior to DHL Reweigh processing, in this field. 
+ 
+Should, however, labeling happen after weighing, then DHL label printing applications must print the determined 
+weight (“DHL Actual Weight”) instead.  CAS systems won’t be able to print the “DHL Actual Weight”. 
+ 
+When no weight was available at the time of printing the label, a “.” shall be printed to indicate that fact.  
+ 
+The mass unit must be printed next to the weight. 
+ 
+As last piece of data in this segment, the document print date must be printed according to the Standard ISO 
+8601 (YYYY-MM-DD). 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+54
+
+=== PAGE 56 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6.10.2.  Piece Weight 
+ 
+The piece weight of the individual pieces is to be printed in this segment with the following format: 
+ 
+• 
+[SHIPPER DECLARED PIECE WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+ 
+• 
+[DHL PIECE WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+o 
+Content optional -> subject to availability of value at the time of rendering 
+ 
+Its value must correspond to the dead weight plus package dimensions OR the applicable volumetric weight, to 
+allow for charge calculation based on it. 
+ 
+ The mass unit must be printed next to the weight. 
+6.11. 
+Piece Counter 
+The total number of pieces belonging to the shipment shall be printed here.  
+ 
+This information is conditional to its reliability. Shall its correctness not be guaranteed, then it is to be suppressed. 
+In this last scenario: 
+ 
+• 
+the customer must mandatorily provide the information by other reliable means (e.g. manifesting 
+message) 
+• 
+upon DHL approval, the information may be temporarily suppressed on account level. 
+o 
+an approved Global SOP Exemption Request shall document the agreed data provision process 
+and the expected improvement approach 
+ 
+6.12. 
+ Special Information 
+Special information is to be printed here; it corresponds to the “Special Info” conveyed by the Transport Label. 
+There is a 1:1 association between both document types to this regard. The same number of individual lines (9) 
+will be supported in both documents to ensure backward compatibility. 
+ 
+ 
+Special Information in this segment refers primarily to content-related facts (e.g. “Belgian chocolate“ or “Li-metal 
+batteries with equipment”).  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+55
+
+=== PAGE 57 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Should the content-related information require longer line(s), it may be combined with segment 17b (“Contents 
+and Descriptions”). 
+6.13. 
+Customer’s Signature (optional) 
+In the event that this document type is used, as a Proof of Collection (Receipt) for B2C Returns to DHL 
+EXPRESS, when required by the Customer, the Courier’s signature is to be captured here, together with the 
+Date and Time. The signed eWaybill copy is then handed to the Shipper and the other copy is taken back for 
+imaging in the station. 
+ 
+6.14. 
+Piece Identifiers in Shipment (mandatory) 
+ 
+ The exhaustive list of pieces belonging to the shipment shall be identified here.  
+The Piece Identifiers shall be printed here in plain text format. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+56
+
+=== PAGE 58 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7. LOOSE BBX LABEL SPECIFICATIONS 
+ 
+7.1. Purpose 
+The purpose of this document is to supplement the current Global SOP procedures with finer detail relative to 
+the specification, design, production and use of a Network-compliant Loose BBX Transport Label. 
+7.2. Objective 
+This guideline shall ensure that stakeholders: 
+• understand What a Loose BBX Transport Label is and its purpose, in the context of DHL Express 
+business segment 
+• know How to create a Loose BBX Transport Label and How to use it 
+• understand and comply with the business requirements for Label data and information 
+• understand the flexibility allowed by the design and its corresponding constraints 
+• are able to identify Label issues or non-compliance and initiate mitigation actions 
+7.3. Scope   
+This reference guide is directed at all DHL Functions and Facilities that are involved in the production or use of 
+Loose BBX Transport Labels and corresponding transportation and handling of Shipments, with specific 
+reference to the: 
+• 
+DHL Loose BBX Transport Label 
+• 
+All related Architectural elements (e.g. Identifiers, Barcodes) 
+• 
+Label Certification Guidelines 
+ 
+7.4.  Layout Overview (all segments) 
+The circled coloured numbers in the image below correspond to individual segments, which are described in 
+detail in the following sections. 
+NOTE: the Loose BBX Transport Label corresponds, in its essence, to a standard Transport Label, where a new 
+Custom’s Routing Address segment, identified through the new sub-segments 25-27, was added. Thus, the 
+below layout will only cover the added sub-segments, everything else remains standard (refer to page 12 for 
+related definitions). 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+57
+
+=== PAGE 59 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+58
+
+=== PAGE 60 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7.5. Import Point of Entry - Mandatory 
+This segment contains the address of DHL’s Import Clearance Gateway Address with the caption “IMPORT AT:” 
+This address segment is standard, with the same specifications as the other two (Shipper and Receiver). 
+ 
+7.6.  DHL Gateway Facility Identifier  
+This segment contains DHL’s Gateway Facility Identifier, with the caption “Import PoE”, acronym for “Import 
+Point Of Entry”. This element is compliant with DHL’s Reference Data for Facility identification. 
+ 
+7.7. Mother House Waybill Number (MHWB) - Mandatory 
+This segment contains the Master House Waybill Number in human-readable format, with two related data 
+elements, in total: 
+• 
+Total Number of Pieces for the Mother, with corresponding caption “Total Nr. Pieces:” – optional field 
+• 
+Mother HWB in human-readable form, with corresponding caption “MHWB” – mandatory field 
+• 
+(Baby) House Waybill number in human-readable form, with caption “HWB” - mandatory field 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+59
+
+=== PAGE 61 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8. Specifications of Label Types, Fonts and Sizes 
+This paragraph describes all defined types of DHL Automated Labels, each of them with mandatory and optional 
+sections including size and position on the label. 
+ 
+The values for font sizes specify minimum font sizes. However, the maximum height per block has to be 
+considered. DHL’s document rendering tool (GLS) introduced a dynamic management feature for the font size, 
+to ensure information does not get unnecessarily truncated in case of long contents, which may lead to slightly 
+distinct font sizes within the different lines of a common segment. This is to be seen as functionally correct even 
+if at the expense of graphical representation consistency. 
+ 
+Furthermore, the font size for the Consignee address must be bigger than the font size for the Shipper 
+address. For each address, the Postcode and City/Town font size must not be smaller than the size of the 
+biggest font used in the respective address lines. 
+ 
+For all font sizes, the values given for “Font height in mm” and “Size in dots at 200 dpi” are rounded values, 
+provided solely for ease of programming. The size always includes the space between the lines. 
+ 
+Although ARIAL font type is recommended, other fonts can be accepted if they are without serifs and if they 
+provide equal legibility. 
+ 
+The default and preferred orientation for the DHL label is the portrait orientation. A landscape format is only 
+possible as an exemption, to be approved by DHL’s Central Label Certification Office. DHL-owned applications 
+are not allowed to print landscape format labels. 
+ 
+ 
+Font sizes are subject to two conflicting requirements: max font size for readability and min font 
+size for compactness. For this reason, in scenarios where a high compactness degree is required 
+(e.g. customer with much data in the customer-owned segment) the font size for the Shipper 
+Address lines can be decreased to a min font size of 1.5 [mm]. Accordingly, the font size for the 
+Receiver Address lines may be decreased to a min font size of 2.5[mm]. In both special cases, a 
+formal approval from the Global Label Certification Center is required (mandatory). 
+ 
+In the segment descriptions, thin red lines are used to separate segments. These lines must not 
+be printed. A thick red line shows where a black  line needs to be printed as a segment 
+separator on the label. 
+ 
+ 
+8.1. DHL ESS Label v2.8 
+8.1.1. 
+  Size and Orientation 
+The label width must be within 95 and 110 mm. This requirement is met by both A6 labels (portrait) and 
+4” wide labels. 
+The preferred length of a DHL Transport Label is between 148 mm (A6 length) and 152.4 mm (6”), but 
+it can be longer if necessary to support requirements for additional information. A general maximum 
+length is not defined. However, each customer must be given the possibility to print labels that are not 
+longer than 250 mm. Depending on the piece dimensions, no label may be too long to fit on one side of 
+the package. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+60
+
+=== PAGE 62 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+As an exception, the label can be divided in two smaller sized labels. In this case, the label that does not 
+contain the Piece Identifier barcode form must show the unique piece identifier at least in human 
+readable form (minimal font size 8 point). 
+ 
+If a printout on A5 or Statement format (i.e. folded A4 or folded Letter) is desired, the label content 
+can be divided into two columns, with the first column to contain the addresses plus potential 
+customer-specific information and the second column to be identical to a Network Label (see Error! R
+eference source not found.) 
+ 
+8.1.2. 
+  Segment Fonts and Sizes 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+61
+
+=== PAGE 63 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.3. 
+  Considerations on A6 or 6”x4” (inch) Labels 
+The ESS Label v2.8 fits on an A6 label (14.85 cm) and on a 6”x4” (15.24 cm) label.  
+However, the design has to be done very carefully, and the printing will not allow for huge tolerances. 
+Users in the USA are generally recommended to use 6 ¾” x 4” labels. 
+The following table is a good indicator for a best-possible layout of an A6 label.  
+Note: this challenge with space exists only when the Waybill Barcode is present on the label. 
+ 
+This works slightly easier with 6” long labels which are about 4 mm longer than A6 labels. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+62
+
+=== PAGE 64 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.4. 
+  Considerations on labels for 8” or A4 landscape print 
+This section gives the recommended segment and font sizes for v2.8 labels as they should be used on 
+thermo printers where possible. The length of 8” is equivalent to 20.3 cm which makes this a good fit for 
+A4 or letter format sheets in landscape format. One sheet can contain two or (in the case of A4) three 
+labels, or one label plus further information. 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+63
+
+=== PAGE 65 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.5. 
+  Considerations on Loose BBX Transport Labels 
+This section gives the recommended segment and font sizes for “Loose BBX Transport Labels” as they 
+should be used on thermo printers where possible.  
+These Labels may exist with the standard 8” format. Its usage is subject to a formal Global Label 
+Certification. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+64
+
+=== PAGE 66 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.5.1. 
+Segment Fonts and Sizes 
+With the exception of the new sub-segments 25-27, all fonts and corresponding sizes remain standard. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+65
+
+=== PAGE 67 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.6. 
+  Considerations on Highly-Compact (HC) Labels 
+This section gives the recommended segment and font sizes for “Highly-Compact - HC” labels as they 
+should be used on thermo printers where possible.  
+HC-Labels’ usage is subject to a formal Global Label Certification. 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+66
+
+=== PAGE 68 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.6.1. 
+Segment Fonts and Sizes 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+67
+
+=== PAGE 69 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.7. 
+  Considerations on 2D-enabled Transport Labels 
+This section gives the recommended segment and font sizes for “2D-enabled Transport Labels” labels as they 
+should be used on thermo printers where possible and other printer types when allowed.  
+2D-enabled Labels may exist with the usual standard formats (8” or 6”) or new ones (e.g. customer-tailored, 
+upon DHL EXPRESS approval and subject to a formal Global Label Certification). 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+68
+
+=== PAGE 70 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.7.1. 
+Segment Fonts and Sizes 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+69
+
+=== PAGE 71 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.2. eWaybill  
+DHL is required to keep archive copies of all Waybills to meet legal and customer service access 
+requirements. Waybills are usually scanned into an imaging system where the shipment barcode is 
+decoded for indexing purposes. In addition, Waybills for dutiable shipments are scanned into DHL systems 
+(e.g. CIA) to support customs clearance processes. 
+The eWaybill in this specification has been designed to allow for both Label and eWaybill printing on the 
+same printer. It is, however, also allowed to print the eWaybill on a normal A4 / Letter size document, 
+provided that all specified information is available and the Waybill Barcode is printed. 
+ 
+This Document Type has been designed to support shipments based on DHL’s 10-digit Waybill 
+numbering system only. As of 2009, this covers all cross-border Express shipments and all domestic 
+TD shipments. 
+A 210x110 mm eWaybill can potentially list up to 40 LPs. Where a shipment exceeds this number of 
+pieces, a second page may be printed, to be archived under the same shipment ID. 
+An eWaybill is either generated through printout and subsequent imaging or as a print file that is archived 
+without being printed. 
+8.2.1. 
+  Size and Orientation 
+This document type should be within 95 and 110 mm. This requirement is met by both A6 labels (portrait) 
+and 4” wide labels. If wider material is used, a frame should be printed around the label content. 
+There is no hard limit for the document length. The recommended length is 210 mm (A5 width) or 8” 
+(203 mm). A6 height works as well. A length of 27 cm should not be exceeded, so that proper imaging 
+can be ensured. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+70
+
+=== PAGE 72 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.2.2. 
+  Segment Fonts and Sizes 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+71
+
+=== PAGE 73 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9. Specifications of Linear Barcodes  
+9.1.  
+General 
+The customer can apply more barcodes to the piece, linear as well as 2-dimensional, for his own purposes. 
+However, care must be taken that these other barcodes do not interfere with DHL internal processes. For this 
+reason, the following restrictions apply to other barcodes on the piece: 
+9.2. Linear Barcode Symbology 
+DHL uses Code 128 as standard barcode symbology for Piece Identifier and Routing Barcode. For bar-coded 
+information defined under GS1-standards (such as the GS1 SSCC) the GS1-128 barcode symbology has to be 
+used. 
+ 
+For best-possible read-rates of automated scanning, the barcodes on a label should not have the same distance 
+to the left or right edge. This is usually achieved by printing the barcodes centered on the label. Where that is 
+not possible, it is recommended to manually indent the Piece Identifier barcode by at least 2 millimeters. 
+ 
+In accordance with License Plate standards, DHL will also accept Code 39 for ASC MH10 coded information. 
+This barcode symbology however is not the preferred barcode symbology. 
+ 
+Code 39 must not be used for Piece Identifier barcodes on any labels produced by DHL or printed on 
+systems created by DHL. 
+ 
+ 
+When Code 39 is used by a customer, special care has to be taken that the barcodes do not exceed the 
+maximum length requirements, due to the low information density of this barcode. 
+ 
+9.2.1. 
+  Code 128 Barcodes 
+ 
+All BARCODE PARAMETERS must be as defined in ISO/IEC 16388 “Automatic identification and data capture 
+techniques -- Code 128 Barcode symbology specification”. 
+ 
+Code 128 Barcodes on piece labels and archive labels must meet the following specifications. 
+ 
+Symbol height 
+The minimum height for the barcodes is 25 mm, unless formally approved 
+(Global SOP) differently.  
+The Routing barcode, may exhibit an exceptional min height of 11 mm, 
+recommended for all Label templates where space is a challenge. 
+Both options are currently available and can be used. 
+x-dimension 
+The minimum narrow element dimension (x-dimension) shall not be less than 
+0.33 mm and shall also not exceed 0.51 mm for the ISO/IEC 15417 Standard. 
+The GS1 Standard defines size ranges for the GS1 barcode symbologies, in 
+the EAN General Specifications. For transport packaging, values within the 
+interval module width 0.495 mm to 0.660 mm are allowed. 
+Within the above indicated ranges, the biggest x-dimension should be used that 
+is supported by the printing device used, while complying with barcode length 
+and quiet zone specifications. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+72
+
+=== PAGE 74 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 128, DHL demands not less than 5 mm. Quiet zones are not part 
+of the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on 
+the label. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+ 
+9.2.2. 
+  Code 39 Barcodes 
+ 
+All BARCODE PARAMETERS must be as defined in ISO/IEC 16388 “Automatic identification and data capture 
+techniques -- Code 39 Barcode symbology specification”. 
+ 
+Code 39 Barcodes on piece labels and archive labels must meet the following specifications. 
+ 
+Symbol height 
+The original minimum height for the DHL barcodes is 25 mm.  
+A new barcode version, approved in 2014, has a height of 11 millimeters and is 
+especially recommended for all Label templates where space is a challenge. 
+Both options are currently available and can be used. 
+x-dimension 
+The minimum narrow element dimension (x-dimension) must be between 0.36 
+mm and 0.425 mm. 
+DHL demands all barcodes to be picket fence-oriented (standing) 
+Code 
+orientation 
+Between 2.2 and 3.0 
+Wide-to-
+Narrow Gap 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 39, DHL demands not less than 6 mm. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+DHL’s Code 39 Waybill barcodes require the standard start- and stop-char “*” 
+Start and Stop 
+Char 
+Check Digit 
+DHL uses the simple MOD 7 check digit: DHL’s 9-digit Waybill number is 
+divided by 7, and the remainder forms the check digit, becoming the 10th digit 
+of the Waybill barcode. 
+Example: Waybill number 310003290 
+• 
+310003290  divided by 7 is 44286184.29  
+• 
+Rounded off to next integer: 44286184 
+• 
+44286184 * 7 = 310003288 
+• 
+310003290 – 310003288 = 2 = Check digit 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+73
+
+=== PAGE 75 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Barcode content = 3100032902 
+Symbol height 
+The minimum height for the barcode is 25 mm. However, a barcode height of at 
+least 28 millimeters is recommended 
+x-dimension 
+The minimum narrow element dimension (x-dimension) shall not be less than 
+0.33 mm. The x-dimension shall not exceed 0.51 mm.  
+Within this range, the biggest x-dimension has to be used that is supported by 
+the printing device used, while complying with barcode length and quiet zone 
+specifications. 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 128, DHL demands not less than 5 mm. Quiet zones are not part 
+of the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on 
+the label. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+ 
+ 
+9.3. Bi-Dimensional Barcode Symbologies 
+9.3.1. 
+What is a 2D Barcode 
+A 1D (linear) code is the typical "picket fence" style barcode that people are most familiar with. There are several 
+versions of 1D codes with distinct capabilities: some encode only numbers while others can encode any typical 
+character. Core is that information in the code is organized horizontally from left to right.  
+2D barcodes are graphical representations (i.e. ordered grid of dark and light dots) that structure, organize and 
+store information both horizontally (as 1-dimensional bar codes) and vertically. They are bordered by a finder 
+pattern. They are also more complex but hold much more information and take up less space than a 1D code. 
+2D codes require a 2D-enabled (e.g. imager) scanner to be read properly. 
+The most typical 2D Code Symbologies are: 
+• 
+Data Matrix 
+• 
+Aztec Code 
+• 
+QR Code 
+• 
+Maxicode 
+• 
+PDF 417 
+Currently, the Data Matrix symbology is the most commonly used due to minimal size requirements, robustness 
+by integrated automatic error correction and usability on most 2D devices. PDF417 needs at least 3 times the 
+space than Data Matrix by a reduced reading capability. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+74
+
+=== PAGE 76 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9.3.2. 
+ Data Matrix 
+9.3.2.1. 
+Definition  
+Data Matrix is a two-dimensional matrix symbology made up of square modules arranged in a square or rectangle 
+shaped pattern. This symbology is capable of packing large amounts of data and has the capability of recovering 
+the original data encoded even when it is partially damaged through an error correction technique. Data Matrix 
+codes are characterized by the matrix size which is the overall rows and columns count (for example 32x32 in 
+Error! Reference source not found.). Higher matrix sizes need more space and take a higher amount of data. 
+9.3.2.2. 
+Scope  
+ 
+The Data Matrix symbology will be used to encode operational data to be used in the PUD and In-Facility 
+domains. 
+9.3.2.3. 
+Key parameters 
+ 
+Within DHL the following code parameters shall be used: 
+• 
+Symbology: Data Matrix ECC 200 
+• 
+Module size: 0.38 mm 
+The nominal range of 0.40 > x > 0.38 may, in the future, be extended to the smaller value 0.24 mm due to 
+scanner performance evolution.  
+The module size for 2D symbols for Sorting purposes shall not fall below 0.76mm. 
+• 
+Symbol matrix: any symbol matrix is supported. 
+As the application typically requires at least 200 characters capacity, only square symbols might be used. 
+The smallest possible symbol matrix should be used to get best readability. 
+• 
+Macro: Macro 06 should be used as data is appropriate for that. 
+• 
+Quiet Zone: recommended min 4mm, on all symbol sides 
+• 
+Code Quality Grade: B 
+• 
+Printing technology: any which reaches the quality requirements. Examples: Thermal Transfer, Laser, 
+InkJet etc. 
+• 
+Encoding: Currently, 7 bit data is used only, so no ECI specification required. 
+• 
+Human readable interpretation:  The data contents are not shown verbatim on the label. Instead, excerpts 
+like the public information might be displayed similar to the 1D codes. 
+• 
+Symbol physical location: the 2D symbol will be placed, on the label, in such a way as to maximize the 
+quiet zone and protect specially the finder patterns from damage. In addition, It shall meet the ISO 
+15394:2017 requirements, which specifies the minimum requirements for the design of labels containing  
+two-dimensional symbols on transport units to convey data between trading partners. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+75
+
+=== PAGE 77 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9.3.3. 
+QR Code 
+9.3.3.1. 
+Definition 
+A QR-Code is a two-dimensional symbology, similar to a Data Matrix or Aztec one, capable of packing large 
+amounts of data and with the capability of recovering the original data encoded even when it is partially damaged, 
+through an error correction technique. 
+Data encoded in a QR-Code may include alphabetic characters, numbers, double characters and URLs. The 
+symbology uses a small area of square modules with a unique perimeter pattern, which helps the barcode 
+scanner determine cell locations to decode the symbol and extract the data. 
+Implementation of this symbology is based on the International ISO/IEC Standards 18004:2006 and is also, 
+compliant with the ISO/ IEC 18004:2015 specifications. 
+9.3.3.2. 
+Scope 
+ 
+The QR symbology will be used to encode operational data to be used in the PUD and In-Facility  domains, in 
+the context of the LabelFree scenarios. 
+9.3.3.3. 
+Key parameters 
+ 
+Within DHL the following reference code parameters 14should be used: 
+• 
+Symbology: QR Code 
+• 
+Module size:: 0,51mm/20mil 
+• 
+Expected (Reference) number of alpha-numeric characters: 503 
+• 
+Symbol matrix version15:  17 => 85 x 85 modules + 4 x 4 modules for the quiet zone. 
+• 
+Symbol size: 44 x 44 mm including quiet zone 
+• 
+Error correction level: H 
+• 
+Quiet Zone: 4*4 modules 
+• 
+Code Quality Grade: C according to ISO/IEC 15415 and ISO/IEC 16480 
+• 
+Symbol physical location: the 2D symbol should be placed on the screen in such a way as to maximize 
+the quiet zone and protect specially the finder patterns from being hidden. This leads to a minimum margin 
+to a screen border of 4 modules. 
+• 
+Human readable interpretation: The data contents are not shown verbatim on the label. Instead, excerpts 
+like the public information might be displayed similar to the 1D codes. 
+ 
+ 
+ 
+14 Again, referring to the LabelFree-related business requirements and context 
+15 This specific example targets the requirements defined in the context of the LabelFree project 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+76
+
+=== PAGE 78 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+10. 
+ Specifications of Material  
+ 
+10.1. 
+Specifications of Paper    
+ 
+Paper for DHL Standard Labels must meet the following specifications: 
+ 
+Paper 
+• Color: 
+• Weight : 
+• Thickness: 
+ 
+Premium white 
+min. 80 [g/m²] 
+90 to 1400 [µm] 
+Permanent Adhesive 
+ 
+Adhesive 
+ 
+1.30 to 1.40 (Macbeth) 
+70 C 
+Thermal sensitivity (paper, ribbon)                                           
+* Image density:                                                                           
+* min. activation temperature:      
+Resistance:  
+•  Resistance to: 
+abrasion 
+ 
+ 
+water 
+• 
+Does not degrade when exposed to direct sun  
+• 
+Long life (>2 years) if stored in normal conditions 
+ 
+ 
+10.2. 
+Specifications of Label Thermal Adhesive   
+10.2.1. Description 
+ 
+A paper label with an adhesive backing. 
+It is placed in a thermal printer which 
+uses heat to mark the paper with 
+customer data and barcodes. 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+77
+
+=== PAGE 79 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+10.2.2. Application Example 
+Customers print data on the label and 
+use the adhesive surface to stick these 
+to the container they are using to ship 
+their commodity. 
+     
+ 
+ 
+10.3. 
+ 
+Key Technical Data 
+10.3.1. Specifications 
+Specification 
+Value 
+Units 
+Tolerance 
+Glue strength (rolling ball test) 
+48 (1.8) 
+mm (in) 
+±5mm 
+Thickness of paper 
+10 
+µm (in) 
+±2µm 
+ 
+10.3.2. DHL Standard Specifications List 
+Standard Specification 
+Base unit 
+DHL Express Adhesive Label 
+Hot melt adhesive 
+Raflatac RH9 or other adhesive with similar properties 
+Paper type 
+Thermal 
+Minimum temperature for 
+application 
+0°c 
+Adhesive operational temperature 
+window 
+-40°c to +60°c 
+Recyclable 
+Yes 
+Printer 
+For standard printers up to 200 mm/s 
+ 
+10.3.3. Useful Life 
+The useful life of label must be 2 years in storage at 20°c. It must be able to travel on the DHL Express network 
+for 10 days with no deterioration in its ability to its adhesion properties. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+78
+
+=== PAGE 80 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+11. 
+Change Control  
+This document is controlled by the Network Operations ExCom. Changes or exemptions are not permitted unless 
+submitted and approved as per the Global SOP Express Change and Exemption Request Process. 
+Any proposal for change must be submitted to the Business Change Request System (BCRS). 
+ 
+CHANGE FROM PREVIOUS RELEASE 
+CR ID 
+Change Summary 
+Section 
+Current Page 
+Number 
+1. Addition of additional segment specifications for the so-
+tbd 
+5.2.1.1, 5.2.4.1, 
+5.6.1.1, 8.1.6 
+ 
+called “Highly Compact Label”, for both Consignor’s and 
+Consignee’s Address segments 
+ 
+2. Update with new GDPR conditions applicable to both 
+Consignor’s and Consignee’s Address segments 
+5.6, 5.8 
+ 
+3. More explicit prohibition of Account Numbers (and/ or 
+ 
+5.12 
+ 
+related information protected through the GDPR 
+Regulation) on Transport Labels 
+ 
+4. Introduction of new syntax for the Label Certification 
+Identifiers (permanent and temporary) 
+5.2.3 
+ 
+5. Relaxation of requirements on location of customer-
+ 
+5.15 
+ 
+segment, upon explicit approval through DHL Express’ 
+Label Certification Body (now with two options to better 
+meet customer requirements) 
+ 
+6. Relaxation of specifications for the height of the Routing 
+barcode (Amazon CR 2017) 
+9.2.1 
+ 
+7. Addition of a note allowing the relocation of the 
+ 
+5.13 
+ 
+customer segment after explicit approval from DHL 
+Express 
+8. General Clean-up and update of Titles and Acronyms to 
+ 
+All 
+ 
+the latest standard (e.g. eWaybill, ESS solutions, 
+License Plate replaced by Piece Identifier – PID, where 
+applicable) 
+9. Update of guideline regarding exceptional scenarios, 
+ 
+5.6, 5.8,  
+ 
+where contact details could be allowed to be printed on 
+the Transport Label, in accordance with the GDPR 
+regulation. Updates were accordingly added to the 
+respective illustrating images. 
+10. Update of guidelines relative to single (i.e. always 
+ 
+6.6.2 
+ 
+matching) “Duty / VAT A/C”. No split between both 
+accounts since they always match 
+ 
+11. Removal of reference to ACS Label, which is not object 
+of this guideline, from this section 
+7 
+ 
+ 
+12. Incoterms removed from Waybill Doc, as per CR 
+451721 
+6.6.2 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+79
+
+=== PAGE 81 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13. Reference Loose BBX Transport Label layout, image, 
+updated with individual segments’ identification 
+7.4 
+ 
+ 
+14. Removal of reference to outdated section (11.1)  
+5.12.2 
+ 
+15. Removal of outdated section 5.11.2 “DHL Shipment 
+ 
+Identifier (mandatory)” and corresponding renumbering 
+of the sub-sequent sections 
+5.11.2 
+ 
+ 
+16. Original images replaced with higher-quality ones 
+All sections 
+ 
+ 
+17. Updated images to reflect latest GDPR guidelines 
+8 
+ 
+18. Piece Identifier length (i.e. number of characters 
+ 
+following the Data Identifier) of type JD01 made more 
+clear 
+5.16.3 
+ 
+19. The US Destination Control Statement (US DCS) was 
+ 
+5.12.1.1 
+ 
+removed from the Transport and Waybill Doc images 
+as it is no longer required by the US government.  The 
+US government harmonized the US DCS and only 
+requires it to be listed on the commercial invoice. 
+ 
+20. “Neutral Content Description” section introduced 
+5.13.1.1 
+ 
+21. “Considerations on Highly-Compact Labels” – final 
+8.1.6 
+ 
+ 
+layout and segments’ dimensional matrix updated 
+        22. “Considerations on 2D-enabled Transport Labels” – 
+8.1.7 
+ 
+Phase 2A layout and segments’ dimensional matrix updated 
+        23. Addition of “2D Data Matrix – Customer Data” section, 
+5.12 
+ 
+formally introducing the 2D-enabled Transport Label layout  
+        24. Addition of Bi-Dimensional Barcode Symbologies and 
+9.3 
+ 
+symbol attributes 
+       25. “Reverse Video Format” added to Definitions  
+4.1 
+ 
+       26. Specification of Medical EXPRESS Logo added 
+5.10.4 
+ 
+5.10.4 
+ 
+ 
+      27. Correction of the area reserved for the Medical 
+EXPRESS Logo  
+6.8 
+ 
+Commented [PG1]: Updated 
+ 
+      28. Sample image updated to correspond to and reflect 
+specification for 2 decimal points 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+80
+
+=== PAGE 82 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ERRATA 
+Err 
+ID 
+Reported 
+by 
+Date Reported 
+Current statement 
+says 
+Recommended to 
+change to 
+Date Verified 
+Verifier Name 
+001 
+September.2022 
+General Typos 
+September.2022 
+GNOPS Label 
+Team 
+GNOPS 
+Label 
+Team 
+Corrected in accordance 
+with Global SOP 
+Dictionary and Glossary of 
+Business Terms 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This is an optional section to list changes made to the published document 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+81
+
+=== PAGE 83 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+12. 
+ Appendix 
+ 
+12.1. 
+Acronyms and Symbols 
+ 
+Legend for a consistent set of acronyms and symbols throughout the next sections 
+Acronym 
+Definition / Meaning 
+1 
+ 
+Refers to (for example) Segment 1 of reference document type 
+Char 
+Relative to characters or to the number of characters of a string 
+DG 
+Relative to Dangerous Goods 
+Doc-type 
+As per the Global SOP Standard for Classification of Types of Documents  
+ESS 
+Electronic Shipping Solutions; formerly known as “eCom” 
+GS1 
+Global Standards One – non-profit organization that develops / maintains 
+global standards for business, in this context the well-know GS1-barcodes. 
+HFC 
+Relative to Handling Feature Codes 
+IATA 
+Relative to the International Air Transport Association 
+LP 
+License Plate. Also known as Piece Identifier.  
+The license plate is defined in ISO/IEC 15459-1. It is a unique identifier for 
+transport units. This unique number, regardless of use, shall be specified and 
+assigned by the label issuer and applied to a transport unit and may provide 
+access to traceability data regardless of content and destination. This 
+number shall be valid for the lifetime of the unit it is applied to. 
+Max 
+maximum 
+MH10 
+Accredited Standards Committee MH10 - The ANSI committee for standards 
+for Unit Loads and Transport Packages, including the national standard for 
+bar code labeling 
+Min 
+minimum 
+Opt. 
+Optional 
+PID 
+Piece Identifier 
+SID 
+Shipment Identifier 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+82
+
+=== PAGE 84 ===
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Zip 
+Generic jargon relative to Postcode, as one possible element of a Postal 
+Location Format 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+83

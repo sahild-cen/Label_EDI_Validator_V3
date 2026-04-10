@@ -1,0 +1,56 @@
+Europe-Specific Label Requirements
+UPS EXPRESS™ (Domestic COD) — Lead Package and Child Package
+10 KG
+1 OF 2
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+STREET ADDRESS
+60386  FRANKFURT
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+COMPANY NAME
+STREET ADDRESS
+22525  HAMBURG
+DEU 202 0-00
+UPS EXPRESS
+TRACKING #:
+1Z 1X2 X3X 75 0000 5404
+1
+COD Indicator
+BILLING: P/P
+COD CASH 130,90 EUR
+EDI-COD
+18.5A 01/2020
+Additional Routing Instructions for Electronic COD
+18 KG
+2 OF 2
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+STREET ADDRESS
+60386  FRANKFURT
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+COMPANY NAME
+STREET ADDRESS
+22525  HAMBURG
+DEU 202 0-00
+UPS EXPRESS
+TRACKING #:
+1Z 1X2 X3X 66 0000 5403
+1
+BILLING: P/P
+COD
+EDI-COD
+Additional Routing Instructions for Electronic COD
+18.5A 01/2020
+43
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

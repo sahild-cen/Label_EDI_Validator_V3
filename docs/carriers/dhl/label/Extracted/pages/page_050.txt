@@ -1,0 +1,30 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+6.1. eWaybill – Layout Overview (all segments11) 
+17a 
+ 
+ 
+11 This page offers a structured overview of the Global SOP Standard Electronic Waybill (eWB). Sub-sequent 
+sections explain in detail the specifications of each individually numbered segment. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+49

@@ -1,0 +1,123 @@
+Europe-Specific Label Requirements
+UPS COD Turn-In Copy 
+Required Layout
+• 
+All elements below must be on the UPS COD TURN-IN COPY with the exception of an optional reference 
+number
+• Text must be in English, all uppercase
+• 
+
+The UPS COD TURN-IN COPY contains two independently removable sections*
+I. COD-TAG (Upper Section)
+II. RECEIPT (Lower Section)
+• 
+No adhesive must remain on the reverse side of the two sections after removal
+• 
+Recommended size of the UPS TURN-IN COPY is 4 x 6 inches (10,16 x 15,24 cm)
+THIS DOCUMENT IS NOT AN INVOICE
+I.	 
+COD-TAG (Upper Section)
+A
+COD
+1X2-X3X
+	
+1. 
+UPS Shipper’s Account Number — 
+20 pt. bold
+	
+2. 
+Lead Package Tracking Number — 
+1Z 1X2 X3X 73 0000 4400
+in same format as on the address label, 
+20 pt. bold
+B
+	
+3. 
+From Information 
+FROM
+ABC COMPANY
+PHONE NUMBER
+EXTENDED ADDRESS
+STREET ADDRESS
+41460 NEUSS
+GERMANY
+NAME
+PHONE (Optional)
+ROOM/FLOOR/SUITE (Optional)
+STREET ADDRESS
+POSTAL CODE  CITY
+COUNTRY
+10 pt.
+COD CASH 130,90 EUR
+	
+4. 
+COD, Cashiering Method, Amount, 
+REF: 123456789
+C
+Currency Code 
+Example: 
+COD CASH 130,00 EUR
+COD CHEQUE 100,00 GBP 
+16 pt. bold
+	
+5. 
+Reference Number — optional
+9 pt.
+SHIP TO
+XYZ COMPANY
+PHONE NUMBER
+STREET ADDRESS
+22525 HAMBURG
+GERMANY
+	
+6. 
+SHIP TO Information 
+---------------------------
+D
+COD RECIPIENT'S RECEIPT
+1Z 1X2 X3X 73 0000 4400
+CURRENCY CODE
+AMOUNT
+E
+NAME
+PHONE (Optional)
+ROOM/FLOOR/SUITE (Optional)
+STREET ADDRESS
+POSTAL CODE  CITY
+COUNTRY
+10 pt.
+DATE
+II.	 RECEIPT (Lower Section)
+DELIVERY DRIVER SIGNATURE
+F
+	
+7. 
+Lead Package Tracking Number 
+(Same as 2)
+	
+8. 
+Currency Code and Amount 
+(UPS will complete these 
+fields during delivery)
+	
+9. 
+Date and Signature of Delivery 
+A. Field Name “COD” must be printed in this section in 20 pt. bold font.
+B. Field Name “FROM” must be printed in this section in 10 pt. font.
+C. Field Name “SHIP TO” must be printed in this section in 10 pt. font.
+D. 
+Field Name “COD RECIPIENT’S RECEIPT” must be printed in this section in 14 pt. bold font.
+E. 
+Field Name “CURRENCY CODE” and “AMOUNT” must be printed in this section in 8 pt. font.
+F. 
+Field Name “DATE” and “DELIVERY DRIVER SIGNATURE” must be printed in this section in 8 pt. font.
+Driver 
+(UPS will complete these 
+fields during delivery)
+*
+Print two copies of the COD Turn-In Copy when using paper stock that does not support a perforation above the COD Recipient’s Receipt.
+44
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

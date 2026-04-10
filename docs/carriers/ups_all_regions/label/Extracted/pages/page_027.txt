@@ -1,0 +1,70 @@
+UPS Trade Direct™ Specifications
+ Label Format Requirements
+Sub-Pro Number Barcode Block
+Legal Text Block
+The Legal Text Block contains the International 
+Shipping Notice and is located at the bottom of the 
+label.  
+HUMAN READABLE SHIPMENT ID NUMBER
+The Sub-Pro Number human readable interpretation 
+will appear immediately below the Consolidated 
+Movement Block. The Sub-Pro Number must be 
+formatted as shown in the examples below.
+Please refer to the International Shipping Notice text 
+in the UPS Guide to Labeling.
+• 
+Data Content
+Positions	
+1-10	
+=	 SUB-PRO #:
+Position	
+11	
+=	 Space
+Positions	 12-14	
+=	 Trade Direct Region 
+Code (See Appendix A)
+Positions	 15-16	
+=	 System Code
+Positions	 17-22	
+=	 Trade Direct Shipper #
+Positions	 23-29	
+=	 Sequence Number
+Position	
+30	
+=	 Check Digit
+• 
+Font Size                                  = 10 pt.
+• 
+For Example:  
+SUB-PRO #: 93009123ABC00000012   
+SHIPMENT ID BARCODE
+The Shipment ID barcode will display directly below 
+the human readable Shipment ID.
+Customer Information Block (Optional)
+Optional information may be entered in the 
+Customer Information Block as follows:
+• 
+Data Content
+   Text = CONSOLIDATED MOVEMENT #:
+   Positions 1-35	
+ = CONSOLIDATED MOVEMENT 
+NUMBER
+   Text = DESC:
+    Positions 1-35 	
+= DESCRIPTION OF GOODS
+   Text = 	
+SHIPPER REF:
+   Positions 1-35	
+ = SHIPPER REFERENCE 	
+NUMBER
+   Text = 	
+CONS REF:
+   Positions 1-35	
+ = CONSIGNEE REFERENCE NUMBERS
+• 
+Font Size = 10 pt.
+UPS Guide to Labeling
+26
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

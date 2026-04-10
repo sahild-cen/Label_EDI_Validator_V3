@@ -1,0 +1,165 @@
+UPS Trade Direct™ Specifications
+Label Format Requirements 
+UPS Trade Direct™ - LTL/TL Pallet Label
+• 
+Month abbreviation table:
+JAN	
+APR	
+JUL	
+OCT
+FEB	
+MAY	
+AUG	
+NOV
+UPS Trade Direct™  - LTL/TL pallet labels are produced for 
+movements that are created for LTL and TL modes. All 
+label text must be uppercase.
+MAR	
+JUN	
+SEP	
+DEC
+Package Information Block 
+ADDRESSES
+The Ship From and Ship To address format must follow 
+the specifications outlined in the current 
+UPS Guide to Labeling.
+Consolidated Movement Block
+The Consolidated Movement Block must appear below 
+the Ship To address separated by a horizontal line. This 
+block contains port codes and service level separated by 
+a vertical line.
+Port codes for air movements will be three characters. 
+Port codes for ocean movements 
+will be five characters.
+AIR PORT CODES
+PALLET COUNT
+The pallet count indicates the number of this pallet, 
+N related to the number of total pallets in the shipment X 
+(e.g., N of X). The pallet count appears on the first line in 
+the upper right corner of the label. The data format is as 
+follows:
+• 
+Data Content
+Positions 	
+1-3	
+=	 ORIGIN AIRPORT CODE
+Position 	
+4	
+=	 /
+• 
+Data Content
+Positions 	
+1-3	
+=	 Up to three numeric 
+Positions 	
+5-7	
+=	 DESTINATION AIRPORT 	
+Position	
+4	
+=	 Space
+	 	
+	
+	 CODE
+Positions 	
+5-6	
+=	 OF
+Position 	
+7	
+=	 Space
+• 
+Font Size = 30 pt. bold
+Positions 	 8 -10	
+=	 Up to three numeric 
+OCEAN PORT CODES
+• 
+Font Size                                 = 10 pt. bold
+• 
+For Example:  1 OF 999
+• 
+Data Content
+Positions 	
+1-5	
+=	 ORIGIN PORT CODE
+Position 	
+6	
+=	 /
+Positions 	 7-11	
+=	 DESTINATION PORT CODE
+• 
+Font Size                                  = 30 pt. bold
+CROSS BORDER CODES
+SHIPMENT WEIGHT
+The total actual weight of the shipment will appear 
+(rounded to the next whole pound, or kilogram) directly 
+beneath the pallet count. The format will 
+be as follows: 
+• 
+Data Content
+  Positions	
+1-3	
+= ORIGIN AIRPORT CODE
+• 
+Data Content
+Positions 	
+1-7	
+=	 SHP WT:
+  Position    	
+4	
+= /
+Position	
+8	
+=	 Space
+  Positions	
+5-7	
+= (Leave Blank)
+Positions 	 9-13	
+=	 Up to five numeric 
+• Font Size = 30 pt. bold
+Position	
+14	
+=	 Space 
+• 
+For Example:  
+SDF/         |      STD
+Positions 	 15-17	
+=	 LBS or KG
+• 
+Font Size                                  = 8 pt.
+SERVICE LEVEL
+• 
+For Example:  
+SHP WT: 100 LBS
+SHP WT: 120 KG
+• 
+Data Content
+Positions 	
+1-3 	
+=	 SERVICE LEVEL
+• 
+Font Size                                  = 30 pt. bold
+• 
+For Example:  
+HKG/LAX      |      EXP
+JPT YO/USLAX      |      STD
+SHIPMENT DATE 
+The Shipment Date must be displayed below 
+the Shipment Weight. 
+• 
+Data Content
+Positions 	
+1-5	
+=	 DATE:
+Position 	
+6	
+=	 Space
+Positions 	 7-17	
+=	 DD MMM YYYY
+• 
+Font Size                                  = 8 pt.
+• 
+For Example:  DATE: 28 JUN 2017 
+UPS Guide to Labeling
+25
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks 
+of United Parcel Service of America, Inc. All rights reserved.
+Supplement

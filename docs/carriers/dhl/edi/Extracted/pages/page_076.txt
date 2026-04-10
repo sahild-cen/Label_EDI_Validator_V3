@@ -1,0 +1,62 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 32 (Invoice Level)  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 32 
+999 
+C 
+ RFF 
+Function: A group of segments containing a references related to the Invoice 
+ 
+SG 32 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: A segment indicating the Registration Numbers 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+ 
+Example:  
+RFF+CU:1154345678’ 
+ 
+Note: 
+This segment may be used to record various Invoice Reference numbers. 
+Values are validated against Shipper OR Consignee Country Codes under SG4-NAD-
+3207 and SG43-NAD-3207. 
+ 
+ 
+Note 1153: 
+Use: 
+‘CU’ - Consignor/Shipper’s reference. 
+‘ABT’ – MRN (Master Reference No., goods declaration document identifier for export 
+from Germany) 
+For the full list of Invoice Reference Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 76 of 115

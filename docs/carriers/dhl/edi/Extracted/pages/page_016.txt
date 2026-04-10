@@ -1,0 +1,203 @@
+Message Specification Guidelines                         
+                          
+ 
+IFCSUM D01B Message Branching Diagram 
+             Level 0 – Header Level
+UNT
+UNH
+BGM
+M       1
+M       1
+M          1
+DTM
+MOA
+CNT
+SG 4
+FTX
+SG 25
+SG 9
+R             2
+C                1
+C                1
+R              3
+R             3
+M         9999
+C               1
+TDT
+NAD
+SG 5
+SG 6
+M              1
+Level 1 –  Invoice Level
+M              1
+C              9
+C              9
+RFF
+CTA
+COM
+M              1
+M              1
+C              9
+             Level 1 – Shipment Level
+SG 70
+CNI
+SG 32
+SG 50
+MOA
+DTM
+CNT
+SG 33
+FTX
+SG 31
+TSR
+SG 43
+O       99
+R              3
+R               1
+C             999
+R            999
+C               4
+O             1
+O            9
+R              1
+M         1
+C               1
+R              99
+RFF
+GOR
+TOD
+LOC
+SG 34
+NAD
+EQD
+EQN
+MEA
+SG 44
+LOC
+SG 47
+SG 49
+M              1
+M             1
+M              1
+C             1
+M             1
+R             9
+C             1
+M             1
+C             9
+C             9
+C             1
+M             1
+O             1
+RFF
+DTM
+DOC
+COM
+CTA
+FTX
+TSR
+M              1
+O             1
+M              1
+M              1
+C             9
+C              1
+M              1
+             Level 2 – Piece Level
+SG 55
+SG 52
+SG 53
+SG 54
+SG 65
+GID
+R             1
+R             2
+R             1
+C             9
+C             99
+M             1
+RFF
+MEA
+DIM
+M              9
+M              1
+M              1
+PCI
+GIN
+M              1
+R            9
+DGS
+FTX
+SG 67
+M               1
+C              1
+R               1
+MEA
+Level 1 –  Invoice Level
+M              1
+CNI
+SG 33
+SG 32
+SG 50
+CNT
+SG 31
+MOA
+FTX
+R            999
+R               1
+C             999
+M         1
+M               1
+C         9
+R       99
+R              1
+FTX
+RFF
+GOR
+SG 34
+TOD
+LOC
+R             9
+M              1
+M             1
+R              1
+M              1
+C             1
+DTM
+DOC
+O             1
+M              1
+Level 2 –  Invoice Line Item
+GID
+SG 52
+LOC
+MOA
+FTX
+SG 63
+SG 54
+SG 56
+M             1
+R             1
+R              9
+R             2
+R             1
+R             2
+C             9
+C             9
+MEA
+RFF
+DOC
+QTY
+TCC
+M              1
+M              1
+M              1
+M              1
+R              1
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 16 of 115

@@ -1,0 +1,52 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Should the content-related information require longer line(s), it may be combined with segment 17b (“Contents 
+and Descriptions”). 
+6.13. 
+Customer’s Signature (optional) 
+In the event that this document type is used, as a Proof of Collection (Receipt) for B2C Returns to DHL 
+EXPRESS, when required by the Customer, the Courier’s signature is to be captured here, together with the 
+Date and Time. The signed eWaybill copy is then handed to the Shipper and the other copy is taken back for 
+imaging in the station. 
+ 
+6.14. 
+Piece Identifiers in Shipment (mandatory) 
+ 
+ The exhaustive list of pieces belonging to the shipment shall be identified here.  
+The Piece Identifiers shall be printed here in plain text format. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+56

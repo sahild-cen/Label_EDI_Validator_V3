@@ -1,0 +1,134 @@
+UPS World Ease™ Specifications
+UPS World Ease™  Single Label - Requirements
+UPS World Ease™ Single Label Requirement
+Final Destination and Import Site Blocks — 
+the UPS import site information section, for the child 
+shipments. The complete N of X for the consolidated 
+shipment must print only on the document box.
+• 
+Data Content
+Positions 	
+  1	
+=	 1 numeric
+The UPS World Ease™ has two distinct sections 
+contained on a single 4" x 6" or 4" x 8" (option)
+thermal or laser label.
+Position 	
+2	
+=	 Space
+Positions 	
+3-4	
+=	 OF
+For UPS Access Point shipments only the  4" x 8" 
+label is supported.
+   Position 	
+5	
+=	 Space
+   Positions 	
+6-8	
+=	 Up to three numeric
+• 
+Font Size                                  = 12 pt.
+The first section contains the final destination 
+information for the shipment.   
+• For Example:  1 OF 10
+•	
+SHIP TO:
+ALL OTHER PACKAGES OF A SHIPMENT
+•	
+Font Sizes (variable) this is done to prevent 
+• 
+Data Content
+Positions 	
+1-4	
+=	 PKG#
+over-writing the new World Ease Routing Code 
+Import Site Box
+Position 	
+5	
+=	 Space
+Positions 	
+6-8	
+=	 Up to three numeric
+• Font Size                                 = 12 pt.
+• For Example:  PKG# 3
+       “SHIP TO” text = 10 pt. bold
+       Address Lines = 10 pt.
+       Postal Code Line = 12 pt. bold
+       Country Line = 12 pt. bold 
+THE LABEL INCLUDES A BOX WITH TWO ROWS 
+AND A SEPARATOR LINE:
+TRACKING NUMBER
+The last three digits of the shipment’s document box 
+1Z tracking number.
+• 
+Data Content
+• 
+Tracking Data Content
+   Positions 	
+1-5	
+=	 TRKG#
+  Top: Text UPS WORLD EASE
+  Bottom: UPS Routing Code for the UPS Import Site
+Position 	
+6	
+=	 Space
+• 
+Font Size  = 10 pt.
+Positions 	
+7-9	
+=	 Three numeric
+• 
+Font Size                                  = 12 pt.
+This prints to the right of the SHIP TO address just 
+above the Postal Code Line.
+• Service printed to the right of the Tracking # 
+separated by a vertical line:
+Line 1 = UPS WORLD EASE
+• 
+Font Size  = 10 pt.
+The second section contains the UPS import site 
+information for the Paperless Invoice consolidated 
+shipment containing paper documents.
+• The lead package must be a UPS World Ease™ 
+document box (Doc Box) 
+• All labels must have the same documentation 
+indicator on the bottom right corner of the shipping 
+label 
+PORT OF ENTRY INFORMATION
+This block contains the import site information. 
+All characters must be in uppercase letters. Title 
+positioned to the far left:
+First Block
+• All labels must display the 
+same port of entry in the “Sort To” field
+   Line 1 = SORT 
+   Line 2 = TO:
+Second Block
+   Line 1 = Port Name
+   Line 2 = Country Name Postal Code
+• The Doc Box label must print  “1 of ___"  and on 
+right (count of packages) print the text “TRKG # 
+___”  (the last 3 digits of the document box tracking 
+number) 
+  • 
+Font Size  = 10 pt.
+Third Block
+   Line 1 = UPS ROUTING CODE (in the URC file).
+•   When required, UPS World Ease™  shipments
+   must have a Master Invoice and the associated
+   Consolidated Invoice Detail (CID). (see page 16)
+• Font Size = 16 pt. bold
+Note: The font size may be reduced to accommodate 
+the complete text.
+The import site information can be found in the Port 
+of Entry table. Contact your UPS Account Executive 
+DOCUMENT BOX:
+PACKAGE COUNT 
+The package count indicates the number of the 
+package N, related to the number of packages in the 
+entire shipment X (e.g., N of X). Only N will print on 
+for information on POE tables.
+17
+© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  
+are trademarks of United Parcel Service of America, Inc. All rights reserved.

@@ -1,0 +1,76 @@
+Message Specification Guidelines                         
+                          
+ 
+BGM  
+Segment 
+Occurrence 
+Usage 
+Description 
+BGM 
+1 
+M 
+ Beginning of Message 
+Function: To indicate the type and function of a message and to transmit the identifying number. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C106 
+M 
+ 
+DOCUMENT MESSAGE IDENTIFICATION 
+   1004 
+M 
+AN..35 
+Document identifier 
+1225 
+R 
+AN..3 
+Message function code 
+ 
+Example:  
+BGM+785+9600280001+9’ 
+ 
+Note 1001: 
+Use ‘785’ – Cargo Manifest. 
+ 
+Note 1004: 
+Unique identifier that represents the whole document.Could be the same number as in 
+preceding UNH segment. 
+ 
+Note 1225: 
+Use ‘9’ – Original. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 25 of 115

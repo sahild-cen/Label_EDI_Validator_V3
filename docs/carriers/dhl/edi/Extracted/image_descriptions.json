@@ -1,0 +1,35 @@
+[
+  {
+    "page": 1,
+    "index": 0,
+    "width": 1068,
+    "height": 158,
+    "aspect_ratio": 6.76,
+    "mode": "RGB",
+    "type": "unknown",
+    "description": "Image (1068x158px) on page 1. Content type unclear — may need manual review.",
+    "filename": "page1_img0.jpeg"
+  },
+  {
+    "page": 1,
+    "index": 1,
+    "width": 970,
+    "height": 493,
+    "aspect_ratio": 1.97,
+    "mode": "RGB",
+    "type": "label_diagram",
+    "description": "Label layout diagram (970x493px) on page 1. Likely shows field positions and label structure.",
+    "filename": "page1_img1.jpeg"
+  },
+  {
+    "page": 2,
+    "index": 0,
+    "width": 364,
+    "height": 112,
+    "aspect_ratio": 3.25,
+    "mode": "RGB",
+    "type": "unknown",
+    "description": "Image (364x112px) on page 2. Content type unclear — may need manual review.",
+    "filename": "page2_img0.jpeg"
+  }
+]

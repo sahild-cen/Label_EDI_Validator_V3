@@ -1,0 +1,44 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7.5. Import Point of Entry - Mandatory 
+This segment contains the address of DHL’s Import Clearance Gateway Address with the caption “IMPORT AT:” 
+This address segment is standard, with the same specifications as the other two (Shipper and Receiver). 
+ 
+7.6.  DHL Gateway Facility Identifier  
+This segment contains DHL’s Gateway Facility Identifier, with the caption “Import PoE”, acronym for “Import 
+Point Of Entry”. This element is compliant with DHL’s Reference Data for Facility identification. 
+ 
+7.7. Mother House Waybill Number (MHWB) - Mandatory 
+This segment contains the Master House Waybill Number in human-readable format, with two related data 
+elements, in total: 
+• 
+Total Number of Pieces for the Mother, with corresponding caption “Total Nr. Pieces:” – optional field 
+• 
+Mother HWB in human-readable form, with corresponding caption “MHWB” – mandatory field 
+• 
+(Baby) House Waybill number in human-readable form, with caption “HWB” - mandatory field 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+59

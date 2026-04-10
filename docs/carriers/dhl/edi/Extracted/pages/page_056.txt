@@ -1,0 +1,71 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 49 
+Group 
+Occurrence 
+Usage 
+Description 
+SG49 
+1 
+C 
+ TSR 
+Function: A group of segments to specify a transport service requirement and its associated details (such as applicable c
+agreement) related to the party. 
+ 
+SG 49 - TSR  
+Segment 
+Occurrence 
+Usage 
+Description 
+TSR 
+1 
+M 
+ Transport Service requirements 
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C536 
+X 
+ 
+CONTRACT AND CARRIAGE CONDITION 
+C233 
+X 
+ 
+SERVICE 
+C537 
+R 
+ 
+TRANSPORT PRIORITY 
+   4219 
+M 
+AN..3 
+Transport service priority code 
+   1131 
+C 
+AN..17 
+Code list identification code 
+   3055 
+C 
+AN..3 
+Code list responsible agency code 
+ 
+Example:  
+TSR+++ECX:57:87’ (Express Worldwide EU) 
+TSR+++ESU:57:87’ (Economy Select EU) 
+ 
+Note 4219: 
+Use of this element is to indicate the DHL product. For more information about the 
+product codes, please consult your Sales Representative. 
+ 
+Note 1131: 
+Use ‘57’ – Product code. 
+ 
+Note 3055: 
+Use ‘87’ – Assigned by carrier. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 56 of 115

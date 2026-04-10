@@ -1,0 +1,143 @@
+Label Format Requirements
+Tracking Number Barcode Block
+Tracking Number Barcode Block
+LOCATION
+TRACKING BARCODE QUIET ZONES
+• 
+Minimum quiet zone top and bottom = 0.0625 inch
+• 
+
+Beneath the MaxiCode™ data string and Postal Barcode 
+Blocks
+• 
+Minimum quiet zone left and right = 10 times the 
+x-dimension
+HIGHLIGHT BARS
+TRACKING BARCODE FORMAT
+• 
+
+Highlight bars at least 0.01 inches thick, above and 
+below Tracking Number Barcode Block
+• 
+Left-justified, allowing for left quiet zone
+UPS SERVICE TITLE
+TRACKING BARCODE DIMENSIONS
+• 
+Height (Minimum)               = 0.7 inches
+• 
+
+Printed in uppercase letters using the complete service 
+title
+• 
+Width                                          = Variable
+• See Appendix B for Code 128 dimensions.
+• 
+
+Left-justified and located beneath the top high-light 
+bar
+TRACKING BARCODE SPECIFICATIONS
+• 
+
+Font Size = 12 pt. bold
+• 
+See Appendix B for Code 128 specifications.
+HUMAN-READABLE INTERPRETATION OF BARCODE
+• 
+Data Content
+Positions	
+1-2	
+=	 Data Identifier of 1Z
+• 
+Left-justified beneath the UPS Service Title, in 
+uppercase characters
+Positions	
+3-8	
+=	 UPS Account Number
+Positions	
+9-10	
+=	 Service Indicator
+• 
+Data Content
+Positions	
+1-11	
+=	 TRACKING #:
+Positions	 11-17 	
+=	 Reference Number
+Position 	
+12	
+=	 Space
+Position	
+18	
+=	 Check Digit
+Positions	 13-35	
+=	 Tracking Number 
+• 
+For Example:  1Z1X2X3XA112345671
+	 	
+	
+	 formatted as follows
+• 
+Spaces are not encoded in the barcode.
+	 	
+	
+	 1Z 123 456 78 1234 5678
+• 
+All alpha characters must be uppercase.
+• 
+Font Size                                 = 10 pt.
+• For Example:  TRACKING #: 1Z 1X2 X3X 66 0000 5628
+• 
+Alpha characters may only appear in the 
+1Z Data Identifier, the account number or 
+the service indicator fields.
+SERVICE ICON
+• 
+The service icon must print to the right of the Service 
+Title and Human-Readable Interpretation
+• 
+The reference number is determined by the shipper or 
+shipping system and must be carefully controlled to 
+ensure each package is unique.
+• 
+Right justified with the right edge of the Tracking 
+Number Block
+• 
+The entire 18 digit Tracking Number must remain 
+unique for one year.
+• 
+Consists of three positions; each icon position 
+will remain fixed
+• 
+Data Content
+Position	
+1	
+=	 Class of service: 1, 2 or 3
+Position 	
+2	
+=	 Time of day: 
+	 	
+	
+	 +, A, P, [Space]
+Position 	
+3	
+=	 Day of delivery: 
+	 	
+	
+	 S, [Space]
+• Font Size                                 = 30 pt. 
+• 
+Exceptions:
+— A black 0.35 inch square for UPS GROUND (U.S.) 
+	   and UPS® STANDARD (INTERNATIONAL)
+— An open circle for Economy (Canada)
+— Blank for UPS Today™  (Poland)
+­
+HORIZONTAL SEPARATING LINE
+• 
+Used to separate UPS Service Title, Barcode Title and 
+Service Icon from the UPS Tracking Number Barcode
+11
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

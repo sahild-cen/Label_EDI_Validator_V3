@@ -1,0 +1,101 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The Delivery Date/Time information has a header, consisting of the words “Day” and “Time”, which may be 
+written in a local language. However, for international shipments, the English words “Day” and “Time” must 
+appear as well. 
+ 
+The separator “-” between Date and Time field is required whenever at least one of both features is chosen. 
+ 
+The specified Day of the Month is to be represented in 2 digit numeric format with leading zeroes.  
+This field may also contain non-numeric values, representing delivery instructions that cannot be combined with 
+a certain delivery date. 
+ 
+Examples: 
+Label Code 
+Delivery Date codes 
+Product 
+(In Routing 
+Barcode) 
+No fixed date delivery 
+All 
+00 
+(none) 
+Fixed day delivery (day of the month) 
+… 
+01 … 31 
+01 … 31 
+Delivery on appointment 
+… 
+51 
+A 
+Saturday only delivery 
+… 
+50 
+S 
+Hold at depot (no delivery) 
+… 
+52 
+H 
+…  
+... 
+... 
+... 
+The translation from commercial products and services to handling codes is based on DHL’s 
+reference data (e.g. tools provided by DHL Express to our customers offer this capability). 
+ 
+ 
+5.10.3. Delivery Time (conditional) 
+If a time window is chosen, the code corresponding to the time window is shown (to be always coded mandatorily 
+in the routing barcode – refer to section 3.12.1).  
+ 
+Examples: 
+Time Feature Text 
+(In Routing Barcode) 
+Handling Information 
+No fixed delivery time 
+0 
+(none) 
+Pre 09:00 
+1 
+“X09” 
+Pre 10:30 
+3 
+“X10” 
+Pre 12:00 
+2 
+“X12” 
+…  
+…  
+…  
+ 
+The translation from commercial products and services to handling codes is based on DHL’s 
+reference data (e.g. tools provided by DHL Express to our customers offer this capability). 
+5.10.4. Handling-relevant Service Logos 
+5.10.4.1. 
+Medical EXPRESS Logo 
+ 
+In addition to Handling Feature Codes, there are cases when extra information is judged valuable in ensuring 
+the optimal process management quality. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+25

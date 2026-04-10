@@ -1,0 +1,92 @@
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Invoice Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to indicate all data on Invoice level. 
+CNI 
+ 
+ 
+ 
+CNI 
+Invoice information 
+CNT 
+ 
+ 
+CNT 
+Control Totals within an Invoice (i.e. Total Gross Weight, Total Net 
+Weight) 
+MOA 
+ 
+ 
+MOA, Monetary amounts 
+• 
+A segment to indicate a monetary value for an Invoice, e.g. 
+declared customs value, cash on delivery or insurance. 
+FTX 
+ 
+ 
+Free text 
+• 
+A segment to specify free form or process available 
+supplementary information (i.e. Reason for Export) 
+SG31 
+ 
+ 
+A group of segments to specify terms of delivery 
+Segment 
+ 
+TOD 
+ 
+TOD, Terms of delivery 
+Incoterm - Invoice level 
+Group 25 
+ 
+LOC 
+ 
+Place of Incoterms - Invoice level 
+SG32 
+ 
+ 
+A group of segments containing a references related to the Invoice 
+RFF 
+ 
+RFF - References 
+A segment indicating the Registration Numbers (i.e. Commercial Invoice 
+Reference Number, MRN) 
+ 
+ 
+A group of segments to identify customs and other governmental 
+procedures and required documents. 
+SG33 
+ 
+GOR 
+ 
+A segment indicating the Document Function 
+FTX 
+ 
+Free text 
+A segment to specify free form or process available supplementary 
+information, (i.e. Trading Transaction Type) 
+SG33 
+SG34 
+ 
+A group of segments to indicate documents. 
+ 
+DOC 
+Documents 
+• 
+A segment to indicate accompanying documents for customs 
+clearance (i.e Invoice Number, Customs Document) 
+ 
+DTM 
+A segment to indicate date and time related to invoice. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 22 of 115

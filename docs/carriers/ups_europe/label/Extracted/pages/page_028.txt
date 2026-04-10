@@ -1,0 +1,36 @@
+Label Format Requirements
+Label Format Requirements
+UPS Import Control™ Service Label
+CONTACT NAME
+1 OF 1
+3 KG
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+POSTAL CODE LINE
+GERMANY
+CONTACT NAME
+SHIP
+TO:
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+12099 BERLIN
+GERMANY
+DEU 091 0-00
+UPS EXPRESS 12:00
+ 
+  
+TRACKING #: 1Z 1X2 X3X QE 8712 5626
+1 
+BILLING: P/P
+DESC: TOOLS
+18.5A 01/2020
+ADULT SIGNATURE REQUIRED
+26
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

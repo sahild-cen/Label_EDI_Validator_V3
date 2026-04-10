@@ -1,0 +1,211 @@
+Appendix E
+ISO Country Codes (ISO 3166)
+ISO Country Codes (ISO 3166)
+The following chart includes numeric and alpha country codes as extracted from ISO 3166. They are reproduced 
+with the permission of the International Standards Organization, ISO. The maintenance agency is the DIN Deutsches 
+Institut für Normung, Burggrafenstrasse 6, D-10772 Berlin, Germany.
+Country Name (short name)	
+Official Name	
+Numeric Country Code	
+Alpha Country Code
+Afghanistan	
+The Transitional Islamic State of Afghanistan	
+004	
+AF
+Albania	
+Republic of Albania	
+008	
+AL
+Åland Islands	
+	
+248	
+AX
+Algeria	
+People’s Democratic Republic of Algeria	
+012	
+DZ
+American Samoa	
+	
+016	
+AS
+Andorra	
+Principality of Andorra	
+020	
+AD
+Angola	
+Republic of Angola	
+024	
+AO
+Anguilla	
+	
+660	
+AI
+Antarctica	
+	
+010	
+AQ
+Antigua and Barbuda	
+	
+028	
+AG
+Argentina	
+Argentine Republic	
+032	
+AR
+Armenia	
+Republic of Armenia	
+051	
+AM
+Aruba	
+	
+533	
+AW
+Australia	
+	
+036	
+AU
+Austria	
+Republic of Austria	
+040	
+AT
+Azerbaijan	
+Republic of Azerbaijan	
+031	
+AZ
+Bahamas	
+Commonwealth of the Bahamas	
+044	
+BS
+Bahrain	
+Kingdom of Bahrain	
+048	
+BH
+Bangladesh	
+People’s Republic of Bangladesh	
+050	
+BD
+Barbados	
+	
+052	
+BB
+Belarus	
+Republic of Belarus	
+112	
+BY
+Belgium	
+Kingdom of Belgium	
+056	
+BE
+Belize	
+	
+084	
+BZ
+Benin	
+Republic of Benin	
+204	
+BJ
+Bermuda	
+	
+060	
+BM
+Bhutan	
+Kingdom of Bhutan	
+064	
+BT
+Bolivia	
+Republic of Bolivia	
+068	
+BO
+Bosnia and Herzegovina	
+Republic of Bosnia and Herzegovina	
+070	
+BA
+Bonaire, St. Eustatius, Saba	
+Netherland Antilles	
+535	
+BQ
+Botswana	
+Republic of Botswana	
+072	
+BW
+Bouvet Island	
+	
+074	
+BV
+Brazil	
+Federative Republic of Brazil	
+076	
+BR
+British Indian Ocean Territory	
+	
+086	
+IO
+Brunei Darussalam	
+	
+096	
+BN
+Bulgaria	
+Republic of Bulgaria	
+100	
+BG
+Burkina Faso	
+	
+854	
+BF
+Burundi	
+Republic of Burundi	
+108	
+BI
+Cambodia	
+Kingdom of Cambodia	
+116	
+KH
+Cameroon	
+Republic of Cameroon	
+120	
+CM
+Canada	
+	
+124	
+CA
+Cape Verde	
+Republic of Cape Verde	
+132	
+CV
+Cayman Islands	
+	
+136	
+KY
+Central African Republic	
+	
+140	
+CF
+Chad	
+Republic of Chad	
+148	
+TD
+Chile	
+Republic of Chile	
+152	
+CL
+China Mainland	
+People’s Republic of China	
+156	
+CN
+Christmas Island	
+	
+162	
+CX
+Cocos (Keeling) Islands	
+	
+166	
+CC
+Colombia	
+Republic of Colombia	
+170	
+CO
+63
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

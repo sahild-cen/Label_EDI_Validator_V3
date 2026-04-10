@@ -1,0 +1,80 @@
+Appendix A
+MaxiCode™ Specifications
+Data Content
+The format shown below describes how to incorporate address elements into a MaxiCode™.
+	 n	 indicates a Numeric field
+	an	 indicates an Alpha/Numeric field
+	 a	 indicates an Alphabetic field
+	…	 indicates variable-length field
+Field Name	
+Description	
+Type
+SHIP TO Postal Code	
+(an 1…9)	
+Required1
+SHIP TO ISO Country Code 	
+(n 3) 	
+Required2
+Class Of Service 	
+(n 3)	
+Required
+Tracking Number	
+(an 10)	
+Required
+UPS SCAC 	
+UPSN	
+Required
+    (Standard Carrier Alpha Code) 
+UPS Account Number	
+(an 6)	
+Required
+Julian Day of Pickup	
+(n 3)	
+Required
+Shipment ID Number 	
+(an 1…30)	
+Optional
+Package In Shipment N/X 	
+(n 1…3/n 1…3)	
+Required3
+    (package N of X total packages)
+Package Weight	
+(n 1…3)	
+Required4
+Address Validation (Y or N)	
+(a 1)	
+Required5
+SHIP TO Address	
+(an 1...35) or (an 1...10<Fs>an1...8)	
+Required6
+SHIP TO City	
+(an 1…20) 	
+Required
+SHIP TO State/Province	
+(a 2)	
+Required7
+1a
+For postal codes that are all numeric – use Mode 2, up to nine characters in length. If greater than 9 characters, truncate from
+    the right. Encode the actual postal code without the spaces or special characters - such as the dash (-).
+1bFor postal codes containing alphanumeric characters – use Mode 3, up to six characters in length. If greater than 6
+      characters, truncate from the right. Encode the actual postal code without the spaces or special characters - such as the dash (-).
+***Note: Some label creation software providers and printer manufacturers have interpreted Mode 2 for U.S. destinations and Mode 3 for non-U.S. 
+                    destinations   exclusively.
+2The International Standards Organization Country codes are located in Appendix E.
+3The / character must be encoded to separate the N/X, package in shipment.
+4Round up to the next whole pound or kilogram. The minimum weight must be one pound or one kilogram unless the package type is either Letter 
+   or Envelope. Leave this field blank for Letters and Envelopes unless the weight is equal to or above the published threshold. Leave this field blank if 
+   the weight exceeds the maximum number of characters allowed in the field (for UPS Worldwide Express Freight™ Service)
+5This field is set to Y when the delivery address is compared to a USPS CASS-certified database.
+6aUse the (an 1...35) format to provide the full street address e.g. 123 MAIN ST.
+6bUse the (an 1...10<Fs>an1...8) format to provide a secondary address such as a suite or apartment number.  
+      When the (an 1...10<Fs>an1...8) format is used the setting for Address Validation field must be "Y", providing the primary address
+      number, the non-printable character Fs, and the secondary address number
+7 Some non-U.S. Destinations will not have a state or province.
+NOTE: Punctuation is not allowed in the MaxiCode™ data string. UPS Worldwide Express Frieght™ uses pallets instead of packages so these two terms 
+              are used interchangeably.
+50
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

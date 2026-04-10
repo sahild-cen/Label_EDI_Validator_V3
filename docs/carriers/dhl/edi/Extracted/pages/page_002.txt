@@ -1,0 +1,22 @@
+Message Specification Guidelines                         
+                          
+ 
+Confidentiality  
+The specifications, definitions and examples in this manual are to be used by the recipient for the sole 
+purpose of programming to meet the requirements of DHL, and should not be altered or modified by the 
+recipient. 
+ 
+This document contains confidential, proprietary information. No part of this document may be used, 
+modified, reproduced, disseminated, or disclosed without the express written consent of DHL. DHL 
+employees, third-party vendors, and others authorized to use this document shall only disclose this 
+information internally to their coworkers, employees, or agents on a need-to-know basis and in keeping 
+with DHL confidentiality requirements. The information in this document is subject to change without 
+notice.  
+ 
+DHL SHALL NOT BE LIABLE FOR TECHNICAL OR EDITORIAL ERRORS OR OMISSIONS 
+CONTAINED HEREIN NOR FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM 
+THE USE OF THIS INFORMATION. 
+ 
+© 2005 - 2012 DHL Express, Inc. All rights reserved. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 2 of 115

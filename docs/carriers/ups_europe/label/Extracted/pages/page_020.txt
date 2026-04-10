@@ -1,0 +1,40 @@
+Label Format Requirements
+UPS Returns™ Service
+UPS Returns™ Service (cont.)
+The text RETURN SERVICE-PAYMENT GUARANTEED 
+must appear in the Additional Routing Instructions 
+Block immediately below the Description line.
+• 
+Routing Instruction = RETURN SERVICE PAYMENT 
+                           GUARANTEED
+• Font Size                      = 10 pt.
+DOCUMENTATION INDICATORS FOR UPS RETURNS
+Documentation indicators combined with the RS 
+indicator must be used for UPS Returns as noted. 
+These indicators must print right-justified in the 
+Additional Routing Instructions Block immediately 
+below the highlight bar of the Tracking Number 
+Barcode Block. The font size is 16 pt. bold, unless 
+otherwise indicated.
+Documents Only Shipment 
+• DOC-RS
+Shipping System Generates Invoice for Dutiable 
+Shipment
+• INV-RS
+Shipping System Does Not Generate Invoice 
+for Dutiable Shipment and Invoice is Required
+• KEY-RS
+The following two indicators are only for goods 
+shipped within the EU or from the EU to the rest 
+of the world. The font size is 12 pt. bold.
+Shipping System Generates Invoice for EU Goods 
+Not in Free Circulation 
+• INV/T1/RS
+Shipping System Does Not Generate Invoice 
+for EU Goods Not in Free Circulation
+• KEY/T1/RS
+18
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

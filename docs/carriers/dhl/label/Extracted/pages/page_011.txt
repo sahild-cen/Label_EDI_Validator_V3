@@ -1,0 +1,68 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+4.2. Core Business Principles 
+DHL Labels (e.g. Transport Labels and eWaybills) are key Network documents as they enable and support 
+efficient, physical handling of the shipment through to its delivery destination.  
+These Transport Label Specifications represent a Label Layout Specifications Document. They do NOT specify 
+or define the corresponding data elements (defined in DHL EXPRESS data Model) but solely, the requirements 
+that must be met by those (or systems) creating DHL-compliant labels.   
+4.3. Label Certification1 
+A DHL Label Certification is a pre-condition for a Transport Label to be released for production and use within 
+the DHL EXPRESS Network. Five core elements are essential to that purpose: 
+• Physical Label Layout (template) 
+o Customer labels must meet the Layout Requirements in order to optimize data readability and 
+processing 
+o Label Layouts are specified in this document and also cater for customer-specific requirements, 
+through continuous updates based on customer feedback 
+ 
+• Data / Information  
+o This element is vital because it covers the correct translation of the customer-driven (commercial) 
+service order into specific DHL Handling Information paired with the latest global reference data 
+o Due to its complexity and criticality, DHL strongly recommends this be NOT developed or managed 
+by customers -> therefore it is not detailed in these specifications 
+o Not all transport order data supplied by the customer must appear on the label. While a few data 
+elements (e.g. product) must always be coded, only product features that may be relevant for 
+sorting and delivery processes are shown on the label.  
+o The data and information on the Transport Label does not replace the need for the transport 
+order data. It enables however the piece to be physically moved through the network without the 
+need of the corresponding data.  
+o DHL offers, its customers, effective lookup solutions (e.g. GLSlabeldata) for automatically obtaining 
+the correct set of label data corresponding to the ordered service 
+• Rendering Solution 
+o DHL offers, its customers, effective rendering solutions (e.g. GLS Docrender) 
+o DHL solutions are strongly recommended because they use the latest business logic, templates 
+and data sources, which can’t be guaranteed by other solutions (e.g. customer-owned) -> as a 
+guiding principle, GLS is mandatory and ONLY GLS-rendered labels are acceptable  
+o Business owners of Label Rendering / Printing Applications must ensure compliance to the valid 
+Global SOP Standards is achieved 
+ 
+• Printing Solution 
+o The minimal requirements regarding printing quality are specified in this document => they are to 
+be met by customers prior to any usage in DHL’s network 
+o DHL’s Label Certification Competence Center offers specialized support to customers in all 
+development steps towards a compliant label  
+ 
+1 For details on the Certification Process and/ or related Criteria, refer to the specific Global SOP Label 
+Certification Guidelines 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+10

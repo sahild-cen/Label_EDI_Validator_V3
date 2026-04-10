@@ -1,0 +1,88 @@
+UPS Manifest Summary
+UPS Manifest Summary (cont.)
+BARCODE DATA CONTENT
+A. 
+Application Identifier — A two-digit numeric field 
+that specifically identifies the barcode as a PSB. The 
+Application Identifier used will vary based 
+on the status of the Package Level Detail (PLD) 
+upload. A 91 will be used to represent successful 
+upload of PLD. A 90 will be used to indicate the 
+PLD is pending and has not been uploaded to UPS 
+(current day’s PLD excluded).
+FOR UPS USE ONLY SECTION
+The For UPS Use Only section contains information 
+about Manifest, Additional Handling and 
+Dangerous Goods. Manifest shipments/packages 
+are those with a service level of UPS Domestic, 
+except for UPS Domestic Express Plus services. 
+Worldwide and Domestic Express Plus services are 
+considered to be Waybill. This section is framed and 
+must contain the following information.
+B. 
+Account Number — Six-character UPS Account 
+Number.
+• Line 1 = 
+The text “For UPS Use Only” along with the 
+total Manifest shipments and packages in 
+12 pt. bold. 
+Lines 2-5 must be indented from Line 1.
+• Line 2 = 
+The text “Additional Handling Waybill” 
+along with the total Additional Handling 
+Waybill shipments and packages in 10 pt. 
+C. 
+PLD Unique Identifier — Nine digits consisting 
+of the seven-digit pickup book number and the 
+two-digit page number. This data element is fixed 
+length. If the pickup book number has a leading 
+zero, the zero must be included to make the 
+seven-digit book number. There is no check digit 
+displayed with this identifier.
+• Line 3 = 
+The text “Additional Handling Manifest” 
+along with the total Additional Handling 
+Manifest shipments and packages in 10 pt.
+D. 
+Package Count — The total number of Manifest 
+packages as defined in the For UPS Only Section 
+communicated to UPS via PLD.
+• Line 4 = 
+The text “Additional Handling Total” 
+along with the total Additional Handling 
+shipments and packages in 10 pt.
+• Line 5 = 
+The text “Dangerous Goods Total” 
+along with the total Dangerous Goods 
+shipments and packages in 10 pt.
+Pickup Summary Barcode (PSB) Section
+E. 
+Check Digit — The check digit represents the result 
+of the barcode check digit algorithm applied to 
+data elements B-D. For instructions on calculating 
+the MOD 10 check digit, please see Appendix C. 
+For the PSB, dropping the Application Identifier 
+is considered to be Step 1. The Account Number, 
+PLD Unique Identifier and Package Count are used 
+per Appendix C for Steps 2-8.
+BARCODE HUMAN READABLE TEXT
+The human readable text must be centered below 
+the barcode in uppercase spaced as shown below:
+91 1X2 X3X 1234 56789 12345 1
+• Font Size = 12 pt.
+BARCODE SPECIFICATIONS
+• Symbology	
+= Code 128
+• Barcode Height	
+= One inch
+• X-Dimension	
+= 15-21 mil
+• 
+Quiet Zones
+— Top and bottom = 0.063 inches
+— Left and right= 0.25 inches
+43
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

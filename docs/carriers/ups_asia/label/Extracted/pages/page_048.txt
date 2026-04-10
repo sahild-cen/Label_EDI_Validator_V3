@@ -1,0 +1,28 @@
+UPS Manifest Summary
+ 
+UPS Manifest Summary (cont.)
+RECEIVED FOR UPS SECTION
+This section is a framed area which contains titles and spaces for the driver/agent to enter information. 
+This section is located to the right of the PSB and is right-justified. All text is 10 pt.
+Line 1 = The text “Received for UPS by: 	
+___________________ ”
+Line 2 = The text “Collection Time:	
+___________________ ”
+Line 3 = The text “Collection Date:	
+___________________ ”
+Line 4 = The text “Number of Packages:	
+___________________“
+For Example: 
+Received for UPS by:	 ____________________
+Collection Time:	 	
+____________________
+Collection Date:	 	
+____________________
+Number of Packages:	 ____________________
+UPS Worldwide Express Freight™ Service 
+A separate manifest must be printed for UPS Worldwide Express Freight shipments. 
+44
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

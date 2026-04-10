@@ -1,0 +1,154 @@
+Appendix F
+Postal Code Line Format Matrix
+	
+Destination 	
+Origin 	
+Address 	
+Postal Code
+Country Name	
+Country	
+Country	
+Format	
+ Length	
+Postal Code 
+Tonga 	
+•	
+	
+1 	
+-	
+Trinidad and Tobago 	
+•	
+• 	
+1 	
+-	
+Tunisia 	
+• 	
+ 	
+1 	
+4	
+1002
+Turkey 	
+•	
+•	
+1 	
+5 	
+01960 
+Turkmenistan 	
+	
+	
+1 	
+6 	
+744000 
+Turks & Caicos Islands 	
+•	
+•	
+1 	
+7	
+TKCA 1ZZ
+Tuvalu 	
+•	
+	
+1 	
+-	
+Uganda 	
+• 	
+•	
+1 	
+-	
+Ukraine 	
+• 	
+•	
+1 	
+5 	
+15432
+United Arab Emirates 	
+•	
+• 	
+1 	
+-	
+United States 	
+• 	
+•	
+2 	
+5 or 10 	
+27833 or 30062-3267 
+Uruguay 	
+• 	
+• 	
+1 	
+5 	
+11600 
+Uzbekistan 	
+• 	
+• 	
+1 	
+6 	
+702100
+Vanuatu 	
+• 	
+	
+1 	
+-	
+Vatican City (Italy) 	
+• 	
+•	
+1 	
+5 	
+00120
+Venezuela 	
+•	
+•	
+2	
+4	
+1010
+Vietnam 	
+• 	
+• 	
+2	
+6	
+123456
+Virgin Islands, British 	
+• 	
+• 	
+1 	
+6	
+VG1110
+Virgin Islands, U.S. 	
+• 	
+• 	
+2 	
+5 or 10 	
+00802
+Wallis and Futuna 	
+• 	
+	
+1 	
+5	
+98600
+Western Sahara
+Yemen 	
+• 	
+•	
+1 	
+-	
+Zambia 	
+• 	
+• 	
+1 	
+5	
+50100
+Zimbabwe 	
+• 	
+•	
+1 	
+-	
+	
+Legend: 
+Address Format 1 = Postal Code, City, State/Province/County 
+Address Format 2 = City, State/Province/County, Postal Code
+Notes: The country of Kosovo (Republic od Kosovo) will use address format (1) with a postal code lenghth of (5).
+99
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

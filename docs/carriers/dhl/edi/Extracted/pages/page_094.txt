@@ -1,0 +1,78 @@
+Message Specification Guidelines                         
+                          
+ 
+ECONOMY 
+SELECT 
+ESI 
+H 
+Systemized door-to-door export or import delivery 
+of single or multi-piece shipments and pallets 
+with transit times quoted in a certain number of 
+days. 
+BREAK BULK 
+ECONOMY 
+BBE 
+I 
+The same approach as for the Time Definite 
+solution, only with the individual shipments 
+delivered to Day Definite transit times. To be 
+developed and deployed during 2009 using the 
+DHL ECONOMY SELECT platform. 
+EUROPACK 
+EPP 
+V 
+Day Definite International 
+Systemized door-to-door export or domestic 
+delivery of single piece shipments weighing up 
+to 31.5kg for customers in certain countries 
+sending within Europe, with transit times quoted 
+in a certain number of days. 
+ECONOMY 
+SELECT 
+ESU 
+W 
+Systemized door-to-door export or import delivery 
+of single or multi-piece document shipments 
+and pallets with transit times quoted in a certain 
+number of days. 
+EUROPACK 
+EPA 
+9 
+and 
+Domestic 
+Day Definite 
+Systemized door-to-door export or domestic 
+delivery of single piece shipments weighing up 
+to 31.5kg for customers in certain countries 
+sending within Europe, with transit times quoted 
+in a certain number of days. 
+International 
+DES 
+G 
+DOMESTIC 
+ECONOMY 
+SELECT 
+Domestic 
+Systemized door-to-door domestic delivery of 
+single or multi-piece shipments and pallets 
+with transit times quoted in a certain number of 
+days. 
+Day Definite 
+JETLINE 
+NFO 
+4 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door 
+dedicated delivery by way of the next 
+commercial or network flight out, within a 
+target of 24 hours. 
+and Domestic) 
+SPRINTLINE 
+SPL 
+5 
+Same Day (International 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door delivery 
+by way of a dedicated ground vehicle, within a 
+target of 24 hours. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 94 of 115

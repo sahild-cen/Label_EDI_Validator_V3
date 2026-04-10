@@ -1,0 +1,38 @@
+Message Specification Guidelines                         
+                          
+ 
+UNT Segment – Message Trailer 
+Segment 
+Occurrence 
+Usage 
+Description 
+UNT 
+1 
+M 
+ Message trailer 
+Function: To end and check the completeness of a message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+0074 
+M 
+N..6 
+Number of segments in a message 
+0062 
+M 
+AN..14 
+Message reference number 
+ 
+Example:  
+UNT+22+123’ 
+ 
+Note 0074: 
+Number of segments in the message (UNH to UNT). 
+ 
+Note 0062: 
+The value shall be identical to the value in element 0062 in the corresponding UNH 
+segment.  
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 90 of 115

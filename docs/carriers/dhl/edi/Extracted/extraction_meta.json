@@ -1,0 +1,19 @@
+{
+  "carrier_code": "dhl",
+  "source_pdf": "carrier_edi_spec_4b8f8c7c-0d8a-4ee6-8c9f-213554b446e5.pdf",
+  "extracted_at": "2026-04-09T11:31:17.904420+00:00",
+  "total_pages": 115,
+  "metadata": {
+    "title": "MSG Manifesting IFCSUM D01Bv3_v1.1",
+    "author": "DHL User",
+    "subject": "",
+    "creator": "Microsoft® Word for Microsoft 365",
+    "producer": "Microsoft® Word for Microsoft 365",
+    "creation_date": "D:20241030151427+11'00'",
+    "mod_date": "D:20241030151427+11'00'",
+    "page_count": 115
+  },
+  "sections_count": 31,
+  "tables_count": 184,
+  "images_count": 3
+}

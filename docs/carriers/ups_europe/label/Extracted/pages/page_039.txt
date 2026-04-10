@@ -1,0 +1,143 @@
+Europe-Specific Label Requirements
+Service Level Indicators 
+ 
+Service Indicators, Icons and MaxiCode™ Class of Service 
+for Customers Located in the Europe Region
+Service Title	
+Service Indicator	
+Service Icon	
+Class of Service
+UPS EXPRESS PLUS™	
+54	
+1+	
+054
+	 Signature Required	
+G1	
+1+	
+481
+	 Adult Signature Required	
+G5	
+1+	
+485
+	 Saturday Delivery	
+34         	
+  1+S	
+034
+	 Saturday Delivery, Signature Required	
+G4	
+  1+S	
+484
+	 Saturday Delivery, Adult Signature Required	
+G8	
+  1+S	
+488
+UPS EXPRESS™ (NA1)	
+AT	
+1	
+346
+	 Signature Required	
+GG	
+1	
+495
+	 Adult Signature Required	
+G9	
+1	
+489
+	 Saturday Delivery	
+AV	
+1 S	
+347
+	 Saturday Delivery, Signature Required	
+GH	
+1 S	
+496
+	 Saturday Delivery, Adult Signature Required	
+GA	
+1 S	
+490
+UPS EXPRESS™	
+66	
+1	
+066
+	 Signature Required	
+D3	
+1	
+387
+	 Adult Signature Required	
+D4	
+1	
+388
+	 Saturday Delivery	
+69	
+1 S	
+069
+	 Saturday Delivery, Signature Required	
+D6	
+1 S	
+390
+	 Saturday Delivery, Adult Signature Required	
+D7	
+1 S	
+391
+UPS SAVER™	
+04	
+1P	
+004
+	 Signature Required	
+D9	
+1P	
+393
+	 Adult Signature Required	
+DA	
+1P	
+394
+UPS EXPEDITED	
+67	
+2	
+067
+	 Signature Required	
+DG	
+2	
+399
+	 Adult Signature Required	
+DH	
+2	
+400
+UPS® STANDARD	
+68	
+Black Square	
+068
+	 Signature Required	
+DK	
+Black Square	
+402
+	 Adult Signature Required	
+DL	
+Black Square	
+403
+	 Saturday Delivery	
+FX	
+S	
+477
+	 Saturday Delivery, Signature Required	
+FY	
+S	
+478
+	 Saturday Delivery, Adult Signature Required	
+FZ	
+S	
+479	
+UPS EXPRESS™ 12:00                                                                                                           QH                                  1                               752
+Signature Required	
+QD	
+ 1	
+748
+Adult Signature Required	
+QE	
+1	
+749 
+37
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

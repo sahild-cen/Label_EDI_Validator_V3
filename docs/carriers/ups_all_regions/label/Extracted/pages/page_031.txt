@@ -1,0 +1,124 @@
+UPS Trade Direct™ Specifications
+ Label Format Requirements
+Position	
+30	
+=	 Check Digit
+UPS Trade Direct™ - Carton Label
+• 
+Font Size                                  = 10 pt.
+• 
+For Example:  
+SUB-PRO #: 93009123ABC00000012   
+CONSOLIDATED MOVEMENT SHIPMENT ID NUMBER
+The carton label is optional. It may be applied to 
+each carton to help identify the movement and any 
+special restrictions..  This label contains only human 
+readable information.  No symbology will appear on 
+this label.
+• 
+Data Content
+Positions 	 1-16 	
+= 	CM SHIPMENT ID#:
+Package Information Block 
+Position 	
+17 	
+= 	Space
+Positions 	 18-26 	
+= 	9 numeric 
+Position 	
+27 	
+= 	Check Digit
+• 
+Font Size                                  = 10 pt.
+ADDRESSES
+The Ship From and Ship To address formats must 
+follow the specifications outlined in the current UPS 
+Guide to Labeling. 
+• 
+For Example:  84000028T
+HAZARDOUS MATERIAL INDICATOR (when 
+applicable)
+LTL CARTON LABEL TITLE
+The title will appear in the top left corner 
+of the label.
+• 
+Data Content
+Positions 	   1-18	
+=	 HAZARDOUS MATERIAL
+• 
+Data Content
+Positions 1-16	
+                         =  LTL CARTON LABEL
+• 
+Font Size                                  = 10 pt.
+• Font Size                                    = 12 pt. bold
+REFERENCE NUMBERS
+The Reference #1 and #2 fields are optional 
+and may be up to 35 characters
+• 
+Data Content
+Positions 	
+1-7	
+=	 REF #1:
+Position 	
+8	
+=	 Space 
+CARTON COUNT
+The carton count indicates the number of this 
+carton N, related to the total number of cartons 
+in the entire LTL/TL shipment X (e.g., N of X). The 
+carton count appears on the first line in the upper 
+right corner of the label. 
+Positions 	 9-43	
+=	 Up to 35 alphanumeric
+• Font Size:                                = 10 pt.
+• 
+Data Content
+Positions 	
+1-5	
+=	 Up to five numeric 
+• 
+For Example:  REF #1: 93009123ABC00000012
+Position	
+6	
+=	 Space
+Positions 	
+7-8	
+=	 OF
+Position 	
+9	
+=	 Space
+ 
+Positions 	 10-14	
+=	 Up to five numeric
+• Font Size                                 = 12 pt. bold
+• For Example:  1 OF 99999
+Additional Routing Instructions Block
+The Additional Routing Instructions Block 
+contains billing, reference and hazardous material 
+information.
+BILLING OPTION
+The billing option must follow the specifications 
+outlined in the current UPS Guide to Labeling.
+Sub Pro Number
+• 
+Data Content
+Positions	
+1-10	
+=	 SUB-PRO #:
+Position	
+11	
+=	 Space
+Positions	 12-14	
+=	 Region Code
+Positions	 15-16	
+=	 System Code
+Positions	 17-22	
+=	 Trade Direct Shipper #
+Positions	 23-29	
+=	 Sequence Number
+UPS Guide to Labeling
+30
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

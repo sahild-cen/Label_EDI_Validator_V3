@@ -1,0 +1,59 @@
+UPS Trade Direct™ Specifications
+ Label Format Requirements
+UPS Trade Direct™ - Small Package Label 
+• 
+Data Content
+Positions 	 1-16 	
+= 	CM SHIPMENT ID#:
+Position 	
+17 	
+= 	Space
+Positions 	 18-26 	
+= 	9 numeric 
+Position 	
+27 	
+= 	Check Digit
+UPS Trade Direct™ small package labels are the 
+individual labels that are created, at either an export 
+or import location and are applied to each package for 
+delivery by UPS. 
+• 
+Font Size = 10 pt.
+• 
+For Example:  84000028T
+NOTE: Check digit can be numeric or the letter "T" 
+See Appendix A for the Check Digit Calculation example.
+Small package labels must follow the specifications 
+outlined in the UPS Guide to Labeling. In addition, the 
+Consolidated Movement (CM) Shipment ID number 
+must print in the Additional Routing Instructions 
+Block immediately below the Billing Options line. (See 
+Appendix A)
+Small Package - UPS Trade Direct™ Label
+15 LBS
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+KALAMAZOO MI  49009
+CONTACT NAME
+SHIP
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+MESA AZ  85206-4802
+AZ 852 1-21
+UPS GROUND
+ 1Z 1X2 X3X 03 0000 5772
+TRACKING #:
+CM SHIPMENT ID#: 840000028T
+18.5A 01/2020
+UPS Guide to Labeling
+24
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are trademarks of 
+United Parcel Service of America, Inc. All rights reserved.
+Supplement

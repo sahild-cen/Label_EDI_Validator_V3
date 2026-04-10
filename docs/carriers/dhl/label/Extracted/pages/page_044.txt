@@ -1,0 +1,63 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The Piece Identifier: 
+• 
+must not contain more than 35 chars (excluding the Data Identifier “J”)  
+• 
+may only contain numeric and upper case alphabetic chars drawn from ISO/IEC  646 – they 
+must not include any lower case char or punctuation mark 
+• 
+must start with a string of chars representing an issuing agency assigned by ISO  
+ 
+DHL EXPRESS issued Piece Identifiers (LPs) usually begin with either a “JD00…“ or a “JD01…” format prefix. 
+ 
+In the specific case of the JD01 LP-types, its length i.e. the number of characters following the Data Identifier 
+“(J)” is exactly 20 – see example, below. 
+ 
+ 
+5.17.2. Barcode and Plain Text 
+ 
+A Piece Identifier must be printed as a barcode. Its content must be repeated in plain text below the barcode.  
+ 
+Although, according to the official standard, both Code 128 and Code 39 are allowed to encode Piece 
+Identifier numbers, any barcode produced by a CAS system or any DHL internal software has to use 
+Code 128. 
+ 
+ 
+5.17.3. Data/Application Identifier 
+ 
+The Data Identifier (for ASC MH 10 data fields) or Application Identifier (for GS1 data fields) is an ISO-specified 
+string of chars that identifies the content of the data that follows. 
+ 
+All DHL issued Piece Identifiers will be of type ASC MH10, using Data Identifier “J”. 
+ 
+For readability reasons of ASC MH10 Piece Identifiers, DHL EXPRESS requires that the human-readable code 
+be grouped in such a way that blocks of four digits follow the (Sub-) Issuing Agency Code. Those are built 
+upwards (from left to right) so that the last four digits also form a group. 
+ 
+This way of printing Piece Identifier in groups of four digits is mandatory for all DHL-owned 
+customer automation software. 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+43

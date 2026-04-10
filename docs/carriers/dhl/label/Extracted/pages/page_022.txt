@@ -1,0 +1,57 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.6.  Consignor’s Contact (Conditional) 
+Shipper contact details are still critical operational information and will be captured and stored, in accordance 
+with GDPR, as part of the shipment preparation process. 
+ 
+As part of DHL’s ongoing process and systems improvements, this information is, however, no longer required 
+to be printed on the Transport Label. It is made available electronically to our relevant employees and operators 
+to perform their tasks and deliver the service expected of our customers. 
+ 
+ 
+ Note: in exceptional circumstances (e.g. for compliance with international regulations like the ICAO or IATA for goods 
+with UN Code UN3373) and only upon formal approval, specific contact details may have to be printed on the Transport 
+Label. 
+ 
+5.7.  Service Area Code of Origin (mandatory) 
+DHL Express needs the Service Area Code of Origin printed in this segment. This is a 3-digit, upper-case 
+letter, of a locally defined and globally recognized area where DHL services are provided. This data is maintained 
+in DHL Global Reference Databases. 
+ 
+ 
+5.8.  
+‘Ship To’ Address (mandatory) 
+ 
+Each piece requires a Ship To address. This is the agreed Delivery Point.  
+ 
+The word “To” may be written in local language, however for export shipments the English word “To” must 
+appear as well. Alternatively, both languages (English and domestic) may be used, separated with a “/”. 
+ 
+The Ship To address should be emphasized by adding hooks, i.e. thicker corners. The recommended size of 
+the hooks is 4 x 4mm and the line thickness is > 0.5mm. The area contained by the hooks shall include the 
+contact information. 
+ 
+For the structure of the Ship To address, refer to section 3.4.1 Ship From address 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+21

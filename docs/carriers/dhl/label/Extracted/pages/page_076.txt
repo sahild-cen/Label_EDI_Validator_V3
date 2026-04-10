@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9.3.2. 
+ Data Matrix 
+9.3.2.1. 
+Definition  
+Data Matrix is a two-dimensional matrix symbology made up of square modules arranged in a square or rectangle 
+shaped pattern. This symbology is capable of packing large amounts of data and has the capability of recovering 
+the original data encoded even when it is partially damaged through an error correction technique. Data Matrix 
+codes are characterized by the matrix size which is the overall rows and columns count (for example 32x32 in 
+Error! Reference source not found.). Higher matrix sizes need more space and take a higher amount of data. 
+9.3.2.2. 
+Scope  
+ 
+The Data Matrix symbology will be used to encode operational data to be used in the PUD and In-Facility 
+domains. 
+9.3.2.3. 
+Key parameters 
+ 
+Within DHL the following code parameters shall be used: 
+• 
+Symbology: Data Matrix ECC 200 
+• 
+Module size: 0.38 mm 
+The nominal range of 0.40 > x > 0.38 may, in the future, be extended to the smaller value 0.24 mm due to 
+scanner performance evolution.  
+The module size for 2D symbols for Sorting purposes shall not fall below 0.76mm. 
+• 
+Symbol matrix: any symbol matrix is supported. 
+As the application typically requires at least 200 characters capacity, only square symbols might be used. 
+The smallest possible symbol matrix should be used to get best readability. 
+• 
+Macro: Macro 06 should be used as data is appropriate for that. 
+• 
+Quiet Zone: recommended min 4mm, on all symbol sides 
+• 
+Code Quality Grade: B 
+• 
+Printing technology: any which reaches the quality requirements. Examples: Thermal Transfer, Laser, 
+InkJet etc. 
+• 
+Encoding: Currently, 7 bit data is used only, so no ECI specification required. 
+• 
+Human readable interpretation:  The data contents are not shown verbatim on the label. Instead, excerpts 
+like the public information might be displayed similar to the 1D codes. 
+• 
+Symbol physical location: the 2D symbol will be placed, on the label, in such a way as to maximize the 
+quiet zone and protect specially the finder patterns from damage. In addition, It shall meet the ISO 
+15394:2017 requirements, which specifies the minimum requirements for the design of labels containing  
+two-dimensional symbols on transport units to convey data between trading partners. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+75

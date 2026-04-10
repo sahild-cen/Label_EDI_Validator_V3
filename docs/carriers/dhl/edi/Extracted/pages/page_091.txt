@@ -1,0 +1,77 @@
+Message Specification Guidelines                         
+                          
+ 
+Appendix A – Product Type 
+ 
+Global product description 
+Global 
+product name 
+Product 
+group 
+description 
+Global 
+product 
+code 
+Global 
+product 
+content 
+code 
+B2C 
+BTC 
+2 
+A systemized, international door-to-door delivery 
+of document shipments within Time Definite 
+transit times, targeted at business-to-consumer 
+internet retailing 
+B2C 
+B2C 
+3 
+A systemized, international door-to-door delivery 
+of non-document shipments within Time Definite 
+transit times, targeted at business-to-consumer 
+internet retailing 
+EXPRESS 
+EASY 
+XEP 
+8 
+Systemized export or domestic pre-18:00hrs 
+door-to-door delivery of non-document 
+shipments on the next possible business day. 
+Sold from Service Point outlets on cash payment 
+terms, with DHL branded packaging included at 
+eight standard weight intervals. 
+EXPRESS 
+WORLDWIDE 
+DOX 
+D 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of document shipments on the 
+next possible business day. 
+Time Definite International 
+EXPRESS 
+9:00 
+TDE 
+E 
+Systemized export, import or domestic pre-
+9:00hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee and proactive 
+delivery notification. 
+BREAK BULK 
+EXPRESS 
+BBX 
+B 
+A systemized door-to-door pick-up of an already 
+consolidated shipment sent from one customs 
+zone to another, with a consolidated clearance at 
+the destination gateway and subsequent delivery 
+of individual shipments to different receivers on 
+the next possible business day. 
+EXPRESS 
+WORLDWIDE 
+ECX 
+U 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of document shipments on the 
+next possible business day. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 91 of 115

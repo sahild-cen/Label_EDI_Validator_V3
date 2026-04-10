@@ -1,0 +1,71 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+•  Label Certification Identifier  
+o A DHL Label Certification Identifier is a pre-condition for a Transport Label to be released for 
+production and use within the DHL EXPRESS network 
+o The use of DHL’s solutions (e.g. GLS w. lookup & rendering features) automatically ensures the 
+Label Certification Criteria is met 
+4.4. Documentation-related Principles 
+• 
+A mandatory-marked field implies that the content is ALWAYS mandatory. This implies that 
+its absence is Not acceptable because it impacts the quality of the label data/ info and thus of 
+the associated shipment/ piece handling processes. 
+• 
+A Conditional-marked field implies that the content is mandatory in some cases (e.g. for 
+a specific product) and optional in other cases. Further details accompany the specific 
+fields 
+• 
+An Optional-marked field indicates that the content is not required, but may be added if 
+data is available and brings value. Optional does not always imply that the field may 
+remain empty. Further details accompany the specific fields and may require that for 
+example they have to be populated with at least zeroes.  
+4.4.1. 
+Legend 
+ 
+Information valid solely for Customer Facing Solutions/ Systems (e.g. EDI and DHL ESS / ESI 
+solutions) 
+ 
+ 
+Cross-references are marked with this symbol. They are provided to indicate related chapters or to 
+refer to associated information. 
+ 
+ Product-specific information is marked with this symbol 
+ 
+ This symbol indicates country- or region-specific legal requirements 
+ 
+ 
+Important remarks are marked with a red exclamation mark. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+11

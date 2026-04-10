@@ -1,0 +1,137 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 43  
+Group 
+Occurrence 
+Usage 
+Description 
+SG43 
+99 
+R 
+ NAD-LOC-SG44-SG47- SG49 
+Function: A group of segments to identify a party, related references, locations contacts, required documents,  
+and charges to be paid by the party. 
+ 
+SG 43 - NAD 
+Segment 
+Occurrence 
+Usage 
+Description 
+NAD 
+1 
+M 
+ Name and Address                                                                           
+Function: Specify Consignee/Receiver. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3035 
+M 
+AN..3 
+Party qualifier 
+C082 
+C 
+ 
+PARTY IDENTIFICATION DETAILS 
+   3039 
+M 
+AN..17 
+Party identification 
+C058 
+C 
+ 
+NAME AND ADDRESS 
+    3124 
+M 
+AN..35 
+Building Name 
+    3124 
+C 
+AN..35 
+City District 
+    3124 
+C 
+AN..35 
+Address Line 1  
+    3124 
+C 
+AN..35 
+Address Line 2 
+    3124 
+C 
+AN..35 
+Address Line 3 
+C080 
+C 
+ 
+PARTY NAME 
+   3036 
+M 
+AN..35 
+Party Name 
+C059 
+C 
+ 
+STREET 
+   3042 
+M 
+AN..35 
+Street name 
+   3042 
+C 
+AN..35 
+Building number 
+   3042 
+C 
+AN..35 
+House number 
+   3042 
+C 
+AN..35 
+Address line 4 
+3164 
+C 
+AN..35 
+City name 
+C819 
+C 
+ 
+COUNTRY SUB-ENTITY DETAILS 
+   3229 
+C 
+AN..9 
+State Code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   3228 
+C 
+AN..70 
+Province 
+3251 
+C 
+AN..9 
+Postcode identification 
+3207 
+C 
+AN..3 
+Country, coded 
+ 
+Example:  
+NAD+CN+++MICHEL VANHOREN SA+WOLUWELAAN::151+DIEGEM++1831+BE’ 
+NAD+FP+12345678’ 
+NAD+JD+++MAXIM INTEGRATED PRODUCTS+HERMANN-KOEHL 
+STRASSE::15+SCHKEUDITZ++04435+DE’ 
+ 
+Note: 
+The 1st and 2nd occurrences of SG11/NAD are mandatory, to indicate the 
+Consignor/Shipper and Consignee/Receiver. Use qualifier ‘CZ’ for Consignor and  
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 50 of 115

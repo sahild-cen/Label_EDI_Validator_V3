@@ -1,0 +1,57 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 25 (Invoice Level) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG 25 
+9999 
+M 
+ CNI-DTM-CNT-TSR-MOA-FTX-SG31-SG32-SG33-SG43-SG50-SG70 
+Function: A group of segments to give information about an Invoice 
+Note on the Occurrence: 9999 is for the combination of Segment Group 25 (Shipment Level) and 
+Segment Group 25 (Invoice Level) 
+ 
+SG 25 - CNI 
+Segment 
+Occurrence 
+Usage 
+Description 
+CNI 
+1 
+M 
+ Consignment Information                                                                    
+Function: To identify one Invoice  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1490 
+R 
+N..4 
+Consolidation Item Number  
+C503 
+R 
+ 
+Document/Message Details 
+   1004 
+R 
+AN..35 
+Document Identifier  
+ 
+ 
+Example:  
+CNI+9999+2187304991:5' 
+ 
+Note 1490 : 
+‘9999’ – Invoice Level 
+ 
+Note 1004 : 
+Unique Shipment Number or waybill number the Invoice level information are related to. 
+These shipment number needs to be unique per shipment for at least 6 months. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 70 of 115

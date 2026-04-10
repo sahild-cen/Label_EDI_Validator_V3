@@ -1,0 +1,35 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+5.12. 
+2D Data Matrix – Customer Data 
+ 
+Data Matrix is a powerful two-dimensional matrix symbology selected for encoding operational data to be used 
+in the operational landscape. It is made up of square modules arranged in a square or rectangle shaped pattern.  
+ 
+For further details on both the symbology and key 2D code parameters, refer to section 9.3. “ Bi-Dimensional 
+Barcode Symbologies”. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+33

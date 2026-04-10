@@ -1,0 +1,69 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+Note: Only the segments which are not common to both the Global Standard Label and the “eWaybill”, will be 
+defined and described in the following sections. 
+ 
+The eWaybill in this specification has been designed to allow for both Transport Label and eWaybill printing on 
+the same printer. It is, however, also allowed to print the eWaybill on a normal A4 / Letter size document, 
+provided that all specified information is available and the Waybill Barcode is printed. 
+6.2. Purpose – Working Title of Document (optional) 
+The intended purpose (e.g. “eWaybill Doc”) of the document will be printed here, with an alpha-numeric format.  
+ 
+This information indicates the purpose of the document, which may vary depending on the intended use and/or 
+targeted user type (e.g. Customer or DHL Staff). More than one purpose can be selected at the time of rendering, 
+with the result that “several” documents with distinct “purposes” are created. 
+ 
+Examples of the targeted users and associated “purposes” are: 
+• 
+DHL OPS -> “DHL Copy – please hand to Courier” 
+• 
+Customer -> “Customer Copy” 
+• 
+DHL Billing -> “Waybill Doc” 
+ 
+The format of this segment is: 
+• 
+[“Waybill Doc”] 
+• 
+[INTENDED PURPOSE] 
+• 
+ [STATUS]”/”[PRINTING APPLICATION]”/”[PRINTING DATE]”/” [CERTIFICATION 
+IDENTIFIER] 
+o 
+where “Status” can have the following values and will be controlled by a specific parameter: 
+• 
+“Validated by DHL” 
+• 
+“” -> left blank 
+• 
+where the “Certification Identifier” adopts the same syntax of the Transport Label (see 5.2.3) 
+6.3. Sender’s Contact 
+ 
+The Sender’s Contact information in this segment supports the following optional elements in addition to the 
+label (refer to chapter 4): 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+50

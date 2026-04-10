@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+12. 
+ Appendix 
+ 
+12.1. 
+Acronyms and Symbols 
+ 
+Legend for a consistent set of acronyms and symbols throughout the next sections 
+Acronym 
+Definition / Meaning 
+1 
+ 
+Refers to (for example) Segment 1 of reference document type 
+Char 
+Relative to characters or to the number of characters of a string 
+DG 
+Relative to Dangerous Goods 
+Doc-type 
+As per the Global SOP Standard for Classification of Types of Documents  
+ESS 
+Electronic Shipping Solutions; formerly known as “eCom” 
+GS1 
+Global Standards One – non-profit organization that develops / maintains 
+global standards for business, in this context the well-know GS1-barcodes. 
+HFC 
+Relative to Handling Feature Codes 
+IATA 
+Relative to the International Air Transport Association 
+LP 
+License Plate. Also known as Piece Identifier.  
+The license plate is defined in ISO/IEC 15459-1. It is a unique identifier for 
+transport units. This unique number, regardless of use, shall be specified and 
+assigned by the label issuer and applied to a transport unit and may provide 
+access to traceability data regardless of content and destination. This 
+number shall be valid for the lifetime of the unit it is applied to. 
+Max 
+maximum 
+MH10 
+Accredited Standards Committee MH10 - The ANSI committee for standards 
+for Unit Loads and Transport Packages, including the national standard for 
+bar code labeling 
+Min 
+minimum 
+Opt. 
+Optional 
+PID 
+Piece Identifier 
+SID 
+Shipment Identifier 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+82

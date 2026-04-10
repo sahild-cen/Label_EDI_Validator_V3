@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+10. 
+ Specifications of Material  
+ 
+10.1. 
+Specifications of Paper    
+ 
+Paper for DHL Standard Labels must meet the following specifications: 
+ 
+Paper 
+• Color: 
+• Weight : 
+• Thickness: 
+ 
+Premium white 
+min. 80 [g/m²] 
+90 to 1400 [µm] 
+Permanent Adhesive 
+ 
+Adhesive 
+ 
+1.30 to 1.40 (Macbeth) 
+70 C 
+Thermal sensitivity (paper, ribbon)                                           
+* Image density:                                                                           
+* min. activation temperature:      
+Resistance:  
+•  Resistance to: 
+abrasion 
+ 
+ 
+water 
+• 
+Does not degrade when exposed to direct sun  
+• 
+Long life (>2 years) if stored in normal conditions 
+ 
+ 
+10.2. 
+Specifications of Label Thermal Adhesive   
+10.2.1. Description 
+ 
+A paper label with an adhesive backing. 
+It is placed in a thermal printer which 
+uses heat to mark the paper with 
+customer data and barcodes. 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+77

@@ -1,0 +1,24 @@
+Message Specification Guidelines                         
+                          
+ 
+Introduction 
+ 
+This specification provides the definition of the global standard DHL manifesting EDI messages. This is a 
+guide to be used in satisfying the requirements when exchanging electronic data to become a certified 
+trading partner with DHL and its partners. The data contained in these EDI messages consist of 
+manifesting information related to the transportation of cargo and transport related charges.  
+ 
+For purposes of this document, “Charges”  means all applicable transportation and other charges, 
+including but not limited to, all applicable accessorial charges, surcharges, additional handling charges, 
+late payment fees, and collection costs including collection agency fees, legal fees, court costs, credit 
+reports, and bad check collection fees, in accordance with applicable laws.   
+ 
+Notwithstanding any billing plan that is in effect or payment or billing option selected at the time of 
+shipment, the shipper is ultimately liable for and agrees to pay all Charges, including in the event of 
+insolvency, bankruptcy, or non-payment or refusal to pay by the consignee or third party. 
+ 
+All Charges must be ‘paid in full’ (per the invoice), in the lawful currency noted as the billing currency. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 11 of 115

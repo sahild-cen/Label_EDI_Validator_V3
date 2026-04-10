@@ -1,0 +1,93 @@
+UPS World Ease™ Specifications
+UPS World Ease™   Single Label - Summary Label
+GLOBAL CUSTOMS CLEARANCE NUMBER (GCC#)
+Specifications for the UPS World Ease™  
+Single Label Invoice Summary Label 
+SHIPPERS INSTRUCTIONS
+The shipment’s virtual document box 1Z tracking 
+number will be used to calculate the GCC# which is 
+the same as the Shipment Number.  See Appendix D 
+of the UPS Guide to Labeling.
+• 
+Data Content
+Positions         1-3	
+=	 GCC
+Position               4	
+	
+=	 Space
+• 
+Please Apply This Label to Package # ___ (Blank 
+indicates the value of the last package or 
+total number of packages in the consolidated 
+shipment) 
+Positions         5-6  	
+=	 #: 
+• 
+Font Size 12 pt. Bold
+   Position               7	
+	
+=	 Space
+SERVICE TITLE
+   Positions 	 8-13	
+=	 Alphanumeric
+• UPS World Ease
+   Position            14		
+=	 Space
+• Font Size 16 pt. Bold
+   Positions 	 15-19	
+=	 Alphanumeric
+• 
+Font Size                                  = 12 pt.
+PACKAGE/PALLET COUNT
+• For Example:  GCC #: 1X2X3X 9WB3K
+• 
+Data Content
+Positions	
+1-5 = TOTAL
+   Position	
+    6 = Space
+   Positions           7-13 = PKG/PLT
+   Position          13-14 = #:
+   Positions               15 = Space
+   Position          16-18 = Three numeric
+• Font Size = 12 pt.
+• For Example: PKG/PLT #: 123
+TRACKING NUMBER
+The last three digits of the shipment’s virtual 
+document box 1Z tracking number will print on 
+the summary label 
+• 
+Data Content
+Positions 	
+1-4	
+=	 TRKG 
+Position 	
+5	
+=	 Space
+Position           6-7	
+=	 #: 
+Positions 	
+8	
+=	 Space
+Position         9-11	
+=	 Three numeric 
+• 
+Font Size                                  = 12 pt.
+• For Example:  TRKG #: 123
+DOCUMENTATION INDICATOR
+• 
+Data Content
+Positions 	
+1-3	
+=	 EDI
+Position 	
+4	
+=	 - (Dash)
+Position           5-7  	
+=	 CCV
+• 
+Font Size                                  = 16 pt. Bold
+• For Example:  EDI-CCV
+20
+© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  
+are trademarks of United Parcel Service of America, Inc. All rights reserved.

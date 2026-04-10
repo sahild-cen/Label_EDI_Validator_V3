@@ -1,0 +1,45 @@
+Definitions
+ 
+Symbology — 
+A set of rules for encoding information in a barcode symbol. An arrangement of parallel, rectangular bars 
+and spaces arranged in a predetermined pattern following unambiguous rules.
+Thermal Direct Printing — 
+A print method in which a heated print head contacts specially treated labels, thereby causing the label to darken.
+Thermal Transfer Printing — 
+A print method in which a heated print head melts and transfers ink from a ribbon to a label.
+Tolerance — 
+The allowable variation from an ideal dimension.
+Tracking Number — 
+The UPS customized unique package ID when used with tracking/tracing services.
+UPS Account Number — 
+Positions 3-8 of the Tracking Number, containing the unique number assigned by UPS to the shipper.
+UPS Routing Code (URC) — 
+A representation of the delivery building for a package. The URC helps to ensure the accurate routing and prompt 
+delivery of a shipment.
+USPS CASS Database — 
+The USPS CASS database is used to perform address validation for addresses in the United States.
+USS-128 — 
+Uniform Symbology Specification produced by AIM. These specifications are intended as a guide to aid 
+the manufacturer, the consumer and the general public regarding printing and scanning Code 128.
+Warsaw Agreement — 
+The rules relating to liability established by the Convention for the Unification of Certain Rules Relating to 
+International Carriage by Air signed at Warsaw, Poland, on October 12, 1929, and any amendments thereto 
+shall apply to the international carriage of any shipment insofar as the same is governed thereby. There are no 
+stopping places which are agreed upon at the time of tender of the shipment, and UPS reserves the right to route 
+the shipment in any way UPS deems appropriate.
+Wide-to-Narrow Ratio — 
+The ratio between the widths of wide elements and narrow elements in two-width symbologies.
+X Dimension — 
+The nominal width dimension of the narrow bars and spaces in a barcode symbol.
+ZIP Code™ — 
+Five- or nine-digit number that identifies each postal delivery area within the United States.
+ZIP+4™ Code — 
+It is an enhanced version of the 5-digit ZIP Code­
+. It consists of the 5-digit ZIP Code plus four additional digits 
+that identify a specific range of delivery addresses.
+ZIP Code and ZIP+4™ are registered trademarks of the United States Postal Service.
+105
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

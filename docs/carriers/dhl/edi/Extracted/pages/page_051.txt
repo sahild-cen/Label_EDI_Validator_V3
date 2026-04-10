@@ -1,0 +1,56 @@
+Message Specification Guidelines                         
+                          
+ 
+                          ‘CN’ for Consignee.  
+ 
+JD used for LBBX purpose. 
+ 
+ 
+Note 3035: 
+Use: 
+ 
+ 
+‘CN’ - Consignee/Receiver 
+‘IM’ – Importer 
+‘EX’ – Exporter 
+‘FP’ – Freight Payer 
+‘JD’ – Port of Entry (for LBBX - Baby Shipments only) 
+Qualifier ‘IV’ is not valid for International shipments. 
+For the full list of Role Types (except Shipper related), refer to "DHL Express Integrated 
+Solution Reference Information" (available from DHL Express on request). 
+ 
+The address JD (Port of Entry) of Baby Shipment must be the same as Mother Shipment 
+Receiver address because of possible DCVS label re-printing functionality 
+ 
+Note 3039: 
+This element is used only in combination with qualifier ‘CZ’ in element 3035. It contains 
+the assigned account number of DHL. For DHL Global Forwarding: Agreed customer’s 
+code for dispatch address (i.e. for Dispatch party or for Consignee/Receiver where no 
+separate dispatch party is specified).This is also the field to have payer or billing account 
+no. 
+ 
+Note 3124:3-5: Address line 1-3 to be used only as supplementary information to the specific address 
+fields. Specific address fields like Street name, City name, etc. have priority as they 
+provide structured address that allows better label printing and are expected by DHL 
+systems. 
+ 
+Note 3036: 
+They contain the full name of the Shipper/Receiver party. 
+ 
+Note 3042: 
+Use this element three times to specify street name, building number, house number and 
+house number addition. However if for technical reason, it is not possible for the 
+customer to split the address data, the street name, building number and house number 
+may be concatenate in the first element 3042. 
+ 
+Note 3229: 
+Use this for 2-char state code as defined in Format ISO 3166-2, e.g. TX. 
+ 
+Note 3251: 
+Mandatory except for countries where no postcode system is available, e.g. Ireland. 
+ 
+Note 3207: 
+Format ISO 3166-1 Alpha 2 country codes. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 51 of 115

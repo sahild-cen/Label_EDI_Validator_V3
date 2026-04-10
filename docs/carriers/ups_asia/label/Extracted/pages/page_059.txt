@@ -1,0 +1,134 @@
+Appendix A
+MaxiCode™ Specifications
+Example MaxiCode™  Printer Commands
+^D99↵	
+
+Printer Specific Command  *See Notes at right
+84170	
+
+MaxiCode™  Primary Message — Postal Code
+↵	
+Printer Specific Delimiter
+Example A — ABC Printer 
+Manufacturer encodes the primary 
+message in front of the header 
+and keeps the primary message
+in the same order.
+6672	
+
+MaxiCode™  Primary Message — 
+ZIP+4™ Code
+Printer Model #’s: 
+	
+900, 940 and 960 printers
+↵	
+Printer Specific Delimiter
+840	
+
+MaxiCode™  Primary Message — 
+Country Code
+Firmware Required:
+	
+
+Contact vendor for correct 
+firmware version.
+↵	
+Printer Specific Delimiter
+001	
+
+MaxiCode™  Primary Message — 
+Class of Service
+↵	
+Printer Specific Delimiter
+[)>Rs	
+Message Header
+01Gs96	
+
+Transportation Data Format Header
+1Z12345675Gs	
+
+Tracking Number  
+
+* Notes:
+UPSNGs	
+SCAC
+1X2X3XGs	
+UPS Account Number
+187Gs	
+Julian Day of Pickup
+Gs	
+
+Place Holder for Shipment ID #
+1/1Gs	
+Package n/x
+10Gs	
+Package Weight
+NGs	
+Address Validation
+• 
+Notice that the Postal Code followed 
+by Gs, the Country Code followed by Gs 
+and the Class of Service followed by Gs 
+have been extracted from the 
+ANSI Message and separated with 
+delimiters as specified by the printer 
+manufacturer. Do not put the three 
+primary message data fields in the 
+string twice.
+Gs	
+
+Place Holder for SHIP TO Street Address
+SALT LAKE CITYGs	
+
+SHIP TO City
+UT	
+SHIP TO State
+• 
+Data elements are represented 
+on separate lines in this document, 
+but are a continuous string when 
+sent to the printer.
+Rs	
+End Of Format
+Eot	
+End Of Transmission
+• 
+The value of the 14 data fields 
+will change to match the individual 
+package being prepared for shipment.
+^[↵^D98↵	
+Printer Specific Command
+^D21^D12↵	
+Printer Specific Command
+ASCII Character Conversions for ABC Printer 
+	
+ASCII Character	
+ASCII	
+ASCII Value
+	
+Representation	
+Character Name	
+(Decimal)
+	
+Eot	
+End of Transmission	
+04
+	
+↵	
+Carriage Return	
+13
+	
+Gs	
+Group Separator	
+29
+	
+Rs	
+Field Separator	
+30
+Note: The ASCII Value gets substituted for the ASCII Character Representation in the MaxiCode™  Printer Command 
+and Message Format above.
+55
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

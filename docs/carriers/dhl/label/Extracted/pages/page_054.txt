@@ -1,0 +1,70 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Some systems use specific/ distinct formats for values and decimal digit representations. For this reason, the 
+format “# ### ### ###.###” will be used hereafter as standard for currency values. 
+ 
+Charge Amount values will follow the format 1999.01 as “1[space]999.01”, where a single “space” will have the 
+role of a digit group separator in place of a comma.  
+ 
+The Currency Code shall comply with the ISO 4217 Currency Code Standard. 
+6.8.  Shipment-related Information 
+ 
+Additional Shipment-related information may be added to this segment as required, in which case additional 
+lines, within the pre-defined limit, can be used. 
+ 
+The following data elements are foreseen 13(and possible) as per DHL EXPRESS Standards: 
+ 
+• 
+“Declared Value for Customs” – CUSTOMS VALUE 
+o 
+indicates the declared customs value, if non-doc shipment 
+o 
+Format: <# ### ### ###.##>, where currency code is mandatory 
+ 
+• 
+“Declared Value for Insurance:” – DECLARED VALUE FOR INSURANCE 
+o 
+Format: <# ### ### ###.##>, where currency code is mandatory 
+o 
+Default value is that of the Shipper’s Country Currency Code  
+ 
+• 
+“Commodity ID:” - COMMODITY IDENTIFIER 
+o 
+as per DHL’s Global Commodity Code Standard 
+ 
+• 
+“Commercial Invoice Number:” – COMMERCIAL INVOICE NUMBER 
+o 
+as per DHL’s Global Commercial Standards 
+ 
+6.9.  
+Content Descriptions and Declarations 
+ 
+ 
+13 Contrary to the Global Standard Transport Label, where non-piece-handling data elements are to be omitted 
+(by default), here, all data elements supporting the full description of the Customer’s Transport Order are 
+wished for. The above structure has been closely aligned with Global Billing and other key stakeholder 
+teams. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+53

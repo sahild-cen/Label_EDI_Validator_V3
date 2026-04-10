@@ -1,0 +1,51 @@
+Message Specification Guidelines                         
+                          
+ 
+ 
+Note 3055:         Not Used 
+ 
+Note 4052:1 
+This element is reserved for product features. All appropriate product features should be 
+stored in this element, without separation sign. See example. The format of each 
+occurrence is 3 digits length, leading ‘0’ (zero) included. Please contact your Sales 
+representative for valid product features codes.  
+The length of this element (AN..70) can handle a maximum of 23 product features codes 
+(Extra Charge Code). Extra Charge Codes with related Account Numbers should always 
+be stored in this element first followed by the Extra Charge Codes without related 
+Account Number. 
+ 
+Note 4215:         Use ‘A’ – To Indicate that the charges are to be charged to an account. 
+ 
+Note 4052:2: 
+Account Numbers (to which the extra charges will be applied) should be stored in this 
+element, without separation sign, and must be in the same order as the related to an 
+Extra Charge Code are placed in element 4052:1. See example. The format of each 
+occurrence is 9 digits length. The length of this element (AN..70) can handle a maximum 
+of 7 Account Numbers. 
+ 
+Multiple Extra Charge Codes and Accounts Example: 
+TOD+6+A+DDU:::101103151152202203204207208:ACC123456BCC123456CCC12345
+6DCC123456ECC123456FCC123456GCC123456' (First 7 Extra Charge Codes are 
+related to the 7 Account Numbers. The last 2 Extra Charge Codes have no related 
+Account Number. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 43 of 115

@@ -1,0 +1,65 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+2 
+R 
+ Free Text 
+Function: A segment to specify processable supplementary information relating to the line item  
+(i.e. Line Item Description) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..512 
+Free text value 
+ 
+Example:  
+FTX+LIN' 
+FTX+AAA+++DESCRIPTION LINE ITEM1' 
+ 
+Note 4451: 
+Use: 
+‘LIN’ – Line Item indicator for GID 
+‘AAA’ - Line Item Description 
+For low value shipments to Singapore Y or N must be given in SG50 within the GID 
+segment - this is to indicate whether GST on the shipment contents has been paid in the 
+exporting country already (Y = yes) or not (N = no), (see also SG-6 RFF) 
+Examples: 
+FTX+Y' 
+FTX+N' 
+Each line item should have such a GST flag/ indicator. 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+Line Item Description 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 84 of 115

@@ -1,0 +1,64 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.16. 
+Customer Segment 
+ 
+This section is reserved and can be used by the shipper (or customer) for information and own purposes (e.g. 
+for parties involved in the logistics chain). Its standard location is directly above the Piece Identifier segment. 
+These contents are transparent for DHL. 
+ 
+DHL imposes no restrictions in size or content of this segment, as long as the information printed in it does not 
+interfere with any other information on the label.  
+ 
+This section may contain barcodes (see sample image below) but none are allowed that could be interpreted as 
+one of the following content types: 
+ 
+ 
+• DHL Waybill Number (10 digits, numeric, barcode in Code 39) 
+ 
+• DHL Routing Code (Data Identifier 2L / Application Identifier 403) 
+ 
+• Piece Identifier (Data Identifier J, 1J …, nJ / Application Identifier 00) 
+ 
+NOTES. The objective of the highest-possible level of standardization is valid also for this segment. In specific 
+exceptional business scenarios, upon customer requirement, a relocation of the Customer Segment is possible, 
+requires however an explicit approval from DHL EXPRESS.  
+• 
+The potential new location must remain in the lower area of the label, below the Handling Feature Codes’ 
+segment, close to the existing barcode segments, ideally directly above segment 20 (Waybill barcode) 
+• 
+A different approach is to locate the customer-owned segment beyond the boundaries of the standard 
+layout. In this case, the customer-owned segment is no longer part of the label and shall not be defined 
+herein. To reinforce that fact, DHL requires that a thick line, with a min of 2 mm, be drawn to visually  
+separate the specific boundaries of the label from external elements. To prevent detrimental effects on 
+the PID scanning performance, only locations above the label upper boundary are acceptable. 
+5.17. 
+Piece Identifier Segment 
+ 
+Each piece of each shipment shipped with DHL requires a Piece Identifier as its unique identifier. Any ISO 
+15459-compliant Piece Identifier may be used.  
+ 
+5.17.1. Content 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+42

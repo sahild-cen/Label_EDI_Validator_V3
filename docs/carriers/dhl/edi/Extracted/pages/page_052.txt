@@ -1,0 +1,77 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 43 - LOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+9 
+M 
+ Place/Location Identification                                                            
+Function: To specify a location. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..25 
+Location name code 
+C519 
+O 
+ 
+LOCATION IDENTIFICATION 
+   3223 
+R 
+AN..25 
+Location name code 
+ 
+Example:  
+DHL Time Definite: LOC+8+BFS+BFS’ 
+DHL Day Definite: LOC+7+AMS+UTX’ 
+ 
+ 
+Note: 
+The segment LOC with qualifier ‘8’ is mandatory to indicate the DHL Express Service 
+Area code and DHL Express Facility code corresponding to the destination location of the 
+shipment. 
+It is also mandatory for DHL Express Road shipments with product feature ‘Hold at 
+Depot’ and ‘PackStation’. In this segment, the appropriate code is specified. 
+ 
+Note 3227: 
+Use: 
+‘8’ - Place of destination. Use for DHL Express TD 
+‘7’ - Place of delivery. Use for DHL Express DD       
+ 
+Note 3225: 
+To be populated with DHL Express Facility code for the location of the shipment 
+destination. May or may not be the same value as in 3223. A list of DHL Express Service 
+Area codes with corresponding DHL Express Facility codes by location name, post code 
+and country is available on request. 
+ 
+Note 3223: 
+To be populated with DHL Express Facility code for the location of the shipment 
+destination. May or may not be the same value as in 3225. A list of DHL Express Service 
+Area codes with corresponding DHL Express Facility codes by location name, post code 
+and country is available on request. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 52 of 115

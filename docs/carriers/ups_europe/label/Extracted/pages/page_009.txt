@@ -1,0 +1,121 @@
+Label Format Requirements
+Address Block
+Address Block 
+• 
+All uppercase characters
+Package 
+Weight 
+and Count
+Shipment 
+Dimensional 
+Weight
+• Punctuation is not recommended
+50.5 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+If punctuation must be used, validate
+the use with destination postal authority. 
+(MaxiCode™ data string should not contain any 
+punctuation)
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3VP
+SHP WT: 50.5 KG
+STREET ADDRESS
+POSTAL CODE LINE
+DATE: 11 JAN 2020
+SHP DWT: 50.5 KG
+COUNTRY
+• 
+Standard abbreviations should be 
+employed (including 2-letter state 
+or province abbreviations)
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+SHIP FROM ADDRESS
+COMPANY NAME
+EXTENDED ADDRESS
+• 
+
+Left-justified at the top 
+of the shipping label
+STREET ADDRESS
+POSTAL CODE LINE
+COUNTRY
+FRA 753 7-00
+• 
+
+Phone number, contact name 
+and country are required except 
+when the origin and destination 
+country are the same
+• 
+
+See Appendix F for the appropriate 
+Postal Code line configuration
+• 
+
+Font Size        = 8 pt.
+SHIP TO ADDRESS
+TRACKING #:
+UPS EXPRESS
+1Z 1X2 X3X 66 0000 5627
+1
+• 
+The text SHIP TO must be printed 
+to the left of the destination address
+• 
+
+The Ship To address prints below 
+the Ship From address
+• 
+
+The street address must print directly 
+above the Postal Code line
+BILLING: P/P
+EDI-PULL
+DESC: LASER PRINTER
+POA
+18.5A 01/2020
+• 
+
+Phone number, contact name 
+and country are required except 
+when the origin and destination 
+country are the same
+• 
+
+See Appendix F. for the appropriate 
+Postal Code line configuration
+• 
+Font Sizes
+                           = 
+10 pt.  bold for the text “SHIP TO”
+     = 
+10 pt.  for the address lines, except 
+for the Postal Code line
+     = 
+12 pt.  bold for the Postal Code 
+and Country Lines
+• 
+
+City/State, Province or County must print on the 
+same line with the Postal Code
+• 
+
+ZIP+4™ codes must be used if available
+  NOTE:	
+• 
+
+Phone number is optional when shipping to/from the European Union (EU)
+	
+• 
+ZIP Code and ZIP+4™ codes are registered trademarks of the United States Postal Service.
+7
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

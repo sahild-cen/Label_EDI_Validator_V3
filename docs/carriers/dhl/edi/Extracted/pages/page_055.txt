@@ -1,0 +1,72 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 47 
+Group 
+Occurrence 
+Usage 
+Description 
+SG47 
+9 
+C 
+ RFF 
+Function: A group of segments to specify a reference related to a party  
+ 
+SG 47 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+C 
+AN..70 
+Reference identifier 
+   1156 
+R 
+AN..2 
+Document line identifier  
+ 
+Example:  
+RFF+VA:1154345678:BE’ 
+ 
+Note: 
+This segment may be used to record the different Registration numbers of the different 
+role types.  For example, consignee related reference numbers. 
+ 
+Values are validated against role types under the DHL equivalent values of SG43-NAD-
+3035. 
+ 
+Note 1153: 
+Use: 
+                          ‘VA’   – VAT Registration Number of Consignee 
+For the full list of all possible Registration Number Type for different role types / Country, 
+refer to "DHL Express Integrated Solution Reference Information" (available from DHL 
+Express on request) 
+ 
+Note 1154: 
+Only 35 characters will be accepted by DHL. 
+ 
+Note 1156: 
+Format ISO 3166-1 Alpha 2 country codes 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 55 of 115

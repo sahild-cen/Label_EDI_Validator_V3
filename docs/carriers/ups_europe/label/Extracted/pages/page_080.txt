@@ -1,0 +1,95 @@
+Appendix A
+MaxiCode™ Specifications
+Example 1 (Validated Address)
+Customers that validate their SHIP TO addresses to a 
+CASS-certified database for ZIP+4™ matching would 
+encode their MaxiCode™ data as shown below:
+Given the following SHIP TO address
+
+NON-VALIDATED ADDRESSES
+The Shipment ID Number field was left blank. It is was 
+not validated. The <GS> was provided to separate the 
+blank field and the package count elements . The class 
+of service and shipper number fields in the 1Z number 
+have been omitted in the tracking number field to avoid 
+duplication.
+Primary 
+
+Rule if the Maxi code exceeds the maximum length:
+Secondary 
+Address 
+Number
+Address 
+
+Number
+UPS CUSTOMER
+SUITE 567
+123 MAIN STREET
+ATLANTA GA 30328-1483
+1. The "Shipment ID Number" should be completely 
+cleared (gain of 11 characters).
+The data string for this address could appear as follows:
+[)><RS>	
+Message Header 
+2. I f this is still not enough, then shorten the “Ship-To 
+Address” field (delete only the number of characters that 
+are still needed. So at least the field would not be empty).
+01<GS>96	
+
+Transportation Data 
+Format Header
+303281483<GS>	
+Postal Code
+840<GS>	
+Country Code
+001<GS>	
+Class of Service
+1Z12345675<GS>	 Tracking Number
+UPSN<GS>	
+SCAC
+1X2X3X<GS>	
+UPS Account Number
+187<GS>	
+Julian Day of Pickup
+<GS>	
+
+Place holder for 
+Shipment ID Number
+1/1<GS>	
+Package N/X
+37<GS>	
+Package Weight
+Y<GS>	
+Address Validation
+123<FS>567<GS>	 
+SHIP TO Primary Address Number 
+<Fs> Secondary Address Number
+ATLANTA<GS>	
+SHIP TO City
+GA<RS>	
+SHIP TO State
+<EOT>	
+End of Transmission
+[[)><RS>01<GS>96303281483<GS>840<GS>001<G>1
+Z12345673<GS>UPSN<GS>1X2X3X<GS>187<GS>GS>
+1/1<GS>37<GS>Y<GS>123<FS>567<GS>ATLANTA<GS
+>GA<RS><EOT>
+There are non-printable characters contained 
+in the data string.
+• 
+[)><RS> is the message header
+• 
+<Gs> is used to separate fields in a message 
+(decimal 29)
+• 
+<Rs> is used to separate format types (decimal 30)
+• 
+<FS> is used to separate the primary and secondary 
+address numbers (decimal 28)
+• 
+<EOT>  is the end of transmission character (decimal 4)
+78
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

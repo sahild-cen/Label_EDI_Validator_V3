@@ -1,0 +1,130 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 4   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 4 
+2 
+R 
+ NAD-SG5-SG6 
+Function: Used to identify different parties. Although this group may occur twice, this is limited to the NAD  
+segment only. The other elements and groups within group 4 are allowed only once. 
+ 
+SG4 - NAD 
+Segment 
+Occurrence 
+Usage 
+Description 
+NAD  
+1 
+M 
+ Name and Address                                                                           
+Function: Specify Consignee/Receiver. The first occurrence of NAD is mandatory, to indicate the consignor.  
+Use qualifier CZ. The second occurrence is optional. If used, it contains the name and address of the dispatch 
+party, if deviating from the consignor. Element 3035 contains value PW. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3035 
+M 
+AN..3 
+Party qualifier 
+C082 
+C 
+ 
+PARTY IDENTIFICATION DETAILS 
+   3039 
+M 
+AN..17 
+Party identification 
+C058 
+C 
+ 
+NAME AND ADDRESS 
+   3124 
+M 
+AN .. 35 
+Building Name 
+   3124 
+C 
+AN .. 35 
+District 
+C080 
+C 
+ 
+PARTY NAME 
+   3036 
+R 
+AN..35 
+Party Name 
+C059 
+C 
+ 
+STREET 
+   3042 
+M 
+AN..35 
+Street name 
+   3042 
+R 
+AN..35 
+Building number 
+   3042 
+R 
+AN..35 
+House number 
+   3042 
+C 
+AN..35 
+Address line 4 
+3164 
+C 
+AN..35 
+City name 
+C819 
+C 
+ 
+COUNTRY SUB-ENTITY DETAILS 
+   3229 
+C 
+AN..9 
+State Code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   3228 
+C 
+AN..70 
+Province 
+3251 
+C 
+AN..9 
+Postcode identification 
+3207 
+C 
+AN..3 
+Country, coded 
+ 
+]Example:  
+NAD+CZ+++MICHEL VANHOREN SA+WOLUWELAAN::151+DIEGEM++1831+BE’ 
+NAD+CZ+270834367+CZ BUILDING:CZ DISTRICT+BEPCO PARTS SA+RUE 
+CHAUMONT 4D:CZ STNO:CZ ADDSTNO+HERMALLE-SOUS-
+HUY+AH:::liege+4480+BE' 
+ 
+Note: 
+Only 1 occurrence in SG4 Group. Use qualifier ‘CZ’ to represent Shipper or Consignor. 
+ 
+Note 3035: 
+Use: ‘CZ’  -- Consignor/Shipper. 
+                                  ‘PW’ – Dispatch party 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 30 of 115

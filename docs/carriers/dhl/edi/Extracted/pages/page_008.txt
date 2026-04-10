@@ -1,0 +1,58 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 33 - FTX 
+78 
+Segment Group 34 (Invoice Level) 
+79 
+SG 34 - DOC 
+79 
+SG 34 - DTM 
+80 
+Segment Group 50 (Invoice Line Item) 
+81 
+SG 50 - GID 
+81 
+SG 50 - LOC 
+82 
+SG 50 - MOA 
+83 
+SG 50 - FTX 
+84 
+Segment Group 52 (Invoice Line Item) 
+85 
+SG 52 - MEA 
+85 
+Segment Group 54 (Invoice Line Item) 
+86 
+SG 54 - RFF 
+86 
+Segment Group 56 (Invoice Line Item) 
+87 
+SG 56 - DOC 
+87 
+Segment Group 63 (Invoice Line Item) 
+88 
+SG 63 - TCC 
+88 
+SG 63 - QTY 
+89 
+UNT Segment – Message Trailer 
+90 
+Appendix A – Product Type 
+91 
+Appendix B – Product Features 
+96 
+Appendix C – Example File 
+99 
+Appendix D – Message structure and content for Loose BBX shipments and Sample 
+Message 
+102 
+Appendix E – Commercial Invoice data usage and sample message 
+108 
+Appendix F – Return Shipments 
+112 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 8 of 115

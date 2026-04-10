@@ -1,0 +1,60 @@
+Message Specification Guidelines                         
+                          
+ 
+DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+3 
+R 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+9:200906011500:203’ 
+DTM+11:20090820:102’ 
+ 
+Note: 
+This segment is at least used twice, for specifying the processing date/time of the EDI 
+message and for specifying the dispatch of the shipments. 
+Note 2005:  
+Use: 
+‘9’ - Processing date/time (that the file is created and send to DHL) 
+‘11’ - Dispatch date of the shipment 
+ 
+Note 2380: 
+With ‘11’ in preceding element, this is Date and time on which the goods are or are 
+expected to be dispatched or shipped. Both date time qualifier mask ‘102’ or ‘203’ can be 
+used.  
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+‘102’ for the date mask CCYYMMDD 
+Use the format qualifier ‘102’ when the date refers to a dispatch date. Otherwise use the 
+qualifier ‘203’. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 26 of 115

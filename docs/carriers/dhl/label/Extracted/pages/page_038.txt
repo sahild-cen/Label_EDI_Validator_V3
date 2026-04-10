@@ -1,0 +1,77 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+o 
+Neither Account Numbers nor Customs Value or Shipment Insurance Values are allowed on 
+the Transport Label 
+o 
+Moreover, any data elements not explicitly stated and required on Global SOP Standard  
+Transport Label are, by definition, not allowed and must be excluded. 
+ 
+ 
+5.13.1. Conditional Local Information 
+In some countries, additional information is legally required on the label, usually for a small percentage of the 
+shipping volume. Any information of this kind may be added to these specifications.  
+ 
+Depending on the size of the information required, it may be inserted (sometimes making the label longer or 
+even requiring a separate label to be used). Any potential separate label has to carry the Piece Identifier in 
+human-readable form and respective barcode in addition. Wherever such a case fits into one of the existing 
+segments it is described in the respective context.  
+All other cases are described in this chapter. 
+ 
+5.13.1.1. 
+Tax IDs (Brazil) - Conditional 
+ 
+Labels for packages shipped from addresses in Brazil need to display the Tax IDs (Called CNPJ/CPF 
+and IE/RG) for both origin and destination: this is an approved exception, strictly subject to central 
+endorsement, through the DHL EXPRESS Label Certification Body. 
+ 
+Upon DHL EXPRESS’ approval, these numbers need to be printed as part of the respective addresses (if free 
+address lines are available) or to be printed in segment 17, with at least the font size of the consignee address. 
+ 
+Note: In this special case (BR), the TAX ID can also be understood and represented as a Shipment Reference 
+with the associated Reference Type, in which case it would not be placed in this segment but rather in the Piece 
+/ Shipment Reference segment. 
+ 
+ 
+5.13.2. Dangerous Goods and Other Special Loads 
+Dangerous goods and other special loads (Live Animals – Perishable Cargo – Human Remains) by law require 
+additional information that may be printed in the shipment information segment or as a separate label.  
+DHL Express does not offer an unconditional transport of dangerous goods and other special loads. 
+Prohibited Commodities are excluded from transportation. 
+ 
+ 
+The “Prohibited and Restricted Commodities Policy10” defines, categorizes and lists what can and cannot be 
+transported by DHL EXPRESS. Goods are therein defined into two categories: 
+• 
+Prohibited 
+• 
+Restricted 
+ 
+For additional information on Mandatory / Conditional Legal Entries required on the eWaybill or Transport 
+Label for Special Loads, refer to the following documents (DHL Guidelines and Regulations): 
+ 
+10 The definition and listing of “Prohibited and Restricted Commodities” are subject, at any time, to updates 
+through the corresponding Regulators. Please always refer to the latest International Standard version for 
+use purposes. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+37

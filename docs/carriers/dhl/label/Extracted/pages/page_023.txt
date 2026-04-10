@@ -1,0 +1,65 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ Any customer automation application has to offer a minimum of 5 lines for the Consignee address. 
+Further information such as floor number, county etc is possible but the overall number of lines must not exceed 
+7, for consistency with DHL’s data structure. 
+ 
+Delivery Country and the applicable Postal Location Format Elements (e.g. City and Postal Code) have to be 
+printed in bigger font. In case of lack of space, the two lines can be joined to one line.  
+ 
+7 
+Delivery Country and the applicable Postal Location Format Elements (e.g. City and Postal Code) 
+have to be printed in bigger font. In case of lack of space, the two lines can be joined to one line. 
+8 
+This area of the label is reserved for an optional Customer Logo or alternatively for a DHL Initiative Logo 
+(e.g. GoGreen) if customer agrees or asks for it. 
+9 
+Consignee’s Shipper contact details are still critical operational information and will be captured and 
+stored, in accordance with GDPR, as part of the shipment preparation. 
+As part of DHL’s ongoing process and systems improvements, this information is, however, no longer 
+required to be printed on the Transport Label. It is made available electronically to our relevant employess 
+and operators to perform their tasks and deliver the service expected of our customers. 
+  Note: in exceptional circumstances (e.g. for compliance with international regulations like the ICAO or IATA 
+for goods with UN Code UN3373) and only upon formal approval, specific contact details may have to be 
+printed on the Transport Label. 
+5.8.1. 
+Highly-Compact Version 
+ 
+In analogy to the Consignor’s Address segment, there may be the need to maximize the compactness of the 
+info on the remaining Label segments in order to free up space elsewhere.  
+ 
+For these cases and upon formal approval, the number of Consignor Address lines can be reduced to 5 with the 
+functional advantage that the font size can be kept high with the inherent advantages in terms of readability. 
+This is achievable with the following reference structure: 
+ 
+1. Address line 1: Receiver Company / Name 
+2. Address line 2: Building Name or equivalent 
+3. Address line 3: Street Name, Street Number 
+4. Address line 4: City Name, Postcode or equivalent for other Postal Location Formats (e.g. Suburb, County, State) 
+5. Country Code / Country Name 
+ 
+5.9.  
+Manual Sorting Section 
+DHL’s Manual Sort Information consists of the following three segments, from left to right: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+22

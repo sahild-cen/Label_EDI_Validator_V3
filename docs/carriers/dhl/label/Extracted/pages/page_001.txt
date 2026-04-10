@@ -1,0 +1,52 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<Global Standard Transport Labels and Waybills> 
+Author : <Paulo Ferro De Gouveia> 
+Function : <Global Technical Standards> 
+Category: Process 
+Document ID : 2-20230505-01 
+Maintained by : Network Operations 
+       
+Approval by : Network Operations ExCom 
+Effective date : 1/12/2024 
+Approval status : [Status] Approved 
+Approval date : 8/11/2024 
+ 
+Audience 
+The <Global Standard Transport Labels and Waybills> applies to the following function groups :  
+1. Network Operations 
+2. Customer Facing Solutions (ESS/ ESI) 
+Scope – Global/Regional/Country  
+ 
+ 
+Serial copy for CustomeXXX” only 
+ 
+Serial number:  
+Compliance 
+All locations where this activity is performed must comply with these guidelines.  
+If compliance cannot be achieved, local management must raise an exemption as per the Global SOP 
+Change/Exemption Request Process. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+ 
+ 
+DHL Express – Excellence. Simply delivered.

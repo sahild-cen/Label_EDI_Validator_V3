@@ -1,0 +1,82 @@
+Appendix G
+Label Certification Process
+Label Certification Process 
+Submission Instructions                                                                                                     
+•Please use the additional guidelines below based on the services 
+being submitted.
+Label certification is necessary when one of the following events 
+occurs:
+
+• 
+ 
+The customer is new or the customer is implementing a new 
+shipping application
+
+• 
+ 
+A new printer is being introduced
+• 
+ Any label that is physically printed and then scanned must be 
+equally distributed among all printers supported. The number of 
+required labels will be dependent on the number of supported UPS 
+services. Please use the example below to determine how many 
+labels should be submitted.
+
+• 
+ 
+New label stock is being introduced
+
+• 
+ 
+The customer is adding a new UPS Service
+
+• 
+ 
+Issues with currently approved labels have been identified
+	
+
+• If 20 labels are expected to be printed and scanned, and the 
+customer supports 5 printers, those 20 labels must be divided 
+among the 5 supported printed, meaning 4 labels must be 
+printed and scanned per printer.
+Label Submission Requirements
+Note: the new email address for Label questions and submissions is 
+labelcertifysubmissions@ups.com.
+All submissions are housed within the Label Testing Tool (LTT), an 
+internal online platform within iGate used to evaluate and store 
+label data. To begin your submission, create and send test labels 
+as described below to your Account Representative. Your Account 
+Representative must complete the customer form by logging into 
+LTT using the following link: Label Testing Tool on iGate 
+•The turnaround time for label testing is two (2) business days 
+(excluding weekends and holidays) unless otherwise specified. 
+Submitters should expect to receive email notifications when their 
+submission is uploaded, received, and when feedback is available. 
+• Customers are required to provide at least two (2) labels per service 
+selected in the submission. Please choose one of the two following 
+methods to obtain the label images: 
+•	
+Method 1: 
+Instruct the customer to print the labels to their thermal label printer. 
+To submit this label, scan or take a picture to save to your computer. 
+•	
+Method 2: 
+Save the labels directly from the label software using the “Print to 
+PDF” or “Print to File” option. 
+Note: If taking a picture, please ensure label is in focus and crop the 
+photo to only include the label image. 
+o	 Save all label images in PDF, JPEG, or PNG format. 
+o	 Name each file according to the last 4 digits of the tracking # and 
+the UPS service level represented on the label (ex. 1234_Ground),  
+Note: The Last 4 digits of the tracking # will be used in the feedback 
+report to identify issues related to specific labels.
+o	 Each of the labels above should be unique (i.e., a unique tracking 
+number should be listed on each label). 
+•Combine all label images into a zip file. LTT allows a maximum of 
+3 files to be uploaded at a time, so zip files will allow customers to 
+submit more than 3 labels at once.  
+73
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

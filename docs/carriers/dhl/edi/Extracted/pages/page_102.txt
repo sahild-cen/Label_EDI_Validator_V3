@@ -1,0 +1,91 @@
+Message Specification Guidelines                         
+                          
+ 
+Appendix D – Message structure and content for Loose BBX shipments 
+and Sample Message 
+Break Bulk Express (BBX) is a DHL Express service which streamlines destination Customs procedures, 
+minimizing Customs lodgment fees charged. It includes the submission of shipment data records for a 
+“Mother” shipment and a number of corresponding “Baby” shipments. 
+Consolidated BBX is where the Baby shipments are packed together, e.g. on pallets, forming a smaller 
+number of pieces of the Mother shipment (e.g. 1 pallet = 1 Mother shipment piece) 
+Loose BBX is where the BBX service is used but shipments are not packed together (e.g. not palletized). 
+ 
+No. 
+Requirement 
+Location in 
+Message 
+- 
+Applied to both Mother shipment record and Baby shipment records 
+1* 
+Records for Baby shipments and their corresponding Mother shipment must be 
+submitted together in one IFCSUM file 
+2 
+Shipper Account given in SG4 - NAD segment (therefore applied to all shipment 
+records in file) with CZ qualifier, but not in Payer Account (see point 6)  
+SG 4 – NAD 
+Page 31 
+Against Mother Shipment 
+3 
+DHL Product Code likely WPX (confirm with DHL Express) 
+As TSR+++WPX:57:87' 
+SG 25 – TSR 
+Page 40 
+SG 25 - MOA 
+Page 41 
+4 
+Dutiable shipment, therefore must include Declared Total Customs Value As 
+MOA+43:x:yyy' where x is numeric value to 2 decimal places and yyy is three 
+letter currency code 
+5* 
+Service Code 230 given, as TOD+6++DDU:::230' 
+(where DDU is Terms of Trade of shipment) 
+SG 31 – TOD 
+Page 43 
+SG 43 – NAD 
+Page 51 
+6 
+Payer Account is FOC (free of charge) account. Exact value must be confirmed 
+with DHL Express in the shipping country - will likely consist of 9 alpha 
+characters including a pre-fix of FOC 
+As NAD+FP+FOCXXXXXX', where FOCXXXXXX is payer account 
+SG 43 – NAD 
+Page 51 
+7 
+Receiver Name contains Company Name of Importer of Record c/o DHL 
+Express. Receiver Contact Name and details, and Receiver address details 
+given for DHL facility at point of entry into destination country (confirm details 
+with DHL Express) 
+SG 50 – GID 
+Page 59 
+8* 
+Piece records against each Baby shipment also given against Mother shipment 
+i.e. Piece IDs shared (therefore No. of Mother Shipment Pieces = Sum of 
+Shipment Pieces across all Baby Pieces) 
+SG 25 – CNT 
+Page 39 
+Against Baby Shipment 
+9* 
+No. of Mother shipment pieces (so sum of all corresponding Baby shipment 
+pieces) given against each Baby Shipment 
+As CNT+56:x’ where x is no. of Mother shipment pieces 
+10 
+Has DHL Product Code BBX, as TSR+++BBX:57:87' 
+SG 25 – TSR 
+Page 40 
+11* 
+Service Code 231 given, as TOD+6+++:::231' 
+SG 31 – TOD 
+Page 43 
+SG 32 – RFF 
+Page 46 
+12 
+Corresponding Mother Shipment AWB no. given as Shipper Reference with ACL 
+Qualifier 
+As RFF+ACL:9999999999' where 9999999999 is Mother AWB no. 
+SG 43 – NAD 
+Page 51 
+13* 
+Mother shipment Receiver Address and Contact Details given as Port of Entry 
+Address and Contact Details, in NAD segment with JD qualifier with 
+corresponding CTA and COM segments. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 102 of 115

@@ -1,0 +1,20 @@
+Message Specification Guidelines                         
+                          
+ 
+SECURELINE 
+OBC 
+6 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door delivery 
+by way of an on-board courier or chartered 
+aircraft for the highest level of security, within a 
+target of 24 hours. 
+SAME DAY 
+SDX 
+S 
+Scheduled door-to-door pick-up generally before 
+noon and an export or domestic delivery to 
+limited destinations within the very same 
+business day. At times limited to document 
+shipment only. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 95 of 115

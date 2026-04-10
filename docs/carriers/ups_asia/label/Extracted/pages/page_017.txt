@@ -1,0 +1,52 @@
+Label Format Requirements
+Additional Routing Instructions Block
+50.5 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3VP
+SHP WT: 50.5 KG
+STREET ADDRESS
+POSTAL CODE LINE
+DATE: 11 JAN 2020
+SHP DWT: 50.5 KG
+COUNTRY
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+POSTAL CODE LINE
+COUNTRY
+UPS Routing Code*
+UPS EXPRESS
+TRACKING #:
+1Z 1X2 X3X 66 0000 5627
+1
+BILLING: P/P
+Billing Option
+Documentation 
+Indicator
+EDI-PULL
+DESC: LASER PRINTER
+Description of Goods
+POA
+18.5A 01/2020
+Additional Routing Instructions
+UPS Routing Code
+Version 
+Control Number 
+(found in header of 
+the URC file)
+*
+This is an example of a label where a UPS Routing Code does not exist 
+in the URC table.
+13
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

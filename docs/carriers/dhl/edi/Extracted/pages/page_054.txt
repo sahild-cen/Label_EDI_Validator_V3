@@ -1,0 +1,78 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 44 - COM 
+Segment 
+Occurrence 
+Usage 
+Description 
+COM 
+9 
+C 
+ Communication Contact                                                                 
+Function: To identify a communication number of a person or department to whom communication should be 
+Directed. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C076 
+M 
+ 
+COMMUNICATION CONTACT 
+   3148 
+M 
+AN..70 
+Communication address identifier 
+   3155 
+M 
+AN..3 
+Communication address code qualifier 
+ 
+Example: 
+COM+31 653 123 456:TE’ 
+COM+?+31 653 123 456:TE’ 
+ 
+Note: 
+This segment is used to indicate a communication contact with the Consignee/Receiver 
+for pre-notifying about a to-be delivered shipment or to inform of a to-be collected 
+shipment. This segment has to be used to give additional information on the specified 
+contact given in the previouhs CTA segment. 
+ 
+Note 3148: 
+If the phone number is beginning with the ‘+’ sign, the ‘?’ release character should come 
+immediately before the ‘+’ sign in order to avoid translation problem. 
+Only 70 characters will be accepted by DHL. 
+ 
+ 
+Note 3155: 
+Use: 
+ 
+ 
+‘EM’ - Electronic Mail. 
+‘FX’ – Telefax. 
+‘TE’ - Telephone. 
+ 
+ 
+‘AL’ – Cellular phone 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 54 of 115

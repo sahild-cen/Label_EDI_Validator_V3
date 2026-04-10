@@ -1,0 +1,52 @@
+Europe-Specific Label Requirements
+COD Additional Routing Instructions Block
+Additional Routing Instructions Block
+Shipment is Non-Dutiable
+When processing COD shipments, additional 
+information is required on the label.
+• Routing Instruction = EDI-COD
+Shipping System Generates Invoice for Dutiable 
+Shipment
+• Routing Instruction = INV-COD
+Shipping System Does Not Generate Invoice 
+for Dutiable Shipment and Invoice Is Required
+• Routing Instruction = KEY-COD
+COD ROUTING INSTRUCTION AND AMOUNT — 
+LEAD PACKAGE
+These indicators must print left-justified 
+immediately below the Billing Option line on the 
+Lead Package only. The amount must be in the local 
+currency of the destination country or EURO and 
+include two decimal places and the currency code. 
+For currency amounts of 1000 or above, insert a 
+point (e.g., 1.524,90 GBP). The font size is 10 pt.
+Shipping System Generates Invoice for EU Goods 
+Not in Free Circulation
+• Routing Instruction = INV-T1
+COD CASH ONLY
+• Routing Instruction = COD CASH nn.nnn,nn EUR
+Shipping System Does Not Generate Invoice 
+for EU Goods Not in Free Circulation
+• For Example:  COD CASH 130,50 EUR
+• Routing Instruction = KEY-T1
+COD Cheque
+• Routing Instruction = COD CHEQUE nn.nnn,nn  
+                                                  GBP
+ For Example:  COD CHEQUE 1.100,50 GBP
+COD ROUTING INSTRUCTION — CHILD PACKAGES
+The text “COD” must print on the child packages in 
+the same location as the COD Routing Instruction 
+for the Lead Package. The font size is 10 pt.
+COD INDICATOR — All Packages
+The COD indicator prints in combination with 
+the Documentation indicator on the label. 
+These indicators must print right-justified in the 
+Additional Routing Instructions Block immediately 
+below the highlight bar of the Tracking Number 
+Barcode Block and are printed on the lead and child 
+packages. The font size is 16 pt. bold.
+42
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

@@ -1,0 +1,22 @@
+Message Specification Guidelines                         
+                          
+ 
+Mandatory/Optional Fields 
+ 
+M Mandatory - This item must be present in all data transactions - used for critical  
+data which is also Mandatory in the EDIFACT standard. 
+ 
+R Required - This item must be present in all data transactions. In the opinion of the implementation 
+guide designers it is essential for this business use of the transaction set, however not defined as 
+Mandatory in the EDIFACT standard.  
+ 
+C Conditional - This item is the subject of a syntax rule (a relational condition) which links its usage with 
+that of other items. If not used a data element separator giving its position must still be given, unless it 
+appears at the end of a segment in which case the data element separator is also not required. 
+ 
+X Not Used - This item is not used in a data transaction. A data element separator giving its position must 
+still be given, but no content should be given, unless it appears at the end of a segment in which case the 
+data element separator is also not required. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 15 of 115

@@ -1,0 +1,68 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 
+58 
+SG 50 - GID 
+58 
+Segment Group 52 
+59 
+SG 52 - MEA 
+59 
+Segment Group 53 
+60 
+SG 53 - DIM 
+60 
+Segment Group 54 
+61 
+SG 54 - RFF 
+61 
+Segment Group 55 
+62 
+SG 55 - PCI 
+62 
+SG 55 - GIN 
+63 
+Segment Group 65 
+64 
+SG 65 - DGS 
+64 
+SG 65 - FTX 
+65 
+Segment Group 67 
+66 
+SG 67 - MEA 
+66 
+Segment Group 70 
+67 
+SG 70 - EQD 
+67 
+SG 70 - EQN 
+68 
+SG 70 - MEA 
+69 
+Segment Group 25 (Invoice Level) 
+70 
+SG 25 - CNI 
+70 
+SG 25 - CNT 
+71 
+SG 25 - MOA 
+72 
+SG 25 - FTX 
+73 
+Segment Group 31 (Invoice Level) 
+74 
+SG 31 - TOD 
+74 
+SG 31 - LOC 
+75 
+Segment Group 32 (Invoice Level) 
+76 
+SG 32 - RFF 
+76 
+Segment Group 33 (Invoice Level) 
+77 
+SG 33 - GOR 
+77 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 7 of 115

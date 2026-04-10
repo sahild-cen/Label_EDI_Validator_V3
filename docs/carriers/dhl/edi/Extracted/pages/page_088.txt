@@ -1,0 +1,46 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 63 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG63 
+1 
+R 
+ TCC 
+Function: A group of segments to specify information associated with the goods item. 
+ 
+SG 63 - TCC 
+Segment 
+Occurrence 
+Usage 
+Description 
+TCC 
+1 
+M 
+ Charge/Rate Calculations 
+Function: A segment to specify charges/quantity associated with the goods item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C200 
+R 
+ 
+CHARGE 
+   8023 
+R 
+AN..17 
+Freight and other charges description identifier 
+ 
+Example:  
+TCC+DHL' 
+ 
+Note 8023:  
+Use ‘DHL’ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 88 of 115

@@ -1,0 +1,86 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 6   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 6 
+9 
+C 
+ RFF 
+Function: A group of segments to specify a reference related to the party  
+ 
+SG 6 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                        
+Function: To identify a reference, in this case the VAT number and Registration numbers, used by a party.  
+This segment group may be used for customs clearance shipments (only destinations in non-EU countries).  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+   1156 
+R 
+AN..2 
+Document line identifier  
+ 
+Example:  
+RFF+VA:BE12345678:BE’ 
+ 
+ 
+RFF+ZZZ:123456789:SG 
+ 
+Note: 
+This segment used to record the Registration numbers of the different role types.  For 
+example, VAT number of the Shipper/Consignor, Route Code and Cycle code.  
+ 
+Values are validated against role types under the DHL equivalent values of SG4-NAD-
+3035. 
+ 
+Note 1153: 
+For the full list of possible Registration Number Type for different role types / Country, 
+refer to "DHL Express Integrated Solution Reference Information" (available from DHL 
+Express on request) 
+ 
+Examples include: 
+‘VA’ – VAT Registration Number 
+                          ‘AUS’ – Delivery Route reference or shipper route code and pickup cycle code  
+‘ZZZ’ – Overseas Registered Supplier Reference No.”, for example where it is required 
+with low value shipments to Singapore (see also SG-50 FTX) 
+ 
+Note 1154: 
+Actual registration number. Only 35 characters will be accepted by DHL. 
+Note 1156: 
+ISO 3166-1 Alpha 2 country codes format 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 34 of 115

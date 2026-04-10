@@ -1,0 +1,12 @@
+Message Specification Guidelines 
+ 
+Global EDI Manifesting Service 
+IFCSUM D01B version 3.0 
+(document version 1.3.9) 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0                   Confidential                             Page 1 of 115

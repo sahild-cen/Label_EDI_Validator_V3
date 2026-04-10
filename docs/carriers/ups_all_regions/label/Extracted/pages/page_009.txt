@@ -1,0 +1,144 @@
+UPS World Ease™ Specifications
+Label Format Requirements 
+• All of the thermal over-labels must display the 
+same port of entry in the “Sort To” field
+• The lead package (doc box) over-label must print 
+SHIP TO INFORMATION
+This block contains the import site information. 
+All characters must be in bold, uppercase letters.
+Title positioned to the far left:
+• 
+Line 1 = SORT
+• 
+Line 2 = TO:
+“PKG# 1 of___” (input total number of packages 
+including document box).  In the next segment 
+on right print the text “TRKG # ___” input the last 3 
+digits of the document box tracking number.  
+• The child packages must print “PKG # ___” (input 
+• 
+Font Size = 16 pt. bold
+The font size may be reduced based on printer 
+type and space available to accommodate the 
+complete text.
+package number).  In the next segment on right 
+print the text TRKG # ___ (all followed by the last 3 
+digits of the document box 1Z tracking number)
+UPS Import Site information must print to the right 
+of the "SORT TO:" text separated by a vertical line:
+• Line 1 = UPS, 16 pt. bold
+• Line 2 = Port Name, 16 pt. bold
+• Line 3 = Country Name, 14 pt. bold
+• Line 3 = Postal Code, 14 pt. bold
+The import site information can be found in the 
+Port of Entry (POE) table. Contact your UPS Account 
+Executive for information on POE tables.
+• When required, UPS World Ease™  shipments
+   must have a Master Invoice and the associated
+   Consolidated Invoice Detail (CID). (see page 16)
+PACKAGE COUNT 
+The package count indicates the number of the 
+package N, related to the number of packages 
+in the entire shipment X (e.g., N of X). Only N will 
+print on the over-label except, when the shipment 
+is the Document Box. The complete N of X for the 
+consolidated shipment must print only on the 
+document box.
+DOCUMENT BOX 
+• 
+Data Content
+Positions 	
+1-4	
+=	 PKG#
+Position 	
+5	
+=	 Space
+Positions 	
+6-8	
+=	 Up to three numeric
+Position 	
+9	
+=	 Space
+Positions 	 10-11	
+=	 OF
+INSTRUCTION TEXT
+This block contains instructions for the customer 
+and UPS Operations. The customer text explains 
+to the customer how to apply the over-label to 
+the package. This text will be translated when 
+appropriate. The UPS text informs Operations 
+when to remove the over-label. The over-label 
+will be removed at the import site. The UPS text 
+must always be in English.
+Position 	
+12	
+=	 Space
+Positions 	 13-15	
+=	 Up to three numeric
+CUSTOMER TEXT
+• 
+Font Size                                  = 12 pt.
+• 
+Title  = CUSTOMER:
+• For Example:  PKG# 1 OF 10
+• 
+Font Size = 8 pt. bold
+ALL OTHER PACKAGES OF A SHIPMENT
+• Text  =  *
+APPLY THIS LABEL OVER THE ADDRESS 
+LABEL DIRECTLY ABOVE THE UPS SERVICE 
+NAME.
+• 
+Data Content
+Positions 	
+1-4	
+=	 PKG#
+Position 	
+5	
+=	 Space
+	
+ *
+THE 1Z TRACKING NUMBER AND THE 
+BARCODE SHOULD BE VISIBLE.
+Positions 	
+6-8	
+=	 Up to three numeric
+	
+ *SEE BACK OF LABEL FOR EXAMPLE.
+• Font Size                                  = 14 pt.
+• 
+Font Size = 8 pt. 
+• For Example:  PKG# 3
+UPS TEXT
+• 
+Title  = UPS IMPORT:
+TRACKING NUMBER
+The last three digits of the shipment’s document box 
+1Z tracking number will print on each over-label.
+• 
+Font Size   = 8 pt. bold
+• 
+Data Content
+Positions 	
+1-5	
+=	 TRKG#
+• Text = 
+REMOVE THIS OVER-LABEL AFTER CUSTOMS 
+CLEARANCE.
+Position 	
+6	
+=	 Space
+• 
+Font Size  = 8 pt.
+Positions 	
+7-9	
+=	 Three numeric
+• 
+Font Size = 
+Document box: 12 pt. All others: 14 pt.
+• For Example:  TRKG# 763
+UPS Guide to Labeling
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+8
+Supplement

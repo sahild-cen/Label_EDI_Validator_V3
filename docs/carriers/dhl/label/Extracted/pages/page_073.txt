@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9. Specifications of Linear Barcodes  
+9.1.  
+General 
+The customer can apply more barcodes to the piece, linear as well as 2-dimensional, for his own purposes. 
+However, care must be taken that these other barcodes do not interfere with DHL internal processes. For this 
+reason, the following restrictions apply to other barcodes on the piece: 
+9.2. Linear Barcode Symbology 
+DHL uses Code 128 as standard barcode symbology for Piece Identifier and Routing Barcode. For bar-coded 
+information defined under GS1-standards (such as the GS1 SSCC) the GS1-128 barcode symbology has to be 
+used. 
+ 
+For best-possible read-rates of automated scanning, the barcodes on a label should not have the same distance 
+to the left or right edge. This is usually achieved by printing the barcodes centered on the label. Where that is 
+not possible, it is recommended to manually indent the Piece Identifier barcode by at least 2 millimeters. 
+ 
+In accordance with License Plate standards, DHL will also accept Code 39 for ASC MH10 coded information. 
+This barcode symbology however is not the preferred barcode symbology. 
+ 
+Code 39 must not be used for Piece Identifier barcodes on any labels produced by DHL or printed on 
+systems created by DHL. 
+ 
+ 
+When Code 39 is used by a customer, special care has to be taken that the barcodes do not exceed the 
+maximum length requirements, due to the low information density of this barcode. 
+ 
+9.2.1. 
+  Code 128 Barcodes 
+ 
+All BARCODE PARAMETERS must be as defined in ISO/IEC 16388 “Automatic identification and data capture 
+techniques -- Code 128 Barcode symbology specification”. 
+ 
+Code 128 Barcodes on piece labels and archive labels must meet the following specifications. 
+ 
+Symbol height 
+The minimum height for the barcodes is 25 mm, unless formally approved 
+(Global SOP) differently.  
+The Routing barcode, may exhibit an exceptional min height of 11 mm, 
+recommended for all Label templates where space is a challenge. 
+Both options are currently available and can be used. 
+x-dimension 
+The minimum narrow element dimension (x-dimension) shall not be less than 
+0.33 mm and shall also not exceed 0.51 mm for the ISO/IEC 15417 Standard. 
+The GS1 Standard defines size ranges for the GS1 barcode symbologies, in 
+the EAN General Specifications. For transport packaging, values within the 
+interval module width 0.495 mm to 0.660 mm are allowed. 
+Within the above indicated ranges, the biggest x-dimension should be used that 
+is supported by the printing device used, while complying with barcode length 
+and quiet zone specifications. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+72

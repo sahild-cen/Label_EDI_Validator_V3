@@ -1,0 +1,59 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - TSR  
+Segment 
+Occurrence 
+Usage 
+Description 
+TSR 
+1 
+R 
+ Transport Service requirements 
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C536 
+X 
+ 
+CONTRACT AND CARRIAGE CONDITION 
+C233 
+X 
+ 
+SERVICE 
+C537 
+R 
+ 
+TRANSPORT PRIORITY 
+   4219 
+M 
+AN..3 
+Transport service priority code 
+   1131 
+R 
+AN..17 
+Code list identification code 
+   3055 
+R 
+AN..3 
+Code list responsible agency code 
+ 
+Example:  
+TSR+++189:57:87’ (Express Worldwide EU) 
+TSR+++110:57:87’ (Economy Select EU) 
+ 
+Note 4219: 
+Use of this element is to indicate the DHL product. For more information about the 
+product codes, please consult your Sales Representative. 
+ 
+Note 1131: 
+Use ‘57’ – Product code. 
+ 
+Note 3055: 
+Use ‘87’ – Assigned by carrier. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 39 of 115

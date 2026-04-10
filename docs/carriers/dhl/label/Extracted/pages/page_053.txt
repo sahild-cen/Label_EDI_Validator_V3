@@ -1,0 +1,83 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+o 
+“[P]” – NETWORK PRODUCT CODE 
+o 
+“EXPRESS WORLDWIDE” – GLOBAL PRODUCT NAME 
+o 
+“(48)” – PRODUCT SORT CODE 
+6.6.2. 
+Payer Details (mandatory) 
+ 
+Payment-related information, captured by the shipping applications in association with the specific shipment 
+scenarios corresponding to the payment codes, will be presented with the following format: 
+  
+  , where: 
+ 
+• “FRT:”  (FREIGHT) PAYER ACCOUNT NUMBER (depending on service) 
+• “DHL Billing Service:” BILLING SERVICE INDICATOR  
+• “Duty Payer:” DUTY PAYER ACCOUNT NUMBER 
+• “Taxes Payer:” TAX PAYER ACCOUNT NUMBER 
+o 
+where both Identifiers always match* and depend on the service selected 
+o 
+*DHL does not split between Duty and VAT Billing and related accounts, so they are 
+always equivalent. For this reason, a single line “Duty/ VAT A/C” is also acceptable 
+ 
+The Service selected in combination with the account number in the Duty Payer A/C# and Tax Payer A/C # 
+fields, determines who will pay what. 
+ 
+DTU – with no account number mentioned is the default DHL service and Consignee always pays. 
+ 
+Where the Consignee account number is required but not yet known (e.g. in case of the Basic Feature “Duty 
+and Taxes Unpaid”), the line will just state “Duty: REC / Tax: REC”. 
+6.7.  
+Features and Services 
+DHL will consider, by default, that all context-related Charge Codes are applicable except for the so-called Basic 
+Features (i.e. the ones being part of the product). 
+ 
+ All services as ordered by the customer, to be grouped into one or more columns (see example next) to 
+accommodate the following data elements: 
+ 
+“GLOBAL 
+SERVICE 
+ 
+“VALUE OF SERVICE” 
+NAME”  
+ 
+“PRODUCT SERVICE 
+CODE” 
+ 
+“CURRENCY 
+CODE” 
+ 
+Delivery Signature 
+ 
+S 
+ 
+1 000.00 
+ 
+EUR 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+52

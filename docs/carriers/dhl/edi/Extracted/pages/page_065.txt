@@ -1,0 +1,50 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 65 - FTX 
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+C 
+ Free Text                                                                                            
+Function: To specify the dangerous goods technical name. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AAD+++TECHNICAL NAME’ 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 - RFF. Contact DHL Express for advice as to the values to use  
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 65 of 115

@@ -1,0 +1,63 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+3) The  Weight Symbols shall be applied irrespective of the original unit of measurement provided by the 
+Customer (e.g. kilogram (kg) or pound (lb) in the WEIGHT_UOM message field 
+ 
+Summary 
+ 
+No  Piece Weight Specification  
+ 
+Weight Range  
+Weight Icon Printed  
+1 Less than 10 kg or 22 lb  
+0.100 to 9.999 kg  
+No Icon printed  
+0.100 to 21.999 lb  
+  
+2 Equal to or greater than 10 kg or 22 
+10.000 to 19.999 kg  
+lb but less than 20 kg or 44 lb  
+22.000 to 43.999 lb  
+  
+3 Equal to or greater than 20 kg or 44 
+20.000 kg or   
+lb 
+44.000 lb and above  
+  
+5.11.4.1.1. Standard Location of Weight Symbols 
+ 
+The new Weight Symbol shall be located in the current segment containing the Piece and Shipment Weights, 
+on their left side.  
+ 
+To ensure that the weight icon is easily visible in all distinct templates and does not overlap with other shipment 
+fields, fine adjustments and variations of the Symbol locations are acceptable.  
+ 
+Implementation of deviations from the Global SOP Standard Transport Label and respective Weight Symbol 
+location require pre-approval from Global SOP or from the Global Competence Center for Labels and Barcodes. 
+ 
+Next, two samples showcasing the application of the Weight Symbols on a standard 8x4 label and a smaller 6x4 
+label:  
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+31

@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+10.2.2. Application Example 
+Customers print data on the label and 
+use the adhesive surface to stick these 
+to the container they are using to ship 
+their commodity. 
+     
+ 
+ 
+10.3. 
+ 
+Key Technical Data 
+10.3.1. Specifications 
+Specification 
+Value 
+Units 
+Tolerance 
+Glue strength (rolling ball test) 
+48 (1.8) 
+mm (in) 
+±5mm 
+Thickness of paper 
+10 
+µm (in) 
+±2µm 
+ 
+10.3.2. DHL Standard Specifications List 
+Standard Specification 
+Base unit 
+DHL Express Adhesive Label 
+Hot melt adhesive 
+Raflatac RH9 or other adhesive with similar properties 
+Paper type 
+Thermal 
+Minimum temperature for 
+application 
+0°c 
+Adhesive operational temperature 
+window 
+-40°c to +60°c 
+Recyclable 
+Yes 
+Printer 
+For standard printers up to 200 mm/s 
+ 
+10.3.3. Useful Life 
+The useful life of label must be 2 years in storage at 20°c. It must be able to travel on the DHL Express network 
+for 10 days with no deterioration in its ability to its adhesion properties. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+78

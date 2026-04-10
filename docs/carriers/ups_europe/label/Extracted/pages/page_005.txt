@@ -1,0 +1,89 @@
+UPS Smart Label™ Design 
+Introduction
+Enabling Timely Deliveries and Accurate Information
+UPS continues to apply sophisticated technology to 
+computer-generated labels. The latest innovations to the 
+UPS Smart Label™ design provides prompt deliveries, more 
+accurate routing and 24/7 access to up-to-the-minute tracking 
+and delivery information for all packages and shipments.
+UPS aims to provide timely, accurate delivery information. 
+By continuously investing in technology, UPS ensures that 
+the most up-to-date routing and tracking methods are 
+used as packages move from one location to another. These 
+advancements in technology helps UPS meet customer's 
+transportation needs.
+As soon as UPS scans the label, the physical (your package 
+and the UPS delivery system) joins the virtual (the information 
+about it).
+The UPS Smart Label™ print contains five key data elements 
+that enables it to be processed efficiently by the technologies 
+used in the delivery network. The elements are:
+The foundation of routing, tracking and information 
+management at UPS is the automated scanning system that 
+reads barcodes on each package. Every barcode uniquely 
+identifies each individual package and relays information 
+about that package’s movement until it reaches its final 
+destination.
+1. MaxiCode™ Symbology - contains the shipment detail.
+2. Tracking Number Barcode - uniquely identifies your 
+package in the UPS network.
+3. UPS Routing Code: - identifies the UPS delivery facility.
+4. Postal Barcode - contains the receiver’s postal code.
+5. Service Icon - identifies the service you selected.
+When modified by the shipper, barcodes provide added 
+benefits, such as aggregating inventory SKUs, prices and 
+purchase order numbers with UPS required shipment 
+information. Whether uploaded via UPS shipping systems or 
+UPS Ready™ vendor shipping systems, shippers receive the 
+added benefit of linking their internal information with UPS’s 
+scan information.
+50.5 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3VP
+SHP WT: 50.5 KG
+STREET ADDRESS
+POSTAL CODE LINE
+DATE: 11 JAN 2020
+SHP DWT: 50.5 KG
+COUNTRY
+CONTACT NAME
+SHIP
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+POSTAL CODE LINE
+COUNTRY
+UPS Routing
+Code (URC)
+DEU 063 9-39
+MaxiCode
+Postal
+Barcode
+UPS SAVER
+1Z 1X2 X3X 86 0000 5401
+TRACKING #:
+1P
+Service Icon
+Tracking
+Barcode
+BILLING: P/P
+EDI-PULL
+DESC: COMPUTER EQUIPMENT
+POA
+18.5A 01/2020
+The user-created barcodes and the MaxiCode™ data are important in the delivery of critical information to shippers and 
+to their trading partners, suppliers and customers. Using an automated shipping solution provides additional benefits to 
+shippers from quick access to the addresses you use most often, to checking rates with the built-in rate calculator, to keeping 
+track of your shipping activities with the system’s report feature. UPS has incorporated features into our automated shipping 
+solutions that will continue to improve the efficiency of your logistics operations.
+3
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

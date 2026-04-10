@@ -1,0 +1,108 @@
+Appendix A
+MaxiCode™ Specifications
+Example 3 (International)
+Example 4 (Letter or Envelope)
+A typical international data string would appear 
+as follows:
+[)><RS>	
+Message Header
+When the package option selected is a UPS Letter or 
+Envelope, the following data string should be used 
+for the MaxiCode™ data string:
+[)><RS>	
+Message Header
+01<GS>96	
+
+Transportation Data 
+Format Header
+51147<GS>	
+Postal Code1 
+01<GS>96	
+
+Transportation Data 
+Format Header
+276<GS>	
+Country Code
+841706672<GS>	
+Postal Code
+066<GS>	
+Class of Service
+840<GS>	
+Country Code
+001<GS>	
+Class of Service
+1Z12345679<GS>	 Tracking Number
+UPSN<GS>	
+SCAC
+1X2X3X<GS>	
+UPS Account Number
+1Z12345675<GS>	 Tracking Number
+UPSN<GS>	
+SCAC
+187<GS>	
+Julian Day of Pickup
+1X2X3X<GS>	
+UPS Account Number
+187<GS>	
+Julian Day of Pickup
+<GS>	
+
+Place holder for Shipment 
+ID Number 
+1/1<GS>	
+Package N/X
+<GS>	
+
+Place holder for 
+Shipment ID Number
+10<GS>	
+Package Weight 
+1/1<GS>	
+Package N/X
+N<GS>	
+Address Validation
+<GS>	
+Package Weight2
+N<GS>	
+Address Validation
+<GS>	
+
+Place holder for SHIP 
+TO Street Address
+COLOGNE<GS>	
+SHIP TO City
+<GS>	
+
+Place holder for SHIP 
+TO Street Address
+SALT LAKE CITY	
+
+SHIP TO City
+<RS>	
+
+Place holder for SHIP 
+TO State End of Format
+<GS> UT<RS>	
+SHIP TO State
+<EOT>	
+End of Transmission
+<EOT>	
+End of Transmission
+[)><RS>01<GS>9651147<GS>276<GS>066<GS>
+1Z12345677<GS>UPSN<GS>1X2X3X<GS>187<G
+S><GS>1/1<GS>10<GS>N<GS>5 WALDSTRASSE<
+GS>COLOGNE<GS><RS><EOT>
+[)><RS>01<GS>96841706672<GS>840<GS>001
+<GS>1Z12345673<GS>UPSN<GS>1X2X3X<GS>
+187<GS><GS>1/1<GS>1<GS>N<GS>1 MAIN ST 
+<GS>SALT LAKE CITY<GS>UT<RS><EOT>
+1
+International postal codes vary in lengths (0-9 digits). Encode the actual postal code without the spaces or special characters 
+- such as the dash (-). Ensure that the postal code encoded in the MaxiCode™ data string is the same as the one encoded in 
+the postal barcode.
+2No value will be populated for Letters or Envelopes.
+53
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

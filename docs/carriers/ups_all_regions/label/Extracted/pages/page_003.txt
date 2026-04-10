@@ -1,0 +1,20 @@
+UPS Contractual Services
+Introduction
+What’s New
+The World Ease single label (without Over-Label) will now
+be a new label option supported for customers that want to
+simplify their label generation process. The new consolidated
+label will include the UPS Import Site Information on the
+same label as the final destination. See page 17.
+For additional service details, please refer to the UPS 
+Rate and Service Guide.
+All  UPS Worldwide Economy labels must display EDI on the 
+labels.
+Plee note that all UPS labels featured in this guide are for 
+visual representation only and should not be used as real 
+shipping labels.
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+2
+Supplement

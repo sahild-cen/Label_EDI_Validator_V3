@@ -1,0 +1,36 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+6. eWaybill – Segment Specifications 
+ 
+A Global Standard eWaybill is required for all shipments, either in printed or electronical form, whenever the 
+associated paperwork needs to be archived (imaged) and indexed. It is a Document type containing all 
+information and data relevant for correctly billing a customer or supporting Data Entry, Billing-related Invoice 
+Validation processing or even to be used as a Customer Receipt.   
+Due to distinct functions taken by the eWaybill Type and audiences, the Reference Purpose is to be printed as 
+working Title (see image below) and shall vary accordingly (e.g. “Waybill”, “DHL Copy – please hand to Courier”, 
+“Customer Receipt”). 
+This is a document type at shipment level, which is never to be appended (or visible in) to a package because 
+it is not a transport label! It is also not required for all products in printed form – see Global SOP for further 
+details. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+48

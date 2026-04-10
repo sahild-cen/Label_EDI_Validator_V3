@@ -1,0 +1,51 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 63 - QTY 
+Segment 
+Occurrence 
+Usage 
+Description 
+QTY 
+1 
+R 
+ Quantity 
+Function: A segment to indicate a Invoiced line item quantity 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C186 
+M 
+ 
+QUANTITY DETAILS 
+   6063 
+M 
+AN..3 
+Quantity type code qualifier 
+   6060 
+M 
+N..35 
+Quantity 
+   6411 
+R 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+QTY+47:1:PCE' 
+ 
+Note 6063:  
+Use: 
+ 
+47 - Invoiced line item quantity 
+ 
+Note 6060:  
+Count of the total number of goods items within a line item. No Decimals values 
+ 
+Note 6411:  
+Code specifying the unit of measurement. e.g. PCE, PCS 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 89 of 115

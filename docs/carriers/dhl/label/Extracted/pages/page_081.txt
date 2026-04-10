@@ -1,0 +1,100 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13. Reference Loose BBX Transport Label layout, image, 
+updated with individual segments’ identification 
+7.4 
+ 
+ 
+14. Removal of reference to outdated section (11.1)  
+5.12.2 
+ 
+15. Removal of outdated section 5.11.2 “DHL Shipment 
+ 
+Identifier (mandatory)” and corresponding renumbering 
+of the sub-sequent sections 
+5.11.2 
+ 
+ 
+16. Original images replaced with higher-quality ones 
+All sections 
+ 
+ 
+17. Updated images to reflect latest GDPR guidelines 
+8 
+ 
+18. Piece Identifier length (i.e. number of characters 
+ 
+following the Data Identifier) of type JD01 made more 
+clear 
+5.16.3 
+ 
+19. The US Destination Control Statement (US DCS) was 
+ 
+5.12.1.1 
+ 
+removed from the Transport and Waybill Doc images 
+as it is no longer required by the US government.  The 
+US government harmonized the US DCS and only 
+requires it to be listed on the commercial invoice. 
+ 
+20. “Neutral Content Description” section introduced 
+5.13.1.1 
+ 
+21. “Considerations on Highly-Compact Labels” – final 
+8.1.6 
+ 
+ 
+layout and segments’ dimensional matrix updated 
+        22. “Considerations on 2D-enabled Transport Labels” – 
+8.1.7 
+ 
+Phase 2A layout and segments’ dimensional matrix updated 
+        23. Addition of “2D Data Matrix – Customer Data” section, 
+5.12 
+ 
+formally introducing the 2D-enabled Transport Label layout  
+        24. Addition of Bi-Dimensional Barcode Symbologies and 
+9.3 
+ 
+symbol attributes 
+       25. “Reverse Video Format” added to Definitions  
+4.1 
+ 
+       26. Specification of Medical EXPRESS Logo added 
+5.10.4 
+ 
+5.10.4 
+ 
+ 
+      27. Correction of the area reserved for the Medical 
+EXPRESS Logo  
+6.8 
+ 
+Commented [PG1]: Updated 
+ 
+      28. Sample image updated to correspond to and reflect 
+specification for 2 decimal points 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+80

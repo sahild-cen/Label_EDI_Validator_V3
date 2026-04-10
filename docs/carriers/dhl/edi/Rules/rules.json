@@ -1,0 +1,784 @@
+{
+  "carrier_code": "dhl",
+  "spec_type": "edi",
+  "generated_at": "2026-04-09T17:21:43.137858+00:00",
+  "spec_files_used": 31,
+  "reviewed_only": false,
+  "rules": [
+    {
+      "field": "interchange_sender",
+      "segment": "UNB",
+      "position": 2,
+      "required": true,
+      "regex": "",
+      "description": "Interchange sender identification in UNB header"
+    },
+    {
+      "field": "interchange_recipient",
+      "segment": "UNB",
+      "position": 3,
+      "required": true,
+      "regex": "",
+      "description": "Interchange recipient identification in UNB header"
+    },
+    {
+      "field": "message_reference_number",
+      "segment": "UNH",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Unique message reference number in UNH header"
+    },
+    {
+      "field": "message_type",
+      "segment": "UNH",
+      "position": 2,
+      "required": true,
+      "regex": "",
+      "description": "Message type identifier (e.g., IFTMIN or IFCSUM) in UNH header"
+    },
+    {
+      "field": "beginning_of_message",
+      "segment": "BGM",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Document/message name code identifying the type of message"
+    },
+    {
+      "field": "message_creation_date",
+      "segment": "DTM",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Date/time/period at header level for message creation date"
+    },
+    {
+      "field": "consignment_number",
+      "segment": "CNI",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Consignment/transport document number at SG25 shipment level. Mandatory."
+    },
+    {
+      "field": "expected_delivery_date",
+      "segment": "DTM",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Expected delivery date at shipment level (SG25). Up to 3 occurrences. Conditional."
+    },
+    {
+      "field": "consignment_remarks",
+      "segment": "FTX",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Free text consignment remarks at SG25 shipment level. Qualifiers: CCI (Custom Remarks), AAU (Duty Free Import Remarks). Up to 9 occurrences."
+    },
+    {
+      "field": "declared_customs_value",
+      "segment": "MOA",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Monetary amount at shipment level (SG25) for declared customs value, COD, or insurance. Up to 4 occurrences."
+    },
+    {
+      "field": "shipment_reference_number",
+      "segment": "RFF",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Reference numbers at shipment level (SG32). Up to 999 occurrences."
+    },
+    {
+      "field": "invoice_reference_number",
+      "segment": "RFF",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Commercial Invoice Reference Number at invoice-level SG32. Required. Up to 999 occurrences. MRN uses qualifier ABT (not 'MRN')."
+    },
+    {
+      "field": "invoice_reference_mrn_qualifier",
+      "segment": "RFF",
+      "position": "C506:1153",
+      "required": false,
+      "regex": "^ABT$",
+      "description": "MRN (Movement Reference Number) qualifier at invoice-level SG32. Must use ABT, not MRN. Per change report v1.3.3."
+    },
+    {
+      "field": "product_features",
+      "segment": "TOD",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Terms of delivery / product features at SG31 level. See Appendix B for product feature codes. Includes LBBX service codes."
+    },
+    {
+      "field": "product_features_account_number",
+      "segment": "TOD",
+      "position": "4052:2",
+      "required": false,
+      "regex": "",
+      "description": "Account Number within TOD segment. Added per change report v1.1."
+    },
+    {
+      "field": "incoterm_location",
+      "segment": "LOC",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Location related to incoterms at SG31 level. Up to 1 occurrence following TOD. DHL Express Facility Codes per v1.3.8."
+    },
+    {
+      "field": "governmental_procedures",
+      "segment": "GOR",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Governmental procedures for import/export at SG33 level. 1 occurrence. At invoice level indicates Document Function."
+    },
+    {
+      "field": "accompanying_documents",
+      "segment": "DOC",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Accompanying documents for customs clearance at SG34 level. 1 occurrence per SG34. Followed by DTM for document date."
+    },
+    {
+      "field": "consignee_name_and_address",
+      "segment": "NAD",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Consignee/Importer/Exporter name and address at SG43 level. Required. Up to 9 occurrences. Supports NAD+JD for Port of Entry (LBBX)."
+    },
+    {
+      "field": "port_of_entry_address",
+      "segment": "NAD",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Port of Entry address using NAD+JD qualifier at SG43 level. DHL-specific. Conditional for LBBX shipments. Added v0.8."
+    },
+    {
+      "field": "consignee_contact_name",
+      "segment": "CTA",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Contact person name for delivery at SG44 level (nested under SG43 NAD). Up to 9 occurrences."
+    },
+    {
+      "field": "consignee_communication_contact",
+      "segment": "COM",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Communication contact at SG44 level. Up to 9 occurrences. Qualifiers: TEL (telephone), EML (email), FAX (fax), AL (mobile)."
+    },
+    {
+      "field": "consignee_communication_qualifier",
+      "segment": "COM",
+      "position": "C076:3155",
+      "required": false,
+      "regex": "^(TEL|EML|FAX|AL)$",
+      "description": "Communication type qualifier. TEL=telephone, EML=email, FAX=fax, AL=mobile phone. AL added per v0.8."
+    },
+    {
+      "field": "consignee_reference_numbers",
+      "segment": "RFF",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Party reference numbers (e.g., VAT number) at SG47 level for Consignee/Importer/Exporter. Conditional."
+    },
+    {
+      "field": "goods_item_details",
+      "segment": "GID",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Goods item identification at SG50 piece level. Mandatory. 1 occurrence. Also appears at invoice line item level."
+    },
+    {
+      "field": "piece_weight",
+      "segment": "MEA",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Piece weight/measurements at SG52 level. Required. Up to 9 occurrences. Default unit: KGM (Kilograms), also LBR (Pounds)."
+    },
+    {
+      "field": "piece_weight_unit",
+      "segment": "MEA",
+      "position": "C174:6411",
+      "required": true,
+      "regex": "^(KGM|LBR)$",
+      "description": "Weight measurement unit. KGM=Kilograms (default), LBR=Pounds."
+    },
+    {
+      "field": "piece_dimensions",
+      "segment": "DIM",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Piece dimensions (L x W x H) at SG53 level. Required. 1 occurrence."
+    },
+    {
+      "field": "piece_dimension_unit",
+      "segment": "DIM",
+      "position": "C211:6411",
+      "required": true,
+      "regex": "^(CMT|MTR|INH)$",
+      "description": "Dimension unit. CMT=Centimeters (default), MTR=Meters, INH=Inches."
+    },
+    {
+      "field": "piece_volume_unit",
+      "segment": "DIM",
+      "position": "C211:6411",
+      "required": false,
+      "regex": "^(MTQ|CMQ|INQ)$",
+      "description": "Volume unit. MTQ=Cubic Meters (default), CMQ=Cubic Centimeters, INQ=Cubic Inches."
+    },
+    {
+      "field": "piece_reference_number",
+      "segment": "RFF",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Piece reference number at SG54 level. Conditional. Up to 9 occurrences."
+    },
+    {
+      "field": "package_identification",
+      "segment": "PCI",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Package markings at SG55 piece level. Required. 1 occurrence. Accompanied by GIN for barcoded identification."
+    },
+    {
+      "field": "goods_identity_number",
+      "segment": "GIN",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "Bar coded goods identification number accompanying PCI at piece level."
+    },
+    {
+      "field": "invoice_monetary_amounts",
+      "segment": "MOA",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Invoice-level monetary amounts at SG25. Required. Up to 99 occurrences. Includes customs value, COD, insurance, duty/tax (Perfect Invoice per v1.3.6)."
+    },
+    {
+      "field": "sender_id",
+      "segment": "UNB",
+      "position": 2,
+      "required": true,
+      "regex": "",
+      "description": "Interchange sender identification in UNB header"
+    },
+    {
+      "field": "receiver_id",
+      "segment": "UNB",
+      "position": 3,
+      "required": true,
+      "regex": "",
+      "description": "Interchange receiver identification in UNB header"
+    },
+    {
+      "field": "ship_date",
+      "segment": "DTM",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "Creation date/time of the message at header level. Up to 2 occurrences. Also used at shipment level for expected delivery date."
+    },
+    {
+      "field": "shipper_name_and_address",
+      "segment": "NAD",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "SG4 - Consignor name and address at header level. Required, up to 3 occurrences. Contains account numbers, names and addresses."
+    },
+    {
+      "field": "shipper_account_number",
+      "segment": "NAD",
+      "position": 2,
+      "required": true,
+      "regex": "",
+      "description": "DHL customer account number included within the consignor NAD segment at SG4 header level."
+    },
+    {
+      "field": "shipper_contact_name",
+      "segment": "CTA",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "SG5 - Contact person within the consignor party at header level. Conditional, up to 9 occurrences."
+    },
+    {
+      "field": "shipper_communication_contact",
+      "segment": "COM",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "SG5 - Communication number of contact person at consignor header level. Conditional, up to 9 occurrences. Qualifiers: TEL, EML, FAX, AL (mobile/MOB)."
+    },
+    {
+      "field": "shipper_vat_number",
+      "segment": "RFF",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "SG6 - Registration numbers (e.g. VAT number) of consignor at header level. Conditional, up to 9 occurrences. RFF/C506/1156 added in v1.2."
+    },
+    {
+      "field": "product_type",
+      "segment": "TSR",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "SG25 - DHL product type for transport service requirements at shipment level. Required, 1 occurrence. Codes defined in Appendix A."
+    },
+    {
+      "field": "terms_of_delivery",
+      "segment": "TOD",
+      "position": 1,
+      "required": true,
+      "regex": "",
+      "description": "SG31 - Terms of delivery / Incoterms at shipment level. Required, 1 occurrence. Also appears at invoice level. Element 4052:2 added for Account Number in v1.1."
+    },
+    {
+      "field": "reason_for_export",
+      "segment": "FTX",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "SG25 Invoice level - Free text for supplementary information such as reason for export. Conditional, up to 9 occurrences."
+    },
+    {
+      "field": "trading_transaction_type",
+      "segment": "FTX",
+      "position": 1,
+      "required": false,
+      "regex": "",
+      "description": "SG33 Invoice level - Free text for trading transaction type as supplementary information related to governmental procedures. Conditional, up to 9 occurrences. Follows GOR segment."
+    }
+  ],
+  "formatted_rules": {
+    "required_segments": [
+      "UNA",
+      "UNB",
+      "UNH",
+      "BGM",
+      "DTM",
+      "CNI",
+      "NAD",
+      "GID",
+      "MEA",
+      "DIM",
+      "PCI",
+      "MOA",
+      "RFF",
+      "UNT",
+      "UNZ",
+      "TSR",
+      "TOD"
+    ],
+    "segment_order": [
+      "UNA",
+      "UNB",
+      "UNH",
+      "BGM",
+      "DTM",
+      "MOA",
+      "CNI",
+      "DTM",
+      "FTX",
+      "MOA",
+      "RFF",
+      "TOD",
+      "LOC",
+      "GOR",
+      "DOC",
+      "NAD",
+      "CTA",
+      "COM",
+      "RFF",
+      "GID",
+      "MEA",
+      "DIM",
+      "RFF",
+      "PCI",
+      "GIN",
+      "MOA",
+      "RFF",
+      "UNT",
+      "UNZ"
+    ],
+    "required_fields": [
+      "interchange_sender",
+      "interchange_recipient",
+      "message_reference_number",
+      "consignment_number",
+      "consignee_name_and_address",
+      "goods_item_details",
+      "piece_weight",
+      "piece_dimensions",
+      "package_identification",
+      "invoice_monetary_amounts",
+      "invoice_reference_number",
+      "sender_id",
+      "receiver_id",
+      "ship_date",
+      "shipper_name_and_address",
+      "shipper_account_number",
+      "product_type",
+      "terms_of_delivery",
+      "shipment_reference_number"
+    ],
+    "delimiter_rules": {
+      "segment_delimiter": "'",
+      "element_delimiter": "+",
+      "sub_element_delimiter": ":",
+      "decimal_indicator": ".",
+      "escape_character": "?",
+      "service_string_advice": "UNA:+.? '"
+    },
+    "format_type": "edifact",
+    "field_formats": {
+      "interchange_sender": {
+        "segment": "UNB",
+        "position": 2,
+        "pattern": "",
+        "required": true,
+        "description": "Interchange sender identification in UNB header"
+      },
+      "interchange_recipient": {
+        "segment": "UNB",
+        "position": 3,
+        "pattern": "",
+        "required": true,
+        "description": "Interchange recipient identification in UNB header"
+      },
+      "message_reference_number": {
+        "segment": "UNH",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Unique message reference number in UNH header"
+      },
+      "message_type": {
+        "segment": "UNH",
+        "position": 2,
+        "pattern": "",
+        "required": true,
+        "description": "Message type identifier (e.g., IFTMIN or IFCSUM) in UNH header"
+      },
+      "beginning_of_message": {
+        "segment": "BGM",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Document/message name code identifying the type of message"
+      },
+      "message_creation_date": {
+        "segment": "DTM",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Date/time/period at header level for message creation date"
+      },
+      "consignment_number": {
+        "segment": "CNI",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Consignment/transport document number at SG25 shipment level. Mandatory."
+      },
+      "expected_delivery_date": {
+        "segment": "DTM",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Expected delivery date at shipment level (SG25). Up to 3 occurrences. Conditional."
+      },
+      "consignment_remarks": {
+        "segment": "FTX",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Free text consignment remarks at SG25 shipment level. Qualifiers: CCI (Custom Remarks), AAU (Duty Free Import Remarks). Up to 9 occurrences."
+      },
+      "declared_customs_value": {
+        "segment": "MOA",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Monetary amount at shipment level (SG25) for declared customs value, COD, or insurance. Up to 4 occurrences."
+      },
+      "shipment_reference_number": {
+        "segment": "RFF",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Reference numbers at shipment level (SG32). Up to 999 occurrences."
+      },
+      "invoice_reference_number": {
+        "segment": "RFF",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Commercial Invoice Reference Number at invoice-level SG32. Required. Up to 999 occurrences. MRN uses qualifier ABT (not 'MRN')."
+      },
+      "invoice_reference_mrn_qualifier": {
+        "segment": "RFF",
+        "position": "C506:1153",
+        "pattern": "^ABT$",
+        "required": false,
+        "description": "MRN (Movement Reference Number) qualifier at invoice-level SG32. Must use ABT, not MRN. Per change report v1.3.3."
+      },
+      "product_features": {
+        "segment": "TOD",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Terms of delivery / product features at SG31 level. See Appendix B for product feature codes. Includes LBBX service codes."
+      },
+      "product_features_account_number": {
+        "segment": "TOD",
+        "position": "4052:2",
+        "pattern": "",
+        "required": false,
+        "description": "Account Number within TOD segment. Added per change report v1.1."
+      },
+      "incoterm_location": {
+        "segment": "LOC",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Location related to incoterms at SG31 level. Up to 1 occurrence following TOD. DHL Express Facility Codes per v1.3.8."
+      },
+      "governmental_procedures": {
+        "segment": "GOR",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Governmental procedures for import/export at SG33 level. 1 occurrence. At invoice level indicates Document Function."
+      },
+      "accompanying_documents": {
+        "segment": "DOC",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Accompanying documents for customs clearance at SG34 level. 1 occurrence per SG34. Followed by DTM for document date."
+      },
+      "consignee_name_and_address": {
+        "segment": "NAD",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Consignee/Importer/Exporter name and address at SG43 level. Required. Up to 9 occurrences. Supports NAD+JD for Port of Entry (LBBX)."
+      },
+      "port_of_entry_address": {
+        "segment": "NAD",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Port of Entry address using NAD+JD qualifier at SG43 level. DHL-specific. Conditional for LBBX shipments. Added v0.8."
+      },
+      "consignee_contact_name": {
+        "segment": "CTA",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Contact person name for delivery at SG44 level (nested under SG43 NAD). Up to 9 occurrences."
+      },
+      "consignee_communication_contact": {
+        "segment": "COM",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Communication contact at SG44 level. Up to 9 occurrences. Qualifiers: TEL (telephone), EML (email), FAX (fax), AL (mobile)."
+      },
+      "consignee_communication_qualifier": {
+        "segment": "COM",
+        "position": "C076:3155",
+        "pattern": "^(TEL|EML|FAX|AL)$",
+        "required": false,
+        "description": "Communication type qualifier. TEL=telephone, EML=email, FAX=fax, AL=mobile phone. AL added per v0.8."
+      },
+      "consignee_reference_numbers": {
+        "segment": "RFF",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Party reference numbers (e.g., VAT number) at SG47 level for Consignee/Importer/Exporter. Conditional."
+      },
+      "goods_item_details": {
+        "segment": "GID",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Goods item identification at SG50 piece level. Mandatory. 1 occurrence. Also appears at invoice line item level."
+      },
+      "piece_weight": {
+        "segment": "MEA",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Piece weight/measurements at SG52 level. Required. Up to 9 occurrences. Default unit: KGM (Kilograms), also LBR (Pounds)."
+      },
+      "piece_weight_unit": {
+        "segment": "MEA",
+        "position": "C174:6411",
+        "pattern": "^(KGM|LBR)$",
+        "required": true,
+        "description": "Weight measurement unit. KGM=Kilograms (default), LBR=Pounds."
+      },
+      "piece_dimensions": {
+        "segment": "DIM",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Piece dimensions (L x W x H) at SG53 level. Required. 1 occurrence."
+      },
+      "piece_dimension_unit": {
+        "segment": "DIM",
+        "position": "C211:6411",
+        "pattern": "^(CMT|MTR|INH)$",
+        "required": true,
+        "description": "Dimension unit. CMT=Centimeters (default), MTR=Meters, INH=Inches."
+      },
+      "piece_volume_unit": {
+        "segment": "DIM",
+        "position": "C211:6411",
+        "pattern": "^(MTQ|CMQ|INQ)$",
+        "required": false,
+        "description": "Volume unit. MTQ=Cubic Meters (default), CMQ=Cubic Centimeters, INQ=Cubic Inches."
+      },
+      "piece_reference_number": {
+        "segment": "RFF",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Piece reference number at SG54 level. Conditional. Up to 9 occurrences."
+      },
+      "package_identification": {
+        "segment": "PCI",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Package markings at SG55 piece level. Required. 1 occurrence. Accompanied by GIN for barcoded identification."
+      },
+      "goods_identity_number": {
+        "segment": "GIN",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "Bar coded goods identification number accompanying PCI at piece level."
+      },
+      "invoice_monetary_amounts": {
+        "segment": "MOA",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Invoice-level monetary amounts at SG25. Required. Up to 99 occurrences. Includes customs value, COD, insurance, duty/tax (Perfect Invoice per v1.3.6)."
+      },
+      "sender_id": {
+        "segment": "UNB",
+        "position": 2,
+        "pattern": "",
+        "required": true,
+        "description": "Interchange sender identification in UNB header"
+      },
+      "receiver_id": {
+        "segment": "UNB",
+        "position": 3,
+        "pattern": "",
+        "required": true,
+        "description": "Interchange receiver identification in UNB header"
+      },
+      "ship_date": {
+        "segment": "DTM",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "Creation date/time of the message at header level. Up to 2 occurrences. Also used at shipment level for expected delivery date."
+      },
+      "shipper_name_and_address": {
+        "segment": "NAD",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "SG4 - Consignor name and address at header level. Required, up to 3 occurrences. Contains account numbers, names and addresses."
+      },
+      "shipper_account_number": {
+        "segment": "NAD",
+        "position": 2,
+        "pattern": "",
+        "required": true,
+        "description": "DHL customer account number included within the consignor NAD segment at SG4 header level."
+      },
+      "shipper_contact_name": {
+        "segment": "CTA",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "SG5 - Contact person within the consignor party at header level. Conditional, up to 9 occurrences."
+      },
+      "shipper_communication_contact": {
+        "segment": "COM",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "SG5 - Communication number of contact person at consignor header level. Conditional, up to 9 occurrences. Qualifiers: TEL, EML, FAX, AL (mobile/MOB)."
+      },
+      "shipper_vat_number": {
+        "segment": "RFF",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "SG6 - Registration numbers (e.g. VAT number) of consignor at header level. Conditional, up to 9 occurrences. RFF/C506/1156 added in v1.2."
+      },
+      "product_type": {
+        "segment": "TSR",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "SG25 - DHL product type for transport service requirements at shipment level. Required, 1 occurrence. Codes defined in Appendix A."
+      },
+      "terms_of_delivery": {
+        "segment": "TOD",
+        "position": 1,
+        "pattern": "",
+        "required": true,
+        "description": "SG31 - Terms of delivery / Incoterms at shipment level. Required, 1 occurrence. Also appears at invoice level. Element 4052:2 added for Account Number in v1.1."
+      },
+      "reason_for_export": {
+        "segment": "FTX",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "SG25 Invoice level - Free text for supplementary information such as reason for export. Conditional, up to 9 occurrences."
+      },
+      "trading_transaction_type": {
+        "segment": "FTX",
+        "position": 1,
+        "pattern": "",
+        "required": false,
+        "description": "SG33 Invoice level - Free text for trading transaction type as supplementary information related to governmental procedures. Conditional, up to 9 occurrences. Follows GOR segment."
+      }
+    },
+    "confidence_score": 0.9
+  }
+}

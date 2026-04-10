@@ -1,0 +1,117 @@
+Message Specification Guidelines                         
+                          
+ 
+Sub Type 
+Element 
+Sub 
+Type 1 
+2 
+Type 
+Description 
+ 
+SG43 
+ 
+ 
+A group of segments to indicate names and addresses of different party 
+roles such as Consignee/Importer/Exporter. 
+ 
+NAD 
+ 
+NAD, Name and address 
+• 
+A segment with names and addresses. 
+ 
+LOC 
+ 
+LOC, Place/location identification 
+• 
+A segment to specify locations in relation to the preceding NAD 
+segment. 
+ 
+SG44 
+ 
+A group of segments to indicate names of contact persons for delivery of 
+the shipments. 
+ 
+ 
+CTA 
+CTA, Contact information 
+• 
+A segment to indicate the name of a contact person. 
+ 
+ 
+COM 
+COM, Communication contact 
+• 
+A segment to indicate the type of communication contact to be 
+used to inform the contact person. 
+ 
+ 
+SG47 
+ 
+A group of segments to indicate references regarding the delivery 
+ 
+ 
+RFF 
+RFF, References 
+• 
+A segment indicating the Reference Numbers (i.e VAT number) 
+of different party roles such as Consignee/Importer/Exporter. 
+ 
+ 
+ 
+ 
+ 
+SG49 
+ 
+A group of segments to specify a transport service requirement and its 
+associated details (such as applicable commercial agreement) related to 
+the party. 
+ 
+ 
+TSR 
+TSR, Transport service requirements 
+A segment indicating products 
+ 
+ 
+FTX 
+Freetext 
+A segment used to indicate any additional information such as business 
+party trader type. 
+ 
+ 
+A group of segments to describe the goods items for which transport is 
+undertaken. 
+SG50 
+ 
+ 
+ 
+ 
+ 
+ 
+A group of segment to specify equipment in which goods are 
+transported 
+SG70 
+ 
+EQD 
+ 
+EQD, Equipment details 
+• 
+A segment to specify equipment, equipment size and type used 
+in the transport 
+EQN 
+ 
+EQN, Number of items 
+• 
+A segment to specify number of pieces of equipment required. 
+MEA 
+ 
+MEA, Measurements 
+• 
+A segment to specify loading meters of the shipment. 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 20 of 115

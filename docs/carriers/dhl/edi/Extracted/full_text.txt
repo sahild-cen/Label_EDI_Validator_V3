@@ -1,0 +1,7558 @@
+=== PAGE 1 ===
+Message Specification Guidelines 
+ 
+Global EDI Manifesting Service 
+IFCSUM D01B version 3.0 
+(document version 1.3.9) 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0                   Confidential                             Page 1 of 115
+
+=== PAGE 2 ===
+Message Specification Guidelines                         
+                          
+ 
+Confidentiality  
+The specifications, definitions and examples in this manual are to be used by the recipient for the sole 
+purpose of programming to meet the requirements of DHL, and should not be altered or modified by the 
+recipient. 
+ 
+This document contains confidential, proprietary information. No part of this document may be used, 
+modified, reproduced, disseminated, or disclosed without the express written consent of DHL. DHL 
+employees, third-party vendors, and others authorized to use this document shall only disclose this 
+information internally to their coworkers, employees, or agents on a need-to-know basis and in keeping 
+with DHL confidentiality requirements. The information in this document is subject to change without 
+notice.  
+ 
+DHL SHALL NOT BE LIABLE FOR TECHNICAL OR EDITORIAL ERRORS OR OMISSIONS 
+CONTAINED HEREIN NOR FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM 
+THE USE OF THIS INFORMATION. 
+ 
+© 2005 - 2012 DHL Express, Inc. All rights reserved. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 2 of 115
+
+=== PAGE 3 ===
+Message Specification Guidelines                         
+                          
+ 
+Terms and Conditions 
+The requirements and specifications outlined in this manual are governed by DHL’s Terms and 
+Conditions of Carriage, found on DHL’s website, www.DHL.com. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 3 of 115
+
+=== PAGE 4 ===
+Message Specification Guidelines                         
+                          
+ 
+Audience  
+This document is intended to serve as a guide to assist DHL customers and third party developers during 
+the integration development process. This document contains the record layout of DHL Global Standard 
+Manifesting messages. The primary audience of this document is intended to be a trading partner’s 
+technical resources and internal DHL EDI support staff. 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 4 of 115
+
+=== PAGE 5 ===
+Message Specification Guidelines                         
+                          
+ 
+Table of Contents 
+Confidentiality 
+2 
+Terms and Conditions 
+3 
+Audience 
+4 
+Table of Contents 
+5 
+Document Change Report 
+9 
+Introduction 
+11 
+Definition of EDI 
+12 
+Service Terms and Conditions 
+13 
+IFCSUM Description 
+14 
+Mandatory/Optional Fields 
+15 
+IFCSUM D01B Message Branching Diagram 
+16 
+Units of Measure 
+17 
+Declaration of Data Elements - Header 
+18 
+Declaration of Data Elements – Shipment Information 
+19 
+Declaration of Data Elements – Shipment Item Information 
+21 
+Declaration of Data Elements – Invoice Information 
+22 
+Declaration of Data Elements – Invoice Line Item Information 
+23 
+UNH 
+24 
+BGM 
+25 
+DTM 
+26 
+MOA 
+27 
+FTX 
+28 
+CNT 
+29 
+Segment Group 4 
+30 
+SG4 - NAD 
+30 
+Segment Group 5 
+32 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 5 of 115
+
+=== PAGE 6 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 5 - CTA 
+32 
+SG 5 - COM 
+33 
+Segment Group 6 
+34 
+SG 6 - RFF 
+34 
+Segment Group 25 (Shipment Level) 
+35 
+SG 25 – CNI 
+36 
+SG 25 - DTM 
+37 
+SG 25 - CNT 
+38 
+SG 25 - TSR 
+39 
+SG 25 - MOA 
+40 
+SG 25 - FTX 
+41 
+Segment Group 31 
+42 
+SG 31 - TOD 
+42 
+SG 31 - LOC 
+44 
+Segment Group 32 
+45 
+SG 32 - RFF 
+45 
+Segment Group 33 
+47 
+SG 33 - GOR 
+47 
+Segment Group 34 
+48 
+SG 34 - DOC 
+48 
+SG 34 - DTM 
+49 
+Segment Group 43 
+50 
+SG 43 - NAD 
+50 
+SG 43 - LOC 
+52 
+Segment Group 44 
+53 
+SG 44 - CTA 
+53 
+SG 44 - COM 
+54 
+Segment Group 47 
+55 
+SG 47 - RFF 
+55 
+Segment Group 49 
+56 
+SG 49 - TSR 
+56 
+SG 49 - FTX 
+57 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 6 of 115
+
+=== PAGE 7 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 
+58 
+SG 50 - GID 
+58 
+Segment Group 52 
+59 
+SG 52 - MEA 
+59 
+Segment Group 53 
+60 
+SG 53 - DIM 
+60 
+Segment Group 54 
+61 
+SG 54 - RFF 
+61 
+Segment Group 55 
+62 
+SG 55 - PCI 
+62 
+SG 55 - GIN 
+63 
+Segment Group 65 
+64 
+SG 65 - DGS 
+64 
+SG 65 - FTX 
+65 
+Segment Group 67 
+66 
+SG 67 - MEA 
+66 
+Segment Group 70 
+67 
+SG 70 - EQD 
+67 
+SG 70 - EQN 
+68 
+SG 70 - MEA 
+69 
+Segment Group 25 (Invoice Level) 
+70 
+SG 25 - CNI 
+70 
+SG 25 - CNT 
+71 
+SG 25 - MOA 
+72 
+SG 25 - FTX 
+73 
+Segment Group 31 (Invoice Level) 
+74 
+SG 31 - TOD 
+74 
+SG 31 - LOC 
+75 
+Segment Group 32 (Invoice Level) 
+76 
+SG 32 - RFF 
+76 
+Segment Group 33 (Invoice Level) 
+77 
+SG 33 - GOR 
+77 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 7 of 115
+
+=== PAGE 8 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 33 - FTX 
+78 
+Segment Group 34 (Invoice Level) 
+79 
+SG 34 - DOC 
+79 
+SG 34 - DTM 
+80 
+Segment Group 50 (Invoice Line Item) 
+81 
+SG 50 - GID 
+81 
+SG 50 - LOC 
+82 
+SG 50 - MOA 
+83 
+SG 50 - FTX 
+84 
+Segment Group 52 (Invoice Line Item) 
+85 
+SG 52 - MEA 
+85 
+Segment Group 54 (Invoice Line Item) 
+86 
+SG 54 - RFF 
+86 
+Segment Group 56 (Invoice Line Item) 
+87 
+SG 56 - DOC 
+87 
+Segment Group 63 (Invoice Line Item) 
+88 
+SG 63 - TCC 
+88 
+SG 63 - QTY 
+89 
+UNT Segment – Message Trailer 
+90 
+Appendix A – Product Type 
+91 
+Appendix B – Product Features 
+96 
+Appendix C – Example File 
+99 
+Appendix D – Message structure and content for Loose BBX shipments and Sample 
+Message 
+102 
+Appendix E – Commercial Invoice data usage and sample message 
+108 
+Appendix F – Return Shipments 
+112 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 8 of 115
+
+=== PAGE 9 ===
+Message Specification Guidelines                         
+                          
+ 
+Document Change Report 
+Date  
+Version  
+Name  
+Reason for Change  
+Status 
+01/02/2013 
+0.1 
+Annie Richardson 
+First draft 
+Draft 
+ 3/16/2013 
+0.2 
+Annie Richardson 
+Clarification on the BBX reference value 
+needed – C502 
+Draft 
+ 4/11/2013 
+0.3 
+Annie Richardson 
+Updated to include Email contact Qualifier 
+– Group 44 : COM 
+Draft 
+ 12/27/2013 
+0.4 
+Jan Hornak  
+BBX review 
+Draft 
+Kris Michelle S. 
+ 5/16/2014 
+0.5 
+Malano 
+Advance Shipment - Added Appendix B – 
+Product Features 
+Draft 
+Ganesan 
+ 08/12/2016 
+0.6 
+Subramaniam 
+ EDI2.0 MIG Update 
+Draft 
+18/01/2020 
+0.8 
+Bedrich Jedlicka 
+Modified for LBBX purposes: 
+ 
+Added segment SG25 CNT 
+ 
+SG25 CNT+56 : number of mother pieces 
+(placed in each baby shipment, needed 
+for Label) 
+ 
+SG43 NAD+JD : new address qualifier for 
+Port of Entry 
+ 
+Additional Product Features added – APP 
+B 
+ 
+Added APP D – Loose BBX usage 
+ 
+Other fixes/corrections 
+ 
+Segment CNT – explanation part: string 
+“Note 6066” corrected to “Note 6069” 
+ 
+SG31 – TOD – added two samples of 
+usage in explanation part (for LBBX Baby 
+or Mother service code) 
+ 
+SG44 – COM – added qualifier “AL” for 
+element 3155 
+ 
+Previous version of MIG allowed only 
+TEL, EML and FAX. As relevant mapping 
+specification for this message already 
+contains as well rule for AL-->MOB, I 
+added this option to MIG as well. 
+Draft 
+6/5/2020 
+0.9 
+Bedrich Jedlicka 
+LBBX: Addtional information that Baby 
+Importer must be the same as Mother 
+Receiver 
+Draft 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 9 of 115
+
+=== PAGE 10 ===
+Message Specification Guidelines                         
+                          
+ 
+22/09/2020 
+0.10 
+Lee White 
+Modified and expanded Appendix D, with 
+updated example message 
+Draft 
+12/01/2021 
+0.11 
+Erika Joy Banta 
+Added VAT22 related changes. 
+Draft 
+28/06/2021 
+1.1 
+Erika Joy Banta 
+SG 31 – TOD - Added 4052:2 (Account 
+Number) 
+Baseline 
+28/07/2021 
+1.2 
+Cristelle Mae Manio 
+SG6/RFF – Added RFF/C506/1156 
+SG46/RFF – Added RFF/C506/1156 
+SG25/MOA (Invoice Level) – Added new 
+notes  
+Update 
+22/10/2021 
+1.3 
+Lee White 
+Added Appendix F – Return Shipments 
+Update 
+15/11/2021 
+1.3.1 
+Lee White 
+Added example remarks against point 4 in 
+Appendix F – Return shipments 
+Update 
+22/12/2021 
+1.3.2 
+Lee White 
+Modified Appendix F – Return shipments 
+to include corrected mapping of Duty Free 
+Import Remarks (FTX with AAU qualifier) 
+Update 
+3/5/2022 
+1.3.3 
+Lee White 
+Corrected SG32 (Invoice level) – C506, 
+1153, to show that qualifier for MRN is 
+ABT not MRN 
+Update 
+Alma Enriquez/ Lee 
+30/9/2022 
+1.3.4 
+White 
+Added notes for low value dutiable 
+shipments to Singapore 
+Update 
+30/09/2022 
+1.3.4 
+Lee White 
+Removed Appendices for Reference Data 
+and references to them, referring to DHL 
+Reference Data document instead 
+Update 
+19/10/2022 
+1.3.5 
+Diana Chua 
+Updated the branching diagram to reflect 
+the actual data structure 
+Update 
+13/12/2022 
+1.3.5 
+Lee White 
+Updated SG65 to include note that not 
+used when shipping Dangerous Goods 
+with DHL Express 
+Update 
+19/07/2023 
+1.3.6 
+Diana Chua 
+Added notes for enabling the “Perfect 
+Invoice” to carry further Duty/Tax amounts 
+on Commercial Invoice (see SG 25 – 
+MOA) 
+Update 
+12/09/2023 
+1.3.7 
+Celestine Eu 
+Update to UNH Message Header - Note  
+0068 to capture the file source shipping 
+system platform, with corresponding 
+change to first example message 
+Update 
+15/12/2023 
+1.3.8 
+Lee White 
+Correct SG 31 - LOC and SG 43 - LOC to 
+show how DHL Express Facility Codes 
+should be given 
+Update 
+02/09/2024 
+1.3.9 
+Alma Enriquez 
+Added notes for SG 25/FTX (with CCI 
+qualifier) on how to populate Custom 
+Remarks/ Instructions for if DHL render 
+Invoice Image (which may then be 
+returned to shipper)  
+Update 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 10 of 115
+
+=== PAGE 11 ===
+Message Specification Guidelines                         
+                          
+ 
+Introduction 
+ 
+This specification provides the definition of the global standard DHL manifesting EDI messages. This is a 
+guide to be used in satisfying the requirements when exchanging electronic data to become a certified 
+trading partner with DHL and its partners. The data contained in these EDI messages consist of 
+manifesting information related to the transportation of cargo and transport related charges.  
+ 
+For purposes of this document, “Charges”  means all applicable transportation and other charges, 
+including but not limited to, all applicable accessorial charges, surcharges, additional handling charges, 
+late payment fees, and collection costs including collection agency fees, legal fees, court costs, credit 
+reports, and bad check collection fees, in accordance with applicable laws.   
+ 
+Notwithstanding any billing plan that is in effect or payment or billing option selected at the time of 
+shipment, the shipper is ultimately liable for and agrees to pay all Charges, including in the event of 
+insolvency, bankruptcy, or non-payment or refusal to pay by the consignee or third party. 
+ 
+All Charges must be ‘paid in full’ (per the invoice), in the lawful currency noted as the billing currency. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 11 of 115
+
+=== PAGE 12 ===
+Message Specification Guidelines                         
+                          
+ 
+Definition of EDI 
+EDI is the computer to computer exchange of business transactions between organizations in an agreed 
+upon format. "Computer-to-computer" means that the data sent or received is communicated via 
+electronic transmission, without human intervention or interpretation.  
+ 
+Maintaining standardized formats is the foundation of a Global EDI service. EDI requires business 
+partners to follow the standards as defined by the format layout and content held within. After integrating 
+onto the EDI platform, data will be converted by EDI translation programs into the exact same format and 
+provided by each country. Industry standard formats have been defined by EDIFACT, ANSI and 
+RosettaNet. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 12 of 115
+
+=== PAGE 13 ===
+Message Specification Guidelines                         
+                          
+ 
+ Service Terms and Conditions 
+Unless otherwise agreed in writing, the transportation products and services mentioned in this document 
+are subject to DHL’s Terms and Conditions of Carriage. Since these may vary depending on location of 
+the country of origin of the shipment, please contact the nearest DHL service center to obtain a copy of 
+the local terms and conditions. Not all of DHL’s products and services may be available in every country. 
+ 
+It is the customer’s responsibility to complete an appropriate amount of testing and inform DHL when their 
+systems are ready to send and/or receive the electronic files. DHL will provide test files as they become 
+available until customer has completed their testing and provides written confirmation that they are ready 
+to be moved to production status. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 13 of 115
+
+=== PAGE 14 ===
+Message Specification Guidelines                         
+                          
+ 
+IFCSUM Description 
+This document is part of the document “EDI Implementation Guide for customer interfaces”. It provides 
+the definition of the International Forwarding and Consolidation Summary Message (IFCSUM) to be used 
+in Electronic Data Interchange (EDI) between Deutsche Post World Net partners and its customers. 
+ 
+Therefore, this specification can be used for EDI exchange between customers and Deutsche Post 
+subsidiaries. The Deutsche Post World Net partner takes care of the EDI exchange to DHL Express and 
+other partners in this group. 
+ 
+Within this document the IFCSUM declaration of data elements will be described along with branching 
+diagrams to show the arrangement of segments and segment groups. It also contains detailed 
+descriptions of segment and assignment information for individual data elements. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 14 of 115
+
+=== PAGE 15 ===
+Message Specification Guidelines                         
+                          
+ 
+Mandatory/Optional Fields 
+ 
+M Mandatory - This item must be present in all data transactions - used for critical  
+data which is also Mandatory in the EDIFACT standard. 
+ 
+R Required - This item must be present in all data transactions. In the opinion of the implementation 
+guide designers it is essential for this business use of the transaction set, however not defined as 
+Mandatory in the EDIFACT standard.  
+ 
+C Conditional - This item is the subject of a syntax rule (a relational condition) which links its usage with 
+that of other items. If not used a data element separator giving its position must still be given, unless it 
+appears at the end of a segment in which case the data element separator is also not required. 
+ 
+X Not Used - This item is not used in a data transaction. A data element separator giving its position must 
+still be given, but no content should be given, unless it appears at the end of a segment in which case the 
+data element separator is also not required. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 15 of 115
+
+=== PAGE 16 ===
+Message Specification Guidelines                         
+                          
+ 
+IFCSUM D01B Message Branching Diagram 
+             Level 0 – Header Level
+UNT
+UNH
+BGM
+M       1
+M       1
+M          1
+DTM
+MOA
+CNT
+SG 4
+FTX
+SG 25
+SG 9
+R             2
+C                1
+C                1
+R              3
+R             3
+M         9999
+C               1
+TDT
+NAD
+SG 5
+SG 6
+M              1
+Level 1 –  Invoice Level
+M              1
+C              9
+C              9
+RFF
+CTA
+COM
+M              1
+M              1
+C              9
+             Level 1 – Shipment Level
+SG 70
+CNI
+SG 32
+SG 50
+MOA
+DTM
+CNT
+SG 33
+FTX
+SG 31
+TSR
+SG 43
+O       99
+R              3
+R               1
+C             999
+R            999
+C               4
+O             1
+O            9
+R              1
+M         1
+C               1
+R              99
+RFF
+GOR
+TOD
+LOC
+SG 34
+NAD
+EQD
+EQN
+MEA
+SG 44
+LOC
+SG 47
+SG 49
+M              1
+M             1
+M              1
+C             1
+M             1
+R             9
+C             1
+M             1
+C             9
+C             9
+C             1
+M             1
+O             1
+RFF
+DTM
+DOC
+COM
+CTA
+FTX
+TSR
+M              1
+O             1
+M              1
+M              1
+C             9
+C              1
+M              1
+             Level 2 – Piece Level
+SG 55
+SG 52
+SG 53
+SG 54
+SG 65
+GID
+R             1
+R             2
+R             1
+C             9
+C             99
+M             1
+RFF
+MEA
+DIM
+M              9
+M              1
+M              1
+PCI
+GIN
+M              1
+R            9
+DGS
+FTX
+SG 67
+M               1
+C              1
+R               1
+MEA
+Level 1 –  Invoice Level
+M              1
+CNI
+SG 33
+SG 32
+SG 50
+CNT
+SG 31
+MOA
+FTX
+R            999
+R               1
+C             999
+M         1
+M               1
+C         9
+R       99
+R              1
+FTX
+RFF
+GOR
+SG 34
+TOD
+LOC
+R             9
+M              1
+M             1
+R              1
+M              1
+C             1
+DTM
+DOC
+O             1
+M              1
+Level 2 –  Invoice Line Item
+GID
+SG 52
+LOC
+MOA
+FTX
+SG 63
+SG 54
+SG 56
+M             1
+R             1
+R              9
+R             2
+R             1
+R             2
+C             9
+C             9
+MEA
+RFF
+DOC
+QTY
+TCC
+M              1
+M              1
+M              1
+M              1
+R              1
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 16 of 115
+
+=== PAGE 17 ===
+Message Specification Guidelines                         
+                          
+ 
+Units of Measure 
+The following codes are valid for unit of measurement for weight, volume and dimensions 
+Weight 
+Default = KGM (Kilograms) 
+Also acceptable: LBR (Pounds) 
+Volume 
+Default = MTQ (Cubic Meters) 
+Also acceptable: CMQ (Cubic Centimeters), INQ (Cubic Inches) 
+Dimensions (Length, Width, Height) 
+Default = CMT (Centimeters) 
+Also acceptable: MTR (Meters), INH (Inches) 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 17 of 115
+
+=== PAGE 18 ===
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements - Header 
+Sub 
+Element 
+Sub 
+Type 1 
+Type 2 
+Type 
+Description 
+UNA 
+ 
+ 
+Message 
+Header 
+A service string advice segment to define the characters selected for use as 
+delimiters and indicators in the rest of the interchange. 
+ 
+ 
+ 
+ 
+ 
+A service segment starting and uniquely identifying the message. 
+UNH 
+ 
+ 
+Message 
+Header 
+BGM 
+ 
+ 
+Beginning of 
+Message 
+A segment to indicate the beginning of the message and to transmit an 
+identifying number (e.g. order number), type, date and the function of the 
+message. 
+A segment indicating creation date and time of the message. 
+DTM 
+ 
+ 
+Date/Time/ 
+Period 
+MOA 
+ 
+ 
+Monetary 
+Amounts 
+A segment to indicate a monetary value for the entire consignment, e.g. 
+cash on delivery or insurance. 
+FTX 
+ 
+ 
+Free text 
+A segment used to indicate any additional information such as business 
+party trader type for consignor. 
+CNT 
+ 
+ 
+Control Totals A segment to specify totals of the consolidation (e.g. total number of 
+equipment, total number of consignments, total gross weight and/or 
+dimensions of the whole consolidation etc.). 
+ 
+ 
+ 
+ 
+A segment to identify the consignor 
+ 
+Segment 
+Group 4 
+NAD 
+ 
+ 
+NAD - Name and address 
+• 
+A segment with account numbers, names and addresses. 
+SG 5  
+ 
+ 
+A group of segments to identify a party and related contacts and references 
+CTA 
+ 
+To specify a person within a party. 
+COM 
+ 
+To identify a communication number of a person or department to whom communica
+directed 
+SG 6  
+ 
+ 
+A group of segments to indicate references regarding the VAT number 
+RFF 
+ 
+RFF - References 
+• 
+A segment indicating the Registration Numbers (e.g. VAT number) 
+of the consignor 
+ 
+ 
+ 
+A group of segments to indicate all transport details of the consolidation 
+Segment 
+Group 9 
+TDT 
+ 
+ 
+TDT - Details of transport 
+• 
+A segment to indicate information related to a certain stage of the 
+transport 
+ 
+ 
+ 
+A group of segments to indicate all data on shipment level. 
+Segment 
+Group 25 
+ 
+A service segment ending a message, giving the total number of 
+segments in the message (incl. UNH and UNT) 
+UNT 
+ 
+ 
+Message 
+trailer 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 18 of 115
+
+=== PAGE 19 ===
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Shipment Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to indicate all data on shipment level. 
+CNI 
+ 
+ 
+ 
+CNI - Consignment information 
+• 
+A segment to indicate consignments included in the 
+consolidation using the transport document/message number. 
+DTM 
+ 
+ 
+DTM - A segment to indicate date and time such as expected delivery 
+CNT 
+ 
+ 
+CNT – Control Totals within the Shipment 
+TSR 
+ 
+ 
+TSR, Transport service requirements 
+• 
+A segment indicating products 
+MOA 
+ 
+ 
+MOA, Monetary amounts 
+• 
+A segment to indicate a monetary value for an entire shipment, 
+e.g. declared customs value, cash on delivery or insurance. 
+FTX 
+ 
+ 
+FTX, Free text 
+• 
+A segment to specify free form or process available 
+supplementary information, such consignment remarks 
+Segment 
+Group 2 
+SG31 
+ 
+ 
+A group of segments to specify terms of delivery 
+TOD 
+ 
+TOD, Terms of delivery 
+• 
+A segment to indicate product features 
+LOC 
+ 
+Place/location identification 
+• 
+A segment to identify a location related to the incoterms 
+SG32 
+ 
+ 
+A group of segments containing a references and constants which apply to entire c
+or shipment. 
+RFF 
+ 
+RFF, To identify a reference used by a party 
+SG33 
+GOR 
+ 
+GOR, A segment to indicate applicable governmental procedures related to import
+transport of the goods. 
+SG34 
+ 
+A group of segments to indicate documents. 
+DOC 
+Documents 
+• 
+A segment to indicate accompanying documents for customs 
+clearance 
+DTM 
+A segment to indicate date and time related to invoice. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 19 of 115
+
+=== PAGE 20 ===
+Message Specification Guidelines                         
+                          
+ 
+Sub Type 
+Element 
+Sub 
+Type 1 
+2 
+Type 
+Description 
+ 
+SG43 
+ 
+ 
+A group of segments to indicate names and addresses of different party 
+roles such as Consignee/Importer/Exporter. 
+ 
+NAD 
+ 
+NAD, Name and address 
+• 
+A segment with names and addresses. 
+ 
+LOC 
+ 
+LOC, Place/location identification 
+• 
+A segment to specify locations in relation to the preceding NAD 
+segment. 
+ 
+SG44 
+ 
+A group of segments to indicate names of contact persons for delivery of 
+the shipments. 
+ 
+ 
+CTA 
+CTA, Contact information 
+• 
+A segment to indicate the name of a contact person. 
+ 
+ 
+COM 
+COM, Communication contact 
+• 
+A segment to indicate the type of communication contact to be 
+used to inform the contact person. 
+ 
+ 
+SG47 
+ 
+A group of segments to indicate references regarding the delivery 
+ 
+ 
+RFF 
+RFF, References 
+• 
+A segment indicating the Reference Numbers (i.e VAT number) 
+of different party roles such as Consignee/Importer/Exporter. 
+ 
+ 
+ 
+ 
+ 
+SG49 
+ 
+A group of segments to specify a transport service requirement and its 
+associated details (such as applicable commercial agreement) related to 
+the party. 
+ 
+ 
+TSR 
+TSR, Transport service requirements 
+A segment indicating products 
+ 
+ 
+FTX 
+Freetext 
+A segment used to indicate any additional information such as business 
+party trader type. 
+ 
+ 
+A group of segments to describe the goods items for which transport is 
+undertaken. 
+SG50 
+ 
+ 
+ 
+ 
+ 
+ 
+A group of segment to specify equipment in which goods are 
+transported 
+SG70 
+ 
+EQD 
+ 
+EQD, Equipment details 
+• 
+A segment to specify equipment, equipment size and type used 
+in the transport 
+EQN 
+ 
+EQN, Number of items 
+• 
+A segment to specify number of pieces of equipment required. 
+MEA 
+ 
+MEA, Measurements 
+• 
+A segment to specify loading meters of the shipment. 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 20 of 115
+
+=== PAGE 21 ===
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Shipment Item Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to describe the goods items for which transport is undertaken. 
+ 
+ 
+ 
+ 
+GID 
+ 
+ 
+GID - Goods item details 
+• 
+A segment to identify a goods item for which transport is 
+undertaken. 
+SG52 
+ 
+ 
+A group of segments to specify measurements applicable to a goods 
+item 
+ 
+MEA 
+ 
+A segment to specify measurements, applicable to a goods item 
+ 
+ 
+ 
+ 
+SG53 
+ 
+ 
+A group of segments to specify dimensions applicable to a goods item. 
+ 
+DIM 
+ 
+DIM, Dimensions 
+• 
+A segment to specify dimensions, applicable to a goods item. 
+ 
+SG54 
+ 
+ 
+A group of segments to identify references to a goods item. 
+ 
+RFF 
+ 
+RFF, To identify a goods items references used by a party. 
+Segment 
+ 
+SG55 
+ 
+ 
+A group of segments to specify marks and numbers of a goods item. 
+Group 50 
+ 
+PCI 
+ 
+PCI, Package identification 
+• 
+A segment to indicate the type of markings on the item. 
+ 
+GIN 
+ 
+GIN, Goods identity number 
+• 
+A segment containing the bar coded identification code (e.g. 
+CEN License plate). 
+ 
+ 
+ 
+ 
+SG65 
+ 
+ 
+A segment group to indicate dangerous goods information. 
+ 
+DGS 
+ 
+DGS, Dangerous goods 
+• 
+A segment to indicate the details of the dangerous goods within 
+the item. 
+ 
+FTX 
+ 
+FTX, Free text 
+• 
+A segment to indicate the technical name of the dangerous 
+goods. 
+ 
+SG67 
+ 
+A group of segments to specify measurements applicable to the 
+dangerous goods within the item. 
+ 
+ 
+MEA 
+MEA, Measurements 
+• 
+A segment to specify measurements applicable to the 
+dangerous goods within the item. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 21 of 115
+
+=== PAGE 22 ===
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Invoice Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to indicate all data on Invoice level. 
+CNI 
+ 
+ 
+ 
+CNI 
+Invoice information 
+CNT 
+ 
+ 
+CNT 
+Control Totals within an Invoice (i.e. Total Gross Weight, Total Net 
+Weight) 
+MOA 
+ 
+ 
+MOA, Monetary amounts 
+• 
+A segment to indicate a monetary value for an Invoice, e.g. 
+declared customs value, cash on delivery or insurance. 
+FTX 
+ 
+ 
+Free text 
+• 
+A segment to specify free form or process available 
+supplementary information (i.e. Reason for Export) 
+SG31 
+ 
+ 
+A group of segments to specify terms of delivery 
+Segment 
+ 
+TOD 
+ 
+TOD, Terms of delivery 
+Incoterm - Invoice level 
+Group 25 
+ 
+LOC 
+ 
+Place of Incoterms - Invoice level 
+SG32 
+ 
+ 
+A group of segments containing a references related to the Invoice 
+RFF 
+ 
+RFF - References 
+A segment indicating the Registration Numbers (i.e. Commercial Invoice 
+Reference Number, MRN) 
+ 
+ 
+A group of segments to identify customs and other governmental 
+procedures and required documents. 
+SG33 
+ 
+GOR 
+ 
+A segment indicating the Document Function 
+FTX 
+ 
+Free text 
+A segment to specify free form or process available supplementary 
+information, (i.e. Trading Transaction Type) 
+SG33 
+SG34 
+ 
+A group of segments to indicate documents. 
+ 
+DOC 
+Documents 
+• 
+A segment to indicate accompanying documents for customs 
+clearance (i.e Invoice Number, Customs Document) 
+ 
+DTM 
+A segment to indicate date and time related to invoice. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 22 of 115
+
+=== PAGE 23 ===
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Invoice Line Item Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to describe the goods line items related Invoice 
+ 
+ 
+ 
+ 
+GID 
+ 
+ 
+GID - Goods item details 
+A segment to identify a line item in an Invoice 
+LOC 
+ 
+ 
+A segment to specify a country associated with a line item (i.e. Line Item 
+Country of Manufacture) 
+MOA 
+ 
+ 
+A segment to specify a monetary amount associated with a line item, 
+such as Line Item Total Customs Value, Single Item (Article) Customs 
+Value, etc. 
+FTX 
+ 
+ 
+Free text 
+A segment to specify processable supplementary information relating to 
+the line item (e.i Line Item Description) 
+SG52 
+ 
+ 
+A group of segments to specify measurements applicable to a line item 
+Segment 
+Group 50 
+ 
+MEA 
+ 
+A segment to specify measurements, applicable to a line item (i.e. Line 
+Item Gross weight, Line Item Net Weight) 
+ 
+ 
+ 
+ 
+SG54 
+ 
+ 
+A group of segments to identify references to a line item. 
+ 
+RFF 
+ 
+RFF,  
+A segment indicating the Line Item Reference Numbers 
+ 
+SG56 
+ 
+ 
+A group of segments to specify documents and associated date(s) and 
+time(s) for a line item. 
+ 
+DOC 
+ 
+A segment to specify a document prepared for a line item. 
+ 
+SG63 
+ 
+ 
+A group of segments to indicate the quantity for the line item. 
+ 
+TCC 
+ 
+A segment used to indicate the charge related to the line item. 
+ 
+QTY 
+ 
+A segment used to indicate the quantity related to the line item. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 23 of 115
+
+=== PAGE 24 ===
+Message Specification Guidelines                         
+                          
+ 
+UNH  
+Segment 
+Occurrence 
+Usage 
+Description 
+UNH 
+1 
+M 
+ Message Header 
+Function: To head, identify and specify a message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+0062 
+M 
+AN..14 
+Message reference number 
+S009 
+M 
+ 
+MESSAGE IDENTIFIER 
+   0065 
+M 
+AN..6 
+Message type identifier 
+   0052 
+M 
+AN..3 
+Message type version number 
+   0054 
+M 
+AN..3 
+Message type release number 
+   0051 
+M 
+AN..3 
+Controlling agency  
+0068 
+R 
+AN..35 
+Common access reference 
+ 
+Example:  
+UNH+123+IFCSUM:D:01B:UN+GM2/ACMESHIPPINGPLATFORM_V1.6 
+ 
+Note 0062: 
+An application generated unique message reference number. This number must be 
+unique for a period of 3 months. 
+ 
+Note 0065: 
+Use ‘IFCSUM’ 
+ 
+Note 0052: 
+Use ‘D’ 
+ 
+Note 0054: 
+Use ‘01B’ 
+ 
+Note 0051: 
+Use ‘UN’ 
+ 
+Note 0068: 
+DHL Express determined identification for recognizing the name of the source shipping 
+system platform, application or software that created the message. The data is divided with 
+Slash (‘/’). Value GM2 is to be given before the slash. The name of the source shipping 
+platform is given after the slash. The source name must be bilaterally agreed by the party 
+generating the message (so the DHL Express customer or their shipping system provider) 
+and DHL Express. For instance this could be a concatenation of the name, version and 
+release of the generating software. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 24 of 115
+
+=== PAGE 25 ===
+Message Specification Guidelines                         
+                          
+ 
+BGM  
+Segment 
+Occurrence 
+Usage 
+Description 
+BGM 
+1 
+M 
+ Beginning of Message 
+Function: To indicate the type and function of a message and to transmit the identifying number. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C106 
+M 
+ 
+DOCUMENT MESSAGE IDENTIFICATION 
+   1004 
+M 
+AN..35 
+Document identifier 
+1225 
+R 
+AN..3 
+Message function code 
+ 
+Example:  
+BGM+785+9600280001+9’ 
+ 
+Note 1001: 
+Use ‘785’ – Cargo Manifest. 
+ 
+Note 1004: 
+Unique identifier that represents the whole document.Could be the same number as in 
+preceding UNH segment. 
+ 
+Note 1225: 
+Use ‘9’ – Original. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 25 of 115
+
+=== PAGE 26 ===
+Message Specification Guidelines                         
+                          
+ 
+DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+3 
+R 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+9:200906011500:203’ 
+DTM+11:20090820:102’ 
+ 
+Note: 
+This segment is at least used twice, for specifying the processing date/time of the EDI 
+message and for specifying the dispatch of the shipments. 
+Note 2005:  
+Use: 
+‘9’ - Processing date/time (that the file is created and send to DHL) 
+‘11’ - Dispatch date of the shipment 
+ 
+Note 2380: 
+With ‘11’ in preceding element, this is Date and time on which the goods are or are 
+expected to be dispatched or shipped. Both date time qualifier mask ‘102’ or ‘203’ can be 
+used.  
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+‘102’ for the date mask CCYYMMDD 
+Use the format qualifier ‘102’ when the date refers to a dispatch date. Otherwise use the 
+qualifier ‘203’. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 26 of 115
+
+=== PAGE 27 ===
+Message Specification Guidelines                         
+                          
+ 
+MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+1 
+C 
+ Monetary Amount 
+Function: To specify monetary amounts. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+43:1500,90:EUR’ 
+ 
+Note 5025: 
+Use: ‘43’ - Declared total customs value. 
+ 
+Note 5004: 
+This is a value represented for all shipment within the file. 
+                          Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 2 decimals are included. 
+▪ 
+All amounts have to be specified with 2 decimals included, regardless currency. 
+▪ 
+Decimal sign may be point or comma depending of what has been specified in 
+segment UNA. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for Cash On Delivery (COD) 
+where it will the currency of the destination country.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 27 of 115
+
+=== PAGE 28 ===
+Message Specification Guidelines                         
+                          
+ 
+FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+C 
+ Free Text 
+Function: A segment used to indicate any additional information such as business party trader type for consignor. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+  4451 
+M 
+AN..3 
+Text Subject code qualifier 
+  4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+C 
+ 
+TEXT LITERAL 
+  4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AIJ+++Private' 
+ 
+Note 4451: 
+Use: 
+‘AIJ’ - Business Party Trader Type (Consignor) 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Business Party Trader Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request) 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 28 of 115
+
+=== PAGE 29 ===
+Message Specification Guidelines                         
+                          
+ 
+CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+3 
+R 
+ Control Totals 
+Function: To provide control total. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+7:225,1:KGM’ 
+CNT+11:100’ 
+CNT+15:25,500:MTQ’ 
+ 
+Note: 
+This segment is used to indicate total gross weight for the entire shipment, total number 
+of pieces in the shipment and total volume of the shipment. 
+The total volume is required for a shipment with destination outside the Shipper country. 
+It can be provided here or the dimensions per item can be provided later in the GID 
+segment. 
+The maximum of pieces cannot exceed 999 in one shipment. 
+ 
+Note 6069: 
+Use: 
+‘7’ - Gross Weight. In 6069, the value may be specified with maximum 1 decimal. 
+‘11’ - Total number of Packages. In 6069 the value may be specified with maximum 3 
+decimals. 
+‘15’ - Cube, Volume. 
+ 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+With ‘7’ in 6069 ‘KGM or ‘LBR’ 
+With ‘15’ in 6069 MTQ, CMQ or INQ 
+Element 6411 is not used with ‘8’ in 6069 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 29 of 115
+
+=== PAGE 30 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 4   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 4 
+2 
+R 
+ NAD-SG5-SG6 
+Function: Used to identify different parties. Although this group may occur twice, this is limited to the NAD  
+segment only. The other elements and groups within group 4 are allowed only once. 
+ 
+SG4 - NAD 
+Segment 
+Occurrence 
+Usage 
+Description 
+NAD  
+1 
+M 
+ Name and Address                                                                           
+Function: Specify Consignee/Receiver. The first occurrence of NAD is mandatory, to indicate the consignor.  
+Use qualifier CZ. The second occurrence is optional. If used, it contains the name and address of the dispatch 
+party, if deviating from the consignor. Element 3035 contains value PW. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3035 
+M 
+AN..3 
+Party qualifier 
+C082 
+C 
+ 
+PARTY IDENTIFICATION DETAILS 
+   3039 
+M 
+AN..17 
+Party identification 
+C058 
+C 
+ 
+NAME AND ADDRESS 
+   3124 
+M 
+AN .. 35 
+Building Name 
+   3124 
+C 
+AN .. 35 
+District 
+C080 
+C 
+ 
+PARTY NAME 
+   3036 
+R 
+AN..35 
+Party Name 
+C059 
+C 
+ 
+STREET 
+   3042 
+M 
+AN..35 
+Street name 
+   3042 
+R 
+AN..35 
+Building number 
+   3042 
+R 
+AN..35 
+House number 
+   3042 
+C 
+AN..35 
+Address line 4 
+3164 
+C 
+AN..35 
+City name 
+C819 
+C 
+ 
+COUNTRY SUB-ENTITY DETAILS 
+   3229 
+C 
+AN..9 
+State Code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   3228 
+C 
+AN..70 
+Province 
+3251 
+C 
+AN..9 
+Postcode identification 
+3207 
+C 
+AN..3 
+Country, coded 
+ 
+]Example:  
+NAD+CZ+++MICHEL VANHOREN SA+WOLUWELAAN::151+DIEGEM++1831+BE’ 
+NAD+CZ+270834367+CZ BUILDING:CZ DISTRICT+BEPCO PARTS SA+RUE 
+CHAUMONT 4D:CZ STNO:CZ ADDSTNO+HERMALLE-SOUS-
+HUY+AH:::liege+4480+BE' 
+ 
+Note: 
+Only 1 occurrence in SG4 Group. Use qualifier ‘CZ’ to represent Shipper or Consignor. 
+ 
+Note 3035: 
+Use: ‘CZ’  -- Consignor/Shipper. 
+                                  ‘PW’ – Dispatch party 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 30 of 115
+
+=== PAGE 31 ===
+Message Specification Guidelines                         
+                          
+ 
+. 
+Note 3039: 
+This element is used only in combination with qualifier ‘CZ’ in element 3035. It contains 
+the assigned shipper account number of DHL. 
+ 
+Note 3036: 
+They contain the full name of the Shipper party. 
+ 
+Note 3042: 
+Use this element three times to specify street name, building number, house number and 
+house number addition. However if for technical reason, it is not possible for the 
+customer to split the address data, the street name, building number and house number 
+may be concatenate in the first element 3042. 
+Note 3229: 
+Use this for 2-char state code as defined in Format ISO 3166-2, e.g. TX. 
+Note 3251: 
+Mandatory except for countries where no postcode system is available, e.g. Ireland. 
+ 
+Note 3207: 
+Format ISO 3166-1 Alpha 2 country codes. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 31 of 115
+
+=== PAGE 32 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 5   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 5 
+9 
+C 
+ CTA-COM 
+Function: A group of segments to identify a party and related contacts and references 
+ 
+SG 5 - CTA 
+Segment 
+Occurrence 
+Usage 
+Description 
+CTA 
+1 
+M 
+ Contact Information                                                                          
+Function: To specify a person within a party. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3139 
+R 
+AN..3 
+Contact function code 
+C056 
+R 
+ 
+DEPARTMENT OR EMPLOYEE DETAILS 
+   3413 
+X 
+AN..17 
+Department or employee name code 
+   3412 
+R 
+AN..35 
+Department or employee name 
+ 
+Example:  
+CTA+CO+:M. OLIVIER ABIDTS’ 
+ 
+Note: 
+This segment contains the shipper or consignor contact information.  
+ 
+Note 3139: 
+Use: 
+ 
+‘CO’ – Consignor Contact  else use  
+‘IC’ - Contact information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 32 of 115
+
+=== PAGE 33 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 5 - COM 
+Segment 
+Occurrence 
+Usage 
+Description 
+COM 
+9 
+C 
+ Communication Contact                                                                 
+Function: To identify a communication number of a person or department to whom communication should be 
+directed. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C076 
+M 
+ 
+COMMUNICATION CONTACT 
+   3148 
+M 
+AN..70 
+Communication address identifier 
+   3155 
+M 
+AN..3 
+Communication address code qualifier 
+ 
+Example: 
+COM+31 653 123 456:TE’ 
+COM+?+31 653 123 456:TE’ 
+ 
+Note: 
+This segment is used to indicate a communication contact with the Shipper or Consignor 
+of the shipment. 
+ 
+Note 3148: 
+If the phone number is beginning with the ‘+’ sign, the ‘?’ release character should come 
+immediately before the ‘+’ sign in order to avoid translation problem. 
+Only 70 characters will be accepted by DHL. 
+ 
+Note 3155: 
+Use: 
+ 
+ 
+‘EM’ - Electronic Mail. 
+‘FX’ – Telefax. 
+‘TE’ - Telephone. 
+‘AL’ - Cellular phone (Mobile) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 33 of 115
+
+=== PAGE 34 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 6   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 6 
+9 
+C 
+ RFF 
+Function: A group of segments to specify a reference related to the party  
+ 
+SG 6 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                        
+Function: To identify a reference, in this case the VAT number and Registration numbers, used by a party.  
+This segment group may be used for customs clearance shipments (only destinations in non-EU countries).  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+   1156 
+R 
+AN..2 
+Document line identifier  
+ 
+Example:  
+RFF+VA:BE12345678:BE’ 
+ 
+ 
+RFF+ZZZ:123456789:SG 
+ 
+Note: 
+This segment used to record the Registration numbers of the different role types.  For 
+example, VAT number of the Shipper/Consignor, Route Code and Cycle code.  
+ 
+Values are validated against role types under the DHL equivalent values of SG4-NAD-
+3035. 
+ 
+Note 1153: 
+For the full list of possible Registration Number Type for different role types / Country, 
+refer to "DHL Express Integrated Solution Reference Information" (available from DHL 
+Express on request) 
+ 
+Examples include: 
+‘VA’ – VAT Registration Number 
+                          ‘AUS’ – Delivery Route reference or shipper route code and pickup cycle code  
+‘ZZZ’ – Overseas Registered Supplier Reference No.”, for example where it is required 
+with low value shipments to Singapore (see also SG-50 FTX) 
+ 
+Note 1154: 
+Actual registration number. Only 35 characters will be accepted by DHL. 
+Note 1156: 
+ISO 3166-1 Alpha 2 country codes format 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 34 of 115
+
+=== PAGE 35 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 25 (Shipment Level) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG 25 
+9999 
+M 
+ CNI-DTM-TSR-MOA-FTX-SG31-SG33-SG43-SG50-SG70 
+Function: A group of segments  to give information about all consignments included in a voyage/flight or 
+ consolidation. 
+ 
+Note: 
+The data for each individual consignment has not been sent to the receiving partner by means of               
+single consignment based messages (e.g. booking and/or instruction messages) separate to the 
+IFCSUM message. For every consignment the complete structure of a single consignment based 
+message can be used starting with the segment CNI replacing the BGM.                                  
+Thus the extended form IFCSUM message has not the function of referencing but to show as full 
+a set of consignment data as is necessary to meet the requirements of type of consolidation 
+message being constructed e.g. Cargo vs. Full Freight. 
+Note on the Occurrence: 9999 is for the combination of Segment Group 25 (Shipment Level) and 
+Segment Group 25 (Invoice Level) 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 35 of 115
+
+=== PAGE 36 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 – CNI  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNI 
+1 
+M 
+ Consignment Information                                                                    
+Function: To identify one consignment  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1490 
+R 
+N..4 
+Consolidation Item Number  
+C503 
+R 
+ 
+Document/Message Details 
+   1004 
+R 
+AN..35 
+Document Identifier  
+ 
+ 
+Example:  
+CNI+1+5146665856' 
+CNI+2+6215236112:5' 
+Note 1490 : 
+Sequence Number. In each message (UNH – UNT) the CNI sequence number starts with 
+1, incremented with ‘1’ for each CNI in the message.  
+ 
+Note 1004 : 
+Unique Shipment Number or waybill number. These shipment number needs to be 
+unique per shipment for at least 6 months. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 36 of 115
+
+=== PAGE 37 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+1 
+O 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+191:200906011500:203’ 
+ 
+Note: 
+This segment is used for specifying the estimated delivery date/time 
+Note 2005:  
+Use: 
+ ‘191’ – Expected/Estimated Delivery date/time 
+ 
+Note 2380: 
+With ‘191’ in preceding element, this is the Estimated Delivery or POD date time. 
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+‘102’ for the date mask CCYYMMDD 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 37 of 115
+
+=== PAGE 38 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+9 
+O 
+ Control Totals 
+Function: To provide control total. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+56:137’ 
+ 
+Note: 
+This segment represents control totals within respective Shipment. 
+ 
+For “LBBX Customer Controlled solution” purposes - this segment should be sent within 
+the each ‘baby’ shipment. 
+ 
+Note 6069: 
+Use: 
+‘56’ – for LBBX purposes: Total number of transport units (number of mother pieces = 
+sum of all baby pieces – optional.) 
+ 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Use: 
+Element 6411 is not used with ‘56’ in 6069.  
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 38 of 115
+
+=== PAGE 39 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - TSR  
+Segment 
+Occurrence 
+Usage 
+Description 
+TSR 
+1 
+R 
+ Transport Service requirements 
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C536 
+X 
+ 
+CONTRACT AND CARRIAGE CONDITION 
+C233 
+X 
+ 
+SERVICE 
+C537 
+R 
+ 
+TRANSPORT PRIORITY 
+   4219 
+M 
+AN..3 
+Transport service priority code 
+   1131 
+R 
+AN..17 
+Code list identification code 
+   3055 
+R 
+AN..3 
+Code list responsible agency code 
+ 
+Example:  
+TSR+++189:57:87’ (Express Worldwide EU) 
+TSR+++110:57:87’ (Economy Select EU) 
+ 
+Note 4219: 
+Use of this element is to indicate the DHL product. For more information about the 
+product codes, please consult your Sales Representative. 
+ 
+Note 1131: 
+Use ‘57’ – Product code. 
+ 
+Note 3055: 
+Use ‘87’ – Assigned by carrier. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 39 of 115
+
+=== PAGE 40 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+99 
+O 
+ Monetary Amount 
+Function: To specify monetary amounts. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+43:150090:EUR’ 
+ 
+Note 5025: 
+Use: 
+‘22’ - Cash on delivery. 
+‘43’ - Declared total customs value. 
+‘157’ - Insurance value. 
+‘64’ – Freight  Charge. Can be used for Override Charge. 
+‘39’ – Invoice Total Amount 
+‘124’ – Tax Amount 
+ 
+Note 5004: 
+Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 2 decimals are included. 
+▪ 
+All amounts have to be specified with 2 decimals included, regardless currency. 
+▪ 
+Decimal sign depends on what has been specified in segment UNA.  
+If UNA is not specified then default sign will be point. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for qualifier ‘22’ – COD currency 
+of destination needs to be populated. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 40 of 115
+
+=== PAGE 41 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+3 
+R 
+ Free Text 
+Function: To specify description of goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AAA+++ELECTRONIC COMPONENTS’ 
+ 
+Note 4451: 
+Use: 
+‘AAA’ - Goods description. 
+‘AAB’ - Terms of Payment (COD) 
+‘DIN’ - Delivery instructions. 
+‘SPH’ – Special handling 
+‘CCI’  - Custom Remarks 
+When customer wants to specify the method of payment in case of Cash on Delivery, the 
+qualifier ‘AAB’ has to be used. 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+Goods description (qualifier ‘AAA’) is mandatory for all shipments. Detail description is 
+preferred. In case the customer is using qualifier AAB to specify the terms of payment, 
+the element 4440 should content one letter code (from A to Q) – Please consult your 
+Sales Representative in order to have more information about the country specific codes. 
+ 
+ 
+         Custom Remarks/ Customs clearance instructions (qualifier ‘CCI’). Any code or 
+clear instruction agreed by customer and carrier regarding the declaration of the goods. 
+Only populated if the shipper requires DHL Express to generate an image file of the 
+invoice, which can then be returned to the shipper, in which case contents of field will be 
+given under field “DECLARATION”. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 41 of 115
+
+=== PAGE 42 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 31  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 31 
+1 
+R 
+ TOD-LOC 
+Function: A group of segments to specify terms of delivery (Freight costs and Saturday Deliveries).  
+Segment group 31 is mandatory to indicate freight costs payment. On conditional base, product features can be 
+ indicated. 
+ 
+SG 31 - TOD  
+Segment 
+Occurrence 
+Usage 
+Description 
+TOD 
+1 
+M 
+ Terms of Delivery                                                                                
+Function: To specify terms of delivery or transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4055 
+R 
+AN..3 
+Delivery or transport form function code 
+4215 
+X 
+AN..3 
+Transport charges payment method code 
+C100 
+R 
+ 
+TERMS OF DELIVERY OR TRANSPORT 
+   4053 
+R 
+AN..3 
+Delivery or transport terms description code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   4052:1 
+C 
+AN..70 
+Delivery or transport terms description 
+   4052:2 
+C 
+AN..70 
+Delivery or transport terms description 
+ 
+Example:  
+TOD+6++DDU’ (Default value or no feature) 
+TOD+6++CPT:::050051’ (Using product features ‘Saturday delivery’ and ‘Named 
+signature’) 
+TOD+6++DDU:::958’ (Using the ‘Recap with signature’ feature) 
+TOD+6++DDU:::300’ (Using the direct injection product feature) 
+TOD+6++DDP:::231’ (Represents the ‘Loose Bulk Baby’ Service) 
+TOD+6++DDP:::230’ (Represents the ‘Loose Bulk Mother’ Service) 
+TOD+6++CPT:::050051’ (Using product features ‘Saturday delivery’ and ‘Named 
+signature’) 
+TOD+6+A+DDU:::220:ACC123456' (Represents the ‘Importer of Record’ Service) 
+ 
+Note: 
+Segment group 31 is mandatory to indicate freight costs payment and also to register the 
+agreement between the Seller and the Buyer (Incoterms). On conditional base, product 
+features can be indicated. If you wish to have more information about the product 
+features and availability please contact your Sales representative. 
+ 
+Note 4055: 
+Use ‘6’ – Delivery conditions. 
+ 
+Note 4053: 
+Incoterms, the default value is ‘DDU’. 
+ 
+To have a complete list of all possible incoterms, please contact your Sales 
+representative. 
+ 
+Note 1131:         Not Used 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 42 of 115
+
+=== PAGE 43 ===
+Message Specification Guidelines                         
+                          
+ 
+ 
+Note 3055:         Not Used 
+ 
+Note 4052:1 
+This element is reserved for product features. All appropriate product features should be 
+stored in this element, without separation sign. See example. The format of each 
+occurrence is 3 digits length, leading ‘0’ (zero) included. Please contact your Sales 
+representative for valid product features codes.  
+The length of this element (AN..70) can handle a maximum of 23 product features codes 
+(Extra Charge Code). Extra Charge Codes with related Account Numbers should always 
+be stored in this element first followed by the Extra Charge Codes without related 
+Account Number. 
+ 
+Note 4215:         Use ‘A’ – To Indicate that the charges are to be charged to an account. 
+ 
+Note 4052:2: 
+Account Numbers (to which the extra charges will be applied) should be stored in this 
+element, without separation sign, and must be in the same order as the related to an 
+Extra Charge Code are placed in element 4052:1. See example. The format of each 
+occurrence is 9 digits length. The length of this element (AN..70) can handle a maximum 
+of 7 Account Numbers. 
+ 
+Multiple Extra Charge Codes and Accounts Example: 
+TOD+6+A+DDU:::101103151152202203204207208:ACC123456BCC123456CCC12345
+6DCC123456ECC123456FCC123456GCC123456' (First 7 Extra Charge Codes are 
+related to the 7 Account Numbers. The last 2 Extra Charge Codes have no related 
+Account Number. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 43 of 115
+
+=== PAGE 44 ===
+Message Specification Guidelines                         
+                          
+ 
+ 
+SG 31 - LOC  
+Group 
+Occurrence 
+Usage 
+Description 
+SG31 
+1 
+C 
+ LOC 
+Function: A group of segments to specify locations which apply to the entire message, e.g. place of departure. 
+ 
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+1 
+M 
+ Place/Location Identification                                                            
+Function: To specify a location related to the terms of Delivery. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..3 
+Location name code 
+   1131 
+X 
+AN..17 
+Code List Identification Code  
+   3055 
+X 
+AN..3 
+Code List Responsible agency Code 
+C519 
+O 
+ 
+LOCATION IDENTIFICATION 
+   3223 
+R 
+AN..3 
+Location name code 
+ 
+Example:  
+DHL Time Definite: LOC+5+BFS+BFS’ 
+ 
+Note: 
+The segment LOC with qualifier ‘5’ is required for DHL Express Air when SG4/NAD+PW 
+or full NAD+CZ is not provided. 
+  
+Note 3227: 
+Use: ‘5’ - Place of origin. Use for DHL Express TD  
+ 
+Note 3225: 
+To be populated with DHL Express Service Area code for the location of the shipment 
+origin. A list of DHL Express Service Area codes with corresponding DHL Express 
+Facility codes by location name, post code and country is available on request. 
+ 
+Note 3055: 
+Use: ‘6’ – UN/ECE  
+ 
+Note 3223: 
+To be populated with DHL Express Facility code for the location of the shipment origin. 
+May or may not be the same value as in 3225. A list of DHL Express Service Area codes 
+with corresponding DHL Express Facility codes by location name, post code and country 
+is available on request. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 44 of 115
+
+=== PAGE 45 ===
+Message Specification Guidelines                         
+                          
+ 
+ 
+Segment Group 32  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 32 
+999 
+C 
+ RFF 
+Function: A group of segments containing a references and constants which apply to entire consignment  
+or shipment 
+ 
+SG 32 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..70 
+Reference identifier 
+ 
+Example:  
+RFF+CU:1154345678’ 
+ 
+Note: 
+This segment may be used to record various reference numbers. 
+Note 1153: 
+Use: 
+‘ACL’ - Bulk Shipment Reference. 
+‘CU’ - Consignor/Shipper’s reference. 
+‘FN’ - Freight Bill number. 
+‘IBC’ - Inbound center reference number. 
+‘LLR’ - Load list reference. 
+‘OBC’ - Outbound center reference number 
+‘PRN’ - Booking reference number. 
+                          ‘DGC’ – Dangerous Goods Identifier 
+ 
+ 
+Qualifier ACL is used for bulk shipments. Break Bulk (baby) shipments come from the 
+same shipper, but can have different receivers. They are grouped to 1 Break Bulk 
+shipment, to accommodate the customs Clearance of the “Bulk Shipment” only and not 
+all of the associated “Baby Shipments”. The baby shipments must have the Product 
+code: Break bulk (BBE or BBX) assigned to it. The Break Bulk shipment travels under the 
+standard Product code (like ESI or ESU). This Break Bulk shipment is just an aggregation 
+of the “Baby shipments” and travels FOC (Free of Charge) over the network. It terminates 
+after Customs clearance in the inbound country has taken place. For more information 
+about Break Bulk Express, please contact your Sales Representative. 
+ 
+In order to have the mother shipment/piece checkpoint available for baby shipment the 
+following need to be available in the manifest data: 
+1. Mother shipment and baby shipments need to be available in the manifest files. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 45 of 115
+
+=== PAGE 46 ===
+Message Specification Guidelines                         
+                          
+ 
+2. Mother shipment need to have network product code ‘P’ or “H’ and charge code 
+‘YW’. 
+3. Linking between baby shipment and mother shipment need to be provided with 
+Shipment reference type = ‘ACL’ and shipment reference = <Mother Shipment 
+ID/ 6647324213>. 
+4. Linking between baby shipment piece and mother shipment piece need to be 
+provided with Shipment reference type = ‘ACL’ and shipment reference = 
+<Mother Piece ID/ JD012959879580000001>. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 46 of 115
+
+=== PAGE 47 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 33  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 33 
+1 
+C 
+ GOR 
+Function: A group of segments to identify customs and other governmental procedures and required documents. 
+Segment group 33 is not used, but is mandatory to be able to specify segment group 34. 
+ 
+SG 33 - GOR 
+Segment 
+Occurrence 
+Usage 
+Description 
+GOR 
+1 
+M 
+ Governmental Requirements                                                            
+Function: A segment to indicate applicable governmental procedures related to import, export and transport of 
+the goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8323 
+M 
+AN..3 
+Transport Movement code 
+ 
+Example:  
+GOR+1’ 
+ 
+Note: 
+Segment group 4 is used as flag to indicate shipment is due to customs clearance and to 
+enable the usage of SG34. This segment has to be used only in combination with SG34 
+DOC. 
+ 
+Note 8323: 
+Use ‘1’ – Export. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 47 of 115
+
+=== PAGE 48 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 34  
+Group 
+Occurrence 
+Usage 
+Description 
+SG34 
+9 
+R 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a goods item. 
+ 
+SG 34 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+821+12345678’ 
+ 
+Note: 
+This segment is only to be used for identifying export-documents for dutiable shipments, 
+for customs clearance. 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code - Document type 
+‘811’ - Export license. 
+‘812’ - Exchange control declaration, export. 
+‘820’ - Dispatch note model T. 
+‘821’ - Dispatch note model T1. 
+‘822’ - Dispatch note model T2. 
+‘823’ - Control document T5. 
+‘825’ - Dispatch note model T2L. 
+‘830’ - Goods declaration for exportation. 
+‘841’ - Goods control certificate. 
+‘935’ – Customs invoice 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 48 of 115
+
+=== PAGE 49 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 34 - DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+1 
+O 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+3:200906011500:203’ 
+ 
+Note: 
+This segment is used for specifying the document date/time 
+Note 2005:  
+Use: 
+ ‘3’ – Commercial Invoice date/time 
+ 
+Note 2380: 
+With ‘3’ in preceding element, this is Invoice Date of the Commercial Invoice. The 
+specified format is mandatory. 
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+‘102’ for the date mask CCYYMMDD 
+. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 49 of 115
+
+=== PAGE 50 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 43  
+Group 
+Occurrence 
+Usage 
+Description 
+SG43 
+99 
+R 
+ NAD-LOC-SG44-SG47- SG49 
+Function: A group of segments to identify a party, related references, locations contacts, required documents,  
+and charges to be paid by the party. 
+ 
+SG 43 - NAD 
+Segment 
+Occurrence 
+Usage 
+Description 
+NAD 
+1 
+M 
+ Name and Address                                                                           
+Function: Specify Consignee/Receiver. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3035 
+M 
+AN..3 
+Party qualifier 
+C082 
+C 
+ 
+PARTY IDENTIFICATION DETAILS 
+   3039 
+M 
+AN..17 
+Party identification 
+C058 
+C 
+ 
+NAME AND ADDRESS 
+    3124 
+M 
+AN..35 
+Building Name 
+    3124 
+C 
+AN..35 
+City District 
+    3124 
+C 
+AN..35 
+Address Line 1  
+    3124 
+C 
+AN..35 
+Address Line 2 
+    3124 
+C 
+AN..35 
+Address Line 3 
+C080 
+C 
+ 
+PARTY NAME 
+   3036 
+M 
+AN..35 
+Party Name 
+C059 
+C 
+ 
+STREET 
+   3042 
+M 
+AN..35 
+Street name 
+   3042 
+C 
+AN..35 
+Building number 
+   3042 
+C 
+AN..35 
+House number 
+   3042 
+C 
+AN..35 
+Address line 4 
+3164 
+C 
+AN..35 
+City name 
+C819 
+C 
+ 
+COUNTRY SUB-ENTITY DETAILS 
+   3229 
+C 
+AN..9 
+State Code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   3228 
+C 
+AN..70 
+Province 
+3251 
+C 
+AN..9 
+Postcode identification 
+3207 
+C 
+AN..3 
+Country, coded 
+ 
+Example:  
+NAD+CN+++MICHEL VANHOREN SA+WOLUWELAAN::151+DIEGEM++1831+BE’ 
+NAD+FP+12345678’ 
+NAD+JD+++MAXIM INTEGRATED PRODUCTS+HERMANN-KOEHL 
+STRASSE::15+SCHKEUDITZ++04435+DE’ 
+ 
+Note: 
+The 1st and 2nd occurrences of SG11/NAD are mandatory, to indicate the 
+Consignor/Shipper and Consignee/Receiver. Use qualifier ‘CZ’ for Consignor and  
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 50 of 115
+
+=== PAGE 51 ===
+Message Specification Guidelines                         
+                          
+ 
+                          ‘CN’ for Consignee.  
+ 
+JD used for LBBX purpose. 
+ 
+ 
+Note 3035: 
+Use: 
+ 
+ 
+‘CN’ - Consignee/Receiver 
+‘IM’ – Importer 
+‘EX’ – Exporter 
+‘FP’ – Freight Payer 
+‘JD’ – Port of Entry (for LBBX - Baby Shipments only) 
+Qualifier ‘IV’ is not valid for International shipments. 
+For the full list of Role Types (except Shipper related), refer to "DHL Express Integrated 
+Solution Reference Information" (available from DHL Express on request). 
+ 
+The address JD (Port of Entry) of Baby Shipment must be the same as Mother Shipment 
+Receiver address because of possible DCVS label re-printing functionality 
+ 
+Note 3039: 
+This element is used only in combination with qualifier ‘CZ’ in element 3035. It contains 
+the assigned account number of DHL. For DHL Global Forwarding: Agreed customer’s 
+code for dispatch address (i.e. for Dispatch party or for Consignee/Receiver where no 
+separate dispatch party is specified).This is also the field to have payer or billing account 
+no. 
+ 
+Note 3124:3-5: Address line 1-3 to be used only as supplementary information to the specific address 
+fields. Specific address fields like Street name, City name, etc. have priority as they 
+provide structured address that allows better label printing and are expected by DHL 
+systems. 
+ 
+Note 3036: 
+They contain the full name of the Shipper/Receiver party. 
+ 
+Note 3042: 
+Use this element three times to specify street name, building number, house number and 
+house number addition. However if for technical reason, it is not possible for the 
+customer to split the address data, the street name, building number and house number 
+may be concatenate in the first element 3042. 
+ 
+Note 3229: 
+Use this for 2-char state code as defined in Format ISO 3166-2, e.g. TX. 
+ 
+Note 3251: 
+Mandatory except for countries where no postcode system is available, e.g. Ireland. 
+ 
+Note 3207: 
+Format ISO 3166-1 Alpha 2 country codes. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 51 of 115
+
+=== PAGE 52 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 43 - LOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+9 
+M 
+ Place/Location Identification                                                            
+Function: To specify a location. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..25 
+Location name code 
+C519 
+O 
+ 
+LOCATION IDENTIFICATION 
+   3223 
+R 
+AN..25 
+Location name code 
+ 
+Example:  
+DHL Time Definite: LOC+8+BFS+BFS’ 
+DHL Day Definite: LOC+7+AMS+UTX’ 
+ 
+ 
+Note: 
+The segment LOC with qualifier ‘8’ is mandatory to indicate the DHL Express Service 
+Area code and DHL Express Facility code corresponding to the destination location of the 
+shipment. 
+It is also mandatory for DHL Express Road shipments with product feature ‘Hold at 
+Depot’ and ‘PackStation’. In this segment, the appropriate code is specified. 
+ 
+Note 3227: 
+Use: 
+‘8’ - Place of destination. Use for DHL Express TD 
+‘7’ - Place of delivery. Use for DHL Express DD       
+ 
+Note 3225: 
+To be populated with DHL Express Facility code for the location of the shipment 
+destination. May or may not be the same value as in 3223. A list of DHL Express Service 
+Area codes with corresponding DHL Express Facility codes by location name, post code 
+and country is available on request. 
+ 
+Note 3223: 
+To be populated with DHL Express Facility code for the location of the shipment 
+destination. May or may not be the same value as in 3225. A list of DHL Express Service 
+Area codes with corresponding DHL Express Facility codes by location name, post code 
+and country is available on request. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 52 of 115
+
+=== PAGE 53 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 44 
+Group 
+Occurrence 
+Usage 
+Description 
+SG44 
+1 
+C 
+ CTA-COM 
+Function: A group of segments to identify a party, related references, locations contacts, required documents,  
+and charges to be paid by the party. 
+SG 44 - CTA 
+Segment 
+Occurrence 
+Usage 
+Description 
+ 
+CTA 
+1 
+M 
+ Contact Information                                                                         SG12 
+Function: To specify a person within a party. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3139 
+R 
+AN..3 
+Contact function code 
+C056 
+R 
+ 
+DEPARTMENT OR EMPLOYEE DETAILS 
+   3413 
+X 
+AN..17 
+Department or employee name code 
+   3412 
+R 
+AN..35 
+Department or employee name 
+ 
+Example:  
+CTA+AC+:M. OLIVIER ABIDTS’ 
+ 
+Note: 
+This segment contains the ‘for the attention of‘ information. The segment group is 
+mandatory for product feature ‘Delivery limited to receiver’ because it holds the name of 
+the person to whom delivery must be accomplished. This segment is to be used only to 
+give the receiver contact name. 
+ 
+Note 3139: 
+Use: 
+ 
+‘AC’ - Accepting contact. Use for product feature ‘Delivery limited to receiver”; else use  
+‘IC’ - Contact information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 53 of 115
+
+=== PAGE 54 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 44 - COM 
+Segment 
+Occurrence 
+Usage 
+Description 
+COM 
+9 
+C 
+ Communication Contact                                                                 
+Function: To identify a communication number of a person or department to whom communication should be 
+Directed. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C076 
+M 
+ 
+COMMUNICATION CONTACT 
+   3148 
+M 
+AN..70 
+Communication address identifier 
+   3155 
+M 
+AN..3 
+Communication address code qualifier 
+ 
+Example: 
+COM+31 653 123 456:TE’ 
+COM+?+31 653 123 456:TE’ 
+ 
+Note: 
+This segment is used to indicate a communication contact with the Consignee/Receiver 
+for pre-notifying about a to-be delivered shipment or to inform of a to-be collected 
+shipment. This segment has to be used to give additional information on the specified 
+contact given in the previouhs CTA segment. 
+ 
+Note 3148: 
+If the phone number is beginning with the ‘+’ sign, the ‘?’ release character should come 
+immediately before the ‘+’ sign in order to avoid translation problem. 
+Only 70 characters will be accepted by DHL. 
+ 
+ 
+Note 3155: 
+Use: 
+ 
+ 
+‘EM’ - Electronic Mail. 
+‘FX’ – Telefax. 
+‘TE’ - Telephone. 
+ 
+ 
+‘AL’ – Cellular phone 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 54 of 115
+
+=== PAGE 55 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 47 
+Group 
+Occurrence 
+Usage 
+Description 
+SG47 
+9 
+C 
+ RFF 
+Function: A group of segments to specify a reference related to a party  
+ 
+SG 47 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+C 
+AN..70 
+Reference identifier 
+   1156 
+R 
+AN..2 
+Document line identifier  
+ 
+Example:  
+RFF+VA:1154345678:BE’ 
+ 
+Note: 
+This segment may be used to record the different Registration numbers of the different 
+role types.  For example, consignee related reference numbers. 
+ 
+Values are validated against role types under the DHL equivalent values of SG43-NAD-
+3035. 
+ 
+Note 1153: 
+Use: 
+                          ‘VA’   – VAT Registration Number of Consignee 
+For the full list of all possible Registration Number Type for different role types / Country, 
+refer to "DHL Express Integrated Solution Reference Information" (available from DHL 
+Express on request) 
+ 
+Note 1154: 
+Only 35 characters will be accepted by DHL. 
+ 
+Note 1156: 
+Format ISO 3166-1 Alpha 2 country codes 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 55 of 115
+
+=== PAGE 56 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 49 
+Group 
+Occurrence 
+Usage 
+Description 
+SG49 
+1 
+C 
+ TSR 
+Function: A group of segments to specify a transport service requirement and its associated details (such as applicable c
+agreement) related to the party. 
+ 
+SG 49 - TSR  
+Segment 
+Occurrence 
+Usage 
+Description 
+TSR 
+1 
+M 
+ Transport Service requirements 
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C536 
+X 
+ 
+CONTRACT AND CARRIAGE CONDITION 
+C233 
+X 
+ 
+SERVICE 
+C537 
+R 
+ 
+TRANSPORT PRIORITY 
+   4219 
+M 
+AN..3 
+Transport service priority code 
+   1131 
+C 
+AN..17 
+Code list identification code 
+   3055 
+C 
+AN..3 
+Code list responsible agency code 
+ 
+Example:  
+TSR+++ECX:57:87’ (Express Worldwide EU) 
+TSR+++ESU:57:87’ (Economy Select EU) 
+ 
+Note 4219: 
+Use of this element is to indicate the DHL product. For more information about the 
+product codes, please consult your Sales Representative. 
+ 
+Note 1131: 
+Use ‘57’ – Product code. 
+ 
+Note 3055: 
+Use ‘87’ – Assigned by carrier. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 56 of 115
+
+=== PAGE 57 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 49 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+C 
+ Free Text 
+Function: A segment used to indicate any additional information such as business party trader type. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..20 
+Free text value 
+ 
+Example:  
+FTX+AIJ+++Private' 
+ 
+Note 4451: 
+Use: 
+‘AIJ’ - Business Party Trader Type 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Business Party Trader Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 57 of 115
+
+=== PAGE 58 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 
+Group 
+Occurrence 
+Usage 
+Description 
+SG50 
+999 
+R 
+ GID-SG52-SG53-SG55-SG65 
+Function: A group of segments to describe the goods items for transport undertaken  
+ 
+SG 50 - GID 
+Segment 
+Occurrence 
+Usage 
+Description 
+GID 
+1 
+M 
+ Goods Item Details                                                                           
+Function: A segment to describe the goods items for which transport is undertaken. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1496 
+C 
+N..5 
+Goods item number 
+C213 
+R 
+ 
+NUMBER AND TYPE OF PACKAGES 
+   7224 
+R 
+N..8 
+Package quantity 
+   7065 
+R 
+AN..17 
+Package type description code 
+ 
+Example:  
+GID++1:CT’ 
+ 
+Example with weight and dimensions on shipment level. 
+Example with weight and dimensions on piece level. 
+GID+99999+2:CT’  
+ 
+ 
+ 
+ 
+GID++1:CT’ 
+MEA+WT+AAE+KGM:18’  
+ 
+ 
+ 
+MEA+WT+AAE+KGM:1’ 
+PCI+18’  
+ 
+ 
+ 
+ 
+ 
+DIM+2+CMT:10:10:10’ 
+GIN+VZ+J:VGL4502332243369101’ 
+ 
+ 
+PCI+18’ 
+GID+99999+2:CT’ 
+ 
+ 
+ 
+ 
+GIN+VZ+J:VGL4502332243369101’ 
+MEA+WT+AAE+KGM:18’  
+ 
+ 
+ 
+GID++1:CT’ 
+PCI+18’  
+ 
+ 
+ 
+ 
+ 
+MEA+WT+AAE+KGM:17’ 
+GIN+VZ+J:VGL4502332243369102’ 
+ 
+ 
+DIM+2+CMT:20:10:15’ 
+PCI+18’ 
+GIN+VZ+J:VGL4502332243369102’ 
+ 
+Note 1496: 
+If data in SG52/MEA and SG53/DIM is not available on item level, the GID should be 
+used as follows: 
+Element 1496 contains value 99999 and element 7224 contains the totals number of 
+pieces in the shipment. The segment SG52 MEA and SG53 DIM will then contents the 
+total volume. 
+Note 7224: 
+The number of packages is always 1, since the following segments indicate items within 
+one shipment. 
+BGM is on shipment level, within this group SG50, GID is on piece level. Since the GID 
+group may occur 999 times, a shipment can contain up to 999 pieces. 
+Note 7065: 
+For the list of package types, please consult your Sales Representative. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 58 of 115
+
+=== PAGE 59 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 52   
+Group 
+Occurrence 
+Usage 
+Description 
+SG52 
+2 
+R 
+ MEA                                                                                                    
+Function: A group of segments to specify measurements applicable to a piece. 
+ 
+SG 52 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: Measurements of a piece. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement application qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+   6313 
+R 
+AN..3 
+Measured attribute code 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..18 
+Measurement value 
+ 
+Example:  
+MEA+WT+AAE+KGM:12’ 
+MEA+VOL+AAW+MTQ:45.000’ 
+ 
+Note: 
+The segment will occur twice. The first occurrence is reserved for the piece weight and 
+the second for the piece volume. 
+ 
+Note 6311:  
+Use: ‘WT’ – Weight. 
+         ‘VOL’ - Volume. 
+ 
+Note C108/4440: This segment with element 6311 = VOL, becomes mandatory if no dimensions of the          
+piece are available. 
+ 
+Note 6313:  
+Use: ‘AAE’ - Piece gross weight. 
+        ‘AAW’ - Gross volume. 
+ 
+Note 6411:  
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+For WT ‘KGM or ‘LBR’ 
+For VOL MTQ, CMQ or INQ 
+ 
+Note 6314:  
+• The gross weight and volume of the item are allowed with a maximum of 3 decimals. 
+• Decimal sign may be point or comma depending of what specified in segment UNA. 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 59 of 115
+
+=== PAGE 60 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 53  
+Group 
+Occurrence 
+Usage 
+Description 
+SG53 
+1 
+R 
+ DIM                                                                                                    
+Function: A group of segments to specify dimensions applicable to a piece. 
+ 
+SG 53 - DIM 
+Segment 
+Occurrence 
+Usage 
+Description 
+DIM 
+1 
+M 
+ Dimensions                                                                                       
+Function: Measurements of a piece. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6145 
+M 
+AN..3 
+Dimensions type code qualifier 
+C211 
+M 
+ 
+DIMENSIONS 
+   6411 
+M 
+AN..3 
+Measurement unit code 
+   6168 
+R 
+N..15 
+Length dimension code 
+   6140 
+R 
+N..15 
+Width dimension code 
+   6008 
+R 
+N..15 
+Height dimension code 
+ 
+Example:  
+DIM+2+CMT:10:10:10’ 
+ 
+Note: 
+ 
+This segment becomes mandatory if SG52 MEA+VOL is not used. See also SG52 MEA. 
+ 
+Note 6145: 
+Use ‘2’ – Package dimensions. 
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+ 
+ 
+‘CMT’, ‘MTR’ or “INH’ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 60 of 115
+
+=== PAGE 61 ===
+Message Specification Guidelines                         
+                          
+ 
+ 
+ 
+  Segment Group 54  
+Group 
+Occurrence 
+Usage 
+Description 
+SG54 
+9 
+C 
+ RFF                                                                                                    
+Function: A group of segments to identify references to a goods item. 
+ 
+SG 54 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+9 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..70 
+Reference identifier 
+ 
+Example:  
+RFF+ACL:1154345678’ 
+ 
+Note: 
+This segment may be used to record various reference numbers. 
+Note 1153: 
+Use: 
+‘ACL’ - Bulk Shipment Reference. 
+‘CU’ – Consignor/Shipper’s reference 
+ 
+1. Linking between baby shipment piece and mother shipment piece need to be 
+provided with Shipment reference type = ‘ACL’ and shipment reference = 
+<Mother Piece ID/ JD012959879580000001>. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 61 of 115
+
+=== PAGE 62 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 55  
+Group 
+Occurrence 
+Usage 
+Description 
+SG55 
+1 
+R 
+ PCI-GIN                                                                                              
+Function: A group of segments to specify marks and numbers of a goods item. 
+ 
+SG 55 - PCI 
+Segment 
+Occurrence 
+Usage 
+Description 
+PCI 
+1 
+M 
+ Package identification                                                                      
+Function: To specify marks and numbers of a good item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4233 
+R 
+AN..3 
+Marking instructions, coded 
+ 
+Example:  
+PCI+18’ 
+ 
+Note 4233: 
+Use ‘18’ – Carrier’s instructions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 62 of 115
+
+=== PAGE 63 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 55 - GIN  
+Segment 
+Occurrence 
+Usage 
+Description 
+GIN 
+9 
+R 
+ Goods identity number                                                                    
+Function: To give specific identification number. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+7405 
+M 
+AN..3 
+Object identification code qualifier 
+C208 
+M 
+ 
+IDENTIFY NUMBER RANGE 
+   7402 
+M 
+AN..35 
+Object identifier 
+   7402 
+M 
+AN..35 
+Object identifier 
+ 
+Example:  
+GIN+VZ+J:VGL0858922671234563’ 
+GIN+AW+00:357121231234567893’ 
+GIN+VZ+J:JD0030112708872040054737’ 
+ 
+Note 7405: 
+For DHL shipment items this is the License plate number. For qualifier ‘VZ’, the range is 
+provided by DHL. The license plate number should be the same as on the Global SOP 
+label. 
+ 
+Use: 
+‘AW’ - Serial shipper container code - for items identifiable via the EAN128 SSCC. Use 
+allowed for DHL Express Road shipments. Starting qualifier ‘00’ is not part of the unique 
+number. 
+‘VZ’ - Transport unit identification according to ISO/IES 15459 - for DHL Express Road 
+shipment items this is the CEN License plate. The number consists of a fixed part and 
+a sequential part. The fixed part is provided by DHL Express Road. The sequential part is 
+free for the customer to define. The whole number should be stored in the GIN segment 
+(including the starting qualifier ‘J’). 
+‘WA’ - Indivisible transport unit identification according to ISO/IES 15459 - same as ‘VZ’, 
+but indicating pallet units travelling under one unique item bar code. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 63 of 115
+
+=== PAGE 64 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 65  
+Group 
+Occurrence 
+Usage 
+Description 
+SG65 
+99 
+C 
+ DGS-FTX-SG67 
+Function: A group of segments to specify dangerous goods details related to the goods item. One goods item 
+may be in different dangerous goods classes. 
+ 
+SG 65 - DGS 
+Segment 
+Occurrence 
+Usage 
+Description 
+DGS 
+1 
+M 
+ Document message details                                                             
+Function: To identify dangerous goods in limited quantities. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8273 
+R 
+AN..3 
+Dangerous goods regulations, coded 
+C205 
+C 
+ 
+HAZARD CODE 
+   8351 
+R 
+AN..7 
+Hazard code identification 
+   8078 
+R 
+AN..7 
+Additional hazard classification identifier 
+   8092 
+R 
+AN..10 
+Hazard code version identifier 
+C234 
+R 
+ 
+UNDG INFORMATION 
+   7124 
+R 
+N..4 
+United Nation Dangerous Goods identifier 
+ 
+Example:  
+DGS+ADR+3:3:B+1294’ 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 – RFF. Contact DHL Express for advice as to the values to use. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 64 of 115
+
+=== PAGE 65 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 65 - FTX 
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+C 
+ Free Text                                                                                            
+Function: To specify the dangerous goods technical name. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AAD+++TECHNICAL NAME’ 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 - RFF. Contact DHL Express for advice as to the values to use  
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 65 of 115
+
+=== PAGE 66 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 67  
+Group 
+Occurrence 
+Usage 
+Description 
+SG67 
+1 
+R 
+ MEA                                                                                                    
+Function: A group of segments to identify dangerous goods measurements. 
+ 
+SG 67 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: Measurements of goods items. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement purpose code qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..18 
+Measurement value 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 - RFF. Contact DHL Express for advice as to the values to use  
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 66 of 115
+
+=== PAGE 67 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 70  
+Group 
+Occurrence 
+Usage 
+Description 
+SG70 
+4 
+C 
+ EQD-EQN-MEA                                                                                                
+Function: A group of segments to specify equipment in which goods are transported.   
+ 
+SG 70 - EQD 
+Segment 
+Occurrence 
+Usage 
+Description 
+EQD 
+1 
+M 
+ Equipment Details                                                                                 
+Function:   To identify a unit of equipment. The type of pallets etc. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8053 
+M 
+AN..3 
+Equipment Type code 
+ 
+Example:  
+EQD+EFP’ 
+ 
+Note 8053: 
+Use:  ‘EFP’  – Changeable Pallet 
+                                   ‘EYP’ – Changeable Box 
+                                   ‘FPN’ – Pallet 
+                                   ‘BPN’ – Box Pallet WT’ – Weight.  
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 67 of 115
+
+=== PAGE 68 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 70 - EQN 
+Segment 
+Occurrence 
+Usage 
+Description 
+EQN 
+1 
+M 
+ Number of Units                                                                               
+Function:   A segment to specify the number of pieces of equipment required. The total number of pallets  
+etc. of all shipments in the message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C523 
+M 
+ 
+NUMBER OF UNITS DETAILS  
+  6350 
+M 
+N..15 
+Number of Units  
+ 
+ 
+Example:  
+EQN+10’ 
+ 
+Note 6350: 
+Number of Pallets/boxes  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 68 of 115
+
+=== PAGE 69 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 70 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+O 
+ Measurements                                                                            
+Function:   To specify the length in a vehicle, whereby the complete width and height over the length is needed 
+ for the shipment. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement Application Qualifier 
+C502 
+X 
+ 
+MEASUREMENT DETAILS  
+C174 
+R 
+ 
+VALUE RANGE  
+  6411 
+M 
+AN..3 
+Measure Unit Qualifier 
+  6314 
+R 
+N..18 
+Measurement Value 
+ 
+Example:  
+MEA+LMT++MTR:20’ 
+ 
+Note 6311: 
+Use: LMT – Load Meters   
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: ‘CMT’, ‘MTR’ or “INH’ 
+ 
+Note 6314: 
+The total loading meters needed for the entire shipment with decimals.   
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 69 of 115
+
+=== PAGE 70 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 25 (Invoice Level) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG 25 
+9999 
+M 
+ CNI-DTM-CNT-TSR-MOA-FTX-SG31-SG32-SG33-SG43-SG50-SG70 
+Function: A group of segments to give information about an Invoice 
+Note on the Occurrence: 9999 is for the combination of Segment Group 25 (Shipment Level) and 
+Segment Group 25 (Invoice Level) 
+ 
+SG 25 - CNI 
+Segment 
+Occurrence 
+Usage 
+Description 
+CNI 
+1 
+M 
+ Consignment Information                                                                    
+Function: To identify one Invoice  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1490 
+R 
+N..4 
+Consolidation Item Number  
+C503 
+R 
+ 
+Document/Message Details 
+   1004 
+R 
+AN..35 
+Document Identifier  
+ 
+ 
+Example:  
+CNI+9999+2187304991:5' 
+ 
+Note 1490 : 
+‘9999’ – Invoice Level 
+ 
+Note 1004 : 
+Unique Shipment Number or waybill number the Invoice level information are related to. 
+These shipment number needs to be unique per shipment for at least 6 months. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 70 of 115
+
+=== PAGE 71 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+9 
+C 
+ Control Totals 
+Function: To provide control total within an Invoice 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+7:1.24:KGM' 
+CNT+29:1.20:KGM' 
+ 
+Note: 
+This segment represents control totals within respective Invoice. 
+ 
+Note 6069: 
+Use: 
+ 
+‘7’ - Total Gross Weight (Invoice) 
+ 
+‘29’ - Total Net Weight  
+Note 6066: 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Confirm with DHL Express which units of the following can be supported in the shipment 
+origin country: ‘KGM or ‘LBR’ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 71 of 115
+
+=== PAGE 72 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+99 
+R 
+ Monetary Amount 
+Function: 
+A segment to indicate a monetary value for an Invoice. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+43:150090:EUR’ 
+ 
+Note:   
+DHL will only accept 5 monetary amount other than 43 – Total Customs Value (TCUSV)  
+ 
+ 
+79 – Invoice Line Items Total Value (TINVA)  
+ 
+Note 5025: 
+Use: 
+‘43’ - Declared total customs value. 
+‘64’ – Freight  Charge. Can be used for Override Charge. 
+For the full list of other Invoice Monetary Amount type codes, refer to "DHL Express 
+Integrated Solution Reference Information" (available from DHL Express on request). 
+ 
+For DDP shipments (refer to SG31 TOD Segment, C100/4053 Element), the following 
+additional charges must be provided: 
+‘55’ – Import Duty Value  
+‘161’ – Import Tax Value 
+Sum of ‘55’ + ‘161’ + ‘43’ – Import Total Value will be calculated by DHL. 
+ 
+Note 5004: 
+Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 3 decimals are included. 
+▪ 
+All amounts have to be specified with 3 decimals included, regardless currency. 
+▪ 
+Decimal sign depends on what has been specified in segment UNA.  
+If UNA is not specified then default sign will be point. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for qualifier ‘22’ – COD currency 
+of destination needs to be populated. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 72 of 115
+
+=== PAGE 73 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+R 
+ Free Text 
+Function: A segment to specify free form or process available supplementary information within an Invoice, such  
+as Reason for Export 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..5 
+Free text value 
+ 
+Example:  
+FTX+CEX+++C'  
+ 
+Note 4451: 
+For Reason for Export use ‘CEX’, mandatory for all shipments 
+ 
+For Duty Free Import Remark use “AAU’ – may be used with Return shipments, see 
+Appendix F 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Reason for Export values, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 73 of 115
+
+=== PAGE 74 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 31 (Invoice Level)  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 31 
+1 
+R 
+ TOD-LOC 
+Function: A group of segments to specify terms of delivery 
+SG 31 - TOD 
+Segment 
+Occurrence 
+Usage 
+Description 
+TOD 
+1 
+M 
+ Terms of Delivery                                                                                
+Function: To specify terms of delivery or transport. Incoterm - Invoice level 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4055 
+R 
+AN..3 
+Delivery or transport form function code 
+4215 
+X 
+AN..3 
+Transport charges payment method code 
+C100 
+R 
+ 
+TERMS OF DELIVERY OR TRANSPORT 
+   4053 
+R 
+AN..3 
+Delivery or transport terms description code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   4052 
+C 
+AN..70 
+Delivery or transport terms description 
+ 
+Example:  
+TOD+6++DDU’ (Default value or no feature) 
+TOD+6++CPT:::050051’ (Using product features ‘Saturday delivery’ and ‘Named 
+signature’) 
+TOD+6++DDU:::958’ (Using the ‘Recap with signature’ feature) 
+TOD+6++DDU:::300’ (Using the direct injection product feature) 
+TOD+6++DDP:::231’ (Represents the ‘Loose Bulk Baby’ Service) 
+TOD+6++DDP:::230’ (Represents the ‘Loose Bulk Mother’ Service) 
+ 
+Note: 
+Segment group 31 is mandatory to indicate freight costs payment and also to register the 
+agreement between the Seller and the Buyer (Incoterms). On conditional base, product 
+features can be indicated. If you wish to have more information about the product 
+features and availability please contact your Sales representative. 
+ 
+Note 4055: 
+Use ‘6’ – Delivery conditions. 
+ 
+Note 4053: 
+Incoterms, the default value is ‘DDU’. 
+ 
+To have a complete list of all possible incoterms, please contact your Sales 
+representative. 
+ 
+Note 1131:         Not Used 
+ 
+Note 3055:         Not Used 
+ 
+Note 4052: 
+This element is reserved for product features. All appropriate product features should be 
+stored in this element, without separation sign. See example. The format of each 
+occurrence is 3 digits length, leading ‘0’ (zero) included. Please contact your Sales 
+representative for valid product features codes. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 74 of 115
+
+=== PAGE 75 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 31 - LOC  
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+1 
+C 
+ Place/Location Identification                                                            
+Function: To specify a location related to the terms of Delivery. Place of Incoterms - Invoice level 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..3 
+Location name code 
+   1131 
+X 
+AN..17 
+Code List Identification Code  
+   3055 
+X 
+AN..3 
+Code List Responsible agency Code 
+   3244 
+R 
+AN..256 
+Location Name 
+ 
+Example:  
+LOC+1+AH:::liege' 
+ 
+Note 3227: 
+Use:  
+‘1’ - Place of Incoterms 
+ 
+Note 3225: 
+To be populated with DHL Express Service Area code for the location of where the 
+Incoterms were applied. A list of DHL Express Service Area codes with corresponding 
+DHL Express Facility codes by location name, post code and country is available on 
+request. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 75 of 115
+
+=== PAGE 76 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 32 (Invoice Level)  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 32 
+999 
+C 
+ RFF 
+Function: A group of segments containing a references related to the Invoice 
+ 
+SG 32 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: A segment indicating the Registration Numbers 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+ 
+Example:  
+RFF+CU:1154345678’ 
+ 
+Note: 
+This segment may be used to record various Invoice Reference numbers. 
+Values are validated against Shipper OR Consignee Country Codes under SG4-NAD-
+3207 and SG43-NAD-3207. 
+ 
+ 
+Note 1153: 
+Use: 
+‘CU’ - Consignor/Shipper’s reference. 
+‘ABT’ – MRN (Master Reference No., goods declaration document identifier for export 
+from Germany) 
+For the full list of Invoice Reference Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 76 of 115
+
+=== PAGE 77 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 33 (Invoice Level)  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 33 
+1 
+M 
+ GOR 
+Function: A group of segments to identify customs and other governmental procedures and required documents. 
+Segment group 33 is not used, but is mandatory to be able to specify segment group 34. 
+ 
+SG 33 - GOR 
+Segment 
+Occurrence 
+Usage 
+Description 
+GOR 
+1 
+M 
+ Governmental Requirements                                                            
+Function: A segment to indicate applicable governmental procedures related to import, export and transport of 
+the goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8323 
+M 
+AN..3 
+Transport Movement code 
+ 
+Example:  
+GOR+1’ 
+ 
+ 
+GOR+2’ 
+ 
+Note: 
+This segment has to be used only in combination with SG34 DOC. 
+ 
+Note 8323: 
+Use: 
+ ‘1’ – Export 
+ ‘2’ – Import 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 77 of 115
+
+=== PAGE 78 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 33 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+R 
+ Free Text 
+Function: A segment to specify free form or process available supplementary information within an Invoice,  
+such as Trading Transaction Type 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..15 
+Free text value 
+ 
+Example:  
+FTX+AAI+++Commercial' 
+ 
+ 
+ 
+Note 4451: 
+Use: 
+‘AAI’ - Trading Transaction Type 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Trading Transaction Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request) 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 78 of 115
+
+=== PAGE 79 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 34 (Invoice Level)   
+Group 
+Occurrence 
+Usage 
+Description 
+SG34 
+9 
+R 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a goods item. 
+ 
+SG 34 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: A segment to indicate accompanying documents for customs clearance (i.e Invoice Number, Customs  
+Document) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+861+COO1111199' 
+DOC+380+INVNO11199' 
+ 
+Note: 
+This segment is only to be used for identifying export-documents for dutiable shipments, 
+for customs clearance. 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code – Main Document type 
+‘380’ - Commercial Invoice 
+‘325’ – Proforma Invoice 
+For full list of other Associated Document Type Codes, refer to "DHL Express Integrated 
+Solution Reference Information" (available from DHL Express on request). 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 79 of 115
+
+=== PAGE 80 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 34 - DTM  
+Segment 
+Occurrence 
+Usage 
+Description 
+DTM 
+1 
+O 
+ Date, Time or Period 
+Function: A segment to indicate date and time. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C507 
+M 
+ 
+DATE/TIME/PERIOD 
+   2005 
+M 
+AN..3 
+Date/Time/Period function code qualifier 
+   2380 
+R 
+AN..35 
+Date/Time/Period value 
+   2379 
+R 
+AN..3 
+Date/Time/Period format code 
+ 
+Example:  
+DTM+3:200906011500:203’ 
+ 
+Note: 
+This segment is used for specifying the document date/time 
+Note 2005:  
+Use: 
+ ‘3’ – Commercial Invoice date/time 
+ 
+Note 2380: 
+With ‘3’ in preceding element, this is Invoice Date of the Commercial Invoice. The 
+specified format is mandatory. 
+Note 2379: 
+Use: 
+‘203’ for the date time mask CCYYMMDDHHMM 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 80 of 115
+
+=== PAGE 81 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG50 
+999 
+R 
+ GID-SG52-SG53-SG55-SG65 
+Function: A group of segments to describe the goods line items related in an Invoice 
+ 
+SG 50 - GID 
+Segment 
+Occurrence 
+Usage 
+Description 
+GID 
+1 
+M 
+ Goods Item Details                                                                           
+Function: A segment to identify a line item in an Invoice 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1496 
+C 
+N..5 
+Goods item number 
+C213 
+R 
+ 
+NUMBER AND TYPE OF PACKAGES 
+   7224 
+R 
+N..8 
+Package quantity 
+   7065 
+R 
+AN..17 
+Package type description code 
+ 
+Example:  
+GID+3+1:CT' 
+ 
+Note:   
+For Invoice Line Item SG 50 GID, SG 50 FTX - FTX+LIN' is mandatory 
+ 
+Note 1496: 
+Sequence number incrementing per line item 
+Note 7224: 
+The number of packages is always 1, since the following segments indicate items within 
+one shipment. 
+Note 7065: 
+For the list of package types, please consult your Sales Representative. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 81 of 115
+
+=== PAGE 82 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - LOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+1 
+R 
+ Place/Location Identification                                                            
+Function: A segment to specify a country associated with a line item (i.e. Line Item Country of Manufacture) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..3 
+Location name code 
+   1131 
+X 
+AN..17 
+Code List Identification Code  
+   3055 
+X 
+AN..3 
+Code List Responsible agency Code 
+ 
+Example:  
+LOC+27+AMS::6' 
+ 
+Note 3227: 
+Use:  
+‘27’ - Line Item Country of Manufacture 
+ 
+Note 3225: 
+A list of codes are available on request at your Sales Representative. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 82 of 115
+
+=== PAGE 83 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+9 
+R 
+ Monetary Amount 
+Function: A segment to specify a monetary amount associated with a line item, such as Line Item Total Customs Value, 
+(Article) Customs Value, etc. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+38:130000000000000.101:EUR' 
+ 
+Note 5025: 
+Use: 
+‘38’ or ‘39’ - Line Item Value. 
+‘146’ – Single Item (Article) Customs Value 
+For the full list of other Invoice Line Item Monetary Amount type codes, refer to "DHL 
+Express Integrated Solution Reference Information" (available from DHL Express on 
+request). 
+ 
+Note 5004: 
+Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 3 decimals are included. 
+▪ 
+All amounts have to be specified with 3 decimals included, regardless currency. 
+▪ 
+Decimal sign depends on what has been specified in segment UNA.  
+If UNA is not specified then default sign will be point. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for qualifier ‘22’ – COD currency 
+of destination needs to be populated. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 83 of 115
+
+=== PAGE 84 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+2 
+R 
+ Free Text 
+Function: A segment to specify processable supplementary information relating to the line item  
+(i.e. Line Item Description) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..512 
+Free text value 
+ 
+Example:  
+FTX+LIN' 
+FTX+AAA+++DESCRIPTION LINE ITEM1' 
+ 
+Note 4451: 
+Use: 
+‘LIN’ – Line Item indicator for GID 
+‘AAA’ - Line Item Description 
+For low value shipments to Singapore Y or N must be given in SG50 within the GID 
+segment - this is to indicate whether GST on the shipment contents has been paid in the 
+exporting country already (Y = yes) or not (N = no), (see also SG-6 RFF) 
+Examples: 
+FTX+Y' 
+FTX+N' 
+Each line item should have such a GST flag/ indicator. 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+Line Item Description 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 84 of 115
+
+=== PAGE 85 ===
+Message Specification Guidelines                         
+                          
+ 
+ 
+Segment Group 52 (Invoice Line Item)   
+Group 
+Occurrence 
+Usage 
+Description 
+SG52 
+2 
+R 
+ MEA                                                                                                    
+Function: A group of segments to specify measurements applicable to a line item 
+ 
+SG 52 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: A segment to specify measurements, applicable to a line item (i.e. Line Item Gross weight,  
+Line Item Net Weight) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement application qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+   6313 
+R 
+AN..3 
+Measured attribute code 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..15 
+Measurement value 
+ 
+Example:  
+MEA+WT+AAE+KGM:2.8' 
+MEA+WT+AAF+KGM:2.0' 
+ 
+Note 6311:  
+Use: ‘WT’ – Weight. 
+ 
+Note 6313:  
+Use: ‘AAE’ - Line Item Gross Weight 
+        ‘AAF’ - Line Item Net Weight 
+ 
+Note 6411:  
+Confirm with DHL Express which units of the following can be supported in the shipment 
+origin country: ‘KGM or ‘LBR’ 
+ 
+Note 6314:  
+• The weight of the item is given with a maximum of 15 digits inclusive 3 decimal. 
+• Decimal sign may be point or comma depending of what has been specified in segment 
+UNA. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 85 of 115
+
+=== PAGE 86 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 54 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG54 
+9 
+C 
+ RFF                                                                                                    
+Function: A group of segments to identify references to a goods item. 
+ 
+SG 54 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: A segment indicating the Line Item Reference Numbers used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+ 
+Example:  
+RFF+HS:BEHS111199' 
+RFF+MF:MFPAN11199' 
+RFF+AFE:AFE1111199' 
+ 
+Note: 
+ 
+This segment may be used to record various reference numbers for each line items.   
+Values are validated against Shipper OR Consignee Country Codes under SG4-NAD-
+3207 and SG43-NAD-3207. 
+ 
+Note 1153: 
+Use: 
+ 
+‘HS’ - Line Item Harmonized code 
+‘MF’ - Manufacturer's part number 
+‘AFE’ – Export Control Commodity number (ECCN) 
+For the full list of Line Item Reference Numbers type codes, refer to "DHL Express 
+Integrated Solution Reference Information" (available from DHL Express on request). 
+ 
+Note 1154: 
+Only 35 characters will be accepted by DHL. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 86 of 115
+
+=== PAGE 87 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 56 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG56 
+9 
+C 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a line item. 
+ 
+SG 56 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: A segment to specify a document prepared for a line item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+41+LIASCDOC19' 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code - Document type 
+’41’ - Driver's License 
+For the full list of Associated Document Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 87 of 115
+
+=== PAGE 88 ===
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 63 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG63 
+1 
+R 
+ TCC 
+Function: A group of segments to specify information associated with the goods item. 
+ 
+SG 63 - TCC 
+Segment 
+Occurrence 
+Usage 
+Description 
+TCC 
+1 
+M 
+ Charge/Rate Calculations 
+Function: A segment to specify charges/quantity associated with the goods item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C200 
+R 
+ 
+CHARGE 
+   8023 
+R 
+AN..17 
+Freight and other charges description identifier 
+ 
+Example:  
+TCC+DHL' 
+ 
+Note 8023:  
+Use ‘DHL’ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 88 of 115
+
+=== PAGE 89 ===
+Message Specification Guidelines                         
+                          
+ 
+SG 63 - QTY 
+Segment 
+Occurrence 
+Usage 
+Description 
+QTY 
+1 
+R 
+ Quantity 
+Function: A segment to indicate a Invoiced line item quantity 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C186 
+M 
+ 
+QUANTITY DETAILS 
+   6063 
+M 
+AN..3 
+Quantity type code qualifier 
+   6060 
+M 
+N..35 
+Quantity 
+   6411 
+R 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+QTY+47:1:PCE' 
+ 
+Note 6063:  
+Use: 
+ 
+47 - Invoiced line item quantity 
+ 
+Note 6060:  
+Count of the total number of goods items within a line item. No Decimals values 
+ 
+Note 6411:  
+Code specifying the unit of measurement. e.g. PCE, PCS 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 89 of 115
+
+=== PAGE 90 ===
+Message Specification Guidelines                         
+                          
+ 
+UNT Segment – Message Trailer 
+Segment 
+Occurrence 
+Usage 
+Description 
+UNT 
+1 
+M 
+ Message trailer 
+Function: To end and check the completeness of a message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+0074 
+M 
+N..6 
+Number of segments in a message 
+0062 
+M 
+AN..14 
+Message reference number 
+ 
+Example:  
+UNT+22+123’ 
+ 
+Note 0074: 
+Number of segments in the message (UNH to UNT). 
+ 
+Note 0062: 
+The value shall be identical to the value in element 0062 in the corresponding UNH 
+segment.  
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 90 of 115
+
+=== PAGE 91 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix A – Product Type 
+ 
+Global product description 
+Global 
+product name 
+Product 
+group 
+description 
+Global 
+product 
+code 
+Global 
+product 
+content 
+code 
+B2C 
+BTC 
+2 
+A systemized, international door-to-door delivery 
+of document shipments within Time Definite 
+transit times, targeted at business-to-consumer 
+internet retailing 
+B2C 
+B2C 
+3 
+A systemized, international door-to-door delivery 
+of non-document shipments within Time Definite 
+transit times, targeted at business-to-consumer 
+internet retailing 
+EXPRESS 
+EASY 
+XEP 
+8 
+Systemized export or domestic pre-18:00hrs 
+door-to-door delivery of non-document 
+shipments on the next possible business day. 
+Sold from Service Point outlets on cash payment 
+terms, with DHL branded packaging included at 
+eight standard weight intervals. 
+EXPRESS 
+WORLDWIDE 
+DOX 
+D 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of document shipments on the 
+next possible business day. 
+Time Definite International 
+EXPRESS 
+9:00 
+TDE 
+E 
+Systemized export, import or domestic pre-
+9:00hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee and proactive 
+delivery notification. 
+BREAK BULK 
+EXPRESS 
+BBX 
+B 
+A systemized door-to-door pick-up of an already 
+consolidated shipment sent from one customs 
+zone to another, with a consolidated clearance at 
+the destination gateway and subsequent delivery 
+of individual shipments to different receivers on 
+the next possible business day. 
+EXPRESS 
+WORLDWIDE 
+ECX 
+U 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of document shipments on the 
+next possible business day. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 91 of 115
+
+=== PAGE 92 ===
+Message Specification Guidelines                         
+                          
+ 
+EXPRESS 
+12:00 
+TDY 
+Y 
+Systemized export, import or domestic pre-
+12:00hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+A packaging-based product sold with a bundled 
+pricing approach, with a pick-up from a Shipper’s 
+JUMBO BOX 
+JBX 
+J 
+premises, and an international export delivery of 
+non-document shipments by the end of the next 
+possible business day. 
+EXPRESS 
+10:30 
+TDM 
+M 
+Systemized export, import or domestic pre-
+10:30hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+EXPRESS 
+WORLDWIDE 
+WPX 
+P 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of non-document shipments on 
+the next possible business day. 
+Time Definite International 
+MEDICAL 
+EXPRESS 
+WMX 
+Q 
+The outbound transportation of time sensitive 
+supplies and medicines and the associated 
+inbound transportation of time sensitive 
+diagnostic samples during the clinical trials 
+phase of a new medicine (sent as non-
+document). 
+GLOBALMAIL 
+BUSINESS 
+GMB 
+R 
+Distribution of non-sorted business 
+correspondence via international postal 
+networks such as DPWN, with a pick-up by a 
+DHL Express courier. 
+ 
+DOK 
+I 
+DOMESTIC 
+EXPRESS 
+9:00 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of documents and 
+parcels on the next possible business day by 
+9:00hrs, targeted at time-critical business-to-
+business needs. 
+DOT 
+1 
+DOMESTIC 
+EXPRESS 
+12:00 
+Domestic 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of documents and 
+parcels on the next possible business day by 
+12:00hrs, targeted at time-critical business-to-
+business needs. 
+Time Definite 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 92 of 115
+
+=== PAGE 93 ===
+Message Specification Guidelines                         
+                          
+ 
+DOMESTIC 
+EXPRESS 
+DOM 
+N 
+Systemized door-to-door delivery of documents 
+and parcels within the same country on the next 
+possible business day. 
+DOL 
+O 
+DOMESTIC 
+EXPRESS 
+10:30 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of document and 
+parcel shipments on the next possible business 
+day by 10:30hrs, targeted at time-critical 
+business-to-business needs 
+EXPRESS 
+9:00 
+TDK 
+K 
+Systemized export, import or domestic pre-
+9:00hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee and proactive 
+delivery notification. 
+EXPRESS 
+10:30 
+TDL 
+L 
+Systemized export, import or domestic pre-
+10:30hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+EXPRESS 
+12:00 
+TDT 
+T 
+Systemized export, import or domestic pre-
+12:00hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+MEDICAL 
+EXPRESS 
+CMX 
+C 
+The outbound transportation of time sensitive 
+supplies and medicines and the associated 
+inbound transportation of time sensitive 
+diagnostic samples during the clinical trials 
+phase of a new medicine (sent as documents). 
+EXPRESS 
+EASY 
+XED 
+7 
+Time Definite International and Domestic 
+Systemized export or domestic pre-18:00hrs 
+door-to-door delivery of document shipments on 
+the next possible business day. Sold from 
+Service Point outlets on cash payment terms, 
+with DHL branded packaging included at eight 
+standard weight intervals. 
+EXPRESS 
+ENVELOPE 
+XPD 
+X 
+Systemized export pre-18:00hrs door-to-door 
+delivery of document shipments weighing up to 
+250g on the next possible business day, within a 
+DHL envelope designed and branded for the 
+purpose. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 93 of 115
+
+=== PAGE 94 ===
+Message Specification Guidelines                         
+                          
+ 
+ECONOMY 
+SELECT 
+ESI 
+H 
+Systemized door-to-door export or import delivery 
+of single or multi-piece shipments and pallets 
+with transit times quoted in a certain number of 
+days. 
+BREAK BULK 
+ECONOMY 
+BBE 
+I 
+The same approach as for the Time Definite 
+solution, only with the individual shipments 
+delivered to Day Definite transit times. To be 
+developed and deployed during 2009 using the 
+DHL ECONOMY SELECT platform. 
+EUROPACK 
+EPP 
+V 
+Day Definite International 
+Systemized door-to-door export or domestic 
+delivery of single piece shipments weighing up 
+to 31.5kg for customers in certain countries 
+sending within Europe, with transit times quoted 
+in a certain number of days. 
+ECONOMY 
+SELECT 
+ESU 
+W 
+Systemized door-to-door export or import delivery 
+of single or multi-piece document shipments 
+and pallets with transit times quoted in a certain 
+number of days. 
+EUROPACK 
+EPA 
+9 
+and 
+Domestic 
+Day Definite 
+Systemized door-to-door export or domestic 
+delivery of single piece shipments weighing up 
+to 31.5kg for customers in certain countries 
+sending within Europe, with transit times quoted 
+in a certain number of days. 
+International 
+DES 
+G 
+DOMESTIC 
+ECONOMY 
+SELECT 
+Domestic 
+Systemized door-to-door domestic delivery of 
+single or multi-piece shipments and pallets 
+with transit times quoted in a certain number of 
+days. 
+Day Definite 
+JETLINE 
+NFO 
+4 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door 
+dedicated delivery by way of the next 
+commercial or network flight out, within a 
+target of 24 hours. 
+and Domestic) 
+SPRINTLINE 
+SPL 
+5 
+Same Day (International 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door delivery 
+by way of a dedicated ground vehicle, within a 
+target of 24 hours. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 94 of 115
+
+=== PAGE 95 ===
+Message Specification Guidelines                         
+                          
+ 
+SECURELINE 
+OBC 
+6 
+A fully flexible service with an immediate pick-up 
+and an export or domestic door-to-door delivery 
+by way of an on-board courier or chartered 
+aircraft for the highest level of security, within a 
+target of 24 hours. 
+SAME DAY 
+SDX 
+S 
+Scheduled door-to-door pick-up generally before 
+noon and an export or domestic delivery to 
+limited destinations within the very same 
+business day. At times limited to document 
+shipment only. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 95 of 115
+
+=== PAGE 96 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix B – Product Features 
+Feature description 
+Feature 
+Group 
+Feature name 
+DHL 
+Feature 
+ID 
+EDI 
+Feature 
+ID 
+Data staging 
+03 
+PT 
+803 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 3 months. 
+Data staging 
+06 
+PU 
+806 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 6 months. 
+Data staging 
+12 
+PV 
+812 
+Shipment Preparation (Advance Shipment) 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 12 months. 
+Data staging 
+24 
+PW 
+824 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 24 months. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 96 of 115
+
+=== PAGE 97 ===
+Message Specification Guidelines                         
+                          
+ 
+Saturday 
+Delivery 
+AA 
+050 
+Holidays 
+Weekends & 
+At Shipper's request, the international delivery of a 
+shipment/piece on a Saturday, to selected 
+postal/zip code areas that have the capability, in 
+countries where Saturday is not a normal working 
+day. For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Supplementary 
+Insurance 
+II 
+101 
+Insurance Services 
+At Shipper's request, the provision at individual 
+shipment level, of declared value coverage above 
+Standard Liability, for the amount necessary to 
+repair or replace a shipment/piece in the event of 
+physical loss or damage.  
+Called Shipment Value Protection in the US/CA. 
+For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Cash on 
+Delivery 
+KB 
+100 
+Billing Instructions 
+By contractual agreement with the Shipper, the 
+delivery of a shipment/piece only against payment 
+of the goods value indicated by the Shipper on the 
+waybill (below a certain maximum amount). 
+Procedures and means of payment to the Courier 
+depend on local conditions and practices (cash, 
+bank guaranteed cheques, or credit card).  
+Available only with domestic products. 
+Only a Shipper with an account and who 
+contractually guarantees the amount of such 
+shipments can use this service. 
+For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Loose Bulk 
+Mother 
+YM 
+230 
+indicates loose break bulk shipment (virtual 
+mother) 
+Loose Bulk 
+Baby 
+YZ 
+231 
+Indicate loose bulk baby shipment. 
+Y- Non Standard Shipments 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 97 of 115
+
+=== PAGE 98 ===
+Message Specification Guidelines                         
+                          
+ 
+At Shipper's request, the use of a feature code to 
+Importer of 
+support the payment process when the Importer of 
+Record 
+DU 
+220 
+Record is different from the shipment Receiver. 
+Services 
+D – Billing 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 98 of 115
+
+=== PAGE 99 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix C – Example File 
+UNB+UNOA:2+CIT+DHLEUAPGW+040301:1438+1298 
+UNH+1298+IFCSUM:D:01B:UN+GM2/ ACMESHIPPINGPLATFORM 
+BGM+785+1298+9 
+DTM+9:200403011438:203 
+DTM+11:200403011438:203 
+MOA+43:1500,90:EUR 
+CNT+7:292:KGM 
+CNT+11:15 
+CNT+15:1.1:MTQ 
+NAD+CZ+123456789++MICH  VANHOUTEN SA+11 STREET::151+DIEGEM CITY++1831+BE 
+CTA+CO+:M. OLIVIER ABIDTS 
+COM+31 653 123 456:TE’ 
+RFF+VA:NL001545954B01 
+CNI+1+6215236101:5 
+DTM+191:200906011500:203 
+TSR+++ECX:57:87 
+MOA+43:323.1:EUR 
+FTX+AAA+++ELECTRICAL PARTS 
+TOD+6++014 
+LOC+5+BFS::6 
+RFF+CU:1154345678 
+GOR+1 
+DOC+821+12345678 
+DTM+3:200906011500:203 
+NAD+CN+++REXEL-DISTRIBUICAO DE MATERIAL+EDIFICIO REXEL:ESTRADA SEIXALINHO+MONTIJO++2870399+PT 
+LOC+8+LIS::87 
+CTA+AC+:M. OLIVIER ABIDTS 
+COM+31 653 123 456:TE 
+RFF+VA:1154345678 
+NAD+FP+123456789 
+GID+1+1:CT 
+MEA+WT+AEE+KGM:6.3 
+MEA+VOL+AAW+MTQ:0.1 
+DIM+2+CMT:10:10:10 
+RFF+ACL:1154345678 
+PCI+18 
+GIN+BN+6215236101 
+GID+2+1:CT 
+MEA+WT+AEE+KGM:6.3 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+VZ+J:JD0030112708872040054737 
+DGS+ADR+3:3:B+1294 
+FTX+AAD+++TECHNICAL NAME 
+MEA+WT+AAE+KGM :12 
+EQD+EFP 
+EQN+10 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 99 of 115
+
+=== PAGE 100 ===
+Message Specification Guidelines                         
+                          
+ 
+MEA+LMT++MTR:20 
+CNI+2+6215236112:5 
+TSR+++ECX:57:87 
+MOA+43:42:EUR 
+FTX+AAA+++ELECTRICAL PARTS 
+TOD+6++014 
+NAD+CN+++ACESSOMATIC+RUA MARIA DA CONCEICAO, 4-B+SOBRALINHO++2615740+PT 
+LOC+8+LIS::87 
+GID+1+1:CT 
+MEA+WT+AEE+KGM:1.3 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236112 
+GID+2+1:CT 
+MEA+WT+AEE+KGM:1.3 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236112 
+CNI+3+6215236123:5 
+TSR+++ECX:57:87 
+MOA+43:18612.36:EUR 
+FTX+AAA+++ELECTRICAL PARTS 
+TOD+6++014 
+NAD+CN+++ELECTRO HAINAUT+RUE PABLO PICASSO BT 100:ZI PROUVY ROUVIGNIES+VALENCIENNES++59309+FR 
+LOC+8+LIL::87 
+GID+1+1:CT 
+MEA+WT+AEE+KGM:3.0 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+2+1:CT 
+MEA+WT+AEE+KGM:15.3 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+3+1:CT 
+MEA+WT+AEE+KGM:0.5 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+4+1:CT 
+MEA+WT+AEE+KGM:0.3 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+5+1:CT 
+MEA+WT+AEE+KGM:0.9 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 100 of 115
+
+=== PAGE 101 ===
+Message Specification Guidelines                         
+                          
+ 
+GIN+BN+6215236123 
+GID+6+1:CT 
+MEA+WT+AEE+KGM:1.0 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+7+1:CT 
+MEA+WT+AEE+KGM:18.6 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+8+1:CT 
+MEA+WT+AEE+KGM:21.6 
+MEA+VOL+AAW+MTQ:0.2 
+PCI+18 
+GIN+BN+6215236123 
+GID+9+1:CT 
+MEA+WT+AEE+KGM:13.2 
+MEA+VOL+AAW+MTQ:0.1 
+PCI+18 
+GIN+BN+6215236123 
+GID+10+1:CT 
+MEA+WT+AEE+KGM:63.9 
+MEA+VOL+AAW+MTQ:0.2 
+PCI+18 
+GIN+BN+6215236123 
+GID+11+1:CT 
+MEA+WT+AEE+KGM:138.4 
+MEA+VOL+AAW+MTQ:0.5 
+PCI+18 
+GIN+BN+6215236123 
+UNT+107+1298 
+UNZ+1+1298 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 101 of 115
+
+=== PAGE 102 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix D – Message structure and content for Loose BBX shipments 
+and Sample Message 
+Break Bulk Express (BBX) is a DHL Express service which streamlines destination Customs procedures, 
+minimizing Customs lodgment fees charged. It includes the submission of shipment data records for a 
+“Mother” shipment and a number of corresponding “Baby” shipments. 
+Consolidated BBX is where the Baby shipments are packed together, e.g. on pallets, forming a smaller 
+number of pieces of the Mother shipment (e.g. 1 pallet = 1 Mother shipment piece) 
+Loose BBX is where the BBX service is used but shipments are not packed together (e.g. not palletized). 
+ 
+No. 
+Requirement 
+Location in 
+Message 
+- 
+Applied to both Mother shipment record and Baby shipment records 
+1* 
+Records for Baby shipments and their corresponding Mother shipment must be 
+submitted together in one IFCSUM file 
+2 
+Shipper Account given in SG4 - NAD segment (therefore applied to all shipment 
+records in file) with CZ qualifier, but not in Payer Account (see point 6)  
+SG 4 – NAD 
+Page 31 
+Against Mother Shipment 
+3 
+DHL Product Code likely WPX (confirm with DHL Express) 
+As TSR+++WPX:57:87' 
+SG 25 – TSR 
+Page 40 
+SG 25 - MOA 
+Page 41 
+4 
+Dutiable shipment, therefore must include Declared Total Customs Value As 
+MOA+43:x:yyy' where x is numeric value to 2 decimal places and yyy is three 
+letter currency code 
+5* 
+Service Code 230 given, as TOD+6++DDU:::230' 
+(where DDU is Terms of Trade of shipment) 
+SG 31 – TOD 
+Page 43 
+SG 43 – NAD 
+Page 51 
+6 
+Payer Account is FOC (free of charge) account. Exact value must be confirmed 
+with DHL Express in the shipping country - will likely consist of 9 alpha 
+characters including a pre-fix of FOC 
+As NAD+FP+FOCXXXXXX', where FOCXXXXXX is payer account 
+SG 43 – NAD 
+Page 51 
+7 
+Receiver Name contains Company Name of Importer of Record c/o DHL 
+Express. Receiver Contact Name and details, and Receiver address details 
+given for DHL facility at point of entry into destination country (confirm details 
+with DHL Express) 
+SG 50 – GID 
+Page 59 
+8* 
+Piece records against each Baby shipment also given against Mother shipment 
+i.e. Piece IDs shared (therefore No. of Mother Shipment Pieces = Sum of 
+Shipment Pieces across all Baby Pieces) 
+SG 25 – CNT 
+Page 39 
+Against Baby Shipment 
+9* 
+No. of Mother shipment pieces (so sum of all corresponding Baby shipment 
+pieces) given against each Baby Shipment 
+As CNT+56:x’ where x is no. of Mother shipment pieces 
+10 
+Has DHL Product Code BBX, as TSR+++BBX:57:87' 
+SG 25 – TSR 
+Page 40 
+11* 
+Service Code 231 given, as TOD+6+++:::231' 
+SG 31 – TOD 
+Page 43 
+SG 32 – RFF 
+Page 46 
+12 
+Corresponding Mother Shipment AWB no. given as Shipper Reference with ACL 
+Qualifier 
+As RFF+ACL:9999999999' where 9999999999 is Mother AWB no. 
+SG 43 – NAD 
+Page 51 
+13* 
+Mother shipment Receiver Address and Contact Details given as Port of Entry 
+Address and Contact Details, in NAD segment with JD qualifier with 
+corresponding CTA and COM segments. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 102 of 115
+
+=== PAGE 103 ===
+Message Specification Guidelines                         
+                          
+ 
+Given after Consignee address (NAD+CN and corresponding LOC, CTA and 
+COM segments) 
+14 
+Customer’s account given in Payer Account 
+SG 43 – NAD 
+Page 51 
+15 
+Receiver Contact and Address details given for end receiver of Baby shipment 
+SG 43 – NAD 
+Page 51 
+ 
+*Requirement of Loose BBX but not of Consolidated BBX 
+Consolidated BBX requires the Mother Piece ID in which a Baby shipment piece is packed to be given as 
+a Piece Reference against that Baby shipment piece with Reference Type ACL – this is NOT required in 
+Loose BBX 
+Also different Service Codes are given to indicate Mother and Baby shipments with Consolidated BBX 
+ 
+Example Loose BBX Message 
+UNA:+.? ' 
+UNB+UNOA:2+CIT+DHLEUAPGW+200105:1438+1298' 
+UNH+1298+IFCSUM:D:01B:UN+GM2/DCGFW4.6' 
+BGM+785+1298+9' 
+DTM+9:202018161505:203' 
+DTM+11:202018161505:203' 
+MOA+43:4475.43:EUR' 
+CNT+7:2.0:KGM' 
+CNT+11:3' 
+CNT+15:0.6:MTQ' 
+NAD+CZ+999999999++DISPLAY MANUFACTURER+8 Fengming 4th St+Dongguan++523757+CN' 
+CTA+CO+:CO-DISPLAY MAN(SP)' 
+CTA+IC+:CI-DISPLAY MAN(SP)' 
+COM+86 769 5566 5568(SP):TE' 
+COM+86 769 5566 9999(SP):FX' 
+COM+IFCSUM_Sender@email.com(SP):EM' 
+COM+86 769 5566 7777(SP):AL' 
+RFF+VA:CN001545954B01' 
+TDT+11' 
+CNI+1+5684631853' 
+DTM+191:202009141500:203' 
+TSR+++WPX:57:87' 
+MOA+43:4475.43:EUR' 
+MOA+64:300:EUR' 
+MOA+124:200:EUR' 
+MOA+39:4975.43:EUR' 
+FTX+AAA+++ELECTRICAL PARTS' 
+FTX+DIN+++FOR TESTING PARTS ONLY' 
+TOD+6++DDU:::230' 
+LOC+5+OSA::6' 
+RFF+CU:CUSTREFMOTHER001' 
+GOR+1' 
+DOC+821+12345678' 
+DTM+3:202009141500:203' 
+NAD+CN+555777888++DISPLAY MAN CUSTOMS+HERMANN-KOEHL-STRASSE 1+SCHKEUDITZ++04435+DE' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 103 of 115
+
+=== PAGE 104 ===
+Message Specification Guidelines                         
+                          
+ 
+LOC+8+LEJ' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+COM+31 222 222 222:FX' 
+COM+receiver_one@email.com:EM' 
+COM+99 999 999 999:AL' 
+RFF+VA:1154345679' 
+NAD+FP+FOCBBXXXX' 
+LOC+8+LEJ' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+COM+31 222 222 222:FX' 
+COM+receiver_one@email.com:EM' 
+COM+99 999 999 999:AL' 
+RFF+VA:1154345679' 
+GID++1:CT' 
+MEA+WT+AAE+KGM:0.1' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631400' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.2' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631573' 
+GID++1:CT' 
+MEA+WT+AAE+KGM:0.3' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631013' 
+GID++1:CT' 
+MEA+WT+AAE+KGM:0.3' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684632726' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.5' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684630921' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.6' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 104 of 115
+
+=== PAGE 105 ===
+Message Specification Guidelines                         
+                          
+ 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684633286' 
+CNI+2+5684631271' 
+DTM+191:202009141500:203' 
+CNT+56:6' 
+TSR+++BBX:57:87' 
+FTX+AAA+++COMPUTER ACCESSORY' 
+TOD+6++DDU:::231' 
+LOC+5+OSA::6' 
+RFF+ACL:5684631853' 
+RFF+CU:CUSTREFBABY001' 
+NAD+CN+++SEDMICKA, A.S.(B1RV)+DLOUHA 33+PRAGUE++11000+CZ' 
+LOC+8+PRG::87' 
+CTA+AC+:KAREL JELEN(B1RV)' 
+COM+00 420 777 999 555(B1RV):TE' 
+NAD+FP+555777888' 
+LOC+8+LEJ' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+COM+31 222 222 222:FX' 
+COM+receiver_one@email.com:EM' 
+COM+99 999 999 999:AL' 
+NAD+JD+++DISPLAY MAN CUSTOMS+HERMANN-KOEHL-STRASSE 1+SCHKEUDITZ++04435+DE' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+GID++1:CT' 
+MEA+WT+AAE+KGM:0.1' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631400' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.2' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631573' 
+CNI+3+5684632601' 
+DTM+191:202009141500:203' 
+CNT+56:6' 
+TSR+++BBX:57:87' 
+FTX+AAA+++COMPUTER ACCESSORY' 
+TOD+6++DDU:::231' 
+LOC+5+OSA::6' 
+RFF+ACL:5684631853' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 105 of 115
+
+=== PAGE 106 ===
+Message Specification Guidelines                         
+                          
+ 
+RFF+CU:CUSTREFBABY002' 
+NAD+CN+++BIEDRONKA(B2RV)+SEPA-SZARZYNSKIEGO 84/1A+WROCLAW++50334+PL' 
+LOC+8+WRO::87' 
+CTA+AC+:KLAUS KINSKI(B2RV)' 
+COM+?+48 71 714 24 70(B2RV):TE' 
+NAD+FP+555777888' 
+LOC+8+LEJ' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+COM+31 222 222 222:FX' 
+COM+receiver_one@email.com:EM' 
+COM+99 999 999 999:AL' 
+NAD+JD+++DISPLAY MAN CUSTOMS(B2DF)+HERMANN-KOEHL-STRASSE 1+SCHKEUDITZ++04435+DE' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+GID++1:CT' 
+MEA+WT+AAE+KGM:0.3' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684631013' 
+CNI+4+5684632682' 
+DTM+191:202009141500:203' 
+CNT+56:6' 
+TSR+++BBX:57:87' 
+FTX+AAA+++COMPUTER ACCESSORY' 
+TOD+6++DDU:::231' 
+LOC+5+OSA::6' 
+RFF+ACL:5684631853' 
+RFF+CU:CUSTREFBABY003' 
+NAD+CN+++THERMOTECHNIKA+KOER UTCA 3+BUDAPEST++1103+HU' 
+LOC+8+BUD::87' 
+CTA+AC+:JANOSZ POHA(B3RV)' 
+COM+00 36 1 260 7126(B3RV):TE' 
+NAD+FP+555777888' 
+LOC+8+LEJ' 
+CTA+AC+:DISPMANCUST REP' 
+COM+49-341-44995866:TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB' 
+COM+31 222 222 222:FX' 
+COM+receiver_one@email.com:EM' 
+COM+99 999 999 999:AL' 
+NAD+JD+++DISPLAY MAN CUSTOMS+HERMANN-KOEHL-STRASSE 1+SCHKEUDITZ++04435+DE' 
+CTA+AC+:DISPMANCUST REP(B3DF)' 
+COM+49-341-44995866(B3DF):TE' 
+CTA+IC+:C/O DHL EXPRESS LEIPZIG HUB(B3DF)' 
+GID++1:CT' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 106 of 115
+
+=== PAGE 107 ===
+Message Specification Guidelines                         
+                          
+ 
+MEA+WT+AAE+KGM:0.3' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+RFF+CU:1154345678' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684632726' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.5' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684630921' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.6' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684633286' 
+UNT+174+1298' 
+UNZ+1+1298' 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 107 of 115
+
+=== PAGE 108 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix E – Commercial Invoice data usage and sample message 
+Commercial Invoice information must be included in the message for shipments that require declaration 
+to Customs, unless such data is sent to DHL Express by an agreed separate data flow. 
+If there are multiple invoices for a shipment, each invoice must be given as group in a CNI+9999 segment  
+group following the related CNI segment group for that shipment.  The party addresses are given in this  
+CNI group. 
+ 
+Example message with Commercial Invoice data 
+UNB+UNOC:4+TVHBEPCO1+DHL+20201202:2015+211' 
+UNH+211+IFCSUM:D:01B:UN+GM2/PRECISIONV18' 
+BGM+785+211+9' 
+DTM+9:202012022015:203' 
+DTM+11:202012022015:203' 
+MOA+43:0:EUR' 
+FTX+AIJ+++Business' 
+CNT+7:38:KGM' 
+CNT+11:4' 
+CNT+15:0.075:MTQ' 
+NAD+CZ+950009760+SP Building Name XXEXXXXXXXXXXXXXXZ:SP District 11XXXXXXXXXXEXXXXXXXXXZ+SP Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+SP Street Name 1234567890XXXXXEXXXZ:SP Street Number 
+11EXXXXXXXXXXXXXXZ+DAYTON+S:::NJ+08810+US' 
+CTA+IC+:SP Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 1 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 1 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+sp_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+COM+?+010 1 3333 000000000000000000000000000000000000000000000000000000001 :FX' 
+RFF+ZZZ:IESPSDT000000000000000000000000000Z' 
+RFF+EI:USSPEIN000000000000000000000000000Z' 
+CNI+1+2187305050' 
+CNT+7:8.230:KG' 
+CNT+29:7.430:KG' 
+TSR+++WPX:57:87' 
+MOA+43:760000000000030.71:EUR' 
+FTX+AAA+++Footwear' 
+TOD+6++DAP' 
+LOC+1+DUBLIN PORT::6' 
+RFF+CU:405631980/00' 
+GOR+1' 
+NAD+PR+950009760' 
+NAD+CN++RV Building Name XXEXXXXXXXXXXXXXXZ:RV District 11XXXXXXXXXXEXXXXXXXXXZ+RV Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+RV Street Name 1234567890XXXXXEXXXZ:RV Street Number 
+11EXXXXXXXXXXXXXXZ+DUBLIN+P:::Leinster++IE' 
+LOC+8+LIL' 
+CTA+IC+:RV Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 2 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 2 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+rv_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+COM+?+010 1 3333 000000000000000000000000000000000000000000000000000000001 :FX' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 108 of 115
+
+=== PAGE 109 ===
+Message Specification Guidelines                         
+                          
+ 
+TSR+1' 
+FTX+AIJ+++Government' 
+NAD+EX++EP Building Name XXEXXXXXXXXXXXXXXZ:EP District 11XXXXXXXXXXEXXXXXXXXXZ+EP Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+EP Street Name 1234567890XXXXXEXXXZ:EP Street Number 
+11EXXXXXXXXXXXXXXZ+DAYTON+:::NJ+08810+US' 
+LOC+8+LIL' 
+CTA+IC+:EP Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 3 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 3 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+ep_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+TSR+1' 
+FTX+AIJ+++Business' 
+NAD+IM++IP Building Name XXEXXXXXXXXXXXXXXZ:IP District 11XXXXXXXXXXEXXXXXXXXXZ+IP Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+IP Street Name 1234567890XXXXXEXXXZ:IP Street Number 
+11EXXXXXXXXXXXXXXZ+DUBLIN+:::Leinster++IE' 
+LOC+8+LIL' 
+CTA+IC+:IP Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 3 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 3 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+ip_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+RFF+DA:DAN0000000000000000000000000000000Z' 
+RFF+VA:IEIPVAT000000000000000000000000000Z:IE' 
+TSR+1' 
+FTX+AIJ+++Business' 
+NAD+SE++SL Building Name XXEXXXXXXXXXXXXXXZ:SL District 11XXXXXXXXXXEXXXXXXXXXZ+SL Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+SL Street Name 1234567890XXXXXEXXXZ:SL Street Number 
+11EXXXXXXXXXXXXXXZ+DAYTON+:::NJ+08810+US' 
+LOC+8+LIL' 
+CTA+IC+:SL Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 5 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 5 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+sl_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+TSR+1' 
+FTX+AIJ+++Business' 
+NAD+BY++BY Building Name XXEXXXXXXXXXXXXXXZ:BY District 11XXXXXXXXXXEXXXXXXXXXZ+BY Name 
+XXXXXXXXXXXXXXXXXXXXXXXXXXZ+BY Street Name 1234567890XXXXXEXXXZ:BY Street Number 
+11EXXXXXXXXXXXXXXZ+DUBLIN+P:::Leinster++IE' 
+LOC+8+LIL' 
+CTA+IC+:BY Contact Name XXXXXXXXXXXXXXXXXEZ' 
+COM+?+010 6 1111 000000000000000000000000000000000000000000000000000000001 :TE' 
+COM+?+010 6 2222 000000000000000000000000000000000000000000000000000000001 :AL' 
+COM+by_email0000000000000000000000000000000000000000000000000000@gmail.com:EM' 
+COM+?+010 1 3333 000000000000000000000000000000000000000000000000000000001 :FX' 
+RFF+VA:IEBYVAT000000000000000000000000000Z' 
+TSR+1' 
+FTX+AIJ+++Private' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:13' 
+MEA+VOL+AAW+MTQ:0.027' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 109 of 115
+
+=== PAGE 110 ===
+Message Specification Guidelines                         
+                          
+ 
+DIM+2+CMT:81:16:21' 
+PCI+18' 
+GIN+VZ+J:JD0000230100012895' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:10' 
+MEA+VOL+AAW+MTQ:0.016' 
+DIM+2+CMT:26:23:26' 
+PCI+18' 
+GIN+VZ+J:JD0000230100012896' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:2' 
+MEA+VOL+AAW+MTQ:0.004' 
+DIM+2+CMT:23:11:17' 
+PCI+18' 
+GIN+VZ+J:JD0000230100012897' 
+CNI+9999+2187305050:5' 
+CNT+7:1100000.145:KGM' 
+CNT+29:1000000.145:KGM' 
+MOA+43:310000000000030.307:EUR' 
+MOA+79:110000000000000.105:EUR' 
+MOA+64:100000000000010.101:EUR' 
+MOA+81:100000000000020.101:EUR' 
+FTX+AAA+++SITC2 TC-Biz-010' 
+FTX+CEX+++T' 
+TOD+6++FOB' 
+LOC+1+AH:::DUBLIN PORT' 
+RFF+CU:DCGCINREF1000XXXXXXXXXXXXXXXXXXXXXZ' 
+GOR+1' 
+FTX+AAI+++Commercial' 
+DOC+380+DCGINV1000XXXXXXXXXXXXXXXXXXXXXXXXZ' 
+DTM+3:202101182112:203' 
+DOC+830+DCGCUSDOC1000XXXXXXXXXXXXXXXXXXXXXZ' 
+DOC+585+DCGCUSDOC1972XXXXXXXXXXXXXXXXXXXXXZ' 
+GID+1+1:CT' 
+LOC+27+PT::6' 
+MOA+38:110000000000000.105:EUR' 
+MOA+146:110000000000000.105:EUR' 
+FTX+LIN' 
+FTX+AAA+++Boy -> leather shoe' 
+MEA+WT+AAE+KG:0.5' 
+MEA+WT+AAF+KG:0.5' 
+MEA+VOL+AAW+MTQ:0.002' 
+RFF+HS:6403.59' 
+RFF+MF:PARTNUM100000000000000000000000000Z' 
+RFF+ABW:SKU1NUM100000000000000000000000000Z' 
+DOC+823+CRL00000000000000000000000000000009' 
+DOC+39+PAS00000000000000000000000000000009' 
+TCC+DHL' 
+QTY+47:1:PCE' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 110 of 115
+
+=== PAGE 111 ===
+Message Specification Guidelines                         
+                          
+ 
+CNI+9999+2187305050:5' 
+CNT+7:2200000.145:KGM' 
+CNT+29:2200000.145:KGM' 
+MOA+43:450000000000000.404:EUR' 
+MOA+79:250000000000000.202:EUR' 
+MOA+64:100000000000000.101:EUR' 
+MOA+67:100000000000000.101:EUR' 
+MOA+81:100000000000000.101:EUR' 
+FTX+AAA+++SITC2 TC-Biz-010' 
+FTX+CEX+++M' 
+TOD+6++CIF' 
+LOC+1+AH:::DUBLIN PORT' 
+RFF+ABT:DCGCINREF2100XXXXXXXXXXXXXXXXXXXXXZ' 
+RFF+ANK:DCGCINREF2200XXXXXXXXXXXXXXXXXXXXXZ' 
+GOR+2' 
+FTX+AAI+++Commercial' 
+DOC+325+DCGINV2000XXXXXXXXXXXXXXXXXXXXXXXXZ' 
+DTM+3:202101182112:203' 
+DOC+FDI+DCGCUSDOC2000XXXXXXXXXXXXXXXXXXXXXZ' 
+GID+2+1:CT' 
+LOC+27+GB::6' 
+MOA+38:120000000000000.101:EUR' 
+MOA+146:120000000000000.111:EUR' 
+FTX+LIN' 
+FTX+AAA+++leather boot & socks' 
+MEA+WT+AAE+KG:0.25' 
+MEA+WT+AAF+KG:0.25' 
+MEA+VOL+AAW+MTQ:0.002' 
+RFF+HS:6109.10.0010' 
+RFF+BRD:BRAND10000000000000000000000000000Z' 
+DOC+CSD+CSD00000000000000000000000000000009' 
+TCC+DHL' 
+QTY+47:1:PCE' 
+GID+3+1:CT' 
+LOC+27+GB::6' 
+MOA+38:130000000000000.101:EUR' 
+MOA+146:130000000000000.111:EUR' 
+FTX+LIN' 
+FTX+AAA+++shoelaces' 
+MEA+WT+AAE+KG:0.5' 
+MEA+WT+AAF+KG:0.5' 
+MEA+VOL+AAW+MTQ:0.003' 
+RFF+HS:5609.00.0000' 
+RFF+AFE:AFE1000000000000000000000000000000Z' 
+DOC+AHC+AHC00000000000000000000000000000009' 
+TCC+DHL' 
+QTY+47:1:PCE' 
+UNT+269+211' 
+UNZ+1+211' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 111 of 115
+
+=== PAGE 112 ===
+Message Specification Guidelines                         
+                          
+ 
+Appendix F – Return Shipments 
+A “Return” shipment (a shipment of items previously exported from a country, by any carrier, now being 
+returned for repair or some other reason) may, depending on the shipment destination country, need to be 
+assessed differently by destination Customs. Therefore particular information may need to be provided in 
+the manifest data submitted for such a shipment and on any documents also submitted, such as a 
+Commercial Invoice. 
+ 
+The Commercial Invoice may be rendered as an image file by DHL Express from the manifest data, which 
+can then be made available to the shipper (please contact DHL Express if this solution is required). 
+ 
+The information particular to Return shipments is as follows: 
+ 
+No. 
+Information Required 
+Location in Message 
+1 
+Original Export Date (of line item within shipment) 
+Segment Group 54 (Invoice Line Item) 
+RFF with ZZZ qualifier 
+See Page 87 
+e.g. RFF+ZZZ:original export date' 
+Segment Group 54 (Invoice Line Item) 
+RFF with ERN qualifier 
+See Page 87 
+e.g. RFF+ERN:original export tracking ID' 
+2 
+Original Export Tracking ID (of line item within 
+shipment) – i.e. consignment note number of 
+shipment on which item/s being returned were 
+originally exported 
+3 
+Original Export Carrier Name (of line item within 
+shipment) – i.e. carrier of shipment on which item/s 
+being returned were originally exported 
+Segment Group 54 (Invoice Line Item) 
+RFF with CN qualifier 
+See Page 87 
+e.g. RFF+CN:2 original outbound carrier 
+name' 
+Segment Group 25 (Invoice level) 
+FTX with AAU qualifier 
+See Page 74 
+e.g. FTX+AAU+++Duty free import remarks’ 
+4 
+Duty Free Import Remark  – i.e. free text remark to 
+assist in Customs submission for Return shipment 
+ 
+Remarks differ by re-import / destination 
+country. Examples: 
+• 
+US: “Goods returning to the US and were not 
+advanced in value or condition while outside 
+the US” 
+• 
+UK: "British Returned Goods" 
+• 
+CA: "Canadian Goods Return" 
+• 
+AU: “Australian goods returned” 
+• 
+NZ: “New Zealand Returned Goods” 
+5 
+Reason for Export 
+Segment Group 25 (Invoice level) 
+FTX with CEX qualifier, populate with R 
+(Return) 
+See page 74 
+e.g. FTX+CEX+++R' 
+ 
+Other information mandatory for all dutiable shipments, such as line item descriptions, quantities and 
+values, should also be provided 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 112 of 115
+
+=== PAGE 113 ===
+Message Specification Guidelines                         
+                          
+ 
+Example Message with data for Return shipment 
+UNB+UNOC:4+TVHBEPCO1+DHL+20201202:2015+211' 
+UNH+211+IFCSUM:D:01B:UN+GM2/SOLUTIONV18' 
+BGM+785+211+9' 
+DTM+9:202012022015:203' 
+DTM+11:202012022015:203' 
+MOA+43:0:EUR' 
+FTX+AIJ+++Private' 
+CNT+7:38:KGM' 
+CNT+11:4' 
+CNT+15:0.075:MTQ' 
+NAD+CZ+211111111+BUILDING:DISTRICT+TEST PARTS SA+NEW STREET:10:1+HERMALLE-SOUS-
+HUY+AH:::liege+4480+BE' 
+CTA+IC+:CONTACT' 
+COM+3333344444:TE' 
+COM+?+32 32 32 32:AL' 
+COM+TESTEMAIL@BE.COM:EM' 
+COM+EXFAX:FX' 
+RFF+ZZZ:BE1111111111:BE' 
+CNI+1+1928013290' 
+TSR+++WPX:57:87' 
+TOD+6++DAT' 
+RFF+CU:SHIPPER REF' 
+NAD+CN+962222222+TEST:TEST+TEST CO+Ind Estate:Street No+MASCOT+SYD:::MASCOT+2020+AU' 
+LOC+8+SYD' 
+CTA+IC+:CONTACT' 
+COM+9999999999:TE' 
+COM+?+34 21 345 687:AL' 
+COM+ESEMAIL@AU.COM:EM' 
+COM+CNFAX:FX' 
+RFF+AVY:33331188:AU' 
+TSR+++WPX:57:87' 
+FTX+AIJ+++Business' 
+NAD+IM++TEST:TEST+IMP CO+Ind Estate:Street No+MASCOT+SYD:::MASCOT+2020+AU' 
+LOC+8+SYD' 
+CTA+IC+:CONTACT' 
+COM+?+111111111:TE' 
+COM+?+444444444:AL' 
+COM+IMTESTEMAIL@AU.COM:EM' 
+COM+IMFAX:FX' 
+RFF+DA:IMDA111188' 
+RFF+FT:IMFTZ11188:AY' 
+TSR+++WPX:57:87' 
+FTX+AIJ+++Business' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:13' 
+MEA+VOL+AAW+MTQ:0.027' 
+DIM+2+CMT:81:16:21' 
+PCI+18' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 113 of 115
+
+=== PAGE 114 ===
+Message Specification Guidelines                         
+                          
+ 
+GIN+VZ+J:JD0000230100001235' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:10' 
+MEA+VOL+AAW+MTQ:0.016' 
+DIM+2+CMT:26:23:26' 
+PCI+18' 
+GIN+VZ+J:JD00002301000012326' 
+GID++1:PK' 
+MEA+WT+AAE+KGM:2' 
+MEA+VOL+AAW+MTQ:0.004' 
+DIM+2+CMT:23:11:17' 
+PCI+18' 
+GIN+VZ+J:JD0000230100001239' 
+CNI+9999+1928013290:5' 
+CNT+7:1.24:KGM' 
+CNT+29:1.20:KGM' 
+TSR+++WPX:57:87' 
+MOA+79:3928.59:EUR' 
+MOA+43:3928.59:EUR' 
+MOA+64:13.08:EUR' 
+MOA+67:45.00:EUR' 
+MOA+47:3.00:EUR' 
+FTX+AAA+++TRACTOR SPARE PARTS' 
+FTX+CEX+++R' 
+FTX+AAI+++Commercial' 
+FTX+AAU+++DUTY FREE IMPORT REMARKS' 
+TOD+6++CIP' 
+LOC+1+AH:::liege' 
+RFF+CU:405631980/00' 
+RFF+MRN:MRNXXX1199' 
+GOR+1' 
+FTX+AAI+++Commercial' 
+DOC+861+COO1111188' 
+DOC+380+INVNO11188' 
+DTM+3:202012172112:203' 
+CPI+9+PP' 
+TDT+30' 
+GID+0010+1:CT' 
+LOC+27+AMS::6' 
+MOA+43:159.56:EUR' 
+59:EUR' 
+MOA+79:90.00:EUR' 
+MOA+64:40.56:EUR' 
+MOA+67:20.00:EUR' 
+FTX+LIN' 
+FTX+AAA+++DESCRIPTION LINE ITEM1' 
+MEA+WT+AAE+KGM:2.8' 
+MEA+WT+AAF+KGM:2.0' 
+MEA+VOL+AAW+MTQ:0.002' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 114 of 115
+
+=== PAGE 115 ===
+Message Specification Guidelines                         
+                          
+ 
+RFF+HS:BEHS111155' 
+RFF+MF:MFPAN11155' 
+RFF+AFE:AFE1111155' 
+RFF+ZZZ:original export date' 
+RFF+ERN:original export tracking ID' 
+RFF+CN:original outbound carrier name' 
+DOC+41+LIASCDOC15' 
+TCC+609114' 
+QTY+47:9.000:PCE' 
+GID+0020+1:CT' 
+LOC+27+AMS::6' 
+MOA+43:149.56:EUR' 
+MOA+146:8.59:EUR' 
+MOA+79:80.00:EUR' 
+MOA+64:40.56:EUR' 
+MOA+67:20.00:EUR' 
+FTX+LIN' 
+FTX+AAA+++DESCRIPTION LINE ITEM2' 
+MEA+WT+AAE+KGM:2.7' 
+MEA+WT+AAF+KGM:2.1' 
+MEA+VOL+AAW+MTQ:0.003' 
+RFF+HS:BEHS111177' 
+RFF+MF:MFPAN11177' 
+RFF+AFE:AFE1111177' 
+RFF+ZZZ:2 original export date' 
+RFF+ERN:2 original export tracking ID' 
+RFF+CN:2 original outbound carrier name' 
+DOC+41+LIASCDOC17' 
+TCC+609114' 
+QTY+47:5.000:PCE' 
+UNT+219+211' 
+UNZ+1+211' 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 115 of 115

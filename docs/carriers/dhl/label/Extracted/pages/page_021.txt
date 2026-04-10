@@ -1,0 +1,65 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The word “From” is to be printed in the upper left corner of this section. It may be written in a local language, 
+however for international shipments the English word “From” must appear as well. In this case only English, or 
+both languages (English and local language) may be used, separated by a “/” symbol. 
+ 
+The data Address elements and their definition are based upon the DHL Corporate Data Model, which is an 
+integrated view of the data produced and consumed across DHL’s organization. It unites, formalizes and 
+represents things important to DHL, as well as the rules governing them. 
+ 
+The maximum number of lines is restricted by DHL’s internal data flow and the maximum height of the block. 
+Each line contains a pre-defined maximum number of characters, with the highest value being 47 characters. 
+ 
+Additional information (e.g. floor number, county) is possible but the overall number of lines must not exceed 7, 
+for consistency with DHL’s data structure. 
+ 
+For international shipments, the Country Name shall be written in its own line.  
+ 
+For domestic pieces the Country Name may be printed in local language. For all cross-border pieces the 
+Country Name has to be printed in English (may be followed by local translation). The Country Name is 
+optional for domestic shipments BUT mandatory for cross-border shipments if ISO 3166 code is missing) 
+ 
+The Country Code follows the ISO 3166 two-character country code standard and must be used whenever 
+available as a quick reference for a number of DHL services. 
+ 
+5.4.1.1. 
+Highly-Compact Label 
+ 
+For these cases and upon formal DHL EXPRESS approval, the number of Sender Address lines can be limited 
+to 5 (from the allowed 7 lines) with the functional advantage that the font size can be kept high with the inherent 
+advantages in terms of readability. This is achievable with the following reference structure: 
+ 
+1. Address line 1: Receiver Company / Name 
+2. Address line 2: Building Name or equivalent 
+3. Address line 3: Street Name, Street Number 
+4. Address line 4: City Name, Postcode or equivalent for other Postal Location Formats (e.g. Suburb, County, State) 
+5. Country Code / Country Name 
+ 
+5.5. Customer Logo 
+The relative small font of the sender address offers space to the right of the segment. This is reserved for an 
+optional Customer Logo or alternatively for a DHL Initiative Logo (e.g. GoGreen) if customer agrees or asks for 
+it. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+20

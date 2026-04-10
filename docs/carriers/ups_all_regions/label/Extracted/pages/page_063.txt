@@ -1,0 +1,55 @@
+International Shipping Documentation
+UPS Paperless™ Invoice
+Introduction
+A PDF417 must print on the label when required. 
+For details on the PDF417 Barcode, please refer to 
+the PDF417 Barcode Symbology document.
+The UPS Paperless™ Invoice allows shippers 
+to submit a paperless commercial invoice for 
+international movements.  The UPS Paperless™ 
+Invoice is offered by contract only.  For paperless 
+shipments, the shipping label must contain 
+additional information to assist UPS in processing 
+your shipment.
+International Documentation Indicators
+When the UPS Paperless™ Invoice is used, special 
+International Documentation Indicators must be 
+printed on the label to alert UPS Operations that  
+the shipment is paperless.  The indicators are:
+• 
+EDI
+The invoice is the only customs document 
+required.
+• 
+EDI-PULL
+There are additional customs documents included 
+with the shipment.
+• 
+EDI-IDIS
+There are additional customs documents 
+uploaded to International Document Imaging 
+System
+• 
+EDI-CCP
+The paperless shipment is UPS World Ease™.
+• EDI-IDIS-RS
+The paperless returns and Import Control shipment 
+have additional customs documents uploaded to 
+the international document imaging system.
+• EDI-RS
+This is UPS Paperless Returns and Import Control 
+Shipment.
+• EDI-RS1
+This is UPS Paperless Returns and Import Control 
+Shipment.
+• EDI-RS3
+This is UPS Paperless Returns and Import Control 
+Shipment.
+• 
+Font Size = 16 pt. bold
+PDF417 Barcode
+UPS Guide to Labeling
+62
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

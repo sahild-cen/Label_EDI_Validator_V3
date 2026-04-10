@@ -1,0 +1,113 @@
+Message Specification Guidelines                         
+                          
+ 
+22/09/2020 
+0.10 
+Lee White 
+Modified and expanded Appendix D, with 
+updated example message 
+Draft 
+12/01/2021 
+0.11 
+Erika Joy Banta 
+Added VAT22 related changes. 
+Draft 
+28/06/2021 
+1.1 
+Erika Joy Banta 
+SG 31 – TOD - Added 4052:2 (Account 
+Number) 
+Baseline 
+28/07/2021 
+1.2 
+Cristelle Mae Manio 
+SG6/RFF – Added RFF/C506/1156 
+SG46/RFF – Added RFF/C506/1156 
+SG25/MOA (Invoice Level) – Added new 
+notes  
+Update 
+22/10/2021 
+1.3 
+Lee White 
+Added Appendix F – Return Shipments 
+Update 
+15/11/2021 
+1.3.1 
+Lee White 
+Added example remarks against point 4 in 
+Appendix F – Return shipments 
+Update 
+22/12/2021 
+1.3.2 
+Lee White 
+Modified Appendix F – Return shipments 
+to include corrected mapping of Duty Free 
+Import Remarks (FTX with AAU qualifier) 
+Update 
+3/5/2022 
+1.3.3 
+Lee White 
+Corrected SG32 (Invoice level) – C506, 
+1153, to show that qualifier for MRN is 
+ABT not MRN 
+Update 
+Alma Enriquez/ Lee 
+30/9/2022 
+1.3.4 
+White 
+Added notes for low value dutiable 
+shipments to Singapore 
+Update 
+30/09/2022 
+1.3.4 
+Lee White 
+Removed Appendices for Reference Data 
+and references to them, referring to DHL 
+Reference Data document instead 
+Update 
+19/10/2022 
+1.3.5 
+Diana Chua 
+Updated the branching diagram to reflect 
+the actual data structure 
+Update 
+13/12/2022 
+1.3.5 
+Lee White 
+Updated SG65 to include note that not 
+used when shipping Dangerous Goods 
+with DHL Express 
+Update 
+19/07/2023 
+1.3.6 
+Diana Chua 
+Added notes for enabling the “Perfect 
+Invoice” to carry further Duty/Tax amounts 
+on Commercial Invoice (see SG 25 – 
+MOA) 
+Update 
+12/09/2023 
+1.3.7 
+Celestine Eu 
+Update to UNH Message Header - Note  
+0068 to capture the file source shipping 
+system platform, with corresponding 
+change to first example message 
+Update 
+15/12/2023 
+1.3.8 
+Lee White 
+Correct SG 31 - LOC and SG 43 - LOC to 
+show how DHL Express Facility Codes 
+should be given 
+Update 
+02/09/2024 
+1.3.9 
+Alma Enriquez 
+Added notes for SG 25/FTX (with CCI 
+qualifier) on how to populate Custom 
+Remarks/ Instructions for if DHL render 
+Invoice Image (which may then be 
+returned to shipper)  
+Update 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 10 of 115

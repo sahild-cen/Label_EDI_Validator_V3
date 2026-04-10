@@ -1,0 +1,1553 @@
+{
+  "carrier_code": "ups_europe",
+  "spec_type": "label",
+  "generated_at": "2026-04-10T07:23:41.512156+00:00",
+  "spec_files_used": 80,
+  "reviewed_only": false,
+  "rules": [
+    {
+      "field": "address_validation",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[YN]$",
+      "description": "Single character flag (Y/N) indicating whether the ship-to address has been validated against a CASS-certified database, encoded within MaxiCode secondary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "billing_indicator",
+      "required": true,
+      "detect_by": "text_prefix:BILLING:",
+      "regex": "",
+      "description": "Indicates the billing method for the shipment such as Prepaid (P/P), collect, or third party.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "BILLING:"
+    },
+    {
+      "field": "check_digit",
+      "required": true,
+      "detect_by": "barcode_data:^1Z",
+      "regex": "[0-9]$",
+      "description": "A single calculated digit at the end of the UPS tracking number using the Modified MOD 10 algorithm for data validity checking.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "class_of_service",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[0-9]{3}$",
+      "description": "A 3-digit numeric code identifying the UPS service level, encoded in the MaxiCode primary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "code_128_barcode",
+      "required": true,
+      "detect_by": "zpl_command:^BC",
+      "regex": "",
+      "description": "Code 128 1D barcode encoding the full UPS tracking number with highlighting bars above and below.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "consignee_address_block",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "On Access Point labels, the consignee's personal address printed at the bottom of the label, separate from the Ship To Access Point address.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "description_of_goods",
+      "required": false,
+      "detect_by": "text_prefix:DESC:",
+      "regex": "",
+      "description": "Text description of the contents/commodities being shipped, appearing on international shipment labels.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "DESC:"
+    },
+    {
+      "field": "destination_city",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The city name in the consignee/destination address, positioned relative to postal code per country address format.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "destination_country_code",
+      "required": true,
+      "detect_by": "text_pattern:[A-Z]{2}",
+      "regex": "^[A-Z]{2}$",
+      "description": "ISO 3166 two-letter country code for the destination/consignee country, used in addressing and MaxiCode encoding.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "destination_postal_code",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "Postal code for the destination/consignee address, format varies by country per Appendix F, also encoded in MaxiCode.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "destination_state_province",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The state, province, or county in the consignee/destination address, part of the postal code line format.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "highlighting_bars",
+      "required": true,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "One-tenth inch solid black lines located immediately above and below the UPS barcode block to frame the barcode area.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "human_readable_tracking_number",
+      "required": true,
+      "detect_by": "text_pattern:^1Z[A-Z0-9]{16}$",
+      "regex": "^1Z[A-Z0-9]{16}$",
+      "description": "Human-readable text representation of the tracking number barcode data, printed below or adjacent to the Code 128 barcode.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "julian_day_of_pickup",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[0-9]{3}$",
+      "description": "Julian day of the year (001-366) representing the package pickup date, encoded in the MaxiCode secondary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "maxicode",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "",
+      "description": "2D MaxiCode barcode encoding structured address, tracking, and shipment data for automated package sorting, using Mode 2 for US and Mode 3 for non-US destinations.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "maxicode_class_of_service",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^\\d{3}$",
+      "description": "Three-digit numeric code within the MaxiCode barcode identifying the UPS service level, with different codes for COD vs non-COD packages.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "origin_country_code",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "^[A-Z]{2}$",
+      "description": "ISO 3166 country code for the origin/shipper country, typically a European nation for UPS Europe labels.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "package_count",
+      "required": true,
+      "detect_by": "text_pattern:\\d{1,3}\\s+OF\\s+\\d{1,3}",
+      "regex": "^\\d{1,3} OF \\d{1,3}$",
+      "description": "Indicates the package number relative to total packages in the shipment, displayed as N OF X format.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "package_in_shipment",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[0-9]{1,3}/[0-9]{1,3}$",
+      "description": "Package number out of total packages in shipment, encoded within MaxiCode secondary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "package_type_indicator",
+      "required": false,
+      "detect_by": "text_exact:LTR|ENV",
+      "regex": "^(LTR|ENV)$",
+      "description": "Indicator for non-standard package types such as letter or envelope, displayed adjacent to the weight.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "package_weight",
+      "required": false,
+      "detect_by": "text_prefix:SHP WT:",
+      "regex": "^[0-9]{1,3}$",
+      "description": "Weight of the package in whole pounds or kilograms rounded up, encoded in MaxiCode and printed as human-readable text.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHP WT:"
+    },
+    {
+      "field": "pdf417_barcode",
+      "required": false,
+      "detect_by": "zpl_command:^B7",
+      "regex": "",
+      "description": "PDF417 2D barcode containing additional shipment data, conditionally required by UPS.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "piece_count",
+      "required": true,
+      "detect_by": "text_pattern:\\d+ OF \\d+",
+      "regex": "^\\d+ OF \\d+$",
+      "description": "Package number within a multi-piece shipment shown as 'X OF Y' format.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "postal_barcode",
+      "required": true,
+      "detect_by": "barcode_data:^42[01]",
+      "regex": "^42[01]\\d{3}[A-Z0-9]{0,12}$",
+      "description": "Code 128 barcode containing the receiver's postal code prefixed with EAN-UCC Application Identifier 420 (domestic) or 421 (international).",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "reference_number",
+      "required": true,
+      "detect_by": "text_pattern:[0-9]{7}",
+      "regex": "^[0-9]{7}$",
+      "description": "Seven-digit unique reference number embedded in positions 11-17 of the tracking number.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "routing_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{2,3} \\d{3} \\d-\\d{2}$",
+      "regex": "^[A-Z]{2,3} \\d{3} \\d-\\d{2}$",
+      "description": "UPS routing code identifying destination sort facility and delivery route, displayed prominently on the label.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "separating_lines",
+      "required": true,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Narrow lines used to segregate barcode and information blocks on the label for visual structure.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "service_icon",
+      "required": true,
+      "detect_by": "text_pattern:^[123][+APS ]?[S ]?$",
+      "regex": "^[123][+APS ]?[S ]?$",
+      "description": "Graphical icon indicating UPS service class, time of day, and day of delivery using a 3-position code.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "service_indicator",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z0-9]{2}$",
+      "regex": "^[A-Z0-9]{2}$",
+      "description": "Two-character code embedded in the tracking number identifying the specific UPS service level and accessorial options.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "service_name",
+      "required": true,
+      "detect_by": "text_pattern:^UPS (EXPRESS|EXPEDITED|STANDARD|SAVER|NEXT DAY|ACCESS POINT)",
+      "regex": "",
+      "description": "Human-readable UPS service name indicating the level of service for the shipment.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "service_title",
+      "required": true,
+      "detect_by": "text_contains:UPS",
+      "regex": "",
+      "description": "Prominently displayed name of the UPS service being used for the shipment.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "service_type",
+      "required": true,
+      "detect_by": "text_pattern:^UPS.*(Standard|Express|Expedited|Saver)",
+      "regex": "",
+      "description": "UPS service level for the shipment, represented by the service icon and encoded in the service indicator.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_date",
+      "required": true,
+      "detect_by": "text_prefix:DATE:",
+      "regex": "^\\d{2} [A-Z]{3} \\d{4}$",
+      "description": "Date the shipment is tendered to UPS, in DD MMM YYYY format.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "DATE:"
+    },
+    {
+      "field": "ship_from_address",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Complete shipper/sender address block including contact name, phone, company, street, postal code, and country.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_city_postal_code",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "City and postal code of the shipper/sender location within the ship-from address block.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_company_name",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Company name of the shipper/sender in the ship-from address block.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_contact_name",
+      "required": true,
+      "detect_by": "text_prefix:SHIP FROM:",
+      "regex": "",
+      "description": "Contact name of the person at the shipping origin/sender location.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHIP FROM:"
+    },
+    {
+      "field": "ship_from_country",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Country name of the shipper/sender, displayed as the last line of the ship-from address block.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_extended_address",
+      "required": false,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Additional address line for the shipper such as suite, floor, or building in the ship-from address block.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_phone_number",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The telephone number of the shipper/sender in the ship-from address block.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_postal_code_line",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The postal/ZIP code and city line for the shipper's address, format varies by country.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_from_street_address",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The street address of the shipper/sender location.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_address",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The street address of the destination/consignee, also encoded in the MaxiCode secondary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_city",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "^.{1,20}$",
+      "description": "The city name of the destination/consignee address, maximum 20 characters, also encoded in MaxiCode.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_company_name",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The company name at the destination/consignee address, or UPS Access Point facility name for AP shipments.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_consignee_name",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The name of the person to whom the package is being shipped.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_consignee_phone_number",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The telephone number of the consignee/recipient, required for Access Point labels.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_contact_name",
+      "required": true,
+      "detect_by": "text_prefix:TO:",
+      "regex": "",
+      "description": "The contact name at the destination/consignee address, preceded by the TO: prefix.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "TO:"
+    },
+    {
+      "field": "ship_to_country",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The full country name of the destination/consignee address, required for international shipments.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_country_code",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[0-9]{3}$",
+      "description": "The 3-digit ISO 3166 numeric country code for the destination, encoded in the MaxiCode primary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_extended_address",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "Additional address line for the destination/consignee such as suite, floor, or building.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_label",
+      "required": true,
+      "detect_by": "text_contains:SHIP TO:",
+      "regex": "SHIP\\s+TO:",
+      "description": "The SHIP TO: label text that introduces the consignee address block on the label.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_phone_number",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The phone number of the consignee/recipient at the destination address.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_postal_code",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "",
+      "description": "The postal code of the destination address, encoded in both MaxiCode primary message and postal barcode.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_postal_code_city",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The combined postal code and city of the consignee destination, format varies by country.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_postal_code_line",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The postal/ZIP code and city line for the destination address, format varies by country.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_state_province",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z]{2}$",
+      "regex": "^[A-Z]{2}$",
+      "description": "The 2-character state or province code of the destination, encoded in MaxiCode secondary message.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ship_to_street_address",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The street address of the destination/consignee, or UAP street address for Access Point shipments.",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "shipment_date",
+      "required": false,
+      "detect_by": "text_prefix:DATE:",
+      "regex": "^DATE:\\s\\d{2}\\s(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\\s\\d{4}$",
+      "description": "The date the shipment is created/tendered to UPS, required for international movements",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "DATE:"
+    },
+    {
+      "field": "shipment_dimensional_weight",
+      "required": false,
+      "detect_by": "text_prefix:SHP DWT:",
+      "regex": "^SHP DWT:\\s[\\d.]{1,5}\\s(LBS|KG)$",
+      "description": "The shipment dimensional weight, printed when dimensional weight applies for non-US-domestic movements",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHP DWT:"
+    },
+    {
+      "field": "shipment_id_number",
+      "required": false,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^[A-Z0-9]{1,30}$",
+      "description": "An optional shipment identifier encoded in the MaxiCode secondary message",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "shipment_number",
+      "required": false,
+      "detect_by": "text_prefix:SHP#:",
+      "regex": "^SHP#:\\s[A-Z0-9]{4}\\s[A-Z0-9]{4}\\s[A-Z0-9]{3}$",
+      "description": "UPS shipment number calculated from the first package tracking number, required for international shipments",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHP#:"
+    },
+    {
+      "field": "shipment_weight",
+      "required": true,
+      "detect_by": "text_prefix:SHP WT:",
+      "regex": "^SHP WT:\\s[\\d.]{1,6}\\s(KG|LBS)$",
+      "description": "The total weight of all packages in the shipment, rounded up to the next whole pound or half kilogram",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHP WT:"
+    },
+    {
+      "field": "shipper_number",
+      "required": true,
+      "detect_by": "text_prefix:SHP#:",
+      "regex": "",
+      "description": "The unique UPS shipper number identifying the shipping account, displayed in the ship-from information area",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "SHP#:"
+    },
+    {
+      "field": "tracking_number",
+      "required": true,
+      "detect_by": "barcode_data:^1Z",
+      "regex": "^1Z[A-Z0-9]{6}[A-Z0-9]{2}[0-9]{7}[0-9]$",
+      "description": "The UPS customized unique 18-character package tracking number starting with 1Z",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "tracking_number_barcode",
+      "required": true,
+      "detect_by": "zpl_command:^BC",
+      "regex": "^1Z[A-Z0-9]{16}$",
+      "description": "Code 128 barcode encoding the full 1Z tracking number, the primary machine-readable barcode on the label",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "tracking_number_human_readable",
+      "required": true,
+      "detect_by": "text_prefix:TRACKING #:",
+      "regex": "^1Z\\s[A-Z0-9]{3}\\s[A-Z0-9]{3}\\s[A-Z0-9]{2}\\s[0-9]{4}\\s[0-9]{4}$",
+      "description": "Human-readable text representation of the tracking number printed near the tracking barcode",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": "TRACKING #:"
+    },
+    {
+      "field": "uap_city_postal_code",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The city and postal code of the UPS Access Point location",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "uap_country",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The country of the UPS Access Point location",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "uap_extended_address",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "Additional address line for the UPS Access Point location",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "uap_name",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The name of the UPS Access Point location where the package will be held for pickup",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "uap_street_address",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The street address of the UPS Access Point location",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ups_account_number",
+      "required": true,
+      "detect_by": "text_pattern:[A-Z0-9]{6}",
+      "regex": "^[A-Z0-9]{6}$",
+      "description": "The 6-character UPS account number embedded in positions 3-8 of the tracking number",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ups_pak_indicator",
+      "required": false,
+      "detect_by": "text_contains:PAK",
+      "regex": "^[\\d.]+\\s(KG|LBS)\\sPAK$",
+      "description": "Weight and PAK indicator replacing the standard package weight when UPS PAK packaging is used",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ups_routing_code",
+      "required": true,
+      "detect_by": "text_pattern:^\\s?[A-Z]{2,3}\\s\\d{3}\\s\\d-\\d{2}$",
+      "regex": "^\\s?[A-Z]{2,3}\\s\\d{3}\\s\\d-\\d{2}$",
+      "description": "UPS delivery facility routing code derived from the destination postal code, 12 positions",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ups_scac",
+      "required": true,
+      "detect_by": "zpl_command:^BD",
+      "regex": "^UPSN$",
+      "description": "The Standard Carrier Alpha Code for UPS, always fixed value UPSN, encoded in MaxiCode secondary message",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "ups_service_title",
+      "required": true,
+      "detect_by": "text_pattern:^UPS\\s",
+      "regex": "",
+      "description": "The complete UPS service name printed in uppercase letters identifying the service used for the shipment",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    },
+    {
+      "field": "urc_version_number",
+      "required": true,
+      "detect_by": "text_pattern:\\d+\\.\\d+[A-Z]?\\s\\d{2}/\\d{4}",
+      "regex": "^\\d+\\.\\d+[A-Z]?\\s\\d{2}/\\d{4}$",
+      "description": "The version number of the UPS Routing Code data file used to generate routing information",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    }
+  ],
+  "formatted_rules": {
+    "field_formats": {
+      "address_validation": {
+        "pattern": "^[YN]$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "Single character flag (Y/N) indicating whether the ship-to address has been validated against a CASS-certified database, encoded within MaxiCode secondary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "billing_indicator": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_prefix:BILLING:",
+        "description": "Indicates the billing method for the shipment such as Prepaid (P/P), collect, or third party.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "BILLING:"
+      },
+      "check_digit": {
+        "pattern": "[0-9]$",
+        "required": true,
+        "detect_by": "barcode_data:^1Z",
+        "description": "A single calculated digit at the end of the UPS tracking number using the Modified MOD 10 algorithm for data validity checking.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "class_of_service": {
+        "pattern": "^[0-9]{3}$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "A 3-digit numeric code identifying the UPS service level, encoded in the MaxiCode primary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "code_128_barcode": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "zpl_command:^BC",
+        "description": "Code 128 1D barcode encoding the full UPS tracking number with highlighting bars above and below.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "consignee_address_block": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "On Access Point labels, the consignee's personal address printed at the bottom of the label, separate from the Ship To Access Point address.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "description_of_goods": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:DESC:",
+        "description": "Text description of the contents/commodities being shipped, appearing on international shipment labels.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "DESC:"
+      },
+      "destination_city": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The city name in the consignee/destination address, positioned relative to postal code per country address format.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "destination_country_code": {
+        "pattern": "^[A-Z]{2}$",
+        "required": true,
+        "detect_by": "text_pattern:[A-Z]{2}",
+        "description": "ISO 3166 two-letter country code for the destination/consignee country, used in addressing and MaxiCode encoding.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "destination_postal_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "Postal code for the destination/consignee address, format varies by country per Appendix F, also encoded in MaxiCode.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "destination_state_province": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The state, province, or county in the consignee/destination address, part of the postal code line format.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "highlighting_bars": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "graphic:GFA",
+        "description": "One-tenth inch solid black lines located immediately above and below the UPS barcode block to frame the barcode area.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "human_readable_tracking_number": {
+        "pattern": "^1Z[A-Z0-9]{16}$",
+        "required": true,
+        "detect_by": "text_pattern:^1Z[A-Z0-9]{16}$",
+        "description": "Human-readable text representation of the tracking number barcode data, printed below or adjacent to the Code 128 barcode.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "julian_day_of_pickup": {
+        "pattern": "^[0-9]{3}$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "Julian day of the year (001-366) representing the package pickup date, encoded in the MaxiCode secondary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "maxicode": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "2D MaxiCode barcode encoding structured address, tracking, and shipment data for automated package sorting, using Mode 2 for US and Mode 3 for non-US destinations.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "maxicode_class_of_service": {
+        "pattern": "^\\d{3}$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "Three-digit numeric code within the MaxiCode barcode identifying the UPS service level, with different codes for COD vs non-COD packages.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "origin_country_code": {
+        "pattern": "^[A-Z]{2}$",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "ISO 3166 country code for the origin/shipper country, typically a European nation for UPS Europe labels.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "package_count": {
+        "pattern": "^\\d{1,3} OF \\d{1,3}$",
+        "required": true,
+        "detect_by": "text_pattern:\\d{1,3}\\s+OF\\s+\\d{1,3}",
+        "description": "Indicates the package number relative to total packages in the shipment, displayed as N OF X format.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "package_in_shipment": {
+        "pattern": "^[0-9]{1,3}/[0-9]{1,3}$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "Package number out of total packages in shipment, encoded within MaxiCode secondary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "package_type_indicator": {
+        "pattern": "^(LTR|ENV)$",
+        "required": false,
+        "detect_by": "text_exact:LTR|ENV",
+        "description": "Indicator for non-standard package types such as letter or envelope, displayed adjacent to the weight.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "package_weight": {
+        "pattern": "^[0-9]{1,3}$",
+        "required": false,
+        "detect_by": "text_prefix:SHP WT:",
+        "description": "Weight of the package in whole pounds or kilograms rounded up, encoded in MaxiCode and printed as human-readable text.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHP WT:"
+      },
+      "pdf417_barcode": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "zpl_command:^B7",
+        "description": "PDF417 2D barcode containing additional shipment data, conditionally required by UPS.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "piece_count": {
+        "pattern": "^\\d+ OF \\d+$",
+        "required": true,
+        "detect_by": "text_pattern:\\d+ OF \\d+",
+        "description": "Package number within a multi-piece shipment shown as 'X OF Y' format.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "postal_barcode": {
+        "pattern": "^42[01]\\d{3}[A-Z0-9]{0,12}$",
+        "required": true,
+        "detect_by": "barcode_data:^42[01]",
+        "description": "Code 128 barcode containing the receiver's postal code prefixed with EAN-UCC Application Identifier 420 (domestic) or 421 (international).",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "reference_number": {
+        "pattern": "^[0-9]{7}$",
+        "required": true,
+        "detect_by": "text_pattern:[0-9]{7}",
+        "description": "Seven-digit unique reference number embedded in positions 11-17 of the tracking number.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "routing_code": {
+        "pattern": "^[A-Z]{2,3} \\d{3} \\d-\\d{2}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{2,3} \\d{3} \\d-\\d{2}$",
+        "description": "UPS routing code identifying destination sort facility and delivery route, displayed prominently on the label.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "separating_lines": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "graphic:GFA",
+        "description": "Narrow lines used to segregate barcode and information blocks on the label for visual structure.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "service_icon": {
+        "pattern": "^[123][+APS ]?[S ]?$",
+        "required": true,
+        "detect_by": "text_pattern:^[123][+APS ]?[S ]?$",
+        "description": "Graphical icon indicating UPS service class, time of day, and day of delivery using a 3-position code.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "service_indicator": {
+        "pattern": "^[A-Z0-9]{2}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z0-9]{2}$",
+        "description": "Two-character code embedded in the tracking number identifying the specific UPS service level and accessorial options.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "service_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:^UPS (EXPRESS|EXPEDITED|STANDARD|SAVER|NEXT DAY|ACCESS POINT)",
+        "description": "Human-readable UPS service name indicating the level of service for the shipment.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "service_title": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_contains:UPS",
+        "description": "Prominently displayed name of the UPS service being used for the shipment.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "service_type": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:^UPS.*(Standard|Express|Expedited|Saver)",
+        "description": "UPS service level for the shipment, represented by the service icon and encoded in the service indicator.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_date": {
+        "pattern": "^\\d{2} [A-Z]{3} \\d{4}$",
+        "required": true,
+        "detect_by": "text_prefix:DATE:",
+        "description": "Date the shipment is tendered to UPS, in DD MMM YYYY format.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "DATE:"
+      },
+      "ship_from_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "Complete shipper/sender address block including contact name, phone, company, street, postal code, and country.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_city_postal_code": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "City and postal code of the shipper/sender location within the ship-from address block.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_company_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "Company name of the shipper/sender in the ship-from address block.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_contact_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_prefix:SHIP FROM:",
+        "description": "Contact name of the person at the shipping origin/sender location.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHIP FROM:"
+      },
+      "ship_from_country": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "Country name of the shipper/sender, displayed as the last line of the ship-from address block.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_extended_address": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_from",
+        "description": "Additional address line for the shipper such as suite, floor, or building in the ship-from address block.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_phone_number": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The telephone number of the shipper/sender in the ship-from address block.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_postal_code_line": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The postal/ZIP code and city line for the shipper's address, format varies by country.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_from_street_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The street address of the shipper/sender location.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The street address of the destination/consignee, also encoded in the MaxiCode secondary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_city": {
+        "pattern": "^.{1,20}$",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The city name of the destination/consignee address, maximum 20 characters, also encoded in MaxiCode.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_company_name": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The company name at the destination/consignee address, or UPS Access Point facility name for AP shipments.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_consignee_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The name of the person to whom the package is being shipped.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_consignee_phone_number": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The telephone number of the consignee/recipient, required for Access Point labels.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_contact_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_prefix:TO:",
+        "description": "The contact name at the destination/consignee address, preceded by the TO: prefix.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "TO:"
+      },
+      "ship_to_country": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The full country name of the destination/consignee address, required for international shipments.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_country_code": {
+        "pattern": "^[0-9]{3}$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "The 3-digit ISO 3166 numeric country code for the destination, encoded in the MaxiCode primary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_extended_address": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "Additional address line for the destination/consignee such as suite, floor, or building.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_label": {
+        "pattern": "SHIP\\s+TO:",
+        "required": true,
+        "detect_by": "text_contains:SHIP TO:",
+        "description": "The SHIP TO: label text that introduces the consignee address block on the label.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_phone_number": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The phone number of the consignee/recipient at the destination address.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_postal_code": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "The postal code of the destination address, encoded in both MaxiCode primary message and postal barcode.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_postal_code_city": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The combined postal code and city of the consignee destination, format varies by country.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_postal_code_line": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The postal/ZIP code and city line for the destination address, format varies by country.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_state_province": {
+        "pattern": "^[A-Z]{2}$",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z]{2}$",
+        "description": "The 2-character state or province code of the destination, encoded in MaxiCode secondary message.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ship_to_street_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The street address of the destination/consignee, or UAP street address for Access Point shipments.",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "shipment_date": {
+        "pattern": "^DATE:\\s\\d{2}\\s(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\\s\\d{4}$",
+        "required": false,
+        "detect_by": "text_prefix:DATE:",
+        "description": "The date the shipment is created/tendered to UPS, required for international movements",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "DATE:"
+      },
+      "shipment_dimensional_weight": {
+        "pattern": "^SHP DWT:\\s[\\d.]{1,5}\\s(LBS|KG)$",
+        "required": false,
+        "detect_by": "text_prefix:SHP DWT:",
+        "description": "The shipment dimensional weight, printed when dimensional weight applies for non-US-domestic movements",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHP DWT:"
+      },
+      "shipment_id_number": {
+        "pattern": "^[A-Z0-9]{1,30}$",
+        "required": false,
+        "detect_by": "zpl_command:^BD",
+        "description": "An optional shipment identifier encoded in the MaxiCode secondary message",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "shipment_number": {
+        "pattern": "^SHP#:\\s[A-Z0-9]{4}\\s[A-Z0-9]{4}\\s[A-Z0-9]{3}$",
+        "required": false,
+        "detect_by": "text_prefix:SHP#:",
+        "description": "UPS shipment number calculated from the first package tracking number, required for international shipments",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHP#:"
+      },
+      "shipment_weight": {
+        "pattern": "^SHP WT:\\s[\\d.]{1,6}\\s(KG|LBS)$",
+        "required": true,
+        "detect_by": "text_prefix:SHP WT:",
+        "description": "The total weight of all packages in the shipment, rounded up to the next whole pound or half kilogram",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHP WT:"
+      },
+      "shipper_number": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_prefix:SHP#:",
+        "description": "The unique UPS shipper number identifying the shipping account, displayed in the ship-from information area",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "SHP#:"
+      },
+      "tracking_number": {
+        "pattern": "^1Z[A-Z0-9]{6}[A-Z0-9]{2}[0-9]{7}[0-9]$",
+        "required": true,
+        "detect_by": "barcode_data:^1Z",
+        "description": "The UPS customized unique 18-character package tracking number starting with 1Z",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "tracking_number_barcode": {
+        "pattern": "^1Z[A-Z0-9]{16}$",
+        "required": true,
+        "detect_by": "zpl_command:^BC",
+        "description": "Code 128 barcode encoding the full 1Z tracking number, the primary machine-readable barcode on the label",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "tracking_number_human_readable": {
+        "pattern": "^1Z\\s[A-Z0-9]{3}\\s[A-Z0-9]{3}\\s[A-Z0-9]{2}\\s[0-9]{4}\\s[0-9]{4}$",
+        "required": true,
+        "detect_by": "text_prefix:TRACKING #:",
+        "description": "Human-readable text representation of the tracking number printed near the tracking barcode",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": "TRACKING #:"
+      },
+      "uap_city_postal_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The city and postal code of the UPS Access Point location",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "uap_country": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The country of the UPS Access Point location",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "uap_extended_address": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "Additional address line for the UPS Access Point location",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "uap_name": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The name of the UPS Access Point location where the package will be held for pickup",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "uap_street_address": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The street address of the UPS Access Point location",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ups_account_number": {
+        "pattern": "^[A-Z0-9]{6}$",
+        "required": true,
+        "detect_by": "text_pattern:[A-Z0-9]{6}",
+        "description": "The 6-character UPS account number embedded in positions 3-8 of the tracking number",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ups_pak_indicator": {
+        "pattern": "^[\\d.]+\\s(KG|LBS)\\sPAK$",
+        "required": false,
+        "detect_by": "text_contains:PAK",
+        "description": "Weight and PAK indicator replacing the standard package weight when UPS PAK packaging is used",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ups_routing_code": {
+        "pattern": "^\\s?[A-Z]{2,3}\\s\\d{3}\\s\\d-\\d{2}$",
+        "required": true,
+        "detect_by": "text_pattern:^\\s?[A-Z]{2,3}\\s\\d{3}\\s\\d-\\d{2}$",
+        "description": "UPS delivery facility routing code derived from the destination postal code, 12 positions",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ups_scac": {
+        "pattern": "^UPSN$",
+        "required": true,
+        "detect_by": "zpl_command:^BD",
+        "description": "The Standard Carrier Alpha Code for UPS, always fixed value UPSN, encoded in MaxiCode secondary message",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "ups_service_title": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:^UPS\\s",
+        "description": "The complete UPS service name printed in uppercase letters identifying the service used for the shipment",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      },
+      "urc_version_number": {
+        "pattern": "^\\d+\\.\\d+[A-Z]?\\s\\d{2}/\\d{4}$",
+        "required": true,
+        "detect_by": "text_pattern:\\d+\\.\\d+[A-Z]?\\s\\d{2}/\\d{4}",
+        "description": "The version number of the UPS Routing Code data file used to generate routing information",
+        "zpl_position": "",
+        "zpl_font": "",
+        "field_prefix": ""
+      }
+    },
+    "required_fields": [
+      "address_validation",
+      "billing_indicator",
+      "check_digit",
+      "class_of_service",
+      "code_128_barcode",
+      "destination_city",
+      "destination_country_code",
+      "highlighting_bars",
+      "human_readable_tracking_number",
+      "julian_day_of_pickup",
+      "maxicode",
+      "maxicode_class_of_service",
+      "origin_country_code",
+      "package_count",
+      "package_in_shipment",
+      "piece_count",
+      "postal_barcode",
+      "reference_number",
+      "routing_code",
+      "separating_lines",
+      "service_icon",
+      "service_indicator",
+      "service_name",
+      "service_title",
+      "service_type",
+      "ship_date",
+      "ship_from_address",
+      "ship_from_city_postal_code",
+      "ship_from_company_name",
+      "ship_from_contact_name",
+      "ship_from_country",
+      "ship_from_phone_number",
+      "ship_from_postal_code_line",
+      "ship_from_street_address",
+      "ship_to_address",
+      "ship_to_city",
+      "ship_to_consignee_name",
+      "ship_to_contact_name",
+      "ship_to_country_code",
+      "ship_to_label",
+      "ship_to_phone_number",
+      "ship_to_postal_code",
+      "ship_to_postal_code_city",
+      "ship_to_postal_code_line",
+      "ship_to_street_address",
+      "shipment_weight",
+      "shipper_number",
+      "tracking_number",
+      "tracking_number_barcode",
+      "tracking_number_human_readable",
+      "ups_account_number",
+      "ups_routing_code",
+      "ups_scac",
+      "ups_service_title",
+      "urc_version_number"
+    ],
+    "confidence_score": 0.9
+  }
+}

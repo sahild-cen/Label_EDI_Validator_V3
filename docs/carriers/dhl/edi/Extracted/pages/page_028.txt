@@ -1,0 +1,58 @@
+Message Specification Guidelines                         
+                          
+ 
+FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+C 
+ Free Text 
+Function: A segment used to indicate any additional information such as business party trader type for consignor. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+  4451 
+M 
+AN..3 
+Text Subject code qualifier 
+  4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+C 
+ 
+TEXT LITERAL 
+  4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AIJ+++Private' 
+ 
+Note 4451: 
+Use: 
+‘AIJ’ - Business Party Trader Type (Consignor) 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Business Party Trader Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request) 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 28 of 115

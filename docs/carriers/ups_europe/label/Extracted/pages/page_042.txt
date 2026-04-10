@@ -1,0 +1,124 @@
+Europe-Specific Label 
+Lead Label for a COD Shipment
+COD Shipments
+A UPS COD TURN-IN COPY must always be properly completed and placed — in addition to the normal address 
+label — on the lead package of the shipment, to ensure that UPS collects the proper funds during delivery of the 
+shipment. (See page 42 for an example of the UPS COD Turn-In Copy.)
+Service Indicators, Icons and MaxiCode™ Class of Service for Europe Region — COD Lead Package Label
+Service Title	
+Service Indicator	
+Service Icon	
+Class of Service
+UPS EXPRESS PLUS™	
+73	
+1+	
+073
+	 Signature Required	
+G2	
+1+	
+482
+	 Adult Signature Required	
+G6	
+1+	
+486
+	 Saturday Delivery, Signature Required	
+G3	
+1+S	
+483
+	 Saturday Delivery, Adult Signature Required	
+G7	
+1+S	
+487
+UPS EXPRESS™	
+75	
+1	
+075
+	 Signature Required	
+C6	
+1	
+358
+	 Adult Signature Required	
+C7	
+1	
+359
+	 Saturday Delivery	
+76	
+1 S	
+076
+	 Saturday Delivery, Signature Required	
+C9	
+1 S	
+361
+	 Saturday Delivery, Adult Signature Required	
+CA	
+1 S	
+362
+UPS SAVER™	
+77	
+1P	
+077
+	 Signature Required	
+CH	
+1P	
+368
+	 Adult Signature Required	
+CJ	
+1P	
+369
+UPS® STANDARD	
+79	
+Black Square	
+079
+	 Signature Required	
+CP	
+Black Square	
+374
+	 Adult Signature Required	
+CR	
+Black Square	
+376
+	 Saturday Delivery	
+GJ	
+S	
+497
+	 Saturday Delivery, Signature Required	
+GK	
+S	
+498
+	 Saturday Delivery, Adult Signature Required	
+GL	
+S	
+499
+UPS EXPRESS™ 12:00	
+Q4	
+1	
+740
+	 Signature Required	
+QA	
+1	
+746
+	 Adult Signature Required	
+QC	
+1	
+747
+UPS TODAY STANDARD™ 	
+TN	
+None	
+853
+UPS TODAY DEDICATED COURIER™ 	
+TP	
+None	
+854
+UPS TODAY EXPRESS™ 	
+TT	
+None	
+858
+UPS TODAY EXPRESS SAVER™ 	
+TW	
+None	
+860
+40
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

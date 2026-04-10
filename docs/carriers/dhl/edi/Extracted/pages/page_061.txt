@@ -1,0 +1,60 @@
+Message Specification Guidelines                         
+                          
+ 
+ 
+ 
+  Segment Group 54  
+Group 
+Occurrence 
+Usage 
+Description 
+SG54 
+9 
+C 
+ RFF                                                                                                    
+Function: A group of segments to identify references to a goods item. 
+ 
+SG 54 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+9 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..70 
+Reference identifier 
+ 
+Example:  
+RFF+ACL:1154345678’ 
+ 
+Note: 
+This segment may be used to record various reference numbers. 
+Note 1153: 
+Use: 
+‘ACL’ - Bulk Shipment Reference. 
+‘CU’ – Consignor/Shipper’s reference 
+ 
+1. Linking between baby shipment piece and mother shipment piece need to be 
+provided with Shipment reference type = ‘ACL’ and shipment reference = 
+<Mother Piece ID/ JD012959879580000001>. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 61 of 115

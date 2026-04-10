@@ -1,0 +1,67 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 54 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG54 
+9 
+C 
+ RFF                                                                                                    
+Function: A group of segments to identify references to a goods item. 
+ 
+SG 54 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: A segment indicating the Line Item Reference Numbers used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..35 
+Reference identifier 
+ 
+Example:  
+RFF+HS:BEHS111199' 
+RFF+MF:MFPAN11199' 
+RFF+AFE:AFE1111199' 
+ 
+Note: 
+ 
+This segment may be used to record various reference numbers for each line items.   
+Values are validated against Shipper OR Consignee Country Codes under SG4-NAD-
+3207 and SG43-NAD-3207. 
+ 
+Note 1153: 
+Use: 
+ 
+‘HS’ - Line Item Harmonized code 
+‘MF’ - Manufacturer's part number 
+‘AFE’ – Export Control Commodity number (ECCN) 
+For the full list of Line Item Reference Numbers type codes, refer to "DHL Express 
+Integrated Solution Reference Information" (available from DHL Express on request). 
+ 
+Note 1154: 
+Only 35 characters will be accepted by DHL. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 86 of 115

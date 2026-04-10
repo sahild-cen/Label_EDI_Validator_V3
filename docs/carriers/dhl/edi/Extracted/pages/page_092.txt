@@ -1,0 +1,77 @@
+Message Specification Guidelines                         
+                          
+ 
+EXPRESS 
+12:00 
+TDY 
+Y 
+Systemized export, import or domestic pre-
+12:00hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+A packaging-based product sold with a bundled 
+pricing approach, with a pick-up from a Shipper’s 
+JUMBO BOX 
+JBX 
+J 
+premises, and an international export delivery of 
+non-document shipments by the end of the next 
+possible business day. 
+EXPRESS 
+10:30 
+TDM 
+M 
+Systemized export, import or domestic pre-
+10:30hrs door-to-door delivery of non-document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+EXPRESS 
+WORLDWIDE 
+WPX 
+P 
+Systemized export or import pre-18:00hrs door-
+to-door delivery of non-document shipments on 
+the next possible business day. 
+Time Definite International 
+MEDICAL 
+EXPRESS 
+WMX 
+Q 
+The outbound transportation of time sensitive 
+supplies and medicines and the associated 
+inbound transportation of time sensitive 
+diagnostic samples during the clinical trials 
+phase of a new medicine (sent as non-
+document). 
+GLOBALMAIL 
+BUSINESS 
+GMB 
+R 
+Distribution of non-sorted business 
+correspondence via international postal 
+networks such as DPWN, with a pick-up by a 
+DHL Express courier. 
+ 
+DOK 
+I 
+DOMESTIC 
+EXPRESS 
+9:00 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of documents and 
+parcels on the next possible business day by 
+9:00hrs, targeted at time-critical business-to-
+business needs. 
+DOT 
+1 
+DOMESTIC 
+EXPRESS 
+12:00 
+Domestic 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of documents and 
+parcels on the next possible business day by 
+12:00hrs, targeted at time-critical business-to-
+business needs. 
+Time Definite 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 92 of 115

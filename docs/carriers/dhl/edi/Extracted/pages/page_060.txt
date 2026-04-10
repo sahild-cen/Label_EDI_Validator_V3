@@ -1,0 +1,88 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 53  
+Group 
+Occurrence 
+Usage 
+Description 
+SG53 
+1 
+R 
+ DIM                                                                                                    
+Function: A group of segments to specify dimensions applicable to a piece. 
+ 
+SG 53 - DIM 
+Segment 
+Occurrence 
+Usage 
+Description 
+DIM 
+1 
+M 
+ Dimensions                                                                                       
+Function: Measurements of a piece. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6145 
+M 
+AN..3 
+Dimensions type code qualifier 
+C211 
+M 
+ 
+DIMENSIONS 
+   6411 
+M 
+AN..3 
+Measurement unit code 
+   6168 
+R 
+N..15 
+Length dimension code 
+   6140 
+R 
+N..15 
+Width dimension code 
+   6008 
+R 
+N..15 
+Height dimension code 
+ 
+Example:  
+DIM+2+CMT:10:10:10’ 
+ 
+Note: 
+ 
+This segment becomes mandatory if SG52 MEA+VOL is not used. See also SG52 MEA. 
+ 
+Note 6145: 
+Use ‘2’ – Package dimensions. 
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+ 
+ 
+‘CMT’, ‘MTR’ or “INH’ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 60 of 115

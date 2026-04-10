@@ -1,0 +1,79 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 128, DHL demands not less than 5 mm. Quiet zones are not part 
+of the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on 
+the label. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+ 
+9.2.2. 
+  Code 39 Barcodes 
+ 
+All BARCODE PARAMETERS must be as defined in ISO/IEC 16388 “Automatic identification and data capture 
+techniques -- Code 39 Barcode symbology specification”. 
+ 
+Code 39 Barcodes on piece labels and archive labels must meet the following specifications. 
+ 
+Symbol height 
+The original minimum height for the DHL barcodes is 25 mm.  
+A new barcode version, approved in 2014, has a height of 11 millimeters and is 
+especially recommended for all Label templates where space is a challenge. 
+Both options are currently available and can be used. 
+x-dimension 
+The minimum narrow element dimension (x-dimension) must be between 0.36 
+mm and 0.425 mm. 
+DHL demands all barcodes to be picket fence-oriented (standing) 
+Code 
+orientation 
+Between 2.2 and 3.0 
+Wide-to-
+Narrow Gap 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 39, DHL demands not less than 6 mm. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+DHL’s Code 39 Waybill barcodes require the standard start- and stop-char “*” 
+Start and Stop 
+Char 
+Check Digit 
+DHL uses the simple MOD 7 check digit: DHL’s 9-digit Waybill number is 
+divided by 7, and the remainder forms the check digit, becoming the 10th digit 
+of the Waybill barcode. 
+Example: Waybill number 310003290 
+• 
+310003290  divided by 7 is 44286184.29  
+• 
+Rounded off to next integer: 44286184 
+• 
+44286184 * 7 = 310003288 
+• 
+310003290 – 310003288 = 2 = Check digit 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+73

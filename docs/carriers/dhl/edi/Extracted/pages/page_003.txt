@@ -1,0 +1,8 @@
+Message Specification Guidelines                         
+                          
+ 
+Terms and Conditions 
+The requirements and specifications outlined in this manual are governed by DHL’s Terms and 
+Conditions of Carriage, found on DHL’s website, www.DHL.com. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 3 of 115

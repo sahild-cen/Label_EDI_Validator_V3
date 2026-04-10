@@ -1,0 +1,83 @@
+UPS Access Point™  Economy
+Label Format Requirements
+Introduction
+Services Selected with UPS Access Point™  
+Economy
+
+UPS Access Point™  Economy is an economical domestic 
+service option exclusively to, from, or between UPS 
+ACCESS POINT™ locations. 
+Label Requirements
+When any of the following is selected with UPS Access 
+Point Economy as the shipping option, unique Service 
+Indicators and MaxiCode™ Class of Service codes listed in 
+the tables below must be used : 
+• UPS Delivery Confirmation Adult Signature Required™
+• UPS C.O.D™ 
+• UPS Returns™
+The UPS Access Point™  Economy service will utilize the 
+same label requirements as those for shipping to a UPS 
+Access Point™   on pg. 3 - 4 with addition of the UPS 
+Access Point™  Number at the bottom right of the label.
+NOTE: When offered in conjunction with "Ship to a UPS 
+Access Point location", UPS Access Point™ Economy is 
+only offered as a contractual service. 
+UPS ACCESS POINT™ NUMBER
+The UPS Access Point™   Number is a unique number 
+assign to each UPS Access Point™   location.  The 
+number can be obtained via the Global Locator on ups.
+com or using the Locator API.
+• Data Content
+9 alphanumeric characters
+Text Spacing 	
+= U12 345 678
+• Font Size	
+ =12 pt. bold
+• Location
+Right-justified at the bottom of the label below the 
+D2R; D2R/D2A indicator and above the URC code.
+Service Indicators, Icons and MaxiCode™ Class of Service
+Service Title	
+Service Indicator	
+      Service Icon    Class of Service
+UPS ACCESS POINT™ ECONOMY	
+                                                 YZ                      Black Square	
+991
+    Delivery Confirmation	
+                                                Z0                     Black Square	
+992
+    Delivery Confirmation with Signature Required	                                                 Z3                      Black Square	
+995
+    Delivery Confirmation Adult Signature Required	
+                                                Z4                      Black Square	
+996
+Service Indicators, Icons and MaxiCode™ Class of Service for Electronic COD
+Service Title	
+Service Indicator	
+Service Icon	 Class of Service
+UPS ACCESS POINT™ ECONOMY	
+                                                 Z6                      Black Square	
+998
+    Delivery Confirmation	
+                                                 Z1                      Black Square	
+993
+    Delivery Confirmation with Signature Required	                                                 Z2                     Black Square	
+994
+    Delivery Confirmation Adult Signature Required	
+                                                Z5                     Black Square	
+997
+Service Indicators, Icons and MaxiCode™ Class of Service for Returns
+Service Title	
+Service Indicator	
+Service Icon	 Class of Service
+UPS ACCESS POINT™ ECONOMY	
+                                                                   	
+    Print Return Label, Print and Mail, and Electronic Return Label	
+                    Z7                      Black Square	
+999
+                        
+64
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

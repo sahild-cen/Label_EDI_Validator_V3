@@ -1,0 +1,78 @@
+UPS Smart Label™ Design 
+Label Segment 
+In an effort to make it easier for the label creator, the shipping label is divided into three separate parts called 
+segments. Information can be changed within one segment without affecting the others. One segment is 
+dedicated solely to the Carrier, one to the Receiver, and one to the Shipper (in that order, from top to bottom). 
+These segments may be combined to form a single label or they can each comprise their own label. A shipping 
+label, however, must include the Carrier segment, since that segment contains the information necessary for 
+delivering the package. The Carrier segment must be applied to your package’s natural top, so consider this 
+requirement when choosing your shipping label size. The labels represented in this guide are 4" x 4.25" for 
+regular labels and 4" x 6" and 4" x 8" when the extended area is used.
+Example
+Carrier required information:
+Note: The allocated space for each segment is not to proportion. The shipper, 
+receiver and carrier will determine space per section.
+• 
+Ship From address
+• 
+Ship To address
+• 
+MaxiCode™ Symbology
+• UPS Routing Code
+• 
+Postal Barcode
+• UPS Service Icon
+CARRIER
+• 
+Tracking Number Barcode
+• 
+Service instructions as required 
+by the carrier
+SEGMENT
+Example Receiver information:
+• 
+Order number
+• 
+
+Department receiving the shipment
+• 
+Part number
+RECEIVER
+• 
+Receiver Barcodes
+• 
+
+Other information as required 
+SEGMENT
+by the receiver
+Example Shipper information:
+• 
+P.O. number
+• 
+
+Outbound loading dock
+SHIPPER
+• 
+
+Manufacturer or part number
+• 
+Quantity
+• 
+Shipper Barcodes
+SEGMENT
+• 
+
+Other information as required
+by the shipper
+• 
+
+Shipper Reference Numbers
+Note: All non-carrier information must be 
+below the Carrier Segment in the Receiver 
+and Shipper Segments.
+Note: Conforms with ISO Standard 15394.
+3
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

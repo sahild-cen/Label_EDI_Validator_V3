@@ -1,0 +1,93 @@
+UPS Returns™  Pack and Collect Service
+Label Format Requirements
+Introduction
+Label Format Requirements
+
+The label is created at a UPS facility - so creating a 
+label is not required, but the service indicator will 
+need to be transmitted to UPS.
+The UPS Returns™ Pack and Collect service is a 
+contractual returns service for the retrieval of high-
+value products from the original receiver for return 
+to the shipper or to an alternate location.  The UPS 
+Returns™ Pack and Collect service allows a shipper 
+to initiate a next day collection leveraging UPS 
+Return Services RS1 and RS3 and a selection of 
+specially designed, UPS-branded UPS Returns Pack 
+and Collect packaging. 
+The UPS service provider performs a basic visual 
+inspection of the item to be returned and it is 
+packed in the empty UPS-provided packaging.  
+ 
+Service Indicators, Icons and MaxiCode™ Class of Service for International 
+Movements and Movements Outside of the United States and Puerto Rico
+Service Title	
+Service Indicator	
+Service Icon	 Class of Service
+UPS EXPRESS PLUS™	
+	
+	 1 Pickup Attempt	
+5N	
+1+	
+181
+	 3 Pickup Attempts	
+5P	
+1+	
+182
+UPS EXPRESS™	
+	 1 Pickup Attempt	
+5T	
+1	
+186
+	 1 Pickup Attempt Saturday Delivery	
+5Y	
+1 S	
+190
+	 3 Pickup Attempts	
+5W	
+1	
+188
+	 3 Pickup Attempts, Saturday Delivery	
+6A	
+1 S	
+202
+UPS SAVER™
+	 1 Pickup Attempt	
+6G	
+1P	
+207
+	 3 Pickup Attempts	
+6H	
+1P	
+208
+UPS EXPEDITED™
+	 1 Pickup Attempt	
+6N	
+2	
+213
+	 3 Pickup Attempts	
+6P	
+2	
+214
+UPS® STANDARD	
+                                    
+	 1 Pickup Attempt	
+                                          6T                Black Square 	
+218
+	 3 Pickup Attempts	
+                                         6W              Black Square 	
+220
+UPS EXPRESS™ 12:00	
+                                    
+	 1 Pickup Attempt                                                                                                                  Q0	
+1	
+736
+	 3 Pickup Attempts                                                                                                                Q1	
+1 	
+737
+*Note: UPS EXPRESS™ 12:00 service is only available in Germany (DE to DE shipments)
+UPS Guide to Labeling
+68
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

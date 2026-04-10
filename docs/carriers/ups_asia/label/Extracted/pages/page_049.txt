@@ -1,0 +1,94 @@
+UPS Manifest Summary
+ 
+Example of UPS Manifest Summary
+UPS Manifest - Summary Section
+ABC Ltd Ship Software v1.05
+XYZ COMPANY
+1X2X3X
+WOLUWELAAN 156
+UPS Account Number:
+Shipping Record Number:
+9373309024
+Report Print Date:
+11/JAN/2020
+1831  DIEGEM BELGIUM
+BE
+Vat No. BE123456789
+Collection Date:
+11/JAN/2020
+Telephone  0800.128.28
+Shipment Summary
+Service
+Shipments
+Packages
+Return Shipments
+Return Packages
+Import Control Shipments
+UPS Domestic Express
+1
+1
+0
+0
+0
+UPS Domestic Express Plus - Letters/Envelopes
+0
+0
+0
+1
+0
+UPS Transborder Standard - Packages
+1
+1
+0
+0
+0
+UPS Transborder Express
+1
+1
+0
+0
+1
+UPS Worldwide Express Plus - Express Box
+1
+1
+0
+0
+0
+UPS Express NA1
+1
+3
+0
+0
+0
+Collection Totals
+5
+8
+For UPS Use Only
+1
+1
+Additional Handling Waybill
+0
+0
+Additional Handling Manifest
+0
+0
+Additional Handling Total
+0
+0
+Dangerous Goods Total
+0
+0
+Received for UPS by:
+____________________
+Collection Time:
+____________________
+Collection Date:
+____________________
+Number of Packages:
+____________________
+91 1X2 X3X 9373 30903 00001 9
+45
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

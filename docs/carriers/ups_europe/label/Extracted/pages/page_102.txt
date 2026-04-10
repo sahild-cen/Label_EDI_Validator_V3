@@ -1,0 +1,132 @@
+Appendix G
+Label Submission Process
+Label Certification Process 
+• 
+ Business Development or Customer Solution must provide the 
+submission form and test labels to the UPS Europe Label Verification Team.
+Submission Instructions                                                                                                     
+Label certification is necessary when one of the following events occurs:
+• 
+ Customers must work directly with their UPS Contact at Business 
+Development or Customer Solutions.
+
+• 
+ 
+The customer is new or the customer is implementing a new shipping 
+application
+
+• 
+ 
+A new printer is being introduced
+• 
+ Physical labels must not be sent unless expressly agreed with Europe 
+Label Verification e.g., in case the submission has been initiated because 
+experiencing problems with existing labels by Operations. 
+
+• 
+ 
+New label stock is being introduced
+
+• 
+ 
+The customer is adding a new UPS Service
+Submitting Labels
+
+• 
+ 
+Issues with currently approved labels have been identified
+General Service Offerings (UPS® Standard, UPS Express, UPS Expedited, etc.)
+Label Submission Requirements
+
+• 
+ 
+Submit a form for each customer location (multiple account numbers can 
+be included if they are for the same customer name and address).
+Electronic labels must be submitted to UPS Label Certification for final 
+approval.  A full submission is required for each printer.  
+Note: Don’t provide photo images for the certification process.
+
+• 
+ 
+Submit a minimum of one Pickup Summary Barcode report (if the 
+application supports it).
+• 
+ Request electronic labels created using the Print to File or Print to PDF 
+option. This label will be used by Customer Solutions to verify label 
+requirements and operational functionality before submitting physical 
+labels for approval. 
+The label test set must be equally distributed among all printers supported. 
+The number of required labels will be dependent on the number of 
+supported UPS services. Please use the table below to determine how many 
+labels should be submitted. 
+Customers should not submit labels directly to Europe Label Verification. 
+It is the responsibility of Business development and Customer Solutions 
+to submit the labels and ensure the labels match the information on the 
+submission form or it will delay the process.
+     
+• 
+ Submit a minimum of 10 electronic labels, which were created by 
+printing physical labels using the specified printer and scanning the 
+labels. Please save this scanned label in PDF format. These labels will be 
+used by Europe Label Verification to verify that the label retains label 
+requirements and operational functionality as well as proper formatting 
+when printed through the specified printer. This verification is required 
+for a final label approval. 
+
+• 
+ Each of the labels above should be unique (i.e., a unique tracking number 
+should be listed on each label).
+If a customer must submit labels directly, it is the responsibility of the 
+Customer Solutions Representative to receive images of the labels before 
+they are submitted to ensure the labels match the information on the 
+submission form. Any labels received in poor quality or not meeting 
+requirements, will not be tested.
+• 
+ Save all PDF files in a zip file.
+Yes/
+No
+SERVICES SELECTED
+No. of Sub-
+mission 
+Forms
+                                                                     NOTES
+No. of 
+Labels 
+Submit-
+ted
+UPS General Service 
+Offering 
+Y
+1
+10
+A minimum of  10 physical labels is allowed for certification per printer. If you're 
+using more than 1 UPS service for shipping, see the rows that follow on how you 
+can split the 10 labels into sets.
+1 UPS Service
+If only 1 UPS General Service is used  - all 10 labels provided must be for that  
+particular service
+2 UPS Services
+If 2 UPS General Services are used, provide 2 sets of 5 labels (each set with it's own 
+service).
+3 UPS Services
+If 3 UPS General Services are used, provide 3 sets of labels - .e.g. (3) labels with one 
+service; (3) labels  with another service and (4) labels with the final service).
+5 UPS Services
+If  5 UPS General Services are used, provide 5 sets - 2 labels for each service.
+N printer(s)
+Y
+Where N can be any number from 1 - 100
+Y
+The number of UPS Accounts used does not affect the total number of labels sub-
+mitted, but all UPS account numbers must be listed on the submission form.
+More than 1 
+Account#
+No. of Labels Submitted
+1
+10*N
+General services = 10*N labels . (Where N is the number of printers used).
+100
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

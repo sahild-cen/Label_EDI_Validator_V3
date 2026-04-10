@@ -1,0 +1,89 @@
+Label Format Requirements
+Package Information Block
+Package Information Block (cont.)
+SHIPMENT WEIGHT
+The total weight of a shipment will appear (rounded up to 
+the next whole pound or half kilogram), directly beneath the 
+shipment number:
+• 
+Data Content
+Positions	
+1-7	
+=	 SHP WT:
+Position 	
+8	
+=	 Space
+Positions 	 9 -14	
+=	 Up to six* numeric 
+	 	
+	
+	 inclusive of decimal 	
+	
+	 	
+	
+point
+Position	
+15	
+=	 Space
+Positions	 16 -18	
+=	 KG or LBS
+• 
+Font Size   	
+ = 8 pt. 
+   For Example:  
+SHP WT: 120.5 KG
+SHP WT:  50 LBS
+*
+NOTE:  If there is available space on the label, 
+this numeric value can be greater than six.
+50.5 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+Shipment Number
+COMPANY NAME
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3VP
+SHP WT: 50.5 KG
+Shipment Weight
+STREET ADDRESS
+POSTAL CODE LINE
+DATE: 11 JAN 2020
+SHP DWT: 50.5 KG
+COUNTRY
+Shipment Dimensional 
+Weight
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+Shipment Date
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+POSTAL CODE LINE
+COUNTRY
+UPS Routing Code (URC)
+FRA 753 7-00
+Postal Barcode
+Automated shipping 
+systems derive the 
+TRACKING #:
+UPS EXPRESS
+1Z 1X2 X3X 66 0000 5627
+UPS Routing Code (URC) by 
+1
+comparing the receiver’s 
+Postal Code to a table 
+provided by UPS.
+BILLING: P/P
+EDI-PULL
+DESC: LASER PRINTER
+POA
+18.5A 01/2020
+URC Version Number
+9
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

@@ -1,0 +1,58 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 31 - LOC  
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+1 
+C 
+ Place/Location Identification                                                            
+Function: To specify a location related to the terms of Delivery. Place of Incoterms - Invoice level 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..3 
+Location name code 
+   1131 
+X 
+AN..17 
+Code List Identification Code  
+   3055 
+X 
+AN..3 
+Code List Responsible agency Code 
+   3244 
+R 
+AN..256 
+Location Name 
+ 
+Example:  
+LOC+1+AH:::liege' 
+ 
+Note 3227: 
+Use:  
+‘1’ - Place of Incoterms 
+ 
+Note 3225: 
+To be populated with DHL Express Service Area code for the location of where the 
+Incoterms were applied. A list of DHL Express Service Area codes with corresponding 
+DHL Express Facility codes by location name, post code and country is available on 
+request. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 75 of 115

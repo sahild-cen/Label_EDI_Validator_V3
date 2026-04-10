@@ -1,0 +1,31 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.7. 
+  Considerations on 2D-enabled Transport Labels 
+This section gives the recommended segment and font sizes for “2D-enabled Transport Labels” labels as they 
+should be used on thermo printers where possible and other printer types when allowed.  
+2D-enabled Labels may exist with the usual standard formats (8” or 6”) or new ones (e.g. customer-tailored, 
+upon DHL EXPRESS approval and subject to a formal Global Label Certification). 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+68

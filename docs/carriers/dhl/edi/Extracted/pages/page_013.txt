@@ -1,0 +1,15 @@
+Message Specification Guidelines                         
+                          
+ 
+ Service Terms and Conditions 
+Unless otherwise agreed in writing, the transportation products and services mentioned in this document 
+are subject to DHL’s Terms and Conditions of Carriage. Since these may vary depending on location of 
+the country of origin of the shipment, please contact the nearest DHL service center to obtain a copy of 
+the local terms and conditions. Not all of DHL’s products and services may be available in every country. 
+ 
+It is the customer’s responsibility to complete an appropriate amount of testing and inform DHL when their 
+systems are ready to send and/or receive the electronic files. DHL will provide test files as they become 
+available until customer has completed their testing and provides written confirmation that they are ready 
+to be moved to production status. 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 13 of 115

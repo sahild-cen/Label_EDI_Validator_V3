@@ -1,0 +1,68 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Outbound Sort Code -> element 10 
+• 
+Destination Facility Code  -> element 11 
+• 
+Inbound Sort Code -> element 12 
+ 
+5.9.1. 
+ Outbound Sort Code (Conditional) 
+ 
+Each DHL Service Area can define an Outbound Sort Code per Destination Facility Code. Sort Codes consist 
+of up to four alphanumeric chars (numerals or capital letters). 
+ 
+DHL Outbound Sort Codes are mandatory when defined (which is not the case for all outbound facilities) and 
+must be printed on the label to support manual sorts. The corresponding information is available in DHL’s Global 
+Reference Database (GREF) which must be referred to for the latest valid values.  
+ 
+In cases where no Outbound Sort Code is defined by DHL Express in the country of origin, this field is to be 
+populated with a “.” This is equivalent to the statement that "." is only used if an effective attempt to look a sort 
+code up returned no value. 
+ 
+Whenever no attempt was made to determine the Outbound Sort Code, then this should be left blank. "." This 
+will also indicate to DHL that the label needs to be re-printed. 
+ 
+5.9.2. 
+  Destination Facility Code 
+ 
+This segment contains the complete DHL Facility Code, of the DHL Facility which will manage the Delivery and 
+consists of: 
+• Country Code (two-digit: capital letters according to ISO 3166) 
+• hyphen 
+• DHL Service Area Code (three-digit; capital letters or numerals) 
+• hyphen 
+• DHL Facility Code (three-digit; capital letters or numerals) 
+ 
+The Destination Facility Code depends on destination country, postal location type (e.g. post code) and product. 
+This data is kept constantly updated in DHL’s Global Reference databases. 
+ 
+ 
+In cases where a DHL Facility Code has not been specified or made available for a certain 
+destination or an Address cannot be matched with Geo Location Coordinates in GREF, only Country 
+Code and Service Area Code are to be printed (separated by a hyphen). Example: SG-SIN for 
+Service Area Singapore 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+23

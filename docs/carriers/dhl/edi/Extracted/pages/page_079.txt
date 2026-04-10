@@ -1,0 +1,80 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 34 (Invoice Level)   
+Group 
+Occurrence 
+Usage 
+Description 
+SG34 
+9 
+R 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a goods item. 
+ 
+SG 34 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: A segment to indicate accompanying documents for customs clearance (i.e Invoice Number, Customs  
+Document) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+861+COO1111199' 
+DOC+380+INVNO11199' 
+ 
+Note: 
+This segment is only to be used for identifying export-documents for dutiable shipments, 
+for customs clearance. 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code – Main Document type 
+‘380’ - Commercial Invoice 
+‘325’ – Proforma Invoice 
+For full list of other Associated Document Type Codes, refer to "DHL Express Integrated 
+Solution Reference Information" (available from DHL Express on request). 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 79 of 115

@@ -1,0 +1,57 @@
+UPS Manifest Summary
+ 
+UPS Manifest Summary (cont.)
+ACCOUNT NUMBER, SHIPPING RECORD NUMBER, REPORT AND COLLECTION DATE SECTION
+This section starts on the same line as the Company name, but on the right hand side of the page. The end of 
+each line will be right-justified. The titles of UPS Account Number and Shipping Record Number are 12 pt. bold. 
+All other titles/text are 10 pt. bold, unless otherwise indicated.
+• Line 1 = 
+The text “UPS Account Number:” followed by the Account Number in 12 pt. bold, uppercase
+• Line 2 = 
+The text “Shipping Record Number:” followed by the Shipping Record Number in 12 pt. 
+• Line 3 = 
+The text “Report Print Date:” followed by the date in the following format: DD/MMM/YYYY
+There must be spaces before Line 4. Line 4 must print immediately above the separator line on the same line 
+as the telephone number.
+• Line 4 = The text “Collection Date:” followed by the collection date in the same format as Line 3.
+ 
+For Example:    
+UPS Account Number:	
+	
+            1X2X3X
+Shipping Record Number:	
+                               9373309024
+Report Print Date:	
+	
+                27/JAN/2018
+Collection Date:	
+	
+                27/JAN/2018
+SEPARATOR LINE
+• Font size = 1 pt. bold
+SHIPMENT SUMMARY SECTION
+This section includes the shipping summary sorted by destination and service. 
+• Line 1 = The text “Shipment Summary” in 12 pt. bold
+• Line 2 = Blank
+• Line 3 = Blank
+• Line 4 = 
+The following column titles: 
+“Service	
+ Shipments	
+Packages	
+Return Shipments	
+Return Packages” in 10 pt. bold
+• For Example: 
+Shipment Summary
+Service	
+Shipments	
+Packages	
+Return Shipments	
+Return Packages
+The shipment information will begin on Line 5 and will include the Service Title and counts for each service 
+in 10 pt.
+41
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

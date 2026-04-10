@@ -1,0 +1,87 @@
+Message Specification Guidelines                         
+                          
+ 
+Declaration of Data Elements – Invoice Line Item Information 
+Sub Type 
+Element Sub Type 
+1 
+2 
+Type 
+Description 
+A group of segments to describe the goods line items related Invoice 
+ 
+ 
+ 
+ 
+GID 
+ 
+ 
+GID - Goods item details 
+A segment to identify a line item in an Invoice 
+LOC 
+ 
+ 
+A segment to specify a country associated with a line item (i.e. Line Item 
+Country of Manufacture) 
+MOA 
+ 
+ 
+A segment to specify a monetary amount associated with a line item, 
+such as Line Item Total Customs Value, Single Item (Article) Customs 
+Value, etc. 
+FTX 
+ 
+ 
+Free text 
+A segment to specify processable supplementary information relating to 
+the line item (e.i Line Item Description) 
+SG52 
+ 
+ 
+A group of segments to specify measurements applicable to a line item 
+Segment 
+Group 50 
+ 
+MEA 
+ 
+A segment to specify measurements, applicable to a line item (i.e. Line 
+Item Gross weight, Line Item Net Weight) 
+ 
+ 
+ 
+ 
+SG54 
+ 
+ 
+A group of segments to identify references to a line item. 
+ 
+RFF 
+ 
+RFF,  
+A segment indicating the Line Item Reference Numbers 
+ 
+SG56 
+ 
+ 
+A group of segments to specify documents and associated date(s) and 
+time(s) for a line item. 
+ 
+DOC 
+ 
+A segment to specify a document prepared for a line item. 
+ 
+SG63 
+ 
+ 
+A group of segments to indicate the quantity for the line item. 
+ 
+TCC 
+ 
+A segment used to indicate the charge related to the line item. 
+ 
+QTY 
+ 
+A segment used to indicate the quantity related to the line item. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 23 of 115

@@ -1,0 +1,75 @@
+Message Specification Guidelines                         
+                          
+ 
+ 
+Segment Group 32  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 32 
+999 
+C 
+ RFF 
+Function: A group of segments containing a references and constants which apply to entire consignment  
+or shipment 
+ 
+SG 32 - RFF 
+Segment 
+Occurrence 
+Usage 
+Description 
+RFF 
+1 
+M 
+ References                                                                                         
+Function: To identify a reference used by a party 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C506 
+M 
+ 
+REFERENCE 
+   1153 
+M 
+AN..3 
+Reference code qualifier 
+   1154 
+R 
+AN..70 
+Reference identifier 
+ 
+Example:  
+RFF+CU:1154345678’ 
+ 
+Note: 
+This segment may be used to record various reference numbers. 
+Note 1153: 
+Use: 
+‘ACL’ - Bulk Shipment Reference. 
+‘CU’ - Consignor/Shipper’s reference. 
+‘FN’ - Freight Bill number. 
+‘IBC’ - Inbound center reference number. 
+‘LLR’ - Load list reference. 
+‘OBC’ - Outbound center reference number 
+‘PRN’ - Booking reference number. 
+                          ‘DGC’ – Dangerous Goods Identifier 
+ 
+ 
+Qualifier ACL is used for bulk shipments. Break Bulk (baby) shipments come from the 
+same shipper, but can have different receivers. They are grouped to 1 Break Bulk 
+shipment, to accommodate the customs Clearance of the “Bulk Shipment” only and not 
+all of the associated “Baby Shipments”. The baby shipments must have the Product 
+code: Break bulk (BBE or BBX) assigned to it. The Break Bulk shipment travels under the 
+standard Product code (like ESI or ESU). This Break Bulk shipment is just an aggregation 
+of the “Baby shipments” and travels FOC (Free of Charge) over the network. It terminates 
+after Customs clearance in the inbound country has taken place. For more information 
+about Break Bulk Express, please contact your Sales Representative. 
+ 
+In order to have the mother shipment/piece checkpoint available for baby shipment the 
+following need to be available in the manifest data: 
+1. Mother shipment and baby shipments need to be available in the manifest files. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 45 of 115

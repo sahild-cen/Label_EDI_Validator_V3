@@ -1,0 +1,62 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Prohibited and Restricted Commodities Policy -> DP-DHL Policy 
+• 
+ICAO/IATA DG – IATA AVI – IATA PER – IATA HUM Regulations: International regulations 
+for the transport of Dangerous Goods, Live Animals, Perishable Cargo and Human Remains 
+by Air 
+ 
+ 
+ 
+• 
+ADR: European Agreement concerning the International Carriage of Dangerous Goods by 
+Road 
+• 
+IMDG code: International Maritime Dangerous Goods Code  for the transport of Dangerous 
+Goods by Sea 
+• 
+RID : Regulations concerning the International carriage of Dangerous Goods by Rail 
+ 
+ 
+5.14. 
+Shipment Identifier / Waybill Number  
+ 
+5.14.1. Shipment Identifier / Waybill Number (mandatory) 
+ 
+The Shipment Identifier (proxy for the Waybill Number) is mandatory for all DHL Express products on the 
+Transport Label. Its omission requires explicit approval by DHL. 
+ 
+The Shipment Identifier must be printed in groups of four digits, with the grouping sequence starting at the end 
+and being built towards the left side (equivalent to the mandatory grouping of the Piece Identifier). 
+ 
+5.14.2. Shipment Identifier / Waybill Number barcode (Conditional)  
+The Waybill Number barcode is always printed in the Standard Code 39 symbology with the syntax and human-
+readable format as specified in the DHL EXPRESS Global SOP Barcode Specifications. 
+ See section 8.2.2 for technical Code 39 specifications and chapter 7 for DHL-specific requirements. 
+5.15. 
+Routing Information (mandatory) 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+38

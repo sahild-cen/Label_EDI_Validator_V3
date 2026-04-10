@@ -1,0 +1,86 @@
+Appendix A
+MaxiCode™ Specifications
+Printing Guidelines:
+Explanation: The primary message data is 
+com­
+posed of the following three data fields: 
+Postal Code, Country Code and Class of 
+Service. The secondary message is com­
+posed 
+The first step in producing a MaxiCode™ symbology 
+is ensuring your printer’s capabilities. Check with 
+your printer manufacturer to verify that your printer 
+model has the current MaxiCode™ symbology 
+capable firmware. The printer manufacturer should 
+also provide documentation on printer “Command 
+Sequences” required to produce a compliant 
+MaxiCode™ symbology. If questions should arise 
+during implementation, please consult your printer 
+manual or contact the manufacturer directly for 
+clarification.
+of the two headers (ANSI Message Header and 
+Transportation Data Format Header) and the 
+11 data fields (Tracking Number, SCAC, UPS 
+Account Number, Julian Day of Pickup, Shipment 
+ID Number, Package Count, Package Weight, 
+Address Validation, Street Address, City and 
+State), as well as appropriate group separators, 
+record separators and end 
+of transmission characters. 
+There are four facts that are critical to the successful 
+printing of a MaxiCode™ symbology. 
+4) 
+Each printer manufacturer may rearrange 
+the MaxiCode™ data string.
+1) 
+Each printer will require unique printer-specific 
+commands to produce a MaxiCode™ symbology. 
+
+Explanation: Your software will need to send 
+printer-specific commands to let the printer 
+know you are producing MaxiCode™ output. 
+Each printer manufac­
+turer and model requires 
+different printer-command sequences.
+Explanation: Three typical scenarios are listed 
+below:
+a) 
+Manufacturer may ask you to send its specific 
+printer control commands, followed by the 
+data string in the exact order (headers, Postal 
+Code, Country Code, Class of Service, Tracking 
+Number, SCAC Code, etc.) and then more 
+printer control commands. 
+2) 
+Each printer will represent characters differently. 
+Characters can be represented by their ASCII, 
+decimal, hexadecimal or printer-specific 
+character substitutions.
+b) 
+Manufacturer may ask for printer control 
+commands, the primary message (Postal 
+Code, Country Code, Class of Service), the 
+secondary message (headers, Tracking 
+Numbers, SCAC Code, etc.) and more printer 
+control commands. See example A on page 57.
+
+Explanation: Printer may refer to a “Record 
+Separator” character as any of the following: 
+Rs or <Rs> or 30 or 1E (hexadecimal one-e 
+on the ASCII table) or some other printer-specific 
+character string. 
+3) 
+Printer manufacturers usually refer to the 
+MaxiCode™ data string as the primary and 
+secondary message. 
+c) 
+Manufacturer may ask for printer control 
+commands, a rearranged primary message 
+(Class of Service, Country Code, Postal 
+Code), secondary message (headers, Tracking 
+Numbers, SCAC Code, etc.) and more printer 
+81
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

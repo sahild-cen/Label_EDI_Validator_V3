@@ -1,0 +1,89 @@
+Message Specification Guidelines                         
+                          
+ 
+Document Change Report 
+Date  
+Version  
+Name  
+Reason for Change  
+Status 
+01/02/2013 
+0.1 
+Annie Richardson 
+First draft 
+Draft 
+ 3/16/2013 
+0.2 
+Annie Richardson 
+Clarification on the BBX reference value 
+needed – C502 
+Draft 
+ 4/11/2013 
+0.3 
+Annie Richardson 
+Updated to include Email contact Qualifier 
+– Group 44 : COM 
+Draft 
+ 12/27/2013 
+0.4 
+Jan Hornak  
+BBX review 
+Draft 
+Kris Michelle S. 
+ 5/16/2014 
+0.5 
+Malano 
+Advance Shipment - Added Appendix B – 
+Product Features 
+Draft 
+Ganesan 
+ 08/12/2016 
+0.6 
+Subramaniam 
+ EDI2.0 MIG Update 
+Draft 
+18/01/2020 
+0.8 
+Bedrich Jedlicka 
+Modified for LBBX purposes: 
+ 
+Added segment SG25 CNT 
+ 
+SG25 CNT+56 : number of mother pieces 
+(placed in each baby shipment, needed 
+for Label) 
+ 
+SG43 NAD+JD : new address qualifier for 
+Port of Entry 
+ 
+Additional Product Features added – APP 
+B 
+ 
+Added APP D – Loose BBX usage 
+ 
+Other fixes/corrections 
+ 
+Segment CNT – explanation part: string 
+“Note 6066” corrected to “Note 6069” 
+ 
+SG31 – TOD – added two samples of 
+usage in explanation part (for LBBX Baby 
+or Mother service code) 
+ 
+SG44 – COM – added qualifier “AL” for 
+element 3155 
+ 
+Previous version of MIG allowed only 
+TEL, EML and FAX. As relevant mapping 
+specification for this message already 
+contains as well rule for AL-->MOB, I 
+added this option to MIG as well. 
+Draft 
+6/5/2020 
+0.9 
+Bedrich Jedlicka 
+LBBX: Addtional information that Baby 
+Importer must be the same as Mother 
+Receiver 
+Draft 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 9 of 115

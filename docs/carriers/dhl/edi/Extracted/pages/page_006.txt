@@ -1,0 +1,68 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 5 - CTA 
+32 
+SG 5 - COM 
+33 
+Segment Group 6 
+34 
+SG 6 - RFF 
+34 
+Segment Group 25 (Shipment Level) 
+35 
+SG 25 – CNI 
+36 
+SG 25 - DTM 
+37 
+SG 25 - CNT 
+38 
+SG 25 - TSR 
+39 
+SG 25 - MOA 
+40 
+SG 25 - FTX 
+41 
+Segment Group 31 
+42 
+SG 31 - TOD 
+42 
+SG 31 - LOC 
+44 
+Segment Group 32 
+45 
+SG 32 - RFF 
+45 
+Segment Group 33 
+47 
+SG 33 - GOR 
+47 
+Segment Group 34 
+48 
+SG 34 - DOC 
+48 
+SG 34 - DTM 
+49 
+Segment Group 43 
+50 
+SG 43 - NAD 
+50 
+SG 43 - LOC 
+52 
+Segment Group 44 
+53 
+SG 44 - CTA 
+53 
+SG 44 - COM 
+54 
+Segment Group 47 
+55 
+SG 47 - RFF 
+55 
+Segment Group 49 
+56 
+SG 49 - TSR 
+56 
+SG 49 - FTX 
+57 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 6 of 115

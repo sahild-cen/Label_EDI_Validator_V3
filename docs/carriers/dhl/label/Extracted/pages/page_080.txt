@@ -1,0 +1,108 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+11. 
+Change Control  
+This document is controlled by the Network Operations ExCom. Changes or exemptions are not permitted unless 
+submitted and approved as per the Global SOP Express Change and Exemption Request Process. 
+Any proposal for change must be submitted to the Business Change Request System (BCRS). 
+ 
+CHANGE FROM PREVIOUS RELEASE 
+CR ID 
+Change Summary 
+Section 
+Current Page 
+Number 
+1. Addition of additional segment specifications for the so-
+tbd 
+5.2.1.1, 5.2.4.1, 
+5.6.1.1, 8.1.6 
+ 
+called “Highly Compact Label”, for both Consignor’s and 
+Consignee’s Address segments 
+ 
+2. Update with new GDPR conditions applicable to both 
+Consignor’s and Consignee’s Address segments 
+5.6, 5.8 
+ 
+3. More explicit prohibition of Account Numbers (and/ or 
+ 
+5.12 
+ 
+related information protected through the GDPR 
+Regulation) on Transport Labels 
+ 
+4. Introduction of new syntax for the Label Certification 
+Identifiers (permanent and temporary) 
+5.2.3 
+ 
+5. Relaxation of requirements on location of customer-
+ 
+5.15 
+ 
+segment, upon explicit approval through DHL Express’ 
+Label Certification Body (now with two options to better 
+meet customer requirements) 
+ 
+6. Relaxation of specifications for the height of the Routing 
+barcode (Amazon CR 2017) 
+9.2.1 
+ 
+7. Addition of a note allowing the relocation of the 
+ 
+5.13 
+ 
+customer segment after explicit approval from DHL 
+Express 
+8. General Clean-up and update of Titles and Acronyms to 
+ 
+All 
+ 
+the latest standard (e.g. eWaybill, ESS solutions, 
+License Plate replaced by Piece Identifier – PID, where 
+applicable) 
+9. Update of guideline regarding exceptional scenarios, 
+ 
+5.6, 5.8,  
+ 
+where contact details could be allowed to be printed on 
+the Transport Label, in accordance with the GDPR 
+regulation. Updates were accordingly added to the 
+respective illustrating images. 
+10. Update of guidelines relative to single (i.e. always 
+ 
+6.6.2 
+ 
+matching) “Duty / VAT A/C”. No split between both 
+accounts since they always match 
+ 
+11. Removal of reference to ACS Label, which is not object 
+of this guideline, from this section 
+7 
+ 
+ 
+12. Incoterms removed from Waybill Doc, as per CR 
+451721 
+6.6.2 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+79

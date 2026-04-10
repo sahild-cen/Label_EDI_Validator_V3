@@ -1,0 +1,53 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5. Transport Label – Segment Specifications 
+Because several Data Elements and Fields are common to both the DHL Transport Label and the DHL 
+eWaybill, which build the core set of the Global Label Standards, the listing and definition of the respective 
+components will be sub-divided into Label- and Order-related.  
+As a note, a label consists of sections, which may further contain one or more segments. 
+The numbered sections of the DHL Transport Label as shown below refer to the following paragraphs where the 
+sections are described in more detail. The dimensions of the sections are described in the technical specification. 
+This chapter defines the contents of the sections and segments and their character (i.e. if they are mandatory, 
+conditional or optional).  
+• 
+Mandatory: means it must always appear independent of the scenario. If mandatory information is 
+not available, the whole label or a particular label section/segment should not be printed. (E.g.: no 
+DHL Transport Label must be printed without the Piece Identifier barcode) 
+• 
+Conditional: means it may be mandatory in some cases and optional in other cases. (e.g. 
+depending on product or country of origin) 
+• 
+Optional: means that the label field content is not mandatory, it does not have to be displayed on 
+the label. (E.g.: the customer logo)  
+Note: For the routing information, the optional content information does not always indicate that the dedicated 
+section or segment field remains empty/blank when printing the label. For instance, if the optional delivery date 
+or time features are not chosen, optional implies that zeroes are displayed in the routing barcode. 
+5.1. Layout overview 2– DHL Transport Label (all segments)  
+ 
+ 
+ 
+ 
+2 This page offers a structured overview of the Global SOP Standard Transport Label. Sub-sequent sections 
+explain in detail the specifications of each individually numbered segment. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+12

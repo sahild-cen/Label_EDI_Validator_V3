@@ -1,0 +1,102 @@
+UPS™ Worldwide Economy  Specifications
+Label Format Requirements
+Introduction
+UPS Routing Code
+An additional letter must be appended to the end of the UPS 
+Routing Code depending on the UPS™ Worldwide Economy 
+service option selected.  If UPS™ Economy DDP service is 
+selected, a space and the letter "P" are appended to the UPS 
+Routing Code. 
+UPS™ Worldwide Economy service is a single-piece                      
+non-guaranteed shipment which provides customers with an 
+international cross-border economy product. Customers are 
+offered 2 options,  UPS™ Economy DDP and  UPS™ Economy 
+DDU, for UPS™ Worldwide Economy shipments. Customers 
+will be provided with a similar experience to existing products 
+within the UPS™ Worldwide portfolio.  
+For Example: 
+	
+IND 010 9-00 P
+If UPS™ Economy DDU service is selected, a space and the letter 
+"U" are appended to the UPS Routing Code. 
+Customers have the option to consolidate UPS™ Worldwide 
+Economy packages into a single Master Shipment. Customers 
+also have the option to transport UPS™ Worldwide Economy 
+packages directly to an export or vendor site without creating a 
+Master Shipment.
+For Example: 
+	
+DEU 091 0-00 U
+UPS™ Worldwide Economy and Master Shipment labels must 
+follow the specifications outlined in the UPS Guide to Labeling. 
+In addition, for UPS™ Worldwide Economy, an additional 
+letter must be appended to the end of the UPS Routing code 
+depending on the option selected. 
+Billing Options
+For UPS™ Economy DDP (Delivered Duties Paid) shipments, 
+Duties and Taxes are paid up-front on behalf of the consignee.  
+Valid billing options include Prepaid (P/P), Free Domicile (F/D), 
+and Freight Collect (F/C) via the Shipper or a Third Party Payor.
+NOTE: Only select domestic and EU transborder services are 
+valid options for a Master Shipment. (See Pg. 34)
+Label Format Requirements
+For UPS™ Economy DDU (Delivered Duties Unpaid) shipments, 
+Duties and Taxes are paid at time of delivery. Valid billing options 
+include Prepaid (P/P) and Freight Collect (F/C) via the Shipper or 
+a Third Party Payor.
+When using the UPS™ Worldwide Economy service, the Service 
+Indicators and MaxiCode™ Class of Service codes listed in this 
+document must be used.  
+PDF417 Barcode
+When UPS™ Worldwide Economy is used, the PDF417 barcode 
+must print on the shipping label.  For details on the PDF417 
+barcode, please refer to the PDF417 barcode symbology 
+document.
+Package Weight
+The package weight must be printed on all UPS™ Worldwide 
+Economy labels.  UPS™ Economy DDP shipments from the U.S. 
+or Canada must display weight in pounds. UPS™ Economy 
+DDU shipments from the U.S. or Canada must display weight in 
+ounces to the tenth. 
+	
+• 
+
+For Example:  16.9 OZ
+Note: UPS Worldwide Economy labels must display EDI on the 
+	
+• 
+
+MaxiCode's weight field must contain "1"
+labels.
+UPS™ Economy DDU and DDP shipments from outside the U.S. 
+or Canada must display weight in kilograms to the tenth. A scale 
+may have two or more decimals and will need to be rounded up 
+to the nearest tenth.  Any value other than zero in the hundredth 
+position requires the weight to be rounded up. 
+	
+• 
+
+Example #1: 3.02 ounces would be 3.1 OZ
+	
+• 
+
+Example #2: 1.091 kilograms would be 1.1 KGS
+Service Indicators, Icons and MaxiCode™  Class of Service for International Movements 	
+Service Title	
+Service Indicator	
+Service Icon	 Class of Service
+UPS™ ECONOMY DDP	
+                                              FC                    Black Square	
+459
+UPS™ ECONOMY DDU	
+                                              FD                    Black Square	
+460	
+UPS Guide to Labeling
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+36
+© 2014 United Parcel Service of America, Inc. UPS and the UPS brandmark  
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

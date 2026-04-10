@@ -1,0 +1,78 @@
+Label Format Requirements
+Tracking Number Barcode Block
+Tracking Number Barcode Block (cont.)
+TRACKING BARCODE QUIET ZONES
+• 
+Data Content
+Positions	
+1-2	
+=	 Data Identifier of 1Z
+• 
+Minimum quiet zone top and bottom = 0.0625 
+inches
+Positions	
+3 - 8	
+=	 UPS Account Number
+Positions	 9 -10	
+=	 Service Indicator
+• 
+Minimum quiet zone left and right = 10 times the 
+X-dimension
+Positions	 11 -17 	
+=	 Reference Number
+Position	
+18	
+=	 Check Digit
+TRACKING BARCODE FORMAT
+• 
+For Example:  1Z1X2X3XA112345671
+• 
+
+Left-justified, allowing for left quiet zone
+• 
+Spaces are not encoded in the barcode.
+TRACKING BARCODE DIMENSIONS
+• 
+All alpha characters must be uppercase.
+• 
+
+Height (Minimum) = 0.7 inches
+• 
+Width = Variable
+• 
+
+X-Dimensions = 15 -21 mil
+• 
+Alpha characters may only appear in the 
+1Z Data Identifier, the account number or 
+the service indicator fields.
+TRACKING BARCODE SPECIFICATIONS
+• 
+
+See Appendix B for Code 128 specifications.
+• 
+The reference number is determined by the shipper 
+or shipping system and must be carefully controlled 
+to ensure each package is unique.
+• 
+The entire 18 digit tracking number must remain 
+unique for one year.
+Data 
+Service
+Reference
+Check
+Identifier
+Account
+Number
+Indicator
+Number
+Digit
+1Z
+A1
+1234 5671
+1X2X3X
+13
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

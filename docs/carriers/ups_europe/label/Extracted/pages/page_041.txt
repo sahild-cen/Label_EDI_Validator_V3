@@ -1,0 +1,42 @@
+Europe-Specific  Label Requirements
+Additional Routing Instructions Block
+Additional Routing Instructions Block
+Documentation indicators are required for all shipments generating in Europe. These indicators must print 
+right-justified in the Additional Routing Instructions Block immediately below the highlight bar of the Tracking 
+Number Barcode Block. The font size is 16 pt. bold.
+DOCUMENTS-ONLY SHIPMENT
+Routing Instruction                = EDI-DOC
+Shipment is Non-Dutiable But Not Documents-Only for EU-to-EU Domestic and Transborder
+Routing Instruction                 = EDI
+Shipping System Generates Invoice for Dutiable Shipment
+Routing Instruction                 = INV
+Shipping System Does Not Generate Invoice for Dutiable Shipment and Invoice Is Required
+Routing Instruction                = KEY
+Shipping System Generates Invoice for EU Goods Not in Free Circulation
+Routing Instruction                = INV-T1
+Shipping System Does Not Generate Invoice for EU Goods Not in Free Circulation
+Routing Instruction                = KEY-T1
+PDF417 Barcode
+A PDF417 Barcode is required for certain movements. For details on when the PDF417 is required and how 
+to generate the barcode, please refer to the PDF417 Barcode Symbology Guide to Labeling Supplement.
+Movement Reference Number
+When a shipper files electronically and receives or provides a movement reference number for a shipment, the text 
+shown below must print left-justified beneath the General Description of Goods. 
+The movement reference number must always take precedence over the printing of other reference numbers 
+on the address label.
+• 
+Data Content
+Positions 	 1-11	
+=	 MRN NUMBER:
+Position 	
+12	
+=	 Space
+Positions 	13 - 40	
+=	 Up to 28 alphanumeric
+• 
+Font Size                                 = 10 pt.
+39
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

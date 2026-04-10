@@ -1,0 +1,40 @@
+Label Format Requirements
+UPS Worldwide Express Freight™  Label - Import Control 1 Pickup Attempt - 
+Saturday Delivery - Liftgate - German Origin
+243 LBS
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+SHP#: 1X2X 3X33 3TT
+SHP WT: 243 LBS
+DATE: 11 JAN 2020
+12099 BERLIN
+GERMANY
+SHIP
+CONTACT NAME 
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+DULUTH  GA 30097
+UNITED STATES
+GA 300 9-05
+UPS EXPRESS FREIGHT
+TRACKING #:
+1Z 1X2 X3X EA 0000 5401
+1PS
+BILLING: P/P
+INV-RS1
+18.5A 01/2020
+SIGNATURE REQUIRED / LIFT
+DESC: TOOLS
+IMPORT CONTROL
+32
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

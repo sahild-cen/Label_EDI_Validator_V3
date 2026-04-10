@@ -1,0 +1,91 @@
+Label Format Requirements
+Tracking Number Barcode Block
+Tracking Number Barcode Block
+LOCATION
+SERVICE ICON
+• 
+
+Beneath the MaxiCode™ Symbology and Postal Barcode 
+Blocks
+• 
+The service icon must print to the right of the Service 
+Title and Human-Readable Interpretation
+HIGHLIGHT BARS
+• 
+Right justified with the right edge of the Tracking 
+Number Block
+• Highlight bars at least 0.01 inches thick, above and 
+   below Tracking Number Barcode Block
+• 
+Consists of three positions; each icon position 
+will remain fixed
+UPS SERVICE TITLE
+• 
+Data Content
+Position	
+1	
+=	 Class of service: 1, 2 or 3
+• 
+
+Printed in uppercase letters using the complete service 
+title
+Position 	
+2	
+=	 Time of day: 
+• 
+
+Left-justified and located beneath the top highlight bar
+	 	
+	
+	 +, A, P, [Space]
+• 
+
+Font Size                                 = 12 pt. bold
+Position 	
+3	
+=	 Day of delivery: 
+	 	
+	
+	 S, [Space]
+HUMAN-READABLE INTERPRETATION OF BARCODE
+• Font Size                                  = 30 pt.  
+• 
+Left-justified beneath the UPS Service Title, 
+in uppercase characters
+• 
+Exceptions:
+— A black 0.35 inch square for UPS GROUND (U.S.) 
+	   and UPS® STANDARD (INTERNATIONAL)
+• 
+Data Content
+Positions	
+1-11	
+=	 TRACKING #:
+Position 	
+12	
+=	 Space
+   — An open circle for Economy (Canada)
+   — Blank for UPS Today™ (Poland)
+Positions	13 - 35	
+=	 Tracking number 
+­
+HORIZONTAL SEPARATING LINE
+	 	
+	
+	 formatted as follows
+	 	
+	
+	 1Z 123 456 78 1234 5678
+• 
+Used to separate UPS Service Title, Barcode Title and 
+Service Icon from the tracking number barcode
+• 
+Font Size                                  = 10 pt.
+• 
+For Example:  
+                              TRACKING #: 1Z 123 X56 66 0000 5628
+12
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

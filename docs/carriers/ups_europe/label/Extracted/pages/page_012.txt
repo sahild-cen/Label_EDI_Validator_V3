@@ -1,0 +1,189 @@
+Label Format Requirements
+Postal Barcode Block
+Package Information Block (cont.)
+Position 	
+4	
+=	 Space
+ALL MOVEMENTS EXCEPT U.S. DOMESTIC 
+AND PUERTO RICO TO THE U.S.
+Positions	
+5 -7	
+=	 Three-digit building code
+Position	
+8	
+=	 Space­
+
+Position	
+9	
+=	 One-digit building code
+Position	
+10	
+=	 Dash
+The shipment dimensional weight will print in this 
+section when it applies. The weight will be rounded to 
+the next whole pound or half kilogram.
+Positions	
+11-12 	
+=	 Two-digit 
+	
+	
+	
+	 inbuilding indicator
+• 
+Data Content
+Positions	
+1- 8 	
+=	 SHP DWT:
+• 
+Font Size = 24pt.  
+Position 	
+9 	
+=	 Space
+Positions 	10 -14 	
+=	 Up to five numeric
+Position 	
+15	
+=	 Space
+• 
+UPS Routing Code examples:
+— For U.S. Destinations
+Positions 	 16-18	
+=	 LBS or KG
+• Font Size    	
+= 8pt.  
+		
+ GA	 	 3	0	1	 	 9	-	0	1
+• For Example:  SHP DWT: 1000 LBS or 
+	 1	
+2	
+3	
+4	
+5	
+6	
+7	
+8	
+9	
+10	
+11	
+12
+  SHP DWT: 189.5 KG
+(Positions)
+
+— For Non-U.S. Destinations
+NOTE:  Dimensional weight will not apply for 10 KG 
+and 25 KG boxes.
+C	
+A	
+N		 1	2	3	 	 5	-	2	7
+	 1	
+2	
+3	
+4	
+5	
+6	
+7	
+8	
+9	
+10	
+11	
+12
+
+(Positions)
+SHIPMENT DATE
+The shipment date must print for international 
+movements. The shipment date must print immediately 
+below the dimensional weight.
+• 
+Data Content
+Positions	
+1- 5 	
+=	 DATE:
+Position 	
+6 	
+=	 Space
+• 
+If a Routing Code does not exist in the data table for a 
+given destination, leave that area on the label blank. 
+(See example on page 14.)
+Positions 	 7 -17	
+=	 The date in the following 
+	 	
+	
+	 format: DD MMM YYYY
+UPS ROUTING CODE DATA FILE 
+• 
+Font Size   	
+                              = 8pt. 
+• 
+For Example:  DATE: 28 JAN 2018
+The URC data file must be updated monthly to ensure the 
+most accurate routing information.
+• 
+The file can be downloaded at:
+https://www.ups.com/hcic/hcic?loc=en_US
+• 
+Month Abbreviation Table:
+JAN	
+APR	
+JUL	
+OCT
+FEB	
+MAY	
+AUG	
+NOV
+POSTAL BARCODE LOCATION
+MAR	
+JUN	
+SEP	
+DEC
+• 
+The Postal Barcode must print to the right 
+of the MaxiCode™ Symbology, beneath the URC and 
+above 
+the Tracking Number Barcode Block
+POSTAL BARCODE QUIET ZONES
+• 
+Minimum quiet zone top and bottom =0.0625 inches
+Large Package/Additional 
+Handling Indication
+When large package or additional handling applies, the 
+indicators must print beneath the package weight and 
+to the right of the Ship From address. Please refer to the 
+current UPS Rate and Service Guide to deter­
+mine when 
+these indications are applicable.
+• 
+Minimum quiet zone left and right = 10 times the 
+X-dimension
+Postal Barcode Block
+UPS ROUTING CODE 
+• 
+The UPS Routing Code (URC) must print to the right 
+of the MaxiCode™ symbology, beneath the horizontal 
+separating line and above the Postal Barcode.
+ • 
+Data Content
+Positions	
+1- 3	
+=	 Two-character state 
+	 	
+	
+	 abbreviation preceded 
+	 	
+	
+	 by a space or three-
+	 	
+	
+	 character country
+	 	
+	
+	 abbreviation
+10
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe
+For Customers Located in Europe

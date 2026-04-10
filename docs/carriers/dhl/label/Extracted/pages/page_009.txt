@@ -1,0 +1,55 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ISO 3166-1, Codes for the representation of names of countries and their 
+subdivisions — Part 1: Country codes 
+International Standard 
+R08 
+ISO/IEC 15418, Information technology — EAN/UCC Application Identifiers 
+and Fact Data Identifiers and Maintenance 
+International Standard 
+R09 
+ISO/IEC 16022, Information technology — International symbology 
+specification — Data Matrix 
+International Standard 
+R10 
+ISO/IEC 18004, Information technology — Automatic identification and data 
+capture techniques — Barcode symbology — QR Code 
+International Standard 
+R11 
+R12 
+Global SOP DHL Transport Label Specifications 
+Global SOP Archive 
+R13 
+Global SOP Label Certification Guideline 
+Global BCRS 
+R14 
+Global SOP Data Matrix 2D Specifications 
+Global BCRS 
+R15 
+Global SOP Customer-Facing QR-Code Specifications 
+Global BCRS 
+ 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+8

@@ -1,0 +1,19 @@
+{
+  "carrier_code": "ups_all_regions",
+  "source_pdf": "carrier_label_spec_59a1a2ea-8747-46c8-bf0b-719a6002ac05.pdf",
+  "extracted_at": "2026-04-09T09:53:52.554583+00:00",
+  "total_pages": 77,
+  "metadata": {
+    "title": "",
+    "author": "",
+    "subject": "",
+    "creator": "Adobe InDesign 20.0 (Windows)",
+    "producer": "Adobe PDF Library 17.0",
+    "creation_date": "D:20241015105436-04'00'",
+    "mod_date": "D:20241015120534-04'00'",
+    "page_count": 77
+  },
+  "sections_count": 222,
+  "tables_count": 67,
+  "images_count": 54
+}

@@ -1,0 +1,37 @@
+Label Format Requirements
+Label Format Requirements
+UPS Express™ 12:00  Label - COD - U.S. Origin
+3 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+POSTAL CODE LINE
+GERMANY
+SHIP
+CONTACT NAME 
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+12099 BERLIN
+GERMANY
+DEU 091 0-00
+TRACKING #:
+UPS EXPRESS 12:00
+  
+1Z 1X2 X3X Q4 3112 3201
+1
+BILLING: P/P
+EDI-COD
+DESC: TOOLS
+COD CHEQUE 425.00 EUR
+18.5A 01/2020
+34
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

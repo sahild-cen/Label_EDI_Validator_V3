@@ -1,0 +1,79 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 5   
+Group 
+Occurrence 
+Usage 
+Description 
+SG 5 
+9 
+C 
+ CTA-COM 
+Function: A group of segments to identify a party and related contacts and references 
+ 
+SG 5 - CTA 
+Segment 
+Occurrence 
+Usage 
+Description 
+CTA 
+1 
+M 
+ Contact Information                                                                          
+Function: To specify a person within a party. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3139 
+R 
+AN..3 
+Contact function code 
+C056 
+R 
+ 
+DEPARTMENT OR EMPLOYEE DETAILS 
+   3413 
+X 
+AN..17 
+Department or employee name code 
+   3412 
+R 
+AN..35 
+Department or employee name 
+ 
+Example:  
+CTA+CO+:M. OLIVIER ABIDTS’ 
+ 
+Note: 
+This segment contains the shipper or consignor contact information.  
+ 
+Note 3139: 
+Use: 
+ 
+‘CO’ – Consignor Contact  else use  
+‘IC’ - Contact information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 32 of 115

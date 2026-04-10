@@ -1,0 +1,79 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 34  
+Group 
+Occurrence 
+Usage 
+Description 
+SG34 
+9 
+R 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a goods item. 
+ 
+SG 34 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: To specify contract and carriage conditions and service and priority requirements for the transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+821+12345678’ 
+ 
+Note: 
+This segment is only to be used for identifying export-documents for dutiable shipments, 
+for customs clearance. 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code - Document type 
+‘811’ - Export license. 
+‘812’ - Exchange control declaration, export. 
+‘820’ - Dispatch note model T. 
+‘821’ - Dispatch note model T1. 
+‘822’ - Dispatch note model T2. 
+‘823’ - Control document T5. 
+‘825’ - Dispatch note model T2L. 
+‘830’ - Goods declaration for exportation. 
+‘841’ - Goods control certificate. 
+‘935’ – Customs invoice 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 48 of 115

@@ -1,0 +1,32 @@
+Label Format Requirements
+UPS Carbon Neutral Label with Text
+0.6 LBS LTR
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+KALAMAZOO  MI 49009
+SHIP
+CONTACT NAME
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+MESA  AZ 85206-4802
+AZ 852 1-21
+UPS NEXT DAY AIR
+TRACKING #:
+1Z 1X2 X3X NT 1234 5677
+1
+BILLING: 3RD PARTY
+SHIPPER RELEASE
+UPS CARBON NEUTRAL SHIPMENT
+18.5A 01/2020
+29
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

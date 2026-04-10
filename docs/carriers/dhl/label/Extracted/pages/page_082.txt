@@ -1,0 +1,73 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ERRATA 
+Err 
+ID 
+Reported 
+by 
+Date Reported 
+Current statement 
+says 
+Recommended to 
+change to 
+Date Verified 
+Verifier Name 
+001 
+September.2022 
+General Typos 
+September.2022 
+GNOPS Label 
+Team 
+GNOPS 
+Label 
+Team 
+Corrected in accordance 
+with Global SOP 
+Dictionary and Glossary of 
+Business Terms 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This is an optional section to list changes made to the published document 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+81

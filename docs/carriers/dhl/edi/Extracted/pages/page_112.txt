@@ -1,0 +1,80 @@
+Message Specification Guidelines                         
+                          
+ 
+Appendix F – Return Shipments 
+A “Return” shipment (a shipment of items previously exported from a country, by any carrier, now being 
+returned for repair or some other reason) may, depending on the shipment destination country, need to be 
+assessed differently by destination Customs. Therefore particular information may need to be provided in 
+the manifest data submitted for such a shipment and on any documents also submitted, such as a 
+Commercial Invoice. 
+ 
+The Commercial Invoice may be rendered as an image file by DHL Express from the manifest data, which 
+can then be made available to the shipper (please contact DHL Express if this solution is required). 
+ 
+The information particular to Return shipments is as follows: 
+ 
+No. 
+Information Required 
+Location in Message 
+1 
+Original Export Date (of line item within shipment) 
+Segment Group 54 (Invoice Line Item) 
+RFF with ZZZ qualifier 
+See Page 87 
+e.g. RFF+ZZZ:original export date' 
+Segment Group 54 (Invoice Line Item) 
+RFF with ERN qualifier 
+See Page 87 
+e.g. RFF+ERN:original export tracking ID' 
+2 
+Original Export Tracking ID (of line item within 
+shipment) – i.e. consignment note number of 
+shipment on which item/s being returned were 
+originally exported 
+3 
+Original Export Carrier Name (of line item within 
+shipment) – i.e. carrier of shipment on which item/s 
+being returned were originally exported 
+Segment Group 54 (Invoice Line Item) 
+RFF with CN qualifier 
+See Page 87 
+e.g. RFF+CN:2 original outbound carrier 
+name' 
+Segment Group 25 (Invoice level) 
+FTX with AAU qualifier 
+See Page 74 
+e.g. FTX+AAU+++Duty free import remarks’ 
+4 
+Duty Free Import Remark  – i.e. free text remark to 
+assist in Customs submission for Return shipment 
+ 
+Remarks differ by re-import / destination 
+country. Examples: 
+• 
+US: “Goods returning to the US and were not 
+advanced in value or condition while outside 
+the US” 
+• 
+UK: "British Returned Goods" 
+• 
+CA: "Canadian Goods Return" 
+• 
+AU: “Australian goods returned” 
+• 
+NZ: “New Zealand Returned Goods” 
+5 
+Reason for Export 
+Segment Group 25 (Invoice level) 
+FTX with CEX qualifier, populate with R 
+(Return) 
+See page 74 
+e.g. FTX+CEX+++R' 
+ 
+Other information mandatory for all dutiable shipments, such as line item descriptions, quantities and 
+values, should also be provided 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 112 of 115

@@ -1,0 +1,103 @@
+UPS Access Point™  Specifications
+UPS Access Point™  Direct to Retail -  Label Format to print on 4" x 4.25" Label Stock  (two labels 
+required)
+Specifications for 4" x 4.25"second label
+SHIPPER INSTRUCTIONS
+	
+• PLEASE APPLY THIS LABEL TO PACKAGE
+HORIZONTAL LINES
+Horizontal lines on the second label  in the diagram below 
+must be a minimum of 0.03 inches.  They must be placed 
+above the Ship From and below the Tracking Number.
+	
+• Font Size = 15 pt. bold
+PDF417 Barcode
+SHIPPERS INFORMATION
+	
+• SHIP FROM text must be printed  to the 
+left of the shippers information
+• Shippers Name
+The PDF417 Barcode must print on the shipping label 
+when required. For details on the PDF417 Barcode, please 
+refer to the PDF417 Barcode Symbology document.
+	
+• Shippers Phone Number
+	
+• Shipper Company Name
+	
+• Font Size = 8 pt. bold
+PACKAGE TRACKING NUMBER
+	
+• TRACKING #: 1Z XXX XXX XX XXXX XXXX
+	
+• Font Size = 10 pt. bold
+UPS ACCESS POINT INSTRUCTIONS
+	
+• HOLD AT UPS ACCESS POINT FOR:
+	
+• Font Size = 10 pt. bold
+	
+• D2R; D2R/D2A –Indicator must be right 
+          justified below the separator bar across from 
+          the consignee's address.
+	
+• Font Size = 20 pt. bold
+	
+• Consignee Name
+	
+• Consignee Street Address
+	
+• Consignee Extended Street Address
+	
+• Consignee City State Postal
+	
+• Font Size = 10 pt.
+CONTACT NAME
+PHONE NUMBER
+PLEASE APPLY THIS LABEL TO PACKAGE
+STREET ADDRESS
+COMPANY NAME
+1 OF 1
+20 KG
+SHP#: 1X2X 3X33 3TT
+SHP WT: 20 KG
+SHP DWT: 20 KG
+1831  DIEGEM
+BELGIUM
+DATE: 11 JAN 2020
+CONTACT NAME
+PHONE NUMBER
+SHIP
+FROM:
+SHIP
+TO:
+CONSIGNEE NAME
+CONSIGNEE PHONE NUMBER
+COMPANY NAME
+UPS ACCESS POINT (UAP) NAME
+TRACKING #: 1Z 1X2 X3X 66 0000 5627
+UAP EXTENDED ADDRESS
+UAP STREET ADDRESS
+HOLD AT UPS ACCESS POINT FOR:
+D2R
+CONSIGNEE NAME
+EXTENDED ADDRESS
+CANADA
+WINDSOR ON  N8N2M1
+CAN 527 9-00
+EXTENDED ADDRESS
+CITY POSTAL CODE
+STREET ADDRESS
+COUNTRY NAME
+TRACKING #: 1Z 1X2 X3X 66 0000 5627
+1
+UPS EXPRESS
+BILLING: P/P
+DESC: CLOTHING
+KEY
+18.5A 01/2020
+60
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

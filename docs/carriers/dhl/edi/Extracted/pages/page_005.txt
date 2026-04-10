@@ -1,0 +1,57 @@
+Message Specification Guidelines                         
+                          
+ 
+Table of Contents 
+Confidentiality 
+2 
+Terms and Conditions 
+3 
+Audience 
+4 
+Table of Contents 
+5 
+Document Change Report 
+9 
+Introduction 
+11 
+Definition of EDI 
+12 
+Service Terms and Conditions 
+13 
+IFCSUM Description 
+14 
+Mandatory/Optional Fields 
+15 
+IFCSUM D01B Message Branching Diagram 
+16 
+Units of Measure 
+17 
+Declaration of Data Elements - Header 
+18 
+Declaration of Data Elements – Shipment Information 
+19 
+Declaration of Data Elements – Shipment Item Information 
+21 
+Declaration of Data Elements – Invoice Information 
+22 
+Declaration of Data Elements – Invoice Line Item Information 
+23 
+UNH 
+24 
+BGM 
+25 
+DTM 
+26 
+MOA 
+27 
+FTX 
+28 
+CNT 
+29 
+Segment Group 4 
+30 
+SG4 - NAD 
+30 
+Segment Group 5 
+32 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 5 of 115

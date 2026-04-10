@@ -1,0 +1,64 @@
+UPS Manifest Summary
+ UPS Worldwide Express Freight Manifest Summary
+Example of UPS Manifest Summary
+UPS Manifest - Summary Section
+ABC Ltd Ship Software v1.05
+1X2X3X
+UPS Account Number:
+Shipping Record Number:
+0357052032
+Report Print Date:
+11/JAN/2020
+Collection Date:
+11/JAN/2020
+COMPANY NAME
+STREET ADDRESS
+1831  DIEGEM BELGIUM
+BE
+Vat No. BE123456789
+Telephone  0800.128.28
+Shipment Summary
+Service
+Shipments
+Packages
+Return Shipments
+Return Packages
+Import Control Shipments
+UPS Worldwide Express Freight
+1
+1
+0
+0
+0
+Collection Totals
+1
+1
+For UPS Use Only
+0
+0
+0
+0
+0
+0
+0
+0
+Additional Handling Waybill
+Additional Handling Manifest
+Additional Handling Total
+Dangerous Goods Total
+0
+0
+Received for UPS by:
+Collection Time:
+Collection Date:
+Number of Packages:
+____________________
+____________________
+____________________
+____________________
+91 1X2 X3X 9373 30903 00002 7
+46
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

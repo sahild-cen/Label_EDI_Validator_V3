@@ -1,0 +1,132 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+SECTION 
+ASC MH 10 
+GS1 
+String 
+2 upper-case alpha 
+chars 
+ISO COUNTRY 
+CODE 
+3 numeric digits 
+Mandatory 
+For domestic shipments as well 
+POST CODE 
+ 
+Conditional 
+(Mandatory where existent) 
+Postcode of Consignee address. Variable length, max. 
+12 chars; The Postcode may never contain spaces or 
+symbols  
+Remains empty in case of country with no Postcode 
+system. In case of known DHL Service Area Code (3 
+chars) or a DHL Delivery Facility Identifier (6 chars), this 
+can be coded here, separated from the country code by 
+a colon “:”. 
+“+” char 
+Mandatory 
+FIELD 
+SEPARATOR 
+2 numeric digits (fixed length) 
+Mandatory 
+PRODUCT 
+CODE 
+DELIVERY 
+DATE 
+2 numeric digits (fixed length) 
+Mandatory 
+If no date specified, put two 
+zeroes. 
+DELIVERY 
+TIME  
+1 numeric digit (fixed length) 
+Mandatory 
+(if no delivery time, put one zero) 
+Mandatory 
+(if no feature, put three zeroes) 
+HANDLING 
+FEATURE 
+CODE(S) 
+3 digit numeric number with leading zeroes (fixed 
+length) 
+Sum of values of product features 
+FIELD 
+SEPARATOR 
+“+” char 
+ 
+Optional 
+May remain empty 
+FNC1 (Special 
+Code 128 symbol, in 
+all three code sets.) 
+Variable up to 6 numeric chars or up to 2 alphabetic 
+chars, for domestic use only. 
+Optional 
+May remain empty 
+COUNTRY-
+SPECIFIC 
+CODES 
+ 
+ 
+Example of a routing code: 2LBE3500+11311002123456 
+ 
+(2L) 
+BE 
+3500 
++ 
+11 
+31 
+1 
+002 
+123456 
+Data 
+Identifier 
+Postcode 
+code 
+Field 
+separator 
+Product 
+code 
+Delivery 
+Date 
+Delivery 
+Time 
+Product 
+Feature 
+ISO 
+Country 
+Code 
+Region 
+specific 
+codes 
+ 
+When none of the above features is chosen, the code is “000”. 
+ 
+5.15.2. Full Routing Barcode Examples  
+ 
+ 
+a) 
+ASC MH 10 
+EUROPACK piece, without any features but with region specific routing information: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+40

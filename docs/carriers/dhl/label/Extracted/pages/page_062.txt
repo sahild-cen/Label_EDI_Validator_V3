@@ -1,0 +1,36 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+As an exception, the label can be divided in two smaller sized labels. In this case, the label that does not 
+contain the Piece Identifier barcode form must show the unique piece identifier at least in human 
+readable form (minimal font size 8 point). 
+ 
+If a printout on A5 or Statement format (i.e. folded A4 or folded Letter) is desired, the label content 
+can be divided into two columns, with the first column to contain the addresses plus potential 
+customer-specific information and the second column to be identical to a Network Label (see Error! R
+eference source not found.) 
+ 
+8.1.2. 
+  Segment Fonts and Sizes 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+61

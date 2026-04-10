@@ -1,0 +1,173 @@
+Label Format Requirements
+Irregular Packages 
+ADDITIONAL HANDLING*
+Irregular Packages
+LARGE PACKAGE 
+METHOD 1- (SINGLE PACKAGE SHIPMENT)
+The text "AH" must appear in the Package Information 
+Block. This indicator must print only on those labels with 
+packages requiring Additional Handling.
+• 
+Data Content
+Positions 1-2 	
+                   = AH
+METHOD 1 - (SINGLE PACKAGE SHIPMENT)
+The text "LP" must appear in the Package Information 
+Block. This indicator must print only on those labels that 
+qualify as Large Packages (size exceeds 130 inches in 
+length and girth combined).
+• Font Size                            = 8 pt.
+• For Example:  AH
+• 
+Data Content
+Positions 1-2 	
+                       = LP
+• Font Size                                = 8 pt.
+• For Example:  LP
+METHOD 2  - (MULTI PACKAGE SHIPMENT)
+If the package(s) requiring "Additional Handling" are not 
+known at the time when labels are been printed, the text 
+"AH" along with the total number of the "Additional 
+Handling" packages must print on all the labels in the 
+shipment.
+METHOD 2 - (MULTI PACKAGE SHIPMENT)
+If the "Large Packages" are not known at the time when 
+labels are been printed - the LP indicator along with the 
+total number of the text "LP" must print on all the labels in 
+the shipment.
+• 
+Data Content
+Positions 1-2	
+                     =  AH
+Position 3 	
+                           =  Space
+• 
+Data Content
+Positions 1-2	
+                       = LP
+Positions 4-6 	
+                    =  Up to three numeric
+Position 3 	
+                            = Space
+• Font Size                             =  8 pt.
+Positions 4-6 	
+                      = Up to three numeric
+• For Example:  AH 2
+• Font Size                               = 8 pt.
+• For Example:  LP 2
+Multiple Piece Shipment
+38 KG
+1 OF 3
+3 KG
+2 OF 3
+4 KG
+3 OF 3
+CONTACT NAME
+PHONE NUMBER
+CONTACT NAME
+PHONE NUMBER
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+COMPANY NAME
+COMPANY NAME
+STREET ADDRESS
+STREET ADDRESS
+STREET ADDRESS
+60386  FRANKFURT
+60386  FRANKFURT
+60386  FRANKFURT
+GERMANY
+GERMANY
+GERMANY
+SHP#: 1X2X 3X33 3TT
+SHP WT: 45 KG
+SHP DWT: 45 KG
+DATE: 11 JAN 2020
+LP 2
+SHP#: 1X2X 3X33 3TT
+SHP WT: 45 KG
+SHP DWT: 45 KG
+DATE: 11 JAN 2020
+LP 2
+SHP#: 1X2X 3X33 3TT
+SHP WT: 45 KG
+SHP DWT: 45 KG
+DATE: 11 JAN 2020
+LP 2
+SHIP
+SHIP
+SHIP
+CONTACT NAME
+CONTACT NAME
+CONTACT NAME
+TO:
+PHONE NUMBER
+TO:
+TO:
+PHONE NUMBER
+PHONE NUMBER
+COMPANY NAME
+COMPANY NAME
+COMPANY NAME
+STREET ADDRESS
+TOKYO  1000004
+STREET ADDRESS
+TOKYO  1000004
+STREET ADDRESS
+TOKYO  1000004
+JAPAN
+JAPAN
+JAPAN
+JPN 106 1-00
+JPN 106 1-00
+JPN 106 1-00
+UPS EXPEDITED
+UPS EXPEDITED
+UPS EXPEDITED
+TRACKING #:
+TRACKING #:
+1Z 1X2 X3X 67 0000 5401
+TRACKING #:
+1Z 1X2 X3X 67 0450 7700
+1Z 1X2 X3X 67 0650 9802
+2
+2
+2
+BILLING: P/P
+BILLING: P/P
+BILLING: P/P
+INV
+DESC: AUTO PARTS
+INV
+DESC: AUTO PARTS
+INV
+DESC: AUTO PARTS
+18.5A 01/2020
+18.5A 01/2020
+18.5A 01/2020
+Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s
+liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by
+international conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment
+and UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported
+from the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.
+Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s
+liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by
+international conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment
+and UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported
+from the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.
+Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s
+liability for loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the International Carriage of Goods By Road.  Except as otherwise governed by
+international conventions or other mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no stopping places agreed upon at the time of tender of the shipment
+and UPS reserves the right to route the shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding agent for export control and customs purposes.  If exported
+from the US, shipper certifies that the commodities, technology or software were exported from the US in accordance with the Export Administration Regulations.  Diversion contrary to law is prohibited.
+*An Additional Handling indicator is required for the following:
+ - Any article that is encased in an outside shipping container made of metal or wood. 
+ - Any item, such as a barrel, drum, pail or tire, that is not fully encased in a corrugated cardboard shipping container.  
+ - Any package with the longest side exceeding 48 inches or its second longest side exceeding 30 inches. 
+ - Any package with an actual weight greater than 70 pounds.
+36
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

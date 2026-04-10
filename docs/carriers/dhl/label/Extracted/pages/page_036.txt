@@ -1,0 +1,64 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.1.1. 
+Content Description (mandatory) 
+ 
+ 
+The set of segments (17) is reserved for such information and consists of: 
+• 
+(17a) placed right to the Waybill barcode – supports 150 chars 
+• 
+(17b) which goes across the whole label width – supports 300 chars 
+ 
+The font size is to be chosen, within the physical constraints specific to each template version, in such a way 
+that at least 300 chars can be printed in both sections 17a and 17b. 
+ 
+Note: practical usage so far has taught that keeping segment 17a associated with the content description is 
+a good approach, in case there are additional requirements for regulatory information (see example below, 
+where the regulatory information was placed in segment 17b). 
+ 
+ The following practical guidance is to be observed: 
+ 
+• 
+ 
+“Content Description” or related Information (mandatory) 
+o 
+To be located primarily in segment 17a, starting in Line 1 (“Special_Info1) 
+o 
+Exceptional scenario: Should there be a scenario where the required content description 
+extends beyond the pre-defined number of characters for segment 17a, then IF there is no 
+Regulatory Information using segment 17b, the content description can be located in the 
+segment 17b 
+• 
+General Regulatory Information 
+o 
+To be located in Segment 17b, starting in Line 2 (Special_InfoA1) 
+ 
+ 
+1.1.1.1. 
+Neutral Content Descriptions 
+There is a requirement from specific shippers, who wish to “neutralize” the Goods Description on the Transport 
+Label to help with what they perceive as a security threat during physical shipment handling.  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+35

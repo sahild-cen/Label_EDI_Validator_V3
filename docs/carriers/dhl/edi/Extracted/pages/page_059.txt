@@ -1,0 +1,89 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 52   
+Group 
+Occurrence 
+Usage 
+Description 
+SG52 
+2 
+R 
+ MEA                                                                                                    
+Function: A group of segments to specify measurements applicable to a piece. 
+ 
+SG 52 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: Measurements of a piece. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement application qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+   6313 
+R 
+AN..3 
+Measured attribute code 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..18 
+Measurement value 
+ 
+Example:  
+MEA+WT+AAE+KGM:12’ 
+MEA+VOL+AAW+MTQ:45.000’ 
+ 
+Note: 
+The segment will occur twice. The first occurrence is reserved for the piece weight and 
+the second for the piece volume. 
+ 
+Note 6311:  
+Use: ‘WT’ – Weight. 
+         ‘VOL’ - Volume. 
+ 
+Note C108/4440: This segment with element 6311 = VOL, becomes mandatory if no dimensions of the          
+piece are available. 
+ 
+Note 6313:  
+Use: ‘AAE’ - Piece gross weight. 
+        ‘AAW’ - Gross volume. 
+ 
+Note 6411:  
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+For WT ‘KGM or ‘LBR’ 
+For VOL MTQ, CMQ or INQ 
+ 
+Note 6314:  
+• The gross weight and volume of the item are allowed with a maximum of 3 decimals. 
+• Decimal sign may be point or comma depending of what specified in segment UNA. 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 59 of 115

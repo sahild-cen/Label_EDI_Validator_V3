@@ -1,0 +1,61 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 56 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG56 
+9 
+C 
+ DOC 
+Function: A group of segments to specify documents and associated date(s) and time(s) for a line item. 
+ 
+SG 56 - DOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+DOC 
+1 
+M 
+ Document Message Details                                                               
+Function: A segment to specify a document prepared for a line item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C002 
+M 
+ 
+DOCUMENT / MESSAGE NAME 
+   1001 
+R 
+AN..3 
+Document name code 
+C503 
+R 
+ 
+DOCUMENT MESSAGE DETAILS 
+   1004 
+R 
+AN..35 
+Document identifier 
+ 
+Example:  
+DOC+41+LIASCDOC19' 
+ 
+Note 1001:  
+Use of this element is to indicate the type of document: 
+Document code - Document type 
+’41’ - Driver's License 
+For the full list of Associated Document Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request). 
+ 
+Note 1004:  
+Related document number 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 87 of 115

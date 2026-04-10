@@ -1,0 +1,58 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+9 
+C 
+ Control Totals 
+Function: To provide control total within an Invoice 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+7:1.24:KGM' 
+CNT+29:1.20:KGM' 
+ 
+Note: 
+This segment represents control totals within respective Invoice. 
+ 
+Note 6069: 
+Use: 
+ 
+‘7’ - Total Gross Weight (Invoice) 
+ 
+‘29’ - Total Net Weight  
+Note 6066: 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Confirm with DHL Express which units of the following can be supported in the shipment 
+origin country: ‘KGM or ‘LBR’ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 71 of 115

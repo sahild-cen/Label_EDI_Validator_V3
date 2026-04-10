@@ -1,0 +1,75 @@
+Message Specification Guidelines                         
+                          
+ 
+DOMESTIC 
+EXPRESS 
+DOM 
+N 
+Systemized door-to-door delivery of documents 
+and parcels within the same country on the next 
+possible business day. 
+DOL 
+O 
+DOMESTIC 
+EXPRESS 
+10:30 
+A systemized and guaranteed door-to-door pick-
+up and domestic delivery of document and 
+parcel shipments on the next possible business 
+day by 10:30hrs, targeted at time-critical 
+business-to-business needs 
+EXPRESS 
+9:00 
+TDK 
+K 
+Systemized export, import or domestic pre-
+9:00hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee and proactive 
+delivery notification. 
+EXPRESS 
+10:30 
+TDL 
+L 
+Systemized export, import or domestic pre-
+10:30hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+EXPRESS 
+12:00 
+TDT 
+T 
+Systemized export, import or domestic pre-
+12:00hrs door-to-door delivery of document 
+shipments on the next possible business day, 
+with a full money-back guarantee. 
+MEDICAL 
+EXPRESS 
+CMX 
+C 
+The outbound transportation of time sensitive 
+supplies and medicines and the associated 
+inbound transportation of time sensitive 
+diagnostic samples during the clinical trials 
+phase of a new medicine (sent as documents). 
+EXPRESS 
+EASY 
+XED 
+7 
+Time Definite International and Domestic 
+Systemized export or domestic pre-18:00hrs 
+door-to-door delivery of document shipments on 
+the next possible business day. Sold from 
+Service Point outlets on cash payment terms, 
+with DHL branded packaging included at eight 
+standard weight intervals. 
+EXPRESS 
+ENVELOPE 
+XPD 
+X 
+Systemized export pre-18:00hrs door-to-door 
+delivery of document shipments weighing up to 
+250g on the next possible business day, within a 
+DHL envelope designed and branded for the 
+purpose. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 93 of 115

@@ -1,0 +1,47 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.2. eWaybill  
+DHL is required to keep archive copies of all Waybills to meet legal and customer service access 
+requirements. Waybills are usually scanned into an imaging system where the shipment barcode is 
+decoded for indexing purposes. In addition, Waybills for dutiable shipments are scanned into DHL systems 
+(e.g. CIA) to support customs clearance processes. 
+The eWaybill in this specification has been designed to allow for both Label and eWaybill printing on the 
+same printer. It is, however, also allowed to print the eWaybill on a normal A4 / Letter size document, 
+provided that all specified information is available and the Waybill Barcode is printed. 
+ 
+This Document Type has been designed to support shipments based on DHL’s 10-digit Waybill 
+numbering system only. As of 2009, this covers all cross-border Express shipments and all domestic 
+TD shipments. 
+A 210x110 mm eWaybill can potentially list up to 40 LPs. Where a shipment exceeds this number of 
+pieces, a second page may be printed, to be archived under the same shipment ID. 
+An eWaybill is either generated through printout and subsequent imaging or as a print file that is archived 
+without being printed. 
+8.2.1. 
+  Size and Orientation 
+This document type should be within 95 and 110 mm. This requirement is met by both A6 labels (portrait) 
+and 4” wide labels. If wider material is used, a frame should be printed around the label content. 
+There is no hard limit for the document length. The recommended length is 210 mm (A5 width) or 8” 
+(203 mm). A6 height works as well. A length of 27 cm should not be exceeded, so that proper imaging 
+can be ensured. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+70

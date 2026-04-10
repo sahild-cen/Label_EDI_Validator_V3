@@ -1,0 +1,87 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+The DHL ISO Routing Code contains destination country, destination Postcode, transport products and 
+associated product features. When a routing field is optional, the content is not required. 
+ 
+ 
+In the context of the routing barcode, optional does not always imply that the routing field may remain 
+empty. Some routing fields must always be populated at least with zeroes. If data is available, though, 
+such a field should always be filled. 
+The Postcode, the region specific fields and the + separator after the product/feature block are the only optional 
+fields which must be omitted if the data is not available.  
+ 
+5.15.1. Routing Barcode Structure 
+The following international ISO standards are supported when coding routing information in barcodes.  
+• 
+The ASC MH 10 routing barcode starts with the ASC MH 10 Data Identifier "2L" and is coded in barcode 
+symbology Code 128.  
+• 
+The GS1 routing barcode starts with the GS1 Application Identifier "403" and is coded in barcode 
+symbology GS1-128.  
+Both standards are complementary and can co-exist without restriction (they do not differ in content but only in 
+their technical structure). However, DHL Express-internal applications will only produce ASC MH 10 
+routing barcodes starting with 2L. 
+ 
+A distinction has to be made between the information which will be captured and the information, which will 
+actually be printed out on the barcode. This distinction is mainly relevant for applications which need an 
+indication on the output side. 
+ 
+Example: At data content level, a calendar date for delivery is not chosen for the selected product, so the 
+delivery date information will not be captured. The delivery date is optional, as it does not always have to be 
+captured. However, at barcode level, the delivery date digits are mandatory as the delivery date field may not 
+remain empty/blank and the field must be populated with zeroes if no valid information is available. 
+All routing information appears both in human and bar-coded format except for the parenthesis 
+around the Data Identifier which only appear in human readable format – not in the barcode. 
+ 
+The printout level is either mandatory or optional, it means the whole barcode is either printed or not printed 
+(with the possible exception of a country-specific extension).  
+ 
+A product/feature block always consists of 8 digits, regardless of which products and features have 
+been chosen. 
+ 
+ 
+The table below details out ASC MH and GS1 barcode routing structures 
+SECTION 
+ASC MH 10 
+GS1 
+String 
+LEFT 
+PARENTHESIS 
+( 
+Mandatory 
+(only in plain text – not in 
+barcode!) 
+“2L” 
+“403” 
+Mandatory 
+DATA / 
+APPLICATION 
+IDENTIFIER 
+RIGHT 
+PARENTHESIS 
+) 
+Mandatory 
+(only in plain text – not in 
+barcode!) 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+39

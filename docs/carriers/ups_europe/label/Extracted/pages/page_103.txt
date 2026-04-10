@@ -1,0 +1,41 @@
+Definitions
+AIM — 
+Automatic Identification Manufacturers, 634 Alpha Drive, Pittsburgh, PA 15238-2802; a trade association 
+of automatic identification suppliers.
+Alphanumeric — 
+A character set that contains alphabetic characters (letters), numeric digits (numbers) and usually other 
+characters, such as punctuation marks.
+Application Identifier — 
+A character string which defines the specific intended use of the data that immediately follows.
+Aspect Ratio — 
+The ratio of barcode height to barcode length.
+Bar — 
+The dark element of a barcode, as opposed to a space between bars.
+Barcode Block — 
+Standardized unit of area in which bar-coded information is presented. barcode blocks are typically stacked 
+vertically and are separated from each other by a horizontal line.
+Barcode Character — 
+A single group of bars and spaces that represents one number, letter, punctuation mark or other symbol. 
+This is the smallest subset of a barcode’s data content.
+Barcode Height — 
+The bar dimension perpendicular to the bar (element) width.
+Barcode Length — 
+The physical length of a barcode symbol, excluding the quiet zones.
+Barcode Symbol — 
+An automatic identification technology that encodes information into an array of adjacent varying-width parallel 
+bars and spaces.
+Barcode Title — 
+The name selected that describes the data content of the barcode symbol.
+Bar Width — 
+The thickness of a bar measured from the edge closest to the symbol start character to the trailing edge 
+of the same bar.
+Character — 
+A single letter, number, punctuation mark or other special symbol.
+Check Digit — 
+A calculated character often included within a barcode symbol whose value is used for performing 
+a mathematical check on the validity of the encoded data. (See also Modified MOD 10.)
+101
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

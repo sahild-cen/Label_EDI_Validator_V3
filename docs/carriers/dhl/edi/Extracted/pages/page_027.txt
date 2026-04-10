@@ -1,0 +1,76 @@
+Message Specification Guidelines                         
+                          
+ 
+MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+1 
+C 
+ Monetary Amount 
+Function: To specify monetary amounts. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+43:1500,90:EUR’ 
+ 
+Note 5025: 
+Use: ‘43’ - Declared total customs value. 
+ 
+Note 5004: 
+This is a value represented for all shipment within the file. 
+                          Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 2 decimals are included. 
+▪ 
+All amounts have to be specified with 2 decimals included, regardless currency. 
+▪ 
+Decimal sign may be point or comma depending of what has been specified in 
+segment UNA. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for Cash On Delivery (COD) 
+where it will the currency of the destination country.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 27 of 115

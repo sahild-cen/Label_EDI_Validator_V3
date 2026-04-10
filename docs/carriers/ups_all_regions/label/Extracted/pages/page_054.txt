@@ -1,0 +1,44 @@
+Refrigeration Service
+Label Format Requirements
+Introduction
+Refrigeration Service is offered as a contract service 
+only. This service allows a package to be refrigerated 
+at certain UPS facilities if necessary.
+Label Format Requirements
+
+The refrigeration service indicator must print in the 
+top right corner of the shipping label. 
+• 
+Data Content:	
+	
+Text = RFG
+• 
+Font Size = 16 pt. bold
+                                                                
+                                                       U.S.  Domestic Label
+5 LBS
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+RFG
+STREET ADDRESS
+KALAMAZOO MI  49009
+CONTACT NAME
+SHIP
+PHONE NUMBER
+TO:
+COMPANY NAME
+STREET ADDRESS
+MESA AZ  85206-4802
+AZ 852 1-21
+UPS NEXT DAY AIR
+1Z 1X2 X3X 01 1234 5672
+TRACKING #:
+1
+18.5A 01/2020
+UPS Guide to Labeling
+53
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

@@ -1,0 +1,72 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+3 
+R 
+ Free Text 
+Function: To specify description of goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..256 
+Free text value 
+ 
+Example:  
+FTX+AAA+++ELECTRONIC COMPONENTS’ 
+ 
+Note 4451: 
+Use: 
+‘AAA’ - Goods description. 
+‘AAB’ - Terms of Payment (COD) 
+‘DIN’ - Delivery instructions. 
+‘SPH’ – Special handling 
+‘CCI’  - Custom Remarks 
+When customer wants to specify the method of payment in case of Cash on Delivery, the 
+qualifier ‘AAB’ has to be used. 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+Goods description (qualifier ‘AAA’) is mandatory for all shipments. Detail description is 
+preferred. In case the customer is using qualifier AAB to specify the terms of payment, 
+the element 4440 should content one letter code (from A to Q) – Please consult your 
+Sales Representative in order to have more information about the country specific codes. 
+ 
+ 
+         Custom Remarks/ Customs clearance instructions (qualifier ‘CCI’). Any code or 
+clear instruction agreed by customer and carrier regarding the declaration of the goods. 
+Only populated if the shipper requires DHL Express to generate an image file of the 
+invoice, which can then be returned to the shipper, in which case contents of field will be 
+given under field “DECLARATION”. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 41 of 115

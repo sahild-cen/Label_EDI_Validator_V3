@@ -1,0 +1,63 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Local language translation of Contact Name 
+• 
+Account Number – Identifies the Shipper’s Account Number 
+• 
+Reference – Identifies the set of Piece/ Shipment References 
+6.4.  
+Consignee’s Contact 
+ 
+ 
+The Consignee’s Contact information in this segment supports the following optional elements, in addition to the 
+label (refer to chapter 4): 
+ 
+• 
+Local language translation of Contact Name 
+• 
+Account Number – Identifies the Consignee’s Account Number 
+6.5. Country-Facility ID 
+ 
+The DHL Country Code and Facility Identifier for both Original and Destination locations will be displayed here, 
+with the following format: 
+ 
+• 
+[ORIGIN COUNTRY CODE]-[ORIGIN SERVICE AREA CODE] [ORIGIN FACILITY CODE], in 
+correspondence to the DHL Facility managing the Shipper’s GEO Area 
+ 
+• 
+[DESTINATION COUNTRY CODE]-[DESTINATION SERVICE AREA CODE] [DESTINATION 
+FACILITY CODE], in correspondence to the definition applied to the corresponding Transport 
+Label and to the DHL Facility managing the Consignee’s GEO Area 
+6.6. Product Information 
+6.6.1. 
+Product Details (mandatory) 
+ 
+The Product chosen by the customer will be printed here, with the following data elements and format: 
+• 
+[Network Product Code] Global Product Name (Product Sort Code) 
+ 
+Referring to the example above, the product is being identified with the following elements: 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+51

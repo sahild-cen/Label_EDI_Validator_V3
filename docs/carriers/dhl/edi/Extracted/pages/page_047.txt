@@ -1,0 +1,70 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 33  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 33 
+1 
+C 
+ GOR 
+Function: A group of segments to identify customs and other governmental procedures and required documents. 
+Segment group 33 is not used, but is mandatory to be able to specify segment group 34. 
+ 
+SG 33 - GOR 
+Segment 
+Occurrence 
+Usage 
+Description 
+GOR 
+1 
+M 
+ Governmental Requirements                                                            
+Function: A segment to indicate applicable governmental procedures related to import, export and transport of 
+the goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8323 
+M 
+AN..3 
+Transport Movement code 
+ 
+Example:  
+GOR+1’ 
+ 
+Note: 
+Segment group 4 is used as flag to indicate shipment is due to customs clearance and to 
+enable the usage of SG34. This segment has to be used only in combination with SG34 
+DOC. 
+ 
+Note 8323: 
+Use ‘1’ – Export. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 47 of 115

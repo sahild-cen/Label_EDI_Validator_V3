@@ -1,0 +1,19 @@
+Message Specification Guidelines                         
+                          
+ 
+IFCSUM Description 
+This document is part of the document “EDI Implementation Guide for customer interfaces”. It provides 
+the definition of the International Forwarding and Consolidation Summary Message (IFCSUM) to be used 
+in Electronic Data Interchange (EDI) between Deutsche Post World Net partners and its customers. 
+ 
+Therefore, this specification can be used for EDI exchange between customers and Deutsche Post 
+subsidiaries. The Deutsche Post World Net partner takes care of the EDI exchange to DHL Express and 
+other partners in this group. 
+ 
+Within this document the IFCSUM declaration of data elements will be described along with branching 
+diagrams to show the arrangement of segments and segment groups. It also contains detailed 
+descriptions of segment and assignment information for individual data elements. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 14 of 115

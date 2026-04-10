@@ -1,0 +1,74 @@
+UPS World Ease™  Specifications
+UPS World Ease™  Label - Document Box
+INTERNATIONAL SHIPPING NOTICE
+This block will contain the International Shipping 
+Notice text and will appear on the over-label. The text 
+will appear to the far left of the label, printed vertically. 
+The notice must also appear on the main label. Please 
+refer to the International Shipping Notice text in the 
+UPS Guide to Labeling. 
+• 
+Font Size = 4 pt.
+Over Label as applied to Doc Box Label
+Document Box Label
+PKG# 1 OF 2
+TRKG# 410
+        
+Package  
+1 OF__
+
+SORT
+UPS
+NARITA
+TO:
+JAPAN  2828691
+Port of 
+Entry
+CUSTOMER:
+*APPLY THIS LABEL OVER THE ADDRESS
+  LABEL DIRECTLY ABOVE THE UPS SERVICE
+  NAME.
+*THE 1Z TRACKING NUMBER AND THE
+  BARCODE SHOULD BE VISIBLE.
+*SEE BACK OF LABEL FOR EXAMPLE.
+JPN 699 9-00
+SM
+UPS IMPORT:
+REMOVE THIS OVER-LABEL AFTER CUSTOMS
+CLEARANCE.
+UPS World Ease
+UPS World Ease
+SM
+Shipper agrees to the UPS Terms found at www.ups.com and UPS service centers.  For international air
+carriage, the Warsaw Convention as amended or Montreal Convention may apply and limits UPS’s liability for
+loss or damage to cargo.  International carriage by road may be subject to the Convention on the Contract for the
+International Carriage of Goods By Road.  Except as otherwise governed by international conventions or other
+mandatory law, the UPS Terms limit UPS’s liability for damage, loss or delay of this shipment.  There are no
+stopping places agreed upon at the time of tender of the shipment and UPS reserves the right to route the
+shipment in any way it deems appropriate.  Where allowed by law, shipper authorizes UPS to act as forwarding
+agent for export control and customs purposes.  If exported from the US, shipper certifies that the commodities,
+technology or software were exported from the US in accordance with the Export Administration Regulations.
+Diversion contrary to law is prohibited.
+TRACKING #:
+2
+UPS EXPEDITED
+1Z 1X2 X3X 67 0000 5410
+                      
+Billing 
+INV-CC
+BILLING: P/P
+DESC: SHOES
+Option
+POA / CO
+18.5A 01/2020
+Documentation 
+Indicator
+General 
+DescriptIon 
+of Goods
+
+UPS Guide to Labeling
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+9
+Supplement

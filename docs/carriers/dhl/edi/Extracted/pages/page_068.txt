@@ -1,0 +1,43 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 70 - EQN 
+Segment 
+Occurrence 
+Usage 
+Description 
+EQN 
+1 
+M 
+ Number of Units                                                                               
+Function:   A segment to specify the number of pieces of equipment required. The total number of pallets  
+etc. of all shipments in the message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C523 
+M 
+ 
+NUMBER OF UNITS DETAILS  
+  6350 
+M 
+N..15 
+Number of Units  
+ 
+ 
+Example:  
+EQN+10’ 
+ 
+Note 6350: 
+Number of Pallets/boxes  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 68 of 115

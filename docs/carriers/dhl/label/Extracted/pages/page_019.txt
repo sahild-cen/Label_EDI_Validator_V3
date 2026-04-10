@@ -1,0 +1,64 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+There is no binding format for the Printing Application (e.g. “Express Logistics Platform - ELP”) but there is one 
+for its version: X.XX.XXX. It shall be located underneath the Product Short Name. 
+ 
+5.2.3.1. 
+Permanent Label Certification Identifier (mandatory) 
+ 
+All Label Certification Identifiers are managed centrally, by the GCoCL team and follow a sequential scheme. 
+There is a differentiation between permanently and temporary approved labels which still require some rework 
+and need to be reviewed after six month of approval. 
+ 
+Permanent Label Certification Identifier Convention:  
+ 
+ 
+ 
+ 
+ 
+ 
+Example 
+ 
+ 
+5.2.3.2. Temporary Label Certification Identifier 
+ 
+Temporary Label Certification Identifier Convention: 
+A temporary certification can be used for a limited period but must be reviewed after 6 months to fully adhere 
+to the DHL Express standards. It will follow a different naming convention starting with a fix suffix followed by a 
+serial number and date. Once fully compliant, the temporary ID will be changed to a permanent ID  
+ 
+ 
+The font size for the Certification Identifiers is of a 1.5mm font size or 5 points. 
+ 
+5.2.4. 
+Label Printing Date (mandatory) 
+ 
+The Label Printing Date, in accordance with the ISO 8601 standard, follows (sequence) the identification of the 
+Rendering Application and has the format yyyy-mm-dd5, where “YYYY” refers to the year, “mm” to the month 
+and “dd” to the date. 
+ 
+5 In the case of GLS it is based on the server’s date and time 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+18

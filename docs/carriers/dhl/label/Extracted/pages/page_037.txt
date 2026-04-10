@@ -1,0 +1,60 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+For selected and approved customers, who meet the defined Neutral Content Label criteria, the respective 
+content descriptions on the Transport Labels can be replaced with a “Neutral Content Description” text, defined 
+as “CTD – see data”). The “CTD – see data” string must be printed with bold font and with a min 3mm character 
+height. 
+ 
+The location of the “Neutral Content Description” complies with the guidance of the previous section (“Content 
+Description”). 
+ 
+1.1.2. 
+Special or Conditional Information 
+ 
+• 
+Special/ Conditional Information (see examples below) 
+o 
+To be, as a guiding principle, located in segment 17b 
+o 
+Dangerous Goods Declarations are to be located in segment 17a 
+o 
+The guiding principle follows however the primacy of the General Regulatory Information, in 
+which case the Special Information, if existent, can be moved to the “Piece Content” line (refer 
+to first image, above, in this section). It would then also take precedence over any piece-related 
+contents. 
+o 
+Should two data elements need to be printed in the “Piece Content” line (e.g. they can be 
+concatenated in the same line if separated by specific captions and a “/” separator (e.g. CNP-
+12345678 / IE-987654321) 
+o 
+A Tax ID can also be understood and represented as a Shipment Reference with the 
+associated Reference Type, in which case it would not be placed here but rather in the 
+Piece / Shipment Reference segment. 
+ 
+1.1.3. 
+Not allowed on Transport Labels 
+• 
+   Account Numbers / Customs Value / Shipment Insurance Value <- must be excluded 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+36

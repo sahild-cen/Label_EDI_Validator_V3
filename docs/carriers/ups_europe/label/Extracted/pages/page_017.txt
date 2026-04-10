@@ -1,0 +1,150 @@
+Label Format Requirements
+Additional Routing Instructions Block
+Additional Routing Instructions Block
+LOCATION
+Additional Routing Instructions are located beneath 
+the bottom tracking number highlight bar, left-
+justified using all uppercase characters. 
+GENERAL DESCRIPTION OF GOODS
+International shipments require a general 
+description of goods. The text below must print left-
+justified beneath the international billing option:
+• 
+Data Content
+Positions 	
+1 -5	
+=	 DESC:
+Position 	
+6	
+=	 Space                                    
+BILLING OPTION
+The billing option must print directly below 
+the highlight bar, at the top of this section.
+Positions     7- 41 	
+=  Up to 35 alphanumeric
+• 
+Font Size = 10 pt.
+Billing Options for All Other Movements
+   For Example:  DESC: CLOTHING
+Description	
+Billing Option
+Prepaid	
+P/P*
+Free On Board	
+FOB
+Freight Collect	
+F/C BILL RECEIVER
+SIGNATURE REQUIRED ACCESSORIALS
+When UPS Delivery Confirmation Signature 
+Required accessorials are selected, the routing 
+instruction must print left-justified immediately 
+below the Billing Option line. The font size is 10 pt.
+Cost & Freight	
+C/F
+Delivery Duty Paid	
+SDV
+Signature Required
+Shipping Duty & Tax	
+F/D
+• 
+Routing Instruction  	
+= SIGNATURE REQUIRED
+Third Party	
+T/P
+*NOTE:  P/P is optional for domestic movements.
+Adult Signature Required — All destinations except 
+U.S., Puerto Rico and Canada
+• 
+Routing Instruction 	
+= ADULT SIGNATURE
+                                                            REQUIRED                 	  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Data Content
+Positions	
+1- 8 	
+=	 BILLING: 
+Position 	
+9	
+=	 Space
+Adult Signature Required — Canada Destinations
+Positions 	10 - 39	
+=	 Billing Option
+• 
+Routing Instruction 	
+= ADULT SIGNATURE 
+• 
+Font Size =	
+10 pt.
+REQUIRED–MIN 19                                	
+   
+• 
+For Example:  BILLING: P/P 
+Adult Signature Required — U.S. and Puerto Rico 
+Destinations
+NOTE:  Billing options available are dependent upon 
+the origin/destination countries.
+• 
+Routing Instruction          = ADULT SIGNATURE 
+                                                           REQUIRED–MIN 21	  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+  	
+                      
+15
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

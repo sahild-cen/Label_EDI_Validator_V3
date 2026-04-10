@@ -1,0 +1,72 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8. Specifications of Label Types, Fonts and Sizes 
+This paragraph describes all defined types of DHL Automated Labels, each of them with mandatory and optional 
+sections including size and position on the label. 
+ 
+The values for font sizes specify minimum font sizes. However, the maximum height per block has to be 
+considered. DHL’s document rendering tool (GLS) introduced a dynamic management feature for the font size, 
+to ensure information does not get unnecessarily truncated in case of long contents, which may lead to slightly 
+distinct font sizes within the different lines of a common segment. This is to be seen as functionally correct even 
+if at the expense of graphical representation consistency. 
+ 
+Furthermore, the font size for the Consignee address must be bigger than the font size for the Shipper 
+address. For each address, the Postcode and City/Town font size must not be smaller than the size of the 
+biggest font used in the respective address lines. 
+ 
+For all font sizes, the values given for “Font height in mm” and “Size in dots at 200 dpi” are rounded values, 
+provided solely for ease of programming. The size always includes the space between the lines. 
+ 
+Although ARIAL font type is recommended, other fonts can be accepted if they are without serifs and if they 
+provide equal legibility. 
+ 
+The default and preferred orientation for the DHL label is the portrait orientation. A landscape format is only 
+possible as an exemption, to be approved by DHL’s Central Label Certification Office. DHL-owned applications 
+are not allowed to print landscape format labels. 
+ 
+ 
+Font sizes are subject to two conflicting requirements: max font size for readability and min font 
+size for compactness. For this reason, in scenarios where a high compactness degree is required 
+(e.g. customer with much data in the customer-owned segment) the font size for the Shipper 
+Address lines can be decreased to a min font size of 1.5 [mm]. Accordingly, the font size for the 
+Receiver Address lines may be decreased to a min font size of 2.5[mm]. In both special cases, a 
+formal approval from the Global Label Certification Center is required (mandatory). 
+ 
+In the segment descriptions, thin red lines are used to separate segments. These lines must not 
+be printed. A thick red line shows where a black  line needs to be printed as a segment 
+separator on the label. 
+ 
+ 
+8.1. DHL ESS Label v2.8 
+8.1.1. 
+  Size and Orientation 
+The label width must be within 95 and 110 mm. This requirement is met by both A6 labels (portrait) and 
+4” wide labels. 
+The preferred length of a DHL Transport Label is between 148 mm (A6 length) and 152.4 mm (6”), but 
+it can be longer if necessary to support requirements for additional information. A general maximum 
+length is not defined. However, each customer must be given the possibility to print labels that are not 
+longer than 250 mm. Depending on the piece dimensions, no label may be too long to fit on one side of 
+the package. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+60

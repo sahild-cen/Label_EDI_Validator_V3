@@ -1,0 +1,20 @@
+What's New
+New Features or Enhancements
+What's New
+Users shipping to Germany or from Germany will be
+able see a new symbology on the shipping labels.
+ If the user enters a weight that is greater than or equal 
+10kg then a 10+ kg symbology will appear on the 
+label. If the user enters a weight that is greater than or
+equal to 20 kg, then the 20+kg symbology will appear
+on the label. Examples of the labels can be found on 
+page 52- 58.
+Please note that all UPS labels featured in this guide 
+are for visual representation only and should not be 
+used as real shipping labels.
+NOTE: Some label creation software providers and printer manufacturers have interpreted Mode 2 for U.S. destinations and Mode 3 
+for non-U.S. destinations exclusively.
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

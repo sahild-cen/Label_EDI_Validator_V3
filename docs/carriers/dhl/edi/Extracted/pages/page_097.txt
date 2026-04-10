@@ -1,0 +1,62 @@
+Message Specification Guidelines                         
+                          
+ 
+Saturday 
+Delivery 
+AA 
+050 
+Holidays 
+Weekends & 
+At Shipper's request, the international delivery of a 
+shipment/piece on a Saturday, to selected 
+postal/zip code areas that have the capability, in 
+countries where Saturday is not a normal working 
+day. For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Supplementary 
+Insurance 
+II 
+101 
+Insurance Services 
+At Shipper's request, the provision at individual 
+shipment level, of declared value coverage above 
+Standard Liability, for the amount necessary to 
+repair or replace a shipment/piece in the event of 
+physical loss or damage.  
+Called Shipment Value Protection in the US/CA. 
+For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Cash on 
+Delivery 
+KB 
+100 
+Billing Instructions 
+By contractual agreement with the Shipper, the 
+delivery of a shipment/piece only against payment 
+of the goods value indicated by the Shipper on the 
+waybill (below a certain maximum amount). 
+Procedures and means of payment to the Courier 
+depend on local conditions and practices (cash, 
+bank guaranteed cheques, or credit card).  
+Available only with domestic products. 
+Only a Shipper with an account and who 
+contractually guarantees the amount of such 
+shipments can use this service. 
+For more information about this service and 
+availability, please contact your Sales 
+representative. 
+Loose Bulk 
+Mother 
+YM 
+230 
+indicates loose break bulk shipment (virtual 
+mother) 
+Loose Bulk 
+Baby 
+YZ 
+231 
+Indicate loose bulk baby shipment. 
+Y- Non Standard Shipments 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 97 of 115

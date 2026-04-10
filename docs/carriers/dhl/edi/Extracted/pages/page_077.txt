@@ -1,0 +1,52 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 33 (Invoice Level)  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 33 
+1 
+M 
+ GOR 
+Function: A group of segments to identify customs and other governmental procedures and required documents. 
+Segment group 33 is not used, but is mandatory to be able to specify segment group 34. 
+ 
+SG 33 - GOR 
+Segment 
+Occurrence 
+Usage 
+Description 
+GOR 
+1 
+M 
+ Governmental Requirements                                                            
+Function: A segment to indicate applicable governmental procedures related to import, export and transport of 
+the goods. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8323 
+M 
+AN..3 
+Transport Movement code 
+ 
+Example:  
+GOR+1’ 
+ 
+ 
+GOR+2’ 
+ 
+Note: 
+This segment has to be used only in combination with SG34 DOC. 
+ 
+Note 8323: 
+Use: 
+ ‘1’ – Export 
+ ‘2’ – Import 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 77 of 115

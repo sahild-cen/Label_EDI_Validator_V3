@@ -1,0 +1,55 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 70 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+O 
+ Measurements                                                                            
+Function:   To specify the length in a vehicle, whereby the complete width and height over the length is needed 
+ for the shipment. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement Application Qualifier 
+C502 
+X 
+ 
+MEASUREMENT DETAILS  
+C174 
+R 
+ 
+VALUE RANGE  
+  6411 
+M 
+AN..3 
+Measure Unit Qualifier 
+  6314 
+R 
+N..18 
+Measurement Value 
+ 
+Example:  
+MEA+LMT++MTR:20’ 
+ 
+Note 6311: 
+Use: LMT – Load Meters   
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: ‘CMT’, ‘MTR’ or “INH’ 
+ 
+Note 6314: 
+The total loading meters needed for the entire shipment with decimals.   
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 69 of 115

@@ -1,0 +1,125 @@
+
+'******** Zebra 200 **********
+
+'******** 4X4.25 Layout **********
+'******** International Label **********
+
+^XA
+
+^LH0,0
+^PON
+^CI28
+
+
+^FO20,12^A0N,20,24^FD+4969867979200^FS
+^FO20,29^A0N,20,24^FDKUEHNE+NAGEL POUR YAMAHA^FS
+^FO20,46^A0N,20,24^FDPARC DACTIVITE DU NID DE GRIVE^FS
+^FO20,63^A0N,20,24^FD77164 FERRIERES EN BRIE^FS
+^FO20,80^A0N,20,24^FDFRANCE^FS
+
+^FO20,97^A0N,20,24^FD^FS
+
+^FO20,114^A0N,20,24^FD^FS
+
+^FO500,12^A0N,32,36^FD7.0 KG^FS
+
+^FO655,12^A0N,28,32^FD2 OF 2^FS
+
+^FO500,44^A0N,22,26^FDSHP#: 5520 X54P MQL^FS
+^FO500,66^A0N,22,25^FDSHP WT: 7.0 KG^FS
+^FO500,88^A0N,22,26^FDSHP DWT: 28.5 KG^FS
+^FO500,110^A0N,22,26^FDDATE: 03 APR 2026^FS
+^FO500,132^A0N,22,26^FD^FS
+
+
+
+^FO150,133^A0N,28,32^FDSHIP^FS
+^FO150,158^A0N,28,32^FDTO:^FS
+^FO260,133^A0N,26,30^FDAMADEUS 20260331^FS
+^FO260,155^A0N,26,30^FD351258321300^FS
+^FO260,177^A0N,26,30^FDAMADEU PALHARES-INSTRUM.^FS
+^FO260,199^A0N,26,30^FDMUSICAIS, SOC.UNIP.,LDA^FS
+^FO260,221^A0N,26,30^FDAVENIDA DA ABELHEIRA, 24^FS
+
+^FO260,244^A0N,35,35^FD4900-926 VIANA CASTELO^FS
+
+^FO260,274^A0N,35,40^FDPORTUGAL^FS
+
+^FO0,232^GB248,0,4^FS
+^FO248,305^GB542,0,4^FS
+^FO248,232^GB0,246,4^FS
+
+^FO20,257^BD3^FH^FD068620490092[)>_1E01_1D961Z07481127_1DUPSN_1D5520X5_1D093_1D_1D2/2_1D7_1DN_1DAVENIDA DA ABELHEIR_1DVIANA CASTELO_1D_1E_04^FS
+
+^FO350,313^A0N,55,50^FDPRT 399 9-88^FS
+^FO320,363^BY3^BCN,102,N,N,N,A^FD421620490092^FS
+
+^FO0,476^GB790,0,4^FS
+
+^FO710,475^GB80,0,85^FS
+^FO15,486^A0N,35,45^FDUPS STANDARD^FS
+^FO15,529^A0N,30,30^FDTRACKING #: 1Z 552 0X5 68 0748 1127^FS
+
+^FO100,569^BY3^BCN,145,N,N,N,A^FD1Z5520X56807481127^FS
+
+^FO0,724^GB790,0,4^FS
+
+^FO0,556^GB790,0,4^FS
+
+^FO790,733,1^A0N,45,55^FDEDI^FS
+^FO790,768,1^A0N,22,26^FD^FS
+^FO15,733^A0N,22,26^FDBILLING: P/P^FS
+
+^FO15,807^FS
+
+^FO15,753^A0N,22,26^FDDESC: MUSICAL INSTRUMENTS^FS
+^FO15,773^A0N,22,26^FD^FS
+^FO15,793^A0N,22,26^FD^FS
+^FO790,798,1^A0N,16,16^FD979.A.000 ZEBRA S4M 11.5V 03/2026^FS
+
+^FO15,812^A0N,10,10^FDShipper agrees to the UPS Terms found at www.ups.com and UPS service centers. For international air carriage, the Warsaw Convention as amended or Montreal Convention may apply^FS^FO15,822^A0N,10,10^FDand limits UPSâs liability for loss or damage to cargo. International carriage by road may be subject to the Convention on the Contractfor the International Carriage of Goods By Road.^FS^FO15,832^A0N,10,10^FDExcept as otherwise governed by international conventions or other mandatory law, the UPS Terms limit UPSâs liability for damage, loss or delay of this shipment. There are no^FS^FO15,842^A0N,10,10^FDstopping places agreed upon at the time of tender of the shipmentand UPS reserves the right to route the shipment in any way it deems appropriate. Where allowed by law, shipper^FS^FO15,852^A0N,10,10^FDauthorizes UPS to act as forwarding agent for export control and customs purposes. If exported from the US, shipper certifies that the commodities, technology or software were exported^FS^FO15,862^A0N,10,10^FDfrom the US in accordance with the Export Administration Regulations. Diversion contrary to law is prohibited.^FS^CI0
+
+^LH0,0
+^FS
+^CI28
+^FO29.029,1225.818,0
+^A0N,33,33
+^FDLoadingRef.:^FS
+^FO30.044,1256.471,0
+^A0N,33,33
+^FDArticle:^FS
+^FO31.871,1286.312,0
+^A0N,33,33
+^FDArticle description:^FS
+^FO60.697,1316.153,0
+^A0N,33,33
+^FDS^FS
+^FO60.697,1344.979,0
+^A0N,33,33
+^FDS^FS
+^FO60.697,1375.632,0
+^A0N,33,33
+^FDC^FS
+^FO60.697,1404.661,0
+^A0N,33,33
+^FDC^FS
+^FO94.395,1321.124
+^BY2,2,122
+^BCN,122,N,N,N,A
+^FD00340312932058060868^FS
+^FO229.999,1224.803,0
+^A0N,33,33
+^FDPARYAMUPS^FS
+^FO137.634,1255.659,0
+^A0N,33,33
+^FDWQ61160^FS
+^FO313.635,1285.297,0
+^A0N,33,33
+^FDWQ61160             LP-5A //Y^FS
+^FO91.553,1457.441,0
+^A0N,33,33
+^FD00340312932058060868^FS
+^XZ
+
+
+

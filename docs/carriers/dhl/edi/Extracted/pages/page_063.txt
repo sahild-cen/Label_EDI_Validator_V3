@@ -1,0 +1,74 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 55 - GIN  
+Segment 
+Occurrence 
+Usage 
+Description 
+GIN 
+9 
+R 
+ Goods identity number                                                                    
+Function: To give specific identification number. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+7405 
+M 
+AN..3 
+Object identification code qualifier 
+C208 
+M 
+ 
+IDENTIFY NUMBER RANGE 
+   7402 
+M 
+AN..35 
+Object identifier 
+   7402 
+M 
+AN..35 
+Object identifier 
+ 
+Example:  
+GIN+VZ+J:VGL0858922671234563’ 
+GIN+AW+00:357121231234567893’ 
+GIN+VZ+J:JD0030112708872040054737’ 
+ 
+Note 7405: 
+For DHL shipment items this is the License plate number. For qualifier ‘VZ’, the range is 
+provided by DHL. The license plate number should be the same as on the Global SOP 
+label. 
+ 
+Use: 
+‘AW’ - Serial shipper container code - for items identifiable via the EAN128 SSCC. Use 
+allowed for DHL Express Road shipments. Starting qualifier ‘00’ is not part of the unique 
+number. 
+‘VZ’ - Transport unit identification according to ISO/IES 15459 - for DHL Express Road 
+shipment items this is the CEN License plate. The number consists of a fixed part and 
+a sequential part. The fixed part is provided by DHL Express Road. The sequential part is 
+free for the customer to define. The whole number should be stored in the GIN segment 
+(including the starting qualifier ‘J’). 
+‘WA’ - Indivisible transport unit identification according to ISO/IES 15459 - same as ‘VZ’, 
+but indicating pallet units travelling under one unique item bar code. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 63 of 115

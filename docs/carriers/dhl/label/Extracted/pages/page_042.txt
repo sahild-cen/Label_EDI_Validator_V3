@@ -1,0 +1,155 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Country 
+Postcode
+code 
+ 
+Product 
+Date 
+Time 
+Feature 
+Domestic 
+routing code 
+2L DE 
+81541 
++ 
+05 
+00 
+0 
+000 
+556677 
+ 
+Germany 
+ 
+ 
+DOM 
+EUROPACK  
+No fixed 
+date 
+No fixed 
+time 
+No 
+features 
+Street and house 
+number 
+ 
+ECONOMY SELECT shipment, to be held at depot, dutiable: 
+ 
+ 
+Product 
+Date 
+Time 
+Feature 
+ 
+Country 
+Postcode
+code 
+2L 
+CH 
+3000 
++ 57 
+52 
+0 
+001 
+ 
+Switzerland 
+ 
+ 
+ECONOMY 
+SELECT 
+Hold at 
+depot 
+No fixed 
+time 
+Customs 
+Clearance 
+ 
+EXPRESS WORLDWIDE shipment, to be delivered on the 10th (future feature), in time code 1, with customs 
+clearance (code 001) and two future product feature with codes 016 and 064: 
+ 
+Product 
+Date 
+Time 
+Feature 
+ 
+Country 
+Postcode
+code 
+2L 
+NL 
+1023FG 
++ 
+48 
+10 
+1 
+081 
+Time code 1 81= 
+ 
+The Netherlands 
+ 
+ 
+EXPRESS 
+WORLDWIDE 
+1+16+64 
+Delivery at 
+10th of 
+month 
+ 
+ECONOMY SELECT shipment, to be held at depot, dutiable: 
+ 
+ 
+AI 
+Country 
+Postcode  
+Product 
+Date 
+Time 
+Feature 
+FNC1 
+403 
+756 
+3000 
++ 
+57 
+52 
+0 
+001 
+Start 
+char 
+ 
+Switzerland 
+ 
+ 
+ECONOMY 
+SELECT 
+Hold at 
+depot 
+Customs 
+Clearance 
+No 
+fixed 
+time 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+41

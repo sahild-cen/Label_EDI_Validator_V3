@@ -1,0 +1,14 @@
+Message Specification Guidelines                         
+                          
+ 
+2. Mother shipment need to have network product code ‘P’ or “H’ and charge code 
+‘YW’. 
+3. Linking between baby shipment and mother shipment need to be provided with 
+Shipment reference type = ‘ACL’ and shipment reference = <Mother Shipment 
+ID/ 6647324213>. 
+4. Linking between baby shipment piece and mother shipment piece need to be 
+provided with Shipment reference type = ‘ACL’ and shipment reference = 
+<Mother Piece ID/ JD012959879580000001>. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 46 of 115

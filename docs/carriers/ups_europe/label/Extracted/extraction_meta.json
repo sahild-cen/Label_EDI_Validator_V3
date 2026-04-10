@@ -1,0 +1,19 @@
+{
+  "carrier_code": "ups_europe",
+  "source_pdf": "carrier_label_spec_8eb887ea-185b-40d4-8e15-2f90454d4099.PDF",
+  "extracted_at": "2026-04-10T07:05:40.324643+00:00",
+  "total_pages": 107,
+  "metadata": {
+    "title": "",
+    "author": "",
+    "subject": "",
+    "creator": "Adobe InDesign 19.5 (Windows)",
+    "producer": "Adobe PDF Library 17.0",
+    "creation_date": "D:20241120202419-05'00'",
+    "mod_date": "D:20241120202558-05'00'",
+    "page_count": 107
+  },
+  "sections_count": 293,
+  "tables_count": 81,
+  "images_count": 47
+}

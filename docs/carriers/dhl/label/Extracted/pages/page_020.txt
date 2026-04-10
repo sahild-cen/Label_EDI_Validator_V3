@@ -1,0 +1,54 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2.4.1. 
+Full Label Segment 
+ 
+The full format of this segment is, thus:  
+ ”[PRINTING APPLICATION]”/”[PRINTING DATE]”/”* [CERTIFICATION IDENTIFIER]* 
+ 
+5.3. DHL Logo (mandatory) 
+This section contains the carrier logo and is placed in the upper right corner of the label. Directly below the logo, 
+associated information can be printed (e.g. a particular DHL Country Organization). 
+ 
+ 
+For transport labels, the black & white version of the logo is sufficient. When using labels with a pre-printed logo, 
+the official DP DHL brand color specifications for the logo have to be followed.  
+Any DHL-owned customer automation system must be able to print the logo as an image.  Only if it 
+is not possible to insert images into the label, may the equivalent text be printed in plain text instead. 
+ 
+ 
+Always use the correct logo layout and specifications, as per the official DP-DHL Standard Brand and 
+Design Guidelines. 
+ 
+ 
+5.4. Ship ‘From’ Address and Customer Logo 
+5.4.1. 
+‘From’ Address 
+ 
+The “Ship From” section refers to the Consignor’s Address. It serves the purpose of supporting identification by 
+the carrier (e.g. for Pickup) as well as the Consignee. It does not necessarily reflect the return address in case 
+of failed delivery. If approved by DHL, a deviating address may be printed here.  
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+19

@@ -1,0 +1,47 @@
+UPS Trade Direct™ Specifications
+ 
+Label Format Requirements
+UPS Trade Direct™ General Rules
+A UPS Trade Direct™ (TD) consolidated movement 
+may consist of UPS small package shipments or TD 
+Less-Than-Truckload (LTL)/Truckload (TL) shipments 
+and TD Customs Clearance Documents.
+A consolidated TD movement may originate from 
+an origin location such as the shipper’s location 
+or the origin Container Freight Station (CFS) to a 
+destination CFS. 
+Once the consolidated movement reaches the 
+destination CFS, the UPS Small 
+Package shipments and/or LTL/TL shipments will 
+be decon­
+solidated and forwarded to the ultimate 
+consignee(s).
+This section will address the six types of labels 
+that may be produced for a UPS Trade Direct™  
+movement. 
+• 
+UPS Small Package Label
+• 
+UPS Less-Than-Truckload (LTL) / Truck Load (TL ) 
+Label
+• 
+UPS  Package Pallet Label 
+• 
+UPS  Carton Labels
+• 
+UPS Express Freight
+• 
+UPS SurePost
+All barcodes must use the Code 128 format and 
+follow speci­
+fications defined in the current 
+UPS Guide to Labeling.
+NOTE:  The terms Consolidated Movement Number 
+(CM) and Unique Shipment Identifier (USI) are 
+synonymous.  The terms LTL Number and Sub-Pro 
+Number are synonymous.
+UPS Guide to Labeling
+23
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

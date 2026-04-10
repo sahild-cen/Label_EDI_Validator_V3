@@ -1,0 +1,95 @@
+Appendix D
+Shipment Number Calculation
+Base 26 Calculation Example 2:
+	 1. 
+Using the first 1Z tracking number in the shipment:
+1Z 123 X56  Y6  4400 0050
+	 2. 
+Exclude the Data Identifier  “1Z”:
+_ _ 123 X56  Y6  4400 0050
+	 3. 
+Exclude the shipper number:
+_ _  _ _ _  _ _ _  Y6  4400 0050
+	 4. 
+Exclude the service level indicator and check digit:
+_ _  _ _ _  _ _ _  _ _  4400 005_
+	 5. 
+Calculate	
+4400 005 : 264 = 9.628
+	 6. 
+Calculate	
+(4400 005 — (9*264)) : 263 = 16.341
+	 7. 
+Calculate	
+(4400 005 — (9*264) — (16*263)) : 262 = 8.883
+	 8. 
+Calculate	
+(4400 005 — (9*264) — (16*263) — (8*262)) : 26 = 22.961
+	 9. 
+Calculate	
+4400 005 — (9*264) — (16*263) — (8*262) — (22*26) = 25.000
+
+5 intermediate
+results:	
+	
+	
+9	
+16	
+8	
+22	
+25
+Value
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+10 1
+1 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+Base 26 cross reference
+Converted Value
+3
+4
+7
+8
+9
+B
+C
+D
+F
+H
+J
+K
+L
+M
+N
+P
+Q
+R
+S
+T
+V
+W
+X
+Y
+Z
+G
+	10.	
+G	
+	
+P	
+F	
+W	
+Z
+	11. 
+Final Shipment Number: 123X 56GP FWZ
+89
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

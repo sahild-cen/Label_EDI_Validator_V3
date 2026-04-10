@@ -1,0 +1,52 @@
+UPS® Premier
+Label Format Requirements
+Introduction
+The UPS® Premier indicator box must print using the 
+following guidelines: 
+• 
+Indicator            =  V
+• Text Color	
+          =  White 
+• 
+Font Size	
+            =  28 pt. bold
+• Black Square 	
+   =  0.35 inches x 0.35 inches
+• Left justification
+See label images on the following pages.
+UPS® Premier is a contractual service by which 
+customers can easily ship complex, sensitive packages 
+(e.g., healthcare and pharmaceutical items) with the 
+assurance that these packages will be treated with 
+the highest level of care.  UPS® Premier customers 
+will have the flexibility to choose not only from 
+multiple levels (Silver, Gold, & Platinum) to best 
+suit their shipping needs, but also from numerous 
+special handling instructions to ensure the integrity 
+of their shipments by prompting rapid response time 
+should such packages become distressed.  The Radio 
+Frequency Identification (RFID) labels for UPS Premier 
+Silver Packages and the Mesh Identifier for UPS Premier 
+Gold and Platinum Packages contribute to this rapid 
+response.  UPS® Premier provides customers a high 
+level of visibility into their critical shipments, resulting 
+in greater reliability and confidence in UPS service.
+Label Format Requirements
+The following text must print in the Package 
+Information Block of a UPS® Premier label for all origins 
+and destinations. The required text depends on the 
+UPS® Premier service option selected. 
+UPS® Premier Silver:
+• Data Content  =  SLV
+• Font Size           =  16 pt. bold
+UPS® Premier Gold:
+• Data Content  =  GLD
+• Font Size           =  16 pt. bold
+UPS® Premier Platinum:
+• Data Content  =  PLT
+• Font Size           =  16 pt. bold
+UPS Guide to Labeling
+58
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

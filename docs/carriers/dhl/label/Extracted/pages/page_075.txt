@@ -1,0 +1,70 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Barcode content = 3100032902 
+Symbol height 
+The minimum height for the barcode is 25 mm. However, a barcode height of at 
+least 28 millimeters is recommended 
+x-dimension 
+The minimum narrow element dimension (x-dimension) shall not be less than 
+0.33 mm. The x-dimension shall not exceed 0.51 mm.  
+Within this range, the biggest x-dimension has to be used that is supported by 
+the printing device used, while complying with barcode length and quiet zone 
+specifications. 
+Quiet zone 
+Linear barcode symbols must be printed with leading and trailing quiet zones. 
+For Code 128, DHL demands not less than 5 mm. Quiet zones are not part 
+of the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on 
+the label. 
+Quality 
+The linear barcode quality must, as a minimum, conform to “Grade B”, tested 
+according to ANSI and CEN (EN 1635), Test Specifications for Barcode 
+Symbols. 
+ 
+ 
+9.3. Bi-Dimensional Barcode Symbologies 
+9.3.1. 
+What is a 2D Barcode 
+A 1D (linear) code is the typical "picket fence" style barcode that people are most familiar with. There are several 
+versions of 1D codes with distinct capabilities: some encode only numbers while others can encode any typical 
+character. Core is that information in the code is organized horizontally from left to right.  
+2D barcodes are graphical representations (i.e. ordered grid of dark and light dots) that structure, organize and 
+store information both horizontally (as 1-dimensional bar codes) and vertically. They are bordered by a finder 
+pattern. They are also more complex but hold much more information and take up less space than a 1D code. 
+2D codes require a 2D-enabled (e.g. imager) scanner to be read properly. 
+The most typical 2D Code Symbologies are: 
+• 
+Data Matrix 
+• 
+Aztec Code 
+• 
+QR Code 
+• 
+Maxicode 
+• 
+PDF 417 
+Currently, the Data Matrix symbology is the most commonly used due to minimal size requirements, robustness 
+by integrated automatic error correction and usability on most 2D devices. PDF417 needs at least 3 times the 
+space than Data Matrix by a reduced reading capability. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+74

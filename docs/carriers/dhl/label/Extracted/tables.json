@@ -1,0 +1,1567 @@
+[
+  {
+    "page": 8,
+    "table_index": 1,
+    "header": [
+      "",
+      "Document Name",
+      "",
+      "Location/Link"
+    ],
+    "rows": [
+      [
+        "",
+        "ISO/IEC 15459 Unique identifiers -- Part 1: Unique identifiers for transport\nunits",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 16388 Automatic identification and data capture techniques --\nCode 39 Barcode symbology specification",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 15417 Automatic identification and data capture techniques --\nCode 128 Barcode symbology specification",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 15424 Information technology — Automatic\nidentification and data capture techniques — Data Carrier Identifiers\n(including Symbology Identifiers)",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 15434 Automatic identification and data capture techniques --\nSyntax for high-capacity ADC media",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO 15394 Packaging — Barcode and two-dimensional symbols for\nshipping, transport and receiving labels",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 15416 Barcode print quality test specification — Linear symbols",
+        "",
+        "International Standard"
+      ]
+    ],
+    "row_count": 7,
+    "col_count": 4,
+    "bbox": [
+      70.48799896240234,
+      430.5774143763951,
+      407.1600036621094,
+      621.3083862304687
+    ]
+  },
+  {
+    "page": 9,
+    "table_index": 1,
+    "header": [
+      "",
+      "ISO 3166-1, Codes for the representation of names of countries and their\nsubdivisions — Part 1: Country codes",
+      "",
+      "International Standard"
+    ],
+    "rows": [
+      [
+        "",
+        "ISO/IEC 15418, Information technology — EAN/UCC Application Identifiers\nand Fact Data Identifiers and Maintenance",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 16022, Information technology — International symbology\nspecification — Data Matrix",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "ISO/IEC 18004, Information technology — Automatic identification and data\ncapture techniques — Barcode symbology — QR Code",
+        "",
+        "International Standard"
+      ],
+      [
+        "",
+        "Global SOP DHL Transport Label Specifications",
+        "",
+        "Global SOP Archive"
+      ],
+      [
+        "",
+        "Global SOP Label Certification Guideline",
+        "",
+        "Global BCRS"
+      ],
+      [
+        "",
+        "Global SOP Data Matrix 2D Specifications",
+        "",
+        "Global BCRS"
+      ],
+      [
+        "",
+        "Global SOP Customer-Facing QR-Code Specifications",
+        "",
+        "Global BCRS"
+      ]
+    ],
+    "row_count": 7,
+    "col_count": 4,
+    "bbox": [
+      70.48799896240234,
+      194.64596121651786,
+      407.1600036621094,
+      375.6395782470703
+    ]
+  },
+  {
+    "page": 10,
+    "table_index": 0,
+    "header": [
+      "",
+      "Title",
+      "",
+      "",
+      "Description",
+      ""
+    ],
+    "rows": [
+      [
+        "DHL Transport\nLabel",
+        "",
+        "",
+        "The DHL Transport Label is a label which is printed and attached to a piece\nand contains all handling-relevant information i.e. the one required to ship a\npiece from a Shipper to a Consignee. It includes piece/shipment\nidentification, address information and DHL handling information.\nThis generic title includes:\n• ESS Label (includes all information, mostly a Customer Produced\nDocument as part of the Shipment Preparation Process, requiring no\nDHL re-labeling). It also includes specific sections for Customers to\ncapture their bespoke information.\n• Network Label -> transport label without addresses and without\ncustomers’ own segments\n• Routing Label -> small label containing DHL Handling Information only\nand used by DHL to complement information provided by customers.",
+        "",
+        ""
+      ],
+      [
+        "eWaybill",
+        "",
+        "",
+        "A document type reflecting agreed “conditions of contract of transport”\nA Waybill is, by definition, NOT a label.\nThis doc-type was historically called “Archive Doc” and later “Waybill Doc”.",
+        "",
+        ""
+      ],
+      [
+        "Multi-ply Waybill\n(Multiply Waybill)",
+        "",
+        "",
+        "Business term used as a reference for DHL's own Waybills doc-type (also\nnamed “Manual Waybill”).\nThe term “Multiply Waybill” denotes both the empty and filled-in forms.",
+        "",
+        ""
+      ],
+      [
+        "Reprinting",
+        "",
+        "",
+        "Term for a 1:1 replacement of a (damaged) label by a new one",
+        "",
+        ""
+      ],
+      [
+        "Relabeling",
+        "",
+        "",
+        "Term for tagging a package with a new label with additional or changed\nsupplementary information, e.g. Manual Sort Information.",
+        "",
+        ""
+      ],
+      [
+        "License Plate",
+        "",
+        "",
+        "A Unique Identifier (code) assigned to a single transport unit by its issuer, in\naccordance with ISO/IEC 15459-1. It is the Leading Industry Standard\nWorldwide and acts as primary Piece Identifier (PID) standard for DHL\nExpress. As such, DHL’s equivalent business term is “Piece Identifier”.",
+        "",
+        ""
+      ],
+      [
+        "Shipment\nIdentifier",
+        "",
+        "",
+        "Generic term for DHL Express identifiers at shipment level. Currently\nimplemented with the 10 NUM format (9 digits, plus 10th digit calculated with\nMOD7). Other terms used within DHL are:\n• Air Waybill number (Air Express)\n• Waybill number (Air and Road Express)\n• Shipment number (Road Express)\n• Consignment number (Road Express, Freight), when the format\nmatches the standard 10 NUM with MOD7 check-digit, defined\nabove.",
+        "",
+        ""
+      ],
+      [
+        "Reverse Video\nFormat",
+        "",
+        "",
+        "A technique used in documents, whereby white characters are printed on a\nblack background, as a visual aid to highlight an important section or piece of\ntext.",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 8,
+    "col_count": 6,
+    "bbox": [
+      80.13600158691406,
+      246.47598702566964,
+      401.8788979270241,
+      636.4999796549479
+    ]
+  },
+  {
+    "page": 26,
+    "table_index": 0,
+    "header": [
+      "Delivery Date codes",
+      "Product",
+      "",
+      "(In Routing",
+      "",
+      "Label Code"
+    ],
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "Barcode)",
+        "",
+        ""
+      ],
+      [
+        "No fixed date delivery",
+        "All",
+        "00",
+        "",
+        "",
+        "(none)"
+      ],
+      [
+        "Fixed day delivery (day of the month)",
+        "…",
+        "01 … 31",
+        "",
+        "",
+        "01 … 31"
+      ],
+      [
+        "Delivery on appointment",
+        "…",
+        "51",
+        "",
+        "",
+        "A"
+      ],
+      [
+        "Saturday only delivery",
+        "…",
+        "50",
+        "",
+        "",
+        "S"
+      ],
+      [
+        "Hold at depot (no delivery)",
+        "…",
+        "52",
+        "",
+        "",
+        "H"
+      ],
+      [
+        "…",
+        "...",
+        "...",
+        "",
+        "",
+        "..."
+      ]
+    ],
+    "row_count": 7,
+    "col_count": 6,
+    "bbox": [
+      73.02833620707194,
+      285.6970778245192,
+      394.7535383436415,
+      386.2999954223633
+    ]
+  },
+  {
+    "page": 26,
+    "table_index": 1,
+    "header": [
+      "",
+      "Time Feature Text",
+      "",
+      "",
+      "(In Routing Barcode)",
+      "",
+      "",
+      "Handling Information",
+      ""
+    ],
+    "rows": [
+      [
+        "No fixed delivery time",
+        "",
+        "",
+        "0",
+        "",
+        "",
+        "(none)",
+        "",
+        ""
+      ],
+      [
+        "Pre 09:00",
+        "",
+        "",
+        "1",
+        "",
+        "",
+        "“X09”",
+        "",
+        ""
+      ],
+      [
+        "Pre 10:30",
+        "",
+        "",
+        "3",
+        "",
+        "",
+        "“X10”",
+        "",
+        ""
+      ],
+      [
+        "Pre 12:00",
+        "",
+        "",
+        "2",
+        "",
+        "",
+        "“X12”",
+        "",
+        ""
+      ],
+      [
+        "…",
+        "",
+        "",
+        "…",
+        "",
+        "",
+        "…",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 5,
+    "col_count": 9,
+    "bbox": [
+      50.145089929754086,
+      480.82799530029297,
+      368.98523712158203,
+      543.268798828125
+    ]
+  },
+  {
+    "page": 32,
+    "table_index": 0,
+    "header": [
+      "No",
+      "P iece Weight Specification",
+      "Weight Range",
+      "Weight Icon Printed"
+    ],
+    "rows": [
+      [
+        "1",
+        "Less than 10 kg or 22 lb",
+        "0.100 to 9.999 kg\n0.100 to 21.999 lb",
+        "No Icon printed"
+      ],
+      [
+        "2",
+        "Equal to or greater than 10 kg or 22\nlb but less than 20 kg or 44 lb",
+        "10.000 to 19.999 kg\n22.000 to 43.999 lb",
+        ""
+      ],
+      [
+        "3",
+        "Equal to or greater than 20 kg or 44\nlb",
+        "20.000 kg or\n44.000 lb and above",
+        ""
+      ]
+    ],
+    "row_count": 3,
+    "col_count": 4,
+    "bbox": [
+      73.22400229317802,
+      253.5630587064303,
+      383.51598685128346,
+      351.40880126953124
+    ]
+  },
+  {
+    "page": 40,
+    "table_index": 0,
+    "header": [
+      "Reference Guide\nGlobal SOP Network Operations\nThe DHL ISO Routing Code contains destination country, destination Postcode, transport products and\nassociated product features. When a routing field is optional, the content is not required.\nIn the context of the routing barcode, optional does not always imply that the routing field may remain\nempty. Some routing fields must always be populated at least with zeroes. If data is available, though,\nsuch a field should always be filled.\nThe Postcode, the region specific fields and the + separator after the product/feature block are the only optional\nfields which must be omitted if the data is not available.\n5.15.1. Routing Barcode Structure\nThe following international ISO standards are supported when coding routing information in barcodes.\n• The ASC MH 10 routing barcode starts with the ASC MH 10 Data Identifier \"2L\" and is coded in barcode\nsymbology Code 128.\n• The GS1 routing barcode starts with the GS1 Application Identifier \"403\" and is coded in barcode\nsymbology GS1-128.\nBoth standards are complementary and can co-exist without restriction (they do not differ in content but only in\ntheir technical structure). However, DHL Express-internal applications will only produce ASC MH 10\nrouting barcodes starting with 2L.\nA distinction has to be made between the information which will be captured and the information, which will\nactually be printed out on the barcode. This distinction is mainly relevant for applications which need an\nindication on the output side.\nExample: At data content level, a calendar date for delivery is not chosen for the selected product, so the\ndelivery date information will not be captured. The delivery date is optional, as it does not always have to be\ncaptured. However, at barcode level, the delivery date digits are mandatory as the delivery date field may not\nremain empty/blank and the field must be populated with zeroes if no valid information is available.\nAll routing information appears both in human and bar-coded format except for the parenthesis\naround the Data Identifier which only appear in human readable format – not in the barcode.\nThe printout level is either mandatory or optional, it means the whole barcode is either printed or not printed\n(with the possible exception of a country-specific extension).\nA product/feature block always consists of 8 digits, regardless of which products and features have\nbeen chosen.\nThe table below details out ASC MH and GS1 barcode routing structures",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "rows": [
+      [
+        "SECTION",
+        "ASC MH 10",
+        "GS1",
+        "String",
+        ""
+      ],
+      [
+        "LEFT\nPARENTHESIS",
+        "(",
+        "",
+        "Mandatory\n(only in plain text – not in\nbarcode!)",
+        ""
+      ],
+      [
+        "DATA /\nAPPLICATION\nIDENTIFIER",
+        "“2L”",
+        "“403”",
+        "Mandatory",
+        ""
+      ],
+      [
+        "RIGHT\nPARENTHESIS",
+        ")",
+        "",
+        "Mandatory\n(only in plain text – not in\nbarcode!)",
+        ""
+      ],
+      [
+        "Confidential – Uncontrolled copy when printed or translated\n<Global Standard Transport Labels and Waybills> Document ID : 1-241108-01\nNetwork Operations\nApproved Effective date :1/12/2024\nDHL Express – Excellence. Simply delivered. 39",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 5,
+    "col_count": 5,
+    "bbox": [
+      44.10000038146973,
+      116.19000244140625,
+      594.8599853515625,
+      725.260009765625
+    ]
+  },
+  {
+    "page": 41,
+    "table_index": 0,
+    "header": [
+      "Reference Guide\nGlobal SOP Network Operations",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "rows": [
+      [
+        "SECTION",
+        "ASC MH 10",
+        "GS1",
+        "String",
+        ""
+      ],
+      [
+        "ISO COUNTRY\nCODE",
+        "2 upper-case alpha\nchars",
+        "3 numeric digits",
+        "Mandatory\nFor domestic shipments as well",
+        ""
+      ],
+      [
+        "POST CODE",
+        "Postcode of Consignee address. Variable length, max.\n12 chars; The Postcode may never contain spaces or\nsymbols\nRemains empty in case of country with no Postcode\nsystem. In case of known DHL Service Area Code (3\nchars) or a DHL Delivery Facility Identifier (6 chars), this\ncan be coded here, separated from the country code by\na colon “:”.",
+        "",
+        "Conditional\n(Mandatory where existent)",
+        ""
+      ],
+      [
+        "FIELD\nSEPARATOR",
+        "“+” char",
+        "",
+        "Mandatory",
+        ""
+      ],
+      [
+        "PRODUCT\nCODE",
+        "2 numeric digits (fixed length)",
+        "",
+        "Mandatory",
+        ""
+      ],
+      [
+        "DELIVERY\nDATE",
+        "2 numeric digits (fixed length)",
+        "",
+        "Mandatory\nIf no date specified, put two\nzeroes.",
+        ""
+      ],
+      [
+        "DELIVERY\nTIME",
+        "1 numeric digit (fixed length)",
+        "",
+        "Mandatory\n(if no delivery time, put one zero)",
+        ""
+      ],
+      [
+        "HANDLING\nFEATURE\nCODE(S)",
+        "3 digit numeric number with leading zeroes (fixed\nlength)\nSum of values of product features",
+        "",
+        "Mandatory\n(if no feature, put three zeroes)",
+        ""
+      ],
+      [
+        "FIELD\nSEPARATOR",
+        "FNC1 (Special\nCode 128 symbol, in\nall three code sets.)",
+        "“+” char",
+        "Optional\nMay remain empty",
+        ""
+      ],
+      [
+        "COUNTRY-\nSPECIFIC\nCODES",
+        "Variable up to 6 numeric chars or up to 2 alphabetic\nchars, for domestic use only.",
+        "",
+        "Optional\nMay remain empty",
+        ""
+      ],
+      [
+        "Example of a routing code: 2LBE3500+11311002123456\n(2L) BE 3500 + 11 31 1 002 123456\nData ISO Postcode Field Product Delivery Delivery Product Region\nIdentifier Country code separator code Date Time Feature specific\nCode codes\nWhen none of the above features is chosen, the code is “000”.\n5.15.2. Full Routing Barcode Examples\na) ASC MH 10\nEUROPACK piece, without any features but with region specific routing information:",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Confidential – Uncontrolled copy when printed or translated\n<Global Standard Transport Labels and Waybills> Document ID : 1-241108-01\nNetwork Operations\nApproved Effective date :1/12/2024\nDHL Express – Excellence. Simply delivered. 40",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 12,
+    "col_count": 5,
+    "bbox": [
+      44.10000038146973,
+      116.19000244140625,
+      594.8599853515625,
+      725.260009765625
+    ]
+  },
+  {
+    "page": 41,
+    "table_index": 1,
+    "header": [
+      "(2L)",
+      "BE",
+      "3500",
+      "+",
+      "11",
+      "31",
+      "1",
+      "002",
+      "123456"
+    ],
+    "rows": [
+      [
+        "Data\nIdentifier",
+        "ISO\nCountry\nCode",
+        "Postcode\ncode",
+        "Field\nseparator",
+        "Product\ncode",
+        "Delivery\nDate",
+        "Delivery\nTime",
+        "Product\nFeature",
+        "Region\nspecific\ncodes"
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 9,
+    "bbox": [
+      71.01599884033203,
+      529.4859619140625,
+      404.3172078450521,
+      567.3359985351562
+    ]
+  },
+  {
+    "page": 42,
+    "table_index": 0,
+    "header": [
+      "",
+      "Country",
+      "Postcode\ncode",
+      "",
+      "Product",
+      "Date",
+      "Time",
+      "Feature",
+      "Domestic\nrouting code"
+    ],
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2L",
+        "DE",
+        "81541",
+        "+",
+        "05",
+        "00",
+        "0",
+        "000",
+        "556677"
+      ],
+      [
+        "",
+        "Germany",
+        "",
+        "",
+        "DOM\nEUROPACK",
+        "No fixed\ndate",
+        "No fixed\ntime",
+        "No\nfeatures",
+        "Street and house\nnumber"
+      ]
+    ],
+    "row_count": 3,
+    "col_count": 9,
+    "bbox": [
+      61.10200023651123,
+      194.19977133614677,
+      387.5871342250279,
+      263.35235900878905
+    ]
+  },
+  {
+    "page": 42,
+    "table_index": 1,
+    "header": [
+      "",
+      "Country",
+      "Postcode\ncode",
+      "",
+      "Product",
+      "Date",
+      "Time",
+      "Feature"
+    ],
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2L",
+        "CH",
+        "3000",
+        "+",
+        "57",
+        "52",
+        "0",
+        "001"
+      ],
+      [
+        "",
+        "Switzerland",
+        "",
+        "",
+        "ECONOMY\nSELECT",
+        "Hold at\ndepot",
+        "No fixed\ntime",
+        "Customs\nClearance"
+      ]
+    ],
+    "row_count": 3,
+    "col_count": 8,
+    "bbox": [
+      77.28192108154298,
+      288.9983984375,
+      401.3636661105686,
+      358.1553243001302
+    ]
+  },
+  {
+    "page": 42,
+    "table_index": 2,
+    "header": [
+      "",
+      "Country",
+      "Postcode\ncode",
+      "",
+      "Product",
+      "Date T",
+      "ime",
+      "Feature"
+    ],
+    "rows": [
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "2L",
+        "NL",
+        "1023FG",
+        "+",
+        "48",
+        "10 1",
+        "",
+        "081"
+      ],
+      [
+        "",
+        "The Netherlands",
+        "",
+        "",
+        "EXPRESS\nWORLDWIDE",
+        "Delivery at T\n10th of\nmonth",
+        "ime code 1",
+        "81=\n1+16+64"
+      ]
+    ],
+    "row_count": 3,
+    "col_count": 8,
+    "bbox": [
+      77.28192108154298,
+      383.7273522949219,
+      401.3636661105686,
+      461.19598388671875
+    ]
+  },
+  {
+    "page": 42,
+    "table_index": 3,
+    "header": [
+      "",
+      "AI",
+      "Country",
+      "Postcode",
+      "",
+      "Product",
+      "Date",
+      "Time",
+      "Feature"
+    ],
+    "rows": [
+      [
+        "FNC1",
+        "403",
+        "756",
+        "3000",
+        "+",
+        "57",
+        "52",
+        "0",
+        "001"
+      ],
+      [
+        "Start\nchar",
+        "",
+        "Switzerland",
+        "",
+        "",
+        "ECONOMY\nSELECT",
+        "Hold at\ndepot",
+        "No\nfixed\ntime",
+        "Customs\nClearance"
+      ]
+    ],
+    "row_count": 2,
+    "col_count": 9,
+    "bbox": [
+      77.28192108154298,
+      486.8588502066476,
+      401.3636661105686,
+      555.9931854248047
+    ]
+  },
+  {
+    "page": 53,
+    "table_index": 0,
+    "header": [
+      "“GLOBAL SERVICE\nNAME”",
+      "“PRODUCT SERVICE\nCODE”",
+      "“VALUE OF SERVICE”",
+      "“CURRENCY\nCODE”"
+    ],
+    "rows": [
+      [
+        "Delivery Signature",
+        "S",
+        "1 000.00",
+        "EUR"
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 4,
+    "bbox": [
+      46.99200185139974,
+      595.6983642578125,
+      376.5800069173177,
+      638.1359497070313
+    ]
+  },
+  {
+    "page": 73,
+    "table_index": 0,
+    "header": [
+      "Symbol height",
+      "The minimum height for the barcodes is 25 mm, unless formally approved\n(Global SOP) differently.\nThe Routing barcode, may exhibit an exceptional min height of 11 mm,\nrecommended for all Label templates where space is a challenge.\nBoth options are currently available and can be used."
+    ],
+    "rows": [
+      [
+        "x-dimension",
+        "The minimum narrow element dimension (x-dimension) shall not be less than\n0.33 mm and shall also not exceed 0.51 mm for the ISO/IEC 15417 Standard.\nThe GS1 Standard defines size ranges for the GS1 barcode symbologies, in\nthe EAN General Specifications. For transport packaging, values within the\ninterval module width 0.495 mm to 0.660 mm are allowed.\nWithin the above indicated ranges, the biggest x-dimension should be used that\nis supported by the printing device used, while complying with barcode length\nand quiet zone specifications."
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 2,
+    "bbox": [
+      79.552001953125,
+      497.5699869791667,
+      401.9339904785156,
+      641.3579711914062
+    ]
+  },
+  {
+    "page": 74,
+    "table_index": 0,
+    "header": [
+      "Quiet zone",
+      "Linear barcode symbols must be printed with leading and trailing quiet zones.\nFor Code 128, DHL demands not less than 5 mm. Quiet zones are not part\nof the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on\nthe label."
+    ],
+    "rows": [
+      [
+        "Quality",
+        "The linear barcode quality must, as a minimum, conform to “Grade B”, tested\naccording to ANSI and CEN (EN 1635), Test Specifications for Barcode\nSymbols."
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 2,
+    "bbox": [
+      79.58000183105469,
+      193.89996337890625,
+      401.90599060058594,
+      270.3179931640625
+    ]
+  },
+  {
+    "page": 74,
+    "table_index": 1,
+    "header": [
+      "Symbol height",
+      "The original minimum height for the DHL barcodes is 25 mm.\nA new barcode version, approved in 2014, has a height of 11 millimeters and is\nespecially recommended for all Label templates where space is a challenge.\nBoth options are currently available and can be used."
+    ],
+    "rows": [
+      [
+        "x-dimension",
+        "The minimum narrow element dimension (x-dimension) must be between 0.36\nmm and 0.425 mm."
+      ],
+      [
+        "Code\norientation",
+        "DHL demands all barcodes to be picket fence-oriented (standing)"
+      ],
+      [
+        "Wide-to-\nNarrow Gap",
+        "Between 2.2 and 3.0"
+      ],
+      [
+        "Quiet zone",
+        "Linear barcode symbols must be printed with leading and trailing quiet zones.\nFor Code 39, DHL demands not less than 6 mm."
+      ],
+      [
+        "Quality",
+        "The linear barcode quality must, as a minimum, conform to “Grade B”, tested\naccording to ANSI and CEN (EN 1635), Test Specifications for Barcode\nSymbols."
+      ],
+      [
+        "Start and Stop\nChar",
+        "DHL’s Code 39 Waybill barcodes require the standard start- and stop-char “*”"
+      ],
+      [
+        "Check Digit",
+        "DHL uses the simple MOD 7 check digit: DHL’s 9-digit Waybill number is\ndivided by 7, and the remainder forms the check digit, becoming the 10th digit\nof the Waybill barcode.\nExample: Waybill number 310003290\n• 310003290 divided by 7 is 44286184.29\n• Rounded off to next integer: 44286184\n• 44286184 * 7 = 310003288\n• 310003290 – 310003288 = 2 = Check digit"
+      ]
+    ],
+    "row_count": 7,
+    "col_count": 2,
+    "bbox": [
+      79.58000183105469,
+      351.3800048828125,
+      401.90599060058594,
+      642.4879760742188
+    ]
+  },
+  {
+    "page": 75,
+    "table_index": 0,
+    "header": [
+      "",
+      "• Barcode content = 3100032902"
+    ],
+    "rows": [
+      [
+        "Symbol height",
+        "The minimum height for the barcode is 25 mm. However, a barcode height of at\nleast 28 millimeters is recommended"
+      ],
+      [
+        "x-dimension",
+        "The minimum narrow element dimension (x-dimension) shall not be less than\n0.33 mm. The x-dimension shall not exceed 0.51 mm.\nWithin this range, the biggest x-dimension has to be used that is supported by\nthe printing device used, while complying with barcode length and quiet zone\nspecifications."
+      ],
+      [
+        "Quiet zone",
+        "Linear barcode symbols must be printed with leading and trailing quiet zones.\nFor Code 128, DHL demands not less than 5 mm. Quiet zones are not part\nof the barcode itself, i.e. a barcode of 91 mm needs at least 101 mm space on\nthe label."
+      ],
+      [
+        "Quality",
+        "The linear barcode quality must, as a minimum, conform to “Grade B”, tested\naccording to ANSI and CEN (EN 1635), Test Specifications for Barcode\nSymbols."
+      ]
+    ],
+    "row_count": 4,
+    "col_count": 2,
+    "bbox": [
+      79.58000183105469,
+      193.89996337890625,
+      401.90599060058594,
+      360.177978515625
+    ]
+  },
+  {
+    "page": 77,
+    "table_index": 0,
+    "header": [
+      "Data encoded in a QR-Code may include alphabetic characters, numbers, double characters and URLs. The",
+      ""
+    ],
+    "rows": [
+      [
+        "symbology uses a small area of square modules with a unique perimeter pattern, which helps the barcode",
+        ""
+      ],
+      [
+        "scanner determine cell locations to decode the symbol and extract the data.",
+        ""
+      ]
+    ],
+    "row_count": 2,
+    "col_count": 2,
+    "bbox": [
+      46.27000077565511,
+      258.12200927734375,
+      402.73732503255206,
+      283.1300048828125
+    ]
+  },
+  {
+    "page": 77,
+    "table_index": 1,
+    "header": [
+      "Implementation of this symbology is based on the International ISO/IEC Standards 18004:2006 and is also,",
+      ""
+    ],
+    "rows": [
+      [
+        "compliant with the ISO/ IEC 18004:2015 specifications.",
+        ""
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 2,
+    "bbox": [
+      46.27000077565511,
+      290.33197021484375,
+      402.73732503255206,
+      306.97998046875
+    ]
+  },
+  {
+    "page": 77,
+    "table_index": 2,
+    "header": [
+      "The QR symbology will be used to encode operational data to be used in the PUD and In-Facility domains, in",
+      ""
+    ],
+    "rows": [
+      [
+        "the context of the LabelFree scenarios.",
+        ""
+      ]
+    ],
+    "row_count": 1,
+    "col_count": 2,
+    "bbox": [
+      46.27000077565511,
+      345.0979919433594,
+      402.73732503255206,
+      361.77996826171875
+    ]
+  },
+  {
+    "page": 79,
+    "table_index": 0,
+    "header": [
+      "Specification",
+      "",
+      "",
+      "Value",
+      "",
+      "",
+      "Units",
+      "",
+      "",
+      "Tolerance",
+      ""
+    ],
+    "rows": [
+      [
+        "Glue strength (rolling ball test)",
+        "",
+        "48 (1.8)",
+        "",
+        "",
+        "mm (in)",
+        "",
+        "",
+        "±5mm",
+        "",
+        ""
+      ],
+      [
+        "Thickness of paper",
+        "",
+        "10",
+        "",
+        "",
+        "µm (in)",
+        "",
+        "",
+        "±2µm",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 2,
+    "col_count": 11,
+    "bbox": [
+      55.75623411290786,
+      386.2759821965144,
+      370.0087951660156,
+      417.1960021972656
+    ]
+  },
+  {
+    "page": 79,
+    "table_index": 1,
+    "header": [
+      "Standard Specification",
+      ""
+    ],
+    "rows": [
+      [
+        "Base unit",
+        "DHL Express Adhesive Label"
+      ],
+      [
+        "Hot melt adhesive",
+        "Raflatac RH9 or other adhesive with similar properties"
+      ],
+      [
+        "Paper type",
+        "Thermal"
+      ],
+      [
+        "Minimum temperature for\napplication",
+        "0°c"
+      ],
+      [
+        "Adhesive operational temperature\nwindow",
+        "-40°c to +60°c"
+      ],
+      [
+        "Recyclable",
+        "Yes"
+      ],
+      [
+        "Printer",
+        "For standard printers up to 200 mm/s"
+      ]
+    ],
+    "row_count": 7,
+    "col_count": 2,
+    "bbox": [
+      55.75623411290786,
+      452.2306620279948,
+      394.139208984375,
+      582.2479858398438
+    ]
+  },
+  {
+    "page": 80,
+    "table_index": 1,
+    "header": [
+      "",
+      "Change Summary",
+      "",
+      "Section",
+      "",
+      "Current Page\nNumber"
+    ],
+    "rows": [
+      [
+        "",
+        "1. Addition of additional segment specifications for the so-\ncalled “Highly Compact Label”, for both Consignor’s and\nConsignee’s Address segments",
+        "",
+        "5.2.1.1, 5.2.4.1,\n5.6.1.1, 8.1.6",
+        "",
+        ""
+      ],
+      [
+        "",
+        "2. Update with new GDPR conditions applicable to both\nConsignor’s and Consignee’s Address segments",
+        "",
+        "5.6, 5.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "3. More explicit prohibition of Account Numbers (and/ or\nrelated information protected through the GDPR\nRegulation) on Transport Labels",
+        "",
+        "5.12",
+        "",
+        ""
+      ],
+      [
+        "",
+        "4. Introduction of new syntax for the Label Certification\nIdentifiers (permanent and temporary)",
+        "",
+        "5.2.3",
+        "",
+        ""
+      ],
+      [
+        "",
+        "5. Relaxation of requirements on location of customer-\nsegment, upon explicit approval through DHL Express’\nLabel Certification Body (now with two options to better\nmeet customer requirements)",
+        "",
+        "5.15",
+        "",
+        ""
+      ],
+      [
+        "",
+        "6. Relaxation of specifications for the height of the Routing\nbarcode (Amazon CR 2017)",
+        "",
+        "9.2.1",
+        "",
+        ""
+      ],
+      [
+        "",
+        "7. Addition of a note allowing the relocation of the\ncustomer segment after explicit approval from DHL\nExpress",
+        "",
+        "5.13",
+        "",
+        ""
+      ],
+      [
+        "",
+        "8. General Clean-up and update of Titles and Acronyms to\nthe latest standard (e.g. eWaybill, ESS solutions,\nLicense Plate replaced by Piece Identifier – PID, where\napplicable)",
+        "",
+        "All",
+        "",
+        ""
+      ],
+      [
+        "",
+        "9. Update of guideline regarding exceptional scenarios,\nwhere contact details could be allowed to be printed on\nthe Transport Label, in accordance with the GDPR\nregulation. Updates were accordingly added to the\nrespective illustrating images.",
+        "",
+        "5.6, 5.8,",
+        "",
+        ""
+      ],
+      [
+        "",
+        "10. Update of guidelines relative to single (i.e. always\nmatching) “Duty / VAT A/C”. No split between both\naccounts since they always match",
+        "",
+        "6.6.2",
+        "",
+        ""
+      ],
+      [
+        "",
+        "11. Removal of reference to ACS Label, which is not object\nof this guideline, from this section",
+        "",
+        "7",
+        "",
+        ""
+      ],
+      [
+        "",
+        "12. Incoterms removed from Waybill Doc, as per CR\n451721",
+        "",
+        "6.6.2",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 12,
+    "col_count": 6,
+    "bbox": [
+      82.03199768066406,
+      265.74757385253906,
+      407.1600036621094,
+      640.0394112723214
+    ]
+  },
+  {
+    "page": 81,
+    "table_index": 1,
+    "header": [
+      "",
+      "13. Reference Loose BBX Transport Label layout, image,\nupdated with individual segments’ identification",
+      "",
+      "7.4",
+      "",
+      ""
+    ],
+    "rows": [
+      [
+        "",
+        "14. Removal of reference to outdated section (11.1)",
+        "",
+        "5.12.2",
+        "",
+        ""
+      ],
+      [
+        "",
+        "15. Removal of outdated section 5.11.2 “DHL Shipment\nIdentifier (mandatory)” and corresponding renumbering\nof the sub-sequent sections",
+        "",
+        "5.11.2",
+        "",
+        ""
+      ],
+      [
+        "",
+        "16. Original images replaced with higher-quality ones",
+        "",
+        "All sections",
+        "",
+        ""
+      ],
+      [
+        "",
+        "17. Updated images to reflect latest GDPR guidelines",
+        "",
+        "8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "18. Piece Identifier length (i.e. number of characters\nfollowing the Data Identifier) of type JD01 made more\nclear",
+        "",
+        "5.16.3",
+        "",
+        ""
+      ],
+      [
+        "",
+        "19. The US Destination Control Statement (US DCS) was\nremoved from the Transport and Waybill Doc images\nas it is no longer required by the US government. The\nUS government harmonized the US DCS and only\nrequires it to be listed on the commercial invoice.",
+        "",
+        "5.12.1.1",
+        "",
+        ""
+      ],
+      [
+        "",
+        "20. “Neutral Content Description” section introduced",
+        "",
+        "5.13.1.1",
+        "",
+        ""
+      ],
+      [
+        "",
+        "21. “Considerations on Highly-Compact Labels” – final\nlayout and segments’ dimensional matrix updated",
+        "",
+        "8.1.6",
+        "",
+        ""
+      ],
+      [
+        "",
+        "22. “Considerations on 2D-enabled Transport Labels” –\nPhase 2A layout and segments’ dimensional matrix updated",
+        "",
+        "8.1.7",
+        "",
+        ""
+      ],
+      [
+        "",
+        "23. Addition of “2D Data Matrix – Customer Data” section,\nformally introducing the 2D-enabled Transport Label layout",
+        "",
+        "5.12",
+        "",
+        ""
+      ],
+      [
+        "",
+        "24. Addition of Bi-Dimensional Barcode Symbologies and\nsymbol attributes",
+        "",
+        "9.3",
+        "",
+        ""
+      ],
+      [
+        "",
+        "25. “Reverse Video Format” added to Definitions",
+        "",
+        "4.1",
+        "",
+        ""
+      ],
+      [
+        "",
+        "26. Specification of Medical EXPRESS Logo added",
+        "",
+        "5.10.4",
+        "",
+        ""
+      ],
+      [
+        "",
+        "27. Correction of the area reserved for the Medical\nEXPRESS Logo",
+        "",
+        "5.10.4",
+        "",
+        ""
+      ],
+      [
+        "",
+        "28. Sample image updated to correspond to and reflect",
+        "",
+        "6.8",
+        "",
+        ""
+      ],
+      [
+        "",
+        "specification for 2 decimal points",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 16,
+    "col_count": 6,
+    "bbox": [
+      81.98046830121208,
+      194.2737077985491,
+      406.25,
+      615.1857038225446
+    ]
+  },
+  {
+    "page": 82,
+    "table_index": 1,
+    "header": [
+      "",
+      "Reported\nby",
+      "",
+      "Date Reported",
+      "",
+      "Current statement\nsays",
+      "",
+      "Recommended to\nchange to",
+      "",
+      "Date Verified",
+      "",
+      "Verifier Name"
+    ],
+    "rows": [
+      [
+        "",
+        "GNOPS\nLabel\nTeam",
+        "",
+        "September.2022",
+        "",
+        "General Typos",
+        "",
+        "Corrected in accordance\nwith Global SOP\nDictionary and Glossary of\nBusiness Terms",
+        "",
+        "September.2022",
+        "",
+        "GNOPS Label\nTeam"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "row_count": 4,
+    "col_count": 12,
+    "bbox": [
+      66.0719985961914,
+      207.5141810366982,
+      407.1600036621094,
+      301.68995783879205
+    ]
+  },
+  {
+    "page": 83,
+    "table_index": 0,
+    "header": [
+      "Acronym",
+      "Definition / Meaning"
+    ],
+    "rows": [
+      [
+        "1",
+        "Refers to (for example) Segment 1 of reference document type"
+      ],
+      [
+        "Char",
+        "Relative to characters or to the number of characters of a string"
+      ],
+      [
+        "DG",
+        "Relative to Dangerous Goods"
+      ],
+      [
+        "Doc-type",
+        "As per the Global SOP Standard for Classification of Types of Documents"
+      ],
+      [
+        "ESS",
+        "Electronic Shipping Solutions; formerly known as “eCom”"
+      ],
+      [
+        "GS1",
+        "Global Standards One – non-profit organization that develops / maintains\nglobal standards for business, in this context the well-know GS1-barcodes."
+      ],
+      [
+        "HFC",
+        "Relative to Handling Feature Codes"
+      ],
+      [
+        "IATA",
+        "Relative to the International Air Transport Association"
+      ],
+      [
+        "LP",
+        "License Plate. Also known as Piece Identifier.\nThe license plate is defined in ISO/IEC 15459-1. It is a unique identifier for\ntransport units. This unique number, regardless of use, shall be specified and\nassigned by the label issuer and applied to a transport unit and may provide\naccess to traceability data regardless of content and destination. This\nnumber shall be valid for the lifetime of the unit it is applied to."
+      ],
+      [
+        "Max",
+        "maximum"
+      ],
+      [
+        "MH10",
+        "Accredited Standards Committee MH10 - The ANSI committee for standards\nfor Unit Loads and Transport Packages, including the national standard for\nbar code labeling"
+      ],
+      [
+        "Min",
+        "minimum"
+      ],
+      [
+        "Opt.",
+        "Optional"
+      ],
+      [
+        "PID",
+        "Piece Identifier"
+      ],
+      [
+        "SID",
+        "Shipment Identifier"
+      ]
+    ],
+    "row_count": 15,
+    "col_count": 2,
+    "bbox": [
+      67.53740467744716,
+      272.55596923828125,
+      395.4578803567325,
+      634.9399820963541
+    ]
+  }
+]

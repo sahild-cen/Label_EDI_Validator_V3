@@ -1,0 +1,86 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Definitions 
+4.1. Definitions 
+The following definitions are specific to this document: 
+Title 
+Description 
+DHL Transport 
+Label 
+The DHL Transport Label is a label which is printed and attached to a piece 
+and contains all handling-relevant information i.e. the one required to ship a 
+piece from a Shipper to a Consignee. It includes piece/shipment 
+identification, address information and DHL handling information.  
+This generic title includes: 
+• 
+ESS Label (includes all information, mostly a Customer Produced 
+Document as part of the Shipment Preparation Process, requiring no 
+DHL re-labeling). It also includes specific sections for Customers to 
+capture their bespoke information. 
+• 
+Network Label -> transport label without addresses and without 
+customers’ own segments 
+• 
+Routing Label -> small label containing DHL Handling Information only 
+and used by DHL to complement information provided by customers. 
+eWaybill 
+A document type reflecting agreed “conditions of contract of transport” 
+A Waybill is, by definition, NOT a label. 
+This doc-type was historically called “Archive Doc” and later “Waybill Doc”.  
+Multi-ply Waybill 
+(Multiply Waybill) 
+Business term used as a reference for DHL's own Waybills doc-type (also 
+named “Manual Waybill”). 
+The term “Multiply Waybill” denotes both the empty and filled-in forms. 
+Reprinting 
+Term for a 1:1 replacement of a (damaged) label by a new one 
+Relabeling 
+Term for tagging a package with a new label with additional or changed 
+supplementary information, e.g. Manual Sort Information.  
+License Plate 
+A Unique Identifier (code) assigned to a single transport unit by its issuer, in 
+accordance with ISO/IEC 15459-1. It is the Leading Industry Standard 
+Worldwide and acts as primary Piece Identifier (PID) standard for DHL 
+Express. As such, DHL’s equivalent business term is “Piece Identifier”. 
+Shipment 
+Identifier 
+Generic term for DHL Express identifiers at shipment level. Currently 
+implemented with the 10 NUM format (9 digits, plus 10th digit calculated with 
+MOD7). Other terms used within DHL are:  
+• 
+Air Waybill number (Air Express) 
+• 
+Waybill number (Air and Road Express) 
+• 
+Shipment number (Road Express) 
+• 
+Consignment number (Road Express, Freight), when the format 
+matches the standard 10 NUM with MOD7 check-digit, defined 
+above. 
+Reverse Video 
+Format 
+A technique used in documents, whereby white characters are printed on a 
+black background, as a visual aid to highlight an important section or piece of 
+text.  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+9

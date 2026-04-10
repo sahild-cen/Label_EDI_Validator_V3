@@ -1,0 +1,66 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - MOA  
+Segment 
+Occurrence 
+Usage 
+Description 
+MOA 
+9 
+R 
+ Monetary Amount 
+Function: A segment to specify a monetary amount associated with a line item, such as Line Item Total Customs Value, 
+(Article) Customs Value, etc. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C516 
+M 
+ 
+MONETARY AMOUNT 
+   5025 
+M 
+AN..3 
+Monetary amount type code qualifier 
+   5004 
+R 
+N..18 
+Monetary amount 
+   6345 
+R 
+AN..3 
+Currency identification code 
+ 
+Example:  
+MOA+38:130000000000000.101:EUR' 
+ 
+Note 5025: 
+Use: 
+‘38’ or ‘39’ - Line Item Value. 
+‘146’ – Single Item (Article) Customs Value 
+For the full list of other Invoice Line Item Monetary Amount type codes, refer to "DHL 
+Express Integrated Solution Reference Information" (available from DHL Express on 
+request). 
+ 
+Note 5004: 
+Rules for numeric value: 
+▪ 
+The maximum number of digit is 18 where the 3 decimals are included. 
+▪ 
+All amounts have to be specified with 3 decimals included, regardless currency. 
+▪ 
+Decimal sign depends on what has been specified in segment UNA.  
+If UNA is not specified then default sign will be point. 
+▪ 
+COD value has to be given in the currency of the destination country. 
+ 
+Note 6345: 
+Currency codes are according to ISO 4217.  
+This must be the currency of the shipper country except for qualifier ‘22’ – COD currency 
+of destination needs to be populated. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 83 of 115

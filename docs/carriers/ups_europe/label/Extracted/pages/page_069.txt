@@ -1,0 +1,107 @@
+UPS Manifest Summary
+UPS Manifest Summary
+1. Divide 123456789 by 7 = 17636684.14286
+2. 
+Use the remainder of .14286 to determine 
+the check digit is 1
+3. 
+The complete Shipping Record Number 
+is 1234567891
+TITLE/HEADER SECTION
+The title/header must consist of the document title 
+and vendor name, software and version number in 
+the following format:
+• Text “UPS Manifest — Summary Section”
+• Left-justified in 12 pt. bold
+Vendor name, software name and version number 
+centered in 12 pt. bold on the same line as the title
+The UPS Manifest Summary provides the shipper 
+with a receipt for all packages accepted by UPS. 
+Two copies of the UPS Manifest Summary must be 
+printed after the successful upload of Package Level 
+Detail (PLD). The UPS driver/agent will sign both 
+copies and leave one copy with the shipper. If there 
+are multiple PLD transmissions per day (staggered 
+uploads), two copies of the UPS Manifest Summary 
+must be printed for each PLD upload. Every upload 
+must have a new transmission number. The UPS 
+driver/agent must be provided with all UPS Manifest 
+Summaries for this particular day. Specifications of 
+font size are guidelines and should not supersede 
+sound business decisions.
+For Example:  ABC Ltd. Ship Software v1.05
+SEPARATOR LINE
+Font Size = 1 pt. bold
+SHIPPER INFORMATION SECTION
+• Line 1 = Shipper Name
+• Line 2 = Shipper Street Address
+• Line 3 = 
+Shipper Postal Code, City and Country 
+Name
+GENERAL RULES
+The UPS Manifest Summary must be printed on 
+blank white paper (no letterheads, logos or other 
+form of printing). The UPS Manifest Summary 
+must be printed from a computer printer in black 
+ink. Handwritten corrections are not acceptable. 
+Overlap of information into the next column is not 
+permitted. The UPS Manifest Summary must begin 
+on a new sheet of paper.
+• Line 4 = 
+Shipper Country Code (for country codes, 
+please see Appendix E)
+• Line 5 = 
+The text “VAT No.” Followed by the 
+shipper’s VAT number
+• Line 6 = 
+The text “Telephone” followed by the 
+shipper’s telephone number
+• Font Size = 10 pt. left-justified
+• For Example: 
+SHIPPING RECORD NUMBER CALCULATION
+The Shipping Record Number is a 10-digit numeric 
+field consisting of the seven-digit book number, 
+the two-digit page number and the Modulo 7 check 
+digit. The check digit is calculated by dividing the 
+nine-digit book and page number by seven. Use 
+the decimal remainder to determine the check digit 
+from the table below:
+	
+Remainder	
+Check Digit
+	
+0	
+0
+	
+.14286	
+1
+	
+.28571	
+2
+XYZ COMPANY
+WOLUWELAAN 156
+1831 DIEGEM BELGIUM
+BE
+VAT No. BE123456789
+Telephone 0800.128.28
+	
+.42857	
+3
+	
+.57143	
+4
+	
+.71429	
+5
+	
+.85714	
+6
+• 
+For Example: 
+Book Number = 1234567
+Page Number = 89
+67
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

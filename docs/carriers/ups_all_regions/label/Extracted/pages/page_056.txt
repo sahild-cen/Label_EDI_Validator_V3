@@ -1,0 +1,87 @@
+Dry Ice and Biological Substances
+Label Format Requirements
+Overview
+Dry Ice and Biological Substances are offered as 
+contract services.  When using these services, the 
+label must contain additional information to meet 
+regulatory requirements and assist UPS in processing 
+the shipment.
+Additionally, an Audit Indicator line must print below 
+the Dry Ice line indicating whether an audit of the 
+package is necessary by UPS Operations. For more 
+details on which packages will require an audit, 
+please refer to the UPS Rate and Service Guide.
+For packages which require audit:
+• Routing Instruction = AUDIT REQUIRED
+NOTE:  Dry ice is a general service offering for 
+certain United States and Puerto Rico domestic 
+shipments.
+For packages which do not require audit:
+• Routing Instruction = NO AUDIT REQUIRED
+• Font Size = 10 pt.
+The service may be used with UPS Returns™ or UPS 
+Import Control™.  The label requirements can be 
+found in the main UPS Guide to Labeling document.
+Aduits are performed for the following scenarios:
+Dry Ice Label Format Requirements
+For non-medical domestic air shipments:
+Under 49CFR Regulations, if shipping above 5.5 lbs 
+or less – no acceptance audit is performed.
+Under IATA Regulations, regardless of weight – an 
+acceptance audit is performed.
+When shipping dry ice, the data below must print 
+in the Additional Routing Instructions block of 
+the label immediately below the Description of 
+Goods.  The weight of the dry ice must always be in 
+kilograms and must be rounded to the next tenth.
+• Data Content
+For non-medical international shipments:
+Positions 	 1-29*	
+=	 
+UN1845, DRY ICE, 
+CLASS 9, 1 x
+Under IATA Regulations, regardless of weight – an 
+acceptance audit is performed.
+Position 	
+30	
+=	 Space
+For medical domestic air shipments:
+Positions 	31-35	
+=	 
+Up to five numeric 
+(inclusive of decimal 
+point) representing 
+the weight of the dry ice 
+
+Under IATA Regulations, regardless of weight – an 
+acceptance audit is performed.
+For medical international shipments:
+in the package to 
+which the label will be 
+affixed.
+Under IATA Regulations, regardless of weight – an 
+acceptance audit is performed.
+Position 	
+36	
+=	 Space
+Positions 	37-38	
+=	 KG
+• Font Size = 10 pt.
+Please go to www.ups.com for more information 
+regarding Dry Ice
+• For Example:  UN1845, DRY ICE, CLASS 9, 1 x 12.5 KG
+BIOLOGICAL SUBSTANCES LABEL FORMAT 
+REQUIREMENTS
+NOTE: Positions 1-29 represent static text. This text 
+will be the same for all Dry Ice shipments.
+When shipping biological substances, the following 
+text must print centered in the Additional Routing 
+Instructions block of the label immediately below 
+the Power of Attorney line.
+• Routing Instruction = ISC-BIO
+• Font Size = 10 pt. bold
+UPS Guide to Labeling
+55
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

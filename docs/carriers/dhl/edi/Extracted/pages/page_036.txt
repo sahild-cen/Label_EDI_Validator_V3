@@ -1,0 +1,52 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 25 – CNI  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNI 
+1 
+M 
+ Consignment Information                                                                    
+Function: To identify one consignment  
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1490 
+R 
+N..4 
+Consolidation Item Number  
+C503 
+R 
+ 
+Document/Message Details 
+   1004 
+R 
+AN..35 
+Document Identifier  
+ 
+ 
+Example:  
+CNI+1+5146665856' 
+CNI+2+6215236112:5' 
+Note 1490 : 
+Sequence Number. In each message (UNH – UNT) the CNI sequence number starts with 
+1, incremented with ‘1’ for each CNI in the message.  
+ 
+Note 1004 : 
+Unique Shipment Number or waybill number. These shipment number needs to be 
+unique per shipment for at least 6 months. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 36 of 115

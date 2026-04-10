@@ -1,0 +1,47 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The Data Identifier preceding the Piece Identifier is NOT part of the Piece Identifier. It does not have 
+to be considered when determining the Piece Identifier length. Two Piece Identifiers are identical if 
+their only difference is a deviating data identifier (e.g. “J” versus “2J”).  
+ 
+However, the Data Identifier always has to be printed on the label both in human readable and bar-
+coded format. The bar-coded Data Identifier must not include the parentheses which are used for clarity 
+only.  
+(The bar-coded form of the data identifier and Piece Identifier is then “JJD01…….”. & the human 
+readable form should be in the form “(J)JD01 …..”.) 
+5.18. 
+Sample Labels 
+The following labels serve solely as an illustration of the label structure and content. 
+ 
+5.18.1. ESS Label V2.8 - Size 6”x4” / A6 
+ 
+Example with multiple Services 
+ 
+This DHL A6 ESS Label (length: 160 mm / width: 100mm) should be the format (length) chosen to guarantee 
+best-possible balance of compactness and quality for scanners. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+44

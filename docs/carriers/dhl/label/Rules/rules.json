@@ -1,0 +1,1088 @@
+{
+  "carrier_code": "dhl",
+  "spec_type": "label",
+  "generated_at": "2026-04-09T17:20:01.999226+00:00",
+  "spec_files_used": 81,
+  "reviewed_only": false,
+  "rules": [
+    {
+      "field": "2d_barcode",
+      "required": false,
+      "detect_by": "zpl_command:^B7",
+      "regex": "",
+      "description": "2D barcode (PDF417 or DataMatrix) encoding shipment data including tracking, origin, destination, and service type for automated processing."
+    },
+    {
+      "field": "consignee_address",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The full recipient/consignee address block on the ESS Label, subject to GDPR restrictions."
+    },
+    {
+      "field": "consignee_city",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The city of the shipment destination/receiver within the consignee address block."
+    },
+    {
+      "field": "consignee_contact_name",
+      "required": false,
+      "detect_by": "text_prefix:ATTN:",
+      "regex": "",
+      "description": "The contact person name at the destination, recommended when the consignee is a company."
+    },
+    {
+      "field": "consignee_country",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "^[A-Z]{2}$",
+      "description": "The destination country as an ISO 3166-1 alpha-2 code or full country name within the consignee address block."
+    },
+    {
+      "field": "consignee_name",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The name of the person or company to whom the shipment is being delivered, prominently displayed in the destination address block."
+    },
+    {
+      "field": "consignee_phone",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The telephone number of the receiver/consignee for delivery contact and customs clearance, required for international shipments."
+    },
+    {
+      "field": "consignee_postal_code",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The postal/ZIP code of the shipment destination, a critical sortation element used to determine destination service area routing."
+    },
+    {
+      "field": "consignee_state_province",
+      "required": false,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "The state, province, or region of the shipment destination, required where applicable by country."
+    },
+    {
+      "field": "consignor_address",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The full shipper/consignor address block on the ESS Label, subject to GDPR restrictions."
+    },
+    {
+      "field": "consignor_contact",
+      "required": false,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Shipper contact details, no longer required on the Transport Label except in exceptional regulatory circumstances such as UN3373 compliance."
+    },
+    {
+      "field": "content_description",
+      "required": true,
+      "detect_by": "text_contains:CTD",
+      "regex": "",
+      "description": "Mandatory field describing the contents of the shipment, up to 300 characters, or 'CTD – see data' for approved neutral content descriptions."
+    },
+    {
+      "field": "country_specific_codes",
+      "required": false,
+      "detect_by": "text_pattern:(\\d{1,6}|[A-Za-z]{1,2})",
+      "regex": "^(\\d{1,6}|[A-Za-z]{1,2})$",
+      "description": "Optional region-specific routing codes within the routing barcode for domestic use only, providing additional sortation information."
+    },
+    {
+      "field": "currency_code",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z]{3}$",
+      "regex": "^[A-Z]{3}$",
+      "description": "ISO 4217 currency code indicating the currency used for the declared value of service."
+    },
+    {
+      "field": "customer_logo",
+      "required": false,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Optional customer logo or DHL Initiative Logo (e.g., GoGreen) placed to the right of the sender address segment."
+    },
+    {
+      "field": "data_matrix_barcode",
+      "required": false,
+      "detect_by": "zpl_command:^BX",
+      "regex": "",
+      "description": "A 2D Data Matrix barcode per ISO/IEC 16022 encoding operational or customer data on 2D-enabled Transport Label layouts."
+    },
+    {
+      "field": "data_matrix_customer_data",
+      "required": false,
+      "detect_by": "zpl_command:^BX",
+      "regex": "",
+      "description": "A 2D Data Matrix barcode containing customer-specific data on 2D-enabled transport labels per ISO/IEC 16022."
+    },
+    {
+      "field": "delivery_date",
+      "required": false,
+      "detect_by": "text_prefix:Day",
+      "regex": "^([0-2][0-9]|3[01]|A|S|H)$",
+      "description": "Delivery date display showing day of month (01-31) or special codes (A=appointment, S=Saturday, H=hold at depot)."
+    },
+    {
+      "field": "delivery_date_code",
+      "required": true,
+      "detect_by": "barcode_data:^\\d{2}$",
+      "regex": "^\\d{2}$",
+      "description": "A 2-digit code in the routing barcode indicating the delivery date or scheduling option (00=no date, 01-31=day, 50=Saturday, 51=appointment, 52=hold)."
+    },
+    {
+      "field": "delivery_time",
+      "required": false,
+      "detect_by": "text_prefix:Time",
+      "regex": "^(X09|X10|X12|[0-9])$",
+      "description": "Delivery time window code displayed on label (e.g., X09, X10, X12) with a single-digit code in the routing barcode."
+    },
+    {
+      "field": "delivery_time_code",
+      "required": true,
+      "detect_by": "text_pattern:^[0-3]$",
+      "regex": "^[0-3]$",
+      "description": "Single-digit numeric code indicating the delivery time feature (0=none, 1=pre-09:00, 2=pre-12:00, 3=pre-10:30)"
+    },
+    {
+      "field": "destination_country_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{2}$",
+      "regex": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code for the shipment destination, displayed prominently for sortation"
+    },
+    {
+      "field": "destination_facility_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{2}-[A-Z0-9]{3}(-[A-Z0-9]{3})?$",
+      "regex": "^[A-Z]{2}-[A-Z0-9]{3}(-[A-Z0-9]{3})?$",
+      "description": "DHL facility code for the delivery facility, consisting of country code, service area code, and optional facility code"
+    },
+    {
+      "field": "destination_postcode",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z0-9:]{1,12}$",
+      "regex": "^[A-Z0-9:]{1,12}$",
+      "description": "Postcode of the consignee address encoded in the routing barcode, max 12 characters with no spaces or symbols"
+    },
+    {
+      "field": "destination_service_area_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z0-9]{3}$",
+      "regex": "^[A-Z0-9]{3}$",
+      "description": "Three-character code identifying the DHL service area at the destination responsible for final delivery"
+    },
+    {
+      "field": "dhl_logo",
+      "required": true,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Official DHL carrier logo printed in the upper right corner of the transport label"
+    },
+    {
+      "field": "handling_feature_codes",
+      "required": false,
+      "detect_by": "text_pattern:^[0-9]{3}$",
+      "regex": "^[0-9]{3}$",
+      "description": "Three-digit handling feature codes representing product features impacting sorting and delivery, displayed in reverse video"
+    },
+    {
+      "field": "handling_service_logos",
+      "required": false,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Visual logos/icons indicating specific handling-relevant services such as Medical Express"
+    },
+    {
+      "field": "inbound_sort_code",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z0-9.]{1,4}$",
+      "regex": "^[A-Z0-9.]{1,4}$",
+      "description": "Sort code used at destination inbound facilities for manual sorting, up to 4 alphanumeric characters"
+    },
+    {
+      "field": "iso_country_code",
+      "required": true,
+      "detect_by": "text_pattern:^([A-Z]{2}|\\d{3})$",
+      "regex": "^([A-Z]{2}|\\d{3})$",
+      "description": "ISO 3166-1 destination country code encoded in the routing barcode, 2-alpha (ASC MH10) or 3-digit (GS1) format"
+    },
+    {
+      "field": "label_certification_identifier",
+      "required": true,
+      "detect_by": "text_pattern:\\*.*\\*",
+      "regex": "",
+      "description": "Unique identifier assigned by the GCoCL team certifying the transport label is approved for production use"
+    },
+    {
+      "field": "label_printing_date",
+      "required": true,
+      "detect_by": "text_pattern:^\\d{4}-\\d{2}-\\d{2}$",
+      "regex": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Date the label was printed in ISO 8601 format (yyyy-mm-dd)"
+    },
+    {
+      "field": "medical_express_logo",
+      "required": false,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Heart shape logo with pulse line identifying Medical Express shipments requiring highest priority handling"
+    },
+    {
+      "field": "origin_service_area_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z0-9]{3}$",
+      "regex": "^[A-Z0-9]{3}$",
+      "description": "Three-character code identifying the DHL service area at the origin that processes the shipment"
+    },
+    {
+      "field": "outbound_sort_code",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z0-9.]{1,4}$",
+      "regex": "^[A-Z0-9.]{1,4}$",
+      "description": "Sort code for manual sorting at outbound facilities, up to 4 alphanumeric characters or dot if no value found"
+    },
+    {
+      "field": "piece_count",
+      "required": true,
+      "detect_by": "text_pattern:^\\d+/[\\d.]+$",
+      "regex": "^\\d+/([\\d]+|\\.)$",
+      "description": "Relative piece number and total pieces in shipment in X/Y format, with dot replacing unknown values"
+    },
+    {
+      "field": "piece_identifier",
+      "required": true,
+      "detect_by": "barcode_data:^JD01",
+      "regex": "^JD01.+$",
+      "description": "Unique piece identifier (license plate) per ISO/IEC 15459-1 with JD01 data identifier prefix, encoded in Code 128 barcode"
+    },
+    {
+      "field": "piece_number",
+      "required": true,
+      "detect_by": "text_pattern:^\\d{1,4}$",
+      "regex": "^\\d{1,4}$",
+      "description": "Sequential number identifying this specific piece within a multi-piece shipment"
+    },
+    {
+      "field": "piece_shipment_reference",
+      "required": false,
+      "detect_by": "text_prefix:REF:",
+      "regex": "",
+      "description": "Customer-defined alphanumeric reference identifier for the piece or shipment, qualified by Reference Type Codes"
+    },
+    {
+      "field": "piece_weight",
+      "required": false,
+      "detect_by": "text_prefix:Pce",
+      "regex": "",
+      "description": "Weight of an individual piece/package, mandatory for Remote Pickup shipments and printed when available for multi-piece shipments"
+    },
+    {
+      "field": "piece_weight_symbols",
+      "required": false,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Graphical weight warning icons (10+ kg or 20+ kg) required for shipments delivered in Germany per federal law"
+    },
+    {
+      "field": "printing_application",
+      "required": true,
+      "detect_by": "text_pattern:^.+\\s+\\d+\\.\\d{2}\\.\\d{3}",
+      "regex": "\\d+\\.\\d{2}\\.\\d{3}",
+      "description": "Identifies the label printing/rendering application and its version number in X.XX.XXX format"
+    },
+    {
+      "field": "product_code",
+      "required": true,
+      "detect_by": "barcode_data:\\+\\d{2}",
+      "regex": "\\d{2}",
+      "description": "2-digit numeric code representing the DHL transport product type, encoded within the routing barcode"
+    },
+    {
+      "field": "product_content_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{3}$",
+      "regex": "^[A-Z]{3}$",
+      "description": "DHL's internal 3-character uppercase code for the product under which a transport order is processed"
+    },
+    {
+      "field": "product_name",
+      "required": true,
+      "detect_by": "text_pattern:^EXPRESS |^DOMESTIC |^ECONOMY |^MEDICAL ",
+      "regex": "^[A-Z0-9 :]{1,20}$",
+      "description": "Global Product Short Name identifying the DHL Express product sold to the customer, up to 20 uppercase characters"
+    },
+    {
+      "field": "product_service_code",
+      "required": false,
+      "detect_by": "text_pattern:^[A-Z]$",
+      "regex": "",
+      "description": "Short code identifying a value-added service associated with the shipment, displayed when applicable"
+    },
+    {
+      "field": "qr_code",
+      "required": false,
+      "detect_by": "zpl_command:^BQ",
+      "regex": "",
+      "description": "QR Code barcode encoding operational data for PUD and in-facility domains, used in LabelFree scenarios"
+    },
+    {
+      "field": "reference_number",
+      "required": false,
+      "detect_by": "text_prefix:REF:",
+      "regex": "",
+      "description": "Customer-defined shipper reference number for cross-referencing with their own systems"
+    },
+    {
+      "field": "reference_number_2",
+      "required": false,
+      "detect_by": "text_prefix:REF2:",
+      "regex": "",
+      "description": "Additional customer-defined reference number for the shipment"
+    },
+    {
+      "field": "regulatory_information",
+      "required": false,
+      "detect_by": "text_contains:regulatory",
+      "regex": "",
+      "description": "Legally required regulatory text such as country-specific declarations, export info, or dangerous goods declarations"
+    },
+    {
+      "field": "routing_barcode",
+      "required": true,
+      "detect_by": "barcode_data:^\\(?(2L|403)\\)?",
+      "regex": "^(2L)[A-Z]{2}[A-Z0-9]*\\+\\d{8}|(403)\\d{3}[A-Z0-9]*\\+\\d{8}",
+      "description": "Barcode containing the DHL ISO Routing Code encoding destination country, postcode, product code, and features in Code 128 or GS1-128 format"
+    },
+    {
+      "field": "routing_code",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{2,3}[- ][A-Z0-9]",
+      "regex": "",
+      "description": "Composite sortation code combining destination service area code, facility code, and sort indicators displayed prominently on the label"
+    },
+    {
+      "field": "routing_code_human_readable",
+      "required": true,
+      "detect_by": "text_pattern:^\\(2L\\)|^\\(403\\)",
+      "regex": "^\\((2L|403)\\)[A-Z0-9]+\\+\\d{8}",
+      "description": "Human-readable text of the routing barcode content with parenthesized data identifier, shown adjacent to the routing barcode"
+    },
+    {
+      "field": "service_area_code_of_origin",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{3}$",
+      "regex": "^[A-Z]{3}$",
+      "description": "3-character uppercase letter code representing the locally defined DHL service area of origin"
+    },
+    {
+      "field": "service_icon",
+      "required": true,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "Visual icon representing the DHL service type for quick identification of service level by handlers"
+    },
+    {
+      "field": "service_name",
+      "required": true,
+      "detect_by": "text_exact:EUROPACK|DOM EUROPACK|ECONOMY SELECT|EXPRESS WORLDWIDE|Medical EXPRESS",
+      "regex": "",
+      "description": "Human-readable name of the DHL Express service/product used for the shipment"
+    },
+    {
+      "field": "service_type",
+      "required": true,
+      "detect_by": "text_pattern:^[A-Z]{1,3}$",
+      "regex": "^[A-Z]{1,3}$",
+      "description": "1-3 character alphanumeric code identifying the DHL shipping service/product selected for the shipment"
+    },
+    {
+      "field": "ship_from_address",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "Sender/consignor's multi-line address block with 'From' header, max 7 lines at 47 characters each"
+    },
+    {
+      "field": "ship_to_address",
+      "required": true,
+      "detect_by": "spatial:ship_to",
+      "regex": "",
+      "description": "Consignee's delivery address block with 'To' header, max 7 lines, emphasized with hooks and larger font for country and postal code"
+    },
+    {
+      "field": "shipment_date",
+      "required": true,
+      "detect_by": "text_pattern:\\d{2}[- ]?[A-Z]{3}[- ]?\\d{4}",
+      "regex": "^\\d{2}[A-Z]{3}\\d{4}$",
+      "description": "The date the shipment is tendered to DHL, typically in DD-MMM-YYYY format."
+    },
+    {
+      "field": "shipment_identifier",
+      "required": true,
+      "detect_by": "text_pattern:^\\d{4} ?\\d{3} ?\\d{3}$",
+      "regex": "^\\d{10}$",
+      "description": "DHL 10-digit waybill number consisting of 9 base digits plus a MOD 7 check digit."
+    },
+    {
+      "field": "shipment_weight",
+      "required": false,
+      "detect_by": "text_pattern:\\d+\\.?\\d*\\s*kg|lb",
+      "regex": "",
+      "description": "The sum of weights of all pieces in the shipment, displayed with unit of measure (kg or lb)."
+    },
+    {
+      "field": "shipper_account_number",
+      "required": true,
+      "detect_by": "text_pattern:^\\d{9}$",
+      "regex": "^\\d{9}$",
+      "description": "The 9-digit DHL account number of the shipper used for billing and identification."
+    },
+    {
+      "field": "shipper_address",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The full street address of the shipment origin/sender including street, city, state, postal code, and country."
+    },
+    {
+      "field": "shipper_name",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The name of the person or company sending the shipment."
+    },
+    {
+      "field": "shipper_city",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The city of the shipment origin/sender within the shipper address block."
+    },
+    {
+      "field": "shipper_country",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "^[A-Z]{2}$",
+      "description": "The ISO 3166-1 alpha-2 country code of the shipment origin/sender."
+    },
+    {
+      "field": "shipper_phone",
+      "required": false,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The telephone number of the shipper/sender for contact purposes."
+    },
+    {
+      "field": "shipper_postal_code",
+      "required": false,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The postal/ZIP code of the shipment origin, format varies by country."
+    },
+    {
+      "field": "shipper_state_province",
+      "required": false,
+      "detect_by": "spatial:ship_from",
+      "regex": "",
+      "description": "The state, province, or region of the shipment origin/sender where applicable."
+    },
+    {
+      "field": "tracking_number",
+      "required": true,
+      "detect_by": "barcode_data:^\\d{10,11}$",
+      "regex": "^\\d{10,11}$",
+      "description": "The primary DHL tracking/waybill number used to track the package through the DHL network."
+    },
+    {
+      "field": "tracking_number_barcode",
+      "required": true,
+      "detect_by": "zpl_command:^BC",
+      "regex": "^\\d{10,11}$",
+      "description": "1D barcode (Code 128) encoding the DHL tracking/waybill number for automated scanning."
+    },
+    {
+      "field": "waybill_number_barcode",
+      "required": true,
+      "detect_by": "zpl_command:^B3",
+      "regex": "^\\d{10}$",
+      "description": "Code 39 barcode encoding the 10-digit waybill number with MOD 7 check digit."
+    },
+    {
+      "field": "two_d_data_matrix",
+      "required": true,
+      "detect_by": "zpl_command:^BX",
+      "regex": "",
+      "description": "2D Data Matrix ECC 200 barcode encoding operational data per ISO/IEC 15434 with public, open, and customer segments."
+    },
+    {
+      "field": "special_conditional_information",
+      "required": false,
+      "detect_by": "text_contains:special",
+      "regex": "",
+      "description": "Additional special or conditional information appearing on the label based on specific shipment requirements."
+    },
+    {
+      "field": "value_of_service",
+      "required": false,
+      "detect_by": "text_pattern:\\d[\\d ]*\\.\\d{2}",
+      "regex": "",
+      "description": "The declared monetary value associated with a value-added service such as insured delivery."
+    },
+    {
+      "field": "weight",
+      "required": true,
+      "detect_by": "text_pattern:\\d+\\.?\\d*\\s*(kg|lb)",
+      "regex": "",
+      "description": "The actual weight of the shipment or piece displayed on the label in kg or lbs."
+    },
+    {
+      "field": "weight_icon",
+      "required": false,
+      "detect_by": "graphic:GFA",
+      "regex": "",
+      "description": "A visual icon printed when piece weight is 10 kg (22 lb) or above to alert handlers to heavier packages."
+    },
+    {
+      "field": "weight_unit",
+      "required": true,
+      "detect_by": "text_pattern:^(KG|LB|K|L)$",
+      "regex": "^(K|KG|L|LB)$",
+      "description": "Unit of measurement for shipment weight, indicating kilograms (K/KG) or pounds (L/LB)"
+    }
+  ],
+  "formatted_rules": {
+    "field_formats": {
+      "2d_barcode": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "zpl_command:^B7",
+        "description": "2D barcode (PDF417 or DataMatrix) encoding shipment data including tracking, origin, destination, and service type for automated processing."
+      },
+      "consignee_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The full recipient/consignee address block on the ESS Label, subject to GDPR restrictions."
+      },
+      "consignee_city": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The city of the shipment destination/receiver within the consignee address block."
+      },
+      "consignee_contact_name": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:ATTN:",
+        "description": "The contact person name at the destination, recommended when the consignee is a company."
+      },
+      "consignee_country": {
+        "pattern": "^[A-Z]{2}$",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The destination country as an ISO 3166-1 alpha-2 code or full country name within the consignee address block."
+      },
+      "consignee_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "The name of the person or company to whom the shipment is being delivered, prominently displayed in the destination address block."
+      },
+      "consignee_phone": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The telephone number of the receiver/consignee for delivery contact and customs clearance, required for international shipments."
+      },
+      "consignee_postal_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The postal/ZIP code of the shipment destination, a critical sortation element used to determine destination service area routing."
+      },
+      "consignee_state_province": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_to",
+        "description": "The state, province, or region of the shipment destination, required where applicable by country."
+      },
+      "consignor_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The full shipper/consignor address block on the ESS Label, subject to GDPR restrictions."
+      },
+      "consignor_contact": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_from",
+        "description": "Shipper contact details, no longer required on the Transport Label except in exceptional regulatory circumstances such as UN3373 compliance."
+      },
+      "content_description": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_contains:CTD",
+        "description": "Mandatory field describing the contents of the shipment, up to 300 characters, or 'CTD – see data' for approved neutral content descriptions."
+      },
+      "country_specific_codes": {
+        "pattern": "^(\\d{1,6}|[A-Za-z]{1,2})$",
+        "required": false,
+        "detect_by": "text_pattern:(\\d{1,6}|[A-Za-z]{1,2})",
+        "description": "Optional region-specific routing codes within the routing barcode for domestic use only, providing additional sortation information."
+      },
+      "currency_code": {
+        "pattern": "^[A-Z]{3}$",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z]{3}$",
+        "description": "ISO 4217 currency code indicating the currency used for the declared value of service."
+      },
+      "customer_logo": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "graphic:GFA",
+        "description": "Optional customer logo or DHL Initiative Logo (e.g., GoGreen) placed to the right of the sender address segment."
+      },
+      "data_matrix_barcode": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "zpl_command:^BX",
+        "description": "A 2D Data Matrix barcode per ISO/IEC 16022 encoding operational or customer data on 2D-enabled Transport Label layouts."
+      },
+      "data_matrix_customer_data": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "zpl_command:^BX",
+        "description": "A 2D Data Matrix barcode containing customer-specific data on 2D-enabled transport labels per ISO/IEC 16022."
+      },
+      "delivery_date": {
+        "pattern": "^([0-2][0-9]|3[01]|A|S|H)$",
+        "required": false,
+        "detect_by": "text_prefix:Day",
+        "description": "Delivery date display showing day of month (01-31) or special codes (A=appointment, S=Saturday, H=hold at depot)."
+      },
+      "delivery_date_code": {
+        "pattern": "^\\d{2}$",
+        "required": true,
+        "detect_by": "barcode_data:^\\d{2}$",
+        "description": "A 2-digit code in the routing barcode indicating the delivery date or scheduling option (00=no date, 01-31=day, 50=Saturday, 51=appointment, 52=hold)."
+      },
+      "delivery_time": {
+        "pattern": "^(X09|X10|X12|[0-9])$",
+        "required": false,
+        "detect_by": "text_prefix:Time",
+        "description": "Delivery time window code displayed on label (e.g., X09, X10, X12) with a single-digit code in the routing barcode."
+      },
+      "delivery_time_code": {
+        "pattern": "^[0-3]$",
+        "required": true,
+        "detect_by": "text_pattern:^[0-3]$",
+        "description": "Single-digit numeric code indicating the delivery time feature (0=none, 1=pre-09:00, 2=pre-12:00, 3=pre-10:30)"
+      },
+      "destination_country_code": {
+        "pattern": "^[A-Z]{2}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{2}$",
+        "description": "ISO 3166-1 alpha-2 country code for the shipment destination, displayed prominently for sortation"
+      },
+      "destination_facility_code": {
+        "pattern": "^[A-Z]{2}-[A-Z0-9]{3}(-[A-Z0-9]{3})?$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{2}-[A-Z0-9]{3}(-[A-Z0-9]{3})?$",
+        "description": "DHL facility code for the delivery facility, consisting of country code, service area code, and optional facility code"
+      },
+      "destination_postcode": {
+        "pattern": "^[A-Z0-9:]{1,12}$",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z0-9:]{1,12}$",
+        "description": "Postcode of the consignee address encoded in the routing barcode, max 12 characters with no spaces or symbols"
+      },
+      "destination_service_area_code": {
+        "pattern": "^[A-Z0-9]{3}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z0-9]{3}$",
+        "description": "Three-character code identifying the DHL service area at the destination responsible for final delivery"
+      },
+      "dhl_logo": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "graphic:GFA",
+        "description": "Official DHL carrier logo printed in the upper right corner of the transport label"
+      },
+      "handling_feature_codes": {
+        "pattern": "^[0-9]{3}$",
+        "required": false,
+        "detect_by": "text_pattern:^[0-9]{3}$",
+        "description": "Three-digit handling feature codes representing product features impacting sorting and delivery, displayed in reverse video"
+      },
+      "handling_service_logos": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "graphic:GFA",
+        "description": "Visual logos/icons indicating specific handling-relevant services such as Medical Express"
+      },
+      "inbound_sort_code": {
+        "pattern": "^[A-Z0-9.]{1,4}$",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z0-9.]{1,4}$",
+        "description": "Sort code used at destination inbound facilities for manual sorting, up to 4 alphanumeric characters"
+      },
+      "iso_country_code": {
+        "pattern": "^([A-Z]{2}|\\d{3})$",
+        "required": true,
+        "detect_by": "text_pattern:^([A-Z]{2}|\\d{3})$",
+        "description": "ISO 3166-1 destination country code encoded in the routing barcode, 2-alpha (ASC MH10) or 3-digit (GS1) format"
+      },
+      "label_certification_identifier": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:\\*.*\\*",
+        "description": "Unique identifier assigned by the GCoCL team certifying the transport label is approved for production use"
+      },
+      "label_printing_date": {
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "required": true,
+        "detect_by": "text_pattern:^\\d{4}-\\d{2}-\\d{2}$",
+        "description": "Date the label was printed in ISO 8601 format (yyyy-mm-dd)"
+      },
+      "medical_express_logo": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "graphic:GFA",
+        "description": "Heart shape logo with pulse line identifying Medical Express shipments requiring highest priority handling"
+      },
+      "origin_service_area_code": {
+        "pattern": "^[A-Z0-9]{3}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z0-9]{3}$",
+        "description": "Three-character code identifying the DHL service area at the origin that processes the shipment"
+      },
+      "outbound_sort_code": {
+        "pattern": "^[A-Z0-9.]{1,4}$",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z0-9.]{1,4}$",
+        "description": "Sort code for manual sorting at outbound facilities, up to 4 alphanumeric characters or dot if no value found"
+      },
+      "piece_count": {
+        "pattern": "^\\d+/([\\d]+|\\.)$",
+        "required": true,
+        "detect_by": "text_pattern:^\\d+/[\\d.]+$",
+        "description": "Relative piece number and total pieces in shipment in X/Y format, with dot replacing unknown values"
+      },
+      "piece_identifier": {
+        "pattern": "^JD01.+$",
+        "required": true,
+        "detect_by": "barcode_data:^JD01",
+        "description": "Unique piece identifier (license plate) per ISO/IEC 15459-1 with JD01 data identifier prefix, encoded in Code 128 barcode"
+      },
+      "piece_number": {
+        "pattern": "^\\d{1,4}$",
+        "required": true,
+        "detect_by": "text_pattern:^\\d{1,4}$",
+        "description": "Sequential number identifying this specific piece within a multi-piece shipment"
+      },
+      "piece_shipment_reference": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:REF:",
+        "description": "Customer-defined alphanumeric reference identifier for the piece or shipment, qualified by Reference Type Codes"
+      },
+      "piece_weight": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:Pce",
+        "description": "Weight of an individual piece/package, mandatory for Remote Pickup shipments and printed when available for multi-piece shipments"
+      },
+      "piece_weight_symbols": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "graphic:GFA",
+        "description": "Graphical weight warning icons (10+ kg or 20+ kg) required for shipments delivered in Germany per federal law"
+      },
+      "printing_application": {
+        "pattern": "\\d+\\.\\d{2}\\.\\d{3}",
+        "required": true,
+        "detect_by": "text_pattern:^.+\\s+\\d+\\.\\d{2}\\.\\d{3}",
+        "description": "Identifies the label printing/rendering application and its version number in X.XX.XXX format"
+      },
+      "product_code": {
+        "pattern": "\\d{2}",
+        "required": true,
+        "detect_by": "barcode_data:\\+\\d{2}",
+        "description": "2-digit numeric code representing the DHL transport product type, encoded within the routing barcode"
+      },
+      "product_content_code": {
+        "pattern": "^[A-Z]{3}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{3}$",
+        "description": "DHL's internal 3-character uppercase code for the product under which a transport order is processed"
+      },
+      "product_name": {
+        "pattern": "^[A-Z0-9 :]{1,20}$",
+        "required": true,
+        "detect_by": "text_pattern:^EXPRESS |^DOMESTIC |^ECONOMY |^MEDICAL ",
+        "description": "Global Product Short Name identifying the DHL Express product sold to the customer, up to 20 uppercase characters"
+      },
+      "product_service_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_pattern:^[A-Z]$",
+        "description": "Short code identifying a value-added service associated with the shipment, displayed when applicable"
+      },
+      "qr_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "zpl_command:^BQ",
+        "description": "QR Code barcode encoding operational data for PUD and in-facility domains, used in LabelFree scenarios"
+      },
+      "reference_number": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:REF:",
+        "description": "Customer-defined shipper reference number for cross-referencing with their own systems"
+      },
+      "reference_number_2": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_prefix:REF2:",
+        "description": "Additional customer-defined reference number for the shipment"
+      },
+      "regulatory_information": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_contains:regulatory",
+        "description": "Legally required regulatory text such as country-specific declarations, export info, or dangerous goods declarations"
+      },
+      "routing_barcode": {
+        "pattern": "^(2L)[A-Z]{2}[A-Z0-9]*\\+\\d{8}|(403)\\d{3}[A-Z0-9]*\\+\\d{8}",
+        "required": true,
+        "detect_by": "barcode_data:^\\(?(2L|403)\\)?",
+        "description": "Barcode containing the DHL ISO Routing Code encoding destination country, postcode, product code, and features in Code 128 or GS1-128 format"
+      },
+      "routing_code": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{2,3}[- ][A-Z0-9]",
+        "description": "Composite sortation code combining destination service area code, facility code, and sort indicators displayed prominently on the label"
+      },
+      "routing_code_human_readable": {
+        "pattern": "^\\((2L|403)\\)[A-Z0-9]+\\+\\d{8}",
+        "required": true,
+        "detect_by": "text_pattern:^\\(2L\\)|^\\(403\\)",
+        "description": "Human-readable text of the routing barcode content with parenthesized data identifier, shown adjacent to the routing barcode"
+      },
+      "service_area_code_of_origin": {
+        "pattern": "^[A-Z]{3}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{3}$",
+        "description": "3-character uppercase letter code representing the locally defined DHL service area of origin"
+      },
+      "service_icon": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "graphic:GFA",
+        "description": "Visual icon representing the DHL service type for quick identification of service level by handlers"
+      },
+      "service_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_exact:EUROPACK|DOM EUROPACK|ECONOMY SELECT|EXPRESS WORLDWIDE|Medical EXPRESS",
+        "description": "Human-readable name of the DHL Express service/product used for the shipment"
+      },
+      "service_type": {
+        "pattern": "^[A-Z]{1,3}$",
+        "required": true,
+        "detect_by": "text_pattern:^[A-Z]{1,3}$",
+        "description": "1-3 character alphanumeric code identifying the DHL shipping service/product selected for the shipment"
+      },
+      "ship_from_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "Sender/consignor's multi-line address block with 'From' header, max 7 lines at 47 characters each"
+      },
+      "ship_to_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_to",
+        "description": "Consignee's delivery address block with 'To' header, max 7 lines, emphasized with hooks and larger font for country and postal code"
+      },
+      "shipment_date": {
+        "pattern": "^\\d{2}[A-Z]{3}\\d{4}$",
+        "required": true,
+        "detect_by": "text_pattern:\\d{2}[- ]?[A-Z]{3}[- ]?\\d{4}",
+        "description": "The date the shipment is tendered to DHL, typically in DD-MMM-YYYY format."
+      },
+      "shipment_identifier": {
+        "pattern": "^\\d{10}$",
+        "required": true,
+        "detect_by": "text_pattern:^\\d{4} ?\\d{3} ?\\d{3}$",
+        "description": "DHL 10-digit waybill number consisting of 9 base digits plus a MOD 7 check digit."
+      },
+      "shipment_weight": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_pattern:\\d+\\.?\\d*\\s*kg|lb",
+        "description": "The sum of weights of all pieces in the shipment, displayed with unit of measure (kg or lb)."
+      },
+      "shipper_account_number": {
+        "pattern": "^\\d{9}$",
+        "required": true,
+        "detect_by": "text_pattern:^\\d{9}$",
+        "description": "The 9-digit DHL account number of the shipper used for billing and identification."
+      },
+      "shipper_address": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The full street address of the shipment origin/sender including street, city, state, postal code, and country."
+      },
+      "shipper_name": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The name of the person or company sending the shipment."
+      },
+      "shipper_city": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The city of the shipment origin/sender within the shipper address block."
+      },
+      "shipper_country": {
+        "pattern": "^[A-Z]{2}$",
+        "required": true,
+        "detect_by": "spatial:ship_from",
+        "description": "The ISO 3166-1 alpha-2 country code of the shipment origin/sender."
+      },
+      "shipper_phone": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_from",
+        "description": "The telephone number of the shipper/sender for contact purposes."
+      },
+      "shipper_postal_code": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_from",
+        "description": "The postal/ZIP code of the shipment origin, format varies by country."
+      },
+      "shipper_state_province": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "spatial:ship_from",
+        "description": "The state, province, or region of the shipment origin/sender where applicable."
+      },
+      "tracking_number": {
+        "pattern": "^\\d{10,11}$",
+        "required": true,
+        "detect_by": "barcode_data:^\\d{10,11}$",
+        "description": "The primary DHL tracking/waybill number used to track the package through the DHL network."
+      },
+      "tracking_number_barcode": {
+        "pattern": "^\\d{10,11}$",
+        "required": true,
+        "detect_by": "zpl_command:^BC",
+        "description": "1D barcode (Code 128) encoding the DHL tracking/waybill number for automated scanning."
+      },
+      "waybill_number_barcode": {
+        "pattern": "^\\d{10}$",
+        "required": true,
+        "detect_by": "zpl_command:^B3",
+        "description": "Code 39 barcode encoding the 10-digit waybill number with MOD 7 check digit."
+      },
+      "two_d_data_matrix": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "zpl_command:^BX",
+        "description": "2D Data Matrix ECC 200 barcode encoding operational data per ISO/IEC 15434 with public, open, and customer segments."
+      },
+      "special_conditional_information": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_contains:special",
+        "description": "Additional special or conditional information appearing on the label based on specific shipment requirements."
+      },
+      "value_of_service": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "text_pattern:\\d[\\d ]*\\.\\d{2}",
+        "description": "The declared monetary value associated with a value-added service such as insured delivery."
+      },
+      "weight": {
+        "pattern": "",
+        "required": true,
+        "detect_by": "text_pattern:\\d+\\.?\\d*\\s*(kg|lb)",
+        "description": "The actual weight of the shipment or piece displayed on the label in kg or lbs."
+      },
+      "weight_icon": {
+        "pattern": "",
+        "required": false,
+        "detect_by": "graphic:GFA",
+        "description": "A visual icon printed when piece weight is 10 kg (22 lb) or above to alert handlers to heavier packages."
+      },
+      "weight_unit": {
+        "pattern": "^(K|KG|L|LB)$",
+        "required": true,
+        "detect_by": "text_pattern:^(KG|LB|K|L)$",
+        "description": "Unit of measurement for shipment weight, indicating kilograms (K/KG) or pounds (L/LB)"
+      }
+    },
+    "required_fields": [
+      "consignee_address",
+      "consignee_city",
+      "consignee_country",
+      "consignee_name",
+      "consignor_address",
+      "content_description",
+      "delivery_date_code",
+      "delivery_time_code",
+      "destination_country_code",
+      "destination_facility_code",
+      "destination_service_area_code",
+      "dhl_logo",
+      "iso_country_code",
+      "label_certification_identifier",
+      "label_printing_date",
+      "origin_service_area_code",
+      "piece_count",
+      "piece_identifier",
+      "piece_number",
+      "printing_application",
+      "product_code",
+      "product_content_code",
+      "product_name",
+      "routing_barcode",
+      "routing_code",
+      "routing_code_human_readable",
+      "service_area_code_of_origin",
+      "service_icon",
+      "service_name",
+      "service_type",
+      "ship_from_address",
+      "ship_to_address",
+      "shipment_date",
+      "shipment_identifier",
+      "shipper_account_number",
+      "shipper_address",
+      "shipper_name",
+      "shipper_city",
+      "shipper_country",
+      "tracking_number",
+      "tracking_number_barcode",
+      "waybill_number_barcode",
+      "two_d_data_matrix",
+      "weight",
+      "weight_unit"
+    ],
+    "confidence_score": 0.9
+  }
+}

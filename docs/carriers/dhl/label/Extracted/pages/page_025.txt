@@ -1,0 +1,84 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.9.3. 
+  Inbound Sort Code (Conditional) 
+12 
+ 
+DHL Inbound Sort Codes are mandatory and must be printed on the label when defined (not the case for all 
+inbound facilities). 
+ 
+  The Inbound Sort Code consists of up to 4 alphanumeric chars (numerals or capital letters). It depends on 
+destination country, Postcode and product and can serve as either: 
+ 
+• Consolidator: various facilities having the same Inbound Sort Code 
+• Separator: A facility sub-divided in areas, based on Postal Code and/or product 
+ 
+DHL may not require the Inbound Sort Code for all destinations, in which cases this field is to be populated with 
+a “.”.This is equivalent to the statement that "." is only used if an effective attempt to look a sort code up returned 
+no value. 
+ 
+Whenever no attempt was made to determine the Inbound Sort Code, then this should be left blank. "." This will 
+also indicate to DHL that the label needs to be re-printed. 
+ 
+ 
+5.10. 
+ 
+Product Features 
+5.10.1. Handling-relevant Feature Codes - HFC (Conditional) 
+ 
+Product Features encompass Handling and Date/Time Delivery features, which are shown on the label to 
+support DHL internal operational procedures. 
+13 
+14 
+15 
+   Day 
+  C – DTP   
+   31 
+ Time 
+X09 
+ 
+Only product features which are handling-relevant (i.e. impact the sorting and/or delivery processes) are shown 
+on the label (and printed left aligned). The Handling Feature Codes (e.g. “DTP”), translated from the chosen 
+Product and Service Codes (e.g. “DD”) are printed in reverse video format in this segment. 
+ 
+When defined through the Service Codes, HFCs are mandatory and must be printed as per the Global 
+Standard. 
+ 
+The translation from commercial products and services to handling codes is based on DHL’s reference 
+data (e.g. tools provided by DHL Express to our customers offer this capability). 
+ 
+Product features that are not handling-relevant appear only on the accompanying documentation, such as the 
+electronic information (EDI), the pickup- and delivery lists. 
+ 
+5.10.2. Delivery Date (conditional) 
+This field shows the delivery date feature (to be coded mandatorily in the routing barcode - – refer to section 
+3.12.1).  
+14 
+15 
+   Day 
+   31 
+ Time 
+X09 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+24

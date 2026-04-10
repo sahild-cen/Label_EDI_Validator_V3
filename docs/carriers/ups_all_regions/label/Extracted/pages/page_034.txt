@@ -1,0 +1,59 @@
+UPS Trade Direct™ Specifications
+UPS Worldwide Express Freight™ Label
+Unique Shipment Identifier (USI)
+The USI Number is a mandatory field that must print left justified 
+• 
+Data Content
+Positions 	
+1-4 	
+= 	USI:
+Position 	
+5 	
+= 	Space
+Positions 	 6-14 	
+= 	9 numeric 
+Position 	
+15 	
+= 	Check Digit
+• 
+Font Size = 10 pt.
+• 
+For Example:  84000028T
+NOTE: Check digit can be numeric or the letter "T" 
+See Appendix A for the Check Digit Calculation example.
+203 KG
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+SHP#: 1X2X 3X33 3TT
+SHP WT: 203 KG
+STREET ADDRESS
+DATE: 11 JAN 2020
+POSTAL CODE LINE
+GERMANY
+CONTACT NAME
+SHIP
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+CHICAGO  IL 60607
+UNITED STATES
+IL 606 9-02
+UPS EXPRESS FREIGHT
+1Z 1X2 X3X E1 0000 5403
+TRACKING #:
+1P
+BILLING: P/P
+INV
+DESC: CLOTHING
+USI: 840000028T
+18.5A 01/2020
+UPS Guide to Labeling
+33
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

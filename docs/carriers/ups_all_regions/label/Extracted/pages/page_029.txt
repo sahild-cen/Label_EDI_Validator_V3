@@ -1,0 +1,156 @@
+UPS Trade Direct™ Specifications
+Label Format Requirements 
+UPS Trade Direct™ - Package Pallet Label
+SHIPMENT ID BARCODE
+The Shipment ID barcode will display directly below 
+the human readable Shipment ID.
+Additional Routing Instructions Block
+The package pallet label is produced for the UPS 
+service provider to help identify loose packages that 
+will be processed through the regular UPS system. 
+These packages are segregated on a separate pallet 
+and identified with this label. 
+Package Information Block 
+The Additional Routing Instructions block contains 
+piece counts and reference numbers.
+PIECE COUNTS SECTION
+Ground Piece Count
+ADDRESSES
+The label will contain a Ship From and Ship To 
+address. The Ship To address will always be the UPS 
+facility processing the packages. 
+• 
+Data Content
+Positions 	 1-7	
+=	 GROUND:
+Position	
+8	
+=	 Space
+Positions 	
+9-11	
+=	 Up to three numeric
+PACKAGE PALLET LABEL TITLE
+The title will appear in the top left corner 
+of the label.
+Position 	
+12	
+=	 Space
+Positions 	
+13-18	
+=	 PIECES
+• 
+Data Content
+Positions 1-20      	
+= PACKAGE PALLET LABEL
+• 
+Font Size                            = 10 pt. bold
+• Font Size                                  = 12 pt. bold
+SHIPMENT WEIGHT (Right Justified)
+• 
+Data Content
+Positions 	 1-7	
+=	 SHP WT: 
+Position	
+8	
+=	 Space
+Positions 	
+9-12	
+=	 Up to four numeric
+Position	
+13	
+=	 Space
+PALLET COUNT
+The pallet count indicates the number of this pallet 
+N, related to the total number of package pallets in 
+the entire shipment X (e.g., N of X). The pallet count 
+appears on the first line in the upper right corner of 
+the label. 
+Positions 	
+14-16	
+=	 LBS or KG
+• 
+Font Size                            = 10 pt. bold
+• 
+Data Content
+Positions 	
+1-4	
+=	 Up to four numeric 
+• 
+For Example:  SHP WT: 1000 KG
+Position	
+5	
+=	 Space
+AIR PIECE COUNT
+Positions 	
+6-7	
+=	 OF
+Position 	
+8	
+=	 Space
+• 
+Data Content
+Positions 	 1-4	
+=	 AIR:
+Positions 	 9-12	
+=	 Up to four numeric
+Position 	
+5	
+=	 Space
+• Font Size = 10 pt. bold
+Positions 	 6-8	
+=	 Up to three numeric
+• For Example:  1 OF 9999
+Position 	
+9	
+=	 Space
+Shipment ID Barcode Block
+Positions 	
+10-15	
+=	 PIECES
+• 
+Font Size                            = 10 pt. bold
+TOTAL PIECE COUNT
+HUMAN READABLE SHIPMENT ID NUMBER
+The human readable interpretation of the Shipment 
+ID will appear immediately below the Ship To 
+address separated by a horizontal line.
+• 
+Data Content
+Positions 	
+1-12	
+=	 TOTAL COUNT:
+Position	
+13	
+=	 Space
+• 
+Data Content
+Positions 	 1-16 	
+= 	CM SHIPMENT ID#:
+Positions 	
+14-17	
+=	 Up to four numeric
+Position 	
+17 	
+= 	Space
+Position 	
+18	
+=	 Space
+Positions 	 18-26 	
+= 	9 numeric 
+Positions 	
+19-24	
+=	 PIECES
+Position 	
+27 	
+= 	Check Digit
+• 
+Font Size                            = 10 pt. bold
+• 
+Font Size                                  = 10 pt.
+• 
+For Example:  84000028T
+UPS Guide to Labeling
+28
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

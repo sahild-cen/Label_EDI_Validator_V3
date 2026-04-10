@@ -1,0 +1,77 @@
+Message Specification Guidelines                         
+                          
+ 
+UNH  
+Segment 
+Occurrence 
+Usage 
+Description 
+UNH 
+1 
+M 
+ Message Header 
+Function: To head, identify and specify a message. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+0062 
+M 
+AN..14 
+Message reference number 
+S009 
+M 
+ 
+MESSAGE IDENTIFIER 
+   0065 
+M 
+AN..6 
+Message type identifier 
+   0052 
+M 
+AN..3 
+Message type version number 
+   0054 
+M 
+AN..3 
+Message type release number 
+   0051 
+M 
+AN..3 
+Controlling agency  
+0068 
+R 
+AN..35 
+Common access reference 
+ 
+Example:  
+UNH+123+IFCSUM:D:01B:UN+GM2/ACMESHIPPINGPLATFORM_V1.6 
+ 
+Note 0062: 
+An application generated unique message reference number. This number must be 
+unique for a period of 3 months. 
+ 
+Note 0065: 
+Use ‘IFCSUM’ 
+ 
+Note 0052: 
+Use ‘D’ 
+ 
+Note 0054: 
+Use ‘01B’ 
+ 
+Note 0051: 
+Use ‘UN’ 
+ 
+Note 0068: 
+DHL Express determined identification for recognizing the name of the source shipping 
+system platform, application or software that created the message. The data is divided with 
+Slash (‘/’). Value GM2 is to be given before the slash. The name of the source shipping 
+platform is given after the slash. The source name must be bilaterally agreed by the party 
+generating the message (so the DHL Express customer or their shipping system provider) 
+and DHL Express. For instance this could be a concatenation of the name, version and 
+release of the generating software. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 24 of 115

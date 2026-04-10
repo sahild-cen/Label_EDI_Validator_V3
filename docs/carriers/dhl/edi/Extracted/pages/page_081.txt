@@ -1,0 +1,68 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 (Invoice Line Item) 
+Group 
+Occurrence 
+Usage 
+Description 
+SG50 
+999 
+R 
+ GID-SG52-SG53-SG55-SG65 
+Function: A group of segments to describe the goods line items related in an Invoice 
+ 
+SG 50 - GID 
+Segment 
+Occurrence 
+Usage 
+Description 
+GID 
+1 
+M 
+ Goods Item Details                                                                           
+Function: A segment to identify a line item in an Invoice 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1496 
+C 
+N..5 
+Goods item number 
+C213 
+R 
+ 
+NUMBER AND TYPE OF PACKAGES 
+   7224 
+R 
+N..8 
+Package quantity 
+   7065 
+R 
+AN..17 
+Package type description code 
+ 
+Example:  
+GID+3+1:CT' 
+ 
+Note:   
+For Invoice Line Item SG 50 GID, SG 50 FTX - FTX+LIN' is mandatory 
+ 
+Note 1496: 
+Sequence number incrementing per line item 
+Note 7224: 
+The number of packages is always 1, since the following segments indicate items within 
+one shipment. 
+Note 7065: 
+For the list of package types, please consult your Sales Representative. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 81 of 115

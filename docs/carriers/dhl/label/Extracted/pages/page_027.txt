@@ -1,0 +1,41 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+Some of those cases are Medical Express Shipments, which may contain life-saving commodities (e.g. vaccines, 
+medicines) and/or are temperature-sensitive and, as such, need to be identified, processed and delivered with 
+the highest possible priority and accuracy. 
+The addition of a Medical-related symbol (logo) to the area adjacent (above) to the scannable Piece Identifier 
+barcodes (refer to image below) will help keep it in full sight of the operations team at point of processing.  
+ 
+This new logo is unique6 to Medical Express shipments so that it continues to remain a distinct and the powerful 
+signal that priority is required. The chosen logo is the heart shape with a pulse line transitioning through it (refer 
+to image below).  
+ 
+ 
+A min area of 15*15 mm2 is specified for the logo and must be complied with, while the original proportions must 
+be kept. The location of the Medical EXPRESS Logo shall not impact or overlap the necessary quiet zones of 
+the adjacent barcodes. 
+ 
+6 The Medical EXPRESS Logo is specified in compliance with the applicable Corporate Branding guidelines 
+and is available, in the form of an approved graphical file, for operational use. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+26

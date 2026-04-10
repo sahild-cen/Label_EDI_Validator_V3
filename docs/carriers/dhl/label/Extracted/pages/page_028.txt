@@ -1,0 +1,61 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11. 
+Standard Shipment information 
+ 
+The Shipment Information section contains the following information elements: 
+ 
+5.11.1. Piece / Shipment Reference (optional) 
+ 
+A customer may refer to a package using specific identifier(s) (e.g. reference codes, which consist of sets of 
+alphanumeric chars). A Shipper’s Reference is one type of the more generic Shipment References, which is 
+under customer’s responsibility to manage. 
+ 
+Shipment References may be printed on the label, ideally in cases where DHL has received those references 
+with the transport order. All formats supported by the solution agreed with DHL can be printed on the label as 
+well. 
+ 
+Piece and Shipment References are usually qualified by specific Reference Type Codes (ex-Reference 
+Qualifiers), which give them a specific meaning. Refer to DHL EXPRESS Piece/Shipment Reference Standard. 
+ 
+5.11.2. Piece / Shipment Weight (conditional) 
+ 
+The weight of all single pieces (“Shipment Weight” = weight of all pieces building up a shipment) and of the 
+corresponding single(s) piece are to be printed here.  
+The lack of Shipment Weight may lead to issues in Customs processing and is therefore mandatory for 
+at least one package of each dutiable shipment.  
+As a minimum requirement, the label provided with the last piece must contain both the sum of the weight 
+of all pieces belonging to the shipment (legacy term “Shipment Weight”) and its corresponding single 
+piece weight. 
+ 
+Example:8/25 for the last piece label of a shipment, where “8” corresponds to the single piece weight and 
+“25” corresponds to the sum of all single pieces building up the associated shipment. The initial piece 
+labels would have the value “7/.”, where the “.” indicates that the total weight is not yet known. 
+For single-piece shipments, the weight needs to be printed only once (e.g. 13.4 kg instead of 13.4/13.4 kg)  
+The Transport Label always has to show the Dead Weight, NOT a calculated volumetric weight, 
+should it be available at the time of printing the label 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+27

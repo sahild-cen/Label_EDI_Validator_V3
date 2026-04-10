@@ -1,0 +1,68 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 55  
+Group 
+Occurrence 
+Usage 
+Description 
+SG55 
+1 
+R 
+ PCI-GIN                                                                                              
+Function: A group of segments to specify marks and numbers of a goods item. 
+ 
+SG 55 - PCI 
+Segment 
+Occurrence 
+Usage 
+Description 
+PCI 
+1 
+M 
+ Package identification                                                                      
+Function: To specify marks and numbers of a good item. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4233 
+R 
+AN..3 
+Marking instructions, coded 
+ 
+Example:  
+PCI+18’ 
+ 
+Note 4233: 
+Use ‘18’ – Carrier’s instructions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 62 of 115

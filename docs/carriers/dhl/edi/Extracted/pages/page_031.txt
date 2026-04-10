@@ -1,0 +1,26 @@
+Message Specification Guidelines                         
+                          
+ 
+. 
+Note 3039: 
+This element is used only in combination with qualifier ‘CZ’ in element 3035. It contains 
+the assigned shipper account number of DHL. 
+ 
+Note 3036: 
+They contain the full name of the Shipper party. 
+ 
+Note 3042: 
+Use this element three times to specify street name, building number, house number and 
+house number addition. However if for technical reason, it is not possible for the 
+customer to split the address data, the street name, building number and house number 
+may be concatenate in the first element 3042. 
+Note 3229: 
+Use this for 2-char state code as defined in Format ISO 3166-2, e.g. TX. 
+Note 3251: 
+Mandatory except for countries where no postcode system is available, e.g. Ireland. 
+ 
+Note 3207: 
+Format ISO 3166-1 Alpha 2 country codes. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 31 of 115

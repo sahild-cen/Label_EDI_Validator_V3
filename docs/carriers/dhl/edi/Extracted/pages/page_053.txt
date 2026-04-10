@@ -1,0 +1,79 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 44 
+Group 
+Occurrence 
+Usage 
+Description 
+SG44 
+1 
+C 
+ CTA-COM 
+Function: A group of segments to identify a party, related references, locations contacts, required documents,  
+and charges to be paid by the party. 
+SG 44 - CTA 
+Segment 
+Occurrence 
+Usage 
+Description 
+ 
+CTA 
+1 
+M 
+ Contact Information                                                                         SG12 
+Function: To specify a person within a party. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3139 
+R 
+AN..3 
+Contact function code 
+C056 
+R 
+ 
+DEPARTMENT OR EMPLOYEE DETAILS 
+   3413 
+X 
+AN..17 
+Department or employee name code 
+   3412 
+R 
+AN..35 
+Department or employee name 
+ 
+Example:  
+CTA+AC+:M. OLIVIER ABIDTS’ 
+ 
+Note: 
+This segment contains the ‘for the attention of‘ information. The segment group is 
+mandatory for product feature ‘Delivery limited to receiver’ because it holds the name of 
+the person to whom delivery must be accomplished. This segment is to be used only to 
+give the receiver contact name. 
+ 
+Note 3139: 
+Use: 
+ 
+‘AC’ - Accepting contact. Use for product feature ‘Delivery limited to receiver”; else use  
+‘IC’ - Contact information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 53 of 115

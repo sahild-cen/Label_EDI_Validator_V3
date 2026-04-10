@@ -1,0 +1,37 @@
+Label Format Requirements
+UPS Worldwide Express Freight™  Label - Hold for Pickup - Import Control - U.S. Origin
+1542 LBS
+1 OF 1
+CONTACT NAME
+PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+SHP#: 1X2X 3X33 3TT
+SHP WT: 1542 LBS
+DATE: 11 JAN 2020
+POSTAL CODE LINE
+UNITED STATES
+SHIP
+HOLD FOR PICKUP - CONTACT NAME 
+PHONE NUMBER
+TO:
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+12099 BERLIN
+GERMANY
+DEU 091 0-00
+TRACKING #:
+UPS EXPRESS FREIGHT
+1Z 1X2 X3X E5 0000 5405
+1P
+BILLING: P/P
+INV-RS
+DESC: MARBLE
+18.5A 01/2020
+31
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

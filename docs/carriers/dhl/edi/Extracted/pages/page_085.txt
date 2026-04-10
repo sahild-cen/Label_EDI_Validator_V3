@@ -1,0 +1,78 @@
+Message Specification Guidelines                         
+                          
+ 
+ 
+Segment Group 52 (Invoice Line Item)   
+Group 
+Occurrence 
+Usage 
+Description 
+SG52 
+2 
+R 
+ MEA                                                                                                    
+Function: A group of segments to specify measurements applicable to a line item 
+ 
+SG 52 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: A segment to specify measurements, applicable to a line item (i.e. Line Item Gross weight,  
+Line Item Net Weight) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement application qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+   6313 
+R 
+AN..3 
+Measured attribute code 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..15 
+Measurement value 
+ 
+Example:  
+MEA+WT+AAE+KGM:2.8' 
+MEA+WT+AAF+KGM:2.0' 
+ 
+Note 6311:  
+Use: ‘WT’ – Weight. 
+ 
+Note 6313:  
+Use: ‘AAE’ - Line Item Gross Weight 
+        ‘AAF’ - Line Item Net Weight 
+ 
+Note 6411:  
+Confirm with DHL Express which units of the following can be supported in the shipment 
+origin country: ‘KGM or ‘LBR’ 
+ 
+Note 6314:  
+• The weight of the item is given with a maximum of 15 digits inclusive 3 decimal. 
+• Decimal sign may be point or comma depending of what has been specified in segment 
+UNA. 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 85 of 115

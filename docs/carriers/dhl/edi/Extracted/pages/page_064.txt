@@ -1,0 +1,75 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 65  
+Group 
+Occurrence 
+Usage 
+Description 
+SG65 
+99 
+C 
+ DGS-FTX-SG67 
+Function: A group of segments to specify dangerous goods details related to the goods item. One goods item 
+may be in different dangerous goods classes. 
+ 
+SG 65 - DGS 
+Segment 
+Occurrence 
+Usage 
+Description 
+DGS 
+1 
+M 
+ Document message details                                                             
+Function: To identify dangerous goods in limited quantities. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+8273 
+R 
+AN..3 
+Dangerous goods regulations, coded 
+C205 
+C 
+ 
+HAZARD CODE 
+   8351 
+R 
+AN..7 
+Hazard code identification 
+   8078 
+R 
+AN..7 
+Additional hazard classification identifier 
+   8092 
+R 
+AN..10 
+Hazard code version identifier 
+C234 
+R 
+ 
+UNDG INFORMATION 
+   7124 
+R 
+N..4 
+United Nation Dangerous Goods identifier 
+ 
+Example:  
+DGS+ADR+3:3:B+1294’ 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 – RFF. Contact DHL Express for advice as to the values to use. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 64 of 115

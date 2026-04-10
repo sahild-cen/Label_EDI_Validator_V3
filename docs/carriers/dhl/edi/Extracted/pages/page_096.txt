@@ -1,0 +1,68 @@
+Message Specification Guidelines                         
+                          
+ 
+Appendix B – Product Features 
+Feature description 
+Feature 
+Group 
+Feature name 
+DHL 
+Feature 
+ID 
+EDI 
+Feature 
+ID 
+Data staging 
+03 
+PT 
+803 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 3 months. 
+Data staging 
+06 
+PU 
+806 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 6 months. 
+Data staging 
+12 
+PV 
+812 
+Shipment Preparation (Advance Shipment) 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 12 months. 
+Data staging 
+24 
+PW 
+824 
+On contractual agreement with the Shipper, pre-
+printed waybills for the management of his return 
+second leg shipments are created via one of the 
+available eCom tools that offers a pre-print 
+functionality for Global SOP approved eCom 
+Labels. Data Staging will ensure that the complete 
+set of shipment details entered into the eCom tool 
+will be stored until the waybill /label is actually used 
+within 24 months. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 96 of 115

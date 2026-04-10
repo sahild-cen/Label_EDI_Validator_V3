@@ -1,0 +1,58 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 25 - CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+9 
+O 
+ Control Totals 
+Function: To provide control total. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+56:137’ 
+ 
+Note: 
+This segment represents control totals within respective Shipment. 
+ 
+For “LBBX Customer Controlled solution” purposes - this segment should be sent within 
+the each ‘baby’ shipment. 
+ 
+Note 6069: 
+Use: 
+‘56’ – for LBBX purposes: Total number of transport units (number of mother pieces = 
+sum of all baby pieces – optional.) 
+ 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Use: 
+Element 6411 is not used with ‘56’ in 6069.  
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 38 of 115

@@ -1,0 +1,83 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.11.2.1. 
+“Shipment Weight” – Shipper Declared vs DHL Actual  
+Weight, as provided by the customer (e.g. “Original Shipper Declared Weight” through EDI / 2D Code / Manual 
+Waybill), has to be printed on the label if the printing occurs prior to DHL Reweigh processing, in this field. 
+ 
+When no weight was available at the time of printing the label, a “.” shall be printed to indicate that fact.  
+ 
+Customs recommends that, for easier customs processing, the full shipment weight i.e. the total weight of the 
+pieces making up the shipment, be printed on each package. This should be done where this information is 
+available when printing the label. 
+ 
+Note: the sum of all pieces weight is not always known at the time of printing a label. For this reason and in such 
+circumstances, it is acceptable that only the last piece label contains the set [Piece Weight] / [Total Piece 
+Weight]. 
+  
+Any customer automation application has to ensure that at least the last package of a shipment 
+contains the shipment weight. Wherever the shipment weight is known prior to printing the first label, 
+it must be printed on all labels. 
+ 
+ 
+5.11.2.2. 
+Piece Weight  
+ 
+Piece Weight is mandatory for Remote Pickup shipments and must be printed whenever available for multi-
+piece shipments. 
+ 
+Piece weight may be legally required in some countries, for health and security reasons. 
+ 
+5.11.2.3. 
+Printing Structure 
+ 
+a) 
+Measuring Unit 
+The weight can be stated in kg or in lbs, alternatively. The measuring unit has to be printed following the 
+weight value. In case of combined piece/shipment weight it is only required behind the shipment weight. 
+The measuring unit for both weights must be the same in all cases. 
+b) 
+Value  
+The weight value must be a valid number, with no more than one decimal digit  
+c) 
+Header Text 
+• 
+The header text for a piece weight is “Piece Weight” 
+• 
+The header text for a shipment weight is “Shipment Weight” 
+• 
+Where both piece and shipment weights are printed, the header text is to be contracted to 
+“Piece/Shipment Weight”. 
+ 
+Abbreviations such as “Shpt” for Shipment or “Pce” for Piece are allowed. For domestic shipments, the English 
+terms may be translated into local language. 
+ 
+5.11.2.4. 
+Examples 
+Piece / Shipment Weight:  
+a) Printing both piece and shipment weight 
+5.5 / 33.8 kg  
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+28

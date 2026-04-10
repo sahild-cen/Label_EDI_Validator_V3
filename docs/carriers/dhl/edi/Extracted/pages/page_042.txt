@@ -1,0 +1,93 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 31  
+Group 
+Occurrence 
+Usage 
+Description 
+SG 31 
+1 
+R 
+ TOD-LOC 
+Function: A group of segments to specify terms of delivery (Freight costs and Saturday Deliveries).  
+Segment group 31 is mandatory to indicate freight costs payment. On conditional base, product features can be 
+ indicated. 
+ 
+SG 31 - TOD  
+Segment 
+Occurrence 
+Usage 
+Description 
+TOD 
+1 
+M 
+ Terms of Delivery                                                                                
+Function: To specify terms of delivery or transport. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4055 
+R 
+AN..3 
+Delivery or transport form function code 
+4215 
+X 
+AN..3 
+Transport charges payment method code 
+C100 
+R 
+ 
+TERMS OF DELIVERY OR TRANSPORT 
+   4053 
+R 
+AN..3 
+Delivery or transport terms description code 
+   1131 
+X 
+AN..17 
+Code list identification code 
+   3055 
+X 
+AN..3 
+Code list responsible agency code 
+   4052:1 
+C 
+AN..70 
+Delivery or transport terms description 
+   4052:2 
+C 
+AN..70 
+Delivery or transport terms description 
+ 
+Example:  
+TOD+6++DDU’ (Default value or no feature) 
+TOD+6++CPT:::050051’ (Using product features ‘Saturday delivery’ and ‘Named 
+signature’) 
+TOD+6++DDU:::958’ (Using the ‘Recap with signature’ feature) 
+TOD+6++DDU:::300’ (Using the direct injection product feature) 
+TOD+6++DDP:::231’ (Represents the ‘Loose Bulk Baby’ Service) 
+TOD+6++DDP:::230’ (Represents the ‘Loose Bulk Mother’ Service) 
+TOD+6++CPT:::050051’ (Using product features ‘Saturday delivery’ and ‘Named 
+signature’) 
+TOD+6+A+DDU:::220:ACC123456' (Represents the ‘Importer of Record’ Service) 
+ 
+Note: 
+Segment group 31 is mandatory to indicate freight costs payment and also to register the 
+agreement between the Seller and the Buyer (Incoterms). On conditional base, product 
+features can be indicated. If you wish to have more information about the product 
+features and availability please contact your Sales representative. 
+ 
+Note 4055: 
+Use ‘6’ – Delivery conditions. 
+ 
+Note 4053: 
+Incoterms, the default value is ‘DDU’. 
+ 
+To have a complete list of all possible incoterms, please contact your Sales 
+representative. 
+ 
+Note 1131:         Not Used 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 42 of 115

@@ -1,0 +1,53 @@
+Definitions
+ 
+International Movements — 
+International shipments are defined as package shipments that move between two or more postal authorities.
+International Shipper’s Agreement — 
+This document must be on file with UPS. Referred to in past Guides as the Power of Attorney.
+Laser Printing — 
+A print method in which an electrostatic image is used to transfer toner particles to paper, which is then fused 
+by heat (similar to xerographic printing).
+Uncompressed MaxiCode™ Data String (U.S. Destinations) — 
+The postal code field for this Mode is a numeric field, which may contain 5 or 9 characters.  
+For Example:  
+Postal Code: 84170-6672  will be 841706672 in the MaxiCode™ data string i.e. <GS>96841706672<GS>
+Postal Code: 28501will be 28501 in the MaxiCode™ data string i.e. <GS>9628501<GS>
+NOTE: Postal code should not contain any spaces or special characters in the MaxiCode™ data string.  
+The Mode 2 format for a compressed MaxiCode™ is not covered in this guide. 
+***Note: Some label creation software providers and printer manufacturers have interpreted Mode 2 for U.S. 
+destinations and Mode 3 for non-U.S. destinations exclusively.
+Uncompressed MaxiCode™ Data String  (Non-U.S. Destinations) — 
+Postal codes outside the US may be numeric/alphanumeric with a varying length. If the postal code is 6 characters long, 
+the MaxiCode™ postal code field should be 6 CHARACTERS long.
+For Example:  
+Postal Code “A41460 ”
+Postal Code field for MaxiCode Mode 3 “A41460 ”
+If the postal code is MORE than 6 characters, TRUNCATE ANY CHARACTER OVER 6! 
+For Example:  
+Postal Code “TW137DY”
+Postal Code field for MaxiCode Mode 3 “TW137D”
+Postal code should not contain any spaces in MaxiCode unless used padding described above.
+For Example:  
+“W1T 1JY”
+Should appear in the MaxiCode as “W1T1JY”
+NOTE: Postal code should not contain any spaces or special characters in the MaxiCode™.  
+The Mode 3 format for a compressed MaxiCode™ data string is not covered in this guide.
+Mil — 
+A dimensional unit equal to .001 inch, commonly used to refer to the width elements. (For Example:  .013 inch 
+is equal to 13 mils.)
+Minimum Reflectance Difference MRD — 
+A comparison of the most reflective bar to the most absorptive space (i.e., the lightest bar and the darkest space).
+Modified MOD 10 — 
+The mathematically derived check digit that appears at the end of the UPS Tracking Number.
+Modules — 
+The narrow nominal bar or space in the barcode, typically referred to as the “X” dimension. Wider bars 
+and spaces are often specified as multiples of one module.
+Narrow Width — 
+The nominal width dimension of the narrow bars and spaces in a barcode symbol. Also known as the “X” dimension.
+Natural Top — 
+The upper side when an item or carton is placed on its most natural, stable base.
+103
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

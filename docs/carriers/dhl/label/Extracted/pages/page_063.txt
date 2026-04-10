@@ -1,0 +1,33 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.3. 
+  Considerations on A6 or 6”x4” (inch) Labels 
+The ESS Label v2.8 fits on an A6 label (14.85 cm) and on a 6”x4” (15.24 cm) label.  
+However, the design has to be done very carefully, and the printing will not allow for huge tolerances. 
+Users in the USA are generally recommended to use 6 ¾” x 4” labels. 
+The following table is a good indicator for a best-possible layout of an A6 label.  
+Note: this challenge with space exists only when the Waybill Barcode is present on the label. 
+ 
+This works slightly easier with 6” long labels which are about 4 mm longer than A6 labels. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+62

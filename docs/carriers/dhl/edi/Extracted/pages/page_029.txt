@@ -1,0 +1,67 @@
+Message Specification Guidelines                         
+                          
+ 
+CNT  
+Segment 
+Occurrence 
+Usage 
+Description 
+CNT 
+3 
+R 
+ Control Totals 
+Function: To provide control total. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+C270 
+M 
+ 
+CONTROL 
+   6069 
+M 
+AN..3 
+Control total type code qualifier 
+   6066 
+M 
+N..18 
+Control Total value 
+   6411 
+C 
+AN..3 
+Measurement unit code 
+ 
+Example:  
+CNT+7:225,1:KGM’ 
+CNT+11:100’ 
+CNT+15:25,500:MTQ’ 
+ 
+Note: 
+This segment is used to indicate total gross weight for the entire shipment, total number 
+of pieces in the shipment and total volume of the shipment. 
+The total volume is required for a shipment with destination outside the Shipper country. 
+It can be provided here or the dimensions per item can be provided later in the GID 
+segment. 
+The maximum of pieces cannot exceed 999 in one shipment. 
+ 
+Note 6069: 
+Use: 
+‘7’ - Gross Weight. In 6069, the value may be specified with maximum 1 decimal. 
+‘11’ - Total number of Packages. In 6069 the value may be specified with maximum 3 
+decimals. 
+‘15’ - Cube, Volume. 
+ 
+Decimal sign may be point or comma depending of what has been specified in the UNA 
+segment. 
+ 
+Note 6411: 
+Confirm with DHL Express which of the following units can be supported in the shipment 
+origin country: 
+With ‘7’ in 6069 ‘KGM or ‘LBR’ 
+With ‘15’ in 6069 MTQ, CMQ or INQ 
+Element 6411 is not used with ‘8’ in 6069 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 29 of 115

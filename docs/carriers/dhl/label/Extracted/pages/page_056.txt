@@ -1,0 +1,66 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6.10.2.  Piece Weight 
+ 
+The piece weight of the individual pieces is to be printed in this segment with the following format: 
+ 
+• 
+[SHIPPER DECLARED PIECE WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+ 
+• 
+[DHL PIECE WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+o 
+Content optional -> subject to availability of value at the time of rendering 
+ 
+Its value must correspond to the dead weight plus package dimensions OR the applicable volumetric weight, to 
+allow for charge calculation based on it. 
+ 
+ The mass unit must be printed next to the weight. 
+6.11. 
+Piece Counter 
+The total number of pieces belonging to the shipment shall be printed here.  
+ 
+This information is conditional to its reliability. Shall its correctness not be guaranteed, then it is to be suppressed. 
+In this last scenario: 
+ 
+• 
+the customer must mandatorily provide the information by other reliable means (e.g. manifesting 
+message) 
+• 
+upon DHL approval, the information may be temporarily suppressed on account level. 
+o 
+an approved Global SOP Exemption Request shall document the agreed data provision process 
+and the expected improvement approach 
+ 
+6.12. 
+ Special Information 
+Special information is to be printed here; it corresponds to the “Special Info” conveyed by the Transport Label. 
+There is a 1:1 association between both document types to this regard. The same number of individual lines (9) 
+will be supported in both documents to ensure backward compatibility. 
+ 
+ 
+Special Information in this segment refers primarily to content-related facts (e.g. “Belgian chocolate“ or “Li-metal 
+batteries with equipment”).  
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+55

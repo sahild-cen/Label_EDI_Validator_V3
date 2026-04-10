@@ -1,0 +1,39 @@
+Label Format Requirements
+Return of Documents - Poland to Poland 
+Return of Documents (Poland to Poland Only)
+When using the Return of Documents service, the fol­
+lowing text must print left justified in the Additional 
+Routing Instruction section.
+
+• Routing Instruction       = ZWROT DOKUMENTOW
+• Font Size                            = 10 pt.
+The following indicator must also print beneath the 
+Documentation Indicator.
+• Indicator                            = ZD
+• Font Size                            = 10 pt.
+Service Indicators, Icons and MaxiCode™ Class of Service for Poland Domestic Same-Day Service 
+Service Title	
+Service Indicator	
+Service Icon	
+Class of Service
+UPS TODAY STANDARD™	
+T8	
+None	
+840
+UPS TODAY DEDICATED COURIER™	
+T9	
+None	
+841
+UPS TODAY EXPRESS™	
+TG	
+None	
+847
+UPS TODAY EXPRESS SAVER™	
+TH	
+None	
+848
+38
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

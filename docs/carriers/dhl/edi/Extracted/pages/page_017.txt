@@ -1,0 +1,17 @@
+Message Specification Guidelines                         
+                          
+ 
+Units of Measure 
+The following codes are valid for unit of measurement for weight, volume and dimensions 
+Weight 
+Default = KGM (Kilograms) 
+Also acceptable: LBR (Pounds) 
+Volume 
+Default = MTQ (Cubic Meters) 
+Also acceptable: CMQ (Cubic Centimeters), INQ (Cubic Inches) 
+Dimensions (Length, Width, Height) 
+Default = CMT (Centimeters) 
+Also acceptable: MTR (Meters), INH (Inches) 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 17 of 115

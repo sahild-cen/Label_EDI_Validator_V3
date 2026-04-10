@@ -1,0 +1,59 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 67  
+Group 
+Occurrence 
+Usage 
+Description 
+SG67 
+1 
+R 
+ MEA                                                                                                    
+Function: A group of segments to identify dangerous goods measurements. 
+ 
+SG 67 - MEA 
+Segment 
+Occurrence 
+Usage 
+Description 
+MEA 
+1 
+M 
+ Measurements                                                                                   
+Function: Measurements of goods items. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+6311 
+M 
+AN..3 
+Measurement purpose code qualifier 
+C502 
+R 
+ 
+MEASUREMENTS DETAILS 
+C174 
+R 
+ 
+VALUE / RANGE 
+   6411 
+M 
+AN..3 
+Measure unit qualifier 
+   6314 
+R 
+N..18 
+Measurement value 
+ 
+Note: 
+This section is not to be used to describe a shipment as including Dangerous Goods 
+when shipping with DHL Express. When commodities categorized as Dangerous Goods 
+or Restricted Commodities are sent then particular values are given in SG25 – FTX, 
+SG31 – TOD and SG32 - RFF. Contact DHL Express for advice as to the values to use  
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 66 of 115

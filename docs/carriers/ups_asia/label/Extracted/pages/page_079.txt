@@ -1,0 +1,46 @@
+Definitions
+ 
+Code 128 — 
+A variable length, continuous, self-checking, alphanumeric barcode. Its data character set contains 105 characters 
+in each of three unique subsets. Each character consists of three bars and three spaces consuming 11 modules 
+of width. Bars and spaces may be 1, 2, 3 or 4 modules wide. The name Code 128 is derived from the capability 
+of encoding the full ASCII 128 character set. One of the three subsets (Code C) employs one Code 128 character 
+for each character pair of digits from 00 to 99 permitting shorter barcode symbols in some situations where 
+adjacent numeric characters appear. (See AIM USS 128 for symbology specifications.)
+Coding Accuracy Support System (CASS) — 
+A service offered by the United States Post Office to shippers and software vendors that improves the accuracy 
+of matching addresses to  ZIP+4™  codes. CASS provides a common platform to measure the quality of address-
+matching software.
+Compressed MaxiCode™ Data String — 
+The process of reducing the number of bits necessary to represent characters that constitute a consignee 
+address.
+Data Identifier — 
+A character string which defines the specific intended use of the data that immediately follows. The identifier 
+is an alphabetic character preceded by up to three numeric characters as defined by ANSI MH10.8.2.
+Decodability — 
+A measure of printing accuracy as perceived by a barcode reader using a symbology reference decode algorithm.
+Digit — 
+Any of the numeric characters zero through nine, inclusive.
+Domestic Movements — 
+Domestic shipments are defined as package shipments that move within a single postal authority (most 
+typically within a country). For example a Germany-to-Germany shipment would be considered a domestic 
+shipment.
+Edge-to-Edge — 
+A measure from the leading edge of a bar or space to the next similar edge.
+Element — 
+A single bar or space in a barcode.
+Font — 
+A specific size and style of a printer’s type.
+Highlighting Bars — 
+One-tenth inch solid black lines located immediately above and below the UPS Barcode Block.
+Human-readable Interpretation — 
+The text representing the data content of a barcode.
+Human-readable Text — 
+Refers to all text not representing encoded bar-coded data.
+Intercharacter Gap — 
+The space between the last bar of one character and the first bar of the next which separates the two 
+75
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

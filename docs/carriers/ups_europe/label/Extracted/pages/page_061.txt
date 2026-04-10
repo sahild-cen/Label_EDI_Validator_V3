@@ -1,0 +1,125 @@
+UPS Access Point™ Specifications
+Label Requirements
+Introduction
+Ship to UPS Access Point™ service enables shippers to 
+send packages directly to a UPS Access Point™ location 
+or one of their own retail locations (i.e. Store Pickup). 
+This allows customers to pickup packages at their 
+convenience.
+ADDITIONAL ROUTING INSTRUCTION BLOCK
+The Additional Routing Instruction Block allows only 
+3 lines of text with a 4th line reserved for Reference 
+Numbers. The font size for the Additional Routing 
+Instruction Block has been reduced.
+	
+• 
+
+Font Size = 8 pt. bold
+UPS now offers two label formats for UPS Access Point 
+service; 4” x 4.25” (two labels required) and 4” x 6”
+. Based 
+CONSIGNEE ADDRESS BLOCK
+At the very bottom of the label the consignee name and 
+address should print as follows:
+	
+• 
+
+Consignee  Name*
+on the needs of your customers, you can choose to 
+support these label formats:
+	
+• 
+
+4” x 4.25”
+	
+• 
+
+Consignee Extended Address
+	
+• 
+
+4” x 6” 
+	
+• 
+
+Consignee Street Address
+	
+• Consignee City, Postal Code
+	
+• 
+
+Consignee Country
+ADDRESS REQUIREMENTS
+The Ship From address, the Ship To address of the UPS 
+Access Point, and the consignee address are required 
+when shipping directly to a UPS Access Point™  location.
+CONSIGNEE NAME* should have the following format:
+	
+• Font Size = 10 pt. bold
+SHIP TO SECTION
+The Ship To section of the label should contain the 
+consignee name, consignee phone number, UPS Access 
+Point™ name and address. 
+The format for the rest of the lines for the Consignee 
+Address Block should be as follows:
+	
+• Font Size = 10 pt.
+In the Ship To section, print the following:
+	
+• 
+
+Consignee Name*
+	
+• 
+
+Consignee Phone Number
+HORIZONTAL LINES
+Horizontal lines in the Consignee Address Block must be a 
+minimum of 0.03 inches. They must be placed above the 
+	
+• 
+
+UPS Access Point™  Name
+Consignee Name* text and below the Consignee Country.  
+       	
+• 
+
+UPS Access Point™  Extended Street Address
+	
+• 
+
+UPS Access Point™  Street Address
+PDF417 Barcode
+	
+• 
+
+UPS Access Point™  City, Postal Code
+	
+• 
+
+UPS Access Point™  Country
+	
+• Font Size = 10 pt.
+       • Font Size = 12 pt. bold for Postal line and 
+The PDF417 Barcode must print on the shipping label 
+when required.  For details on the PDF417 Barcode, 
+please refer to the PDF417 Barcode Symbology 
+document.
+        Country
+UPS SERVICE TITLE
+The UPS Service Title size has been reduced for this label.
+       • Font Size = 12 pt. bold
+UPS TRACKING NUMBER BARCODE
+The UPS tracking barcode height is reduced to fit a 
+secondary address on the label.
+       • UPS Tracking Number Barcode Height = 0.70 inches
+NOTE: *Consignee Name is the name of the person 
+to whom the package is being shipped to at the UPS 
+Access Point™ location. The consignee or recipient may 
+be required to produce sufficient verification of name, 
+address based on the type of shipment.
+59
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

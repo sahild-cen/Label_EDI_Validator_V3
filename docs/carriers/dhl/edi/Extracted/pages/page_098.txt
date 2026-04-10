@@ -1,0 +1,16 @@
+Message Specification Guidelines                         
+                          
+ 
+At Shipper's request, the use of a feature code to 
+Importer of 
+support the payment process when the Importer of 
+Record 
+DU 
+220 
+Record is different from the shipment Receiver. 
+Services 
+D – Billing 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 98 of 115

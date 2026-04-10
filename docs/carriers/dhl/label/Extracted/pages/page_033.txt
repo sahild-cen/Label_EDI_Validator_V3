@@ -1,0 +1,37 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+5.11.4.1.1. Special8 Location of Weight Symbols 
+ 
+ECOM26_711_001  
+Due to limited available space on the ECOM26_711_001 template, the new Weight Symbol will be printed to 
+the right of the Pce/Shpt Weight segment:  
+  
+ 
+8 Implementation of deviations from the Global SOP Standard Transport Label and respective Weight Symbol 
+location require pre-approval from Global SOP or from the Global Competence Center for Labels and 
+Barcodes. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+32

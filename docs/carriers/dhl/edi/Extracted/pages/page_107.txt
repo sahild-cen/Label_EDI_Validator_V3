@@ -1,0 +1,26 @@
+Message Specification Guidelines                         
+                          
+ 
+MEA+WT+AAE+KGM:0.3' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+RFF+CU:1154345678' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684632726' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.5' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684630921' 
+GID++1:CT' 
+MEA+WT+AEE+KGM:0.6' 
+MEA+VOL+AAW+MTQ:0.2' 
+DIM+2+CMT:10:10:10' 
+PCI+18' 
+GIN+VZ+J:JD0081108205684633286' 
+UNT+174+1298' 
+UNZ+1+1298' 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 107 of 115

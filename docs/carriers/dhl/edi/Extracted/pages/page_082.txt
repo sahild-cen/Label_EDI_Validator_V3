@@ -1,0 +1,52 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 50 - LOC 
+Segment 
+Occurrence 
+Usage 
+Description 
+LOC 
+1 
+R 
+ Place/Location Identification                                                            
+Function: A segment to specify a country associated with a line item (i.e. Line Item Country of Manufacture) 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+3227 
+M 
+AN..3 
+Location function code qualifier 
+C517 
+R 
+ 
+LOCATION IDENTIFICATION 
+   3225 
+R 
+AN..3 
+Location name code 
+   1131 
+X 
+AN..17 
+Code List Identification Code  
+   3055 
+X 
+AN..3 
+Code List Responsible agency Code 
+ 
+Example:  
+LOC+27+AMS::6' 
+ 
+Note 3227: 
+Use:  
+‘27’ - Line Item Country of Manufacture 
+ 
+Note 3225: 
+A list of codes are available on request at your Sales Representative. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 82 of 115

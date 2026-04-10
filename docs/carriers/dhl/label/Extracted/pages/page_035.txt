@@ -1,0 +1,60 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+ 
+The method for storing data in 2D Codes is specified in the ISO/IEC 15434 (specification and syntax for 
+automatic identification and data capture techniques commonly used in 2D barcodes such as Data Matrix.). This 
+ISO/IEC standard features the possible use of multiple segments with different contents and might be seen as 
+the file system of the code. 
+ 
+      The following segments are available and they are always in the sequence below. Only the first is mandatory   
+      but both the public and open segments are in systematical use by DHL EXPRESS: 
+• 
+Public segment: standardized package data shared between customer, service providers and DHL 
+• 
+Open segment: open segment in pseudo EDIFACT DHL data structure shared between service 
+providers and DHL 
+• 
+Customer segment: segments with customer data not used by DHL 
+5.12.1. Customer Data 
+The 2D symbol under use contains encoded operational data, which is obtained through the concatenation of 
+the above listed segments’ data. 
+ 
+The exhaustive list of encoded shipment data elements can be referenced through the Global SOP “Data Matrix 
+2D Specifications”.  
+ 
+ 
+5.13. 
+Additional Shipment Information 
+Customers may wish, in certain cases and for various reasons, to add and/or print additional information (e.g.  
+a country-mandatory Export Declaration) on the label. The same may apply for internal reasons. 
+ 
+The Global Label Standard is equipped with distinct segments that cater for the need of additional information.  
+ 
+The image below identifies those info elements (which extend the format, previously limited to the area adjacent 
+– segment 17a - to the Waybill Barcode). 
+ 
+ 
+9 Refer to sections 5.18 and 8.1 for further details on this capability and related specifications. 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+34

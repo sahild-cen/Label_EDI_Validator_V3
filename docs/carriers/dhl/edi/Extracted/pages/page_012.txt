@@ -1,0 +1,14 @@
+Message Specification Guidelines                         
+                          
+ 
+Definition of EDI 
+EDI is the computer to computer exchange of business transactions between organizations in an agreed 
+upon format. "Computer-to-computer" means that the data sent or received is communicated via 
+electronic transmission, without human intervention or interpretation.  
+ 
+Maintaining standardized formats is the foundation of a Global EDI service. EDI requires business 
+partners to follow the standards as defined by the format layout and content held within. After integrating 
+onto the EDI platform, data will be converted by EDI translation programs into the exact same format and 
+provided by each country. Industry standard formats have been defined by EDIFACT, ANSI and 
+RosettaNet. 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 12 of 115

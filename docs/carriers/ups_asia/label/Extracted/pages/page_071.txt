@@ -1,0 +1,155 @@
+Appendix E
+ISO Country Codes (ISO 3166)
+	
+	
+Numeric	
+Alpha
+Country Name (short name)	
+Official Name	
+Country Code	
+Country Code
+Taiwan, China	
+	
+158	
+TW
+Tajikistan	
+Republic of Tajikistan	
+762	
+TJ
+Tanzania, United Republic of	
+United Republic of Tanzania	
+834	
+TZ
+Thailand	
+Kingdom of Thailand	
+764	
+TH
+Timor-Leste	
+Democratic Republic of Timor-Leste	
+626	
+TL
+Togo	
+Togolese Republic	
+768	
+TG
+Tokelau	
+	
+772	
+TK
+Tonga	
+Kingdom of Tonga	
+776	
+TO
+Trinidad and Tobago	
+Republic of Trinidad and Tobago	
+780	
+TT
+Tunisia	
+Republic of Tunisia	
+788	
+TN
+Turkey	
+Republic of Turkey	
+792	
+TR
+Turkmenistan	
+	
+795	
+TM
+Turks and Caicos Islands	
+	
+796	
+TC
+Tuvalu	
+	
+798	
+TV
+Uganda	
+Republic of Uganda	
+800	
+UG
+Ukraine	
+	
+804	
+UA
+United Arab Emirates	
+	
+784	
+AE
+United Kingdom	
+United Kingdom of Great Britain	
+826	
+GB
+	
+and Northern Ireland
+United States	
+United States of America	
+840	
+US
+United States Minor Outlying Islands	
+	
+581	
+UM
+Uruguay	
+Eastern Republic of Uruguay	
+858	
+UY
+Uzbekistan	
+Republic of Uzbekistan	
+860	
+UZ
+Vanuatu	
+Republic of Vanuatu	
+548	
+VU
+Vatican City State (see Holy See)	
+	
+336	
+VA
+Venezuela	
+Bolivarian Republic of Venezuela	
+862	
+VE
+Vietnam	
+Socialist Republic of Vietnam	
+704	
+VN
+Virgin Islands, British	
+British Virgin Islands	
+092	
+VG
+Virgin Islands, U.S.	
+United States Virgin Islands	
+850	
+VI
+Wallis and Futuna	
+	
+876	
+WF
+Western Sahara	
+	
+504	
+EH
+Yemen	
+Republic of Yemen	
+887	
+YE
+Zambia	
+Republic of Zambia	
+894	
+ZM
+Zimbabwe	
+Republic of Zimbabwe	
+716	
+ZW
+Note: 
+- The country of Kosovo will use the numeric country code of 901 and an alpha Country Code of KV.
+- Parent country codes may be used when shipping to satellite countries (e.g., United Kingdom country code used when 	
+	
+         	
+  shipping to the Isle of Man)
+67
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Asia

@@ -1,0 +1,14 @@
+Message Specification Guidelines                         
+                          
+ 
+Audience  
+This document is intended to serve as a guide to assist DHL customers and third party developers during 
+the integration development process. This document contains the record layout of DHL Global Standard 
+Manifesting messages. The primary audience of this document is intended to be a trading partner’s 
+technical resources and internal DHL EDI support staff. 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 4 of 115

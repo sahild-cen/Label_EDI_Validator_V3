@@ -1,0 +1,104 @@
+UPS World Ease™ Specifications
+ Label Format Requirements
+for final distribution.
+UPS World Ease™ General Rules
+UPS World Ease™ Label
+UPS World Ease™ service allows shippers to 
+combine multiple shipments for multiple receivers 
+into one large shipment. It moves and clears 
+customs as one transaction then is split and 
+delivered to multiple receivers.  UPS World Ease™ 
+packages can also be addressed to UPS Access 
+Point™  destinations.
+The UPS World Ease™ label is divided into two 
+distinct sections contained on a single 4" x 11" label. 
+The first section is the upper part of the label (4" x 
+6"), which contains the final destination information 
+for the shipment. The second section of the label (4" 
+x 5") contains the UPS import site information and 
+is referred to as the over-label. The over-label must 
+be perforated allowing the customer to remove the 
+4" x 5" portion and position the label horizontally 
+over the Ship To Address section exposing only the 
+UPS Service Title, Tracking Number, Service Icon 
+and all the information beneath it. See example 
+label on page 9. The material must be constructed 
+in a manner which allows UPS to remove the over-
+label at the import site without damaging the 
+MaxiCode™, Postal Barcode, or shipping information 
+on the final destination label.
+UPS World Ease™ Paper Documentation 
+Final Destination Block — 
+4" x 6" Portion of the label
+All Shipments must have the same ship date, 
+importer of record and billing option. UPS 
+Express Plus™, UPS Express™ and UPS Saver™ 
+service levels may be combined within a Master 
+Shipment as allowed by the origin/destination 
+pair and shipper's Port of Entry (POE) table. All 
+Child Shipments within a Master Shipment for 
+UPS Expedited™ and UPS® Standard service 
+levels must contain the same service level. All 
+Child Shipments must clear in the same port as 
+the Summary Shipment (document box). The 
+document box is a UPS-supplied green-colored 
+box that is processed as the lead shipment of the 
+consolidated movement. The document box will 
+always be a single-piece shipment. The shipping 
+system will automatically create the document box 
+shipment after completion of the last shipment 
+of a Consolidated UPS World Ease™ movement 
+containing paper documents. The document box 
+will contain all import documentation required to 
+clear customs. 
+This section contains the final destination 
+information for the shipment. All data formatting 
+and placement of the information follows the 
+current UPS Guide to Labeling. In addition, an 
+indicator must print directly to the right (preceded 
+by a dash) of the documentation indicator in the top 
+right corner of the Additional Routing Instructions 
+Block. All labels including the document box will 
+display the same indicator.  
+For shipments containing paper documents; which 
+do not qualify for Paper Invoice, the formatting rules 
+are:
+• Indicator Font Size = 16 pt. bold
+• Document Indicator Text = INV-CC
+Import Site Block — 
+4" x 5" Portion of the Label (Over-Label)
+Customers using the contractual UPS Paperless™ 
+Invoice service have an option to eliminate 
+the document box, CID, and master invoice if 
+no paper documents are necessary for import 
+clearance.  When a document box is NOT 
+required the shipping system will automatically 
+create a Summary Label. The Summary Label 
+will be applied adjacent to the shipping label 
+of the last package of the shipment. A specific 
+documentation indicator will be used to designate 
+the inclusion or omission of a document box in a 
+consolidated UPS World Ease™  shipment using 
+Paperless Invoice.   
+This section contains the UPS import site 
+information for the consolidated shipment 
+containing paper documents and/or non-paper 
+items; which do not qualify for Paperless Invoice 
+Service.
+• The lead package must be a UPS World Ease™  
+document box (Doc Box)
+• All labels (Doc Box and Child Shipment Labels 
+For customers shipping to the European Union 
+(EU), Child Shipments destined to all 27 EU 
+countries can be combined into one Master 
+Shipment for  a consolidated customs clearance. 
+Individual shipments must originate from a single 
+pick-up point in a non-European Union country 
+and must clear in a single port of entry in the EU 
+must have an over-label with the same document 
+indicator in the bottom right corner
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark are 
+trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+7
+Supplement

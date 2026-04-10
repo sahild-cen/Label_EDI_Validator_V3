@@ -1,0 +1,66 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2. Product Name, Product Content Code and Version Name  
+1 
+ 
+ 
+ 
+1 
+This section contains the name of the Product used (e.g. EXPRESS WORLDWIDE) and the three-letter Product 
+Content Code (e.g. WPX or EPL), in accordance with the DHL Express global product portfolio.  
+ 
+  This Reference Data is maintained in DHL’s Global Reference Databases. 
+ 
+5.2.1. 
+Product Name (Conditional) 
+The Global Product Name officially specifies the product under which the underlying transport service has been 
+sold to the customer and is to be printed here with the associated format “Product Short Name”. This is a text 
+string in upper-case letters, up to 20 chars long (reason for the Short Name). It may contain the full set of 7 bit 
+standard chars, including white space, upper/lower case chars and symbols such as a colon (“:”).  
+The conditional qualifier is applicable to the “Compact Label”, which use requires a formal approval (see below). 
+5.2.1.1. 
+Highly-Compact Label3 
+There are scenarios when, due to customer requirements for extra info or elements (e.g. additional barcodes) 
+on the label (e.g. in the customer-owned segment), there is the need to maximize the compactness of the info 
+on the remaining Label segments in order to free up space elsewhere.  
+In such cases and upon special approval by DHL EXPRESS, the Product Name may be omitted. 
+ 
+5.2.2. 
+Product Content Code (mandatory) 
+This is DHL’s internal code for the product under which a certain transport order will be processed. It always 
+consists of 3 upper-case characters. Different products may have the same Product Content Code 
+For declarable shipments, the Product Content Code must be printed in reverse video 4format (see image below, 
+in 5.2.3). 
+Product Name and Product Content Code can be determined based on the required (i) Service level (e.g. pre-
+9:00) and (ii) DOC or NON-DOC shipment.  
+ 
+5.2.3. 
+Printing Application, Date and Label Certification Identifier (mandatory) 
+ 
+The information herewith required has a mandatory char and aims at identifying both the label Printing 
+Application, the Printing Date and the associated Label Certification Identifier.  
+ 
+3 Refer to section 8.1.6 for further specific details on the Highly-Compact Label 
+4 Refer to Definitions section 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+17

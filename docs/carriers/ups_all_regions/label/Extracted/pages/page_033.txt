@@ -1,0 +1,136 @@
+UPS Trade Direct™ Specifications
+UPS  Worldwide  Express  Freight™  &  UPS  Worldwide  Express  Freight™  Midday Services
+Pickup Attempt, the following text must print before the 
+consignee's name in the "Ship To" address:
+UPS Trade Direct™ - UPS Worldwide Express 
+Freight™
+• Text = HOLD FOR PICKUP
+• For Example: "HOLD FOR PICKUP - D SCHMIDT"
+NOTE:  A dash must separate the text
+The UPS Worldwide Express Freight™ service provides 
+customers with a solution for palletized shipments.  This 
+guaranteed product has similar transit times as UPS World­
+wide Express Saver™ package and provides customers with 
+a similar experience to other small package services.
+LIFTGATE
+If a liftgate is required to make the delivery, the following 
+text must print:
+UPS Worldwide Express Freight™ Midday
+• Text                                            = LIFT
+• Font Size                                 = 
+ 10 pt. bold
+The UPS Worldwide Express Freight™ Midday service pro­
+vides customers with a solution for palletized shipments.  
+The service is guaranteed by either noon or 2 P.M. depend­
+ing apon destination postal code.
+IMPORT CONTROL/RETURN SERVICE
+If the the shipment is being returned by Import Control/
+Return Service, and Import Control/Return Service - 1 
+Pickup Attempt, the following text must print:
+• Text = IMPORT CONTROL - PAYMENT GUARANTEED
+• Font Size                                 = 
+ 10 pt. bold
+NOTE:  A PDF417 must print on the label when required. 
+For details on the PDF417 Barcode, please refer to the 
+PDF417 Barcode Symbology document.
+Text Requirements
+If the the shipment is being returned by Import Control/
+Return Service 1 Pickup Attempt, and requires a liftgate the 
+following text must print:
+• Text                                            = PU LIFT
+• Font Size                                 = 
+10 pt. bold
+HOLD FOR PICKUP
+If the shipment is being deliveried to a UPS facility where 
+a consignee will pick up the shipment, or the shipment 
+is at the UPS facility and the consignee wants to return 
+the shipment using Import Control/Return Service 1 
+Service Indicators, Icons and MaxiCode™ Class of Service
+Service Title	
+Service Indicator	
+Service Icon	 Class of Service
+UPS EXPRESS FREIGHT™	
+E1	
+1P	
+417
+	 Saturday Delivery	
+E2	
+1PS	
+418
+	 Delivery Confirmation Signature Required	
+E3	
+1P	
+419
+	 Delivery Confirmation Adult Signature Required 	
+E4	
+1P	
+420
+	 Import Control/Return Service	
+E5	
+1P	
+421
+	 Saturday Delivery, Delivery Confirmation Signature Required	
+E6	
+1PS	
+422
+	 Saturday Delivery, Delivery Confirmation Adult Signature Required	
+E7	
+1PS	
+423
+	 Import Control/Return Service, Saturday Delivery	
+E8	
+1PS	
+424
+	 Import Control/Return Service - 1 Pickup Attempt	
+E9	
+1P	
+425
+	 Import Control/Return Service - 1 Pickup Attempt, Saturday Delivery	
+EA	
+1PS	
+426
+UPS EXPRESS FREIGHT™ MIDDAY	
+EQ	
+1	
+439
+	 Saturday Delivery	
+ER	
+1S	
+440
+	 Delivery Confirmation Signature Required	
+ES	
+1	
+441
+	 Delivery Confirmation Adult Signature Required 	
+ET	
+1	
+442
+	 Import Control/Return Service	
+EV	
+1	
+443
+	 Saturday Delivery, Delivery Confirmation Signature Required	
+EW	
+1S	
+444
+	 Saturday Delivery, Delivery Confirmation Adult Signature Required	
+EX	
+1S	
+445
+	 Import Control/Return Service, Saturday Delivery	
+EY	
+1S	
+446
+	 Import Control/Return Service - 1 Pickup Attempt	
+EZ	
+1	
+447
+	 Import Control/Return Service - 1 Pickup Attempt, Saturday Delivery     F0	
+1S	
+448
+NOTE: Saturday Delivery is only valid in United States and Canada.
+UPS Guide to Labeling
+32
+© 2024 United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+Supplement

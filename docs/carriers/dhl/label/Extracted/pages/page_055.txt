@@ -1,0 +1,75 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+This segments 17a and 17b contain information on the shipment contents, their description and regulatory 
+declarations. Additional data elements or information may be added. 
+The format is the following: 
+• 
+“Content 1:” – <CONTENT TITLE ROW 1><CONTENT DESCRIPTION ROW 1> 
+• 
+“Content 2:” – <CONTENT TITLE ROW 2><CONTENT DESCRIPTION ROW 2> 
+• 
+… 
+• 
+“Export Information:” – EXPORT INFORMATION 
+• 
+“EEI:” – ELECTRONIC EXPORT INFORMATION (OR INDICATOR) 
+ 
+Regulatory declaration in regards to Dangerous Good information is mandatory and is to be located in Segment 
+17a, starting in Line 1 (SPECIAL_INFO1).  
+ 
+17a 
+ 
+6.10. 
+Weight – Declared and DHL-Measured 
+6.10.1. Shipment Weight (mandatory) 
+ 
+The “shipment weight”, legacy term corresponding to the addition of the individual piece weights, is to be printed 
+in this segment, with the following format: 
+ 
+•  [SHIPPER DECLARED SHIPMENT WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+ 
+• 
+[DHL SHIPMENT WEIGHT (UOM)] / [DIMENSIONAL WEIGHT (UOM)] 
+o 
+Content optional -> subject to availability of value at the time of rendering 
+Its value must correspond to the dead weight plus package dimensions OR the applicable volumetric weight, to 
+allow for charge calculation based on that document. 
+ 
+Should the volumetric weight NOT be available at the time of rendering the document, then it may be omitted. 
+ 
+Weight, as provided by the shipper (e.g. “Shipper Declared Weight” through EDI / 2D Code / Manual Waybill), 
+has to be printed on the label IF the printing occurs prior to DHL Reweigh processing, in this field. 
+ 
+Should, however, labeling happen after weighing, then DHL label printing applications must print the determined 
+weight (“DHL Actual Weight”) instead.  CAS systems won’t be able to print the “DHL Actual Weight”. 
+ 
+When no weight was available at the time of printing the label, a “.” shall be printed to indicate that fact.  
+ 
+The mass unit must be printed next to the weight. 
+ 
+As last piece of data in this segment, the document print date must be printed according to the Standard ISO 
+8601 (YYYY-MM-DD). 
+ 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+54

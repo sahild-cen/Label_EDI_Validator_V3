@@ -1,0 +1,105 @@
+Appendix B
+Barcode Specifications — Code 128
+Barcode Specifications — Code 128 
+SYMBOLOGY
+TRACKING NUMBER BARCODE WIDTH
+• 
+Code 128 (AIM Uniform Symbology Specification 
+Code 128)
+• 
+Start with subset A and use uppercase for all 
+• 
+Minimum Tracking Barcode Width = 
+2.34 inches + 0.50 inches = 2.84 inches
+(barcode length + quiet zones)
+alpha characters
+• 
+Shift to subset C after “1Z” if no alpha characters in 
+shipper number or service level indicator
+• 
+Maximum Tracking Barcode Width = 
+3.97 inches + 0.50 inches = 4.47 inches
+(barcode length + quiet zones)
+• 
+
+Shift to subset C after the last occurrence of an 
+• 
+Based on your account number and where you 
+shift to subset C, your barcode width may vary
+BARCODE HEIGHT
+alpha character and an even number of numeric 
+characters remain (e.g., Start A 1Z 123 4X5 Shift C 
+01 1234 5679)
+CODE 128 CHARACTERISTICS
+• 
+Minimum Tracking Number Barcode Height = 1.00 
+inches 
+• 
+Consists of 11 total modules per character
+• Minimum Postal Barcode Height =  0.50 inches 
+• 
+Each bar/space width ranges from 1 to 4 modules
+PRINT QUALITY
+• 
+Each encoded character contains 3 bars and 3 spaces
+• 
+Thermal direct, thermal transfer or laser technology
+• 
+Numeric compression
+• 
+Minimum quiet zone left and right (Qmin) = 1⁄
+4 inch
+ACCEPTABLE RANGES AND TOLERANCES
+• 
+Minimum quiet zone top and bottom = 1⁄
+16 inch
+• 
+Minimum ANSI Grade B
+• 
+
+Narrow Width (X) = 18 mil +/– 3 mil for each bar 
+and space (X dimensions must equal or fall between 
+15 and 21 mil.)
+• 
+
+
+Bar and Space Tolerance (b/s) = + (21 – X) 
+or – (X – 5) mil (Any deviation of the 4 individual 
+widths must not fall outside the specified ranges.)
+• 
+
+Edge-to-Edge Tolerance (e) = +/– 0.20X mil
+(The sum of any adjacent bar space widths must 
+be within 0.20X mil tolerance from the nominal 
+edge-to-edge width.)
+• 
+
+Pitch Tolerance (p) = +/– 0.20X mil
+(The width of any character must be within 0.20X mil 
+tolerance from the nominal character width.)
+CODE 128 DIMENSIONS
+BARCODE WIDTH
+• 
+Barcode Width in Inches = 0.001 (11C + 35) X
+   C = 
+Number of characters (includes shift 
+characters). The start, stop and built-in 
+check characters are not included in this 
+number. After shift to subset C, every two 
+consecutive numbers can be encoded as 
+one character
+   X = Narrow-width dimension in mils
+POSTAL BARCODE WIDTH
+• 
+
+Postal Barcode Minimum Width = 1.52 inches 
+(x = 15 mil, ZIP+4™, start in subset C)
+• 
+
+Postal Barcode Maximum Width = 2.12 inches 
+(x = 21 mil, ZIP+4™, start in subset C)
+84
+© 2024  United Parcel Service of America, Inc. UPS and the UPS brandmark 
+are trademarks of United Parcel Service of America, Inc. All rights reserved.
+UPS Guide to Labeling
+For Customers Located in Europe

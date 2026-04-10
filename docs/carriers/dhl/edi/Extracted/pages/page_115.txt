@@ -1,0 +1,41 @@
+Message Specification Guidelines                         
+                          
+ 
+RFF+HS:BEHS111155' 
+RFF+MF:MFPAN11155' 
+RFF+AFE:AFE1111155' 
+RFF+ZZZ:original export date' 
+RFF+ERN:original export tracking ID' 
+RFF+CN:original outbound carrier name' 
+DOC+41+LIASCDOC15' 
+TCC+609114' 
+QTY+47:9.000:PCE' 
+GID+0020+1:CT' 
+LOC+27+AMS::6' 
+MOA+43:149.56:EUR' 
+MOA+146:8.59:EUR' 
+MOA+79:80.00:EUR' 
+MOA+64:40.56:EUR' 
+MOA+67:20.00:EUR' 
+FTX+LIN' 
+FTX+AAA+++DESCRIPTION LINE ITEM2' 
+MEA+WT+AAE+KGM:2.7' 
+MEA+WT+AAF+KGM:2.1' 
+MEA+VOL+AAW+MTQ:0.003' 
+RFF+HS:BEHS111177' 
+RFF+MF:MFPAN11177' 
+RFF+AFE:AFE1111177' 
+RFF+ZZZ:2 original export date' 
+RFF+ERN:2 original export tracking ID' 
+RFF+CN:2 original outbound carrier name' 
+DOC+41+LIASCDOC17' 
+TCC+609114' 
+QTY+47:5.000:PCE' 
+UNT+219+211' 
+UNZ+1+211' 
+ 
+ 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 115 of 115

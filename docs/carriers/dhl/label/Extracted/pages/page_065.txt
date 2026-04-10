@@ -1,0 +1,31 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+8.1.5. 
+  Considerations on Loose BBX Transport Labels 
+This section gives the recommended segment and font sizes for “Loose BBX Transport Labels” as they 
+should be used on thermo printers where possible.  
+These Labels may exist with the standard 8” format. Its usage is subject to a formal Global Label 
+Certification. 
+ 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+64

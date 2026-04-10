@@ -1,0 +1,115 @@
+Message Specification Guidelines                         
+                          
+ 
+Segment Group 50 
+Group 
+Occurrence 
+Usage 
+Description 
+SG50 
+999 
+R 
+ GID-SG52-SG53-SG55-SG65 
+Function: A group of segments to describe the goods items for transport undertaken  
+ 
+SG 50 - GID 
+Segment 
+Occurrence 
+Usage 
+Description 
+GID 
+1 
+M 
+ Goods Item Details                                                                           
+Function: A segment to describe the goods items for which transport is undertaken. 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+1496 
+C 
+N..5 
+Goods item number 
+C213 
+R 
+ 
+NUMBER AND TYPE OF PACKAGES 
+   7224 
+R 
+N..8 
+Package quantity 
+   7065 
+R 
+AN..17 
+Package type description code 
+ 
+Example:  
+GID++1:CT’ 
+ 
+Example with weight and dimensions on shipment level. 
+Example with weight and dimensions on piece level. 
+GID+99999+2:CT’  
+ 
+ 
+ 
+ 
+GID++1:CT’ 
+MEA+WT+AAE+KGM:18’  
+ 
+ 
+ 
+MEA+WT+AAE+KGM:1’ 
+PCI+18’  
+ 
+ 
+ 
+ 
+ 
+DIM+2+CMT:10:10:10’ 
+GIN+VZ+J:VGL4502332243369101’ 
+ 
+ 
+PCI+18’ 
+GID+99999+2:CT’ 
+ 
+ 
+ 
+ 
+GIN+VZ+J:VGL4502332243369101’ 
+MEA+WT+AAE+KGM:18’  
+ 
+ 
+ 
+GID++1:CT’ 
+PCI+18’  
+ 
+ 
+ 
+ 
+ 
+MEA+WT+AAE+KGM:17’ 
+GIN+VZ+J:VGL4502332243369102’ 
+ 
+ 
+DIM+2+CMT:20:10:15’ 
+PCI+18’ 
+GIN+VZ+J:VGL4502332243369102’ 
+ 
+Note 1496: 
+If data in SG52/MEA and SG53/DIM is not available on item level, the GID should be 
+used as follows: 
+Element 1496 contains value 99999 and element 7224 contains the totals number of 
+pieces in the shipment. The segment SG52 MEA and SG53 DIM will then contents the 
+total volume. 
+Note 7224: 
+The number of packages is always 1, since the following segments indicate items within 
+one shipment. 
+BGM is on shipment level, within this group SG50, GID is on piece level. Since the GID 
+group may occur 999 times, a shipment can contain up to 999 pieces. 
+Note 7065: 
+For the list of package types, please consult your Sales Representative. 
+ 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 58 of 115

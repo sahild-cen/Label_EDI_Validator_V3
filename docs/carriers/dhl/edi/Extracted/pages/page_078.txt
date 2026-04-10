@@ -1,0 +1,59 @@
+Message Specification Guidelines                         
+                          
+ 
+SG 33 - FTX  
+Segment 
+Occurrence 
+Usage 
+Description 
+FTX 
+1 
+R 
+ Free Text 
+Function: A segment to specify free form or process available supplementary information within an Invoice,  
+such as Trading Transaction Type 
+ 
+Element 
+Usage 
+Format 
+Element Name 
+4451 
+M 
+AN..3 
+Text Subject code qualifier 
+4453 
+X 
+AN..3 
+Free text function code 
+C107 
+X 
+ 
+TEXT REFERENCE 
+C108 
+R 
+ 
+TEXT LITERAL 
+   4440 
+M 
+AN..15 
+Free text value 
+ 
+Example:  
+FTX+AAI+++Commercial' 
+ 
+ 
+ 
+Note 4451: 
+Use: 
+‘AAI’ - Trading Transaction Type 
+ 
+Note 4453:        Not used. 
+ 
+Note C107:        Not used. 
+ 
+Note 4440: 
+For the full list of Trading Transaction Types, refer to "DHL Express Integrated Solution 
+Reference Information" (available from DHL Express on request) 
+ 
+ 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 78 of 115

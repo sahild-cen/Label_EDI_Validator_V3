@@ -1,0 +1,73 @@
+Reference Guide 
+Global SOP Network Operations 
+ 
+ 
+ 
+ 
+ 
+ 
+9.3.3. 
+QR Code 
+9.3.3.1. 
+Definition 
+A QR-Code is a two-dimensional symbology, similar to a Data Matrix or Aztec one, capable of packing large 
+amounts of data and with the capability of recovering the original data encoded even when it is partially damaged, 
+through an error correction technique. 
+Data encoded in a QR-Code may include alphabetic characters, numbers, double characters and URLs. The 
+symbology uses a small area of square modules with a unique perimeter pattern, which helps the barcode 
+scanner determine cell locations to decode the symbol and extract the data. 
+Implementation of this symbology is based on the International ISO/IEC Standards 18004:2006 and is also, 
+compliant with the ISO/ IEC 18004:2015 specifications. 
+9.3.3.2. 
+Scope 
+ 
+The QR symbology will be used to encode operational data to be used in the PUD and In-Facility  domains, in 
+the context of the LabelFree scenarios. 
+9.3.3.3. 
+Key parameters 
+ 
+Within DHL the following reference code parameters 14should be used: 
+• 
+Symbology: QR Code 
+• 
+Module size:: 0,51mm/20mil 
+• 
+Expected (Reference) number of alpha-numeric characters: 503 
+• 
+Symbol matrix version15:  17 => 85 x 85 modules + 4 x 4 modules for the quiet zone. 
+• 
+Symbol size: 44 x 44 mm including quiet zone 
+• 
+Error correction level: H 
+• 
+Quiet Zone: 4*4 modules 
+• 
+Code Quality Grade: C according to ISO/IEC 15415 and ISO/IEC 16480 
+• 
+Symbol physical location: the 2D symbol should be placed on the screen in such a way as to maximize 
+the quiet zone and protect specially the finder patterns from being hidden. This leads to a minimum margin 
+to a screen border of 4 modules. 
+• 
+Human readable interpretation: The data contents are not shown verbatim on the label. Instead, excerpts 
+like the public information might be displayed similar to the 1D codes. 
+ 
+ 
+ 
+14 Again, referring to the LabelFree-related business requirements and context 
+15 This specific example targets the requirements defined in the context of the LabelFree project 
+ 
+ 
+ 
+Confidential – Uncontrolled copy when printed or translated 
+ 
+<Global Standard Transport Labels and Waybills> 
+Document ID : 1-241108-01 
+Network Operations 
+      
+Approved 
+Effective date :1/12/2024 
+ 
+ 
+DHL Express – Excellence. Simply delivered. 
+ 
+76

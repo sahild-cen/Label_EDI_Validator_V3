@@ -1,0 +1,57 @@
+Message Specification Guidelines                         
+                          
+ 
+Given after Consignee address (NAD+CN and corresponding LOC, CTA and 
+COM segments) 
+14 
+Customer’s account given in Payer Account 
+SG 43 – NAD 
+Page 51 
+15 
+Receiver Contact and Address details given for end receiver of Baby shipment 
+SG 43 – NAD 
+Page 51 
+ 
+*Requirement of Loose BBX but not of Consolidated BBX 
+Consolidated BBX requires the Mother Piece ID in which a Baby shipment piece is packed to be given as 
+a Piece Reference against that Baby shipment piece with Reference Type ACL – this is NOT required in 
+Loose BBX 
+Also different Service Codes are given to indicate Mother and Baby shipments with Consolidated BBX 
+ 
+Example Loose BBX Message 
+UNA:+.? ' 
+UNB+UNOA:2+CIT+DHLEUAPGW+200105:1438+1298' 
+UNH+1298+IFCSUM:D:01B:UN+GM2/DCGFW4.6' 
+BGM+785+1298+9' 
+DTM+9:202018161505:203' 
+DTM+11:202018161505:203' 
+MOA+43:4475.43:EUR' 
+CNT+7:2.0:KGM' 
+CNT+11:3' 
+CNT+15:0.6:MTQ' 
+NAD+CZ+999999999++DISPLAY MANUFACTURER+8 Fengming 4th St+Dongguan++523757+CN' 
+CTA+CO+:CO-DISPLAY MAN(SP)' 
+CTA+IC+:CI-DISPLAY MAN(SP)' 
+COM+86 769 5566 5568(SP):TE' 
+COM+86 769 5566 9999(SP):FX' 
+COM+IFCSUM_Sender@email.com(SP):EM' 
+COM+86 769 5566 7777(SP):AL' 
+RFF+VA:CN001545954B01' 
+TDT+11' 
+CNI+1+5684631853' 
+DTM+191:202009141500:203' 
+TSR+++WPX:57:87' 
+MOA+43:4475.43:EUR' 
+MOA+64:300:EUR' 
+MOA+124:200:EUR' 
+MOA+39:4975.43:EUR' 
+FTX+AAA+++ELECTRICAL PARTS' 
+FTX+DIN+++FOR TESTING PARTS ONLY' 
+TOD+6++DDU:::230' 
+LOC+5+OSA::6' 
+RFF+CU:CUSTREFMOTHER001' 
+GOR+1' 
+DOC+821+12345678' 
+DTM+3:202009141500:203' 
+NAD+CN+555777888++DISPLAY MAN CUSTOMS+HERMANN-KOEHL-STRASSE 1+SCHKEUDITZ++04435+DE' 
+Global EDI IFCSUM D01B v3.0             Confidential                             Page 103 of 115
