@@ -3,38 +3,40 @@
 ## Display Name
 Package Weight
 
-## Field Description
-The weight of the package in whole pounds or kilograms (rounded up to the next whole unit). This is encoded in the MaxiCode secondary message.
+## Group Description
+The individual package weight displayed in the top-right corner of the label. The actual package weight, rounded up to the next whole pound or half kilogram.
 
-## Format & Validation Rules
-- **Data Type:** numeric
-- **Length:** 1-3 digits
-- **Pattern/Regex:** `^[0-9]{1,3}$`
-- **Allowed Values:** 1-999 (minimum 1 pound or 1 kilogram unless Letter/Envelope)
-- **Required:** conditional — required for most packages; leave blank for Letters/Envelopes unless weight meets published threshold; leave blank if weight exceeds maximum characters allowed (for UPS Worldwide Express Freight)
+## Sub-Fields
+
+### package_weight
+- **Data Type:** alphanumeric
+- **Length:** 8 (positions 1-8: up to 4 alphanumeric + space + KG/LBS)
+- **Pattern/Regex:** `^\d{1,4}(\.\d)?\s(KG|LBS)$`
+- **Allowed Values:** Not restricted (weight value + unit KG or LBS)
+- **Required:** conditional — not required for Europe and Asia origins
+- **Description:** The actual weight of the individual package, rounded up to the next whole pound or half kilogram
+- **Detect By:** spatial:top_right, numeric value followed by KG or LBS
+- **Position on Label:** top-right corner, immediately to the left of the package count
+- **ZPL Font:** 12pt bold
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
-- `37` (validated address example)
-- `10` (non-validated and international examples)
-- Blank/empty (letter/envelope example)
-
-## Position on Label
-Encoded within MaxiCode secondary message. Also typically printed as human-readable text on the label.
-
-## ZPL Rendering
-- **Typical Position:** Encoded within MaxiCode; human-readable typically in shipment info area
-- **Font / Size:** Not specified
-- **Field Prefix:** Not specified in this extract
-- **ZPL Command:** Encoded within ^BD (MaxiCode); ^FD (text field) for human-readable
+- `12.5 KG`
+- `5 LBS`
+- `50.5 KG`
+- `12 KG`
 
 ## Edge Cases & Notes
-- Round up to next whole pound or kilogram.
-- Minimum weight is 1 pound or 1 kilogram.
-- For Letters and Envelopes, the weight field must be left blank unless weight equals or exceeds the published threshold.
-- For UPS Worldwide Express Freight, leave blank if weight exceeds the maximum number of characters (3 digits = 999).
+- Positions 1-4 = up to four alphanumeric, Position 5 = space, Positions 6-8 = KG or LBS
+- When a UPS PAK is used, the weight and PAK indicator replace this field (e.g., `5.5 KG PAK`, `2.4 LBS PAK`)
+- When UPS Envelope/UPS Letter is used, weight with one decimal point plus ENV or LTR replaces this field (e.g., `0.3 KG ENV`, `0.5 LBS LTR`)
+- When UPS 25 KG BOX or 10 KG BOX is used, text `25 KG BOX` or `10 KG BOX` replaces this field
+- If actual weight exceeds the selected shipping option, the actual package weight must print
+- Not required for Europe and Asia origins
 
 ## Claude Confidence
-HIGH — spec provides clear rules and multiple examples including edge cases
+HIGH — spec provides detailed positional data content and examples
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

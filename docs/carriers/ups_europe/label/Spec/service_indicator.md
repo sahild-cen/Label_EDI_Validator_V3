@@ -3,42 +3,39 @@
 ## Display Name
 Service Indicator
 
-## Field Description
-A two-character code embedded in the tracking number that identifies the specific UPS service level and any accessorial options (such as signature required, adult signature, Saturday delivery, or COD).
+## Group Description
+A two-character alphanumeric code embedded in the tracking number (positions 9-10 of the 1Z number) that identifies the specific UPS service and options selected.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### service_indicator_code
 - **Data Type:** alphanumeric
-- **Length:** 2 characters
-- **Pattern/Regex:** `[A-Z0-9]{2}`
-- **Allowed Values:** Enumerated list including: 54, G1, G5, 34, G4, G8, AT, GG, G9, AV, GH, GA, 66, D3, D4, 69, D6, D7, 04, D9, DA, 67, DG, DH, 68, DK, DL, FX, FY, FZ, QH, QD, QE, 73, G2, G6, G3, G7, 75, C6, C7, 76, C9, CA, 77, CH, CJ, 79, CP, CR, GJ, GK, GL, Q4, QA, QC, T8, T9, TG, TH, TN, TP, TT, TW
+- **Length:** 2
+- **Pattern/Regex:** ^[A-Z0-9]{2}$
+- **Allowed Values:** YZ (AP Economy), Z0 (AP Economy Delivery Confirmation), Z3 (AP Economy DC Signature Required), Z4 (AP Economy DC Adult Signature Required), Z6 (AP Economy COD), Z1 (AP Economy COD DC), Z2 (AP Economy COD DC Signature Required), Z5 (AP Economy COD DC Adult Signature Required), Z7 (AP Economy Returns), EA (example from conversion table = 426), 66, C7, 67, and others per service tables
 - **Required:** yes
+- **Description:** Two-character code identifying the UPS service level, embedded in the tracking number and used to derive the MaxiCode Class of Service value
+- **Detect By:** Extracted from tracking number positions 9-10 (after "1Z" + 6-char account)
+- **Position on Label:** embedded within tracking number
+- **ZPL Font:** Not applicable (part of tracking number)
+- **Field Prefix:** None
+- **ZPL Command:** Not applicable (embedded in tracking number data)
 
 ## Examples from Spec
-- `54` (UPS Express Plus)
-- `66` (UPS Express)
-- `AT` (UPS Express NA1)
-- `04` (UPS Saver)
-- `67` (UPS Expedited)
-- `68` (UPS Standard)
-- `75` (UPS Express COD Lead)
-- `FX` (UPS Standard Saturday Delivery)
-- `G9` (UPS Express NA1 Adult Signature Required)
-- `QH` (UPS Express 12:00)
-
-## Position on Label
-Embedded within the tracking number (positions 8-9 of the 1Z tracking number). Not displayed as a standalone visible field.
-
-## ZPL Rendering
-- **Typical Position:** Embedded within the tracking number barcode data
-- **Font / Size:** Not specified — not a separately printed text element
-- **Field Prefix:** None — embedded in tracking number
-- **ZPL Command:** Part of tracking number barcode data
+Service indicators from Access Point Economy tables:
+- YZ = UPS Access Point Economy (Class of Service 991)
+- Z0 = Delivery Confirmation (993)
+- Z3 = DC Signature Required (995)
+- Z4 = DC Adult Signature Required (996)
+- Z6 = COD (998)
+- Z7 = Returns (999)
 
 ## Edge Cases & Notes
-Different service indicators are used for COD lead packages vs. COD child packages. The service indicator determines the service icon and MaxiCode class of service. Signature Required and Adult Signature Required have their own distinct indicators per service.
+- The service indicator can be converted to/from a 3-digit MaxiCode Class of Service code using the character value lookup table provided in Appendix A.
+- Conversion formula: First character value (from table) + Second character value = Class of Service decimal.
 
 ## Claude Confidence
-HIGH — comprehensively enumerated in the spec with multiple tables
+MEDIUM — Spec provides detailed tables for Access Point Economy but only partial coverage of all service indicators.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

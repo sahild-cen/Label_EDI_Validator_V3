@@ -1,38 +1,37 @@
 # Field: shipment_dimensional_weight
 
 ## Display Name
-Shipment Dimensional Weight (SHP DWT)
+Shipment Dimensional Weight
 
-## Field Description
-The shipment dimensional weight, printed when applicable. The weight is rounded to the next whole pound or half kilogram. Applies to all movements except U.S. domestic and Puerto Rico to the U.S.
+## Group Description
+The shipment dimensional weight, printed when applicable. The weight is rounded to the next whole pound or half kilogram. Not applicable for 10 KG and 25 KG boxes.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### shipment_dimensional_weight
 - **Data Type:** alphanumeric
-- **Length:** 18 positions
-- **Pattern/Regex:** Positions 1-8 = "SHP DWT:"; Position 9 = space; Positions 10-14 = up to five numeric; Position 15 = space; Positions 16-18 = LBS or KG
-- **Allowed Values:** Numeric weight value with unit
-- **Required:** conditional — only when dimensional weight applies
+- **Length:** 18 (8 prefix + space + up to 5 numeric + space + KG/LBS)
+- **Pattern/Regex:** `^SHP DWT:\s[\d.]{1,5}\s(LBS|KG)$`
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Total dimensional weight of the shipment, applicable for all movements except U.S. Domestic and Puerto Rico to the U.S.
+- **Detect By:** text_prefix:SHP DWT:
+- **Position on Label:** top-right area, beneath shipment weight
+- **ZPL Font:** 8pt
+- **Field Prefix:** "SHP DWT:"
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
 - `SHP DWT: 1000 LBS`
 - `SHP DWT: 189.5 KG`
 - `SHP DWT: 50.5 KG`
 
-## Position on Label
-Prints in the Package Information Block area, below the shipment weight.
-
-## ZPL Rendering
-- **Typical Position:** Top-right area, below shipment weight
-- **Font / Size:** 8pt
-- **Field Prefix:** "SHP DWT:"
-- **ZPL Command:** ^FD (text field)
-
 ## Edge Cases & Notes
-- Dimensional weight will not apply for 10 KG and 25 KG boxes.
-- Only applies for movements other than U.S. domestic and Puerto Rico to the U.S.
+- Positions 1-8 = "SHP DWT:", Position 9 = space, Positions 10-14 = up to five numeric, Position 15 = space, Positions 16-18 = LBS or KG
+- Dimensional weight will not apply for 10 KG and 25 KG boxes
 
 ## Claude Confidence
-HIGH — spec provides detailed data content, conditions, and examples
+HIGH — spec clearly defines format with positional data and examples
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

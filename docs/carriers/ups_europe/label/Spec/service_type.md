@@ -1,36 +1,40 @@
 # Field: service_type
 
 ## Display Name
-Service Type
+UPS Service Title
 
-## Field Description
-The UPS service level for the shipment. Referenced throughout the spec as driving label requirements including service icons and service indicators. Services include UPS Standard, UPS Express, UPS Expedited, and others.
+## Group Description
+The UPS service level name displayed prominently on the label, indicating the type of shipping service used.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### service_title
 - **Data Type:** string
-- **Length:** Variable
+- **Length:** variable
 - **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** UPS Standard, UPS Express, UPS Expedited, and other UPS General Service Offerings
+- **Allowed Values:** "UPS EXPRESS", "UPS EXPEDITED", "UPS ACCESS POINT ECONOMY", "UPS Domestic Standard", "UPS Domestic Express", "UPS Domestic Express Plus", "UPS Domestic Express Saver", "UPS Worldwide Express", "UPS Worldwide Express Plus", "UPS Worldwide Expedited", "UPS Worldwide Express Saver", "UPS Worldwide Standard", "UPS Transborder Standard", "UPS Transborder Express", "UPS Transborder Express Plus", "UPS Transborder Express Saver", "UPS Express NA1", "UPS Express 12:00", "UPS Worldwide Express Freight", and variants with package type suffixes (Letters/Envelopes, 10 KG Box, 25 KG Box, Express Box, Tube, PAK, GNIFC)
 - **Required:** yes
+- **Description:** The UPS service name. Font size is reduced to 12 pt. bold for UPS Access Point labels.
+- **Detect By:** spatial:service_section, prominent text in service area of label
+- **Position on Label:** center-right area, near the tracking barcode section
+- **ZPL Font:** 12 pt. bold (UPS Access Point labels; standard size not specified for other labels)
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
-From the label certification table: "UPS® Standard, UPS Express, UPS Expedited, etc."
-
-## Position on Label
-Represented by the Service Icon and encoded in the Service Indicator (positions 9-10 of tracking number).
-
-## ZPL Rendering
-- **Typical Position:** Upper portion of label as service icon graphic; may also appear as text
-- **Font / Size:** Not specified
-- **Field Prefix:** None — represented as graphic icon
-- **ZPL Command:** ^GFA or ^IM (graphic for service icon)
+```
+UPS EXPRESS
+UPS EXPEDITED
+UPS ACCESS POINT ECONOMY
+```
 
 ## Edge Cases & Notes
-- Adding a new UPS service requires label re-certification.
-- The certification process requires labels to be distributed across all supported services (e.g., 2 services = 2 sets of 5 labels each; 3 services = sets of 3/3/4; 5 services = 2 labels each).
+- Font size is explicitly reduced to 12 pt. bold for UPS Access Point labels.
+- Service titles can include package type suffixes (e.g., "Letters/Envelopes", "10 KG Box").
+- The full list of service titles is defined in the Shipment Summary section of the manifest spec.
 
 ## Claude Confidence
-MEDIUM — Service types are referenced but detailed list of allowed values and rendering specs not in extracted text.
+HIGH — Spec explicitly lists service titles and font size requirements.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

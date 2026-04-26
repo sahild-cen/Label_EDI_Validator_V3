@@ -4,27 +4,29 @@
 Handling-relevant Service Logos
 
 ## Field Description
-Visual logos/icons displayed on the label to indicate specific handling-relevant services, such as Medical Express.
+Visual logos/icons displayed on the label to indicate specific handling-relevant services, such as the Medical EXPRESS Logo. These support DHL internal operational procedures and visual identification of special handling requirements.
 
 ## Format & Validation Rules
-- **Data Type:** image
+- **Data Type:** graphic/image
 - **Length:** N/A
-- **Pattern/Regex:** Not applicable
+- **Pattern/Regex:** N/A
 - **Allowed Values:** DHL-defined service logos (e.g., Medical EXPRESS Logo)
-- **Required:** conditional — displayed when applicable service is part of the shipment
+- **Required:** conditional — displayed when applicable services are selected
 
 ## Examples from Spec
-Medical EXPRESS Logo is specifically mentioned as an example.
+"Medical EXPRESS Logo" specifically mentioned in section 5.10.4.1.
 
-## Position on Label
-Product Features section of the label.
+## ZPL Rendering
+- **Typical Position:** product features section
+- **Font / Size:** N/A — graphic element
+- **Field Prefix:** None
+- **ZPL Command:** ^GFA (graphic field)
 
 ## Edge Cases & Notes
-- Medical EXPRESS Logo is specifically called out as a handling-relevant service logo
-- These logos visually indicate special handling requirements to support operational procedures
+The Medical EXPRESS Logo is specifically called out as a service logo type. Other handling-relevant service logos may exist but are not enumerated in the extracted text.
 
 ## Claude Confidence
-MEDIUM — spec mentions the concept and one example but full list of logos is not in extracted text
+MEDIUM — section headers visible but detail limited in extracted text
 
 ## Review Status
 - [ ] Reviewed by human

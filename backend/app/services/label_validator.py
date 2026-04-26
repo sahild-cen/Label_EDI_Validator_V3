@@ -13,6 +13,68 @@ except Exception:
     pyzbar = None
 
 
+# "from" and "to" are directional markers — keep them so ship_from != ship_to
+_STOP_WORDS = {"the", "a", "an", "of", "and", "or", "is", "in", "on", "at", "for", "by", "with"}
+
+
+def _normalize_comment_words(text: str) -> set:
+    return set(re.sub(r"[_\-]", " ", text).lower().split()) - _STOP_WORDS
+
+
+def _fx_match_score(field_words: set, comment_words: set) -> float:
+    """Jaccard similarity. Returns 0 when 'from'/'to' direction mismatches."""
+    if ("from" in field_words) != ("from" in comment_words) or \
+       ("to" in field_words) != ("to" in comment_words):
+        return 0.0
+    union = len(field_words | comment_words)
+    return len(field_words & comment_words) / union if union else 0.0
+
+
+async def _load_position_overrides(db, carrier: str) -> dict:
+    """Load field→position mappings for a carrier from MongoDB (one doc per carrier)."""
+    if db is None:
+        return {}
+    try:
+        doc = await db.field_position_mappings.find_one({"carrier": carrier.lower().strip()})
+        return doc.get("mappings", {}) if doc else {}
+    except Exception:
+        return {}
+
+
+async def _save_position_mappings(db, carrier: str, positions: dict):
+    """Upsert auto-computed positions into the carrier's single document.
+    Never overwrites entries where is_manual=True."""
+    if db is None or not positions:
+        return
+    from datetime import datetime
+    carrier_key = carrier.lower().strip()
+    try:
+        doc = await db.field_position_mappings.find_one({"carrier": carrier_key})
+        existing = doc.get("mappings", {}) if doc else {}
+
+        updates = {}
+        for field_name, pos in positions.items():
+            if field_name in existing:
+                continue  # already stored — never auto-overwrite
+            updates[f"mappings.{field_name}"] = {
+                "x": pos["x"],
+                "y": pos["y"],
+                "font_cmd": pos.get("font_cmd", ""),
+                "comment_text": pos.get("comment_text", ""),
+                "is_manual": False,
+                "updated_at": datetime.utcnow(),
+            }
+
+        if updates:
+            await db.field_position_mappings.update_one(
+                {"carrier": carrier_key},
+                {"$set": updates},
+                upsert=True,
+            )
+    except Exception as e:
+        print(f"  [PositionMap] Warning: could not save mappings: {e}")
+
+
 def _get_db():
     try:
         from app.database import get_database
@@ -141,10 +203,25 @@ def _detect_field_by_rule(raw_data: dict, detect_by: str,
             return False, "Not found"
 
         if detect_type == "text_pattern":
+            # Strip anchors so detect_by always works as a substring search.
+            # Anchored patterns (^...$) make sense for full-match validation
+            # (the `regex` field) but break text_pattern detection when the
+            # extracted text has a prefix/suffix (e.g. "URC 18.5A 01/2020").
+            search_pat = detect_value.lstrip("^").rstrip("$")
+            # Individual text blocks
             for t in texts:
                 try:
-                    if re.match(detect_value, t.strip()):
+                    if re.search(search_pat, t.strip()):
                         return True, t.strip()[:60]
+                except re.error:
+                    pass
+            # Combined same-row text (ZPL often splits one visual line into
+            # multiple ^FD fields; try joining same-Y blocks so patterns that
+            # span two adjacent fields can still match).
+            for combined in raw_data.get("combined_line_texts", []):
+                try:
+                    if re.search(search_pat, combined):
+                        return True, combined[:60]
                 except re.error:
                     pass
             return False, "Not found"
@@ -304,6 +381,9 @@ class LabelValidator:
         layout_blocks = []
         raw_data = None
 
+        db = _get_db()
+        position_overrides = {}
+
         if is_zpl:
             original_script = label_data if isinstance(label_data, str) else label_data.decode("utf-8")
             from app.services.zpl_parser import parse_zpl_to_raw, parse_zpl_script
@@ -312,14 +392,22 @@ class LabelValidator:
             raw_data = parse_zpl_to_raw(original_script)
             # Backward compat: also get parsed data for legacy field matching
             parsed_data = parse_zpl_script(original_script)
+
+            if self.carrier_name:
+                position_overrides = await _load_position_overrides(db, self.carrier_name)
+
         # Debug: print everything the parser extracted
         if raw_data:
+            from app.services.zpl_parser import _extract_fx_comment_map
+            fx_comment_map = _extract_fx_comment_map(original_script)
+
             print("\n" + "=" * 60)
             print("ZPL PARSER RAW OUTPUT")
             print("=" * 60)
             print(f"  Text blocks: {len(raw_data.get('text_blocks', []))}")
             for b in raw_data.get("text_blocks", []):
-                print(f"    ({b['x']:>5.0f}, {b['y']:>5.0f}) font={b['font_size']:>2d}  {b['text'][:70]!r}")
+                comment_tag = f"  ← ^FX: {b['comment_label']!r}" if b.get("comment_label") else ""
+                print(f"    ({b['x']:>5.0f}, {b['y']:>5.0f}) font={b['font_size']:>2d}  {b['text'][:60]!r}{comment_tag}")
             print(f"\n  Barcodes: {len(raw_data.get('barcodes', []))}")
             for b in raw_data.get("barcodes", []):
                 print(f"    {b['type']:15s} h={b['height']:>3d}  {b['data'][:50]!r}")
@@ -331,6 +419,77 @@ class LabelValidator:
                 has_img = "decoded" if g.get('image') else "no image"
                 print(f"    {g['type']}  ({g['x']:.0f},{g['y']:.0f})  {w}x{h}px  density={density:.1%}  [{has_img}]")
             print(f"\n  ZPL commands: {raw_data.get('zpl_commands', [])}")
+            combined = raw_data.get("combined_line_texts", [])
+            if combined:
+                print(f"\n  Combined line texts ({len(combined)}):")
+                for c in combined:
+                    print(f"    {c[:80]!r}")
+
+            # ── ^FX Comment Anchors ──
+            print(f"\n  ^FX Comment Anchors: {len(fx_comment_map)}")
+            if fx_comment_map:
+                for (cx, cy), comment_text in sorted(fx_comment_map.items(), key=lambda kv: kv[0][1]):
+                    print(f"    ({cx:>5.0f}, {cy:>5.0f})  →  {comment_text!r}")
+            else:
+                print("    (none found — label has no ^FX annotations)")
+
+            # ── Per-field position resolution preview ──
+            field_formats = self.rules.get("field_formats", {})
+            computed_positions = {}
+            if field_formats:
+                print(f"\n  Position Resolution (per field):")
+                for fname, frule in field_formats.items():
+                    # DB override takes highest priority
+                    if fname in position_overrides:
+                        ov = position_overrides[fname]
+                        tag = " [manual]" if ov["is_manual"] else " [db]"
+                        source = f"DB ({ov['x']}, {ov['y']}) → {ov['comment_text']!r}{tag}"
+                        print(f"    {fname:35s}  {source}")
+                        continue
+
+                    zpl_pos = frule.get("zpl_position", "")
+                    if zpl_pos and "," in zpl_pos:
+                        source = f"rules zpl_position → ({zpl_pos})"
+                    else:
+                        field_words = _normalize_comment_words(fname)
+                        best_score = 0.0
+                        best_intersection = 0
+                        matched_comment = None
+                        matched_x = matched_y = None
+                        for block in raw_data.get("text_blocks", []):
+                            clabel = block.get("comment_label", "")
+                            if not clabel:
+                                continue
+                            cwords = _normalize_comment_words(clabel)
+                            score = _fx_match_score(field_words, cwords)
+                            if score > best_score:
+                                best_score = score
+                                best_intersection = len(field_words & cwords)
+                                matched_comment = clabel
+                                matched_x, matched_y = int(block["x"]), int(block["y"])
+                        if fx_comment_map:
+                            for (cx, cy), ctext in fx_comment_map.items():
+                                cwords = _normalize_comment_words(ctext)
+                                score = _fx_match_score(field_words, cwords)
+                                if score > best_score:
+                                    best_score = score
+                                    best_intersection = len(field_words & cwords)
+                                    matched_comment = ctext
+                                    matched_x, matched_y = int(cx), int(cy)
+                        if matched_comment and best_intersection * 2 > len(field_words):
+                            source = f"^FX comment ({matched_x}, {matched_y}) → {matched_comment!r}"
+                            computed_positions[fname] = {
+                                "x": matched_x, "y": matched_y,
+                                "font_cmd": "",
+                                "comment_text": matched_comment,
+                            }
+                        else:
+                            source = "no position — will use sibling heuristic or bottom"
+                    print(f"    {fname:35s}  {source}")
+
+            if computed_positions and self.carrier_name:
+                await _save_position_mappings(db, self.carrier_name, computed_positions)
+
             print("=" * 60 + "\n")
         else:
             img = self._load_image(label_data)
@@ -364,7 +523,9 @@ class LabelValidator:
 
         corrected_script = None
         if is_zpl and errors:
-            corrected_script = self._auto_correct_zpl(original_script, parsed_data, errors, raw_data)
+            corrected_script = self._auto_correct_zpl(
+                original_script, parsed_data, errors, raw_data, position_overrides
+            )
 
         return {
             "status": status,
@@ -573,7 +734,8 @@ class LabelValidator:
             return []
 
     def _auto_correct_zpl(self, original_script: str, parsed_data: dict,
-                          errors: list, raw_data: dict = None) -> str:
+                          errors: list, raw_data: dict = None,
+                          position_overrides: dict = None) -> str:
         """
         Generate a corrected ZPL script that adds proper ZPL commands for
         missing fields. Uses the ACTUAL label's parsed data to determine
@@ -592,6 +754,15 @@ class LabelValidator:
         field_formats = self.rules.get("field_formats", {})
         text_blocks = raw_data.get("text_blocks", []) if raw_data else []
         additions = []
+
+        # Extract ^FX comment anchors from the raw script so we can locate
+        # fields whose ^FD is empty — those have no text_block but the ^FO
+        # position is still in the script and the ^FX comment names the field.
+        try:
+            from app.services.zpl_parser import _extract_fx_comment_map
+            fx_comment_map = _extract_fx_comment_map(original_script)
+        except Exception:
+            fx_comment_map = {}
 
         # Build a map of prefix → position from actual label text blocks
         # So we can find where sibling fields are on THIS label
@@ -651,6 +822,8 @@ class LabelValidator:
                 pos_x, pos_y, font = self._find_smart_position(
                     field, rule, text_blocks, prefix_positions,
                     detected_field_positions, field_formats, fallback_y,
+                    fx_comment_map=fx_comment_map,
+                    position_overrides=position_overrides or {},
                 )
 
                 if detect_type == "zpl_command":
@@ -705,16 +878,19 @@ class LabelValidator:
         self, field: str, rule: dict, text_blocks: list,
         prefix_positions: dict, detected_field_positions: dict,
         field_formats: dict, fallback_y: float,
+        fx_comment_map: dict = None,
+        position_overrides: dict = None,
     ) -> tuple:
         """
         Determine the best (x, y, font_cmd) for a missing field by
         examining the actual label layout.
 
         Priority:
-          1. Find a sibling text_prefix field on the label (same X zone,
-             similar type) and place just below it with matching font
-          2. Use zpl_position from rules
-          3. Stack at fallback_y (bottom of label)
+          0. DB position override (manual or auto-saved)
+          1. zpl_position from rules
+          2. ^FX comment anchor (Jaccard match)
+          3. Sibling prefix field heuristic
+          4. Stack at bottom of label
         """
         detect_by = rule.get("detect_by", "")
         zpl_position = rule.get("zpl_position", "")
@@ -722,43 +898,13 @@ class LabelValidator:
         field_prefix = rule.get("field_prefix", "")
         default_font = "^A0N,22,26"
 
-        # ── Strategy 1: Find sibling prefix fields on the actual label ──
-        # For text_prefix fields (DESC:, BILLING:, DATE:, etc.),
-        # find other prefix fields in the same X-zone and place below the last one.
-        if field_prefix:
-            # Find which other rules have prefixes that ARE on this label
-            siblings = []
-            my_prefix = field_prefix.upper().rstrip(":")
-            for fname, frule in field_formats.items():
-                fp = frule.get("field_prefix", "").upper()
-                if fp and fp in prefix_positions and fname != field:
-                    siblings.append({
-                        "field": fname,
-                        "prefix": fp,
-                        **prefix_positions[fp],
-                    })
+        # ── Strategy 0: DB position override ──
+        if position_overrides and field in position_overrides:
+            ov = position_overrides[field]
+            return ov["x"], ov["y"], ov.get("font_cmd", "") or default_font
 
-            if siblings:
-                # Sort siblings by Y position
-                siblings.sort(key=lambda s: s["y"])
-
-                # Try to find the field that would be directly above this one
-                # by looking at similar-area fields (same X zone)
-                # Group by X-zone (within 50px)
-                best_sibling = None
-                for sib in siblings:
-                    # Prefer siblings with similar X (same column on the label)
-                    # and highest Y that's less than label bottom
-                    if best_sibling is None or sib["y"] > best_sibling["y"]:
-                        best_sibling = sib
-
-                if best_sibling:
-                    pos_x = int(best_sibling["x"])
-                    pos_y = int(best_sibling["y"]) + 20  # ~20 dots below sibling
-                    font = best_sibling.get("font_cmd", "") or default_font
-                    return pos_x, pos_y, font
-
-        # ── Strategy 2: Use zpl_position from rules ──
+        # ── Strategy 1: zpl_position from rules (most authoritative) ──
+        # This comes from the human-reviewed spec PDF, so trust it first.
         if zpl_position and "," in zpl_position:
             try:
                 parts = zpl_position.split(",", 1)
@@ -769,11 +915,86 @@ class LabelValidator:
             except (ValueError, IndexError):
                 pass
 
-        # ── Strategy 3: Stack at bottom of label ──
-        # Find the font most commonly used in the same area
+        # ── Strategy 2: ^FX comment anchor in the label script ──
+        # Only reached when zpl_position is empty/missing.
+        # If the user annotated their ZPL with ^FX comments before field commands,
+        # use those comments to find exactly where this field belongs.
+        # Example: "^FX Pickup Date^FO400,50..." tells us shipment_date goes at (400,50).
+        # Matching is fuzzy: any significant word overlap between field name and comment.
+        #
+        # Two-pass: first check text_blocks (has font info for fields with values),
+        # then check fx_comment_map directly (handles fields with empty ^FD^FS).
+        field_words = _normalize_comment_words(field)
+        if field_words:
+            best_score = 0.0
+            best_intersection = 0
+            best_block = None
+            best_fx = None
+
+            for block in text_blocks:
+                comment = block.get("comment_label", "")
+                if not comment:
+                    continue
+                cwords = _normalize_comment_words(comment)
+                score = _fx_match_score(field_words, cwords)
+                if score > best_score:
+                    best_score = score
+                    best_intersection = len(field_words & cwords)
+                    best_block = block
+                    best_fx = None
+
+            if fx_comment_map:
+                for (cx, cy), comment_text in fx_comment_map.items():
+                    cwords = _normalize_comment_words(comment_text)
+                    score = _fx_match_score(field_words, cwords)
+                    if score > best_score:
+                        best_score = score
+                        best_intersection = len(field_words & cwords)
+                        best_block = None
+                        best_fx = (cx, cy, comment_text)
+
+            if best_intersection * 2 > len(field_words):
+                if best_block:
+                    return int(best_block["x"]), int(best_block["y"]), best_block.get("font_cmd", "") or default_font
+                if best_fx:
+                    cx, cy, _ = best_fx
+                    nearby_font = default_font
+                    for block in text_blocks:
+                        if abs(block["x"] - cx) < 80 and abs(block["y"] - cy) < 80:
+                            nearby_font = block.get("font_cmd", "") or default_font
+                            break
+                    return int(cx), int(cy), nearby_font
+
+        # ── Strategy 3: Sibling prefix fields on the actual label ──
+        # For text_prefix fields (DESC:, BILLING:, DATE:, etc.),
+        # find other prefix fields in the same X-zone and place below the last one.
+        if field_prefix:
+            siblings = []
+            for fname, frule in field_formats.items():
+                fp = frule.get("field_prefix", "").upper()
+                if fp and fp in prefix_positions and fname != field:
+                    siblings.append({
+                        "field": fname,
+                        "prefix": fp,
+                        **prefix_positions[fp],
+                    })
+
+            if siblings:
+                siblings.sort(key=lambda s: s["y"])
+                best_sibling = None
+                for sib in siblings:
+                    if best_sibling is None or sib["y"] > best_sibling["y"]:
+                        best_sibling = sib
+
+                if best_sibling:
+                    pos_x = int(best_sibling["x"])
+                    pos_y = int(best_sibling["y"]) + 20
+                    font = best_sibling.get("font_cmd", "") or default_font
+                    return pos_x, pos_y, font
+
+        # ── Strategy 4: Stack at bottom of label ──
         area_font = default_font
         if text_blocks:
-            # Use the most common font from the label
             font_counts = {}
             for b in text_blocks:
                 fc = b.get("font_cmd", "")

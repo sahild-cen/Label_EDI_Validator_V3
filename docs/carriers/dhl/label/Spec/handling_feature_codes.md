@@ -1,36 +1,36 @@
 # Field: handling_feature_codes
 
 ## Display Name
-Handling Feature Codes (HFC)
+Handling Feature Codes (HFCs)
 
 ## Field Description
-Codes representing handling-relevant product features that impact sorting and/or delivery processes. These are translated from commercial Product and Service Codes and printed in reverse video format on the label.
+Codes representing handling-relevant product features that impact sorting and/or delivery processes. These are translated from commercial Product and Service Codes and printed in reverse video format (white text on black background), left-aligned in the handling feature segment. Only handling-relevant features appear on the label.
 
 ## Format & Validation Rules
 - **Data Type:** alphanumeric
-- **Length:** 3 numeric digits in routing barcode (fixed length, with leading zeroes); variable display on label
-- **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Sum of values of product features; "000" when no features are chosen. Examples include "DTP" displayed on label.
+- **Length:** variable — typically 3 characters per code
+- **Pattern/Regex:** Not specified in spec — codes derived from DHL reference data
+- **Allowed Values:** Defined by DHL's reference data translation from Product/Service Codes (e.g., "DTP" from service code "DD")
 - **Required:** conditional — mandatory when defined through Service Codes
 
 ## Examples from Spec
-- "DTP" displayed on label in reverse video
-- "000" when no features chosen
-- "001" for Customs Clearance
-- "081" = sum of 1+16+64 (multiple features combined)
-- "002" example in routing barcode
+- "DTP" — handling feature code translated from service code "DD"
 
-## Position on Label
-Printed left-aligned in the handling feature segment, in reverse video format. Located in the product features area of the label.
+## ZPL Rendering
+- **Typical Position:** handling feature segment, printed left-aligned
+- **Font / Size:** Reverse video format (white text on black background)
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field) with ^FR (field reverse) or ^GB (graphic box) background
 
 ## Edge Cases & Notes
-- Only handling-relevant features appear on the label; non-handling features appear only on accompanying documentation (EDI, pickup/delivery lists)
-- In the routing barcode, the feature code is always 3 digits with leading zeroes
-- The feature code in the routing barcode is a sum of individual feature code values
-- Translation from commercial products/services to handling codes is based on DHL's reference data
+- Must be printed per Global Standard when defined through Service Codes.
+- Product features that are not handling-relevant appear only on accompanying documentation (EDI, pickup/delivery lists), not on the label.
+- The translation from commercial products/services to handling codes is based on DHL's reference data.
+- Multiple HFCs can appear simultaneously.
+- In the routing barcode, handling feature codes are encoded as a 3-digit numeric sum of feature values with leading zeroes.
 
 ## Claude Confidence
-HIGH — spec clearly defines these codes with examples and placement rules
+HIGH — clearly defined with rendering requirements (reverse video) and examples
 
 ## Review Status
 - [ ] Reviewed by human

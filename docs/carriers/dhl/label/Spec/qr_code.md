@@ -1,31 +1,38 @@
 # Field: qr_code
 
 ## Display Name
-QR Code (Customer-Facing / LabelFree)
+QR Code (LabelFree)
 
 ## Field Description
-A QR Code barcode used to encode operational data for PUD (Pick-Up and Delivery) and In-Facility domains, particularly in the context of LabelFree scenarios. May encode alphabetic characters, numbers, double characters, and URLs.
+A two-dimensional QR Code barcode used to encode operational data for pickup/delivery and in-facility domains, specifically in the context of DHL's LabelFree scenarios. Compliant with ISO/IEC 18004:2006 and ISO/IEC 18004:2015.
 
 ## Format & Validation Rules
-- **Data Type:** barcode (2D QR Code)
-- **Length:** Variable
-- **Pattern/Regex:** Per ISO/IEC 18004:2006 and ISO/IEC 18004:2015
-- **Allowed Values:** Alphabetic characters, numbers, double characters, URLs
+- **Data Type:** barcode (QR Code)
+- **Length:** reference capacity of 503 alpha-numeric characters
+- **Pattern/Regex:** Not specified in spec — content per LabelFree business requirements
+- **Allowed Values:** Not restricted
 - **Required:** conditional — used in LabelFree scenarios
 
 ## Examples from Spec
-No specific encoded data examples in the extracted text.
+No examples in spec.
 
-## Position on Label
-Not specified in the extracted text for exact position; used in LabelFree context.
+## ZPL Rendering
+- **Typical Position:** placed on screen/label to maximize quiet zone and protect finder patterns; minimum margin to border of 4 modules
+- **Font / Size:** Data contents not shown verbatim; excerpts may be displayed similar to 1D codes
+- **Field Prefix:** None — barcode
+- **ZPL Command:** ^BQ (QR Code)
 
 ## Edge Cases & Notes
-- Implementation is based on ISO/IEC 18004:2006 and compliant with ISO/IEC 18004:2015.
-- Referenced under "Global SOP Customer-Facing QR-Code Specifications" as a separate document.
-- Uses square modules with a unique perimeter pattern for scanner cell location determination.
+- Module size: 0.51mm / 20 mil.
+- Symbol matrix version: 17 (85x85 modules + 4x4 modules quiet zone).
+- Symbol size: 44x44mm including quiet zone.
+- Error correction level: H (highest).
+- Quiet zone: 4×4 modules.
+- Quality grade: C per ISO/IEC 15415 and ISO/IEC 16480.
+- Primarily intended for LabelFree business context.
 
 ## Claude Confidence
-MEDIUM — The spec describes the symbology and its use case but detailed content specifications are in a separate referenced document.
+MEDIUM — described in symbology section but specific to LabelFree context
 
 ## Review Status
 - [ ] Reviewed by human

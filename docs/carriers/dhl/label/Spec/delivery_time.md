@@ -4,31 +4,34 @@
 Delivery Time
 
 ## Field Description
-Shows the time window code for delivery, indicating a specific delivery time commitment. This value is always mandatorily coded in the routing barcode.
+Shows the delivery time window code, indicating the time constraint for delivery. Displayed with a "Time" header and encoded in the routing barcode. If a time window is chosen, the corresponding code is shown on the label.
 
 ## Format & Validation Rules
-- **Data Type:** numeric (in routing barcode); alphanumeric display on label
-- **Length:** 1 numeric digit in routing barcode (fixed length)
-- **Pattern/Regex:** `[0-9]` in routing barcode
-- **Allowed Values:** 0 (no fixed time), 1 (pre 09:00), 2 (pre 12:00), 3 (pre 10:30), plus others
-- **Required:** conditional — mandatory in routing barcode (zero if no time); conditional on label display
+- **Data Type:** alphanumeric
+- **Length:** 1 digit in routing barcode; variable text on label (e.g., "X09", "X10", "X12")
+- **Pattern/Regex:** Routing barcode: `\d{1}`; Label text: `X\d{2}` or similar
+- **Allowed Values:** "0" = no fixed delivery time (no label display); "1" = Pre 09:00 → "X09"; "3" = Pre 10:30 → "X10"; "2" = Pre 12:00 → "X12"
+- **Required:** conditional — coded mandatorily in routing barcode (with "0" default); displayed on label only when a time feature is selected
 
 ## Examples from Spec
-- "0" in routing barcode = no fixed delivery time (nothing on label)
-- "1" = Pre 09:00, displayed as "X09" on label
-- "3" = Pre 10:30, displayed as "X10" on label
-- "2" = Pre 12:00, displayed as "X12" on label
+- "0" in routing barcode → no label display
+- "1" → "X09" on label
+- "3" → "X10" on label
+- "2" → "X12" on label
 
-## Position on Label
-Displayed in the delivery date/time segment with a "Time" header, adjacent to the delivery date field.
+## ZPL Rendering
+- **Typical Position:** handling information segment, under "Time" header, adjacent to delivery date
+- **Font / Size:** Not specified explicitly
+- **Field Prefix:** "Time" header text
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-- In routing barcode, must be populated with zero if no delivery time is specified — field may not remain empty
-- The separator "-" between Date and Time field is required whenever at least one feature is chosen
-- Header "Time" may be in local language for domestic but must include English for international shipments
+- The "Time" header may be in local language for domestic shipments but must include English for international.
+- A "-" separator between Date and Time fields is required whenever at least one of both features is chosen.
+- Always coded in routing barcode with "0" if no delivery time specified.
 
 ## Claude Confidence
-HIGH — spec provides clear mapping table and routing barcode rules
+HIGH — clearly specified with code-to-display mapping
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

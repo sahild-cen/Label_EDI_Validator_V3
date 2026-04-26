@@ -219,21 +219,12 @@ def _inject_field_into_active_rules(db, carrier: str, field: str, notes: str = N
             print(f"  [Missing Check] Carrier '{carrier}' not found in DB")
             return False
 
-        rules_list = carrier_doc.get("rules", [])
+        label_rules = carrier_doc.get("label_rules", {})
 
-        # Find active version index
-        active_idx = None
-        for i, rule_version in enumerate(rules_list):
-            if rule_version.get("status") == "active":
-                active_idx = i
-                break
-
-        if active_idx is None:
-            print(f"  [Missing Check] No active rule version for '{carrier}'")
+        if not label_rules:
+            print(f"  [Missing Check] No label rules for '{carrier}'")
             return False
 
-        active_rules = rules_list[active_idx]
-        label_rules = active_rules.get("label_rules", {})
         field_formats = label_rules.get("field_formats", {})
         required_fields = label_rules.get("required_fields", [])
 
@@ -253,19 +244,18 @@ def _inject_field_into_active_rules(db, carrier: str, field: str, notes: str = N
         if field not in required_fields:
             required_fields.append(field)
 
-        # Write to MongoDB
+        # Write directly to flat label_rules field
         db.carriers.update_one(
             {"_id": carrier_doc["_id"]},
             {
                 "$set": {
-                    f"rules.{active_idx}.label_rules.field_formats.{field}": new_field,
-                    f"rules.{active_idx}.label_rules.required_fields": required_fields,
+                    f"label_rules.field_formats.{field}": new_field,
+                    "label_rules.required_fields": required_fields,
                 }
             }
         )
 
-        print(f"  [Missing Check] Injected '{field}' as required into "
-              f"'{carrier}' active rules (v{active_rules.get('version', '?')})")
+        print(f"  [Missing Check] Injected '{field}' as required into '{carrier}' label rules")
         return True
 
     except Exception as e:

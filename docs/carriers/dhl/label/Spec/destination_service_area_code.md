@@ -4,26 +4,29 @@
 Destination Service Area Code
 
 ## Field Description
-A three-character code identifying the DHL service area (facility/station) at the destination responsible for final delivery of the shipment.
+A DHL-specific code identifying the destination service area or delivery facility. This is a critical routing element used for sorting and routing packages to the correct destination station within the DHL network. Often displayed prominently on the label.
 
 ## Format & Validation Rules
 - **Data Type:** alphanumeric
-- **Length:** 3
-- **Pattern/Regex:** `^[A-Z0-9]{3}$`
-- **Allowed Values:** DHL-defined service area codes
+- **Length:** 3 characters
+- **Pattern/Regex:** ^[A-Z]{3}$
+- **Allowed Values:** DHL-defined destination service area codes
 - **Required:** yes
 
 ## Examples from Spec
-No examples in spec.
+No examples in extracted spec text.
 
-## Position on Label
-Prominently displayed in the routing/destination area of the label, often in large font.
+## ZPL Rendering
+- **Typical Position:** prominent routing area, often large font in upper-right or center-right
+- **Font / Size:** Large bold font for sort/routing visibility
+- **Field Prefix:** None — displayed as standalone routing identifier
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-This is a critical sortation element. It is determined by DHL routing tables based on the destination postal code and country. It often appears as part of the routing code string.
+This code is critical for DHL hub and station sorting operations. It is determined by DHL's routing tables based on the destination postal code and service type.
 
 ## Claude Confidence
-HIGH — Core routing element on DHL labels.
+MEDIUM — known DHL routing element
 
 ## Review Status
 - [ ] Reviewed by human

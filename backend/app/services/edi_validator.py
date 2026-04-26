@@ -196,11 +196,12 @@ class EDIValidator:
                     passed_checks += 1
                 else:
                     print(f"   ❌ '{required_seg}' — MISSING from EDI")
+                    seg_heading = required_seg.rstrip(":").strip().upper()
                     errors.append(ValidationError(
-                        field="segments",
-                        expected=f"Segment '{required_seg}' present",
+                        field=seg_heading,
+                        expected=f"Segment '{seg_heading}' present",
                         actual="Segment missing",
-                        description=f"Required segment '{required_seg}' is missing",
+                        description=f"Required segment '{seg_heading}' is missing",
                     ))
 
             # ── 5b: Check segment order ──
@@ -305,22 +306,174 @@ class EDIValidator:
             print("📋 REQUIRED FIELD CHECKS:")
             print(f"{'─' * 70}")
 
-            edi_upper = edi_content.upper()
+            field_formats = self.rules.get("field_formats", {})
+
             for field in required_fields:
-                total_checks += 1
-                # Check if field name appears in content
-                field_found = field.replace("_", " ").upper() in edi_upper or field.upper() in edi_upper
-                if field_found:
-                    print(f"   ✅ '{field}' — found in EDI content")
-                    passed_checks += 1
+                fmt = field_formats.get(field, {})
+                # segment may be stored as "segment" key, or fall back to the field name itself
+                seg_id = (fmt.get("segment", "") or field).strip().upper()
+                qualifier = fmt.get("qualifier", "").strip().upper()
+                subfields = fmt.get("subfields", {})
+                # Flat-format fields (old rules without subfields)
+                element_position = int(fmt.get("element_position", 0) or fmt.get("position", 0) or 0)
+                pattern = fmt.get("pattern", "") or fmt.get("regex", "")
+
+                if format_type in ["x12", "edifact"]:
+                    if not seg_id:
+                        print(f"   ⏭️  '{field}' — SKIPPED (no segment mapping in rules)")
+                        continue
+
+                    # Strip qualifier that equals the segment name (Claude artifact)
+                    if qualifier == seg_id:
+                        qualifier = ""
+
+                    elem_delim = "+" if format_type == "edifact" else "*"
+                    qualifier_note = f"+{qualifier}" if qualifier else ""
+                    heading = seg_id
+
+                    # ── Find the segment ──
+                    seg_match = None
+                    for seg in parsed_data.get("segments", []):
+                        sid_clean = seg.get("segment_id", "").rstrip(":").strip().upper()
+                        if sid_clean != seg_id:
+                            continue
+                        elements = seg.get("elements", [])
+                        if qualifier:
+                            seg_qualifiers = [e.split(":")[0].strip().upper() for e in elements[1:4]]
+                            if qualifier not in seg_qualifiers:
+                                continue
+                        seg_match = seg
+                        break
+
+                    if not seg_match:
+                        total_checks += 1
+                        print(f"   ❌ '{heading}' ({field}) — NOT found (expected {heading}{qualifier_note})")
+                        errors.append(ValidationError(
+                            field=heading,
+                            expected=f"Segment {heading}{qualifier_note} present in EDI",
+                            actual="Segment missing",
+                            description=f"{field} — required segment {heading}{qualifier_note} is missing",
+                        ))
+                        continue
+
+                    # ── Segment found: validate subfields (new hierarchical format) ──
+                    if subfields:
+                        elements = seg_match.get("elements", [])
+                        for sub_name, sub_fmt in subfields.items():
+                            if not sub_fmt.get("required", False):
+                                continue
+                            total_checks += 1
+                            elem_pos = int(float(sub_fmt.get("element_position", 0) or 0))
+                            sub_pattern = sub_fmt.get("pattern", "") or sub_fmt.get("regex", "")
+
+                            if elem_pos <= 0 or elem_pos >= len(elements):
+                                print(f"   ❌ '{heading}.{sub_name}' — element {elem_pos} out of range (segment has {len(elements)} elements)")
+                                errors.append(ValidationError(
+                                    field=heading,
+                                    expected=f"Element {elem_pos} in {heading} for '{sub_name}'",
+                                    actual=f"Segment only has {len(elements)} element(s)",
+                                    description=f"{sub_name}: no element at position {elem_pos} in {heading}",
+                                ))
+                                continue
+
+                            raw_elem = elements[elem_pos]
+                            candidates = [raw_elem] + (raw_elem.split(":") if ":" in raw_elem else [])
+
+                            if sub_pattern:
+                                if any(re.match(sub_pattern, c.strip()) for c in candidates if c.strip()):
+                                    print(f"   ✅ '{heading}.{sub_name}' — element {elem_pos} = '{raw_elem}' matches '{sub_pattern}'")
+                                    passed_checks += 1
+                                else:
+                                    print(f"   ❌ '{heading}.{sub_name}' — element {elem_pos} = '{raw_elem}', expected '{sub_pattern}'")
+                                    errors.append(ValidationError(
+                                        field=heading,
+                                        expected=f"Element {elem_pos} in {heading} matches '{sub_pattern}'",
+                                        actual=f"Got '{raw_elem}'",
+                                        description=f"{sub_name}: element {elem_pos} in {heading} is '{raw_elem}', expected pattern '{sub_pattern}'",
+                                    ))
+                            else:
+                                if raw_elem.strip():
+                                    print(f"   ✅ '{heading}.{sub_name}' — element {elem_pos} present")
+                                    passed_checks += 1
+                                else:
+                                    print(f"   ❌ '{heading}.{sub_name}' — element {elem_pos} is empty")
+                                    errors.append(ValidationError(
+                                        field=heading,
+                                        expected=f"Non-empty value at element {elem_pos} in {heading}",
+                                        actual="Empty",
+                                        description=f"{sub_name}: element {elem_pos} in {heading} is empty",
+                                    ))
+
+                    # ── Old flat format: single element_position + pattern ──
+                    elif element_position > 0 and pattern:
+                        total_checks += 1
+                        elements = seg_match.get("elements", [])
+                        is_seg_pattern = (
+                            ("\\+" in pattern and format_type == "edifact")
+                            or ("\\*" in pattern and format_type == "x12")
+                        )
+                        if is_seg_pattern:
+                            full_seg = elem_delim.join(elements)
+                            if re.match(pattern, full_seg):
+                                print(f"   ✅ '{heading}' ({field}) — segment pattern matches")
+                                passed_checks += 1
+                            else:
+                                print(f"   ❌ '{heading}' ({field}) — segment pattern mismatch")
+                                errors.append(ValidationError(
+                                    field=heading,
+                                    expected=f"Segment {heading} matches '{pattern}'",
+                                    actual="Pattern mismatch",
+                                    description=f"{field}: {heading} does not satisfy pattern '{pattern}'",
+                                ))
+                        elif element_position < len(elements):
+                            raw_elem = elements[element_position]
+                            candidates = [raw_elem] + (raw_elem.split(":") if ":" in raw_elem else [])
+                            if any(re.match(pattern, c.strip()) for c in candidates if c.strip()):
+                                print(f"   ✅ '{heading}' ({field}) — valid")
+                                passed_checks += 1
+                            else:
+                                print(f"   ❌ '{heading}' ({field}) — value mismatch at element {element_position} (expected: {pattern})")
+                                errors.append(ValidationError(
+                                    field=heading,
+                                    expected=f"Element {element_position} in {heading} matches '{pattern}'",
+                                    actual=f"Value at position {element_position} does not match",
+                                    description=f"{field}: {heading}{qualifier_note} found but element {element_position} does not satisfy '{pattern}'",
+                                ))
+                        else:
+                            print(f"   ❌ '{heading}' ({field}) — element {element_position} out of range")
+                            errors.append(ValidationError(
+                                field=heading,
+                                expected=f"Element {element_position} in {heading}",
+                                actual=f"Segment only has {len(elements)} element(s)",
+                                description=f"{field}: element {element_position} missing in {heading}",
+                            ))
+
+                    else:
+                        # Segment present, no further validation needed
+                        total_checks += 1
+                        print(f"   ✅ '{heading}' ({field}) — segment present")
+                        passed_checks += 1
+
                 else:
-                    print(f"   ❌ '{field}' — NOT found in EDI content")
-                    errors.append(ValidationError(
-                        field="fields",
-                        expected=f"Field '{field}' present",
-                        actual="Field missing",
-                        description=f"Required field '{field}' is missing",
-                    ))
+                    # Non-EDI: plain text search
+                    total_checks += 1
+                    edi_upper = edi_content.upper()
+                    field_found = (
+                        field.replace("_", " ").upper() in edi_upper
+                        or field.upper() in edi_upper
+                    )
+                    heading = seg_id if seg_id else field
+                    if field_found:
+                        print(f"   ✅ '{heading}' ({field}) — found")
+                        passed_checks += 1
+                    else:
+                        print(f"   ❌ '{heading}' ({field}) — NOT found")
+                        errors.append(ValidationError(
+                            field=heading,
+                            expected=f"Field '{field}' present",
+                            actual="Field missing",
+                            description=f"Required field '{field}' is missing",
+                        ))
 
         # ── Step 6: Calculate score ──
         if total_checks > 0:
@@ -357,49 +510,98 @@ class EDIValidator:
         self, original: str, format_type: str, errors: List[ValidationError]
     ) -> str:
         """
-        Generate a corrected EDI script by adding missing segments.
-        NOTE: This is a best-effort suggestion — not guaranteed to be correct.
+        Generate a corrected EDI script by adding missing segments at the
+        correct position and annotating subfield value errors inline.
         """
-        corrected = original
+        if format_type not in ["x12", "edifact"]:
+            return original
 
-        missing_segments = []
+        seg_delim = "'" if format_type == "edifact" else "~"
+        elem_delim = "+" if format_type == "edifact" else "*"
+        terminal_segs = {"UNT", "UNZ"} if format_type == "edifact" else {"SE", "GE", "IEA"}
+
+        def seg_id_of(seg_text: str) -> str:
+            return seg_text.strip().split(elem_delim)[0].rstrip(":").strip().upper()
+
+        # Split original into segments (strip empty parts from trailing delimiter)
+        raw_segs = [s for s in original.split(seg_delim) if s.strip()]
+
+        # First-occurrence index map for each segment ID
+        seg_index_map: Dict[str, int] = {}
+        for i, seg_text in enumerate(raw_segs):
+            sid = seg_id_of(seg_text)
+            if sid and sid not in seg_index_map:
+                seg_index_map[sid] = i
+
+        present_seg_ids = set(seg_index_map.keys())
+
+        # Collect missing segment IDs from errors
+        structural_fields = {"segment_order", "delimiters", "parsing"}
+        missing_segs: List[str] = []
+
         for err in errors:
-            if err.field == "segments" and "missing" in err.description.lower():
-                # Extract segment name from description
-                seg_match = re.search(r"segment '(\w+)'", err.description)
-                if seg_match:
-                    missing_segments.append(seg_match.group(1))
+            if err.field in structural_fields:
+                continue
+            if "is missing" in err.description.lower():
+                seg_id = err.field.upper()
+                if seg_id not in missing_segs:
+                    missing_segs.append(seg_id)
 
-        if missing_segments and format_type in ["x12", "edifact"]:
-            comment = "\n"
-            if format_type == "edifact":
-                # Add placeholder segments before UNT/UNZ
-                additions = []
-                for seg in missing_segments:
-                    additions.append(f"{seg}+PLACEHOLDER'")
-                placeholder_block = "\n".join(additions)
+        # Rules context for positioning and placeholder building
+        segment_order = [s.upper() for s in self.rules.get("segment_order", [])]
+        field_formats = self.rules.get("field_formats", {})
 
-                # Try to insert before UNT
-                if "UNT+" in corrected:
-                    corrected = corrected.replace(
-                        "UNT+",
-                        f"{placeholder_block}\nUNT+",
-                    )
-                else:
-                    corrected += f"\n{placeholder_block}"
+        def build_placeholder(seg_id: str) -> str:
+            """Build a placeholder segment line using subfield names from rules."""
+            fmt = field_formats.get(seg_id, {})
+            subfields = fmt.get("subfields", {})
+            if subfields:
+                max_pos = max(
+                    (int(float(sf.get("element_position", 0) or 0))
+                     for sf in subfields.values()),
+                    default=1,
+                )
+                elems = [""] * (max_pos + 1)
+                elems[0] = seg_id
+                for sf_name, sf_data in subfields.items():
+                    pos = int(float(sf_data.get("element_position", 0) or 0))
+                    if 0 < pos <= max_pos:
+                        elems[pos] = f"[{sf_name}]"
+                for i in range(1, len(elems)):
+                    if not elems[i]:
+                        elems[i] = "[element]"
+                return elem_delim.join(elems)
+            return f"{seg_id}{elem_delim}[placeholder]"
 
-            elif format_type == "x12":
-                additions = []
-                for seg in missing_segments:
-                    additions.append(f"{seg}*PLACEHOLDER~")
-                placeholder_block = "\n".join(additions)
+        def find_anchor(missing_id: str):
+            """Return the segment ID after which missing_id should be inserted."""
+            if missing_id not in segment_order:
+                return None
+            idx = segment_order.index(missing_id)
+            for i in range(idx - 1, -1, -1):
+                candidate = segment_order[i]
+                if candidate in present_seg_ids:
+                    return candidate
+            return None
 
-                if "SE*" in corrected:
-                    corrected = corrected.replace(
-                        "SE*",
-                        f"{placeholder_block}\nSE*",
-                    )
-                else:
-                    corrected += f"\n{placeholder_block}"
+        # Phase 1: insert missing segments at correct positions
+        output = list(raw_segs)
+        offset = 0
 
-        return corrected
+        for missing_id in missing_segs:
+            placeholder = build_placeholder(missing_id)
+            anchor = find_anchor(missing_id)
+
+            if anchor and anchor in seg_index_map:
+                insert_at = seg_index_map[anchor] + offset + 1
+            else:
+                # Insert before first terminal segment
+                insert_at = next(
+                    (i for i, s in enumerate(output) if seg_id_of(s) in terminal_segs),
+                    len(output),
+                )
+
+            output.insert(insert_at, placeholder)
+            offset += 1
+
+        return seg_delim.join(output) + seg_delim

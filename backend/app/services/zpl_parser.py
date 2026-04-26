@@ -179,17 +179,11 @@ def _hex_rows_to_image(rows: List[str], bytes_per_row: int) -> Optional["Image.I
     bitmap = b"".join(row_bytes)
 
     try:
-        # PIL mode '1' from raw bytes: 1=white, 0=black (opposite of ZPL)
-        # ZPL: 1=black dot, 0=white. PIL '1' tobytes: 0=black, 1=white (same)
-        # Actually, PIL '1' frombytes expects 1 byte per pixel with 0x00=black, 0xFF=white
-        # But we have 1 bit per pixel packed. Use 'frombuffer' won't work directly.
-        # Safest: build with Image.frombytes in '1' mode which expects 1-bit packed.
-        img = Image.frombytes("1", (width, height), bitmap)
-        # ZPL convention: 1-bit = black. PIL '1' frombytes: 0=black, 1=white.
-        # In ZPL, set bits are black dots. PIL frombytes('1') treats 1-bits as white.
-        # So we need to invert.
-        from PIL import ImageOps
-        img = ImageOps.invert(img)
+        # ZPL: set bit = black dot; PIL frombytes('1'): set bit = white.
+        # Invert by XOR-ing raw bytes before decoding — avoids ImageOps.invert
+        # which doesn't support mode '1' and silently returns None via exception.
+        inverted = bytes(b ^ 0xFF for b in bitmap)
+        img = Image.frombytes("1", (width, height), inverted)
         return img
     except Exception:
         return None
@@ -308,6 +302,49 @@ def _decode_all_gf_graphics(script: str) -> List[Dict[str, Any]]:
     return graphics
 
 
+def _extract_fx_comment_map(script: str) -> Dict[tuple, str]:
+    """
+    Extract ^FX comment labels and map them to the nearest following ^FO/^FT position.
+
+    In ZPL, ^FX is a comment command — its text runs until the next ^ character.
+    When users annotate their label scripts with comments like:
+        ^FX Pickup Date^FO400,50^A0N,22,26^FDDATE: 04/15/2026^FS
+    we use the comment to:
+      - Identify exactly WHERE a field lives on the label
+      - Resolve carrier-specific field names (e.g. "Pickup Date" = shipment_date)
+
+    Returns: dict mapping (x, y) → comment_text for each annotated field origin.
+    """
+    comment_map: Dict[tuple, str] = {}
+
+    # ^FX: everything until the next ^ is the comment text
+    fx_pattern = re.compile(r"\^FX([^\^]*)", re.IGNORECASE)
+    fo_pattern = re.compile(r"\^(?:FO|FT)(\d+(?:\.\d+)?),(\d+(?:\.\d+)?)")
+
+    # Collect all FO/FT positions with their byte offset in the script
+    fo_entries = [
+        (m.start(), float(m.group(1)), float(m.group(2)))
+        for m in fo_pattern.finditer(script)
+    ]
+
+    for fx_match in fx_pattern.finditer(script):
+        comment_text = fx_match.group(1).strip()
+        # Drop ^FS suffix if user wrote ^FX text^FS
+        comment_text = re.sub(r"\^FS\s*$", "", comment_text).strip()
+        if not comment_text or len(comment_text) < 2:
+            continue
+
+        fx_end = fx_match.end()  # position of the ^ that ends this comment
+
+        # Find the nearest ^FO/^FT within 500 chars after this comment
+        for fo_offset, x, y in fo_entries:
+            if fo_offset >= fx_end and fo_offset - fx_end <= 500:
+                comment_map[(x, y)] = comment_text
+                break
+
+    return comment_map
+
+
 def parse_zpl_to_raw(script: str) -> Dict[str, Any]:
     """
     Extract ALL data from a ZPL script — no field name assumptions.
@@ -325,6 +362,7 @@ def parse_zpl_to_raw(script: str) -> Dict[str, Any]:
         "graphics": [],
         "zpl_commands": set(),
         "raw_texts": [],
+        "combined_line_texts": [],
     }
 
     # ── Extract default font (^CF) ──
@@ -450,8 +488,32 @@ def parse_zpl_to_raw(script: str) -> Dict[str, Any]:
     # Convert set to list for JSON serialization
     raw["zpl_commands"] = sorted(list(raw["zpl_commands"]))
 
+    # Enrich text_blocks with ^FX comment labels if the script contains any
+    comment_map = _extract_fx_comment_map(script)
+    if comment_map:
+        for block in raw["text_blocks"]:
+            label = comment_map.get((block["x"], block["y"]))
+            if label:
+                block["comment_label"] = label
+
     # Sort text blocks by position (top to bottom, left to right)
     raw["text_blocks"].sort(key=lambda b: (b["y"], b["x"]))
+
+    # Build combined-line texts: join all text blocks that share the same Y
+    # coordinate (within a 5-dot tolerance) into a single space-separated string.
+    # ZPL labels often split one visual line across multiple ^FD fields — without
+    # this, patterns like "\d+\.\d+[A-Z]\s\d{2}/\d{4}" fail when "18.5A" and
+    # "01/2020" are in separate ^FD blocks on the same row.
+    if raw["text_blocks"]:
+        rows: Dict[int, list] = {}
+        for block in raw["text_blocks"]:
+            row_key = round(block["y"] / 5) * 5  # bucket to nearest 5 dots
+            rows.setdefault(row_key, []).append(block["text"])
+        for texts_in_row in rows.values():
+            if len(texts_in_row) > 1:
+                combined = " ".join(texts_in_row)
+                if combined not in raw["raw_texts"]:
+                    raw["combined_line_texts"].append(combined)
 
     return raw
 

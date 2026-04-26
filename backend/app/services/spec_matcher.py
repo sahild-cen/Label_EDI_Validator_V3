@@ -561,36 +561,62 @@ async def match_carrier_from_edi(edi_content: str, db) -> Dict:
     ).to_list(length=None)
     for c in all_carriers:
         c["_id"] = str(c["_id"])
+
     if not all_carriers:
         return {
             "signals": edi_signals, "best_match": None, "alternatives": [],
             "all_carriers": [], "needs_confirmation": True,
             "message": "No carriers configured.",
         }
-    detected = edi_signals.get("carrier", "").lower()
+
+    content_upper = edi_content.upper()
     scored = []
+
     for carrier_doc in all_carriers:
-        name = carrier_doc.get("carrier", "").lower()
-        if detected and (detected in name or name.startswith(detected)):
-            score, reasons = 0.7, [f"'{detected}' found in EDI"]
-        elif detected:
-            score, reasons = 0.0, ["mismatch"]
-        else:
-            score, reasons = 0.1, ["not detected"]
+        name = carrier_doc.get("carrier", "").lower().strip()
+        # Split compound names (e.g. "dhl_express" → ["dhl", "express"])
+        # and check if any meaningful part (≥3 chars) appears in the EDI content
+        name_parts = [p for p in re.split(r"[_\-\s]+", name) if len(p) >= 3]
+
+        score = 0.0
+        reasons = []
+        for part in name_parts:
+            if part.upper() in content_upper:
+                score = 0.7
+                reasons.append(f"'{part}' found in EDI content")
+                break
+
         scored.append(CarrierMatch(
             carrier_id=carrier_doc["_id"], carrier_name=carrier_doc["carrier"],
             spec_name=carrier_doc["carrier"], confidence=score,
             match_reasons=reasons,
         ))
+
     scored.sort(key=lambda m: m.confidence, reverse=True)
     best = scored[0] if scored and scored[0].confidence > 0 else None
     if best:
         best.is_best_match = True
+
+    fmt = edi_signals.get("format_type", "unknown")
+    if best:
+        message = (
+            f"Auto-detected: '{best.carrier_name}' "
+            f"(confidence: {best.confidence:.0%}). "
+            f"Format: {fmt}. "
+            f"{', '.join(best.match_reasons[:2])}."
+        )
+    else:
+        message = (
+            f"Could not auto-detect carrier. "
+            f"Format detected: {fmt}. "
+            f"Please select manually."
+        )
+
     return {
         "signals": edi_signals,
         "best_match": best.to_dict() if best else None,
         "alternatives": [a.to_dict() for a in scored[1:5] if a.confidence > 0],
         "all_carriers": [{"_id": c["_id"], "carrier": c["carrier"]} for c in all_carriers],
         "needs_confirmation": True,
-        "message": f"Detected: '{detected or 'unknown'}'. Format: {edi_signals.get('format_type')}.",
+        "message": message,
     }

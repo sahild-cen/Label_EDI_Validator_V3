@@ -1,0 +1,215 @@
+SID|001||20260407|1|3000221377||1.9|DE30||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Azarov, Vladimir|Carrier Kältetechnik GmbH|
+EST|Marktstraße 54 g||
+EOR|DE|30880|Laatzen|
+DLS|0|7UHR||||||
+PID|220001019201260407010365||0,04|180|130|230|0,157||
+SUM|1|0,04|||||||0,157|
+SID|001||20260407|2|3000221381||1.9|DE21||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Norman Lenschow|Carrier Kältetechnik GmbH|
+EST|Weststraße 59 d||
+EOR|DE|24647|Wasbeck|
+DLS|0|7UHR||||||
+PID|220001019201260407010366||0,06|220|140|300|0,524||
+PID|220001019201260407010367||1,79|220|140|300|1,178||
+SUM|2|1,85|||||||1,702|
+SID|001||20260407|3|3000221388||1.9|DE14||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Horn, Felix Guenther|CO2OLTEC Kältetechnik Deutschland G|
+EST|Heinrich-Heine-Straße 9B||
+EOR|DE|15569|Woltersdorf|
+DLS|0|7UHR||||||
+PID|220001019201260407010368||0,31|220|10|150|0,188||
+PID|220001019201260407010369||2,11|200|120|1300|0,197||
+PID|220001019201260407010370||1,06|200|120|1300|0,176||
+SUM|3|3,48|||||||0,561|
+SID|001||20260407|4|3000221384||1.9|DE21||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Simeon, Dominico|Carrier Kältetechnik GmbH|
+EST|Quadenstieg 5||
+EOR|DE|22453|Hamburg|
+DLS|0|7UHR||||||
+PID|220001019201260407010371||1,13|220|140|300|0,332||
+SUM|1|1,13|||||||0,332|
+SID|001||20260407|5|0070143849||1.9|DE21||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Löwe, Marcel|Carrier Kältetechnik GmbH|
+EST|Vielohweg 134||
+EOR|DE|22455|Hamburg|
+DLS|0|7UHR||||||
+PID|220001019201260407010372||3,01|220|140|300|0,514||
+SUM|1|3,01|||||||0,514|
+SID|001||20260407|6|3000221389||1.9|DE21||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Peterson, Florian|Carrier KT Deutschland GmbH|
+EST|Schülperbaum 9||
+EOR|DE|24103|Kiel|
+DLS|0|7UHR||||||
+PID|220001019201260407010373||1,29|180|130|230|0,587||
+SUM|1|1,29|||||||0,587|
+SID|001||20260407|7|3000221391||1.9|DE93||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Gerrit Schäfer|Carrier Kältetechnik Deutschland Gm|
+EST|Platanenallee 16||
+EOR|DE|93333|Neustadt|
+DLS|0|7UHR||||||
+PID|220001019201260407010374||2,35|500|500|500|0,720||
+SUM|1|2,35|||||||0,720|
+SID|001||20260407|8|3000221382||1.9|DE30||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Bilan, Vitali|Carrier KT Deutschland GmbH|
+EST|Marktstraße 46||
+EOR|DE|30880|Laatzen|
+DLS|0|7UHR||||||
+PID|220001019201260407010375||0,33|220|140|300|0,010||
+SUM|1|0,33|||||||0,010|
+SID|001||20260407|9|3000221378||1.9|DE97||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Lich, Alexander|Carrier Kältetechnik GmbH|
+EST|Lorenz-Heim-Straße 30||
+EOR|DE|63773|Goldbach|
+DLS|0|7UHR||||||
+PID|220001019201260407010376||0,11|220|10|150|0,015||
+SUM|1|0,11|||||||0,015|
+SID|001||20260407|10|3000221376||1.9|DE14||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Kaufmann, Tilo|Carrier Kältetechnik GmbH|
+EST|Wendenschloßstraße 29||
+EOR|DE|12559|Berlin|
+DLS|0|7UHR||||||
+PID|220001019201260407010377||0,13|220|10|150|0,188||
+SUM|1|0,13|||||||0,188|
+SID|001||20260407|11|3000221393||1.9|DE97||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Vierthaler, Maximilian|Carrier KT Deutschland GmbH|
+EST|Ziegelweg 20||
+EOR|DE|95213|Münchberg|
+DLS|0|7UHR||||||
+PID|220001019201260407010378||0,04|180|130|230|0,186||
+SUM|1|0,04|||||||0,186|
+SID|001||20260407|12|3000221390||1.9|DE30||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Azarov, Vladimir|Carrier Kältetechnik GmbH|
+EST|Marktstraße 54 g||
+EOR|DE|30880|Laatzen|
+DLS|0|7UHR||||||
+PID|220001019201260407010379||0,03|180|130|230|0,186||
+SUM|1|0,03|||||||0,186|
+SID|001||20260407|13|3000221387||1.9|DE51||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Kobaro, Ahmad|Carrier KT Deutschland GmbH|
+EST|Höhenweg 7||
+EOR|DE|50169|Kerpen|
+DLS|0|7UHR||||||
+PID|220001019201260407010380||0,06|180|130|230|0,186||
+SUM|1|0,06|||||||0,186|
+SID|001||20260407|14|3000221392||1.9|DE71||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Fischer, Lars|Carrier KT Deutschland GmbH|
+EST|Forchenstraße 9||
+EOR|DE|72141|Waldorfhäslach|
+DLS|0|7UHR||||||
+PID|220001019201260407010381||0,26|180|130|230|0,324||
+SUM|1|0,26|||||||0,324|
+SID|001||20260407|15|3000221379||1.9|DE97||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Lich, Alexander|Carrier Kältetechnik GmbH|
+EST|Lorenz-Heim-Straße 30||
+EOR|DE|63773|Goldbach|
+DLS|0|7UHR||||||
+PID|220001019201260407010382||0,11|180|130|230|1,033||
+SUM|1|0,11|||||||1,033|
+SID|001||20260407|16|3000221380||1.9|DE14||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Kaufmann, Tilo|Carrier Kältetechnik GmbH|
+EST|Wendenschloßstraße 29||
+EOR|DE|12559|Berlin|
+DLS|0|7UHR||||||
+PID|220001019201260407010383||2,26|220|140|300|0,326||
+SUM|1|2,26|||||||0,326|
+SID|001||20260407|17|3000221385||1.9|DE36||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Kremer, Alexander|Carrier KT Deutschland GmbH|
+EST|Im Hofacker 2||
+EOR|DE|35274|Kirchhain-Kleinseelheim|
+DLS|0|7UHR||||||
+PID|220001019201260407010384||0,89|280|280|380|0,265||
+SUM|1|0,89|||||||0,265|
+SID|001||20260407|18|3000221383||1.9|DE51||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Teichmann, Christoph|Carrier KT Deutschland GmbH|
+EST|Enggasse 25||
+EOR|DE|53127|Bonn|
+DLS|0|7UHR||||||
+PID|220001019201260407010385||0,77|180|130|230|0,324||
+SUM|1|0,77|||||||0,324|
+SID|001||20260407|19|3000221386||1.9|DE36||
+VID|00000001|0001|1019201|||||
+VN1|Carrier Kältetechnik||
+VST|Kühne-und-Nagel-Platz||
+VOR|DE|47229|Duisburg|
+EN1|Wolf, Jannik|Carrier Kältetechnik GmbH|
+EST|Theo-Naubauer-Straße 31||
+EOR|DE|99085|Erfurt|
+DLS|0|7UHR||||||
+PID|220001019201260407010386||0,29|200|120|1300|1,092||
+PID|220001019201260407010387||4,69|400|250|560|2,163||
+PID|220001019201260407010388||5,63|220|140|300|3,804||
+SUM|3|10,61|||||||7,059|
+

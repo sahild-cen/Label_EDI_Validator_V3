@@ -3,34 +3,33 @@
 ## Display Name
 Check Digit (Modified MOD 10)
 
-## Field Description
-A calculated character included at the end of the UPS Tracking Number whose value is used for performing a mathematical check on the validity of the encoded data. Uses the Modified MOD 10 algorithm.
+## Group Description
+A mathematically derived check digit appended to the end of the UPS Tracking Number for validation purposes.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### check_digit
 - **Data Type:** numeric
-- **Length:** 1 digit (last position of tracking number)
-- **Pattern/Regex:** `[0-9]`
-- **Allowed Values:** 0-9, calculated via Modified MOD 10 algorithm
+- **Length:** 1
+- **Pattern/Regex:** Calculated via Modified MOD 10 algorithm
+- **Allowed Values:** 0-9
 - **Required:** yes
+- **Description:** The final character of the UPS Tracking Number, calculated using the Modified MOD 10 algorithm. Used to validate the integrity of the encoded barcode data.
+- **Detect By:** Last character of tracking number
+- **Position on Label:** Embedded as last digit of tracking number
+- **ZPL Font:** Not applicable (part of tracking number)
+- **Field Prefix:** None
+- **ZPL Command:** Part of tracking number ^FD
 
 ## Examples from Spec
-No examples in spec.
-
-## Position on Label
-Last character of the tracking number (both in barcode and human-readable representation).
-
-## ZPL Rendering
-- **Typical Position:** Encoded as the final character of the tracking number barcode and human-readable text
-- **Font / Size:** Not separately rendered — part of tracking number
-- **Field Prefix:** None — integral part of tracking number
-- **ZPL Command:** Part of tracking number ^BC barcode and ^FD text
+No examples in spec (this extract).
 
 ## Edge Cases & Notes
-- Modified MOD 10 is the specific algorithm used — this is different from standard MOD 10.
-- Invalid check digits will cause the barcode to fail validation during scanning.
+- Modified MOD 10 is a UPS-specific check digit calculation, distinct from standard MOD 10.
+- The check digit is integral to the tracking number and its barcode — it is not displayed separately.
 
 ## Claude Confidence
-HIGH — Clearly defined in glossary with specific algorithm name and position within tracking number.
+MEDIUM — Algorithm name is defined; calculation method details not provided in this extract.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

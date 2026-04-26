@@ -1,38 +1,32 @@
 # Field: piece_count
 
 ## Display Name
-Relative and Total Number of Pieces in Shipment
+Piece Count (Piece Number / Total Pieces)
 
 ## Field Description
-Shows the relative position of this piece within the shipment and the total number of pieces to be transported and billed. Predominantly mandatory as it reduces risk of delays in customs processing.
+Indicates the piece number and total number of pieces in a multi-piece shipment. Displayed as "X of Y" format (e.g., "1 of 3") to identify individual pieces within a shipment.
 
 ## Format & Validation Rules
-- **Data Type:** alphanumeric
-- **Length:** variable — format "X/Y" where X and Y are numeric, separated by "/"
-- **Pattern/Regex:** `\d+/(\d+|\.)` (piece counter slash total or dot)
-- **Allowed Values:** "X/Y" where X=current piece number, Y=total pieces; "." replaces unknown values
-- **Required:** conditional — predominantly mandatory; suppression requires DHL's explicit approval
+- **Data Type:** string
+- **Length:** variable, typically "X of Y" format
+- **Pattern/Regex:** ^\d+ of \d+$ or ^\d+/\d+$
+- **Allowed Values:** Positive integers where piece number ≤ total pieces
+- **Required:** yes
 
 ## Examples from Spec
-- "1/1" for single-piece shipment
-- "12/12" for last piece of 12-piece shipment
-- "3/." for third piece where total is unknown
-- "X/." syntax when total not known
-- "X/Y" syntax when total is known
-- "Y/Y" syntax for last piece label
+No examples in extracted spec text.
 
-## Position on Label
-In the Shipment Information section.
+## ZPL Rendering
+- **Typical Position:** mid to lower section of label, near weight information
+- **Font / Size:** Not specified
+- **Field Prefix:** "Piece:" or "Pcs:" or similar
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-- Criticality varies: "very high" for non-doc shipments, "moderate" for doc shipments
-- Should be suppressed if correctness cannot be guaranteed
-- DHL's explicit approval required for permanent suppression on account level
-- Missing numbers replaced by "." (dot)
-- At minimum, last piece label must contain both total and final single count
+For single-piece shipments, this typically shows "1 of 1" or "1/1". In multi-piece shipments, each piece label has a unique piece number but shares the same master AWB number. DHL may also use the term "number of pieces" or "NOP".
 
 ## Claude Confidence
-HIGH — spec provides detailed rules with multiple examples and clear syntax
+MEDIUM — standard DHL label field
 
 ## Review Status
 - [ ] Reviewed by human

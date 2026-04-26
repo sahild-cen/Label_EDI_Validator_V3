@@ -1,11 +1,13 @@
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import FileResponse
 from typing import Optional
+from pydantic import BaseModel
 from app.services.spec_engine import SpecEngine
 from app.services.pdf_extractor import DOCS_BASE
 from app.utils.file_handler import save_upload_file
 from app.database import get_database
 from bson import ObjectId
+from datetime import datetime
 import shutil
 import os
 import pathlib
@@ -73,17 +75,20 @@ async def list_carriers():
     db = get_database()
     carriers = await db.carriers.find(
         {},
-        {"_id": 1, "carrier": 1, "label_spec_path": 1, "edi_spec_path": 1, "rules": 1}
+        {
+            "_id": 1, "carrier": 1, "label_spec_path": 1, "edi_spec_path": 1,
+            "label_rules_updated_at": 1, "edi_rules_updated_at": 1,
+            # Fetch minimal sub-fields just to detect presence (not full payloads)
+            "label_rules.confidence_score": 1,
+            "edi_rules.format_type": 1,
+        }
     ).to_list(length=None)
 
     for carrier in carriers:
         carrier["_id"] = str(carrier["_id"])
-        # Summarise rules status for the frontend
-        rules = carrier.pop("rules", None) or []
-        active = next((r for r in rules if r.get("status") == "active"), None)
-        carrier["has_label_rules"] = bool(active and active.get("label_rules"))
-        carrier["has_edi_rules"] = bool(active and active.get("edi_rules"))
-        carrier["rules_version"] = active.get("version") if active else None
+        # Set boolean flags and strip rule data — frontend only needs has_* flags
+        carrier["has_label_rules"] = bool(carrier.pop("label_rules", None))
+        carrier["has_edi_rules"] = bool(carrier.pop("edi_rules", None))
 
     return {"success": True, "carriers": carriers}
 
@@ -338,3 +343,52 @@ async def simulate_validation(
     os.remove(temp_path)
 
     return result
+
+
+# ═══════════════════════════════════════════════════════════════
+# FIELD POSITION MAPPINGS
+# Auto-saved on first validation; manually overrideable via PATCH.
+# ═══════════════════════════════════════════════════════════════
+
+class PositionOverride(BaseModel):
+    x: int
+    y: int
+    font_cmd: Optional[str] = ""
+    comment_text: Optional[str] = ""
+
+
+@router.get("/{carrier_name}/field-positions")
+async def list_field_positions(carrier_name: str):
+    """Return all stored field→position mappings for a carrier (one document per carrier)."""
+    db = get_database()
+    doc = await db.field_position_mappings.find_one(
+        {"carrier": carrier_name.lower().strip()},
+        {"_id": 0},
+    )
+    return {"carrier": carrier_name, "mappings": doc.get("mappings", {}) if doc else {}}
+
+
+@router.patch("/{carrier_name}/field-positions/{field_name}")
+async def override_field_position(
+    carrier_name: str,
+    field_name: str,
+    body: PositionOverride,
+):
+    """Manually override a field's position. Sets is_manual=True so auto-save never overwrites it."""
+    db = get_database()
+    carrier_key = carrier_name.lower().strip()
+    await db.field_position_mappings.update_one(
+        {"carrier": carrier_key},
+        {"$set": {
+            f"mappings.{field_name}": {
+                "x": body.x,
+                "y": body.y,
+                "font_cmd": body.font_cmd or "",
+                "comment_text": body.comment_text or "",
+                "is_manual": True,
+                "updated_at": datetime.utcnow(),
+            }
+        }},
+        upsert=True,
+    )
+    return {"success": True, "field_name": field_name, "x": body.x, "y": body.y, "is_manual": True}

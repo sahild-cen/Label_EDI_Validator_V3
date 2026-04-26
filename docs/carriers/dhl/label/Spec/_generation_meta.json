@@ -1,10 +1,10 @@
 {
   "carrier_code": "dhl",
   "spec_type": "label",
-  "generated_at": "2026-04-09T11:31:10.001692+00:00",
+  "generated_at": "2026-04-23T08:22:48.193201+00:00",
   "chunks_processed": 4,
-  "fields_found": 81,
-  "files_created": 81,
+  "fields_found": 56,
+  "files_created": 56,
   "files_skipped": 0,
   "spec_dir": "C:\\Users\\sahild\\Downloads\\Label_EDI_Validator - Copy - Copy\\docs\\carriers\\dhl\\label\\Spec"
 }

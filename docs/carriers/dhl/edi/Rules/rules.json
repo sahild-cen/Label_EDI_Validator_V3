@@ -1,782 +1,2232 @@
 {
   "carrier_code": "dhl",
   "spec_type": "edi",
-  "generated_at": "2026-04-09T17:21:43.137858+00:00",
-  "spec_files_used": 31,
+  "generated_at": "2026-04-23T09:39:12.942822+00:00",
+  "spec_files_used": 33,
   "reviewed_only": false,
   "rules": [
     {
-      "field": "interchange_sender",
-      "segment": "UNB",
-      "position": 2,
-      "required": true,
-      "regex": "",
-      "description": "Interchange sender identification in UNB header"
-    },
-    {
-      "field": "interchange_recipient",
-      "segment": "UNB",
-      "position": 3,
-      "required": true,
-      "regex": "",
-      "description": "Interchange recipient identification in UNB header"
-    },
-    {
-      "field": "message_reference_number",
-      "segment": "UNH",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "Unique message reference number in UNH header"
-    },
-    {
-      "field": "message_type",
-      "segment": "UNH",
-      "position": 2,
-      "required": true,
-      "regex": "",
-      "description": "Message type identifier (e.g., IFTMIN or IFCSUM) in UNH header"
-    },
-    {
-      "field": "beginning_of_message",
+      "field": "BGM",
       "segment": "BGM",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Document/message name code identifying the type of message"
+      "description": "Beginning of Message — identifies the IFCSUM forwarding and consolidation summary message",
+      "subfields": {
+        "document_name_code": {
+          "element_position": 1,
+          "pattern": "785",
+          "required": true,
+          "description": "Document name code — 785 = Forwarding and consolidation summary message"
+        },
+        "document_identifier": {
+          "element_position": 2,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Unique document/message identifier (typically matches the interchange control reference)"
+        },
+        "message_function_code": {
+          "element_position": 3,
+          "pattern": "9",
+          "required": true,
+          "description": "Message function code — 9 = Original"
+        }
+      }
     },
     {
-      "field": "message_creation_date",
+      "field": "DTM",
       "segment": "DTM",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Date/time/period at header level for message creation date"
+      "description": "Date/Time/Period — used at message level for processing date/time and dispatch date, at shipment level for estimated delivery, at document level for invoice date",
+      "subfields": {
+        "date_time_period_function_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "(9|11|191|3)",
+          "required": true,
+          "description": "Date/Time/Period function code qualifier. 9=Processing date/time, 11=Dispatch date, 191=Estimated Delivery date/time, 3=Commercial Invoice date/time"
+        },
+        "date_time_period_value": {
+          "element_position": 1.2,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Date/Time/Period value. Format depends on format code: CCYYMMDDHHMM for 203, CCYYMMDD for 102"
+        },
+        "date_time_period_format_code": {
+          "element_position": 1.3,
+          "pattern": "(203|102)",
+          "required": true,
+          "description": "Date/Time/Period format code. 203=CCYYMMDDHHMM, 102=CCYYMMDD"
+        }
+      }
     },
     {
-      "field": "consignment_number",
+      "field": "DTM_SG34",
+      "segment": "DTM",
+      "required": false,
+      "description": "Date/Time/Period at SG34 Invoice Level — Commercial Invoice date",
+      "subfields": {
+        "date_time_period_function_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "3",
+          "required": true,
+          "description": "Date/Time/Period function code qualifier — 3 = Commercial Invoice date/time"
+        },
+        "date_time_period_value": {
+          "element_position": 1.2,
+          "pattern": "\\d{12}",
+          "required": true,
+          "description": "Date/Time/Period value in CCYYMMDDHHMM format"
+        },
+        "date_time_period_format_code": {
+          "element_position": 1.3,
+          "pattern": "203",
+          "required": true,
+          "description": "Date/Time/Period format code — 203 = CCYYMMDDHHMM"
+        }
+      }
+    },
+    {
+      "field": "CNI",
       "segment": "CNI",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Consignment/transport document number at SG25 shipment level. Mandatory."
+      "description": "Consignment Information — identifies a consignment/shipment within the message",
+      "subfields": {
+        "consolidation_item_number": {
+          "element_position": 1,
+          "pattern": "\\d{1,4}|9999",
+          "required": true,
+          "description": "Sequence number of the consignment within the message. 9999 is used for Commercial Invoice data groups."
+        },
+        "transport_document_reference": {
+          "element_position": 2,
+          "pattern": ".{1,35}(:\\d)?",
+          "required": true,
+          "description": "Transport document number composite — DHL waybill/AWB number, optionally followed by colon and document type code (e.g. :5 = Bill of lading)"
+        }
+      }
     },
     {
-      "field": "expected_delivery_date",
-      "segment": "DTM",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Expected delivery date at shipment level (SG25). Up to 3 occurrences. Conditional."
-    },
-    {
-      "field": "consignment_remarks",
-      "segment": "FTX",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Free text consignment remarks at SG25 shipment level. Qualifiers: CCI (Custom Remarks), AAU (Duty Free Import Remarks). Up to 9 occurrences."
-    },
-    {
-      "field": "declared_customs_value",
-      "segment": "MOA",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Monetary amount at shipment level (SG25) for declared customs value, COD, or insurance. Up to 4 occurrences."
-    },
-    {
-      "field": "shipment_reference_number",
-      "segment": "RFF",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Reference numbers at shipment level (SG32). Up to 999 occurrences."
-    },
-    {
-      "field": "invoice_reference_number",
-      "segment": "RFF",
-      "position": 1,
+      "field": "CNT",
+      "segment": "CNT",
       "required": true,
-      "regex": "",
-      "description": "Commercial Invoice Reference Number at invoice-level SG32. Required. Up to 999 occurrences. MRN uses qualifier ABT (not 'MRN')."
+      "description": "Control Totals — provides control totals for gross weight, total packages, volume, or transport units",
+      "subfields": {
+        "control_total_type_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "(7|11|15|56)",
+          "required": true,
+          "description": "Control total type code qualifier. 7=Gross Weight, 11=Total number of Packages (max 999), 15=Cube/Volume, 56=Total number of transport units (LBBX)"
+        },
+        "control_total_value": {
+          "element_position": 1.2,
+          "pattern": "\\d{1,18}",
+          "required": true,
+          "description": "Control total value. Max 18 digits. Decimal sign may be point or comma per UNA segment."
+        },
+        "measurement_unit_code": {
+          "element_position": 1.3,
+          "pattern": "(KGM|LBR|MTQ|CMQ|INQ)?",
+          "required": false,
+          "description": "Measurement unit code. With 7: KGM or LBR. With 15: MTQ, CMQ, or INQ. Not used with 11 or 56."
+        }
+      }
     },
     {
-      "field": "invoice_reference_mrn_qualifier",
-      "segment": "RFF",
-      "position": "C506:1153",
+      "field": "CTA",
+      "segment": "CTA",
       "required": false,
-      "regex": "^ABT$",
-      "description": "MRN (Movement Reference Number) qualifier at invoice-level SG32. Must use ABT, not MRN. Per change report v1.3.3."
+      "description": "Contact Information — specifies a contact person within a party (consignor or consignee)",
+      "subfields": {
+        "contact_function_code": {
+          "element_position": 1,
+          "pattern": "(CO|AC|IC)",
+          "required": true,
+          "description": "Contact function code. CO=Consignor Contact, AC=Accepting contact (Delivery limited to receiver), IC=Contact information (general)"
+        },
+        "department_or_employee_name_code": {
+          "element_position": 2.1,
+          "pattern": "",
+          "required": false,
+          "description": "Department or employee name code — Not used"
+        },
+        "department_or_employee_name": {
+          "element_position": 2.2,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Department or employee name — contains the contact person name"
+        }
+      }
     },
     {
-      "field": "product_features",
-      "segment": "TOD",
-      "position": 1,
+      "field": "COM",
+      "segment": "COM",
       "required": false,
-      "regex": "",
-      "description": "Terms of delivery / product features at SG31 level. See Appendix B for product feature codes. Includes LBBX service codes."
+      "description": "Communication Contact — identifies a communication number (phone, email, fax) for a person or department",
+      "subfields": {
+        "communication_address_identifier": {
+          "element_position": 1.1,
+          "pattern": ".{1,70}",
+          "required": true,
+          "description": "Communication address identifier (phone, email, fax). If phone begins with '+', use '?' release character before it. Max 70 characters."
+        },
+        "communication_address_code_qualifier": {
+          "element_position": 1.2,
+          "pattern": "(EM|FX|TE|AL)",
+          "required": true,
+          "description": "Communication address code qualifier. EM=Electronic Mail, FX=Telefax, TE=Telephone, AL=Cellular phone (Mobile)"
+        }
+      }
     },
     {
-      "field": "product_features_account_number",
-      "segment": "TOD",
-      "position": "4052:2",
-      "required": false,
-      "regex": "",
-      "description": "Account Number within TOD segment. Added per change report v1.1."
-    },
-    {
-      "field": "incoterm_location",
-      "segment": "LOC",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Location related to incoterms at SG31 level. Up to 1 occurrence following TOD. DHL Express Facility Codes per v1.3.8."
-    },
-    {
-      "field": "governmental_procedures",
-      "segment": "GOR",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Governmental procedures for import/export at SG33 level. 1 occurrence. At invoice level indicates Document Function."
-    },
-    {
-      "field": "accompanying_documents",
+      "field": "DOC",
       "segment": "DOC",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Accompanying documents for customs clearance at SG34 level. 1 occurrence per SG34. Followed by DTM for document date."
-    },
-    {
-      "field": "consignee_name_and_address",
-      "segment": "NAD",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Consignee/Importer/Exporter name and address at SG43 level. Required. Up to 9 occurrences. Supports NAD+JD for Port of Entry (LBBX)."
+      "description": "Document/Message Details — indicates accompanying documents for customs clearance",
+      "subfields": {
+        "document_name_code": {
+          "element_position": 1,
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Document name code — identifies the type of document (composite element)"
+        },
+        "document_name_code_list": {
+          "element_position": 1.1,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Code list identification code (composite sub-element)"
+        },
+        "document_name_responsible_agency": {
+          "element_position": 1.2,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Code list responsible agency code (composite sub-element)"
+        },
+        "document_identifier": {
+          "element_position": 2,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Document identifier — the document or invoice number"
+        },
+        "document_source_description": {
+          "element_position": 3,
+          "pattern": ".{0,70}",
+          "required": false,
+          "description": "Document source description"
+        }
+      }
     },
     {
-      "field": "port_of_entry_address",
-      "segment": "NAD",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Port of Entry address using NAD+JD qualifier at SG43 level. DHL-specific. Conditional for LBBX shipments. Added v0.8."
+      "field": "DOC_SG34",
+      "segment": "DOC",
+      "required": true,
+      "description": "Document/Message Details at SG34 Invoice Level — accompanying documents for customs (Invoice Number, Certificate of Origin)",
+      "subfields": {
+        "document_name_code": {
+          "element_position": 1.1,
+          "pattern": "(380|325|861|[A-Z0-9]{1,3})",
+          "required": true,
+          "description": "Document name code. 380=Commercial Invoice, 325=Proforma Invoice, 861=Certificate of Origin. Full list available from DHL Express."
+        },
+        "document_identifier": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Document identifier — related document number"
+        }
+      }
     },
     {
-      "field": "consignee_contact_name",
-      "segment": "CTA",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Contact person name for delivery at SG44 level (nested under SG43 NAD). Up to 9 occurrences."
-    },
-    {
-      "field": "consignee_communication_contact",
-      "segment": "COM",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Communication contact at SG44 level. Up to 9 occurrences. Qualifiers: TEL (telephone), EML (email), FAX (fax), AL (mobile)."
-    },
-    {
-      "field": "consignee_communication_qualifier",
-      "segment": "COM",
-      "position": "C076:3155",
-      "required": false,
-      "regex": "^(TEL|EML|FAX|AL)$",
-      "description": "Communication type qualifier. TEL=telephone, EML=email, FAX=fax, AL=mobile phone. AL added per v0.8."
-    },
-    {
-      "field": "consignee_reference_numbers",
-      "segment": "RFF",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Party reference numbers (e.g., VAT number) at SG47 level for Consignee/Importer/Exporter. Conditional."
-    },
-    {
-      "field": "goods_item_details",
+      "field": "GID",
       "segment": "GID",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Goods item identification at SG50 piece level. Mandatory. 1 occurrence. Also appears at invoice line item level."
+      "description": "Goods Item Details — identifies a goods item (piece/package) within a consignment",
+      "subfields": {
+        "goods_item_number": {
+          "element_position": 1,
+          "pattern": "\\d{1,5}",
+          "required": false,
+          "description": "Sequential goods item number within the consignment. May be empty for piece-level entries."
+        },
+        "number_and_type_of_packages": {
+          "element_position": 2,
+          "pattern": "\\d{1,8}:[A-Z]{2}",
+          "required": true,
+          "description": "Number of packages and package type code composite — quantity:type (e.g. 1:CT for carton, 1:PK for package)"
+        }
+      }
     },
     {
-      "field": "piece_weight",
+      "field": "GOR",
+      "segment": "GOR",
+      "required": true,
+      "description": "Governmental Requirements — indicates applicable governmental procedures related to import/export/transport of goods",
+      "subfields": {
+        "transport_movement_code": {
+          "element_position": 1,
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Transport movement code — identifies if import or export procedures apply"
+        },
+        "government_action_code": {
+          "element_position": 2,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Government action code — type of governmental action required"
+        },
+        "government_involvement_code": {
+          "element_position": 3,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Government involvement code"
+        },
+        "government_action_code_2": {
+          "element_position": 4,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Government action code — additional governmental action"
+        }
+      }
+    },
+    {
+      "field": "EQD",
+      "segment": "EQD",
+      "required": true,
+      "description": "Equipment Details — identifies a unit of equipment (pallets, boxes) used for transporting goods. Part of SG70.",
+      "subfields": {
+        "equipment_type_code": {
+          "element_position": 1,
+          "pattern": "(EFP|EYP|FPN|BPN)",
+          "required": true,
+          "description": "Equipment Type code. EFP=Changeable Pallet, EYP=Changeable Box, FPN=Pallet, BPN=Box Pallet"
+        }
+      }
+    },
+    {
+      "field": "EQN",
+      "segment": "EQN",
+      "required": true,
+      "description": "Number of Units — specifies the number of pieces of equipment required. Part of SG70.",
+      "subfields": {
+        "number_of_units": {
+          "element_position": 1,
+          "pattern": "\\d{1,15}",
+          "required": true,
+          "description": "Number of units (element 6350 within C523 composite) — total count of pallets/boxes"
+        }
+      }
+    },
+    {
+      "field": "FTX",
+      "segment": "FTX",
+      "required": false,
+      "description": "Free Text — additional information such as trader type, consignment remarks, reason for export, custom remarks, dangerous goods technical name",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "[A-Z]{3}",
+          "required": true,
+          "description": "Text subject code qualifier — identifies the type of free text (e.g. AAA, AAU, CCI, CEX, AAI, LIN)"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": "\\d{1,3}",
+          "required": false,
+          "description": "Free text function code"
+        },
+        "text_reference_code": {
+          "element_position": 3,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Text reference — composite element for coded text reference"
+        },
+        "text_literal_1": {
+          "element_position": 4,
+          "pattern": ".{0,512}",
+          "required": false,
+          "description": "Free text value — first line of free text"
+        },
+        "text_literal_2": {
+          "element_position": 4.1,
+          "pattern": ".{0,512}",
+          "required": false,
+          "description": "Free text value — second line of free text (composite sub-element)"
+        },
+        "text_literal_3": {
+          "element_position": 4.2,
+          "pattern": ".{0,512}",
+          "required": false,
+          "description": "Free text value — third line of free text (composite sub-element)"
+        },
+        "text_literal_4": {
+          "element_position": 4.3,
+          "pattern": ".{0,512}",
+          "required": false,
+          "description": "Free text value — fourth line of free text (composite sub-element)"
+        },
+        "text_literal_5": {
+          "element_position": 4.4,
+          "pattern": ".{0,512}",
+          "required": false,
+          "description": "Free text value — fifth line of free text (composite sub-element)"
+        },
+        "language_name_code": {
+          "element_position": 5,
+          "pattern": "[A-Z]{2,3}",
+          "required": false,
+          "description": "Language name code — ISO language code"
+        }
+      }
+    },
+    {
+      "field": "FTX_SG25",
+      "segment": "FTX",
+      "required": true,
+      "description": "Free Text at SG25 Invoice Level — Reason for Export (mandatory for all shipments)",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(CEX|AAU)",
+          "required": true,
+          "description": "Text subject code qualifier. CEX=Reason for Export (mandatory), AAU=Duty Free Import Remark (Return shipments)"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Free text function code — Not used"
+        },
+        "text_reference": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "TEXT REFERENCE composite — Not used"
+        },
+        "free_text_value": {
+          "element_position": 4.1,
+          "pattern": ".{1,5}",
+          "required": true,
+          "description": "Free text value — Reason for Export code. Max 5 characters. Values per DHL Express Integrated Solution Reference."
+        }
+      }
+    },
+    {
+      "field": "FTX_SG33",
+      "segment": "FTX",
+      "required": true,
+      "description": "Free Text at SG33 Invoice Level — Trading Transaction Type (Governmental Requirements)",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "AAI",
+          "required": true,
+          "description": "Text subject code qualifier — AAI = Trading Transaction Type"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Free text function code — Not used"
+        },
+        "text_reference": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "TEXT REFERENCE composite — Not used"
+        },
+        "free_text_value": {
+          "element_position": 4.1,
+          "pattern": ".{1,15}",
+          "required": true,
+          "description": "Free text value — Trading Transaction Type value. Max 15 characters. Full list available from DHL Express."
+        }
+      }
+    },
+    {
+      "field": "FTX_SG50",
+      "segment": "FTX",
+      "required": true,
+      "description": "Free Text at SG50 Invoice Line Item — Line Item indicator and description",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(LIN|AAA|Y|N)",
+          "required": true,
+          "description": "Text subject code qualifier. LIN=Line Item indicator for GID (mandatory), AAA=Line Item Description, Y/N=GST paid flag for Singapore"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Free text function code — Not used"
+        },
+        "text_reference": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "TEXT REFERENCE composite — Not used"
+        },
+        "free_text_value": {
+          "element_position": 4.1,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text value — Line Item Description. Required when qualifier is AAA. Max 512 characters."
+        }
+      }
+    },
+    {
+      "field": "LOC",
+      "segment": "LOC",
+      "required": false,
+      "description": "Place/Location Identification — specifies locations related to incoterms, parties, or country of manufacture",
+      "subfields": {
+        "location_function_code_qualifier": {
+          "element_position": 1,
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Location function code qualifier (element 3227)"
+        },
+        "location_name_code": {
+          "element_position": 2.1,
+          "pattern": ".{1,25}",
+          "required": true,
+          "description": "Location name code (element 3225 within C517 composite)"
+        },
+        "code_list_identification_code": {
+          "element_position": 2.2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code (element 1131 within C517 composite)"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 2.3,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Code list responsible agency code (element 3055 within C517 composite)"
+        },
+        "location_name": {
+          "element_position": 2.4,
+          "pattern": ".{1,256}",
+          "required": false,
+          "description": "Location name (element 3244 within C517 composite)"
+        },
+        "related_location_name_code": {
+          "element_position": 3.1,
+          "pattern": ".{1,25}",
+          "required": false,
+          "description": "Related location name code (element 3223 within C519 composite)"
+        }
+      }
+    },
+    {
+      "field": "LOC_SG31",
+      "segment": "LOC",
+      "required": false,
+      "description": "Place/Location Identification at SG31 Invoice Level — Place of Incoterms",
+      "subfields": {
+        "location_function_code_qualifier": {
+          "element_position": 1,
+          "pattern": "1",
+          "required": true,
+          "description": "Location function code qualifier — 1 = Place of Incoterms"
+        },
+        "location_name_code": {
+          "element_position": 2.1,
+          "pattern": "[A-Z]{2,3}",
+          "required": true,
+          "description": "Location name code — DHL Express Service Area code for Incoterms location"
+        },
+        "code_list_identification_code": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code List Identification Code — Not used"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code List Responsible agency Code — Not used"
+        },
+        "location_name": {
+          "element_position": 2.4,
+          "pattern": ".{1,256}",
+          "required": true,
+          "description": "Location Name — the location name text"
+        }
+      }
+    },
+    {
+      "field": "LOC_SG50",
+      "segment": "LOC",
+      "required": true,
+      "description": "Place/Location Identification at SG50 Invoice Line Item — Line Item Country of Manufacture",
+      "subfields": {
+        "location_function_code_qualifier": {
+          "element_position": 1,
+          "pattern": "27",
+          "required": true,
+          "description": "Location function code qualifier — 27 = Line Item Country of Manufacture"
+        },
+        "location_name_code": {
+          "element_position": 2.1,
+          "pattern": "[A-Z]{2,3}",
+          "required": true,
+          "description": "Location name code — country/location code. Codes available from Sales Representative."
+        },
+        "code_list_identification_code": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code List Identification Code — may be empty"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 2.3,
+          "pattern": "\\d{1,3}",
+          "required": false,
+          "description": "Code List Responsible agency Code — e.g. 6"
+        }
+      }
+    },
+    {
+      "field": "UNB",
+      "segment": "UNB",
+      "required": true,
+      "description": "Interchange Header — identifies sender, recipient, date/time, and control reference",
+      "subfields": {
+        "syntax_identifier": {
+          "element_position": 1,
+          "pattern": "UNOA:2|UNOC:4",
+          "required": true,
+          "description": "Syntax identifier and version number (e.g. UNOA:2 or UNOC:4)"
+        },
+        "interchange_sender": {
+          "element_position": 2,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Interchange sender identification (e.g. CIT, TVHBEPCO1)"
+        },
+        "interchange_recipient": {
+          "element_position": 3,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Interchange recipient identification (e.g. DHLEUAPGW, DHL)"
+        },
+        "date_time_of_preparation": {
+          "element_position": 4,
+          "pattern": "\\d{6}:\\d{4}",
+          "required": true,
+          "description": "Date and time of preparation in YYMMDD:HHMM format"
+        },
+        "interchange_control_reference": {
+          "element_position": 5,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Unique interchange control reference number"
+        }
+      }
+    },
+    {
+      "field": "UNH",
+      "segment": "UNH",
+      "required": true,
+      "description": "Message Header — identifies message type and source shipping platform",
+      "subfields": {
+        "message_reference_number": {
+          "element_position": 1,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Application generated unique message reference number, unique for 3 months"
+        },
+        "message_type_identifier": {
+          "element_position": "2.1",
+          "pattern": "IFCSUM",
+          "required": true,
+          "description": "Message type identifier — Use 'IFCSUM'"
+        },
+        "message_type_version_number": {
+          "element_position": "2.2",
+          "pattern": "D",
+          "required": true,
+          "description": "Message type version number — Use 'D'"
+        },
+        "message_type_release_number": {
+          "element_position": "2.3",
+          "pattern": "01B",
+          "required": true,
+          "description": "Message type release number — Use '01B'"
+        },
+        "controlling_agency": {
+          "element_position": "2.4",
+          "pattern": "UN",
+          "required": true,
+          "description": "Controlling agency — Use 'UN'"
+        },
+        "common_access_reference": {
+          "element_position": 3,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "DHL Express determined identification for source shipping system platform. Format: 'GM2/' followed by bilaterally agreed platform name."
+        }
+      }
+    },
+    {
+      "field": "MEA_SG67",
       "segment": "MEA",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "Piece weight/measurements at SG52 level. Required. Up to 9 occurrences. Default unit: KGM (Kilograms), also LBR (Pounds)."
+      "description": "Measurements (Dangerous Goods) — Not to be used for Dangerous Goods when shipping with DHL Express",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "[A-Z]{2,3}",
+          "required": true,
+          "description": "Measurement purpose code qualifier (element 6311)"
+        },
+        "measured_attribute_code": {
+          "element_position": 2,
+          "pattern": ".*",
+          "required": false,
+          "description": "MEASUREMENTS DETAILS composite (C502) — not specified in detail for this context"
+        },
+        "measure_unit_qualifier": {
+          "element_position": "3.1",
+          "pattern": "[A-Z]{2,3}",
+          "required": true,
+          "description": "Measure unit qualifier (element 6411) within VALUE/RANGE composite (C174)"
+        },
+        "measurement_value": {
+          "element_position": "3.2",
+          "pattern": "\\d{1,18}",
+          "required": true,
+          "description": "Measurement value (element 6314) within VALUE/RANGE composite (C174)"
+        }
+      }
     },
     {
-      "field": "piece_weight_unit",
+      "field": "MEA_SG70",
       "segment": "MEA",
-      "position": "C174:6411",
-      "required": true,
-      "regex": "^(KGM|LBR)$",
-      "description": "Weight measurement unit. KGM=Kilograms (default), LBR=Pounds."
-    },
-    {
-      "field": "piece_dimensions",
-      "segment": "DIM",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "Piece dimensions (L x W x H) at SG53 level. Required. 1 occurrence."
-    },
-    {
-      "field": "piece_dimension_unit",
-      "segment": "DIM",
-      "position": "C211:6411",
-      "required": true,
-      "regex": "^(CMT|MTR|INH)$",
-      "description": "Dimension unit. CMT=Centimeters (default), MTR=Meters, INH=Inches."
-    },
-    {
-      "field": "piece_volume_unit",
-      "segment": "DIM",
-      "position": "C211:6411",
       "required": false,
-      "regex": "^(MTQ|CMQ|INQ)$",
-      "description": "Volume unit. MTQ=Cubic Meters (default), CMQ=Cubic Centimeters, INQ=Cubic Inches."
+      "description": "Measurements (Equipment/Load Meters) — length in a vehicle needed for the shipment",
+      "subfields": {
+        "measurement_application_qualifier": {
+          "element_position": 1,
+          "pattern": "LMT",
+          "required": true,
+          "description": "Measurement Application Qualifier (element 6311). Use 'LMT' = Load Meters."
+        },
+        "measurement_details": {
+          "element_position": 2,
+          "pattern": ".*",
+          "required": false,
+          "description": "MEASUREMENT DETAILS composite (C502) — not used"
+        },
+        "measure_unit_qualifier": {
+          "element_position": "3.1",
+          "pattern": "(CMT|MTR|INH)",
+          "required": true,
+          "description": "Measure Unit Qualifier (element 6411) within VALUE RANGE composite (C174). Supported: CMT, MTR, INH."
+        },
+        "measurement_value": {
+          "element_position": "3.2",
+          "pattern": "\\d{1,18}(\\.\\d+)?",
+          "required": true,
+          "description": "Measurement Value (element 6314). Total loading meters with decimals."
+        }
+      }
     },
     {
-      "field": "piece_reference_number",
-      "segment": "RFF",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Piece reference number at SG54 level. Conditional. Up to 9 occurrences."
-    },
-    {
-      "field": "package_identification",
-      "segment": "PCI",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "Package markings at SG55 piece level. Required. 1 occurrence. Accompanied by GIN for barcoded identification."
-    },
-    {
-      "field": "goods_identity_number",
-      "segment": "GIN",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "Bar coded goods identification number accompanying PCI at piece level."
-    },
-    {
-      "field": "invoice_monetary_amounts",
+      "field": "MOA",
       "segment": "MOA",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "Invoice-level monetary amounts at SG25. Required. Up to 99 occurrences. Includes customs value, COD, insurance, duty/tax (Perfect Invoice per v1.3.6)."
-    },
-    {
-      "field": "sender_id",
-      "segment": "UNB",
-      "position": 2,
-      "required": true,
-      "regex": "",
-      "description": "Interchange sender identification in UNB header"
-    },
-    {
-      "field": "receiver_id",
-      "segment": "UNB",
-      "position": 3,
-      "required": true,
-      "regex": "",
-      "description": "Interchange receiver identification in UNB header"
-    },
-    {
-      "field": "ship_date",
-      "segment": "DTM",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "Creation date/time of the message at header level. Up to 2 occurrences. Also used at shipment level for expected delivery date."
-    },
-    {
-      "field": "shipper_name_and_address",
-      "segment": "NAD",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "SG4 - Consignor name and address at header level. Required, up to 3 occurrences. Contains account numbers, names and addresses."
-    },
-    {
-      "field": "shipper_account_number",
-      "segment": "NAD",
-      "position": 2,
-      "required": true,
-      "regex": "",
-      "description": "DHL customer account number included within the consignor NAD segment at SG4 header level."
-    },
-    {
-      "field": "shipper_contact_name",
-      "segment": "CTA",
-      "position": 1,
       "required": false,
-      "regex": "",
-      "description": "SG5 - Contact person within the consignor party at header level. Conditional, up to 9 occurrences."
+      "description": "Monetary Amount — specifies monetary amounts at message header or shipment level",
+      "subfields": {
+        "monetary_amount_type_code_qualifier": {
+          "element_position": "1.1",
+          "pattern": "(22|43|157|64|39|124)",
+          "required": true,
+          "description": "Monetary amount type code qualifier. 22=Cash on delivery, 43=Declared total customs value, 157=Insurance value, 64=Freight Charge, 39=Invoice Total Amount, 124=Tax Amount."
+        },
+        "monetary_amount": {
+          "element_position": "1.2",
+          "pattern": "\\d{1,16}[.,]\\d{2}",
+          "required": true,
+          "description": "Monetary amount value. Max 18 digits including 2 decimals. Decimal sign per UNA segment."
+        },
+        "currency_identification_code": {
+          "element_position": "1.3",
+          "pattern": "[A-Z]{3}",
+          "required": true,
+          "description": "Currency identification code per ISO 4217. Must be shipper country currency except COD (qualifier 22) uses destination currency."
+        }
+      }
     },
     {
-      "field": "shipper_communication_contact",
-      "segment": "COM",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "SG5 - Communication number of contact person at consignor header level. Conditional, up to 9 occurrences. Qualifiers: TEL, EML, FAX, AL (mobile/MOB)."
+      "field": "MOA_SG25",
+      "segment": "MOA",
+      "required": true,
+      "description": "Monetary Amount (Invoice Level) — monetary value for an Invoice in SG25. Up to 99 occurrences.",
+      "subfields": {
+        "monetary_amount_type_code_qualifier": {
+          "element_position": "1.1",
+          "pattern": "(43|64|55|161|79)",
+          "required": true,
+          "description": "Monetary amount type code qualifier. 43=Declared total customs value, 64=Freight Charge, 55=Import Duty Value, 161=Import Tax Value, 79=Invoice Line Items Total Value. For DDP, 55 and 161 must be provided."
+        },
+        "monetary_amount": {
+          "element_position": "1.2",
+          "pattern": "\\d{1,15}\\.\\d{3}",
+          "required": true,
+          "description": "Monetary amount (element 5004). Max 18 digits including 3 mandatory decimals."
+        },
+        "currency_identification_code": {
+          "element_position": "1.3",
+          "pattern": "[A-Z]{3}",
+          "required": true,
+          "description": "Currency identification code (element 6345). ISO 4217. Shipper country currency except COD uses destination currency."
+        }
+      }
     },
     {
-      "field": "shipper_vat_number",
+      "field": "MOA_SG50",
+      "segment": "MOA",
+      "required": true,
+      "description": "Monetary Amount (Invoice Line Item) — monetary amount associated with a line item in SG50. Up to 9 occurrences.",
+      "subfields": {
+        "monetary_amount_type_code_qualifier": {
+          "element_position": "1.1",
+          "pattern": "(38|39|146|[A-Z0-9]{1,3})",
+          "required": true,
+          "description": "Monetary amount type code qualifier. 38 or 39=Line Item Value, 146=Single Item (Article) Customs Value."
+        },
+        "monetary_amount": {
+          "element_position": "1.2",
+          "pattern": "\\d{1,15}\\.\\d{3}",
+          "required": true,
+          "description": "Monetary amount (element 5004). Max 18 digits including 3 mandatory decimals."
+        },
+        "currency_identification_code": {
+          "element_position": "1.3",
+          "pattern": "[A-Z]{3}",
+          "required": true,
+          "description": "Currency identification code (element 6345). ISO 4217. Shipper country currency except COD uses destination currency."
+        }
+      }
+    },
+    {
+      "field": "NAD",
+      "segment": "NAD",
+      "required": true,
+      "description": "Name and Address — names and addresses of party roles at consolidation (SG4) and shipment/invoice (SG43) levels",
+      "subfields": {
+        "party_qualifier": {
+          "element_position": 1,
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Party qualifier (element 3035) — e.g. CZ=consignor, PW=dispatch party, CN=consignee, FP=freight payer, JD=port of entry"
+        },
+        "party_identification": {
+          "element_position": "2.1",
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Party identification (element 3039 within C082) — e.g. account number"
+        },
+        "building_name": {
+          "element_position": "3.1",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Building name (element 3124 within C058, first occurrence)"
+        },
+        "district": {
+          "element_position": "3.2",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "District / City District (element 3124 within C058, second occurrence)"
+        },
+        "address_line_1": {
+          "element_position": "3.3",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Address Line 1 (element 3124 within C058, third occurrence). Only in SG43."
+        },
+        "address_line_2": {
+          "element_position": "3.4",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Address Line 2 (element 3124 within C058, fourth occurrence). Only in SG43."
+        },
+        "address_line_3": {
+          "element_position": "3.5",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Address Line 3 (element 3124 within C058, fifth occurrence). Only in SG43."
+        },
+        "party_name": {
+          "element_position": "4.1",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Party name (element 3036 within C080). Required when C080 is present."
+        },
+        "street_name": {
+          "element_position": "5.1",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Street name (element 3042 within C059, first occurrence). Mandatory when C059 is used."
+        },
+        "building_number": {
+          "element_position": "5.2",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Building number (element 3042 within C059, second occurrence)"
+        },
+        "house_number": {
+          "element_position": "5.3",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "House number (element 3042 within C059, third occurrence)"
+        },
+        "address_line_4": {
+          "element_position": "5.4",
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Address line 4 (element 3042 within C059, fourth occurrence)"
+        },
+        "city_name": {
+          "element_position": 6,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "City name (element 3164)"
+        },
+        "state_code": {
+          "element_position": "7.1",
+          "pattern": ".{1,9}",
+          "required": false,
+          "description": "State code (element 3229 within C819)"
+        },
+        "code_list_identification_code": {
+          "element_position": "7.2",
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code (element 1131 within C819)"
+        },
+        "province": {
+          "element_position": "7.4",
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Province (element 3228 within C819). Only in SG4."
+        },
+        "postcode_identification": {
+          "element_position": 8,
+          "pattern": ".{1,9}",
+          "required": false,
+          "description": "Postcode identification (element 3251)"
+        },
+        "country_name_code": {
+          "element_position": 9,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Country name code (element 3207). ISO 3166 two-letter country code."
+        }
+      }
+    },
+    {
+      "field": "RFF",
       "segment": "RFF",
-      "position": 1,
       "required": false,
-      "regex": "",
-      "description": "SG6 - Registration numbers (e.g. VAT number) of consignor at header level. Conditional, up to 9 occurrences. RFF/C506/1156 added in v1.2."
+      "description": "Reference — provides reference numbers and identifiers for various purposes throughout the message",
+      "subfields": {
+        "reference_qualifier": {
+          "element_position": "1.1",
+          "pattern": "ABT|ABW|ACL|AFE|ANK|AVY|BRD|CN|CU|DA|EI|ERN|FT|HS|MF|MRN|VA|ZZZ",
+          "required": true,
+          "description": "Reference function qualifier — VA=VAT registration, CU=Customer/Shipper ref, ACL=Mother shipment AWB, EI=EIN, HS=Harmonized System, MF=Manufacturer part, ZZZ=Mutually defined, DA=Account number, ERN=Original export tracking, CN=Original carrier, MRN=Movement Reference Number, FT=Free trade zone, ABW=SKU, BRD=Brand name, AFE/ABT/ANK/AVY=Additional reference"
+        },
+        "reference_identifier": {
+          "element_position": "1.2",
+          "pattern": ".{1,70}",
+          "required": true,
+          "description": "Reference number or identifier value"
+        },
+        "reference_country_code": {
+          "element_position": "1.3",
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Country code associated with the reference (used with VA for VAT country, FT for free trade zone country)"
+        }
+      }
     },
     {
-      "field": "product_type",
-      "segment": "TSR",
-      "position": 1,
-      "required": true,
-      "regex": "",
-      "description": "SG25 - DHL product type for transport service requirements at shipment level. Required, 1 occurrence. Codes defined in Appendix A."
+      "field": "RFF_SG32",
+      "segment": "RFF",
+      "required": false,
+      "description": "References (Invoice Level) — registration numbers and invoice reference numbers in SG32. Up to 999 occurrences.",
+      "subfields": {
+        "reference_code_qualifier": {
+          "element_position": "1.1",
+          "pattern": "(CU|ABT|[A-Z]{2,3})",
+          "required": true,
+          "description": "Reference code qualifier. CU=Consignor/Shipper's reference, ABT=MRN (Master Reference No.)."
+        },
+        "reference_identifier": {
+          "element_position": "1.2",
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Reference identifier (element 1154). The reference number value."
+        }
+      }
     },
     {
-      "field": "terms_of_delivery",
+      "field": "TDT",
+      "segment": "TDT",
+      "required": false,
+      "description": "Details of Transport — information related to a certain stage of transport within the consolidation",
+      "subfields": {
+        "transport_stage_code_qualifier": {
+          "element_position": 1,
+          "pattern": "\\d{1,3}",
+          "required": true,
+          "description": "Transport stage code qualifier — e.g. 20 = Main transport"
+        },
+        "means_of_transport_journey_identifier": {
+          "element_position": 2,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Means of transport journey identifier — conveyance reference number"
+        },
+        "mode_of_transport_code": {
+          "element_position": 3,
+          "pattern": "\\d{1,3}",
+          "required": false,
+          "description": "Mode of transport code"
+        },
+        "transport_means_description_code": {
+          "element_position": 4,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Transport means description code (composite element)"
+        },
+        "carrier_name": {
+          "element_position": 5,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Carrier identification and name (composite element)"
+        }
+      }
+    },
+    {
+      "field": "TOD",
       "segment": "TOD",
-      "position": 1,
       "required": true,
-      "regex": "",
-      "description": "SG31 - Terms of delivery / Incoterms at shipment level. Required, 1 occurrence. Also appears at invoice level. Element 4052:2 added for Account Number in v1.1."
+      "description": "Terms of Delivery — freight costs payment, Incoterms, product features, and account-based charge allocation in SG31",
+      "subfields": {
+        "delivery_or_transport_form_function_code": {
+          "element_position": 1,
+          "pattern": "6",
+          "required": true,
+          "description": "Delivery or transport form function code — Use '6' for Delivery conditions."
+        },
+        "transport_charges_payment_method_code": {
+          "element_position": 2,
+          "pattern": "A?",
+          "required": false,
+          "description": "Transport charges payment method code. Use 'A' to indicate charges to an account. Only used when extra charge codes have related account numbers."
+        },
+        "delivery_or_transport_terms_description_code": {
+          "element_position": "3.1",
+          "pattern": "(DDU|DDP|CPT|[A-Z]{3})",
+          "required": true,
+          "description": "Incoterms code. Default is 'DDU'. 'DDP' used for Loose Bulk services."
+        },
+        "code_list_identification_code": {
+          "element_position": "3.2",
+          "pattern": ".*",
+          "required": false,
+          "description": "Code list identification code — Not used."
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": "3.3",
+          "pattern": ".*",
+          "required": false,
+          "description": "Code list responsible agency code — Not used."
+        },
+        "product_features": {
+          "element_position": "3.4",
+          "pattern": "(\\d{3}){0,23}",
+          "required": false,
+          "description": "Product features/Extra Charge Codes. Each code is 3 digits with leading zero. Multiple codes concatenated without separator. Max 23 codes (AN..70)."
+        },
+        "account_numbers": {
+          "element_position": "3.5",
+          "pattern": "(.{9}){0,7}",
+          "required": false,
+          "description": "Account Numbers for extra charges. Each is 9 characters, concatenated without separator. Must match order of related Extra Charge Codes in element 3.4. Max 7 (AN..70)."
+        }
+      }
     },
     {
-      "field": "reason_for_export",
-      "segment": "FTX",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "SG25 Invoice level - Free text for supplementary information such as reason for export. Conditional, up to 9 occurrences."
-    },
-    {
-      "field": "trading_transaction_type",
-      "segment": "FTX",
-      "position": 1,
-      "required": false,
-      "regex": "",
-      "description": "SG33 Invoice level - Free text for trading transaction type as supplementary information related to governmental procedures. Conditional, up to 9 occurrences. Follows GOR segment."
+      "field": "TSR",
+      "segment": "TSR",
+      "required": true,
+      "description": "Transport Service Requirements — contract/carriage conditions and service/priority requirements. Used in SG25 and SG49.",
+      "subfields": {
+        "contract_and_carriage_condition": {
+          "element_position": 1,
+          "pattern": "",
+          "required": false,
+          "description": "Contract and carriage condition — Not used."
+        },
+        "service": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Service — Not used."
+        },
+        "transport_service_priority_code": {
+          "element_position": "3.1",
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Transport service priority code. DHL product code (e.g. 189=Express Worldwide EU at SG25, ECX=Express Worldwide EU at SG49)."
+        },
+        "code_list_identification_code": {
+          "element_position": "3.2",
+          "pattern": "57",
+          "required": true,
+          "description": "Code list identification code — Use '57' for Product code."
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": "3.3",
+          "pattern": "87",
+          "required": true,
+          "description": "Code list responsible agency code — Use '87' for Assigned by carrier."
+        }
+      }
     }
   ],
   "formatted_rules": {
     "required_segments": [
-      "UNA",
       "UNB",
       "UNH",
       "BGM",
       "DTM",
       "CNI",
-      "NAD",
+      "CNT",
       "GID",
-      "MEA",
-      "DIM",
-      "PCI",
-      "MOA",
-      "RFF",
+      "EQD",
+      "EQN",
+      "DOC",
+      "GOR",
+      "FTX",
       "UNT",
       "UNZ",
+      "NAD",
+      "TOD",
       "TSR",
-      "TOD"
+      "MEA",
+      "MOA"
     ],
     "segment_order": [
-      "UNA",
       "UNB",
       "UNH",
       "BGM",
       "DTM",
-      "MOA",
-      "CNI",
-      "DTM",
+      "CNT",
       "FTX",
-      "MOA",
-      "RFF",
-      "TOD",
-      "LOC",
-      "GOR",
-      "DOC",
       "NAD",
       "CTA",
       "COM",
-      "RFF",
+      "CNI",
+      "DOC",
+      "DTM",
+      "GOR",
+      "FTX",
+      "LOC",
       "GID",
-      "MEA",
-      "DIM",
-      "RFF",
-      "PCI",
-      "GIN",
-      "MOA",
-      "RFF",
+      "FTX",
+      "LOC",
+      "EQD",
+      "EQN",
       "UNT",
       "UNZ"
     ],
     "required_fields": [
-      "interchange_sender",
-      "interchange_recipient",
-      "message_reference_number",
-      "consignment_number",
-      "consignee_name_and_address",
-      "goods_item_details",
-      "piece_weight",
-      "piece_dimensions",
-      "package_identification",
-      "invoice_monetary_amounts",
-      "invoice_reference_number",
-      "sender_id",
-      "receiver_id",
-      "ship_date",
-      "shipper_name_and_address",
-      "shipper_account_number",
-      "product_type",
-      "terms_of_delivery",
-      "shipment_reference_number"
+      "BGM",
+      "DTM",
+      "CNI",
+      "CNT",
+      "GID",
+      "EQD",
+      "EQN",
+      "DOC",
+      "GOR",
+      "UNB",
+      "UNH",
+      "NAD",
+      "TOD",
+      "TSR",
+      "MEA_SG67",
+      "MOA_SG25"
     ],
     "delimiter_rules": {
       "segment_delimiter": "'",
       "element_delimiter": "+",
-      "sub_element_delimiter": ":",
-      "decimal_indicator": ".",
-      "escape_character": "?",
-      "service_string_advice": "UNA:+.? '"
+      "sub_element_delimiter": ":"
     },
     "format_type": "edifact",
     "field_formats": {
-      "interchange_sender": {
-        "segment": "UNB",
-        "position": 2,
-        "pattern": "",
-        "required": true,
-        "description": "Interchange sender identification in UNB header"
-      },
-      "interchange_recipient": {
-        "segment": "UNB",
-        "position": 3,
-        "pattern": "",
-        "required": true,
-        "description": "Interchange recipient identification in UNB header"
-      },
-      "message_reference_number": {
-        "segment": "UNH",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "Unique message reference number in UNH header"
-      },
-      "message_type": {
-        "segment": "UNH",
-        "position": 2,
-        "pattern": "",
-        "required": true,
-        "description": "Message type identifier (e.g., IFTMIN or IFCSUM) in UNH header"
-      },
-      "beginning_of_message": {
+      "BGM": {
         "segment": "BGM",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Document/message name code identifying the type of message"
+        "description": "Beginning of Message — identifies the IFCSUM forwarding and consolidation summary message",
+        "subfields": {
+          "document_name_code": {
+            "element_position": 1,
+            "pattern": "785",
+            "required": true,
+            "description": "Document name code — 785 = Forwarding and consolidation summary message"
+          },
+          "document_identifier": {
+            "element_position": 2,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Unique document/message identifier (typically matches the interchange control reference)"
+          },
+          "message_function_code": {
+            "element_position": 3,
+            "pattern": "9",
+            "required": true,
+            "description": "Message function code — 9 = Original"
+          }
+        }
       },
-      "message_creation_date": {
+      "DTM": {
         "segment": "DTM",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Date/time/period at header level for message creation date"
+        "description": "Date/Time/Period — used at message level for processing date/time and dispatch date, at shipment level for estimated delivery, at document level for invoice date",
+        "subfields": {
+          "date_time_period_function_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "(9|11|191|3)",
+            "required": true,
+            "description": "Date/Time/Period function code qualifier. 9=Processing date/time, 11=Dispatch date, 191=Estimated Delivery date/time, 3=Commercial Invoice date/time"
+          },
+          "date_time_period_value": {
+            "element_position": 1.2,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Date/Time/Period value. Format depends on format code: CCYYMMDDHHMM for 203, CCYYMMDD for 102"
+          },
+          "date_time_period_format_code": {
+            "element_position": 1.3,
+            "pattern": "(203|102)",
+            "required": true,
+            "description": "Date/Time/Period format code. 203=CCYYMMDDHHMM, 102=CCYYMMDD"
+          }
+        }
       },
-      "consignment_number": {
+      "DTM_SG34": {
+        "segment": "DTM",
+        "required": false,
+        "description": "Date/Time/Period at SG34 Invoice Level — Commercial Invoice date",
+        "subfields": {
+          "date_time_period_function_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "3",
+            "required": true,
+            "description": "Date/Time/Period function code qualifier — 3 = Commercial Invoice date/time"
+          },
+          "date_time_period_value": {
+            "element_position": 1.2,
+            "pattern": "\\d{12}",
+            "required": true,
+            "description": "Date/Time/Period value in CCYYMMDDHHMM format"
+          },
+          "date_time_period_format_code": {
+            "element_position": 1.3,
+            "pattern": "203",
+            "required": true,
+            "description": "Date/Time/Period format code — 203 = CCYYMMDDHHMM"
+          }
+        }
+      },
+      "CNI": {
         "segment": "CNI",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Consignment/transport document number at SG25 shipment level. Mandatory."
+        "description": "Consignment Information — identifies a consignment/shipment within the message",
+        "subfields": {
+          "consolidation_item_number": {
+            "element_position": 1,
+            "pattern": "\\d{1,4}|9999",
+            "required": true,
+            "description": "Sequence number of the consignment within the message. 9999 is used for Commercial Invoice data groups."
+          },
+          "transport_document_reference": {
+            "element_position": 2,
+            "pattern": ".{1,35}(:\\d)?",
+            "required": true,
+            "description": "Transport document number composite — DHL waybill/AWB number, optionally followed by colon and document type code (e.g. :5 = Bill of lading)"
+          }
+        }
       },
-      "expected_delivery_date": {
-        "segment": "DTM",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Expected delivery date at shipment level (SG25). Up to 3 occurrences. Conditional."
-      },
-      "consignment_remarks": {
-        "segment": "FTX",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Free text consignment remarks at SG25 shipment level. Qualifiers: CCI (Custom Remarks), AAU (Duty Free Import Remarks). Up to 9 occurrences."
-      },
-      "declared_customs_value": {
-        "segment": "MOA",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Monetary amount at shipment level (SG25) for declared customs value, COD, or insurance. Up to 4 occurrences."
-      },
-      "shipment_reference_number": {
-        "segment": "RFF",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Reference numbers at shipment level (SG32). Up to 999 occurrences."
-      },
-      "invoice_reference_number": {
-        "segment": "RFF",
-        "position": 1,
-        "pattern": "",
+      "CNT": {
+        "segment": "CNT",
         "required": true,
-        "description": "Commercial Invoice Reference Number at invoice-level SG32. Required. Up to 999 occurrences. MRN uses qualifier ABT (not 'MRN')."
+        "description": "Control Totals — provides control totals for gross weight, total packages, volume, or transport units",
+        "subfields": {
+          "control_total_type_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "(7|11|15|56)",
+            "required": true,
+            "description": "Control total type code qualifier. 7=Gross Weight, 11=Total number of Packages (max 999), 15=Cube/Volume, 56=Total number of transport units (LBBX)"
+          },
+          "control_total_value": {
+            "element_position": 1.2,
+            "pattern": "\\d{1,18}",
+            "required": true,
+            "description": "Control total value. Max 18 digits. Decimal sign may be point or comma per UNA segment."
+          },
+          "measurement_unit_code": {
+            "element_position": 1.3,
+            "pattern": "(KGM|LBR|MTQ|CMQ|INQ)?",
+            "required": false,
+            "description": "Measurement unit code. With 7: KGM or LBR. With 15: MTQ, CMQ, or INQ. Not used with 11 or 56."
+          }
+        }
       },
-      "invoice_reference_mrn_qualifier": {
-        "segment": "RFF",
-        "position": "C506:1153",
-        "pattern": "^ABT$",
+      "CTA": {
+        "segment": "CTA",
         "required": false,
-        "description": "MRN (Movement Reference Number) qualifier at invoice-level SG32. Must use ABT, not MRN. Per change report v1.3.3."
+        "description": "Contact Information — specifies a contact person within a party (consignor or consignee)",
+        "subfields": {
+          "contact_function_code": {
+            "element_position": 1,
+            "pattern": "(CO|AC|IC)",
+            "required": true,
+            "description": "Contact function code. CO=Consignor Contact, AC=Accepting contact (Delivery limited to receiver), IC=Contact information (general)"
+          },
+          "department_or_employee_name_code": {
+            "element_position": 2.1,
+            "pattern": "",
+            "required": false,
+            "description": "Department or employee name code — Not used"
+          },
+          "department_or_employee_name": {
+            "element_position": 2.2,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Department or employee name — contains the contact person name"
+          }
+        }
       },
-      "product_features": {
-        "segment": "TOD",
-        "position": 1,
-        "pattern": "",
+      "COM": {
+        "segment": "COM",
         "required": false,
-        "description": "Terms of delivery / product features at SG31 level. See Appendix B for product feature codes. Includes LBBX service codes."
+        "description": "Communication Contact — identifies a communication number (phone, email, fax) for a person or department",
+        "subfields": {
+          "communication_address_identifier": {
+            "element_position": 1.1,
+            "pattern": ".{1,70}",
+            "required": true,
+            "description": "Communication address identifier (phone, email, fax). If phone begins with '+', use '?' release character before it. Max 70 characters."
+          },
+          "communication_address_code_qualifier": {
+            "element_position": 1.2,
+            "pattern": "(EM|FX|TE|AL)",
+            "required": true,
+            "description": "Communication address code qualifier. EM=Electronic Mail, FX=Telefax, TE=Telephone, AL=Cellular phone (Mobile)"
+          }
+        }
       },
-      "product_features_account_number": {
-        "segment": "TOD",
-        "position": "4052:2",
-        "pattern": "",
-        "required": false,
-        "description": "Account Number within TOD segment. Added per change report v1.1."
-      },
-      "incoterm_location": {
-        "segment": "LOC",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Location related to incoterms at SG31 level. Up to 1 occurrence following TOD. DHL Express Facility Codes per v1.3.8."
-      },
-      "governmental_procedures": {
-        "segment": "GOR",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Governmental procedures for import/export at SG33 level. 1 occurrence. At invoice level indicates Document Function."
-      },
-      "accompanying_documents": {
+      "DOC": {
         "segment": "DOC",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Accompanying documents for customs clearance at SG34 level. 1 occurrence per SG34. Followed by DTM for document date."
-      },
-      "consignee_name_and_address": {
-        "segment": "NAD",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Consignee/Importer/Exporter name and address at SG43 level. Required. Up to 9 occurrences. Supports NAD+JD for Port of Entry (LBBX)."
+        "description": "Document/Message Details — indicates accompanying documents for customs clearance",
+        "subfields": {
+          "document_name_code": {
+            "element_position": 1,
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Document name code — identifies the type of document (composite element)"
+          },
+          "document_name_code_list": {
+            "element_position": 1.1,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Code list identification code (composite sub-element)"
+          },
+          "document_name_responsible_agency": {
+            "element_position": 1.2,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Code list responsible agency code (composite sub-element)"
+          },
+          "document_identifier": {
+            "element_position": 2,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Document identifier — the document or invoice number"
+          },
+          "document_source_description": {
+            "element_position": 3,
+            "pattern": ".{0,70}",
+            "required": false,
+            "description": "Document source description"
+          }
+        }
       },
-      "port_of_entry_address": {
-        "segment": "NAD",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Port of Entry address using NAD+JD qualifier at SG43 level. DHL-specific. Conditional for LBBX shipments. Added v0.8."
+      "DOC_SG34": {
+        "segment": "DOC",
+        "required": true,
+        "description": "Document/Message Details at SG34 Invoice Level — accompanying documents for customs (Invoice Number, Certificate of Origin)",
+        "subfields": {
+          "document_name_code": {
+            "element_position": 1.1,
+            "pattern": "(380|325|861|[A-Z0-9]{1,3})",
+            "required": true,
+            "description": "Document name code. 380=Commercial Invoice, 325=Proforma Invoice, 861=Certificate of Origin. Full list available from DHL Express."
+          },
+          "document_identifier": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Document identifier — related document number"
+          }
+        }
       },
-      "consignee_contact_name": {
-        "segment": "CTA",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Contact person name for delivery at SG44 level (nested under SG43 NAD). Up to 9 occurrences."
-      },
-      "consignee_communication_contact": {
-        "segment": "COM",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Communication contact at SG44 level. Up to 9 occurrences. Qualifiers: TEL (telephone), EML (email), FAX (fax), AL (mobile)."
-      },
-      "consignee_communication_qualifier": {
-        "segment": "COM",
-        "position": "C076:3155",
-        "pattern": "^(TEL|EML|FAX|AL)$",
-        "required": false,
-        "description": "Communication type qualifier. TEL=telephone, EML=email, FAX=fax, AL=mobile phone. AL added per v0.8."
-      },
-      "consignee_reference_numbers": {
-        "segment": "RFF",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Party reference numbers (e.g., VAT number) at SG47 level for Consignee/Importer/Exporter. Conditional."
-      },
-      "goods_item_details": {
+      "GID": {
         "segment": "GID",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Goods item identification at SG50 piece level. Mandatory. 1 occurrence. Also appears at invoice line item level."
+        "description": "Goods Item Details — identifies a goods item (piece/package) within a consignment",
+        "subfields": {
+          "goods_item_number": {
+            "element_position": 1,
+            "pattern": "\\d{1,5}",
+            "required": false,
+            "description": "Sequential goods item number within the consignment. May be empty for piece-level entries."
+          },
+          "number_and_type_of_packages": {
+            "element_position": 2,
+            "pattern": "\\d{1,8}:[A-Z]{2}",
+            "required": true,
+            "description": "Number of packages and package type code composite — quantity:type (e.g. 1:CT for carton, 1:PK for package)"
+          }
+        }
       },
-      "piece_weight": {
+      "GOR": {
+        "segment": "GOR",
+        "required": true,
+        "description": "Governmental Requirements — indicates applicable governmental procedures related to import/export/transport of goods",
+        "subfields": {
+          "transport_movement_code": {
+            "element_position": 1,
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Transport movement code — identifies if import or export procedures apply"
+          },
+          "government_action_code": {
+            "element_position": 2,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Government action code — type of governmental action required"
+          },
+          "government_involvement_code": {
+            "element_position": 3,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Government involvement code"
+          },
+          "government_action_code_2": {
+            "element_position": 4,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Government action code — additional governmental action"
+          }
+        }
+      },
+      "EQD": {
+        "segment": "EQD",
+        "required": true,
+        "description": "Equipment Details — identifies a unit of equipment (pallets, boxes) used for transporting goods. Part of SG70.",
+        "subfields": {
+          "equipment_type_code": {
+            "element_position": 1,
+            "pattern": "(EFP|EYP|FPN|BPN)",
+            "required": true,
+            "description": "Equipment Type code. EFP=Changeable Pallet, EYP=Changeable Box, FPN=Pallet, BPN=Box Pallet"
+          }
+        }
+      },
+      "EQN": {
+        "segment": "EQN",
+        "required": true,
+        "description": "Number of Units — specifies the number of pieces of equipment required. Part of SG70.",
+        "subfields": {
+          "number_of_units": {
+            "element_position": 1,
+            "pattern": "\\d{1,15}",
+            "required": true,
+            "description": "Number of units (element 6350 within C523 composite) — total count of pallets/boxes"
+          }
+        }
+      },
+      "FTX": {
+        "segment": "FTX",
+        "required": false,
+        "description": "Free Text — additional information such as trader type, consignment remarks, reason for export, custom remarks, dangerous goods technical name",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "[A-Z]{3}",
+            "required": true,
+            "description": "Text subject code qualifier — identifies the type of free text (e.g. AAA, AAU, CCI, CEX, AAI, LIN)"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": "\\d{1,3}",
+            "required": false,
+            "description": "Free text function code"
+          },
+          "text_reference_code": {
+            "element_position": 3,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Text reference — composite element for coded text reference"
+          },
+          "text_literal_1": {
+            "element_position": 4,
+            "pattern": ".{0,512}",
+            "required": false,
+            "description": "Free text value — first line of free text"
+          },
+          "text_literal_2": {
+            "element_position": 4.1,
+            "pattern": ".{0,512}",
+            "required": false,
+            "description": "Free text value — second line of free text (composite sub-element)"
+          },
+          "text_literal_3": {
+            "element_position": 4.2,
+            "pattern": ".{0,512}",
+            "required": false,
+            "description": "Free text value — third line of free text (composite sub-element)"
+          },
+          "text_literal_4": {
+            "element_position": 4.3,
+            "pattern": ".{0,512}",
+            "required": false,
+            "description": "Free text value — fourth line of free text (composite sub-element)"
+          },
+          "text_literal_5": {
+            "element_position": 4.4,
+            "pattern": ".{0,512}",
+            "required": false,
+            "description": "Free text value — fifth line of free text (composite sub-element)"
+          },
+          "language_name_code": {
+            "element_position": 5,
+            "pattern": "[A-Z]{2,3}",
+            "required": false,
+            "description": "Language name code — ISO language code"
+          }
+        }
+      },
+      "FTX_SG25": {
+        "segment": "FTX",
+        "required": true,
+        "description": "Free Text at SG25 Invoice Level — Reason for Export (mandatory for all shipments)",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(CEX|AAU)",
+            "required": true,
+            "description": "Text subject code qualifier. CEX=Reason for Export (mandatory), AAU=Duty Free Import Remark (Return shipments)"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Free text function code — Not used"
+          },
+          "text_reference": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "TEXT REFERENCE composite — Not used"
+          },
+          "free_text_value": {
+            "element_position": 4.1,
+            "pattern": ".{1,5}",
+            "required": true,
+            "description": "Free text value — Reason for Export code. Max 5 characters. Values per DHL Express Integrated Solution Reference."
+          }
+        }
+      },
+      "FTX_SG33": {
+        "segment": "FTX",
+        "required": true,
+        "description": "Free Text at SG33 Invoice Level — Trading Transaction Type (Governmental Requirements)",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "AAI",
+            "required": true,
+            "description": "Text subject code qualifier — AAI = Trading Transaction Type"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Free text function code — Not used"
+          },
+          "text_reference": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "TEXT REFERENCE composite — Not used"
+          },
+          "free_text_value": {
+            "element_position": 4.1,
+            "pattern": ".{1,15}",
+            "required": true,
+            "description": "Free text value — Trading Transaction Type value. Max 15 characters. Full list available from DHL Express."
+          }
+        }
+      },
+      "FTX_SG50": {
+        "segment": "FTX",
+        "required": true,
+        "description": "Free Text at SG50 Invoice Line Item — Line Item indicator and description",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(LIN|AAA|Y|N)",
+            "required": true,
+            "description": "Text subject code qualifier. LIN=Line Item indicator for GID (mandatory), AAA=Line Item Description, Y/N=GST paid flag for Singapore"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Free text function code — Not used"
+          },
+          "text_reference": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "TEXT REFERENCE composite — Not used"
+          },
+          "free_text_value": {
+            "element_position": 4.1,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text value — Line Item Description. Required when qualifier is AAA. Max 512 characters."
+          }
+        }
+      },
+      "LOC": {
+        "segment": "LOC",
+        "required": false,
+        "description": "Place/Location Identification — specifies locations related to incoterms, parties, or country of manufacture",
+        "subfields": {
+          "location_function_code_qualifier": {
+            "element_position": 1,
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Location function code qualifier (element 3227)"
+          },
+          "location_name_code": {
+            "element_position": 2.1,
+            "pattern": ".{1,25}",
+            "required": true,
+            "description": "Location name code (element 3225 within C517 composite)"
+          },
+          "code_list_identification_code": {
+            "element_position": 2.2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code (element 1131 within C517 composite)"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 2.3,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Code list responsible agency code (element 3055 within C517 composite)"
+          },
+          "location_name": {
+            "element_position": 2.4,
+            "pattern": ".{1,256}",
+            "required": false,
+            "description": "Location name (element 3244 within C517 composite)"
+          },
+          "related_location_name_code": {
+            "element_position": 3.1,
+            "pattern": ".{1,25}",
+            "required": false,
+            "description": "Related location name code (element 3223 within C519 composite)"
+          }
+        }
+      },
+      "LOC_SG31": {
+        "segment": "LOC",
+        "required": false,
+        "description": "Place/Location Identification at SG31 Invoice Level — Place of Incoterms",
+        "subfields": {
+          "location_function_code_qualifier": {
+            "element_position": 1,
+            "pattern": "1",
+            "required": true,
+            "description": "Location function code qualifier — 1 = Place of Incoterms"
+          },
+          "location_name_code": {
+            "element_position": 2.1,
+            "pattern": "[A-Z]{2,3}",
+            "required": true,
+            "description": "Location name code — DHL Express Service Area code for Incoterms location"
+          },
+          "code_list_identification_code": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code List Identification Code — Not used"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code List Responsible agency Code — Not used"
+          },
+          "location_name": {
+            "element_position": 2.4,
+            "pattern": ".{1,256}",
+            "required": true,
+            "description": "Location Name — the location name text"
+          }
+        }
+      },
+      "LOC_SG50": {
+        "segment": "LOC",
+        "required": true,
+        "description": "Place/Location Identification at SG50 Invoice Line Item — Line Item Country of Manufacture",
+        "subfields": {
+          "location_function_code_qualifier": {
+            "element_position": 1,
+            "pattern": "27",
+            "required": true,
+            "description": "Location function code qualifier — 27 = Line Item Country of Manufacture"
+          },
+          "location_name_code": {
+            "element_position": 2.1,
+            "pattern": "[A-Z]{2,3}",
+            "required": true,
+            "description": "Location name code — country/location code. Codes available from Sales Representative."
+          },
+          "code_list_identification_code": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code List Identification Code — may be empty"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 2.3,
+            "pattern": "\\d{1,3}",
+            "required": false,
+            "description": "Code List Responsible agency Code — e.g. 6"
+          }
+        }
+      },
+      "UNB": {
+        "segment": "UNB",
+        "required": true,
+        "description": "Interchange Header — identifies sender, recipient, date/time, and control reference",
+        "subfields": {
+          "syntax_identifier": {
+            "element_position": 1,
+            "pattern": "UNOA:2|UNOC:4",
+            "required": true,
+            "description": "Syntax identifier and version number (e.g. UNOA:2 or UNOC:4)"
+          },
+          "interchange_sender": {
+            "element_position": 2,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Interchange sender identification (e.g. CIT, TVHBEPCO1)"
+          },
+          "interchange_recipient": {
+            "element_position": 3,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Interchange recipient identification (e.g. DHLEUAPGW, DHL)"
+          },
+          "date_time_of_preparation": {
+            "element_position": 4,
+            "pattern": "\\d{6}:\\d{4}",
+            "required": true,
+            "description": "Date and time of preparation in YYMMDD:HHMM format"
+          },
+          "interchange_control_reference": {
+            "element_position": 5,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Unique interchange control reference number"
+          }
+        }
+      },
+      "UNH": {
+        "segment": "UNH",
+        "required": true,
+        "description": "Message Header — identifies message type and source shipping platform",
+        "subfields": {
+          "message_reference_number": {
+            "element_position": 1,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Application generated unique message reference number, unique for 3 months"
+          },
+          "message_type_identifier": {
+            "element_position": "2.1",
+            "pattern": "IFCSUM",
+            "required": true,
+            "description": "Message type identifier — Use 'IFCSUM'"
+          },
+          "message_type_version_number": {
+            "element_position": "2.2",
+            "pattern": "D",
+            "required": true,
+            "description": "Message type version number — Use 'D'"
+          },
+          "message_type_release_number": {
+            "element_position": "2.3",
+            "pattern": "01B",
+            "required": true,
+            "description": "Message type release number — Use '01B'"
+          },
+          "controlling_agency": {
+            "element_position": "2.4",
+            "pattern": "UN",
+            "required": true,
+            "description": "Controlling agency — Use 'UN'"
+          },
+          "common_access_reference": {
+            "element_position": 3,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "DHL Express determined identification for source shipping system platform. Format: 'GM2/' followed by bilaterally agreed platform name."
+          }
+        }
+      },
+      "MEA_SG67": {
         "segment": "MEA",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "Piece weight/measurements at SG52 level. Required. Up to 9 occurrences. Default unit: KGM (Kilograms), also LBR (Pounds)."
+        "description": "Measurements (Dangerous Goods) — Not to be used for Dangerous Goods when shipping with DHL Express",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "[A-Z]{2,3}",
+            "required": true,
+            "description": "Measurement purpose code qualifier (element 6311)"
+          },
+          "measured_attribute_code": {
+            "element_position": 2,
+            "pattern": ".*",
+            "required": false,
+            "description": "MEASUREMENTS DETAILS composite (C502) — not specified in detail for this context"
+          },
+          "measure_unit_qualifier": {
+            "element_position": "3.1",
+            "pattern": "[A-Z]{2,3}",
+            "required": true,
+            "description": "Measure unit qualifier (element 6411) within VALUE/RANGE composite (C174)"
+          },
+          "measurement_value": {
+            "element_position": "3.2",
+            "pattern": "\\d{1,18}",
+            "required": true,
+            "description": "Measurement value (element 6314) within VALUE/RANGE composite (C174)"
+          }
+        }
       },
-      "piece_weight_unit": {
+      "MEA_SG70": {
         "segment": "MEA",
-        "position": "C174:6411",
-        "pattern": "^(KGM|LBR)$",
-        "required": true,
-        "description": "Weight measurement unit. KGM=Kilograms (default), LBR=Pounds."
-      },
-      "piece_dimensions": {
-        "segment": "DIM",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "Piece dimensions (L x W x H) at SG53 level. Required. 1 occurrence."
-      },
-      "piece_dimension_unit": {
-        "segment": "DIM",
-        "position": "C211:6411",
-        "pattern": "^(CMT|MTR|INH)$",
-        "required": true,
-        "description": "Dimension unit. CMT=Centimeters (default), MTR=Meters, INH=Inches."
-      },
-      "piece_volume_unit": {
-        "segment": "DIM",
-        "position": "C211:6411",
-        "pattern": "^(MTQ|CMQ|INQ)$",
         "required": false,
-        "description": "Volume unit. MTQ=Cubic Meters (default), CMQ=Cubic Centimeters, INQ=Cubic Inches."
+        "description": "Measurements (Equipment/Load Meters) — length in a vehicle needed for the shipment",
+        "subfields": {
+          "measurement_application_qualifier": {
+            "element_position": 1,
+            "pattern": "LMT",
+            "required": true,
+            "description": "Measurement Application Qualifier (element 6311). Use 'LMT' = Load Meters."
+          },
+          "measurement_details": {
+            "element_position": 2,
+            "pattern": ".*",
+            "required": false,
+            "description": "MEASUREMENT DETAILS composite (C502) — not used"
+          },
+          "measure_unit_qualifier": {
+            "element_position": "3.1",
+            "pattern": "(CMT|MTR|INH)",
+            "required": true,
+            "description": "Measure Unit Qualifier (element 6411) within VALUE RANGE composite (C174). Supported: CMT, MTR, INH."
+          },
+          "measurement_value": {
+            "element_position": "3.2",
+            "pattern": "\\d{1,18}(\\.\\d+)?",
+            "required": true,
+            "description": "Measurement Value (element 6314). Total loading meters with decimals."
+          }
+        }
       },
-      "piece_reference_number": {
-        "segment": "RFF",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Piece reference number at SG54 level. Conditional. Up to 9 occurrences."
-      },
-      "package_identification": {
-        "segment": "PCI",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "Package markings at SG55 piece level. Required. 1 occurrence. Accompanied by GIN for barcoded identification."
-      },
-      "goods_identity_number": {
-        "segment": "GIN",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "Bar coded goods identification number accompanying PCI at piece level."
-      },
-      "invoice_monetary_amounts": {
+      "MOA": {
         "segment": "MOA",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "Invoice-level monetary amounts at SG25. Required. Up to 99 occurrences. Includes customs value, COD, insurance, duty/tax (Perfect Invoice per v1.3.6)."
-      },
-      "sender_id": {
-        "segment": "UNB",
-        "position": 2,
-        "pattern": "",
-        "required": true,
-        "description": "Interchange sender identification in UNB header"
-      },
-      "receiver_id": {
-        "segment": "UNB",
-        "position": 3,
-        "pattern": "",
-        "required": true,
-        "description": "Interchange receiver identification in UNB header"
-      },
-      "ship_date": {
-        "segment": "DTM",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "Creation date/time of the message at header level. Up to 2 occurrences. Also used at shipment level for expected delivery date."
-      },
-      "shipper_name_and_address": {
-        "segment": "NAD",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "SG4 - Consignor name and address at header level. Required, up to 3 occurrences. Contains account numbers, names and addresses."
-      },
-      "shipper_account_number": {
-        "segment": "NAD",
-        "position": 2,
-        "pattern": "",
-        "required": true,
-        "description": "DHL customer account number included within the consignor NAD segment at SG4 header level."
-      },
-      "shipper_contact_name": {
-        "segment": "CTA",
-        "position": 1,
-        "pattern": "",
         "required": false,
-        "description": "SG5 - Contact person within the consignor party at header level. Conditional, up to 9 occurrences."
+        "description": "Monetary Amount — specifies monetary amounts at message header or shipment level",
+        "subfields": {
+          "monetary_amount_type_code_qualifier": {
+            "element_position": "1.1",
+            "pattern": "(22|43|157|64|39|124)",
+            "required": true,
+            "description": "Monetary amount type code qualifier. 22=Cash on delivery, 43=Declared total customs value, 157=Insurance value, 64=Freight Charge, 39=Invoice Total Amount, 124=Tax Amount."
+          },
+          "monetary_amount": {
+            "element_position": "1.2",
+            "pattern": "\\d{1,16}[.,]\\d{2}",
+            "required": true,
+            "description": "Monetary amount value. Max 18 digits including 2 decimals. Decimal sign per UNA segment."
+          },
+          "currency_identification_code": {
+            "element_position": "1.3",
+            "pattern": "[A-Z]{3}",
+            "required": true,
+            "description": "Currency identification code per ISO 4217. Must be shipper country currency except COD (qualifier 22) uses destination currency."
+          }
+        }
       },
-      "shipper_communication_contact": {
-        "segment": "COM",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "SG5 - Communication number of contact person at consignor header level. Conditional, up to 9 occurrences. Qualifiers: TEL, EML, FAX, AL (mobile/MOB)."
+      "MOA_SG25": {
+        "segment": "MOA",
+        "required": true,
+        "description": "Monetary Amount (Invoice Level) — monetary value for an Invoice in SG25. Up to 99 occurrences.",
+        "subfields": {
+          "monetary_amount_type_code_qualifier": {
+            "element_position": "1.1",
+            "pattern": "(43|64|55|161|79)",
+            "required": true,
+            "description": "Monetary amount type code qualifier. 43=Declared total customs value, 64=Freight Charge, 55=Import Duty Value, 161=Import Tax Value, 79=Invoice Line Items Total Value. For DDP, 55 and 161 must be provided."
+          },
+          "monetary_amount": {
+            "element_position": "1.2",
+            "pattern": "\\d{1,15}\\.\\d{3}",
+            "required": true,
+            "description": "Monetary amount (element 5004). Max 18 digits including 3 mandatory decimals."
+          },
+          "currency_identification_code": {
+            "element_position": "1.3",
+            "pattern": "[A-Z]{3}",
+            "required": true,
+            "description": "Currency identification code (element 6345). ISO 4217. Shipper country currency except COD uses destination currency."
+          }
+        }
       },
-      "shipper_vat_number": {
+      "MOA_SG50": {
+        "segment": "MOA",
+        "required": true,
+        "description": "Monetary Amount (Invoice Line Item) — monetary amount associated with a line item in SG50. Up to 9 occurrences.",
+        "subfields": {
+          "monetary_amount_type_code_qualifier": {
+            "element_position": "1.1",
+            "pattern": "(38|39|146|[A-Z0-9]{1,3})",
+            "required": true,
+            "description": "Monetary amount type code qualifier. 38 or 39=Line Item Value, 146=Single Item (Article) Customs Value."
+          },
+          "monetary_amount": {
+            "element_position": "1.2",
+            "pattern": "\\d{1,15}\\.\\d{3}",
+            "required": true,
+            "description": "Monetary amount (element 5004). Max 18 digits including 3 mandatory decimals."
+          },
+          "currency_identification_code": {
+            "element_position": "1.3",
+            "pattern": "[A-Z]{3}",
+            "required": true,
+            "description": "Currency identification code (element 6345). ISO 4217. Shipper country currency except COD uses destination currency."
+          }
+        }
+      },
+      "NAD": {
+        "segment": "NAD",
+        "required": true,
+        "description": "Name and Address — names and addresses of party roles at consolidation (SG4) and shipment/invoice (SG43) levels",
+        "subfields": {
+          "party_qualifier": {
+            "element_position": 1,
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Party qualifier (element 3035) — e.g. CZ=consignor, PW=dispatch party, CN=consignee, FP=freight payer, JD=port of entry"
+          },
+          "party_identification": {
+            "element_position": "2.1",
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Party identification (element 3039 within C082) — e.g. account number"
+          },
+          "building_name": {
+            "element_position": "3.1",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Building name (element 3124 within C058, first occurrence)"
+          },
+          "district": {
+            "element_position": "3.2",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "District / City District (element 3124 within C058, second occurrence)"
+          },
+          "address_line_1": {
+            "element_position": "3.3",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Address Line 1 (element 3124 within C058, third occurrence). Only in SG43."
+          },
+          "address_line_2": {
+            "element_position": "3.4",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Address Line 2 (element 3124 within C058, fourth occurrence). Only in SG43."
+          },
+          "address_line_3": {
+            "element_position": "3.5",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Address Line 3 (element 3124 within C058, fifth occurrence). Only in SG43."
+          },
+          "party_name": {
+            "element_position": "4.1",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Party name (element 3036 within C080). Required when C080 is present."
+          },
+          "street_name": {
+            "element_position": "5.1",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Street name (element 3042 within C059, first occurrence). Mandatory when C059 is used."
+          },
+          "building_number": {
+            "element_position": "5.2",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Building number (element 3042 within C059, second occurrence)"
+          },
+          "house_number": {
+            "element_position": "5.3",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "House number (element 3042 within C059, third occurrence)"
+          },
+          "address_line_4": {
+            "element_position": "5.4",
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Address line 4 (element 3042 within C059, fourth occurrence)"
+          },
+          "city_name": {
+            "element_position": 6,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "City name (element 3164)"
+          },
+          "state_code": {
+            "element_position": "7.1",
+            "pattern": ".{1,9}",
+            "required": false,
+            "description": "State code (element 3229 within C819)"
+          },
+          "code_list_identification_code": {
+            "element_position": "7.2",
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code (element 1131 within C819)"
+          },
+          "province": {
+            "element_position": "7.4",
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Province (element 3228 within C819). Only in SG4."
+          },
+          "postcode_identification": {
+            "element_position": 8,
+            "pattern": ".{1,9}",
+            "required": false,
+            "description": "Postcode identification (element 3251)"
+          },
+          "country_name_code": {
+            "element_position": 9,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Country name code (element 3207). ISO 3166 two-letter country code."
+          }
+        }
+      },
+      "RFF": {
         "segment": "RFF",
-        "position": 1,
-        "pattern": "",
         "required": false,
-        "description": "SG6 - Registration numbers (e.g. VAT number) of consignor at header level. Conditional, up to 9 occurrences. RFF/C506/1156 added in v1.2."
+        "description": "Reference — provides reference numbers and identifiers for various purposes throughout the message",
+        "subfields": {
+          "reference_qualifier": {
+            "element_position": "1.1",
+            "pattern": "ABT|ABW|ACL|AFE|ANK|AVY|BRD|CN|CU|DA|EI|ERN|FT|HS|MF|MRN|VA|ZZZ",
+            "required": true,
+            "description": "Reference function qualifier — VA=VAT registration, CU=Customer/Shipper ref, ACL=Mother shipment AWB, EI=EIN, HS=Harmonized System, MF=Manufacturer part, ZZZ=Mutually defined, DA=Account number, ERN=Original export tracking, CN=Original carrier, MRN=Movement Reference Number, FT=Free trade zone, ABW=SKU, BRD=Brand name, AFE/ABT/ANK/AVY=Additional reference"
+          },
+          "reference_identifier": {
+            "element_position": "1.2",
+            "pattern": ".{1,70}",
+            "required": true,
+            "description": "Reference number or identifier value"
+          },
+          "reference_country_code": {
+            "element_position": "1.3",
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Country code associated with the reference (used with VA for VAT country, FT for free trade zone country)"
+          }
+        }
       },
-      "product_type": {
-        "segment": "TSR",
-        "position": 1,
-        "pattern": "",
-        "required": true,
-        "description": "SG25 - DHL product type for transport service requirements at shipment level. Required, 1 occurrence. Codes defined in Appendix A."
+      "RFF_SG32": {
+        "segment": "RFF",
+        "required": false,
+        "description": "References (Invoice Level) — registration numbers and invoice reference numbers in SG32. Up to 999 occurrences.",
+        "subfields": {
+          "reference_code_qualifier": {
+            "element_position": "1.1",
+            "pattern": "(CU|ABT|[A-Z]{2,3})",
+            "required": true,
+            "description": "Reference code qualifier. CU=Consignor/Shipper's reference, ABT=MRN (Master Reference No.)."
+          },
+          "reference_identifier": {
+            "element_position": "1.2",
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Reference identifier (element 1154). The reference number value."
+          }
+        }
       },
-      "terms_of_delivery": {
+      "TDT": {
+        "segment": "TDT",
+        "required": false,
+        "description": "Details of Transport — information related to a certain stage of transport within the consolidation",
+        "subfields": {
+          "transport_stage_code_qualifier": {
+            "element_position": 1,
+            "pattern": "\\d{1,3}",
+            "required": true,
+            "description": "Transport stage code qualifier — e.g. 20 = Main transport"
+          },
+          "means_of_transport_journey_identifier": {
+            "element_position": 2,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Means of transport journey identifier — conveyance reference number"
+          },
+          "mode_of_transport_code": {
+            "element_position": 3,
+            "pattern": "\\d{1,3}",
+            "required": false,
+            "description": "Mode of transport code"
+          },
+          "transport_means_description_code": {
+            "element_position": 4,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Transport means description code (composite element)"
+          },
+          "carrier_name": {
+            "element_position": 5,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Carrier identification and name (composite element)"
+          }
+        }
+      },
+      "TOD": {
         "segment": "TOD",
-        "position": 1,
-        "pattern": "",
         "required": true,
-        "description": "SG31 - Terms of delivery / Incoterms at shipment level. Required, 1 occurrence. Also appears at invoice level. Element 4052:2 added for Account Number in v1.1."
+        "description": "Terms of Delivery — freight costs payment, Incoterms, product features, and account-based charge allocation in SG31",
+        "subfields": {
+          "delivery_or_transport_form_function_code": {
+            "element_position": 1,
+            "pattern": "6",
+            "required": true,
+            "description": "Delivery or transport form function code — Use '6' for Delivery conditions."
+          },
+          "transport_charges_payment_method_code": {
+            "element_position": 2,
+            "pattern": "A?",
+            "required": false,
+            "description": "Transport charges payment method code. Use 'A' to indicate charges to an account. Only used when extra charge codes have related account numbers."
+          },
+          "delivery_or_transport_terms_description_code": {
+            "element_position": "3.1",
+            "pattern": "(DDU|DDP|CPT|[A-Z]{3})",
+            "required": true,
+            "description": "Incoterms code. Default is 'DDU'. 'DDP' used for Loose Bulk services."
+          },
+          "code_list_identification_code": {
+            "element_position": "3.2",
+            "pattern": ".*",
+            "required": false,
+            "description": "Code list identification code — Not used."
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": "3.3",
+            "pattern": ".*",
+            "required": false,
+            "description": "Code list responsible agency code — Not used."
+          },
+          "product_features": {
+            "element_position": "3.4",
+            "pattern": "(\\d{3}){0,23}",
+            "required": false,
+            "description": "Product features/Extra Charge Codes. Each code is 3 digits with leading zero. Multiple codes concatenated without separator. Max 23 codes (AN..70)."
+          },
+          "account_numbers": {
+            "element_position": "3.5",
+            "pattern": "(.{9}){0,7}",
+            "required": false,
+            "description": "Account Numbers for extra charges. Each is 9 characters, concatenated without separator. Must match order of related Extra Charge Codes in element 3.4. Max 7 (AN..70)."
+          }
+        }
       },
-      "reason_for_export": {
-        "segment": "FTX",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "SG25 Invoice level - Free text for supplementary information such as reason for export. Conditional, up to 9 occurrences."
-      },
-      "trading_transaction_type": {
-        "segment": "FTX",
-        "position": 1,
-        "pattern": "",
-        "required": false,
-        "description": "SG33 Invoice level - Free text for trading transaction type as supplementary information related to governmental procedures. Conditional, up to 9 occurrences. Follows GOR segment."
+      "TSR": {
+        "segment": "TSR",
+        "required": true,
+        "description": "Transport Service Requirements — contract/carriage conditions and service/priority requirements. Used in SG25 and SG49.",
+        "subfields": {
+          "contract_and_carriage_condition": {
+            "element_position": 1,
+            "pattern": "",
+            "required": false,
+            "description": "Contract and carriage condition — Not used."
+          },
+          "service": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Service — Not used."
+          },
+          "transport_service_priority_code": {
+            "element_position": "3.1",
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Transport service priority code. DHL product code (e.g. 189=Express Worldwide EU at SG25, ECX=Express Worldwide EU at SG49)."
+          },
+          "code_list_identification_code": {
+            "element_position": "3.2",
+            "pattern": "57",
+            "required": true,
+            "description": "Code list identification code — Use '57' for Product code."
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": "3.3",
+            "pattern": "87",
+            "required": true,
+            "description": "Code list responsible agency code — Use '87' for Assigned by carrier."
+          }
+        }
       }
     },
     "confidence_score": 0.9

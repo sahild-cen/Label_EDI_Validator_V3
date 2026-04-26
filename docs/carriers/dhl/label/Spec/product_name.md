@@ -4,28 +4,29 @@
 Product Name
 
 ## Field Description
-The Global Product Name officially specifies the product under which the underlying transport service has been sold to the customer, printed in the associated "Product Short Name" format.
+The Global Product Name officially specifies the product under which the underlying transport service has been sold to the customer. It is printed as the "Product Short Name" (e.g., EXPRESS WORLDWIDE).
 
 ## Format & Validation Rules
 - **Data Type:** string
-- **Length:** Up to 20 characters
-- **Pattern/Regex:** `[A-Za-z0-9 :]{1,20}` (upper-case letters, may contain full 7-bit standard chars including whitespace, upper/lower case and symbols such as colon)
-- **Allowed Values:** DHL Express global product portfolio names (e.g., "EXPRESS WORLDWIDE")
-- **Required:** conditional — mandatory for standard labels; may be omitted on Highly-Compact Labels upon special DHL approval
+- **Length:** up to 20 characters
+- **Pattern/Regex:** [A-Za-z0-9 :]{1,20}
+- **Allowed Values:** DHL Express global product portfolio names (e.g., EXPRESS WORLDWIDE)
+- **Required:** conditional — mandatory for standard labels; may be omitted on Highly-Compact labels with formal DHL Express approval
 
 ## Examples from Spec
-"EXPRESS WORLDWIDE" is given as an example product name.
+"EXPRESS WORLDWIDE" mentioned as example. Text string in upper-case letters, up to 20 chars long. May contain the full set of 7-bit standard chars including white space, upper/lower case chars and symbols such as a colon (":").
 
-## Position on Label
-Section 1 of the transport label, upper area of the label.
+## ZPL Rendering
+- **Typical Position:** top-left area of label (section 1)
+- **Font / Size:** Not specified in extracted text
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-- Text string must be in upper-case letters
-- For Highly-Compact Labels, this field may be omitted upon formal DHL Express approval to free up space for customer-specific elements
-- Reference data is maintained in DHL's Global Reference Databases
+On Highly-Compact labels, the Product Name may be omitted upon special approval by DHL Express. This is to maximize compactness when customers require extra info or elements (e.g., additional barcodes) in the customer-owned segment.
 
 ## Claude Confidence
-HIGH — spec clearly describes format, length, and conditional requirements
+HIGH — clearly defined in spec sections 5.2 and 5.2.1
 
 ## Review Status
 - [ ] Reviewed by human

@@ -30,19 +30,32 @@ from app.services.claude_service import client, deployment_name
 # Max chars to send in a single Claude prompt
 MAX_CHUNK_CHARS = 35_000
 
-FIELD_EXTRACTION_PROMPT = """\
+LABEL_FIELD_EXTRACTION_PROMPT = """\
 You are an expert in logistics carrier shipping label specifications and ZPL (Zebra Programming Language).
 
 Below is extracted text from the specification PDF for carrier: {carrier_code}
 
 Your task:
 1. Identify ALL distinct fields/elements that must or can appear on this carrier's shipping labels
-2. For each field, generate a complete structured specification file
+2. For each field, generate a complete structured specification file using the rules below
 
-WHAT TO LOOK FOR:
+═══ GROUPING RULES (READ CAREFULLY) ═══
+
+COMPOSITE FIELDS — create ONE parent file with a ## Subfields section:
+  - Address blocks: ship_from_address, ship_to_address, return_address
+    Subfields: name, address_line_1, address_line_2, city, state, postal_code, country
+  - Weight/measurement: weight (subfields: value, unit)
+  - Dimensions: dimensions (subfields: length, width, height, unit)
+
+SIMPLE FIELDS — create a flat file WITHOUT subfields:
+  - Barcodes: tracking_number, maxicode, postal_barcode, pdf417, etc.
+  - Single-value text fields: service_type, shipment_date, piece_count, billing_type, etc.
+  - Reference fields: po_number, reference_number, etc.
+
+═══ WHAT TO LOOK FOR ═══
 - Named data elements: tracking number, service type, routing code, weight, piece count, etc.
 - Barcode elements: MaxiCode, PDF417, postal barcode, tracking barcode, 1D/2D barcodes
-- Address blocks: ship-from address, ship-to/consignee address, return address
+- Address blocks: ship-from, ship-to/consignee, return address
 - Required indicators: service icons, billing indicators, delivery notifications
 - Reference fields: PO number, reference number, department code, invoice number
 - Date/time fields: ship date, delivery date
@@ -53,17 +66,19 @@ WHAT TO SKIP:
 - Document metadata: copyright, spec version numbers, page headers/footers
 - Color and visual design specs
 
-OUTPUT FORMAT — use EXACTLY this delimiter format for each field:
-Do NOT wrap in JSON. Output the delimiters and markdown directly.
+═══ OUTPUT FORMAT ═══
+Do NOT wrap in JSON. Use EXACTLY these delimiters.
 
-<<<FIELD_START: field_name_in_snake_case>>>
-# Field: field_name_in_snake_case
+── FLAT FIELD (no subfields): ──
+
+<<<FIELD_START: tracking_number>>>
+# Field: tracking_number
 
 ## Display Name
-Human readable name (e.g. Tracking Number)
+Tracking Number
 
 ## Field Description
-1-2 sentences about what this field represents per the carrier spec.
+1-2 sentences about what this field represents.
 
 ## Format & Validation Rules
 - **Data Type:** string | numeric | date | alphanumeric | barcode
@@ -75,28 +90,165 @@ Human readable name (e.g. Tracking Number)
 ## Examples from Spec
 Copy exact examples from the PDF. If none: "No examples in spec."
 
-## Position on Label
-Where this appears on the label. If not stated: "Not specified in spec."
-
 ## ZPL Rendering
-How this field is rendered in a ZPL label script. Extract what the spec says about:
-- **Typical Position:** approximate X,Y coordinates or zone (e.g. "top-left", "below address block", "bottom barcode area")
-- **Font / Size:** ZPL font command if specified (e.g. ^A0N,30,30 or ^CF0,25). If not stated: "Not specified"
-- **Field Prefix:** the literal text prefix that precedes the data value on the label (e.g. "DATE:", "SHP WT:", "TRACKING #:", "DESC:", "BILLING:"). If the field has no text prefix (like a barcode or graphic), state "None — barcode" or "None — graphic"
-- **ZPL Command:** the ZPL command used to render this field if known (e.g. ^BC for Code128, ^BD for MaxiCode, ^B7 for PDF417, ^GFA for graphic). If it's a plain text field: "^FD (text field)"
+- **Typical Position:** approximate X,Y zone (e.g. "bottom barcode area")
+- **Font / Size:** ZPL font command if specified, else "Not specified"
+- **Field Prefix:** literal text prefix before the value (e.g. "DATE:"), or "None — barcode"
+- **ZPL Command:** e.g. ^BC, ^BD, ^B7, ^GFA, or "^FD (text field)"
 
 ## Edge Cases & Notes
 Anything unusual, conditional logic, carrier-specific quirks.
 
 ## Claude Confidence
-HIGH | MEDIUM | LOW
-Brief explanation — e.g. "HIGH — spec clearly defines format with regex and examples"
+HIGH | MEDIUM | LOW — brief explanation
 
 ## Review Status
 - [ ] Reviewed by human
 <<<FIELD_END>>>
 
-Repeat <<<FIELD_START: ...>>> ... <<<FIELD_END>>> for each field found.
+── COMPOSITE FIELD (with subfields): ──
+
+<<<FIELD_START: ship_from_address>>>
+# Field: ship_from_address
+
+## Display Name
+Ship From Address
+
+## Field Description
+Complete ship-from address block printed in the upper-left area of the label.
+
+## Required
+yes
+
+## ZPL Rendering
+- **Typical Position:** top-left block
+- **Font / Size:** Not specified
+
+## Subfields
+
+### name
+- **Pattern/Regex:** .{{1,35}}
+- **Required:** yes
+- **Detect By:** spatial:ship_from
+- **Description:** Shipper company or person name
+
+### address_line_1
+- **Pattern/Regex:** .{{1,35}}
+- **Required:** yes
+- **Description:** First line of street address
+
+### city
+- **Pattern/Regex:** [A-Za-z ]{{1,30}}
+- **Required:** yes
+- **Description:** City name
+
+### state
+- **Pattern/Regex:** [A-Z]{{2}}
+- **Required:** conditional — required for US/CA addresses
+- **Description:** State or province code
+
+### postal_code
+- **Pattern/Regex:** \\d{{5}}(-\\d{{4}})?
+- **Required:** yes
+- **Description:** ZIP or postal code
+
+### country
+- **Pattern/Regex:** [A-Z]{{2}}
+- **Required:** conditional — required for international shipments
+- **Description:** ISO 2-letter country code
+
+## Edge Cases & Notes
+Address lines 2+ are optional.
+
+## Claude Confidence
+HIGH — address block with clear subfields
+
+## Review Status
+- [ ] Reviewed by human
+<<<FIELD_END>>>
+
+Repeat <<<FIELD_START: ...>>> ... <<<FIELD_END>>> for EACH field found (both flat and composite).
+
+EXTRACTED SPEC TEXT:
+{extracted_text}
+"""
+
+# Keep old name as alias so any callers using FIELD_EXTRACTION_PROMPT still work
+FIELD_EXTRACTION_PROMPT = LABEL_FIELD_EXTRACTION_PROMPT
+
+
+EDI_FIELD_EXTRACTION_PROMPT = """\
+You are an expert in EDI standards (ANSI X12, UN/EDIFACT) and logistics carrier EDI specifications.
+
+Below is extracted text from the EDI specification PDF for carrier: {carrier_code}
+
+Your task:
+1. Identify ALL EDI segments mentioned in the spec
+2. For each segment, generate ONE spec file listing its sub-elements (subfields)
+
+═══ RULES ═══
+- One <<<FIELD_START>>> block per SEGMENT (e.g. BGM, DTM, NAD, RFF, etc.)
+- The field name = the segment ID in snake_case lowercase (e.g. bgm, dtm, nad)
+- List every data element position as a subfield with: element_position, pattern, required, description
+- element_position is 1-indexed from the first element after the segment tag
+  Example: BGM+610+73400858+9  →  element 1 = "610", element 2 = "73400858", element 3 = "9"
+- For EDIFACT composite elements (e.g. DTM+137:20231115:102), the sub-components after ':' are
+  separate sub-element positions — treat the whole DTM+137:date:format as one DTM segment
+- required: yes if the spec says the element is mandatory; no if optional
+
+WHAT TO SKIP:
+- Metadata: version numbers, spec headers, copyright
+- Pure envelope segments with no carrier-specific rules (UNA is usually skippable)
+
+═══ OUTPUT FORMAT ═══
+Do NOT wrap in JSON. Use EXACTLY these delimiters.
+
+<<<FIELD_START: bgm>>>
+# Field: BGM
+
+## Display Name
+Begin Message
+
+## Segment ID
+BGM
+
+## Required
+yes
+
+## Description
+Identifies the beginning of the message and its type.
+
+## Subfields
+
+### document_name_code
+- **Element Position:** 1
+- **Pattern/Regex:** 610
+- **Required:** yes
+- **Description:** Document name code — 610 = Despatch advice / shipment notice
+
+### document_identifier
+- **Element Position:** 2
+- **Pattern/Regex:** \\d{{1,35}}
+- **Required:** yes
+- **Description:** Unique document or shipment identifier
+
+### message_function_code
+- **Element Position:** 3
+- **Pattern/Regex:** 9
+- **Required:** yes
+- **Description:** Message function — 9 = original
+
+## Edge Cases & Notes
+BGM appears once per message. document_name_code 610 is mandatory for this carrier.
+
+## Claude Confidence
+HIGH — spec clearly specifies all three elements
+
+## Review Status
+- [ ] Reviewed by human
+<<<FIELD_END>>>
+
+Repeat <<<FIELD_START: ...>>> ... <<<FIELD_END>>> for EACH segment found.
 
 EXTRACTED SPEC TEXT:
 {extracted_text}
@@ -240,7 +392,8 @@ def _parse_delimiter_response(response_text: str) -> List[Dict]:
     return fields
 
 
-def _call_claude_for_specs(carrier_code: str, text_chunk: str, chunk_num: int) -> List[Dict]:
+def _call_claude_for_specs(carrier_code: str, text_chunk: str, chunk_num: int,
+                           prompt_template: str = None) -> List[Dict]:
     """
     Call Claude with a chunk of extracted spec text.
     Returns list of {field_name, spec_content} dicts parsed from delimiters.
@@ -249,7 +402,8 @@ def _call_claude_for_specs(carrier_code: str, text_chunk: str, chunk_num: int) -
         print("[Phase 2] Claude client not initialized — skipping")
         return []
 
-    prompt = FIELD_EXTRACTION_PROMPT.format(
+    template = prompt_template or LABEL_FIELD_EXTRACTION_PROMPT
+    prompt = template.format(
         carrier_code=carrier_code,
         extracted_text=text_chunk,
     )
@@ -344,6 +498,17 @@ async def generate_spec_files(carrier_code: str, spec_type: str = "label") -> Di
     print(f"  Spec dir: {spec_dir}")
     print(f"{'='*60}")
 
+    # Delete all existing .md spec files before regenerating so every
+    # re-upload starts completely fresh regardless of review status.
+    if spec_dir.exists():
+        deleted = 0
+        for old_file in spec_dir.glob("*.md"):
+            if not old_file.name.startswith("_"):
+                old_file.unlink()
+                deleted += 1
+        if deleted:
+            print(f"  Deleted {deleted} existing spec file(s) — regenerating from scratch")
+
     # Step 1: Load extracted content
     content = _load_extracted_content(code, spec_type=stype)
     text_len = len(content.get("full_text", ""))
@@ -371,10 +536,11 @@ async def generate_spec_files(carrier_code: str, spec_type: str = "label") -> Di
             "files_created": 0,
         }
 
-    # Step 3: Call Claude for each chunk
+    # Step 3: Call Claude for each chunk (use EDI prompt for edi spec_type)
+    prompt_template = EDI_FIELD_EXTRACTION_PROMPT if stype == "edi" else LABEL_FIELD_EXTRACTION_PROMPT
     all_results = []
     for i, chunk in enumerate(chunks, start=1):
-        fields = _call_claude_for_specs(code, chunk, i)
+        fields = _call_claude_for_specs(code, chunk, i, prompt_template=prompt_template)
         if fields:
             all_results.append(fields)
 

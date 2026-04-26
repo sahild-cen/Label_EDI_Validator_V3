@@ -1,0 +1,19 @@
+{
+  "carrier_code": "dsv",
+  "source_pdf": "carrier_edi_spec_37fe5df5-2f55-40ed-8c56-d5647b85a4d8.pdf",
+  "extracted_at": "2026-04-24T19:41:04.528732+00:00",
+  "total_pages": 142,
+  "metadata": {
+    "title": "Manual",
+    "author": "annika.eneroth",
+    "subject": "",
+    "creator": "PDF Writer - bioPDF (12.2.0.2905)",
+    "producer": "PDF Writer - bioPDF / http://www.biopdf.com / FPG / DSV A/S",
+    "creation_date": "D:20251002140212+02'00'",
+    "mod_date": "D:20251002140212+02'00'",
+    "page_count": 142
+  },
+  "sections_count": 95,
+  "tables_count": 412,
+  "images_count": 0
+}

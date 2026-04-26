@@ -3,33 +3,38 @@
 ## Display Name
 Piece Count (Package X of Y)
 
-## Field Description
-Indicates the package number within a multi-piece shipment, showing the current piece and total piece count (e.g., "1 OF 3").
+## Group Description
+Indicates which package this label represents out of the total number of packages in the shipment.
 
-## Format & Validation Rules
-- **Data Type:** alphanumeric
+## Sub-Fields
+
+### piece_indicator
+- **Data Type:** string
 - **Length:** variable
-- **Pattern/Regex:** `\d+ OF \d+`
-- **Allowed Values:** Not restricted
+- **Pattern/Regex:** `^\d+\s+OF\s+\d+$`
+- **Allowed Values:** Not restricted (format: "N OF M" where N ≤ M)
 - **Required:** yes
-
-## Examples from Spec
-"1 OF 1", "1 OF 2", "2 OF 2", "1 OF 3", "2 OF 3", "3 OF 3"
-
-## Position on Label
-Top-right area of the label, on the same line as the package weight.
-
-## ZPL Rendering
-- **Typical Position:** Top-right, adjacent to or on same line as weight
-- **Font / Size:** 12 pt Bold per spec
-- **Field Prefix:** None — format is "X OF Y"
+- **Description:** Package sequence number out of total package count (e.g., "1 OF 1", "2 OF 3")
+- **Detect By:** text_match:OF, spatial:top_right
+- **Position on Label:** top-right, next to or near weight
+- **ZPL Font:** Not specified
+- **Field Prefix:** None
 - **ZPL Command:** ^FD (text field)
 
+## Examples from Spec
+- "1 OF 1"
+- "1 OF 2"
+- "2 OF 2"
+- "1 OF 3"
+- "2 OF 3"
+- "3 OF 3"
+
 ## Edge Cases & Notes
-For single-piece shipments, always shows "1 OF 1". Multi-piece shipments increment the first number while maintaining the total count. Each piece in a multi-piece shipment gets its own tracking number.
+- Multi-piece shipments show sequential numbering (e.g., 1 OF 3, 2 OF 3, 3 OF 3).
+- Each piece in a multi-piece shipment gets its own label with unique tracking number.
 
 ## Claude Confidence
-HIGH — consistently shown on all label examples with clear format
+HIGH — Consistently appears across all label examples.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

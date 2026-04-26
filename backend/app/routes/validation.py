@@ -1,4 +1,5 @@
 import os
+import re
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException
 from app.services.label_validator import LabelValidator
 from app.services.edi_validator import EDIValidator
@@ -13,6 +14,39 @@ from bson import ObjectId
 from datetime import datetime
 
 router = APIRouter(prefix="/api/validate", tags=["validation"])
+
+
+def _resolve_rules(carrier_doc: dict, field: str) -> dict:
+    """
+    Return label_rules or edi_rules from a carrier document.
+    Checks the flat top-level field first, then falls back to the
+    legacy versioned 'rules' array (for data generated before the flat-storage fix).
+    """
+    rules = carrier_doc.get(field) or {}
+    if rules:
+        return rules
+    for entry in reversed(carrier_doc.get("rules", [])):
+        candidate = entry.get(field) or {}
+        if candidate:
+            return candidate
+    return {}
+
+
+async def _find_rules_any_doc(db, carrier_name: str, field: str, exclude_id) -> dict:
+    """
+    Search ALL carrier documents whose name matches (case-insensitive) for non-empty rules.
+    Used when the selected carrier document has no rules of its own.
+    """
+    code = re.sub(r"[^a-z0-9]+", "_", carrier_name.lower()).strip("_")
+    cursor = db.carriers.find(
+        {"carrier": {"$regex": f"^{re.escape(code)}$", "$options": "i"},
+         "_id": {"$ne": exclude_id}},
+    )
+    async for doc in cursor:
+        rules = _resolve_rules(doc, field)
+        if rules:
+            return rules
+    return {}
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -139,41 +173,25 @@ async def validate_label(
     print(f"   Spec Name:  {spec_name or 'auto'}")
     print(f"   Is ZPL:     {is_zpl}")
 
-    rules = carrier.get("rules", [])
+    label_rules = _resolve_rules(carrier, "label_rules")
 
-    if not rules:
-        raise HTTPException(
-            status_code=400,
-            detail="No rule versions found for this carrier. Upload specs first.",
-        )
-
-    # If spec_name is provided, try to find rules for that specific spec
-    active_rule = None
-    if spec_name:
-        active_rule = next(
-            (r for r in rules if r.get("spec_name") == spec_name and r.get("status") == "active"),
-            None,
-        )
-
-    # Fallback to any active rule
-    if not active_rule:
-        active_rule = next(
-            (r for r in rules if r.get("status") == "active"),
-            None,
-        )
-
-    if not active_rule:
-        raise HTTPException(status_code=400, detail="No active rule version found.")
-
-    label_rules = active_rule.get("label_rules", {})
+    # Fallback: search other documents whose name matches (case-insensitive)
+    if not label_rules:
+        label_rules = await _find_rules_any_doc(db, carrier_name, "label_rules", carrier["_id"])
 
     if not label_rules:
-        raise HTTPException(
-            status_code=400,
-            detail="No label rules found in active version.",
-        )
+        print(f"   Label Rules: NONE — returning no-rules response")
+        return {
+            "success": True,
+            "validation": {
+                "status": "NO_MATCH",
+                "errors": [],
+                "corrected_label_script": None,
+                "compliance_score": None,
+                "message": f"No label rules configured for '{carrier_name}'. Generate label rules in Carrier Setup first.",
+            },
+        }
 
-    print(f"   Rule Version: {active_rule.get('version', '?')}")
     print(f"   Label Rules Keys: {list(label_rules.keys())}")
 
     # Read label file
@@ -234,36 +252,35 @@ async def validate_edi(
 
     carrier_name = carrier.get("carrier", "")
 
-    rules = carrier.get("rules", [])
+    edi_rules = _resolve_rules(carrier, "edi_rules")
 
-    if not rules:
-        raise HTTPException(
-            status_code=400,
-            detail="No rule versions found for this carrier. Upload specs first.",
-        )
-
-    active_rule = next(
-        (r for r in rules if r.get("status") == "active"),
-        None,
-    )
-
-    if not active_rule:
-        raise HTTPException(status_code=400, detail="No active rule version found.")
-
-    edi_rules = active_rule.get("edi_rules", {})
+    # Fallback: search other documents whose name matches (case-insensitive)
+    if not edi_rules:
+        edi_rules = await _find_rules_any_doc(db, carrier_name, "edi_rules", carrier["_id"])
 
     if not edi_rules:
-        raise HTTPException(
-            status_code=400,
-            detail="No EDI rules found in active version.",
-        )
+        return {
+            "success": True,
+            "validation": {
+                "status": "NO_MATCH",
+                "errors": [],
+                "corrected_edi_script": None,
+                "compliance_score": None,
+                "message": f"No EDI rules configured for '{carrier_name}'. Generate EDI rules in Carrier Setup first.",
+            },
+        }
 
     print("\n" + "=" * 70)
     print(f"EDI VALIDATION REQUEST")
     print(f"=" * 70)
     print(f"   Carrier:      {carrier_name} (ID: {carrier_id})")
-    print(f"   Rule Version: {active_rule.get('version', '?')}")
+    print(f"   DB Doc _id:   {carrier['_id']}  ← verify this matches the doc you edited in MongoDB")
+    edi_rules_source = "flat edi_rules field" if carrier.get("edi_rules") else "fallback (flat field was empty)"
+    print(f"   EDI Rules:    loaded from {edi_rules_source}")
     print(f"   EDI Rules Keys: {list(edi_rules.keys())}")
+    print(f"   required_segments: {edi_rules.get('required_segments', [])}")
+    print(f"   required_fields:   {edi_rules.get('required_fields', [])}")
+    print(f"   field_formats:     {list(edi_rules.get('field_formats', {}).keys())}")
 
     # Read EDI file
     edi_path = await save_upload_file(edi_file, "edi")

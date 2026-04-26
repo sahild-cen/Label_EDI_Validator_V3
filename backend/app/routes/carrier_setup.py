@@ -83,10 +83,10 @@ async def extract_carrier_spec(
     # 2. Upsert into carriers collection so it shows in the carrier list
     #    and the PDF viewer can find the file
     await db.carriers.update_one(
-        {"carrier": carrier_code},
+        {"carrier": code},
         {
             "$set": {
-                "carrier": carrier_code,
+                "carrier": code,
                 spec_path_field: doc_pdf_path,
             }
         },
@@ -116,8 +116,11 @@ async def extract_carrier_spec(
 # ═══════════════════════════════════════════════════════════════
 
 @router.get("/status/{carrier_code}")
-async def get_extraction_status(carrier_code: str):
+async def get_extraction_status(carrier_code: str, spec_type: str = "label"):
     """Check extraction and review status for a carrier."""
+    if spec_type not in ("label", "edi"):
+        raise HTTPException(status_code=400, detail="spec_type must be 'label' or 'edi'")
+
     code = carrier_code.lower().replace(" ", "_")
     db = get_database()
 
@@ -127,11 +130,13 @@ async def get_extraction_status(carrier_code: str):
     if not spec_doc:
         raise HTTPException(status_code=404, detail=f"No extraction found for {carrier_code}")
 
-    # Check spec files review status
-    spec_dir = DOCS_BASE / code / "Spec"
+    # Check spec files review status for the requested spec_type
+    spec_dir = DOCS_BASE / code / spec_type / "Spec"
     spec_files = []
     if spec_dir.exists():
         for f in sorted(spec_dir.glob("*.md")):
+            if f.name.startswith("_"):
+                continue
             content = f.read_text(encoding="utf-8")
             reviewed = "- [x] Reviewed by human" in content
             spec_files.append({
@@ -142,6 +147,7 @@ async def get_extraction_status(carrier_code: str):
 
     return {
         "carrier_code": code,
+        "spec_type": spec_type,
         "extraction": spec_doc,
         "spec_files": spec_files,
         "spec_files_count": len(spec_files),
@@ -150,13 +156,16 @@ async def get_extraction_status(carrier_code: str):
 
 
 @router.get("/extracted/{carrier_code}")
-async def get_extracted_content(carrier_code: str, page: Optional[int] = None):
+async def get_extracted_content(carrier_code: str, spec_type: str = "label", page: Optional[int] = None):
     """
     View extracted content for a carrier.
     Optionally filter by page number.
     """
+    if spec_type not in ("label", "edi"):
+        raise HTTPException(status_code=400, detail="spec_type must be 'label' or 'edi'")
+
     code = carrier_code.lower().replace(" ", "_")
-    extracted_dir = DOCS_BASE / code / "Extracted"
+    extracted_dir = DOCS_BASE / code / spec_type / "Extracted"
 
     if not extracted_dir.exists():
         raise HTTPException(status_code=404, detail=f"No extracted content for {carrier_code}")
@@ -209,23 +218,29 @@ async def list_carrier_setups():
     cursor = db.carrier_specs.find({}, {"_id": 0})
     carriers = await cursor.to_list(length=100)
 
-    # Enrich with spec file counts
+    # Enrich with spec file counts (check both label and edi)
     for carrier in carriers:
         code = carrier.get("carrier_code", "")
-        spec_dir = DOCS_BASE / code / "Spec"
-        if spec_dir.exists():
-            md_files = [f for f in spec_dir.glob("*.md") if not f.name.startswith("_")]
-            carrier["spec_file_count"] = len(md_files)
-            carrier["reviewed_count"] = sum(
-                1 for f in md_files
-                if "- [x] Reviewed by human" in f.read_text(encoding="utf-8")
-            )
-        else:
-            carrier["spec_file_count"] = 0
-            carrier["reviewed_count"] = 0
+        total_specs = 0
+        total_reviewed = 0
+        rules_generated = False
 
-        rules_dir = DOCS_BASE / code / "Rules"
-        carrier["rules_generated"] = (rules_dir / "rules.json").exists()
+        for stype in ("label", "edi"):
+            spec_dir = DOCS_BASE / code / stype / "Spec"
+            if spec_dir.exists():
+                md_files = [f for f in spec_dir.glob("*.md") if not f.name.startswith("_")]
+                total_specs += len(md_files)
+                total_reviewed += sum(
+                    1 for f in md_files
+                    if "- [x] Reviewed by human" in f.read_text(encoding="utf-8")
+                )
+            rules_dir = DOCS_BASE / code / stype / "Rules"
+            if (rules_dir / "rules.json").exists():
+                rules_generated = True
+
+        carrier["spec_file_count"] = total_specs
+        carrier["reviewed_count"] = total_reviewed
+        carrier["rules_generated"] = rules_generated
 
     return {"success": True, "carriers": carriers}
 
@@ -286,14 +301,17 @@ async def generate_spec_files(carrier_code: str, spec_type: str = "label"):
 # ═══════════════════════════════════════════════════════════════
 
 @router.get("/spec-file/{carrier_code}/{field_name}")
-async def get_spec_file(carrier_code: str, field_name: str):
+async def get_spec_file(carrier_code: str, field_name: str, spec_type: str = "label"):
     """
     Get the content of a specific spec file for review/editing.
     Returns raw markdown content + review status.
     """
+    if spec_type not in ("label", "edi"):
+        raise HTTPException(status_code=400, detail="spec_type must be 'label' or 'edi'")
+
     code = carrier_code.lower().replace(" ", "_")
     safe_field = field_name.lower().replace(" ", "_")
-    spec_path = DOCS_BASE / code / "Spec" / f"{safe_field}.md"
+    spec_path = DOCS_BASE / code / spec_type / "Spec" / f"{safe_field}.md"
 
     if not spec_path.exists():
         raise HTTPException(

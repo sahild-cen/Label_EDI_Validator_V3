@@ -4,37 +4,63 @@
 Ship From Address (Consignor's Address)
 
 ## Field Description
-The sender/consignor's address that serves the purpose of supporting identification by the carrier (e.g., for Pickup) as well as the Consignee. It does not necessarily reflect the return address in case of failed delivery.
+The "Ship From" section refers to the Consignor's Address. It supports identification by the carrier (e.g., for Pickup) as well as the Consignee. It does not necessarily reflect the return address in case of failed delivery. If approved by DHL, a deviating address may be printed here.
 
-## Format & Validation Rules
-- **Data Type:** string (multi-line)
-- **Length:** Maximum 47 characters per line; maximum 7 lines total (5 lines for Highly-Compact labels)
-- **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Not restricted — address elements based on DHL Corporate Data Model
-- **Required:** conditional — the section is present on standard labels; a deviating address may be printed if approved by DHL
+## Required
+yes — though noted as part of the standard label, the spec describes it as a core section
 
-## Examples from Spec
-Highly-Compact structure example:
-1. Address line 1: Receiver Company / Name
-2. Address line 2: Building Name or equivalent
-3. Address line 3: Street Name, Street Number
-4. Address line 4: City Name, Postcode or equivalent
-5. Country Code / Country Name
+## ZPL Rendering
+- **Typical Position:** upper-left area of label, with the word "From" in upper left corner of this section
+- **Font / Size:** Relative small font, allowing space to the right for optional Customer Logo
 
-## Position on Label
-Left side of the label, with the word "From" printed in the upper left corner of this section.
+## Subfields
+
+### name
+- **Pattern/Regex:** .{1,47}
+- **Required:** yes
+- **Detect By:** spatial:ship_from, preceded by "From" label
+- **Description:** Shipper company or person name (Address line 1: Receiver Company / Name in compact version)
+
+### address_line_1
+- **Pattern/Regex:** .{1,47}
+- **Required:** yes
+- **Description:** First line of street address. Each line contains a pre-defined maximum of up to 47 characters.
+
+### address_line_2
+- **Pattern/Regex:** .{1,47}
+- **Required:** no
+- **Description:** Additional address line (e.g., building name, floor number, county). Overall number of lines must not exceed 7.
+
+### city
+- **Pattern/Regex:** .{1,47}
+- **Required:** yes
+- **Description:** City name
+
+### state
+- **Pattern/Regex:** .{1,47}
+- **Required:** conditional — depends on country postal format
+- **Description:** State, province, suburb, or equivalent postal location format element
+
+### postal_code
+- **Pattern/Regex:** .{1,47}
+- **Required:** conditional — depends on country postal format
+- **Description:** Postal code or equivalent postal location format identifier
+
+### country_code
+- **Pattern/Regex:** [A-Z]{2}
+- **Required:** conditional — must be used whenever available; follows ISO 3166 two-character standard
+- **Description:** ISO 3166 two-character country code, used as a quick reference for DHL services
+
+### country_name
+- **Pattern/Regex:** .{1,47}
+- **Required:** conditional — optional for domestic shipments; mandatory for cross-border shipments if ISO 3166 code is missing
+- **Description:** Country name written in its own line. For domestic pieces may be in local language; for cross-border must be in English (may be followed by local translation).
 
 ## Edge Cases & Notes
-- The word "From" must appear; may be written in local language, but for international shipments English "From" must appear (optionally both languages separated by "/")
-- For international shipments, Country Name shall be on its own line
-- For domestic pieces, Country Name may be in local language; for cross-border, Country Name must be in English (may be followed by local translation)
-- Country Name is optional for domestic shipments but mandatory for cross-border if ISO 3166 code is missing
-- Country Code follows ISO 3166 two-character standard
-- If approved by DHL, a deviating address may be printed here
-- Highly-Compact labels reduce to 5 lines upon formal DHL Express approval
+Maximum of 7 address lines for consistency with DHL's data structure. Each line maximum 47 characters (highest value). For international shipments, the Country Name shall be written in its own line. The word "From" must appear in the upper left corner; for international shipments, the English word "From" must appear (may include local language separated by "/"). For Highly-Compact labels, the number of Sender Address lines can be limited to 5 (from 7) upon formal DHL approval. If approved by DHL, a deviating address may be printed instead of the actual consignor's address.
 
 ## Claude Confidence
-HIGH — spec provides detailed structure, line limits, and language requirements
+HIGH — well-documented in sections 5.4 and 5.4.1
 
 ## Review Status
 - [ ] Reviewed by human

@@ -3,33 +3,33 @@
 ## Display Name
 Highlighting Bars
 
-## Field Description
-One-tenth inch solid black lines located immediately above and below the UPS Barcode block. These visual markers help identify and frame the barcode area on the label.
+## Group Description
+One-tenth inch solid black lines located immediately above and below the UPS Barcode block to visually delineate the barcode area.
 
-## Format & Validation Rules
-- **Data Type:** graphic
-- **Length:** Not applicable — graphical element
+## Sub-Fields
+
+### highlighting_bars
+- **Data Type:** barcode (graphic element)
+- **Length:** Not applicable (visual element, one-tenth inch height)
 - **Pattern/Regex:** Not applicable
-- **Allowed Values:** Solid black lines, 0.1 inch thickness
-- **Required:** yes
+- **Allowed Values:** Solid black lines
+- **Required:** yes (implied by definition as structural label element)
+- **Description:** Solid black horizontal lines (0.1 inch thick) placed immediately above and below the UPS barcode block. They visually separate the barcode block from other label content.
+- **Detect By:** spatial:barcode_block_border
+- **Position on Label:** Immediately above and below the UPS Barcode block
+- **ZPL Font:** Not applicable
+- **Field Prefix:** None
+- **ZPL Command:** ^GB (graphic box) or ^FO with line drawing
 
 ## Examples from Spec
-No visual examples in extracted text.
-
-## Position on Label
-Immediately above and below the UPS Barcode block.
-
-## ZPL Rendering
-- **Typical Position:** Directly above and below the primary tracking number barcode
-- **Font / Size:** Not applicable
-- **Field Prefix:** None — graphic
-- **ZPL Command:** ^GB (graphic box) — solid black lines drawn at 0.1 inch height spanning barcode width
+No examples in spec (this extract).
 
 ## Edge Cases & Notes
-- These are distinct from separating lines, which are narrow lines used to segregate barcode and information blocks.
+- These are structural/visual elements, not data-carrying fields.
+- The spec defines them as exactly one-tenth inch (0.1") solid black lines.
 
 ## Claude Confidence
-HIGH — Clearly defined in glossary with specific dimensions (0.1 inch solid black lines, positioned above and below barcode block).
+MEDIUM — Definition is clear; exact ZPL implementation not specified in this extract.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

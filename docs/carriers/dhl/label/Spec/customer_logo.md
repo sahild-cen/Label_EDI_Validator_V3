@@ -4,27 +4,29 @@
 Customer Logo
 
 ## Field Description
-An optional logo image that may be placed in the space to the right of the sender address segment. Alternatively, a DHL Initiative Logo (e.g., GoGreen) may be placed here if the customer agrees or requests it.
+An optional graphic element reserved for a customer's logo, placed to the right of the sender address segment. Alternatively, this space can be used for a DHL Initiative Logo (e.g., GoGreen) if the customer agrees or requests it.
 
 ## Format & Validation Rules
-- **Data Type:** image
+- **Data Type:** graphic/image
 - **Length:** N/A
-- **Pattern/Regex:** Not applicable
-- **Allowed Values:** Customer's logo or DHL Initiative Logo (e.g., GoGreen)
-- **Required:** no — optional
+- **Pattern/Regex:** N/A
+- **Allowed Values:** Customer-provided logo image or DHL Initiative Logo (e.g., GoGreen)
+- **Required:** no
 
 ## Examples from Spec
-"GoGreen" mentioned as an example DHL Initiative Logo.
+"This is reserved for an optional Customer Logo or alternatively for a DHL Initiative Logo (e.g. GoGreen) if customer agrees or asks for it."
 
-## Position on Label
-To the right of the sender address segment (Ship From section). Also referenced near the Ship To section (element 8).
+## ZPL Rendering
+- **Typical Position:** to the right of the Ship From address segment; also available near the Ship To area
+- **Font / Size:** N/A — graphic element
+- **Field Prefix:** None
+- **ZPL Command:** ^GFA (graphic field)
 
 ## Edge Cases & Notes
-- Alternatively, a DHL Initiative Logo (e.g., GoGreen) can be placed if customer agrees or asks for it
-- The relative small font of the sender address creates space for this element
+This space appears in two locations on the label — near the Ship From address and near the Ship To address. In both cases, it can be used for either a Customer Logo or a DHL Initiative Logo. The customer must agree to or request a DHL Initiative Logo.
 
 ## Claude Confidence
-HIGH — spec clearly states optional status and placement
+HIGH — clearly described as optional in spec
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

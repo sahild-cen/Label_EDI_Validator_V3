@@ -1,40 +1,173 @@
 # Field: ship_to_address
 
 ## Display Name
-Ship To Address (Street Address)
+Ship-To Address
 
-## Field Description
-The street address of the destination/consignee. Encoded in the MaxiCode secondary message. Can use either a full street address format or a primary/secondary address number format for CASS-certified addresses.
+## Group Description
+The destination address block containing the consignee name, phone number, UPS Access Point name (if applicable), and full address of the delivery location. Prefixed with "SHIP TO:" on the label.
 
-## Format & Validation Rules
-- **Data Type:** alphanumeric
-- **Length:** 1-35 characters for full address format; or 1-10 + FS + 1-8 for primary/secondary number format
+## Sub-Fields
+
+### consignee_name
+- **Data Type:** string
+- **Length:** variable
 - **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Valid street address
+- **Allowed Values:** Not restricted
 - **Required:** yes
+- **Description:** Name of the person to whom the package is being shipped. For UPS Access Point, this is the person who will pick up the package.
+- **Detect By:** spatial:ship_to, text_prefix:SHIP TO:, first line after SHIP TO label
+- **Position on Label:** center-left area of label, ship-to section
+- **ZPL Font:** 10 pt. (standard labels)
+- **Field Prefix:** "SHIP TO:" label appears to the left
+- **ZPL Command:** ^FD (text field)
+
+### consignee_phone_number
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Phone number of the consignee/recipient
+- **Detect By:** spatial:ship_to, line below consignee name
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### uap_name
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Name of the UPS Access Point location
+- **Detect By:** spatial:ship_to, labeled as "UPS ACCESS POINT (UAP) NAME"
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### uap_extended_address
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** conditional — only if additional address line exists for UAP
+- **Description:** Extended address line for the UPS Access Point location
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### uap_street_address
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Street address of the UPS Access Point location
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### company_name
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** conditional — when shipping to a company
+- **Description:** Company name at the destination
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### extended_address
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** no
+- **Description:** Extended address line(s) for destination
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### street_address
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Street address of the destination
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 10 pt.
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### city_postal_code
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** City, state (if applicable), and postal code of the destination. Printed in 12 pt. bold for UPS Access Point labels.
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 12 pt. bold (postal line)
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
+
+### country
+- **Data Type:** string
+- **Length:** variable
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Country name of the destination. Printed in 12 pt. bold for UPS Access Point labels.
+- **Detect By:** spatial:ship_to
+- **Position on Label:** center-left area, within ship-to block
+- **ZPL Font:** 12 pt. bold
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
-- `123<FS>567` (validated address: primary address number 123, secondary 567 for "123 MAIN STREET, SUITE 567")
-- `19 SOUTH ST` (non-validated address)
-- `5 WALDSTRASSE` (international address, Germany)
-- `1 MAIN ST` (letter/envelope example)
-
-## Position on Label
-Encoded within MaxiCode secondary message. Also printed as human-readable text in the ship-to address block on the label.
-
-## ZPL Rendering
-- **Typical Position:** Ship-to address block, center/middle of label
-- **Font / Size:** Not specified
-- **Field Prefix:** None (part of address block)
-- **ZPL Command:** ^FD (text field) for human-readable; encoded within ^BD (MaxiCode)
+```
+SHIP TO:
+CONSIGNEE NAME
+CONSIGNEE PHONE NUMBER
+UPS ACCESS POINT (UAP) NAME
+UAP EXTENDED ADDRESS
+UAP STREET ADDRESS
+WINDSOR ON  N8N2M1
+CANADA
+```
+Also:
+```
+SHIP TO:
+CONSIGNEE NAME
+CONSIGNEE PHONE NUMBER
+COMPANY NAME
+EXTENDED ADDRESS
+STREET ADDRESS
+41460  NEUSS
+GERMANY
+```
 
 ## Edge Cases & Notes
-- Full address format `(an 1...35)`: provides full street address line 1; may be truncated if it reaches the character limit.
-- Primary/secondary format `(an 1...10<FS>an1...8)`: only allowed for CASS-certified addresses in uncompressed MaxiCode when Address Validation = "Y". Uses `<FS>` (decimal 28) to separate primary and secondary address numbers.
-- If MaxiCode exceeds maximum length and Shipment ID is already cleared, shorten the Ship-To Address field (delete only the minimum characters needed).
+- For UPS Access Point shipments, the ship-to section contains the UAP address (where the package physically goes), while the consignee address block at the bottom shows where the recipient lives.
+- Postal code line and country are printed in 12 pt. bold, larger than other ship-to lines (10 pt.).
+- Consignee name is the person picking up, who may need to produce ID verification.
 
 ## Claude Confidence
-HIGH — spec provides clear format options, multiple examples, and truncation rules
+HIGH — Spec clearly defines ship-to section requirements with multiple examples.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

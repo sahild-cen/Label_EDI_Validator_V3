@@ -3,35 +3,34 @@
 ## Display Name
 URC Version Number
 
-## Field Description
-The version number of the UPS Routing Code data file used to generate the routing information on the label.
+## Group Description
+The version number of the UPS Routing Code data file, printed on the label to indicate which version of the routing table was used.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### urc_version_number
 - **Data Type:** alphanumeric
 - **Length:** variable
-- **Pattern/Regex:** Not specified in spec
+- **Pattern/Regex:** `r'.+ \d{2}/\d{4}$'`
 - **Allowed Values:** Not restricted
 - **Required:** yes
-
-## Examples from Spec
-- `18.5A 01/2020`
-
-## Position on Label
-Located at the bottom of the Carrier Segment, typically in the lower-right area beneath the description of goods.
-
-## ZPL Rendering
-- **Typical Position:** Bottom-right of carrier segment
-- **Font / Size:** 6pt
-- **Field Prefix:** None — displayed as version string
+- **Description:** Version identifier for the UPS routing code data file used when generating the label
+- **Detect By:** spatial:bottom_right, pattern matching version format (e.g., "18.5A 01/2020")
+- **Position on Label:** bottom area, near tracking barcode block
+- **ZPL Font:** 6pt
+- **Field Prefix:** " "
 - **ZPL Command:** ^FD (text field)
 
+## Examples from Spec
+- ` 18.5A 01/2020`
+
 ## Edge Cases & Notes
-- The URC data file must be updated monthly to ensure the most accurate routing information.
-- The label sample annotations explicitly label this as "URC Version Number."
-- Format appears to be version number followed by date (MM/YYYY).
+- Appears consistently across all label examples in the spec
+- Very small font size (6pt)
+- Format appears to be version number + letter designation + month/year
 
 ## Claude Confidence
-MEDIUM — spec labels it in the diagram and shows examples but provides limited format details
+MEDIUM — spec shows this field on label diagrams with font size but does not provide detailed format description
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

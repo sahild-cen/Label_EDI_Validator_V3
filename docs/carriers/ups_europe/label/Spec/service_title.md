@@ -3,35 +3,45 @@
 ## Display Name
 UPS Service Title
 
-## Field Description
-The name of the UPS service being used for the shipment, displayed prominently on the label.
+## Group Description
+The UPS service name printed on the label indicating the level of service selected, displayed in uppercase bold text beneath the top highlight bar.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### service_title
 - **Data Type:** string
 - **Length:** variable
 - **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Enumerated list including: UPS EXPRESS, UPS EXPEDITED, UPS ACCESS POINT ECONOMY, UPS Domestic Express, UPS Domestic Express Plus, UPS Worldwide Express, UPS Worldwide Express Plus, UPS Worldwide Expedited, UPS Worldwide Express Saver, UPS Worldwide Standard, UPS Transborder Standard, UPS Transborder Express, UPS Express NA1, UPS Express 12:00, and many packaging variants
+- **Allowed Values:** Complete UPS service titles including: UPS EXPRESS PLUS, UPS EXPRESS, UPS EXPRESS (NA1), UPS SAVER, UPS EXPEDITED, UPS STANDARD, UPS 3 DAY SELECT, UPS EXPRESS FREIGHT, UPS EXPRESS FREIGHT MIDDAY, UPS EXPRESS 12:00
 - **Required:** yes
-
-## Examples from Spec
-- `UPS EXPRESS`
-- `UPS EXPEDITED`
-- `UPS ACCESS POINT ECONOMY`
-
-## Position on Label
-Prominently displayed, typically in the middle section of the label near the routing information.
-
-## ZPL Rendering
-- **Typical Position:** Middle section, typically right-justified or centered
-- **Font / Size:** 12 pt. bold (reduced for Access Point labels)
-- **Field Prefix:** None (standalone text)
+- **Description:** The complete UPS service title printed in uppercase bold letters
+- **Detect By:** spatial:above tracking barcode, below top highlight bar
+- **Position on Label:** Left-justified beneath the top highlight bar
+- **ZPL Font:** 12 pt. bold
+- **Field Prefix:** None
 - **ZPL Command:** ^FD (text field)
 
+## Examples from Spec
+```
+UPS EXPRESS
+```
+```
+UPS SAVER
+```
+```
+UPS EXPRESS FREIGHT
+```
+```
+UPS EXPRESS 12:00
+```
+
 ## Edge Cases & Notes
-For Access Point labels, the service title font size is reduced to 12 pt. bold. The shipment summary in the manifest document lists all possible service titles with packaging variants (Letters/Envelopes, 10 KG Box, 25 KG Box, Express Box, Tube, PAK, GNIFC).
+- Must be printed in uppercase letters using the complete service title.
+- Font size is 12 pt. bold.
+- Left-justified beneath the top highlight bar of the tracking number barcode block.
 
 ## Claude Confidence
-HIGH — Spec lists comprehensive service titles and specifies font size
+HIGH — spec explicitly defines font size, positioning, and formatting requirements.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

@@ -35,4 +35,4 @@ Located in the lower portion of the Carrier Segment, below the billing indicator
 MEDIUM — spec shows examples in label samples but does not provide detailed format rules
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

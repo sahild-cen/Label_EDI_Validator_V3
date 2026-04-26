@@ -606,7 +606,8 @@ export default function ValidationDashboard() {
     const file = getLabelFile();
     if (!file) { setLabelValidating(false); return; }
     try {
-      const response = await api.validateLabel(carrierId, file, false, carrierName);
+      const isZpl = file.name.toLowerCase().endsWith('.zpl');
+      const response = await api.validateLabel(carrierId, file, isZpl, carrierName);
       if (response.success) setLabelResult(response.validation);
     } catch (error) {
       console.error('Validation failed:', error);
@@ -771,18 +772,22 @@ export default function ValidationDashboard() {
             {/* ═══ Label Results — WITH FEEDBACK ═══ */}
             {labelResult && (
               <div className="bg-white rounded-lg shadow p-6 space-y-4">
-                <div className={`p-4 rounded-lg ${labelResult.status === 'PASS' ? 'bg-green-50' : 'bg-red-50'}`}>
+                <div className={`p-4 rounded-lg ${labelResult.status === 'PASS' ? 'bg-green-50' : labelResult.status === 'SKIP' ? 'bg-yellow-50' : 'bg-red-50'}`}>
                   <div className="flex items-center gap-2 mb-2">
                     {labelResult.status === 'PASS'
                       ? <CheckCircle className="w-5 h-5 text-green-600" />
+                      : labelResult.status === 'SKIP'
+                      ? <AlertCircle className="w-5 h-5 text-yellow-600" />
                       : <AlertCircle className="w-5 h-5 text-red-600" />}
-                    <span className={`font-semibold ${labelResult.status === 'PASS' ? 'text-green-800' : 'text-red-800'}`}>
-                      {labelResult.status}
+                    <span className={`font-semibold ${labelResult.status === 'PASS' ? 'text-green-800' : labelResult.status === 'SKIP' ? 'text-yellow-800' : 'text-red-800'}`}>
+                      {labelResult.status === 'SKIP' ? 'No Rules Configured' : labelResult.status}
                     </span>
                   </div>
                   <p className="text-sm">
                     {labelResult.status === 'PASS'
                       ? 'Label is valid and ready to use.'
+                      : labelResult.status === 'SKIP'
+                      ? (labelResult as any).message || 'No validation rules configured for this carrier.'
                       : `${labelResult.errors.length} issue(s) found. Please review below.`}
                   </p>
                 </div>
@@ -920,19 +925,23 @@ export default function ValidationDashboard() {
             {/* ═══ EDI Results — WITH FEEDBACK ═══ */}
             {ediResult && (
               <div className="bg-white rounded-lg shadow p-6 space-y-4">
-                <div className={`p-4 rounded-lg ${ediResult.status === 'PASS' ? 'bg-green-50' : 'bg-red-50'}`}>
+                <div className={`p-4 rounded-lg ${ediResult.status === 'PASS' ? 'bg-green-50' : ediResult.status === 'SKIP' ? 'bg-yellow-50' : 'bg-red-50'}`}>
                   <div className="flex items-center gap-2 mb-2">
                     {ediResult.status === 'PASS'
                       ? <CheckCircle className="w-5 h-5 text-green-600" />
+                      : ediResult.status === 'SKIP'
+                      ? <AlertCircle className="w-5 h-5 text-yellow-600" />
                       : <AlertCircle className="w-5 h-5 text-red-600" />}
-                    <span className={`font-semibold ${ediResult.status === 'PASS' ? 'text-green-800' : 'text-red-800'}`}>
-                      {ediResult.status}
+                    <span className={`font-semibold ${ediResult.status === 'PASS' ? 'text-green-800' : ediResult.status === 'SKIP' ? 'text-yellow-800' : 'text-red-800'}`}>
+                      {ediResult.status === 'SKIP' ? 'No Rules Configured' : ediResult.status}
                     </span>
                   </div>
                   {/* ═══ CHANGED: Smart score display — handles both 0-1 and 0-100 ═══ */}
                   <p className="text-sm">
                     {ediResult.status === 'PASS'
                       ? 'EDI file is valid and compliant.'
+                      : ediResult.status === 'SKIP'
+                      ? (ediResult as any).message || 'No validation rules configured for this carrier.'
                       : `${ediResult.errors.length} issue(s) found. Please review below.`}
                   </p>
                 </div>

@@ -4,26 +4,29 @@
 Origin Service Area Code
 
 ## Field Description
-A three-character code identifying the DHL service area (facility/station) at the origin that processes the shipment.
+A DHL-specific code identifying the origin service area or facility. This code is used for routing and operational sorting within the DHL network. It typically corresponds to the origin station or gateway.
 
 ## Format & Validation Rules
 - **Data Type:** alphanumeric
-- **Length:** 3
-- **Pattern/Regex:** `^[A-Z0-9]{3}$`
-- **Allowed Values:** DHL-defined service area codes
+- **Length:** 3 characters
+- **Pattern/Regex:** ^[A-Z]{3}$
+- **Allowed Values:** DHL-defined service area codes (e.g., station/gateway codes)
 - **Required:** yes
 
 ## Examples from Spec
-No examples in spec.
+No examples in extracted spec text.
 
-## Position on Label
-Typically shown in the routing information area of the label.
+## ZPL Rendering
+- **Typical Position:** routing code area, often near destination service area code
+- **Font / Size:** Not specified
+- **Field Prefix:** May appear as part of a routing code string
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-This code is determined by DHL based on the shipper's pickup address/postal code. It is used in the routing string and sortation logic.
+This code is assigned by DHL's routing system and is not user-specified. It may appear as part of a larger routing string on the label.
 
 ## Claude Confidence
-HIGH — Standard routing element on DHL Express labels.
+LOW — known DHL field but no detail in extracted spec
 
 ## Review Status
 - [ ] Reviewed by human

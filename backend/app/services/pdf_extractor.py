@@ -64,12 +64,12 @@ class PDFExtractor:
         """
         self.ensure_dirs()
 
-        # Copy original PDF to Documentation/
+        # Copy original PDF to Documentation/ — always overwrite so re-uploads
+        # use the latest file, not a cached copy from a previous run.
         import shutil
         pdf_name = os.path.basename(pdf_path)
         doc_copy = self.doc_dir / pdf_name
-        if not doc_copy.exists():
-            shutil.copy2(pdf_path, doc_copy)
+        shutil.copy2(pdf_path, doc_copy)
 
         doc = fitz.open(pdf_path)
         total_pages = len(doc)

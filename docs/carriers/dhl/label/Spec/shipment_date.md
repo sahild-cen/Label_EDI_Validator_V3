@@ -1,29 +1,32 @@
 # Field: shipment_date
 
 ## Display Name
-Shipment Date (Ship Date)
+Shipment Date
 
 ## Field Description
-The date the shipment is tendered to DHL for transportation.
+The date the shipment is tendered to DHL or the date the label is created. This date is used for transit time calculations and service level commitments.
 
 ## Format & Validation Rules
 - **Data Type:** date
-- **Length:** 10 characters (formatted) or 8 digits (YYYYMMDD)
-- **Pattern/Regex:** `^\d{2}[A-Z]{3}\d{4}$` or similar date format
-- **Allowed Values:** Valid dates
+- **Length:** 10 characters in DD-MMM-YYYY or similar format
+- **Pattern/Regex:** ^\d{2}[-/]\w{3}[-/]\d{4}$ or ^\d{2}[-/]\d{2}[-/]\d{4}$
+- **Allowed Values:** Valid calendar dates
 - **Required:** yes
 
 ## Examples from Spec
-No examples in spec.
+No examples in extracted spec text.
 
-## Position on Label
-Typically in the shipment details area of the label.
+## ZPL Rendering
+- **Typical Position:** upper portion of label, near shipper info or in header area
+- **Font / Size:** Not specified
+- **Field Prefix:** "Date:" or "Ship Date:" or similar
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-DHL commonly uses the format DD-MMM-YYYY (e.g., 15-JAN-2024) or similar. The shipment date affects transit time calculations and service commitments.
+Date format may vary by country of origin. DHL may use DD-MMM-YYYY (e.g., 15-JAN-2024) format in some regions and DD/MM/YYYY in others.
 
 ## Claude Confidence
-HIGH — Standard element on all DHL labels.
+MEDIUM — standard shipping label field
 
 ## Review Status
 - [ ] Reviewed by human

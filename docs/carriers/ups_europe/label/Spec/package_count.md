@@ -3,35 +3,36 @@
 ## Display Name
 Package Count
 
-## Field Description
-Indicates the number of this package (N) related to the total number of packages in the entire shipment (X), displayed as "N OF X".
+## Group Description
+Indicates the number of this package relative to the total number of packages in the entire shipment, displayed in the top-right corner of the label.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### package_count
 - **Data Type:** alphanumeric
-- **Length:** 10 positions max
-- **Pattern/Regex:** Positions 1-3 = up to three numeric; Position 4 = space; Positions 5-6 = "OF"; Position 7 = space; Positions 8-10 = up to three numeric
-- **Allowed Values:** Format: N OF X where N and X are numeric (1-999)
+- **Length:** 10 (format: "N OF X")
+- **Pattern/Regex:** `^\d{1,3}\sOF\s\d{0,3}$`
+- **Allowed Values:** Not restricted
 - **Required:** yes
+- **Description:** Package count in format "N OF X" where N is the current package number and X is the total number of packages in the shipment
+- **Detect By:** spatial:top_right, text matching pattern "N OF X"
+- **Position on Label:** top-right corner of the label
+- **ZPL Font:** 10pt bold
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
 - `999 OF 999`
 - `1 OF 1`
 - `1 OF 2`
-
-## Position on Label
-Top right corner of the label, in the Package Information Block.
-
-## ZPL Rendering
-- **Typical Position:** Top-right corner, adjacent to package weight
-- **Font / Size:** 10pt bold
-- **Field Prefix:** None — displayed as "N OF X"
-- **ZPL Command:** ^FD (text field)
+- `1 OF __` (when total not known at print time)
 
 ## Edge Cases & Notes
-- For multi-package shipments where total package count is not known at label print time, display as "1 OF __" or "2 OF __", etc.
+- Positions 1-3 = up to three numeric, Position 4 = space, Positions 5-6 = "OF", Position 7 = space, Positions 8-10 = up to three numeric
+- For multi-piece shipments where total is unknown at print time, display as `1 OF __` or `2 OF __`
 
 ## Claude Confidence
-HIGH — spec provides detailed positional data content and examples
+HIGH — spec clearly defines format with positional data and examples
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

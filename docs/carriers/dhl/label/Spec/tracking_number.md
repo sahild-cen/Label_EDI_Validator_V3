@@ -4,26 +4,29 @@
 Tracking Number (Waybill Number / AWB Number)
 
 ## Field Description
-The primary shipment tracking identifier assigned by DHL. This is the unique identifier used to track the package through the DHL network from origin to destination.
+The primary DHL shipment tracking number, also known as the Air Waybill (AWB) number. This is the unique identifier for the shipment within DHL's global network. It appears both as human-readable text and as a barcode on the label.
 
 ## Format & Validation Rules
 - **Data Type:** numeric
-- **Length:** 10-11 digits
-- **Pattern/Regex:** `^\d{10,11}$`
-- **Allowed Values:** Not restricted (system-generated)
+- **Length:** 10-11 digits for DHL Express AWB; may vary by service
+- **Pattern/Regex:** ^\d{10,11}$
+- **Allowed Values:** DHL-assigned numeric range; typically starts with specific prefixes by region
 - **Required:** yes
 
 ## Examples from Spec
-No examples in spec.
+No examples in extracted spec text.
 
-## Position on Label
-Typically appears in the upper portion of the label, both as human-readable text and as a barcode.
+## ZPL Rendering
+- **Typical Position:** prominent position, often center or bottom of label with associated barcode
+- **Font / Size:** Large, bold font for human-readable portion
+- **Field Prefix:** None — appears as both text and barcode
+- **ZPL Command:** ^BC (Code 128) for the barcode rendering; ^FD for human-readable text
 
 ## Edge Cases & Notes
-DHL waybill numbers include a check digit. The tracking number is also encoded in the primary 1D barcode on the label. For DHL Express, the tracking number is typically 10 digits. For DHL eCommerce/Parcel, formats may vary.
+DHL Express uses a 10-digit waybill number. DHL eCommerce and DHL Parcel may use different tracking number formats and lengths. The tracking number barcode is typically Code 128 or Interleaved 2 of 5. For multi-piece shipments, each piece gets a unique tracking number derived from the master AWB.
 
 ## Claude Confidence
-HIGH — DHL tracking numbers are well-documented across DHL integration guides and are the primary identifier on every DHL label.
+MEDIUM — core DHL field but minimal extracted spec detail
 
 ## Review Status
 - [ ] Reviewed by human

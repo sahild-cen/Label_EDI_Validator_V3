@@ -1,0 +1,50 @@
+UNA:+.? 
+UNB+UNOC:3+5560356684:14+7331802000008:14+20260421:1304+f85e0b9610b346
+UNH+1+IFTMIN:D:10B:UN:NIG001
+BGM+610+2222223366+9
+DTM+137:20260421:102
+DTM+234:20250420:102
+TSR++3+3
+FTX+BLR+++Deliver the goods at gate no 1?:Go t:o reception
+FTX+CLR+++Deliver the goods at gate no 1?:Go t:o reception
+CNT+7:11:KGM
+CNT+11:2:PCE
+CNT+15:0.6:MTQ
+CNT+57:0.5:MTR
+TOD+6++DAP
+LOC+1+:::Stockholm
+RFF+AAS:2222223366
+RFF+CU:DSV9998761
+TDT+20++3
+LOC+5+33571:16::HESTRA
+LOC+8+00100:16::Helsinki
+NAD+CZ+37033950::87++Isaberg Rapid Hestra Sweden+Metallgatan 5+HESTRA++33571+SE
+CTA+IC+:Isaberg Rapid Hestra Sweden
+COM+?+46 370 123456:TE
+COM+contact@isabergrapid.se:EM
+NAD+PW+++Isaberg Rapid Hestra Sweden+Metallgatan 5+HESTRA++33571+SE
+CTA+IC+:Isaberg Rapid Hestra Sweden
+COM+?+46 370 123456:TE
+COM+contact@isabergrapid.se:EM
+NAD+CN+++Fresenius Health Services Aland+Torggatan 6+Helsinki++00100+FI
+CTA+IC+:AMAN
+COM+?+358 18 559 44445:TE
+NAD+DP+++Fresenius Health Services Aland+Torggatan 6+Helsinki++00100+FI
+CTA+IC+:AMAN
+COM+?+358 18 559 44445:TE
+GID+1+1:CTN
+FTX+AAA+++Consumer Goods
+MEA+WT+AAB+KGM:6
+MEA+VOL++MTQ:0.3
+DIM+1+MTR:0.15:0.2:0.04
+PCI+18
+GIN+AW+473330060007001950
+GID+2+1:CTN
+FTX+AAA+++Consumer Goods
+MEA+WT+AAB+KGM:6
+MEA+VOL++MTQ:0.3
+DIM+1+MTR:0.15:0.2:0.04
+PCI+18
+GIN+AW+473330060007001967
+UNT+47+1
+UNZ+1+f85e0b9610b346

@@ -4,31 +4,29 @@
 Inbound Sort Code
 
 ## Field Description
-A sort code used at destination/inbound facilities to support manual sorting. It can serve as either a consolidator (various facilities sharing the same code) or separator (facility sub-divided by postal code and/or product).
+A sort code used at the inbound/destination facility to support manual sorting. It depends on destination country, postcode, and product, and can serve as either a consolidator (various facilities sharing the same code) or a separator (sub-dividing a facility based on postal code and/or product).
 
 ## Format & Validation Rules
 - **Data Type:** alphanumeric
-- **Length:** Up to 4 characters
-- **Pattern/Regex:** `[A-Z0-9]{1,4}`
-- **Allowed Values:** Values from DHL reference databases; "." if lookup returned no value; blank if no attempt was made
-- **Required:** conditional — mandatory when defined for the inbound facility
+- **Length:** 1-4 characters
+- **Pattern/Regex:** [A-Z0-9]{1,4}
+- **Allowed Values:** Values from DHL's Global Reference databases; "." if lookup returned no value; blank if no attempt was made
+- **Required:** conditional — mandatory when defined for the inbound facility; not all inbound facilities have sort codes defined
 
 ## Examples from Spec
-No specific code examples given. "." used when effective lookup returned no value.
+"The Inbound Sort Code consists of up to 4 alphanumeric chars (numerals or capital letters)." When not defined: populated with ".". When no attempt was made: left blank.
 
-## Position on Label
-Right portion of the Manual Sorting Section (element 12).
+## ZPL Rendering
+- **Typical Position:** manual sorting section, rightmost element (element 12)
+- **Font / Size:** Not specified in extracted text
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-- Consists of numerals or capital letters, up to 4 characters
-- Depends on destination country, postcode, and product
-- Can serve as Consolidator (various facilities with same code) or Separator (facility sub-divided by postal code/product)
-- "." means an effective lookup attempt returned no value
-- Blank/empty means no attempt was made, indicating to DHL the label needs reprinting
-- DHL may not require for all destinations
+A "." indicates an effective attempt to look up a sort code returned no value. A blank field indicates no attempt was made, signaling to DHL that the label needs to be reprinted. Can serve dual purposes: consolidator (grouping multiple facilities) or separator (sub-dividing a single facility).
 
 ## Claude Confidence
-HIGH — spec clearly defines format, conditional logic, and population rules
+HIGH — clearly specified in section 5.9.3
 
 ## Review Status
 - [ ] Reviewed by human

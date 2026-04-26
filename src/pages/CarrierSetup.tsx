@@ -420,17 +420,21 @@ export default function CarrierSetup() {
                             const isGenEdi = generatingRules?.carrier === carrier.carrier && generatingRules?.type === 'edi';
                             return (
                               <>
-                                {/* Label Spec Files Status */}
-                                {labelSt && labelSt.total_files > 0 && (
+                                {/* Label Spec Files Status + Generate Rules */}
+                                {carrier.label_spec_path && (
                                   <div className="flex items-center justify-between p-3 bg-[#faf9f7] rounded-lg border border-gray-200">
                                     <div>
                                       <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Label Spec Files</p>
-                                      <p className="text-sm text-gray-900">
-                                        <span className={labelSt.reviewed_count === labelSt.total_files ? 'text-green-600 font-medium' : 'text-amber-600'}>
-                                          {labelSt.reviewed_count}/{labelSt.total_files} reviewed
-                                        </span>
-                                        {labelSt.pending_count > 0 && <span className="text-gray-500 ml-1">({labelSt.pending_count} pending)</span>}
-                                      </p>
+                                      {labelSt && labelSt.total_files > 0 ? (
+                                        <p className="text-sm text-gray-900">
+                                          <span className={labelSt.reviewed_count === labelSt.total_files ? 'text-green-600 font-medium' : 'text-amber-600'}>
+                                            {labelSt.reviewed_count}/{labelSt.total_files} reviewed
+                                          </span>
+                                          {labelSt.pending_count > 0 && <span className="text-gray-500 ml-1">({labelSt.pending_count} pending)</span>}
+                                        </p>
+                                      ) : (
+                                        <p className="text-xs text-gray-400 italic">Spec files not generated yet</p>
+                                      )}
                                     </div>
                                     {carrier.has_label_rules ? (
                                       <div className="flex items-center gap-1.5 px-3 py-1.5 text-sm">
@@ -458,17 +462,21 @@ export default function CarrierSetup() {
                                   </div>
                                 )}
 
-                                {/* EDI Spec Files Status */}
-                                {ediSt && ediSt.total_files > 0 && (
+                                {/* EDI Spec Files Status + Generate Rules */}
+                                {carrier.edi_spec_path && (
                                   <div className="flex items-center justify-between p-3 bg-[#faf9f7] rounded-lg border border-gray-200">
                                     <div>
                                       <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">EDI Spec Files</p>
-                                      <p className="text-sm text-gray-900">
-                                        <span className={ediSt.reviewed_count === ediSt.total_files ? 'text-green-600 font-medium' : 'text-amber-600'}>
-                                          {ediSt.reviewed_count}/{ediSt.total_files} reviewed
-                                        </span>
-                                        {ediSt.pending_count > 0 && <span className="text-gray-500 ml-1">({ediSt.pending_count} pending)</span>}
-                                      </p>
+                                      {ediSt && ediSt.total_files > 0 ? (
+                                        <p className="text-sm text-gray-900">
+                                          <span className={ediSt.reviewed_count === ediSt.total_files ? 'text-green-600 font-medium' : 'text-amber-600'}>
+                                            {ediSt.reviewed_count}/{ediSt.total_files} reviewed
+                                          </span>
+                                          {ediSt.pending_count > 0 && <span className="text-gray-500 ml-1">({ediSt.pending_count} pending)</span>}
+                                        </p>
+                                      ) : (
+                                        <p className="text-xs text-gray-400 italic">Spec files not generated yet</p>
+                                      )}
                                     </div>
                                     {carrier.has_edi_rules ? (
                                       <div className="flex items-center gap-1.5 px-3 py-1.5 text-sm">
@@ -496,8 +504,8 @@ export default function CarrierSetup() {
                                   </div>
                                 )}
 
-                                {/* No spec files yet */}
-                                {(!labelSt || labelSt.total_files === 0) && (!ediSt || ediSt.total_files === 0) && !isUpdating && (
+                                {/* No specs uploaded yet */}
+                                {!carrier.label_spec_path && !carrier.edi_spec_path && !isUpdating && (
                                   <p className="text-xs text-gray-400 italic px-1">No spec files yet. Upload a PDF above to start.</p>
                                 )}
                               </>

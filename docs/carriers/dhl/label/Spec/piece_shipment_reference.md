@@ -4,28 +4,32 @@
 Piece / Shipment Reference
 
 ## Field Description
-Customer-defined identifier(s) for a package, such as reference codes consisting of alphanumeric characters. These are qualified by specific Reference Type Codes that give them specific meaning.
+Optional customer-defined reference identifier(s) for a package, such as reference codes consisting of alphanumeric characters. These are qualified by specific Reference Type Codes (ex-Reference Qualifiers) that give them specific meaning. May be printed on the label when DHL has received the references with the transport order.
 
 ## Format & Validation Rules
 - **Data Type:** alphanumeric
 - **Length:** variable — all formats supported by the solution agreed with DHL
 - **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Not restricted — under customer's responsibility to manage
-- **Required:** no — optional
+- **Allowed Values:** Not restricted — customer-managed identifiers
+- **Required:** no (optional)
 
 ## Examples from Spec
-No specific examples in spec beyond mentioning "reference codes, which consist of sets of alphanumeric chars."
+- Reference Type Codes qualify the references (e.g., Shipper's Reference is one type)
+- Tax IDs (e.g., Brazil CNPJ/CPF, IE/RG) can be represented as Shipment References with associated Reference Types
 
-## Position on Label
-Printed in the Shipment Information section of the label.
+## ZPL Rendering
+- **Typical Position:** shipment information segment
+- **Font / Size:** Not specified
+- **Field Prefix:** May include reference type qualifier text
+- **ZPL Command:** ^FD (text field)
 
 ## Edge Cases & Notes
-- Ideally printed when DHL has received those references with the transport order
-- Qualified by Reference Type Codes (ex-Reference Qualifiers) per DHL EXPRESS Piece/Shipment Reference Standard
-- Tax IDs (e.g., Brazil CNPJ/CPF) can also be represented as a Shipment Reference with associated Reference Type
+- Refers to DHL EXPRESS Piece/Shipment Reference Standard for Reference Type Codes.
+- Can include Tax IDs when represented as a Shipment Reference with associated Reference Type.
+- All formats supported by the agreed solution can be printed on the label.
 
 ## Claude Confidence
-MEDIUM — spec describes the field conceptually but provides limited format detail
+MEDIUM — described as optional with flexible format; references external standard for detail
 
 ## Review Status
 - [ ] Reviewed by human

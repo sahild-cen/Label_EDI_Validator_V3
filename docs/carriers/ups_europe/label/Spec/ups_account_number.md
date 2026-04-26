@@ -3,34 +3,33 @@
 ## Display Name
 UPS Account Number
 
-## Field Description
-The unique number assigned by UPS to the shipper, contained in positions 3-8 of the Tracking Number. This identifies the billing/shipping account.
+## Group Description
+The unique number assigned by UPS to the shipper, embedded in positions 3-8 of the Tracking Number.
 
-## Format & Validation Rules
+## Sub-Fields
+
+### ups_account_number
 - **Data Type:** alphanumeric
-- **Length:** 6 characters (positions 3-8 of tracking number)
-- **Pattern/Regex:** `[A-Z0-9]{6}`
-- **Allowed Values:** Assigned by UPS to each shipper
-- **Required:** yes — embedded within tracking number; may also appear separately on label
+- **Length:** 6 (positions 3-8 of tracking number)
+- **Pattern/Regex:** Not specified in spec
+- **Allowed Values:** UPS-assigned shipper account numbers
+- **Required:** yes (embedded in tracking number; also listed on submission form)
+- **Description:** The unique 6-character shipper account number assigned by UPS. Embedded within the tracking number at positions 3-8. Multiple account numbers can be included on the submission form if they are for the same customer name and address.
+- **Detect By:** Extracted from tracking number positions 3-8
+- **Position on Label:** Embedded within tracking number; may also appear separately
+- **ZPL Font:** Not specified
+- **Field Prefix:** None
+- **ZPL Command:** ^FD (text field)
 
 ## Examples from Spec
-No examples in spec.
-
-## Position on Label
-Not specified in the extracted text. The account number is embedded within the tracking number and may also appear in the shipper information area.
-
-## ZPL Rendering
-- **Typical Position:** Embedded in tracking number barcode; may also appear in shipper info block
-- **Font / Size:** Not specified
-- **Field Prefix:** None when embedded in tracking number
-- **ZPL Command:** ^FD (text field) if displayed separately; otherwise part of tracking number barcode data
+No examples in spec (this extract).
 
 ## Edge Cases & Notes
-- The submission form must list all UPS account numbers, but the number of accounts does not affect total label count for certification.
-- Multiple account numbers can be included on a submission form if they are for the same customer name and address.
+- Multiple UPS account numbers can be used for a single customer location but must all be listed on the submission form.
+- The number of UPS accounts used does not affect the total number of test labels required for certification.
 
 ## Claude Confidence
-MEDIUM — Defined in glossary as positions 3-8 of tracking number, but standalone label rendering details not in extracted text.
+MEDIUM — Definition clearly states position and length; display format on label not detailed in this extract.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

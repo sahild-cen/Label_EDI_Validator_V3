@@ -3,37 +3,38 @@
 ## Display Name
 Shipment Weight (SHP WT)
 
-## Field Description
-The total weight of all packages in the shipment, rounded up to the next whole pound or half kilogram.
+## Group Description
+The total weight of the entire shipment (all packages combined), displayed with "SHP WT:" prefix. For multi-piece shipments, this is the aggregate weight.
 
-## Format & Validation Rules
-- **Data Type:** alphanumeric
-- **Length:** 18 positions
-- **Pattern/Regex:** Positions 1-7 = "SHP WT:"; Position 8 = space; Positions 9-14 = up to six numeric inclusive of decimal point; Position 15 = space; Positions 16-18 = KG or LBS
-- **Allowed Values:** Numeric weight value with unit
-- **Required:** yes (for shipments)
+## Sub-Fields
 
-## Examples from Spec
-- `SHP WT: 120.5 KG`
-- `SHP WT:  50 LBS`
-- `SHP WT: 50.5 KG`
-- `SHP WT: 25 KG`
-
-## Position on Label
-Directly beneath the shipment number in the Package Information Block.
-
-## ZPL Rendering
-- **Typical Position:** Top-right area, below shipment number
-- **Font / Size:** 8pt
+### shipment_weight
+- **Data Type:** numeric
+- **Length:** variable
+- **Pattern/Regex:** `^\d+(\.\d+)?\s*KG$`
+- **Allowed Values:** Not restricted
+- **Required:** yes
+- **Description:** Total actual weight of the entire shipment in kilograms
+- **Detect By:** text_prefix:SHP WT:
+- **Position on Label:** upper-right area, shipment information section
+- **ZPL Font:** Not specified
 - **Field Prefix:** "SHP WT:"
 - **ZPL Command:** ^FD (text field)
 
+## Examples from Spec
+- `SHP WT: 91 KG`
+- `SHP WT: 45 KG`
+- `SHP WT: 50.5 KG`
+- `SHP WT: 20 KG`
+- `SHP WT: 38 KG`
+
 ## Edge Cases & Notes
-- If there is available space on the label, the numeric value can be greater than six characters.
-- Weight is rounded up to next whole pound or half kilogram.
+- SHP DWT (dimensional weight) does not always appear — it is absent from some label examples (e.g., UPS Express Freight, UPS Saver envelope)
+- Both SHP WT and SHP DWT may have the same value
+- May include decimal places
 
 ## Claude Confidence
-HIGH — spec provides detailed data content positions and examples
+HIGH — Clearly shown with prefixes across multiple label examples.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human

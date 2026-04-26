@@ -1,7 +1,7 @@
 {
   "carrier_code": "dhl",
-  "source_pdf": "carrier_edi_spec_4b8f8c7c-0d8a-4ee6-8c9f-213554b446e5.pdf",
-  "extracted_at": "2026-04-09T11:31:17.904420+00:00",
+  "source_pdf": "carrier_edi_spec_39a698ac-4cfd-4f74-b30f-388ebddd26a5.pdf",
+  "extracted_at": "2026-04-23T08:23:08.148612+00:00",
   "total_pages": 115,
   "metadata": {
     "title": "MSG Manifesting IFCSUM D01Bv3_v1.1",

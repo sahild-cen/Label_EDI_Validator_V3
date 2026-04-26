@@ -131,46 +131,39 @@ class SpecEngine:
 
             edi_rules["confidence_score"] = round(edi_conf, 2)
 
-        # ──────── VERSION HANDLING ────────
-        existing = await self.db.carriers.find_one({"carrier": carrier_name})
-
-        if existing and "rules" in existing:
-            new_version = len(existing["rules"]) + 1
-        else:
-            new_version = 1
-
-        rule_entry = {
-            "version": new_version,
-            "created_at": datetime.utcnow(),
-            "label_rules": label_rules,
-            "edi_rules": edi_rules,
-            "ai_extracted_rules": ai_extracted_rules,
-            "status": "active"
-        }
-
         # ──────── SAVE TO MONGO ────────
-        if existing and "rules" in existing:
-            await self.db.carriers.update_one(
-                {"carrier": carrier_name},
-                {"$set": {"rules.$[].status": "inactive"}}
-            )
-            await self.db.carriers.update_one(
-                {"carrier": carrier_name},
-                {"$push": {"rules": rule_entry}}
-            )
-        else:
-            await self.db.carriers.update_one(
-                {"carrier": carrier_name},
-                {
-                    "$set": {"carrier": carrier_name},
-                    "$push": {"rules": rule_entry}
-                },
-                upsert=True
-            )
+        # Always writes label_rules before edi_rules in the document.
+        # Overwrites only the spec type that was uploaded; preserves the other.
+        # Removes legacy versioned "rules" array if present.
+        existing = await self.db.carriers.find_one({"carrier": carrier_name}) or {}
+        existing.pop("_id", None)
+        existing.pop("rules", None)  # remove old versioned array
+
+        now = datetime.utcnow()
+        replacement = {"carrier": carrier_name}
+
+        # label_rules always first
+        replacement["label_rules"] = label_rules if label_spec_path else existing.get("label_rules", {})
+        replacement["label_rules_updated_at"] = now if label_spec_path else existing.get("label_rules_updated_at")
+
+        # edi_rules always second
+        replacement["edi_rules"] = edi_rules if edi_spec_path else existing.get("edi_rules", {})
+        replacement["edi_rules_updated_at"] = now if edi_spec_path else existing.get("edi_rules_updated_at")
+
+        # preserve any other fields (spec paths, position mappings, etc.)
+        _skip = {"carrier", "label_rules", "label_rules_updated_at", "edi_rules", "edi_rules_updated_at", "rules"}
+        for k, v in existing.items():
+            if k not in _skip:
+                replacement[k] = v
+
+        await self.db.carriers.replace_one(
+            {"carrier": carrier_name},
+            replacement,
+            upsert=True,
+        )
 
         return {
             "carrier_name": carrier_name,
-            "version": new_version,
             "label_rules": label_rules,
             "edi_rules": edi_rules,
             "ai_rules_count": len(ai_extracted_rules)
@@ -182,132 +175,40 @@ class SpecEngine:
     async def get_carrier_rules(self, carrier_name: str) -> Dict[str, Any]:
         carrier = await self.db.carriers.find_one({"carrier": carrier_name})
 
-        if not carrier or "rules" not in carrier:
-            return {"label_rules": {}, "edi_rules": {}}
-
-        active_rule = next(
-            (r for r in carrier["rules"] if r["status"] == "active"), None
-        )
-
-        if not active_rule:
+        if not carrier:
             return {"label_rules": {}, "edi_rules": {}}
 
         return {
-            "version": active_rule.get("version"),
-            "label_rules": active_rule.get("label_rules", {}),
-            "edi_rules": active_rule.get("edi_rules", {})
+            "label_rules": carrier.get("label_rules", {}),
+            "edi_rules": carrier.get("edi_rules", {}),
         }
 
     # ----------------------------------------
     # ROLLBACK
     # ----------------------------------------
     async def rollback_to_version(self, carrier_name: str, version: int) -> Dict[str, Any]:
-        carrier = await self.db.carriers.find_one({"carrier": carrier_name})
-
-        if not carrier or "rules" not in carrier:
-            return {"success": False, "message": "Carrier or rules not found."}
-
-        target = next(
-            (r for r in carrier["rules"] if r["version"] == version), None
-        )
-
-        if not target:
-            return {"success": False, "message": "Version not found."}
-
-        await self.db.carriers.update_one(
-            {"carrier": carrier_name},
-            {"$set": {"rules.$[].status": "inactive"}}
-        )
-        await self.db.carriers.update_one(
-            {"carrier": carrier_name, "rules.version": version},
-            {"$set": {"rules.$.status": "active"}}
-        )
-
+        # Versioning has been removed. Rules are regenerated from spec files.
         return {
-            "success": True,
-            "message": "Rolled back to version {}".format(version),
-            "active_version": version
+            "success": False,
+            "message": "Rule versioning is no longer supported. Regenerate rules from spec files."
         }
 
     # ----------------------------------------
-    # LIST VERSIONS
+    # LIST VERSIONS (stub — versioning removed)
     # ----------------------------------------
     async def list_versions(self, carrier_name: str) -> Dict[str, Any]:
-        carrier = await self.db.carriers.find_one({"carrier": carrier_name})
-
-        if not carrier or "rules" not in carrier:
-            return {"carrier": carrier_name, "versions": []}
-
-        versions = []
-        for rule in carrier["rules"]:
-            versions.append({
-                "version": rule.get("version"),
-                "created_at": rule.get("created_at"),
-                "status": rule.get("status"),
-                "confidence_score": rule.get("label_rules", {}).get("confidence_score"),
-                "ai_rules_count": len(rule.get("ai_extracted_rules", []))
-            })
-
-        return {"carrier": carrier_name, "versions": versions}
+        return {"carrier": carrier_name, "versions": [], "message": "Versioning removed. Rules are always overwritten on regeneration."}
 
     # ----------------------------------------
-    # COMPARE VERSIONS
+    # COMPARE VERSIONS (stub — versioning removed)
     # ----------------------------------------
     async def compare_versions(self, carrier_name: str, v1: int, v2: int) -> Dict[str, Any]:
-        carrier = await self.db.carriers.find_one({"carrier": carrier_name})
-
-        if not carrier or "rules" not in carrier:
-            return {"error": "Carrier or rules not found."}
-
-        rules = carrier["rules"]
-        r1 = next((r for r in rules if r["version"] == v1), None)
-        r2 = next((r for r in rules if r["version"] == v2), None)
-
-        if not r1 or not r2:
-            return {"error": "One or both versions not found."}
-
-        fields_v1 = set(r1.get("label_rules", {}).get("field_formats", {}).keys())
-        fields_v2 = set(r2.get("label_rules", {}).get("field_formats", {}).keys())
-
-        return {
-            "carrier": carrier_name,
-            "v1": v1, "v2": v2,
-            "added_fields": list(fields_v2 - fields_v1),
-            "removed_fields": list(fields_v1 - fields_v2),
-            "common_fields": list(fields_v1 & fields_v2),
-            "v1_confidence": r1.get("label_rules", {}).get("confidence_score"),
-            "v2_confidence": r2.get("label_rules", {}).get("confidence_score"),
-        }
+        return {"error": "Versioning removed. Rules are always overwritten on regeneration."}
 
     # ----------------------------------------
-    # SIMULATE VALIDATION
+    # SIMULATE VALIDATION (stub — versioning removed)
     # ----------------------------------------
     async def simulate_validation(
         self, carrier_name: str, version_1: int, version_2: int, label_path: str
     ) -> Dict[str, Any]:
-        carrier = await self.db.carriers.find_one({"carrier": carrier_name})
-
-        if not carrier or "rules" not in carrier:
-            return {"error": "Carrier or rules not found."}
-
-        rules = carrier["rules"]
-        v1 = next((r for r in rules if r["version"] == version_1), None)
-        v2 = next((r for r in rules if r["version"] == version_2), None)
-
-        if not v1 or not v2:
-            return {"error": "One or both versions not found."}
-
-        from app.services.label_validator import LabelValidator
-
-        validator_v1 = LabelValidator(v1.get("label_rules", {}))
-        result_v1 = await validator_v1.validate(label_path)
-
-        validator_v2 = LabelValidator(v2.get("label_rules", {}))
-        result_v2 = await validator_v2.validate(label_path)
-
-        return {
-            "carrier": carrier_name,
-            "version_1": version_1,
-            "version_2": version_2,
-            "results": {"v1": result_v1, "v2": result_v2},
-        }
+        return {"error": "Versioning removed. Rules are always overwritten on regeneration."}

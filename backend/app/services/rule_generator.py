@@ -19,7 +19,7 @@ Output:
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 from datetime import datetime, timezone
 
 from app.services.pdf_extractor import DOCS_BASE
@@ -34,62 +34,47 @@ Carrier: {carrier_code}
 Below are human-reviewed specification files for each field on this carrier's shipping labels.
 Your job is to convert them into precise JSON validation rules.
 
-For each field, you must provide:
+═══ SUBFIELD EXPANSION (READ CAREFULLY) ═══
+
+If a spec file contains a "## Subfields" section, generate ONE SEPARATE RULE per subfield.
+Name each rule as: {{parent_field_name}}_{{subfield_name}}
+Example: ship_from_address has subfields name, postal_code → generate ship_from_address_name and ship_from_address_postal_code as separate rules.
+
+For each rule (whether from a flat field or an expanded subfield), provide:
 
 1. field: snake_case field name
-2. required: true or false (from "Required" section of spec file)
-3. detect_by: HOW a ZPL label parser finds this field (critical — see instructions below)
-4. regex: validation pattern (from Pattern/Regex section, or derive from format description)
+2. required: true or false
+3. detect_by: HOW the ZPL parser finds this field (see instructions below)
+4. regex: validation pattern (from Pattern/Regex section)
 5. description: 1-sentence description
-6. zpl_position: approximate X,Y position from the "ZPL Rendering" section (e.g. "50,100" or "" if unknown)
-7. zpl_font: ZPL font command from the spec (e.g. "^A0N,30,30" or "^CF0,25" or "" if unknown)
-8. field_prefix: the literal text prefix before the data (e.g. "DATE:", "SHP WT:", "DESC:"). Empty string for barcodes/graphics or fields with no prefix.
+6. zpl_position: approximate X,Y position (e.g. "50,100" or "" if unknown)
+7. zpl_font: ZPL font command (e.g. "^A0N,30,30" or "" if unknown)
+8. field_prefix: literal text prefix before the data (e.g. "DATE:"). Empty for barcodes/no prefix.
 
 ═══ DETECT_BY INSTRUCTIONS ═══
 
-Choose the most precise detect_by type for each field:
-
-  zpl_command:^BD         For fields identified by a ZPL command in the script
-                          Examples: MaxiCode (^BD), PDF417 (^B7), GS1 DataMatrix (^BX)
-
+  zpl_command:^BD         For fields identified by a ZPL command (MaxiCode=^BD, PDF417=^B7)
   barcode_data:^1Z        For barcodes whose DATA matches a regex prefix
-                          Examples: UPS tracking (^1Z), DHL tracking (^JD|^JJD),
-                          FedEx tracking (^\\d{{12,20}}$)
-
   text_prefix:DATE:       For text that STARTS WITH a known literal prefix
-                          Examples: DATE:, BILLING:, REF:, SHP WT:, TRACKING #:, MRN:
-
-  text_contains:phrase    For text that CONTAINS a phrase (case-insensitive)
-                          Examples: "SHIPPER'S LETTER OF INSTRUCTION", "Terms and Conditions"
-
+  text_contains:phrase    For text that CONTAINS a phrase
   text_pattern:regex      For text matching a REGEX PATTERN
-                          Examples: routing code (^[A-Z]{{2,3}} \\d{{3}}), package count (\\d+ OF \\d+),
-                          service title (^UPS |^DHL |^FEDEX )
-
   text_exact:A|B|C        For text that EQUALS one of a set of values
-                          Examples: country codes (US|CA|MX), doc types (EDI|DOC|INV)
-
-  graphic:GFA             For graphic/image elements in the ZPL
-                          Examples: carrier logo, service icon
-
+  graphic:GFA             For graphic/image elements
   spatial:ship_from       For the shipper address block
   spatial:ship_to         For the consignee/recipient address block
 
-When in doubt, prefer text_prefix or text_pattern over spatial.
+For subfields of an address block, inherit the parent's spatial detect_by.
 Always provide a detect_by — never leave it empty.
 
 ═══ REGEX RULES ═══
 
-- Only include regex if the spec file's Format section specifies a clear pattern
-- For tracking numbers: capture the full format (e.g., ^1Z[A-Z0-9]{{16}}$)
-- For postal codes: match the country-specific format
-- For dates: match the spec's stated date format
-- If no clear pattern in spec, set regex to ""
+- Only include regex if the spec specifies a clear pattern
+- If no clear pattern, set regex to ""
 
 ═══ REQUIRED FIELD ═══
 
-- required: true if spec says "required", "mandatory", "must appear", or field is in a required table
-- required: false if spec says "optional", "conditional", or "when applicable"
+- required: true if spec says "required", "mandatory", "must appear"
+- required: false if "optional", "conditional", "when applicable"
 
 ═══ OUTPUT FORMAT ═══
 
@@ -102,30 +87,30 @@ Return ONLY valid JSON:
       "required": true,
       "detect_by": "barcode_data:^1Z",
       "regex": "^1Z[A-Z0-9]{{16}}$",
-      "description": "UPS tracking barcode in 1Z format, 18 characters total",
+      "description": "UPS tracking barcode in 1Z format",
       "zpl_position": "50,800",
-      "zpl_font": "",
-      "field_prefix": "TRACKING #:"
-    }},
-    {{
-      "field": "maxicode",
-      "required": true,
-      "detect_by": "zpl_command:^BD",
-      "regex": "",
-      "description": "MaxiCode 2D barcode encoding routing and postal information",
-      "zpl_position": "50,400",
       "zpl_font": "",
       "field_prefix": ""
     }},
     {{
-      "field": "shipment_date",
+      "field": "ship_from_address_name",
       "required": true,
-      "detect_by": "text_prefix:DATE:",
-      "regex": "^\\d{{2}}/\\d{{2}}/\\d{{4}}$",
-      "description": "Shipment date in MM/DD/YYYY format",
-      "zpl_position": "400,50",
-      "zpl_font": "^A0N,20,20",
-      "field_prefix": "DATE:"
+      "detect_by": "spatial:ship_from",
+      "regex": ".{{1,35}}",
+      "description": "Shipper name in ship-from address block",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
+    }},
+    {{
+      "field": "ship_from_address_postal_code",
+      "required": true,
+      "detect_by": "spatial:ship_from",
+      "regex": "\\\\d{{5}}(-\\\\d{{4}})?",
+      "description": "ZIP code in ship-from address block",
+      "zpl_position": "",
+      "zpl_font": "",
+      "field_prefix": ""
     }}
   ]
 }}
@@ -142,85 +127,91 @@ You are an expert in EDI (Electronic Data Interchange) standards including ANSI 
 Carrier: {carrier_code}
 
 Below are human-reviewed specification files for this carrier's EDI requirements.
+Each spec file represents ONE segment with its sub-elements listed under "## Subfields".
 Your job is to convert them into precise JSON validation rules.
 
-═══ WHAT TO IDENTIFY ═══
+═══ CRITICAL: SUBFIELDS STRUCTURE ═══
 
-1. **format_type**: x12, edifact, xml, json — whichever the spec describes
-2. **required_segments**: Segment IDs that MUST be present
-3. **segment_order**: The correct sequence of segments
-4. **required_fields**: Data fields that must have values
-5. **delimiter_rules**: Expected delimiters for the format
-6. **field_rules**: Per-field validation (segment, position, format, regex)
-
-═══ X12 COMMON SEGMENTS ═══
-
-ISA — Interchange Control Header
-GS  — Functional Group Header
-ST  — Transaction Set Header (e.g., 856=ASN, 204=Motor Carrier Load Tender)
-BSN — Beginning Segment for Ship Notice
-HL  — Hierarchical Level
-TD1/TD3/TD5 — Carrier/Transport Details
-N1/N3/N4    — Name/Address
-REF — Reference Identification
-DTM — Date/Time Reference
-SE  — Transaction Set Trailer
-GE  — Functional Group Trailer
-IEA — Interchange Control Trailer
-
-═══ EDIFACT COMMON SEGMENTS ═══
-
-UNA — Service String Advice
-UNB — Interchange Header
-UNH — Message Header
-BGM — Beginning of Message
-DTM — Date/Time/Period
-NAD — Name and Address
-TDT — Transport Information
-LOC — Place/Location Identification
-RFF — Reference
-GID — Goods Item Details
-MEA — Measurements
-PCI — Package Identification
-CNT — Control Total
-UNT — Message Trailer
-UNZ — Interchange Trailer
+Each segment in field_rules MUST include a "subfields" dict containing its required elements.
+- The key is the subfield name (snake_case)
+- element_position: 1-indexed position after the segment tag
+  Example: BGM+610+73400858+9 → element 1="610", element 2="73400858", element 3="9"
+- pattern: regex that the element value must match (empty string if no constraint)
+- required: true/false
 
 ═══ OUTPUT FORMAT ═══
 
 Return ONLY valid JSON:
 {{
   "carrier_code": "{carrier_code}",
-  "format_type": "x12",
-  "required_segments": ["ISA", "GS", "ST", "BSN", "HL", "TD5", "N1", "REF", "DTM", "SE", "GE", "IEA"],
-  "segment_order": ["ISA", "GS", "ST", "BSN", "HL", "TD5", "N1", "REF", "DTM", "SE", "GE", "IEA"],
-  "required_fields": ["sender_id", "receiver_id", "transaction_set_id", "shipment_id"],
+  "format_type": "edifact",
+  "required_segments": ["UNB", "UNH", "BGM", "DTM", "NAD", "CNT", "UNT", "UNZ"],
+  "segment_order": ["UNB", "UNH", "BGM", "DTM", "NAD", "CNT", "UNT", "UNZ"],
+  "required_fields": ["BGM", "DTM", "NAD"],
   "delimiter_rules": {{
-    "segment_delimiter": "~",
-    "element_delimiter": "*",
+    "segment_delimiter": "'",
+    "element_delimiter": "+",
     "sub_element_delimiter": ":"
   }},
   "field_rules": [
     {{
-      "field": "sender_id",
-      "segment": "ISA",
-      "position": 6,
+      "field": "BGM",
+      "segment": "BGM",
       "required": true,
-      "regex": "",
-      "description": "Interchange sender identification"
+      "description": "Begin Message — identifies shipment notice type",
+      "subfields": {{
+        "document_name_code": {{
+          "element_position": 1,
+          "pattern": "610",
+          "required": true,
+          "description": "Document name code — 610 = Despatch advice"
+        }},
+        "document_identifier": {{
+          "element_position": 2,
+          "pattern": "\\\\d{{1,35}}",
+          "required": true,
+          "description": "Unique shipment document identifier"
+        }},
+        "message_function_code": {{
+          "element_position": 3,
+          "pattern": "9",
+          "required": true,
+          "description": "Message function — 9 = original"
+        }}
+      }}
+    }},
+    {{
+      "field": "DTM",
+      "segment": "DTM",
+      "required": true,
+      "description": "Date/Time/Period — shipment date",
+      "subfields": {{
+        "date_time_qualifier": {{
+          "element_position": 1,
+          "pattern": "137",
+          "required": true,
+          "description": "Qualifier 137 = document date/time"
+        }},
+        "date_value": {{
+          "element_position": 2,
+          "pattern": "\\\\d{{8}}",
+          "required": true,
+          "description": "Date in YYYYMMDD format"
+        }}
+      }}
     }}
   ]
 }}
 
 ═══ RULES ═══
 
-- required_segments: include ALL segments the spec says are mandatory
-- segment_order: list segments in the order they should appear per the spec
-- required_fields: list all fields/data elements that must have values
-- delimiter_rules: specify the actual delimiters (~ for X12, ' for EDIFACT, etc.)
-- field_rules: for each important field, specify segment, element position, and any regex pattern
-- If the spec mentions a specific standard version (4010, 5010, D96A), include it in the description
-- Set required: true only for mandatory fields; conditional fields are required: false
+- required_segments: ALL segments the spec says are mandatory
+- segment_order: sequence segments appear per spec
+- required_fields: list of segment IDs (field names) that are required — matches keys in field_rules
+- delimiter_rules: actual delimiters (' for EDIFACT, ~ for X12)
+- field_rules: one entry per segment; each entry MUST have a "subfields" dict
+- pattern must be a valid regex; use empty string "" if no format constraint
+- Set required: true only for mandatory elements
 
 ═══ SPEC FILES ═══
 
@@ -228,8 +219,10 @@ Return ONLY valid JSON:
 """
 
 
-# Max spec files per Claude call — above this we batch to avoid truncation
+# Max spec files per Claude call — EDI is lower because nested subfields
+# produce ~3× more JSON output than flat label rules
 MAX_SPECS_PER_BATCH = 20
+MAX_EDI_SPECS_PER_BATCH = 8
 
 
 def _merge_rules(batches: List[List[Dict]]) -> List[Dict]:
@@ -274,7 +267,7 @@ def _call_claude_for_edi_rules(carrier_code: str, spec_context: str) -> Optional
     try:
         response = client.messages.create(
             model=deployment_name,
-            max_tokens=8192,
+            max_tokens=16384,
             messages=[{"role": "user", "content": prompt}],
         )
 
@@ -347,18 +340,30 @@ def _merge_edi_rules(batches: List[Dict]) -> Dict:
 def _rules_to_edi_format(edi_data: Dict) -> Dict:
     """
     Convert EDI Claude output to the format expected by EDIValidator.
+    Preserves subfields dict when present (new hierarchical format).
     """
     field_formats = {}
     for r in edi_data.get("field_rules", []):
         field = r.get("field", "")
-        if field:
-            field_formats[field] = {
-                "segment": r.get("segment", ""),
-                "position": r.get("position", 0),
-                "pattern": r.get("regex", ""),
-                "required": r.get("required", False),
-                "description": r.get("description", ""),
-            }
+        if not field:
+            continue
+
+        entry: Dict = {
+            "segment": r.get("segment", field),
+            "required": r.get("required", False),
+            "description": r.get("description", ""),
+        }
+
+        subfields = r.get("subfields", {})
+        if subfields:
+            entry["subfields"] = subfields
+        else:
+            # Old flat format: single element_position + pattern
+            entry["position"] = r.get("position", 0)
+            entry["element_position"] = r.get("position", 0)
+            entry["pattern"] = r.get("regex", "") or r.get("pattern", "")
+
+        field_formats[field] = entry
 
     return {
         "required_segments": edi_data.get("required_segments", []),
@@ -469,52 +474,78 @@ def _call_claude_for_rules(carrier_code: str, spec_context: str) -> List[Dict]:
         return []
 
 
+def _clean_single_rule(field: str, rule: Dict) -> Optional[Dict]:
+    """Normalize and validate a single flat rule dict. Returns None if invalid."""
+    field = re.sub(r"[^\w]", "_", field.lower()).strip("_")
+    field = re.sub(r"_+", "_", field)
+    if not field:
+        return None
+
+    regex = rule.get("regex", "")
+    if regex:
+        try:
+            re.compile(regex)
+            quants = re.findall(r"\{(\d+),(\d+)\}", regex)
+            for min_v, max_v in quants:
+                if int(min_v) > int(max_v):
+                    regex = ""
+                    break
+        except re.error:
+            regex = ""
+
+    detect_by = rule.get("detect_by", "")
+    if detect_by and ":" not in detect_by:
+        detect_by = f"text_contains:{detect_by}"
+
+    return {
+        "field": field,
+        "required": bool(rule.get("required", False)),
+        "detect_by": detect_by,
+        "regex": regex,
+        "description": rule.get("description", ""),
+        "zpl_position": rule.get("zpl_position", ""),
+        "zpl_font": rule.get("zpl_font", ""),
+        "field_prefix": rule.get("field_prefix", ""),
+    }
+
+
 def _validate_and_clean_rules(rules: List[Dict]) -> List[Dict]:
     """
-    Basic sanity checks on generated rules before saving.
-    - Ensure required fields are present
-    - Validate regex patterns
-    - Normalize field names
+    Normalize and validate label rules.
+    Rules with 'subfields' are expanded into separate flat rules named {parent}_{subfield}.
     """
     cleaned = []
     for rule in rules:
-        field = rule.get("field", "").strip()
-        if not field:
+        parent_field = rule.get("field", "").strip()
+        if not parent_field:
             continue
 
-        # Normalize field name
-        field = re.sub(r"[^\w]", "_", field.lower()).strip("_")
-        field = re.sub(r"_+", "_", field)
+        subfields = rule.get("subfields", {})
 
-        # Validate regex
-        regex = rule.get("regex", "")
-        if regex:
-            try:
-                re.compile(regex)
-                # Check for impossible quantifiers like {15,10}
-                quants = re.findall(r"\{(\d+),(\d+)\}", regex)
-                for min_v, max_v in quants:
-                    if int(min_v) > int(max_v):
-                        regex = ""
-                        break
-            except re.error:
-                regex = ""
+        if subfields:
+            # Expand each subfield into its own flat rule
+            parent_norm = re.sub(r"[^\w]", "_", parent_field.lower()).strip("_")
+            parent_norm = re.sub(r"_+", "_", parent_norm)
+            parent_detect_by = rule.get("detect_by", "")
 
-        # Ensure detect_by has a colon separator (type:value format)
-        detect_by = rule.get("detect_by", "")
-        if detect_by and ":" not in detect_by:
-            detect_by = f"text_contains:{detect_by}"
-
-        cleaned.append({
-            "field": field,
-            "required": bool(rule.get("required", False)),
-            "detect_by": detect_by,
-            "regex": regex,
-            "description": rule.get("description", ""),
-            "zpl_position": rule.get("zpl_position", ""),
-            "zpl_font": rule.get("zpl_font", ""),
-            "field_prefix": rule.get("field_prefix", ""),
-        })
+            for sub_name, sub_rule in subfields.items():
+                flat_name = f"{parent_norm}_{sub_name}"
+                merged = {
+                    "regex": sub_rule.get("pattern", sub_rule.get("regex", "")),
+                    "required": sub_rule.get("required", False),
+                    "detect_by": sub_rule.get("detect_by", parent_detect_by),
+                    "description": sub_rule.get("description", ""),
+                    "zpl_position": sub_rule.get("zpl_position", rule.get("zpl_position", "")),
+                    "zpl_font": sub_rule.get("zpl_font", rule.get("zpl_font", "")),
+                    "field_prefix": sub_rule.get("field_prefix", ""),
+                }
+                cleaned_rule = _clean_single_rule(flat_name, merged)
+                if cleaned_rule:
+                    cleaned.append(cleaned_rule)
+        else:
+            cleaned_rule = _clean_single_rule(parent_field, rule)
+            if cleaned_rule:
+                cleaned.append(cleaned_rule)
 
     return cleaned
 
@@ -633,26 +664,41 @@ async def generate_rules_from_specs(
         }
 
     # Split into batches to avoid truncated JSON output
+    # EDI uses a smaller batch size because nested subfields produce ~3× more output
+    batch_size = MAX_EDI_SPECS_PER_BATCH if stype == "edi" else MAX_SPECS_PER_BATCH
     batches = [
-        files_to_use[i : i + MAX_SPECS_PER_BATCH]
-        for i in range(0, files_used, MAX_SPECS_PER_BATCH)
+        files_to_use[i : i + batch_size]
+        for i in range(0, files_used, batch_size)
     ]
     num_batches = len(batches)
-    print(f"  Processing in {num_batches} batch(es) of up to {MAX_SPECS_PER_BATCH} spec files each")
+    print(f"  Processing in {num_batches} batch(es) of up to {batch_size} spec files each")
 
     # ── Branch: Label vs EDI use different prompts and merge strategies ──
     if stype == "edi":
         all_edi_batches: List[Dict] = []
-        for batch_idx, batch in enumerate(batches, start=1):
-            batch_context = _build_spec_context(batch, reviewed_only=False)
+
+        def _process_edi_batch(batch_files: List[Dict], label: str) -> None:
+            """Call Claude for a batch; on failure split in half and retry each half."""
+            if not batch_files:
+                return
+            batch_context = _build_spec_context(batch_files, reviewed_only=False)
             if not batch_context:
-                continue
-            print(f"  Batch {batch_idx}/{num_batches}: {len(batch)} spec file(s), {len(batch_context):,} chars")
+                return
+            print(f"  {label}: {len(batch_files)} spec file(s), {len(batch_context):,} chars")
             edi_data = _call_claude_for_edi_rules(code, batch_context)
             if edi_data:
                 all_edi_batches.append(edi_data)
+            elif len(batch_files) > 1:
+                # Split at whole-file boundary and retry each half
+                mid = len(batch_files) // 2
+                print(f"  {label}: failed — retrying as two halves ({mid} + {len(batch_files)-mid} files)")
+                _process_edi_batch(batch_files[:mid], f"{label}a")
+                _process_edi_batch(batch_files[mid:], f"{label}b")
             else:
-                print(f"  Batch {batch_idx}/{num_batches}: no EDI rules returned — skipping")
+                print(f"  {label}: single-file batch failed — skipping '{batch_files[0]['filename']}'")
+
+        for batch_idx, batch in enumerate(batches, start=1):
+            _process_edi_batch(batch, f"Batch {batch_idx}/{num_batches}")
 
         if not all_edi_batches:
             return {
@@ -726,68 +772,52 @@ async def generate_rules_from_specs(
     print(f"\n  Saved: {rules_json_path}")
 
     # ── Save to MongoDB (if db provided) ──
+    # Always writes label_rules before edi_rules in the document.
+    # Overwrites only the spec type being generated; preserves the other.
+    # Removes legacy versioned "rules" array if present.
     mongo_saved = False
     mongo_version = None
 
     if db is not None:
         try:
             rules_field = "label_rules" if stype == "label" else "edi_rules"
-            other_field = "edi_rules" if stype == "label" else "label_rules"
 
-            existing = await db.carriers.find_one({"carrier": code})
-            new_version = 1
-            # Preserve the other type's rules from the previous active version
-            prev_other_rules = {}
-            if existing and "rules" in existing:
-                new_version = len(existing["rules"]) + 1
-                prev_active = next(
-                    (r for r in existing["rules"] if r.get("status") == "active"),
-                    None,
-                )
-                if prev_active:
-                    prev_other_rules = prev_active.get(other_field, {})
+            existing = await db.carriers.find_one({"carrier": code}) or {}
+            existing.pop("_id", None)
+            existing.pop("rules", None)  # remove old versioned array
 
-            rule_entry = {
-                "version": new_version,
-                "created_at": datetime.now(timezone.utc),
-                rules_field: formatted_rules,
-                other_field: prev_other_rules,
-                "ai_extracted_rules": rules,
-                "status": "active",
-                "source": "v3_spec_files",
-                "spec_type": stype,
-                "spec_files_reviewed": reviewed_files,
-            }
+            now = datetime.now(timezone.utc)
+            replacement = {"carrier": code}
 
-            if existing and "rules" in existing:
-                await db.carriers.update_one(
-                    {"carrier": code},
-                    {"$set": {"rules.$[].status": "inactive"}},
-                )
-                await db.carriers.update_one(
-                    {"carrier": code},
-                    {"$push": {"rules": rule_entry}},
-                )
-            else:
-                await db.carriers.update_one(
-                    {"carrier": code},
-                    {
-                        "$set": {"carrier": code},
-                        "$push": {"rules": rule_entry},
-                    },
-                    upsert=True,
-                )
+            # label_rules always first
+            replacement["label_rules"] = formatted_rules if stype == "label" else existing.get("label_rules", {})
+            replacement["label_rules_updated_at"] = now if stype == "label" else existing.get("label_rules_updated_at")
+
+            # edi_rules always second
+            replacement["edi_rules"] = formatted_rules if stype == "edi" else existing.get("edi_rules", {})
+            replacement["edi_rules_updated_at"] = now if stype == "edi" else existing.get("edi_rules_updated_at")
+
+            # preserve other fields (spec paths, position mappings, etc.)
+            _skip = {"carrier", "label_rules", "label_rules_updated_at", "edi_rules", "edi_rules_updated_at", "rules"}
+            for k, v in existing.items():
+                if k not in _skip:
+                    replacement[k] = v
+
+            await db.carriers.replace_one(
+                {"carrier": code},
+                replacement,
+                upsert=True,
+            )
 
             mongo_saved = True
-            mongo_version = new_version
-            print(f"  Saved to MongoDB: carrier='{code}', version={new_version}")
+            mongo_version = None
+            print(f"  Saved to MongoDB: carrier='{code}', field='{rules_field}'")
 
             await db.carrier_specs.update_one(
                 {"carrier_code": code},
                 {
                     "$set": {
                         f"{stype}_rules_generated": True,
-                        f"{stype}_rules_version": new_version,
                         f"{stype}_rules_generated_at": datetime.now(timezone.utc),
                         f"{stype}_rules_count": rules_count,
                     }

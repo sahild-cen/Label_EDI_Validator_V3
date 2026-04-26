@@ -1,29 +1,32 @@
 # Field: service_type
 
 ## Display Name
-Service Type / Product Code
+Service Type
 
 ## Field Description
-Identifies the DHL shipping service/product selected for the shipment, such as Express Worldwide, Express 9:00, Express 12:00, Economy Select, etc.
+Identifies the DHL service level or product used for the shipment. This determines transit time, handling priority, and routing within the DHL network. Typically displayed prominently on the label.
 
 ## Format & Validation Rules
-- **Data Type:** alphanumeric
-- **Length:** 1-3 characters (product code) or full text name
+- **Data Type:** string
+- **Length:** variable
 - **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** DHL product codes including but not limited to: "D" (Express Worldwide), "T" (Express 12:00), "K" (Express 9:00), "P" (Express Worldwide), "U" (Express Worldwide ECX), "Y" (Express 12:00), "N" (Domestic Express), "H" (Economy Select), "W" (Economy Select)
+- **Allowed Values:** DHL Express services include: "EXPRESS WORLDWIDE" (WPX), "EXPRESS 9:00" (E9), "EXPRESS 10:30" (E10), "EXPRESS 12:00" (E12), "EXPRESS ENVELOPE" (XPD), "ECONOMY SELECT" (ESU), "EXPRESS EASY" (EAZ), "DOMESTIC EXPRESS" (DOM), among others
 - **Required:** yes
 
 ## Examples from Spec
-No examples in spec.
+No examples in extracted spec text.
 
-## Position on Label
-Typically displayed near the top of the label, often with the DHL product name in text form.
+## ZPL Rendering
+- **Typical Position:** top area of label, often in a highlighted/boxed region
+- **Font / Size:** Large bold font; may appear in a shaded or bordered box
+- **Field Prefix:** None — service name printed directly
+- **ZPL Command:** ^FD (text field); may use ^GB for background box
 
 ## Edge Cases & Notes
-The product/service code is also encoded in the barcode data. Different service types may require slightly different label layouts or additional fields (e.g., time-definite services require delivery commitment time).
+The service type determines many other label characteristics including routing codes and sort codes. DHL uses both full service names and abbreviated product codes. The DHL logo color/branding may vary by service type. Time-definite services (9:00, 10:30, 12:00) require special prominent display.
 
 ## Claude Confidence
-MEDIUM — Service types are well-known but exact code mappings may vary by region and are not in the extracted text.
+MEDIUM — standard DHL field but no specific format detail in extracted spec
 
 ## Review Status
 - [ ] Reviewed by human

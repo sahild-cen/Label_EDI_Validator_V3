@@ -1,0 +1,10 @@
+{
+  "carrier_code": "dsv",
+  "spec_type": "edi",
+  "generated_at": "2026-04-24T19:53:28.258615+00:00",
+  "chunks_processed": 7,
+  "fields_found": 47,
+  "files_created": 47,
+  "files_skipped": 0,
+  "spec_dir": "C:\\Users\\sahild\\Downloads\\Label_EDI_Validator - Copy - Copy\\docs\\carriers\\dsv\\edi\\Spec"
+}

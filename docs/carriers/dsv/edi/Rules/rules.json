@@ -1,0 +1,4702 @@
+{
+  "carrier_code": "dsv",
+  "spec_type": "edi",
+  "generated_at": "2026-04-24T20:02:36.046397+00:00",
+  "spec_files_used": 47,
+  "reviewed_only": false,
+  "rules": [
+    {
+      "field": "BGM",
+      "segment": "BGM",
+      "required": true,
+      "description": "Beginning of Message — identifies the beginning of the message and its type. Specifies document type, identifier and message function.",
+      "subfields": {
+        "document_name_code": {
+          "element_position": 1,
+          "sub_element_position": 1,
+          "pattern": "(335|610|ZEB|ZBJ)",
+          "required": true,
+          "description": "Document name code — 335 = Pre booking (Air/Sea), 610 = Forwarding instructions, ZEB = ExternalBookingRequest, ZBJ = BrokerageJob"
+        },
+        "document_identifier": {
+          "element_position": 2,
+          "sub_element_position": 1,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Waybill number or another reference to the message. Must be unique for at least 1 year. Required on all messages."
+        },
+        "message_function_code": {
+          "element_position": 3,
+          "sub_element_position": null,
+          "pattern": "(1|5|9)",
+          "required": false,
+          "description": "Message function — 1 = Cancellation, 5 = Replace, 9 = Original. For Air/Sea only code 9 is used."
+        }
+      }
+    },
+    {
+      "field": "CNT",
+      "segment": "CNT",
+      "required": false,
+      "description": "Control Total — specifies control totals for the shipment including gross weight, package quantity, volume, loading metres, and pallet spaces. Can occur up to 9 times.",
+      "subfields": {
+        "control_total_type_code_qualifier": {
+          "element_position": 1,
+          "sub_element_position": 1,
+          "pattern": "(7|11|15|19|57)",
+          "required": true,
+          "description": "Control total type code qualifier — 7=Total gross weight, 11=Consignment package quantity, 15=Total consignment cube (volume), 19=Total reported quantity in supplementary units (pallet spaces), 57=Total loading metres"
+        },
+        "control_total_quantity": {
+          "element_position": 1,
+          "sub_element_position": 2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "Control total quantity value — numeric value for weight, package count, volume, loading metres, or pallet spaces"
+        },
+        "measurement_unit_code": {
+          "element_position": 1,
+          "sub_element_position": 3,
+          "pattern": ".{1,8}",
+          "required": false,
+          "description": "Measurement unit code — For qualifier 7 use KGM; for qualifier 11 use package type codes (EUR, PL, PCE, etc.); for qualifier 15 use MTQ; for qualifier 19 use PLL, HLP, or KPL; for qualifier 57 use MTR"
+        }
+      }
+    },
+    {
+      "field": "COM",
+      "segment": "COM",
+      "required": false,
+      "description": "Communication Contact — provides communication contact details (phone, email, fax) for a party contact. Can occur up to 9 times per CTA.",
+      "subfields": {
+        "communication_address_identifier": {
+          "element_position": 1,
+          "sub_element_position": 1,
+          "pattern": ".{1,512}",
+          "required": true,
+          "description": "Communication address identifier — phone number, email address, fax number, etc."
+        },
+        "communication_means_type_code": {
+          "element_position": 1,
+          "sub_element_position": 2,
+          "pattern": "(AL|EM|FX|TE)",
+          "required": true,
+          "description": "Communication means type code — AL=Cellular phone, EM=Electronic mail, FX=Telefax, TE=Telephone"
+        }
+      }
+    },
+    {
+      "field": "CPI",
+      "segment": "CPI",
+      "required": false,
+      "description": "Charge Payment Instructions — specifies charge payment instructions including who pays for the transport charges. Used within SG6 (up to 9 occurrences).",
+      "subfields": {
+        "charge_category_code": {
+          "element_position": 1,
+          "sub_element_position": 1,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Charge category code"
+        },
+        "code_list_identification_code": {
+          "element_position": 1,
+          "sub_element_position": 2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 1,
+          "sub_element_position": 3,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Code list responsible agency code"
+        },
+        "transport_charges_payment_method_code": {
+          "element_position": 2,
+          "sub_element_position": null,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Transport charges payment method code (e.g., prepaid, collect)"
+        },
+        "payment_arrangement_code": {
+          "element_position": 3,
+          "sub_element_position": null,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Payment arrangement code"
+        }
+      }
+    },
+    {
+      "field": "CTA",
+      "segment": "CTA",
+      "required": false,
+      "description": "Contact Information — identifies the contact person associated with a party (NAD). Mandatory if COM segment is present.",
+      "subfields": {
+        "contact_function_code": {
+          "element_position": 1,
+          "sub_element_position": null,
+          "pattern": "IC",
+          "required": false,
+          "description": "Contact function code — IC=Information contact"
+        },
+        "contact_identifier": {
+          "element_position": 2,
+          "sub_element_position": 1,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Contact identifier — Not used"
+        },
+        "contact_name": {
+          "element_position": 2,
+          "sub_element_position": 2,
+          "pattern": ".{0,256}",
+          "required": false,
+          "description": "Contact name"
+        }
+      }
+    },
+    {
+      "field": "DGS",
+      "segment": "DGS",
+      "required": false,
+      "description": "Dangerous Goods — at line item level (SG33). Required for dangerous goods services. If dangerous goods present but no detailed information available, text 'HAZARD' needs to be used.",
+      "subfields": {
+        "dangerous_goods_regulations_code": {
+          "element_position": 1,
+          "sub_element_position": null,
+          "pattern": "(ADR|IMD)",
+          "required": false,
+          "description": "Dangerous goods regulations code — ADR = European agreement for road, IMD = IMO IMDG code"
+        },
+        "hazard_identification_code": {
+          "element_position": 2,
+          "sub_element_position": 1,
+          "pattern": ".{1,7}",
+          "required": false,
+          "description": "Hazard identification code. Text 'HAZARD' should be entered if structured information is not available."
+        },
+        "additional_hazard_classification_identifier": {
+          "element_position": 2,
+          "sub_element_position": 2,
+          "pattern": ".{1,7}",
+          "required": false,
+          "description": "Additional hazard classification identifier"
+        },
+        "hazard_code_version_identifier": {
+          "element_position": 2,
+          "sub_element_position": 3,
+          "pattern": ".{1,10}",
+          "required": false,
+          "description": "Hazard code version identifier. For Road, three Sub-Risk values separated by '+' using escape character"
+        },
+        "undg_identifier": {
+          "element_position": 3,
+          "sub_element_position": 1,
+          "pattern": "\\d{1,4}",
+          "required": false,
+          "description": "United Nations Dangerous Goods (UNDG) identifier"
+        },
+        "dangerous_goods_flashpoint_description": {
+          "element_position": 3,
+          "sub_element_position": 2,
+          "pattern": ".{1,8}",
+          "required": false,
+          "description": "Dangerous goods flashpoint description. Road TMS only caters for 4 characters."
+        },
+        "shipment_flashpoint_degree": {
+          "element_position": 4,
+          "sub_element_position": 1,
+          "pattern": ".{1,10}",
+          "required": false,
+          "description": "Shipment flashpoint degree. Road TMS only caters for 4 characters."
+        },
+        "flashpoint_measurement_unit_code": {
+          "element_position": 4,
+          "sub_element_position": 2,
+          "pattern": ".{1,8}",
+          "required": false,
+          "description": "Measurement unit code for flashpoint (e.g. CEL for Celsius)"
+        },
+        "packaging_danger_level_code": {
+          "element_position": 5,
+          "sub_element_position": null,
+          "pattern": "[123]",
+          "required": false,
+          "description": "Packaging danger level code — 1 = Great danger, 2 = Medium danger, 3 = Minor danger"
+        },
+        "emergency_procedure_for_ships_identifier": {
+          "element_position": 6,
+          "sub_element_position": null,
+          "pattern": ".{1,6}",
+          "required": false,
+          "description": "Emergency procedure for ships identifier"
+        },
+        "hazard_medical_first_aid_guide_identifier": {
+          "element_position": 7,
+          "sub_element_position": null,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Hazard medical first aid guide identifier"
+        },
+        "transport_emergency_card_identifier": {
+          "element_position": 8,
+          "sub_element_position": null,
+          "pattern": ".{1,10}",
+          "required": false,
+          "description": "Transport emergency card identifier"
+        },
+        "orange_hazard_placard_upper_part_identifier": {
+          "element_position": 9,
+          "sub_element_position": 1,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Orange hazard placard upper part identifier"
+        },
+        "orange_hazard_placard_lower_part_identifier": {
+          "element_position": 9,
+          "sub_element_position": 2,
+          "pattern": ".{4}",
+          "required": false,
+          "description": "Orange hazard placard lower part identifier"
+        },
+        "dangerous_goods_marking_identifier_1": {
+          "element_position": 10,
+          "sub_element_position": 1,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Dangerous goods marking identifier (first)"
+        },
+        "dangerous_goods_marking_identifier_2": {
+          "element_position": 10,
+          "sub_element_position": 2,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Dangerous goods marking identifier (second)"
+        },
+        "dangerous_goods_marking_identifier_3": {
+          "element_position": 10,
+          "sub_element_position": 3,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Dangerous goods marking identifier (third)"
+        },
+        "dangerous_goods_marking_identifier_4": {
+          "element_position": 10,
+          "sub_element_position": 4,
+          "pattern": ".{1,4}",
+          "required": false,
+          "description": "Dangerous goods marking identifier (fourth, added by DSV spec)"
+        },
+        "packing_instruction_type_code": {
+          "element_position": 11,
+          "sub_element_position": null,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Packing instruction type code"
+        },
+        "transport_means_description_code": {
+          "element_position": 12,
+          "sub_element_position": null,
+          "pattern": ".{1,8}",
+          "required": false,
+          "description": "Transport means description code. Use 'LQ' for limited quantity (Road)."
+        },
+        "hazardous_cargo_transport_authorisation_code": {
+          "element_position": 13,
+          "sub_element_position": null,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Hazardous cargo transport authorisation code"
+        },
+        "tunnel_restriction_code": {
+          "element_position": 14,
+          "sub_element_position": 1,
+          "pattern": ".{1,6}",
+          "required": false,
+          "description": "Tunnel Restriction Code"
+        }
+      }
+    },
+    {
+      "field": "DIM",
+      "segment": "DIM",
+      "required": false,
+      "description": "Dimensions — length, width, height at line item level (SG22). Part of the alternative measurement requirement alongside volume and loading meters.",
+      "subfields": {
+        "dimension_type_code_qualifier": {
+          "element_position": 1,
+          "sub_element_position": null,
+          "pattern": "1",
+          "required": true,
+          "description": "Dimension type code qualifier — 1 = Gross dimensions"
+        },
+        "measurement_unit_code": {
+          "element_position": 2,
+          "sub_element_position": 1,
+          "pattern": "(CMT|MTR)",
+          "required": true,
+          "description": "Measurement unit code — CMT = centimetre, MTR = metre. For Road, dimensions must be in MTR."
+        },
+        "length_measure": {
+          "element_position": 2,
+          "sub_element_position": 2,
+          "pattern": ".{1,15}",
+          "required": true,
+          "description": "Length measure"
+        },
+        "width_measure": {
+          "element_position": 2,
+          "sub_element_position": 3,
+          "pattern": ".{1,15}",
+          "required": true,
+          "description": "Width measure"
+        },
+        "height_measure": {
+          "element_position": 2,
+          "sub_element_position": 4,
+          "pattern": ".{1,15}",
+          "required": true,
+          "description": "Height measure"
+        }
+      }
+    },
+    {
+      "field": "DOC",
+      "segment": "DOC",
+      "required": false,
+      "description": "Document Message Details — specifies document or message details, particularly for sea transport documentation types. Can occur up to 9 times.",
+      "subfields": {
+        "document_name_code": {
+          "element_position": 1,
+          "sub_element_position": 1,
+          "pattern": "(706|712|710|NON)",
+          "required": false,
+          "description": "Document name code — 706=Bill of lading original, 712=Non-negotiable maritime transport document, 710=Sea waybill, NON=Non-controlled shipment"
+        },
+        "document_name_code_list": {
+          "element_position": 1,
+          "sub_element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code — Not used"
+        },
+        "document_name_agency": {
+          "element_position": 1,
+          "sub_element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code — Not used"
+        },
+        "document_name": {
+          "element_position": 1,
+          "sub_element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Document name — Not used"
+        },
+        "document_identifier": {
+          "element_position": 2,
+          "sub_element_position": 1,
+          "pattern": "",
+          "required": false,
+          "description": "Document identifier — Not used"
+        },
+        "document_status_code": {
+          "element_position": 2,
+          "sub_element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Document status code — Not used"
+        },
+        "document_source_description": {
+          "element_position": 2,
+          "sub_element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "Document source description — Not used"
+        },
+        "language_name_code": {
+          "element_position": 2,
+          "sub_element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Language name code — Not used"
+        },
+        "version_identifier": {
+          "element_position": 2,
+          "sub_element_position": 5,
+          "pattern": "",
+          "required": false,
+          "description": "Version identifier — Not used"
+        },
+        "revision_identifier": {
+          "element_position": 2,
+          "sub_element_position": 6,
+          "pattern": "",
+          "required": false,
+          "description": "Revision identifier — Not used"
+        },
+        "communication_medium_type_code": {
+          "element_position": 3,
+          "sub_element_position": null,
+          "pattern": "",
+          "required": false,
+          "description": "Communication medium type code — Not used"
+        },
+        "document_copies_required_quantity": {
+          "element_position": 4,
+          "sub_element_position": null,
+          "pattern": "\\d{1,2}",
+          "required": false,
+          "description": "Document copies required quantity — number of document copies needed"
+        },
+        "document_originals_required_quantity": {
+          "element_position": 5,
+          "sub_element_position": null,
+          "pattern": "\\d{1,2}",
+          "required": false,
+          "description": "Document originals required quantity — number of original documents needed"
+        }
+      }
+    },
+    {
+      "field": "DTM",
+      "segment": "DTM",
+      "required": true,
+      "description": "Date/Time/Period — specifies date/time/period information including delivery date, document issue date, collection date, and transport dates. At least one DTM with qualifier 137 is mandatory.",
+      "subfields": {
+        "date_time_period_function_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "(2|137|234|132|133|171|189|232)",
+          "required": true,
+          "description": "Date/time/period function code qualifier — 2=Delivery date/time requested, 137=Document issue date time, 234=Collection date/time earliest, 132=Transport means arrival estimated, 133=Transport means departure estimated, 171=Reference date/time, 189=Transport means departure scheduled, 232=Transport means arrival scheduled"
+        },
+        "date_time_period_text": {
+          "element_position": 1.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Date or time or period value in the format specified by element 1.3"
+        },
+        "date_time_period_format_code": {
+          "element_position": 1.3,
+          "pattern": "(102|203|719)",
+          "required": false,
+          "description": "Date/time/period format code — 102=CCYYMMDD, 203=CCYYMMDDHHMM, 719=CCYYMMDDHHMM-CCYYMMDDHHMM"
+        }
+      }
+    },
+    {
+      "field": "EQD",
+      "segment": "EQD",
+      "required": false,
+      "description": "Equipment Details — identifies equipment used for transport, primarily containers for sea shipments and exchangeable EUR flat pallets.",
+      "subfields": {
+        "equipment_type_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(CN|EFP)",
+          "required": true,
+          "description": "Equipment type code qualifier. CN=Container (only valid for Sea shipments), EFP=Exchangeable EUR flat pallet"
+        },
+        "equipment_identifier": {
+          "element_position": 2.1,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Equipment identifier (composite C237, first sub-component). For Sea: Container Number. Not used for Air, Road, Courier."
+        },
+        "equipment_code_list_id": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code — Not used"
+        },
+        "equipment_agency_code": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code — Not used"
+        },
+        "equipment_country_id": {
+          "element_position": 2.4,
+          "pattern": "",
+          "required": false,
+          "description": "Country identifier — Not used"
+        },
+        "equipment_size_type_code": {
+          "element_position": 3.1,
+          "pattern": ".{1,10}",
+          "required": false,
+          "description": "Equipment size and type description code (composite C224, first sub-component). DSV-defined container types or ISO codes. Examples: 20GP, 20HC, 40HC, 40RE, 45HC, 20FR, 20OT, 20RE, 40FR, 20DC_HT, EFP"
+        },
+        "equipment_iso_code": {
+          "element_position": 3.2,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Code list identification code (composite C224, second sub-component). For Sea: Container type ISO code (e.g., 22G0, 22G1)"
+        },
+        "equipment_agency_responsible": {
+          "element_position": 3.3,
+          "pattern": "5?",
+          "required": false,
+          "description": "Code list responsible agency code (composite C224, third sub-component). For Sea: 5=ISO"
+        },
+        "equipment_size_type_description": {
+          "element_position": 3.4,
+          "pattern": "",
+          "required": false,
+          "description": "Equipment size and type description — Not used"
+        },
+        "equipment_supplier_code": {
+          "element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Equipment supplier code — Not used"
+        },
+        "equipment_status_code": {
+          "element_position": 5,
+          "pattern": "",
+          "required": false,
+          "description": "Equipment status code — Not used"
+        },
+        "full_empty_indicator_code": {
+          "element_position": 6,
+          "pattern": "",
+          "required": false,
+          "description": "Full or empty indicator code — Not used"
+        },
+        "marking_instructions_code": {
+          "element_position": 7,
+          "pattern": "",
+          "required": false,
+          "description": "Marking instructions code — Not used"
+        }
+      }
+    },
+    {
+      "field": "EQN",
+      "segment": "EQN",
+      "required": false,
+      "description": "Number of Units — specifies the number of equipment units (EUR pallets or containers).",
+      "subfields": {
+        "units_quantity": {
+          "element_position": 1.1,
+          "pattern": "\\d{1,15}",
+          "required": true,
+          "description": "Number of equipment units, EUR pallet or Container (composite C523, first sub-component)"
+        },
+        "unit_type_code_qualifier": {
+          "element_position": 1.2,
+          "pattern": "",
+          "required": false,
+          "description": "Unit type code qualifier — Not used"
+        }
+      }
+    },
+    {
+      "field": "FTX",
+      "segment": "FTX",
+      "required": false,
+      "description": "Free Text — provides free text information including goods descriptions, handling instructions, delivery instructions, loading remarks, and various DSV-specific text fields. Up to 99 occurrences.",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(AAA|AAI|AEB|BLR|CLR|HAN|IDS|MKS|PAY|RPT|SIC|SPH|ZAD|ZAW|ZBL|ZCF|ZDM|ZFP|ZPT|ZLR|ZTF)",
+          "required": true,
+          "description": "Text subject code qualifier (4451). AAA=Goods item description, AAI=General information, AEB=Temperature control instructions, BLR=Transport contract document remark/Delivery instruction, CLR=Loading remarks/Pickup instructions, HAN=Consignment handling instruction, IDS=IDS Service code, MKS=Additional marks/numbers, PAY=Payables information, RPT=Report information, SIC=Consignment documentary instruction/Special instruction, SPH=Special handling, ZAD=Additional details, ZAW=Air Waybill Notes, ZBL=Delivery instructions, ZCF=CustomField, ZDM=DropMode, ZFP=Freight payer, ZPT=PassThrough, ZLR=Loading remarks, ZTF=Traffic from"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": "(PCK|DEL)",
+          "required": false,
+          "description": "Free text function code (4453). PCK=DropMode Pickup, DEL=DropMode Delivery"
+        },
+        "free_text_description_code": {
+          "element_position": 3.1,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Free text description code (C107/4441). Not used in standard setups."
+        },
+        "free_text_description_code_list": {
+          "element_position": 3.2,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Code list identification code (C107/1131). Not used."
+        },
+        "free_text_description_agency": {
+          "element_position": 3.3,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Code list responsible agency code (C107/3055). Not used."
+        },
+        "free_text_1": {
+          "element_position": 4.1,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 1 (C108/4440). Transport instructions, document remarks, loading remarks, or other text content up to 512 characters."
+        },
+        "free_text_2": {
+          "element_position": 4.2,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 2 (C108/4440). Additional text up to 512 characters."
+        },
+        "free_text_3": {
+          "element_position": 4.3,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 3 (C108/4440). Additional text up to 512 characters."
+        },
+        "free_text_4": {
+          "element_position": 4.4,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 4 (C108/4440). Additional text up to 512 characters."
+        },
+        "free_text_5": {
+          "element_position": 4.5,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 5 (C108/4440). Additional text up to 512 characters."
+        },
+        "language_name_code": {
+          "element_position": 5,
+          "pattern": "",
+          "required": false,
+          "description": "Language name code (3453). Not used."
+        },
+        "free_text_format_code": {
+          "element_position": 6,
+          "pattern": "",
+          "required": false,
+          "description": "Free text format code (4447). Not used."
+        }
+      }
+    },
+    {
+      "field": "FTX_AAC",
+      "segment": "FTX",
+      "required": false,
+      "description": "Free Text - Dangerous Goods Additional Information — within DGS group (SG33) for dangerous goods additional information.",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "AAC",
+          "required": true,
+          "description": "Text subject code qualifier — AAC = Dangerous goods additional information"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Free text function code"
+        },
+        "text_literal_1": {
+          "element_position": 4.1,
+          "pattern": ".{1,512}",
+          "required": true,
+          "description": "Free text line 1 (first sub-component of C108). Dangerous goods additional information."
+        },
+        "text_literal_2": {
+          "element_position": 4.2,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 2"
+        },
+        "text_literal_3": {
+          "element_position": 4.3,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 3"
+        },
+        "text_literal_4": {
+          "element_position": 4.4,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 4"
+        },
+        "text_literal_5": {
+          "element_position": 4.5,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 5"
+        }
+      }
+    },
+    {
+      "field": "FTX_AAD",
+      "segment": "FTX",
+      "required": false,
+      "description": "Free Text - Proper Shipping Name — within DGS group (SG33) for Proper Shipping Name of dangerous goods.",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "AAD",
+          "required": true,
+          "description": "Text subject code qualifier — AAD = Proper Shipping Name"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Free text function code"
+        },
+        "text_literal_1": {
+          "element_position": 4.1,
+          "pattern": ".{1,512}",
+          "required": true,
+          "description": "Free text line 1 — Proper Shipping Name (first sub-component of C108)"
+        },
+        "text_literal_2": {
+          "element_position": 4.2,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 2"
+        },
+        "text_literal_3": {
+          "element_position": 4.3,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 3"
+        },
+        "text_literal_4": {
+          "element_position": 4.4,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 4"
+        },
+        "text_literal_5": {
+          "element_position": 4.5,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "Free text line 5"
+        }
+      }
+    },
+    {
+      "field": "FTX_HAZ",
+      "segment": "FTX",
+      "required": false,
+      "description": "Free Text - Hazard Information — within DGS group (SG33) for Technical Name and International Technical Name of dangerous goods.",
+      "subfields": {
+        "text_subject_code_qualifier": {
+          "element_position": 1,
+          "pattern": "HAZ",
+          "required": true,
+          "description": "Text subject code qualifier — HAZ = Hazard information"
+        },
+        "free_text_function_code": {
+          "element_position": 2,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Free text function code"
+        },
+        "text_literal_1": {
+          "element_position": 4.1,
+          "pattern": ".{1,512}",
+          "required": true,
+          "description": "Technical Name (first sub-component of C108)"
+        },
+        "text_literal_2": {
+          "element_position": 4.2,
+          "pattern": ".{1,512}",
+          "required": false,
+          "description": "International Technical Name"
+        }
+      }
+    },
+    {
+      "field": "GDS",
+      "segment": "GDS",
+      "required": false,
+      "description": "Nature of Cargo — specifies the nature of cargo and commodity code for the goods item.",
+      "subfields": {
+        "cargo_type_classification_code": {
+          "element_position": 1.1,
+          "pattern": ".{0,3}",
+          "required": false,
+          "description": "Cargo type classification code (composite C703, sub-element 7085)"
+        },
+        "product_group_name_code": {
+          "element_position": 2.1,
+          "pattern": ".{0,25}",
+          "required": false,
+          "description": "Commodity Code — product group name code (composite C288, sub-element 5389)"
+        }
+      }
+    },
+    {
+      "field": "GID",
+      "segment": "GID",
+      "required": true,
+      "description": "Goods Item Details — identifies a goods item within the shipment with package count and type. At least one GID group is mandatory.",
+      "subfields": {
+        "goods_item_number": {
+          "element_position": 1,
+          "pattern": "\\d{1,6}",
+          "required": true,
+          "description": "Goods item number — sequential line item number"
+        },
+        "package_quantity": {
+          "element_position": 2.1,
+          "pattern": "\\d{1,8}",
+          "required": false,
+          "description": "Package quantity (composite C213 first occurrence, sub-element 7224). Number of packages at shipment level (CNT+11) or for each line item is required for Road."
+        },
+        "package_type_description_code": {
+          "element_position": 2.2,
+          "pattern": ".{1,17}",
+          "required": true,
+          "description": "Package type description code (composite C213 first occurrence, sub-element 7065). Required for Road. E.g., PLL=Pallet."
+        },
+        "packaging_related_description_code_5th_c213": {
+          "element_position": 6.6,
+          "pattern": "(INR)?",
+          "required": false,
+          "description": "Packaging related description code on the 5th C213 composite (sub-element 7233). INR=InnerGoodsItems. Used for Air/Sea to indicate SG19 is nested for inner goods items."
+        }
+      }
+    },
+    {
+      "field": "GIN",
+      "segment": "GIN",
+      "required": false,
+      "description": "Goods Identity Number — used at line item level (SG24) in conjunction with PCI. Supports serial numbers (BN with PCI+17) and SSCC codes (AW with PCI+18). Up to 5 pairs of identity number ranges per segment, max 10 occurrences.",
+      "subfields": {
+        "object_identification_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(BN|AW)",
+          "required": true,
+          "description": "Object identification code qualifier — BN = Serial number (used with PCI+17), AW = Serial shipping container code (used with PCI+18)"
+        },
+        "identity_number_1a": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "First object identifier in first identity number range (C208). For AW, SSCC expected without leading 00 qualifier."
+        },
+        "identity_number_1b": {
+          "element_position": 2.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second object identifier in first identity number range"
+        },
+        "identity_number_2a": {
+          "element_position": 3.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "First object identifier in second identity number range (C208)"
+        },
+        "identity_number_2b": {
+          "element_position": 3.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second object identifier in second identity number range"
+        },
+        "identity_number_3a": {
+          "element_position": 4.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "First object identifier in third identity number range (C208)"
+        },
+        "identity_number_3b": {
+          "element_position": 4.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second object identifier in third identity number range"
+        },
+        "identity_number_4a": {
+          "element_position": 5.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "First object identifier in fourth identity number range (C208)"
+        },
+        "identity_number_4b": {
+          "element_position": 5.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second object identifier in fourth identity number range"
+        },
+        "identity_number_5a": {
+          "element_position": 6.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "First object identifier in fifth identity number range (C208)"
+        },
+        "identity_number_5b": {
+          "element_position": 6.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second object identifier in fifth identity number range"
+        }
+      }
+    },
+    {
+      "field": "GOR",
+      "segment": "GOR",
+      "required": false,
+      "description": "Governmental Requirements — specifies governmental requirements related to the transport, such as export, import, or transit declarations.",
+      "subfields": {
+        "transport_movement_code": {
+          "element_position": 1,
+          "pattern": "(1|2|3)",
+          "required": false,
+          "description": "Transport movement code. 1=Export, 2=Import, 3=Transit"
+        },
+        "government_action_1": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Government action composite (not used in implementation)"
+        },
+        "government_action_2": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "Government action composite (not used in implementation)"
+        },
+        "government_action_3": {
+          "element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Government action composite (not used in implementation)"
+        },
+        "government_action_4": {
+          "element_position": 5,
+          "pattern": "",
+          "required": false,
+          "description": "Government action composite (not used in implementation)"
+        }
+      }
+    },
+    {
+      "field": "HAN",
+      "segment": "HAN",
+      "required": false,
+      "description": "Handling Instructions — indicates handling instructions for goods items, such as stackability.",
+      "subfields": {
+        "handling_instruction_description_code": {
+          "element_position": 1.1,
+          "pattern": "(3|ZNS)",
+          "required": false,
+          "description": "Handling instruction description code (composite C524, sub-element 4079). 3=Stacked, ZNS=No Stackability"
+        }
+      }
+    },
+    {
+      "field": "LOC",
+      "segment": "LOC",
+      "required": false,
+      "description": "Place Location Identification — identifies locations relevant to the shipment, including booking office location (SG1) and place of terms of delivery (SG2).",
+      "subfields": {
+        "location_function_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(ZBO|1)",
+          "required": true,
+          "description": "Location function code qualifier (3227). Valid codes: ZBO=Booking office, 1=Place of terms of delivery."
+        },
+        "location_identifier": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Location identifier (C517/3225). Used for Branch code (Air/Sea) or Booking Office code (Road). UN Location Code when used for terms of delivery."
+        },
+        "location_code_list": {
+          "element_position": 2.2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code (C517/1131)."
+        },
+        "location_agency": {
+          "element_position": 2.3,
+          "pattern": "(3|6|87)",
+          "required": false,
+          "description": "Code list responsible agency code (C517/3055). Valid codes: 3=IATA, 6=UN/ECE, 87=Assigned by carrier."
+        },
+        "location_name": {
+          "element_position": 2.4,
+          "pattern": ".{1,256}",
+          "required": false,
+          "description": "Location name (C517/3224). Term Location name required for Road when LOC qualifier is 1."
+        },
+        "first_related_location_identifier": {
+          "element_position": 3.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "First related location identifier (C519/3223). Used for Department code (Air/Sea). Not used for Road or Courier."
+        },
+        "first_related_location_code_list": {
+          "element_position": 3.2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code (C519/1131). Not used."
+        },
+        "first_related_location_agency": {
+          "element_position": 3.3,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Code list responsible agency code (C519/3055). Not used."
+        },
+        "first_related_location_name": {
+          "element_position": 3.4,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "First related location name (C519/3222). Not used."
+        },
+        "second_related_location_identifier": {
+          "element_position": 4.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Second related location identifier (C553/3233). Used for Country code. Not used for Road, Solutions, or Courier."
+        },
+        "second_related_location_code_list": {
+          "element_position": 4.2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code (C553/1131). Not used."
+        },
+        "second_related_location_agency": {
+          "element_position": 4.3,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Code list responsible agency code (C553/3055). Not used."
+        },
+        "second_related_location_name": {
+          "element_position": 4.4,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Second related location name (C553/3232). Not used."
+        },
+        "relation_code": {
+          "element_position": 5,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Relation code (5479). Not used."
+        }
+      }
+    },
+    {
+      "field": "MEA",
+      "segment": "MEA",
+      "required": true,
+      "description": "Measurements — specifies measurements related to goods items, including weights, volumes, counts, and dangerous goods measurements. Used in SG21 (goods item level) and SG35 (dangerous goods level).",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(WT|CT|VOL|LMT)",
+          "required": true,
+          "description": "Measurement purpose code qualifier. Valid codes: WT=Weights, CT=Counts, VOL=Volume, LMT=Limits"
+        },
+        "measured_attribute_code": {
+          "element_position": 2.1,
+          "pattern": "(AAF|AFN|AAB|ADZ|SQ|ZOT)?",
+          "required": false,
+          "description": "Measured attribute code (composite C502, first sub-component). Valid codes: AAF=Net net weight, AFN=Net explosive weight, AAB=Goods item gross weight, ADZ=Adjusted gross weight, SQ=Sequence, ZOT=Other count. May be empty."
+        },
+        "measurement_significance_code": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Measurement significance code — Not used"
+        },
+        "non_discrete_measurement_name_code": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Non-discrete measurement name code — Not used"
+        },
+        "non_discrete_measurement_name": {
+          "element_position": 2.4,
+          "pattern": "",
+          "required": false,
+          "description": "Non-discrete measurement name — Not used"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "(KGM|LTR|MTQ|MTR|PLL|NMP|BAG|BOB|BOX|CP|DRM|IBC|JCN|LGM|PD|SB|CMT)",
+          "required": true,
+          "description": "Measurement unit code (composite C174, first sub-component). Valid codes include: KGM=kilogram, LTR=litre, MTQ=cubic metre, MTR=metre, PLL=pallet, NMP=number of packs, and DGS package types."
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "The measured value (composite C174, second sub-component)"
+        },
+        "range_minimum_quantity": {
+          "element_position": 3.3,
+          "pattern": "",
+          "required": false,
+          "description": "Range minimum quantity — Not used"
+        },
+        "range_maximum_quantity": {
+          "element_position": 3.4,
+          "pattern": "",
+          "required": false,
+          "description": "Range maximum quantity — Not used"
+        },
+        "significant_digits_quantity": {
+          "element_position": 3.5,
+          "pattern": "",
+          "required": false,
+          "description": "Significant digits quantity — Not used"
+        },
+        "surface_or_layer_code": {
+          "element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Surface or layer code — Not used"
+        }
+      }
+    },
+    {
+      "field": "MEA_CT_SQ",
+      "segment": "MEA",
+      "required": false,
+      "description": "Measurements - Pallet Spaces Count — measurement for number of pallet spaces at line item level. Not used for Air, Sea, or Courier shipments. Requires special pallet space agreement.",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "CT",
+          "required": true,
+          "description": "Measurement purpose code qualifier — CT = Counts"
+        },
+        "measured_attribute_code": {
+          "element_position": 2.1,
+          "pattern": "SQ",
+          "required": true,
+          "description": "Measured attribute code — SQ = Shipped quantity (first sub-component of C502)"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "PLL",
+          "required": true,
+          "description": "Measurement unit code — PLL = Pallet spaces (first sub-component of C174 Value/range)"
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "Number of pallet spaces"
+        }
+      }
+    },
+    {
+      "field": "MEA_CT_ZOT",
+      "segment": "MEA",
+      "required": false,
+      "description": "Measurements - Outturn Packages Count — measurement for number of outturn packages at line item level. DSV-specific code, use as agreed.",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "CT",
+          "required": true,
+          "description": "Measurement purpose code qualifier — CT = Counts"
+        },
+        "measured_attribute_code": {
+          "element_position": 2.1,
+          "pattern": "ZOT",
+          "required": true,
+          "description": "Measured attribute code — ZOT = DSV specific code for Outturn Packages (first sub-component of C502)"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "NMP",
+          "required": true,
+          "description": "Measurement unit code — NMP = number of packs (first sub-component of C174 Value/range)"
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "Number of outturn packages"
+        }
+      }
+    },
+    {
+      "field": "MEA_LMT",
+      "segment": "MEA",
+      "required": false,
+      "description": "Measurements - Loading Meters at line item level (SG21). Not used for Air, Sea, or Courier shipments.",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "LMT",
+          "required": true,
+          "description": "Measurement purpose code qualifier — LMT = Loading meters"
+        },
+        "measurement_details": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "C502 Measurement details composite — Not used for LMT variant"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "MTR",
+          "required": true,
+          "description": "Measurement unit code — MTR = metre (first sub-component of C174 Value/range)"
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "The measured value (loading meters quantity in metres)"
+        }
+      }
+    },
+    {
+      "field": "MEA_VOL",
+      "segment": "MEA",
+      "required": false,
+      "description": "Measurements - Volume in cubic meters at line item level (SG21). At least one of volume, loading meters, or dimensions is required.",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "VOL",
+          "required": true,
+          "description": "Measurement purpose code qualifier — VOL = Volume"
+        },
+        "measurement_details": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "C502 Measurement details composite — Not used for VOL variant"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "MTQ",
+          "required": true,
+          "description": "Measurement unit code — MTQ = cubic metre (first sub-component of C174 Value/range)"
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "The measured value (volume quantity in cubic metres)"
+        }
+      }
+    },
+    {
+      "field": "MEA_WT",
+      "segment": "MEA",
+      "required": false,
+      "description": "Measurements - Net Weight in kilograms at line item level. Only required for customs declaration purposes.",
+      "subfields": {
+        "measurement_purpose_code_qualifier": {
+          "element_position": 1,
+          "pattern": "WT",
+          "required": true,
+          "description": "Measurement purpose code qualifier — WT = Weights"
+        },
+        "measured_attribute_code": {
+          "element_position": 2.1,
+          "pattern": "ADZ",
+          "required": true,
+          "description": "Measured attribute code — ADZ = Declared net weight (first sub-component of C502)"
+        },
+        "measurement_unit_code": {
+          "element_position": 3.1,
+          "pattern": "KGM",
+          "required": true,
+          "description": "Measurement unit code — KGM = kilogram (first sub-component of C174 Value/range)"
+        },
+        "measure": {
+          "element_position": 3.2,
+          "pattern": ".{1,18}",
+          "required": true,
+          "description": "The measured value (net weight in kilograms)"
+        }
+      }
+    },
+    {
+      "field": "MOA",
+      "segment": "MOA",
+      "required": false,
+      "description": "Monetary Amount — specifies monetary amounts related to the shipment, including cash on delivery, insurance, invoice amounts, and freight rates.",
+      "subfields": {
+        "monetary_amount_type_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "(22|67|77|ZFR)",
+          "required": true,
+          "description": "Monetary amount type code qualifier (C516/5025). 22=Consignment cash on delivery amount, 67=Insurance amount, 77=Invoice line item amount, ZFR=DSV specific FreightRate"
+        },
+        "monetary_amount": {
+          "element_position": 1.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Monetary amount value (C516/5004)"
+        },
+        "currency_identification_code": {
+          "element_position": 1.3,
+          "pattern": "[A-Z]{3}",
+          "required": false,
+          "description": "Currency identification code (C516/6345). ISO 4217 3 alpha code (e.g., SEK, DKK, EUR)"
+        },
+        "currency_type_code_qualifier": {
+          "element_position": 1.4,
+          "pattern": "",
+          "required": false,
+          "description": "Currency type code qualifier (C516/6343). Not used."
+        },
+        "status_description_code": {
+          "element_position": 1.5,
+          "pattern": "",
+          "required": false,
+          "description": "Status description code (C516/4405). Not used."
+        }
+      }
+    },
+    {
+      "field": "NAD",
+      "segment": "NAD",
+      "required": true,
+      "description": "Name and Address — identifies parties involved in the shipment by function (consignor, consignee, delivery party, etc.) with their identification and address details.",
+      "subfields": {
+        "party_function_code_qualifier": {
+          "element_position": 1,
+          "pattern": "(AG|AJ|CA|CN|CZ|DP|FP|NI|OY|PW|FW)",
+          "required": true,
+          "description": "Party function code qualifier. AG=Agent, AJ=Party issuing mutually agreed codes, CA=Carrier, CN=Consignee, CZ=Consignor, DP=Delivery party, FP=Freight/charges payer, NI=Notify party, OY=Ordering customer, PW=Despatch party, FW=Freight forwarder"
+        },
+        "party_identifier": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Customer number / reference (composite C082, sub-element 3039)"
+        },
+        "code_list_identification_code": {
+          "element_position": 2.2,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Code list identification code (composite C082, sub-element 1131) — Not used"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 2.3,
+          "pattern": "(9|87|91|Z87)",
+          "required": false,
+          "description": "Code list responsible agency code (composite C082, sub-element 3055). 87=Assigned by carrier, 91=Assigned by seller, 9=GS1, Z87=DSV specific unique party ID"
+        },
+        "party_name_1": {
+          "element_position": 4.1,
+          "pattern": ".{1,70}",
+          "required": true,
+          "description": "Party name — first occurrence (composite C080, sub-element 3036). DSV uses 35 characters in first and second occurrences."
+        },
+        "party_name_2": {
+          "element_position": 4.2,
+          "pattern": ".{0,70}",
+          "required": false,
+          "description": "Party name — second occurrence (composite C080, sub-element 3036)"
+        },
+        "party_name_3": {
+          "element_position": 4.3,
+          "pattern": ".{0,70}",
+          "required": false,
+          "description": "Party name — third occurrence (composite C080, sub-element 3036)"
+        },
+        "party_name_format_code": {
+          "element_position": 4.6,
+          "pattern": "(ZAO)?",
+          "required": false,
+          "description": "Party name format code (composite C080, sub-element 3045). ZAO=Address override"
+        },
+        "street_and_number_1": {
+          "element_position": 5.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Street name and number (composite C059, sub-element 3042, first occurrence). P.O. Box not acceptable for NAD+PW or NAD+DP."
+        },
+        "street_and_number_2": {
+          "element_position": 5.2,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Additional address info — gate or building (composite C059, sub-element 3042, second occurrence)"
+        },
+        "street_and_number_3": {
+          "element_position": 5.3,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Street and number or post office box identifier — third occurrence (composite C059, sub-element 3042)"
+        },
+        "city_name": {
+          "element_position": 6,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "City name (without postal code). Required for Road."
+        },
+        "country_subdivision_identifier": {
+          "element_position": 7.1,
+          "pattern": ".{0,9}",
+          "required": false,
+          "description": "Province or State (composite C819, sub-element 3229)"
+        },
+        "postal_identification_code": {
+          "element_position": 8,
+          "pattern": ".{0,17}",
+          "required": false,
+          "description": "Postal code (without country code)"
+        },
+        "country_identifier": {
+          "element_position": 9,
+          "pattern": "[A-Z]{2}",
+          "required": true,
+          "description": "Country code, ISO 3166 - Alpha 2 code. Required for Road."
+        }
+      }
+    },
+    {
+      "field": "PCI",
+      "segment": "PCI",
+      "required": false,
+      "description": "Package Identification at line item level (SG24). Supports marking instructions codes 17 (serial numbers), 18 (SSCC codes), and 24 (shipper assigned package marks).",
+      "subfields": {
+        "marking_instructions_code": {
+          "element_position": 1,
+          "pattern": "(17|18|24)",
+          "required": false,
+          "description": "Marking instructions code — 17=Seller's instructions (serial numbers), 18=Carrier's instructions (SSCC code), 24=Shipper assigned"
+        },
+        "shipping_marks_1": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (first occurrence). Used with qualifier 24 for package mark/IDs."
+        },
+        "shipping_marks_2": {
+          "element_position": 2.2,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (second occurrence)"
+        },
+        "shipping_marks_3": {
+          "element_position": 2.3,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (third occurrence)"
+        },
+        "shipping_marks_4": {
+          "element_position": 2.4,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (fourth occurrence)"
+        },
+        "shipping_marks_5": {
+          "element_position": 2.5,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (fifth occurrence)"
+        },
+        "shipping_marks_6": {
+          "element_position": 2.6,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (sixth occurrence)"
+        },
+        "shipping_marks_7": {
+          "element_position": 2.7,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (seventh occurrence)"
+        },
+        "shipping_marks_8": {
+          "element_position": 2.8,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (eighth occurrence)"
+        },
+        "shipping_marks_9": {
+          "element_position": 2.9,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (ninth occurrence)"
+        },
+        "shipping_marks_10": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Shipping marks description (tenth occurrence)"
+        }
+      }
+    },
+    {
+      "field": "PIA",
+      "segment": "PIA",
+      "required": false,
+      "description": "Additional Product ID — provides Harmonised System codes with optional country codes for customs purposes.",
+      "subfields": {
+        "product_identifier_code_qualifier": {
+          "element_position": 1,
+          "pattern": "5",
+          "required": true,
+          "description": "Product identifier code qualifier. 5=Product identification"
+        },
+        "item_identifier_1": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Item identifier — statistical number per Harmonised system (composite C212 first occurrence). For Road, if >8 chars a space must be inserted after position 8."
+        },
+        "item_type_identification_code_1": {
+          "element_position": 2.2,
+          "pattern": "HS",
+          "required": true,
+          "description": "Item type identification code (composite C212 first occurrence). HS=Harmonised system"
+        },
+        "code_list_identification_code_1": {
+          "element_position": 2.3,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Code list identification code — ISO 3166-1 alpha-2 country code (composite C212 first occurrence). Required for Air/Sea."
+        },
+        "code_list_responsible_agency_code_1": {
+          "element_position": 2.4,
+          "pattern": "5",
+          "required": false,
+          "description": "Code list responsible agency code (composite C212 first occurrence). 5=ISO"
+        },
+        "item_identifier_2": {
+          "element_position": 3.1,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Item identifier — second HS code (composite C212 second occurrence)"
+        },
+        "item_type_identification_code_2": {
+          "element_position": 3.2,
+          "pattern": "HS",
+          "required": false,
+          "description": "Item type identification code (composite C212 second occurrence). HS=Harmonised system"
+        },
+        "code_list_identification_code_2": {
+          "element_position": 3.3,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Code list identification code — ISO 3166-1 alpha-2 country code (composite C212 second occurrence)"
+        },
+        "code_list_responsible_agency_code_2": {
+          "element_position": 3.4,
+          "pattern": "5",
+          "required": false,
+          "description": "Code list responsible agency code (composite C212 second occurrence). 5=ISO"
+        },
+        "item_identifier_3": {
+          "element_position": 4.1,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Item identifier — third HS code (composite C212 third occurrence)"
+        },
+        "item_type_identification_code_3": {
+          "element_position": 4.2,
+          "pattern": "HS",
+          "required": false,
+          "description": "Item type identification code (composite C212 third occurrence)"
+        },
+        "code_list_identification_code_3": {
+          "element_position": 4.3,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Code list identification code (composite C212 third occurrence)"
+        },
+        "code_list_responsible_agency_code_3": {
+          "element_position": 4.4,
+          "pattern": "5",
+          "required": false,
+          "description": "Code list responsible agency code (composite C212 third occurrence). 5=ISO"
+        },
+        "item_identifier_4": {
+          "element_position": 5.1,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Item identifier — fourth HS code (composite C212 fourth occurrence)"
+        },
+        "item_type_identification_code_4": {
+          "element_position": 5.2,
+          "pattern": "HS",
+          "required": false,
+          "description": "Item type identification code (composite C212 fourth occurrence)"
+        },
+        "code_list_identification_code_4": {
+          "element_position": 5.3,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Code list identification code (composite C212 fourth occurrence)"
+        },
+        "code_list_responsible_agency_code_4": {
+          "element_position": 5.4,
+          "pattern": "5",
+          "required": false,
+          "description": "Code list responsible agency code (composite C212 fourth occurrence). 5=ISO"
+        },
+        "item_identifier_5": {
+          "element_position": 6.1,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Item identifier — fifth HS code (composite C212 fifth occurrence)"
+        },
+        "item_type_identification_code_5": {
+          "element_position": 6.2,
+          "pattern": "HS",
+          "required": false,
+          "description": "Item type identification code (composite C212 fifth occurrence)"
+        },
+        "code_list_identification_code_5": {
+          "element_position": 6.3,
+          "pattern": "[A-Z]{2}",
+          "required": false,
+          "description": "Code list identification code (composite C212 fifth occurrence)"
+        },
+        "code_list_responsible_agency_code_5": {
+          "element_position": 6.4,
+          "pattern": "5",
+          "required": false,
+          "description": "Code list responsible agency code (composite C212 fifth occurrence). 5=ISO"
+        }
+      }
+    },
+    {
+      "field": "RFF",
+      "segment": "RFF",
+      "required": true,
+      "description": "Reference — specifies reference numbers and identifiers for the shipment, including consignment numbers, order references, and various DSV-specific reference types.",
+      "subfields": {
+        "reference_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "(AG|AAM|AAO|AAS|AAU|AWM|BN|CG|CU|SRN|STS|ZAD|ZCP|ZCU|ZDO|ZIR|ZTF|ZHP|ZHT|ZMT|ZRM|ZSM|ZSR|ZUS|ZXX)",
+          "required": true,
+          "description": "Reference code qualifier (C506/1153). AG=Multiple Deliveries Discount ID, AAM=Waybill number, AAO=Consignment identifier consignee assigned, AAS=Transport contract document identifier, AAU=Despatch note document identifier, AWM=Service category reference, BN=Consignment identifier carrier assigned, CG=Consignee's order number, CU=Consignment identifier consignor assigned (mandatory for Track&Trace), SRN=Shipment reference number (GS1, 17 chars), STS=StatusText, ZAD=On sight authorization code, ZCP=CLPartnerCode, ZCU=OrderReference, ZDO=DSV ESBDomain, ZIR=InterimReceiptNo, ZTF=Traffic from assigned by Partner, ZHP=AllowHomePortDefaulting, ZHT=HouseBillType, ZMT=DSV specific for Method, ZRM=Receiver Mailbox for Dinas, ZSM=Sender Mailbox for Dinas, ZSR=ShipperReference, ZUS=AllowUpdateShipmentFromBooking, ZXX=Unidentified Reference"
+        },
+        "reference_identifier": {
+          "element_position": 1.2,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Reference identifier (C506/1154). The actual reference number value."
+        },
+        "document_line_identifier": {
+          "element_position": 1.3,
+          "pattern": ".{1,6}",
+          "required": false,
+          "description": "Document line identifier (C506/1156). Only used when RFF C506/1153 = STS."
+        },
+        "version_identifier": {
+          "element_position": 1.4,
+          "pattern": "",
+          "required": false,
+          "description": "Version identifier (C506/1056). Not used."
+        },
+        "revision_identifier": {
+          "element_position": 1.5,
+          "pattern": "",
+          "required": false,
+          "description": "Revision identifier (C506/1060). Not used."
+        }
+      }
+    },
+    {
+      "field": "RFF_AVM",
+      "segment": "RFF",
+      "required": false,
+      "description": "Reference - Goods Item Information. Reference segment at line item level (SG23) for goods item information.",
+      "subfields": {
+        "reference_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "AVM",
+          "required": true,
+          "description": "Reference code qualifier — AVM = Goods item information (first sub-component of C506)"
+        },
+        "reference_identifier": {
+          "element_position": 1.2,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Reference identifier value"
+        }
+      }
+    },
+    {
+      "field": "RFF_PK",
+      "segment": "RFF",
+      "required": false,
+      "description": "Reference - Packing List Number. Reference segment at line item level (SG23) for packing list number.",
+      "subfields": {
+        "reference_code_qualifier": {
+          "element_position": 1.1,
+          "pattern": "PK",
+          "required": true,
+          "description": "Reference code qualifier — PK = Packing list number (first sub-component of C506)"
+        },
+        "reference_identifier": {
+          "element_position": 1.2,
+          "pattern": ".{1,70}",
+          "required": false,
+          "description": "Packing list number identifier"
+        }
+      }
+    },
+    {
+      "field": "RNG",
+      "segment": "RNG",
+      "required": false,
+      "description": "Range Details — Specifies temperature range details for goods items requiring temperature control.",
+      "subfields": {
+        "range_type_code_qualifier": {
+          "element_position": 1,
+          "pattern": "1",
+          "required": true,
+          "description": "Range type code qualifier. 1=Allowance range"
+        },
+        "measurement_unit_code": {
+          "element_position": 2.1,
+          "pattern": "CEL",
+          "required": true,
+          "description": "Measurement unit code (composite C280, sub-element 6411). CEL=degree Celsius. Only Celsius is used, not Fahrenheit."
+        },
+        "range_minimum_quantity": {
+          "element_position": 2.2,
+          "pattern": "-?\\d{1,18}",
+          "required": false,
+          "description": "Minimum temperature (composite C280, sub-element 6162)"
+        },
+        "range_maximum_quantity": {
+          "element_position": 2.3,
+          "pattern": "-?\\d{1,18}",
+          "required": false,
+          "description": "Maximum temperature (composite C280, sub-element 6152)"
+        }
+      }
+    },
+    {
+      "field": "SEL",
+      "segment": "SEL",
+      "required": false,
+      "description": "Seal Number — Specifies seal numbers applied to transport equipment (containers).",
+      "subfields": {
+        "transport_unit_seal_identifier": {
+          "element_position": 1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Transport unit seal identifier — the seal number"
+        },
+        "sealing_party_name_code": {
+          "element_position": 2.1,
+          "pattern": "SH",
+          "required": false,
+          "description": "Sealing party name code (composite C215, first sub-component). SH = Shipper"
+        },
+        "seal_code_list_id": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code — Not used"
+        },
+        "seal_agency_code": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code — Not used"
+        },
+        "sealing_party_name": {
+          "element_position": 2.4,
+          "pattern": "",
+          "required": false,
+          "description": "Sealing party name — Not used"
+        },
+        "seal_condition_code": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "Seal condition code — Not used"
+        },
+        "object_identifier_1": {
+          "element_position": 4.1,
+          "pattern": "",
+          "required": false,
+          "description": "Object identifier (composite C208, first sub-component) — Not used"
+        },
+        "object_identifier_2": {
+          "element_position": 4.2,
+          "pattern": "",
+          "required": false,
+          "description": "Object identifier (composite C208, second sub-component) — Not used"
+        },
+        "seal_type_code": {
+          "element_position": 5,
+          "pattern": "",
+          "required": false,
+          "description": "Seal type code — Not used"
+        }
+      }
+    },
+    {
+      "field": "SGP",
+      "segment": "SGP",
+      "required": false,
+      "description": "Split Goods Placement — Identifies masterpallet ID (Road) or container ID (Sea) the GID items are related to.",
+      "subfields": {
+        "equipment_identifier": {
+          "element_position": 1.1,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Equipment identifier — masterpallet ID (Road) or container ID (Sea). First sub-component of C237."
+        }
+      }
+    },
+    {
+      "field": "TCC",
+      "segment": "TCC",
+      "required": true,
+      "description": "Charge/Rate Calculations — Specifies charge and rate/tariff calculation details. Internal DSV use only.",
+      "subfields": {
+        "freight_and_other_charges_description_identifier": {
+          "element_position": 1.1,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Freight and other charges description identifier. Code values to be provided by local CargoLink country."
+        },
+        "code_list_identification_code_1": {
+          "element_position": 1.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code (not used)"
+        },
+        "code_list_responsible_agency_code_1": {
+          "element_position": 1.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code (not used)"
+        },
+        "freight_and_other_charges_description": {
+          "element_position": 1.4,
+          "pattern": ".{1,26}",
+          "required": false,
+          "description": "Freight and other charges description (future use)"
+        },
+        "payment_arrangement_code": {
+          "element_position": 1.5,
+          "pattern": "(ZCN|ZCZ|ZDP|ZPW)",
+          "required": false,
+          "description": "Payment arrangement code indicating which party pays. ZCN=Consignee, ZCZ=Consignor, ZDP=Delivery party, ZPW=Pickup party. Not used for Air or Courier."
+        },
+        "item_identifier": {
+          "element_position": 1.6,
+          "pattern": "",
+          "required": false,
+          "description": "Item identifier (not used)"
+        },
+        "rate_or_tariff_class_description_code": {
+          "element_position": 2.1,
+          "pattern": "ZAC",
+          "required": false,
+          "description": "Rate or tariff class description code. ZAC=Agreement Code"
+        },
+        "code_list_identification_code_2": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code for rate/tariff (not used)"
+        },
+        "code_list_responsible_agency_code_2": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code for rate/tariff (not used)"
+        },
+        "rate_or_tariff_class_description": {
+          "element_position": 2.4,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Rate or tariff class description text"
+        },
+        "commodity_rate_detail": {
+          "element_position": 3,
+          "pattern": "",
+          "required": false,
+          "description": "Commodity/rate detail composite (not used)"
+        },
+        "rate_tariff_class_detail": {
+          "element_position": 4,
+          "pattern": "",
+          "required": false,
+          "description": "Rate/tariff class detail composite (not used)"
+        }
+      }
+    },
+    {
+      "field": "TDT",
+      "segment": "TDT",
+      "required": false,
+      "description": "Transport Information — Specifies transport stage details including mode of transport and carrier identification. Used with TSR to determine product/service.",
+      "subfields": {
+        "transport_stage_code_qualifier": {
+          "element_position": 1,
+          "pattern": ".{1,3}",
+          "required": true,
+          "description": "Transport stage code qualifier — typically 20 = Main carriage transport"
+        },
+        "means_of_transport_journey_identifier": {
+          "element_position": 2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Means of transport journey identifier (e.g., voyage/flight number)"
+        },
+        "mode_of_transport_code": {
+          "element_position": 3.1,
+          "pattern": "(3|4|5)",
+          "required": false,
+          "description": "Mode of transport code — 3 = Road, 4 = Air, 5 = Sea (also used for Courier combinations)"
+        },
+        "carrier_identifier": {
+          "element_position": 5.1,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Carrier identification"
+        },
+        "code_list_identification_code": {
+          "element_position": 5.2,
+          "pattern": ".{1,17}",
+          "required": false,
+          "description": "Code list identification code for carrier"
+        },
+        "code_list_responsible_agency_code": {
+          "element_position": 5.3,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Code list responsible agency code for carrier"
+        },
+        "carrier_name": {
+          "element_position": 5.4,
+          "pattern": ".{1,35}",
+          "required": false,
+          "description": "Carrier name"
+        },
+        "transit_direction_indicator_code": {
+          "element_position": 6,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Transit direction indicator code"
+        },
+        "excess_transportation_reason_code": {
+          "element_position": 7.1,
+          "pattern": ".{1,3}",
+          "required": false,
+          "description": "Excess transportation reason code"
+        },
+        "transport_means_description_code": {
+          "element_position": 8.1,
+          "pattern": ".{1,8}",
+          "required": false,
+          "description": "Transport means description code"
+        }
+      }
+    },
+    {
+      "field": "TMD",
+      "segment": "TMD",
+      "required": false,
+      "description": "Transport Movement Details — Specifies transport movement type details, primarily for container stuffing/stripping arrangements (LCL/FCL) and door-to-door service types.",
+      "subfields": {
+        "movement_type_description_code": {
+          "element_position": 1.1,
+          "pattern": "(2|3|4|5|11|12|13|19|21|22|23|31|32|33)",
+          "required": false,
+          "description": "Movement type description code. 2=LCL/LCL, 3=FCL/FCL, 4=FCL/LCL, 5=LCL/FCL, 11=House to house, 12=House to terminal, 13=House to pier, 19=Consignee transportation provided, 21=Terminal to house, 22=Terminal to terminal, 23=Terminal to pier, 31=Pier to house, 32=Pier to terminal, 33=Pier to pier"
+        },
+        "movement_type_description": {
+          "element_position": 1.2,
+          "pattern": ".{0,35}",
+          "required": false,
+          "description": "Movement type description — free text (e.g., 'LCL/LCL')"
+        },
+        "equipment_plan_description": {
+          "element_position": 1.3,
+          "pattern": "",
+          "required": false,
+          "description": "Equipment plan description — Not used"
+        },
+        "haulage_arrangements_code": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Haulage arrangements code — Not used"
+        }
+      }
+    },
+    {
+      "field": "UNB",
+      "segment": "UNB",
+      "required": true,
+      "description": "Interchange Header — identifies the interchange sender, recipient, and preparation date/time",
+      "subfields": {
+        "syntax_identifier": {
+          "element_position": 1.1,
+          "pattern": "UNOC",
+          "required": true,
+          "description": "Syntax identifier — UNOC means uppercase and lowercase characters A-Z, a-z, including western European special characters"
+        },
+        "syntax_version_number": {
+          "element_position": 1.2,
+          "pattern": "4",
+          "required": true,
+          "description": "Syntax version number — 4 = Version 4"
+        },
+        "interchange_sender_identification": {
+          "element_position": 2.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Sender identification"
+        },
+        "sender_identification_code_qualifier": {
+          "element_position": 2.2,
+          "pattern": "(14|ZZ)",
+          "required": false,
+          "description": "Identification code qualifier — 14 = GS1, ZZ = Mutually defined"
+        },
+        "interchange_recipient_identification": {
+          "element_position": 3.1,
+          "pattern": ".{1,35}",
+          "required": true,
+          "description": "Interchange recipient identification — DSV recipient ID is 5790000110018"
+        },
+        "recipient_identification_code_qualifier": {
+          "element_position": 3.2,
+          "pattern": "14",
+          "required": true,
+          "description": "Identification code qualifier — 14 = GS1"
+        },
+        "date_of_preparation": {
+          "element_position": 4.1,
+          "pattern": "\\d{8}",
+          "required": true,
+          "description": "Date of preparation in format CCYYMMDD"
+        },
+        "time_of_preparation": {
+          "element_position": 4.2,
+          "pattern": "\\d{4}",
+          "required": true,
+          "description": "Time of preparation in format HHMM"
+        },
+        "interchange_control_reference": {
+          "element_position": 5,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Interchange control reference — unique reference for the interchange"
+        },
+        "test_indicator": {
+          "element_position": 11,
+          "pattern": "1",
+          "required": false,
+          "description": "Test indicator — 1 = Interchange is a test"
+        }
+      }
+    },
+    {
+      "field": "UNH",
+      "segment": "UNH",
+      "required": true,
+      "description": "Message Header — identifies the beginning of a message with reference number and message type",
+      "subfields": {
+        "message_reference_number": {
+          "element_position": 1,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Unique message reference number"
+        },
+        "message_type": {
+          "element_position": 2.1,
+          "pattern": "IFTMIN",
+          "required": true,
+          "description": "Message type — IFTMIN = Instruction message"
+        },
+        "message_version_number": {
+          "element_position": 2.2,
+          "pattern": "D",
+          "required": true,
+          "description": "Message version number — D = Draft version/UN/EDIFACT Directory"
+        },
+        "message_release_number": {
+          "element_position": 2.3,
+          "pattern": "10B",
+          "required": true,
+          "description": "Message release number — 10B = Release 2010 - B"
+        },
+        "controlling_agency": {
+          "element_position": 2.4,
+          "pattern": "UN",
+          "required": true,
+          "description": "Controlling agency — UN = UN/CEFACT"
+        },
+        "association_assigned_code": {
+          "element_position": 2.5,
+          "pattern": ".{1,6}",
+          "required": false,
+          "description": "Association assigned code"
+        }
+      }
+    },
+    {
+      "field": "TSR",
+      "segment": "TSR",
+      "required": false,
+      "description": "Transport Service Requirements — specifies insurance services and additional service codes",
+      "subfields": {
+        "contract_and_carriage_condition_code": {
+          "element_position": 1.1,
+          "pattern": "",
+          "required": false,
+          "description": "Contract and carriage condition code (C536/4065). Not used in standard implementation."
+        },
+        "contract_and_carriage_condition_code_list": {
+          "element_position": 1.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code (C536/1131). Not used."
+        },
+        "contract_and_carriage_condition_agency": {
+          "element_position": 1.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code (C536/3055). Not used."
+        },
+        "service_requirement_code_1": {
+          "element_position": 2.1,
+          "pattern": "(29|R[0-9]{2})",
+          "required": true,
+          "description": "Service requirement code (C233/7273). 29=Insure goods during transport, R01-R52=Road Booking additional services"
+        },
+        "service_requirement_code_1_code_list": {
+          "element_position": 2.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code (C233/1131). Not used."
+        },
+        "service_requirement_code_1_agency": {
+          "element_position": 2.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code (C233/3055). Not used."
+        },
+        "service_requirement_code_2": {
+          "element_position": 2.4,
+          "pattern": "",
+          "required": false,
+          "description": "Second service requirement code (C233/7273). Not used."
+        },
+        "service_requirement_code_2_code_list": {
+          "element_position": 2.5,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code for second service requirement (C233/1131). Not used."
+        },
+        "service_requirement_code_2_agency": {
+          "element_position": 2.6,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code for second service requirement (C233/3055). Not used."
+        },
+        "transport_service_priority_code": {
+          "element_position": 3.1,
+          "pattern": "",
+          "required": false,
+          "description": "Transport service priority code (C537/4219). Not used."
+        },
+        "transport_priority_code_list": {
+          "element_position": 3.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code (C537/1131). Not used."
+        },
+        "transport_priority_agency": {
+          "element_position": 3.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code (C537/3055). Not used."
+        },
+        "cargo_type_classification_code": {
+          "element_position": 4.1,
+          "pattern": "(Z[1-5])",
+          "required": false,
+          "description": "Cargo type classification code (C703/7085). Required when service code=29. Z1=Ordinary new commercial goods, Z2=Used trading goods, Z3=High Risk goods, Z4=Fragile goods, Z5=Household goods and motor vehicles."
+        },
+        "cargo_type_code_list": {
+          "element_position": 4.2,
+          "pattern": "",
+          "required": false,
+          "description": "Code list identification code (C703/1131). Not used."
+        },
+        "cargo_type_agency": {
+          "element_position": 4.3,
+          "pattern": "87",
+          "required": false,
+          "description": "Code list responsible agency code (C703/3055). Required for TSR++29. 87 = Assigned by carrier."
+        }
+      }
+    },
+    {
+      "field": "TOD",
+      "segment": "TOD",
+      "required": false,
+      "description": "Terms of Delivery or Transport — specifies Incoterms and Combiterms",
+      "subfields": {
+        "delivery_or_transport_terms_function_code": {
+          "element_position": 1,
+          "pattern": "6",
+          "required": false,
+          "description": "Delivery or transport terms function code (4055). 6=Delivery condition."
+        },
+        "transport_charges_payment_method_code": {
+          "element_position": 2,
+          "pattern": "",
+          "required": false,
+          "description": "Transport charges payment method code (4215). Not used."
+        },
+        "delivery_or_transport_terms_description_code": {
+          "element_position": 3.1,
+          "pattern": "(CFR|CIF|CIP|CPT|DAP|DDP|DPU|EXW|FAS|FCA|FOB|[0-9]{3})",
+          "required": false,
+          "description": "Delivery or transport terms description code (C100/4053). Incoterm code or numeric Combiterm code."
+        },
+        "delivery_terms_code_list": {
+          "element_position": 3.2,
+          "pattern": "(ZCT)?",
+          "required": false,
+          "description": "Code list identification code (C100/1131). Leave blank for Incoterms. Use ZCT for Combiterms."
+        },
+        "delivery_terms_agency": {
+          "element_position": 3.3,
+          "pattern": "",
+          "required": false,
+          "description": "Code list responsible agency code (C100/3055). Not used."
+        },
+        "delivery_terms_description_1": {
+          "element_position": 3.4,
+          "pattern": "",
+          "required": false,
+          "description": "Delivery or transport terms description (C100/4052). Not used."
+        },
+        "delivery_terms_description_2": {
+          "element_position": 3.5,
+          "pattern": "",
+          "required": false,
+          "description": "Delivery or transport terms description 2 (C100/4052). Not used."
+        }
+      }
+    },
+    {
+      "field": "TMP",
+      "segment": "TMP",
+      "required": false,
+      "description": "Temperature — specifies temperature requirements for transport equipment (e.g., reefer containers)",
+      "subfields": {
+        "temperature_type_code_qualifier": {
+          "element_position": 1,
+          "pattern": "\\d{1,3}",
+          "required": true,
+          "description": "Temperature type code qualifier"
+        },
+        "temperature_degree": {
+          "element_position": 2.1,
+          "pattern": "-?\\d{1,15}",
+          "required": false,
+          "description": "Temperature degree (composite C239, first sub-component). The temperature setting value."
+        },
+        "measurement_unit_code": {
+          "element_position": 2.2,
+          "pattern": "CEL",
+          "required": false,
+          "description": "Measurement unit code (composite C239, second sub-component). CEL = degree Celsius"
+        }
+      }
+    },
+    {
+      "field": "UNT",
+      "segment": "UNT",
+      "required": true,
+      "description": "Message Trailer — identifies the end of the message and provides segment count",
+      "subfields": {
+        "number_of_segments": {
+          "element_position": 1,
+          "pattern": "\\d{1,10}",
+          "required": true,
+          "description": "Number of segments in a message, including UNH and UNT"
+        },
+        "message_reference_number": {
+          "element_position": 2,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Message reference number — must match the reference in UNH"
+        }
+      }
+    },
+    {
+      "field": "UNZ",
+      "segment": "UNZ",
+      "required": true,
+      "description": "Interchange Trailer — identifies the end of the interchange and provides message count",
+      "subfields": {
+        "interchange_control_count": {
+          "element_position": 1,
+          "pattern": "\\d{1,6}",
+          "required": true,
+          "description": "Number of messages in the interchange"
+        },
+        "interchange_control_reference": {
+          "element_position": 2,
+          "pattern": ".{1,14}",
+          "required": true,
+          "description": "Interchange control reference — must match the reference in UNB"
+        }
+      }
+    }
+  ],
+  "formatted_rules": {
+    "required_segments": [
+      "UNB",
+      "UNH",
+      "BGM",
+      "UNT",
+      "UNZ",
+      "DTM",
+      "NAD",
+      "EQD",
+      "CNT",
+      "GID",
+      "MEA",
+      "RFF",
+      "TCC"
+    ],
+    "segment_order": [
+      "UNB",
+      "UNH",
+      "BGM",
+      "DTM",
+      "LOC",
+      "GOR",
+      "NAD",
+      "GID",
+      "HAN",
+      "MEA",
+      "MEA_CT_SQ",
+      "MEA_CT_ZOT",
+      "PCI",
+      "GIN",
+      "DGS",
+      "CNT",
+      "UNT",
+      "UNZ"
+    ],
+    "required_fields": [
+      "BGM",
+      "DTM",
+      "NAD",
+      "EQD",
+      "GID",
+      "MEA",
+      "RFF",
+      "TCC",
+      "UNB",
+      "UNH",
+      "UNT",
+      "UNZ"
+    ],
+    "delimiter_rules": {
+      "segment_delimiter": "'",
+      "element_delimiter": "+",
+      "sub_element_delimiter": ":"
+    },
+    "format_type": "edifact",
+    "field_formats": {
+      "BGM": {
+        "segment": "BGM",
+        "required": true,
+        "description": "Beginning of Message — identifies the beginning of the message and its type. Specifies document type, identifier and message function.",
+        "subfields": {
+          "document_name_code": {
+            "element_position": 1,
+            "sub_element_position": 1,
+            "pattern": "(335|610|ZEB|ZBJ)",
+            "required": true,
+            "description": "Document name code — 335 = Pre booking (Air/Sea), 610 = Forwarding instructions, ZEB = ExternalBookingRequest, ZBJ = BrokerageJob"
+          },
+          "document_identifier": {
+            "element_position": 2,
+            "sub_element_position": 1,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Waybill number or another reference to the message. Must be unique for at least 1 year. Required on all messages."
+          },
+          "message_function_code": {
+            "element_position": 3,
+            "sub_element_position": null,
+            "pattern": "(1|5|9)",
+            "required": false,
+            "description": "Message function — 1 = Cancellation, 5 = Replace, 9 = Original. For Air/Sea only code 9 is used."
+          }
+        }
+      },
+      "CNT": {
+        "segment": "CNT",
+        "required": false,
+        "description": "Control Total — specifies control totals for the shipment including gross weight, package quantity, volume, loading metres, and pallet spaces. Can occur up to 9 times.",
+        "subfields": {
+          "control_total_type_code_qualifier": {
+            "element_position": 1,
+            "sub_element_position": 1,
+            "pattern": "(7|11|15|19|57)",
+            "required": true,
+            "description": "Control total type code qualifier — 7=Total gross weight, 11=Consignment package quantity, 15=Total consignment cube (volume), 19=Total reported quantity in supplementary units (pallet spaces), 57=Total loading metres"
+          },
+          "control_total_quantity": {
+            "element_position": 1,
+            "sub_element_position": 2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "Control total quantity value — numeric value for weight, package count, volume, loading metres, or pallet spaces"
+          },
+          "measurement_unit_code": {
+            "element_position": 1,
+            "sub_element_position": 3,
+            "pattern": ".{1,8}",
+            "required": false,
+            "description": "Measurement unit code — For qualifier 7 use KGM; for qualifier 11 use package type codes (EUR, PL, PCE, etc.); for qualifier 15 use MTQ; for qualifier 19 use PLL, HLP, or KPL; for qualifier 57 use MTR"
+          }
+        }
+      },
+      "COM": {
+        "segment": "COM",
+        "required": false,
+        "description": "Communication Contact — provides communication contact details (phone, email, fax) for a party contact. Can occur up to 9 times per CTA.",
+        "subfields": {
+          "communication_address_identifier": {
+            "element_position": 1,
+            "sub_element_position": 1,
+            "pattern": ".{1,512}",
+            "required": true,
+            "description": "Communication address identifier — phone number, email address, fax number, etc."
+          },
+          "communication_means_type_code": {
+            "element_position": 1,
+            "sub_element_position": 2,
+            "pattern": "(AL|EM|FX|TE)",
+            "required": true,
+            "description": "Communication means type code — AL=Cellular phone, EM=Electronic mail, FX=Telefax, TE=Telephone"
+          }
+        }
+      },
+      "CPI": {
+        "segment": "CPI",
+        "required": false,
+        "description": "Charge Payment Instructions — specifies charge payment instructions including who pays for the transport charges. Used within SG6 (up to 9 occurrences).",
+        "subfields": {
+          "charge_category_code": {
+            "element_position": 1,
+            "sub_element_position": 1,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Charge category code"
+          },
+          "code_list_identification_code": {
+            "element_position": 1,
+            "sub_element_position": 2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 1,
+            "sub_element_position": 3,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Code list responsible agency code"
+          },
+          "transport_charges_payment_method_code": {
+            "element_position": 2,
+            "sub_element_position": null,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Transport charges payment method code (e.g., prepaid, collect)"
+          },
+          "payment_arrangement_code": {
+            "element_position": 3,
+            "sub_element_position": null,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Payment arrangement code"
+          }
+        }
+      },
+      "CTA": {
+        "segment": "CTA",
+        "required": false,
+        "description": "Contact Information — identifies the contact person associated with a party (NAD). Mandatory if COM segment is present.",
+        "subfields": {
+          "contact_function_code": {
+            "element_position": 1,
+            "sub_element_position": null,
+            "pattern": "IC",
+            "required": false,
+            "description": "Contact function code — IC=Information contact"
+          },
+          "contact_identifier": {
+            "element_position": 2,
+            "sub_element_position": 1,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Contact identifier — Not used"
+          },
+          "contact_name": {
+            "element_position": 2,
+            "sub_element_position": 2,
+            "pattern": ".{0,256}",
+            "required": false,
+            "description": "Contact name"
+          }
+        }
+      },
+      "DGS": {
+        "segment": "DGS",
+        "required": false,
+        "description": "Dangerous Goods — at line item level (SG33). Required for dangerous goods services. If dangerous goods present but no detailed information available, text 'HAZARD' needs to be used.",
+        "subfields": {
+          "dangerous_goods_regulations_code": {
+            "element_position": 1,
+            "sub_element_position": null,
+            "pattern": "(ADR|IMD)",
+            "required": false,
+            "description": "Dangerous goods regulations code — ADR = European agreement for road, IMD = IMO IMDG code"
+          },
+          "hazard_identification_code": {
+            "element_position": 2,
+            "sub_element_position": 1,
+            "pattern": ".{1,7}",
+            "required": false,
+            "description": "Hazard identification code. Text 'HAZARD' should be entered if structured information is not available."
+          },
+          "additional_hazard_classification_identifier": {
+            "element_position": 2,
+            "sub_element_position": 2,
+            "pattern": ".{1,7}",
+            "required": false,
+            "description": "Additional hazard classification identifier"
+          },
+          "hazard_code_version_identifier": {
+            "element_position": 2,
+            "sub_element_position": 3,
+            "pattern": ".{1,10}",
+            "required": false,
+            "description": "Hazard code version identifier. For Road, three Sub-Risk values separated by '+' using escape character"
+          },
+          "undg_identifier": {
+            "element_position": 3,
+            "sub_element_position": 1,
+            "pattern": "\\d{1,4}",
+            "required": false,
+            "description": "United Nations Dangerous Goods (UNDG) identifier"
+          },
+          "dangerous_goods_flashpoint_description": {
+            "element_position": 3,
+            "sub_element_position": 2,
+            "pattern": ".{1,8}",
+            "required": false,
+            "description": "Dangerous goods flashpoint description. Road TMS only caters for 4 characters."
+          },
+          "shipment_flashpoint_degree": {
+            "element_position": 4,
+            "sub_element_position": 1,
+            "pattern": ".{1,10}",
+            "required": false,
+            "description": "Shipment flashpoint degree. Road TMS only caters for 4 characters."
+          },
+          "flashpoint_measurement_unit_code": {
+            "element_position": 4,
+            "sub_element_position": 2,
+            "pattern": ".{1,8}",
+            "required": false,
+            "description": "Measurement unit code for flashpoint (e.g. CEL for Celsius)"
+          },
+          "packaging_danger_level_code": {
+            "element_position": 5,
+            "sub_element_position": null,
+            "pattern": "[123]",
+            "required": false,
+            "description": "Packaging danger level code — 1 = Great danger, 2 = Medium danger, 3 = Minor danger"
+          },
+          "emergency_procedure_for_ships_identifier": {
+            "element_position": 6,
+            "sub_element_position": null,
+            "pattern": ".{1,6}",
+            "required": false,
+            "description": "Emergency procedure for ships identifier"
+          },
+          "hazard_medical_first_aid_guide_identifier": {
+            "element_position": 7,
+            "sub_element_position": null,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Hazard medical first aid guide identifier"
+          },
+          "transport_emergency_card_identifier": {
+            "element_position": 8,
+            "sub_element_position": null,
+            "pattern": ".{1,10}",
+            "required": false,
+            "description": "Transport emergency card identifier"
+          },
+          "orange_hazard_placard_upper_part_identifier": {
+            "element_position": 9,
+            "sub_element_position": 1,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Orange hazard placard upper part identifier"
+          },
+          "orange_hazard_placard_lower_part_identifier": {
+            "element_position": 9,
+            "sub_element_position": 2,
+            "pattern": ".{4}",
+            "required": false,
+            "description": "Orange hazard placard lower part identifier"
+          },
+          "dangerous_goods_marking_identifier_1": {
+            "element_position": 10,
+            "sub_element_position": 1,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Dangerous goods marking identifier (first)"
+          },
+          "dangerous_goods_marking_identifier_2": {
+            "element_position": 10,
+            "sub_element_position": 2,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Dangerous goods marking identifier (second)"
+          },
+          "dangerous_goods_marking_identifier_3": {
+            "element_position": 10,
+            "sub_element_position": 3,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Dangerous goods marking identifier (third)"
+          },
+          "dangerous_goods_marking_identifier_4": {
+            "element_position": 10,
+            "sub_element_position": 4,
+            "pattern": ".{1,4}",
+            "required": false,
+            "description": "Dangerous goods marking identifier (fourth, added by DSV spec)"
+          },
+          "packing_instruction_type_code": {
+            "element_position": 11,
+            "sub_element_position": null,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Packing instruction type code"
+          },
+          "transport_means_description_code": {
+            "element_position": 12,
+            "sub_element_position": null,
+            "pattern": ".{1,8}",
+            "required": false,
+            "description": "Transport means description code. Use 'LQ' for limited quantity (Road)."
+          },
+          "hazardous_cargo_transport_authorisation_code": {
+            "element_position": 13,
+            "sub_element_position": null,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Hazardous cargo transport authorisation code"
+          },
+          "tunnel_restriction_code": {
+            "element_position": 14,
+            "sub_element_position": 1,
+            "pattern": ".{1,6}",
+            "required": false,
+            "description": "Tunnel Restriction Code"
+          }
+        }
+      },
+      "DIM": {
+        "segment": "DIM",
+        "required": false,
+        "description": "Dimensions — length, width, height at line item level (SG22). Part of the alternative measurement requirement alongside volume and loading meters.",
+        "subfields": {
+          "dimension_type_code_qualifier": {
+            "element_position": 1,
+            "sub_element_position": null,
+            "pattern": "1",
+            "required": true,
+            "description": "Dimension type code qualifier — 1 = Gross dimensions"
+          },
+          "measurement_unit_code": {
+            "element_position": 2,
+            "sub_element_position": 1,
+            "pattern": "(CMT|MTR)",
+            "required": true,
+            "description": "Measurement unit code — CMT = centimetre, MTR = metre. For Road, dimensions must be in MTR."
+          },
+          "length_measure": {
+            "element_position": 2,
+            "sub_element_position": 2,
+            "pattern": ".{1,15}",
+            "required": true,
+            "description": "Length measure"
+          },
+          "width_measure": {
+            "element_position": 2,
+            "sub_element_position": 3,
+            "pattern": ".{1,15}",
+            "required": true,
+            "description": "Width measure"
+          },
+          "height_measure": {
+            "element_position": 2,
+            "sub_element_position": 4,
+            "pattern": ".{1,15}",
+            "required": true,
+            "description": "Height measure"
+          }
+        }
+      },
+      "DOC": {
+        "segment": "DOC",
+        "required": false,
+        "description": "Document Message Details — specifies document or message details, particularly for sea transport documentation types. Can occur up to 9 times.",
+        "subfields": {
+          "document_name_code": {
+            "element_position": 1,
+            "sub_element_position": 1,
+            "pattern": "(706|712|710|NON)",
+            "required": false,
+            "description": "Document name code — 706=Bill of lading original, 712=Non-negotiable maritime transport document, 710=Sea waybill, NON=Non-controlled shipment"
+          },
+          "document_name_code_list": {
+            "element_position": 1,
+            "sub_element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code — Not used"
+          },
+          "document_name_agency": {
+            "element_position": 1,
+            "sub_element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code — Not used"
+          },
+          "document_name": {
+            "element_position": 1,
+            "sub_element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Document name — Not used"
+          },
+          "document_identifier": {
+            "element_position": 2,
+            "sub_element_position": 1,
+            "pattern": "",
+            "required": false,
+            "description": "Document identifier — Not used"
+          },
+          "document_status_code": {
+            "element_position": 2,
+            "sub_element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Document status code — Not used"
+          },
+          "document_source_description": {
+            "element_position": 2,
+            "sub_element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "Document source description — Not used"
+          },
+          "language_name_code": {
+            "element_position": 2,
+            "sub_element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Language name code — Not used"
+          },
+          "version_identifier": {
+            "element_position": 2,
+            "sub_element_position": 5,
+            "pattern": "",
+            "required": false,
+            "description": "Version identifier — Not used"
+          },
+          "revision_identifier": {
+            "element_position": 2,
+            "sub_element_position": 6,
+            "pattern": "",
+            "required": false,
+            "description": "Revision identifier — Not used"
+          },
+          "communication_medium_type_code": {
+            "element_position": 3,
+            "sub_element_position": null,
+            "pattern": "",
+            "required": false,
+            "description": "Communication medium type code — Not used"
+          },
+          "document_copies_required_quantity": {
+            "element_position": 4,
+            "sub_element_position": null,
+            "pattern": "\\d{1,2}",
+            "required": false,
+            "description": "Document copies required quantity — number of document copies needed"
+          },
+          "document_originals_required_quantity": {
+            "element_position": 5,
+            "sub_element_position": null,
+            "pattern": "\\d{1,2}",
+            "required": false,
+            "description": "Document originals required quantity — number of original documents needed"
+          }
+        }
+      },
+      "DTM": {
+        "segment": "DTM",
+        "required": true,
+        "description": "Date/Time/Period — specifies date/time/period information including delivery date, document issue date, collection date, and transport dates. At least one DTM with qualifier 137 is mandatory.",
+        "subfields": {
+          "date_time_period_function_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "(2|137|234|132|133|171|189|232)",
+            "required": true,
+            "description": "Date/time/period function code qualifier — 2=Delivery date/time requested, 137=Document issue date time, 234=Collection date/time earliest, 132=Transport means arrival estimated, 133=Transport means departure estimated, 171=Reference date/time, 189=Transport means departure scheduled, 232=Transport means arrival scheduled"
+          },
+          "date_time_period_text": {
+            "element_position": 1.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Date or time or period value in the format specified by element 1.3"
+          },
+          "date_time_period_format_code": {
+            "element_position": 1.3,
+            "pattern": "(102|203|719)",
+            "required": false,
+            "description": "Date/time/period format code — 102=CCYYMMDD, 203=CCYYMMDDHHMM, 719=CCYYMMDDHHMM-CCYYMMDDHHMM"
+          }
+        }
+      },
+      "EQD": {
+        "segment": "EQD",
+        "required": true,
+        "description": "Equipment Details — identifies equipment used for transport, primarily containers for sea shipments and exchangeable EUR flat pallets.",
+        "subfields": {
+          "equipment_type_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(CN|EFP)",
+            "required": true,
+            "description": "Equipment type code qualifier. CN=Container (only valid for Sea shipments), EFP=Exchangeable EUR flat pallet"
+          },
+          "equipment_identifier": {
+            "element_position": 2.1,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Equipment identifier (composite C237, first sub-component). For Sea: Container Number. Not used for Air, Road, Courier."
+          },
+          "equipment_code_list_id": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code — Not used"
+          },
+          "equipment_agency_code": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code — Not used"
+          },
+          "equipment_country_id": {
+            "element_position": 2.4,
+            "pattern": "",
+            "required": false,
+            "description": "Country identifier — Not used"
+          },
+          "equipment_size_type_code": {
+            "element_position": 3.1,
+            "pattern": ".{1,10}",
+            "required": false,
+            "description": "Equipment size and type description code (composite C224, first sub-component). DSV-defined container types or ISO codes. Examples: 20GP, 20HC, 40HC, 40RE, 45HC, 20FR, 20OT, 20RE, 40FR, 20DC_HT, EFP"
+          },
+          "equipment_iso_code": {
+            "element_position": 3.2,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Code list identification code (composite C224, second sub-component). For Sea: Container type ISO code (e.g., 22G0, 22G1)"
+          },
+          "equipment_agency_responsible": {
+            "element_position": 3.3,
+            "pattern": "5?",
+            "required": false,
+            "description": "Code list responsible agency code (composite C224, third sub-component). For Sea: 5=ISO"
+          },
+          "equipment_size_type_description": {
+            "element_position": 3.4,
+            "pattern": "",
+            "required": false,
+            "description": "Equipment size and type description — Not used"
+          },
+          "equipment_supplier_code": {
+            "element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Equipment supplier code — Not used"
+          },
+          "equipment_status_code": {
+            "element_position": 5,
+            "pattern": "",
+            "required": false,
+            "description": "Equipment status code — Not used"
+          },
+          "full_empty_indicator_code": {
+            "element_position": 6,
+            "pattern": "",
+            "required": false,
+            "description": "Full or empty indicator code — Not used"
+          },
+          "marking_instructions_code": {
+            "element_position": 7,
+            "pattern": "",
+            "required": false,
+            "description": "Marking instructions code — Not used"
+          }
+        }
+      },
+      "EQN": {
+        "segment": "EQN",
+        "required": false,
+        "description": "Number of Units — specifies the number of equipment units (EUR pallets or containers).",
+        "subfields": {
+          "units_quantity": {
+            "element_position": 1.1,
+            "pattern": "\\d{1,15}",
+            "required": true,
+            "description": "Number of equipment units, EUR pallet or Container (composite C523, first sub-component)"
+          },
+          "unit_type_code_qualifier": {
+            "element_position": 1.2,
+            "pattern": "",
+            "required": false,
+            "description": "Unit type code qualifier — Not used"
+          }
+        }
+      },
+      "FTX": {
+        "segment": "FTX",
+        "required": false,
+        "description": "Free Text — provides free text information including goods descriptions, handling instructions, delivery instructions, loading remarks, and various DSV-specific text fields. Up to 99 occurrences.",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(AAA|AAI|AEB|BLR|CLR|HAN|IDS|MKS|PAY|RPT|SIC|SPH|ZAD|ZAW|ZBL|ZCF|ZDM|ZFP|ZPT|ZLR|ZTF)",
+            "required": true,
+            "description": "Text subject code qualifier (4451). AAA=Goods item description, AAI=General information, AEB=Temperature control instructions, BLR=Transport contract document remark/Delivery instruction, CLR=Loading remarks/Pickup instructions, HAN=Consignment handling instruction, IDS=IDS Service code, MKS=Additional marks/numbers, PAY=Payables information, RPT=Report information, SIC=Consignment documentary instruction/Special instruction, SPH=Special handling, ZAD=Additional details, ZAW=Air Waybill Notes, ZBL=Delivery instructions, ZCF=CustomField, ZDM=DropMode, ZFP=Freight payer, ZPT=PassThrough, ZLR=Loading remarks, ZTF=Traffic from"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": "(PCK|DEL)",
+            "required": false,
+            "description": "Free text function code (4453). PCK=DropMode Pickup, DEL=DropMode Delivery"
+          },
+          "free_text_description_code": {
+            "element_position": 3.1,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Free text description code (C107/4441). Not used in standard setups."
+          },
+          "free_text_description_code_list": {
+            "element_position": 3.2,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Code list identification code (C107/1131). Not used."
+          },
+          "free_text_description_agency": {
+            "element_position": 3.3,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Code list responsible agency code (C107/3055). Not used."
+          },
+          "free_text_1": {
+            "element_position": 4.1,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 1 (C108/4440). Transport instructions, document remarks, loading remarks, or other text content up to 512 characters."
+          },
+          "free_text_2": {
+            "element_position": 4.2,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 2 (C108/4440). Additional text up to 512 characters."
+          },
+          "free_text_3": {
+            "element_position": 4.3,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 3 (C108/4440). Additional text up to 512 characters."
+          },
+          "free_text_4": {
+            "element_position": 4.4,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 4 (C108/4440). Additional text up to 512 characters."
+          },
+          "free_text_5": {
+            "element_position": 4.5,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 5 (C108/4440). Additional text up to 512 characters."
+          },
+          "language_name_code": {
+            "element_position": 5,
+            "pattern": "",
+            "required": false,
+            "description": "Language name code (3453). Not used."
+          },
+          "free_text_format_code": {
+            "element_position": 6,
+            "pattern": "",
+            "required": false,
+            "description": "Free text format code (4447). Not used."
+          }
+        }
+      },
+      "FTX_AAC": {
+        "segment": "FTX",
+        "required": false,
+        "description": "Free Text - Dangerous Goods Additional Information — within DGS group (SG33) for dangerous goods additional information.",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "AAC",
+            "required": true,
+            "description": "Text subject code qualifier — AAC = Dangerous goods additional information"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Free text function code"
+          },
+          "text_literal_1": {
+            "element_position": 4.1,
+            "pattern": ".{1,512}",
+            "required": true,
+            "description": "Free text line 1 (first sub-component of C108). Dangerous goods additional information."
+          },
+          "text_literal_2": {
+            "element_position": 4.2,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 2"
+          },
+          "text_literal_3": {
+            "element_position": 4.3,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 3"
+          },
+          "text_literal_4": {
+            "element_position": 4.4,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 4"
+          },
+          "text_literal_5": {
+            "element_position": 4.5,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 5"
+          }
+        }
+      },
+      "FTX_AAD": {
+        "segment": "FTX",
+        "required": false,
+        "description": "Free Text - Proper Shipping Name — within DGS group (SG33) for Proper Shipping Name of dangerous goods.",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "AAD",
+            "required": true,
+            "description": "Text subject code qualifier — AAD = Proper Shipping Name"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Free text function code"
+          },
+          "text_literal_1": {
+            "element_position": 4.1,
+            "pattern": ".{1,512}",
+            "required": true,
+            "description": "Free text line 1 — Proper Shipping Name (first sub-component of C108)"
+          },
+          "text_literal_2": {
+            "element_position": 4.2,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 2"
+          },
+          "text_literal_3": {
+            "element_position": 4.3,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 3"
+          },
+          "text_literal_4": {
+            "element_position": 4.4,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 4"
+          },
+          "text_literal_5": {
+            "element_position": 4.5,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "Free text line 5"
+          }
+        }
+      },
+      "FTX_HAZ": {
+        "segment": "FTX",
+        "required": false,
+        "description": "Free Text - Hazard Information — within DGS group (SG33) for Technical Name and International Technical Name of dangerous goods.",
+        "subfields": {
+          "text_subject_code_qualifier": {
+            "element_position": 1,
+            "pattern": "HAZ",
+            "required": true,
+            "description": "Text subject code qualifier — HAZ = Hazard information"
+          },
+          "free_text_function_code": {
+            "element_position": 2,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Free text function code"
+          },
+          "text_literal_1": {
+            "element_position": 4.1,
+            "pattern": ".{1,512}",
+            "required": true,
+            "description": "Technical Name (first sub-component of C108)"
+          },
+          "text_literal_2": {
+            "element_position": 4.2,
+            "pattern": ".{1,512}",
+            "required": false,
+            "description": "International Technical Name"
+          }
+        }
+      },
+      "GDS": {
+        "segment": "GDS",
+        "required": false,
+        "description": "Nature of Cargo — specifies the nature of cargo and commodity code for the goods item.",
+        "subfields": {
+          "cargo_type_classification_code": {
+            "element_position": 1.1,
+            "pattern": ".{0,3}",
+            "required": false,
+            "description": "Cargo type classification code (composite C703, sub-element 7085)"
+          },
+          "product_group_name_code": {
+            "element_position": 2.1,
+            "pattern": ".{0,25}",
+            "required": false,
+            "description": "Commodity Code — product group name code (composite C288, sub-element 5389)"
+          }
+        }
+      },
+      "GID": {
+        "segment": "GID",
+        "required": true,
+        "description": "Goods Item Details — identifies a goods item within the shipment with package count and type. At least one GID group is mandatory.",
+        "subfields": {
+          "goods_item_number": {
+            "element_position": 1,
+            "pattern": "\\d{1,6}",
+            "required": true,
+            "description": "Goods item number — sequential line item number"
+          },
+          "package_quantity": {
+            "element_position": 2.1,
+            "pattern": "\\d{1,8}",
+            "required": false,
+            "description": "Package quantity (composite C213 first occurrence, sub-element 7224). Number of packages at shipment level (CNT+11) or for each line item is required for Road."
+          },
+          "package_type_description_code": {
+            "element_position": 2.2,
+            "pattern": ".{1,17}",
+            "required": true,
+            "description": "Package type description code (composite C213 first occurrence, sub-element 7065). Required for Road. E.g., PLL=Pallet."
+          },
+          "packaging_related_description_code_5th_c213": {
+            "element_position": 6.6,
+            "pattern": "(INR)?",
+            "required": false,
+            "description": "Packaging related description code on the 5th C213 composite (sub-element 7233). INR=InnerGoodsItems. Used for Air/Sea to indicate SG19 is nested for inner goods items."
+          }
+        }
+      },
+      "GIN": {
+        "segment": "GIN",
+        "required": false,
+        "description": "Goods Identity Number — used at line item level (SG24) in conjunction with PCI. Supports serial numbers (BN with PCI+17) and SSCC codes (AW with PCI+18). Up to 5 pairs of identity number ranges per segment, max 10 occurrences.",
+        "subfields": {
+          "object_identification_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(BN|AW)",
+            "required": true,
+            "description": "Object identification code qualifier — BN = Serial number (used with PCI+17), AW = Serial shipping container code (used with PCI+18)"
+          },
+          "identity_number_1a": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "First object identifier in first identity number range (C208). For AW, SSCC expected without leading 00 qualifier."
+          },
+          "identity_number_1b": {
+            "element_position": 2.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second object identifier in first identity number range"
+          },
+          "identity_number_2a": {
+            "element_position": 3.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "First object identifier in second identity number range (C208)"
+          },
+          "identity_number_2b": {
+            "element_position": 3.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second object identifier in second identity number range"
+          },
+          "identity_number_3a": {
+            "element_position": 4.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "First object identifier in third identity number range (C208)"
+          },
+          "identity_number_3b": {
+            "element_position": 4.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second object identifier in third identity number range"
+          },
+          "identity_number_4a": {
+            "element_position": 5.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "First object identifier in fourth identity number range (C208)"
+          },
+          "identity_number_4b": {
+            "element_position": 5.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second object identifier in fourth identity number range"
+          },
+          "identity_number_5a": {
+            "element_position": 6.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "First object identifier in fifth identity number range (C208)"
+          },
+          "identity_number_5b": {
+            "element_position": 6.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second object identifier in fifth identity number range"
+          }
+        }
+      },
+      "GOR": {
+        "segment": "GOR",
+        "required": false,
+        "description": "Governmental Requirements — specifies governmental requirements related to the transport, such as export, import, or transit declarations.",
+        "subfields": {
+          "transport_movement_code": {
+            "element_position": 1,
+            "pattern": "(1|2|3)",
+            "required": false,
+            "description": "Transport movement code. 1=Export, 2=Import, 3=Transit"
+          },
+          "government_action_1": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Government action composite (not used in implementation)"
+          },
+          "government_action_2": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "Government action composite (not used in implementation)"
+          },
+          "government_action_3": {
+            "element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Government action composite (not used in implementation)"
+          },
+          "government_action_4": {
+            "element_position": 5,
+            "pattern": "",
+            "required": false,
+            "description": "Government action composite (not used in implementation)"
+          }
+        }
+      },
+      "HAN": {
+        "segment": "HAN",
+        "required": false,
+        "description": "Handling Instructions — indicates handling instructions for goods items, such as stackability.",
+        "subfields": {
+          "handling_instruction_description_code": {
+            "element_position": 1.1,
+            "pattern": "(3|ZNS)",
+            "required": false,
+            "description": "Handling instruction description code (composite C524, sub-element 4079). 3=Stacked, ZNS=No Stackability"
+          }
+        }
+      },
+      "LOC": {
+        "segment": "LOC",
+        "required": false,
+        "description": "Place Location Identification — identifies locations relevant to the shipment, including booking office location (SG1) and place of terms of delivery (SG2).",
+        "subfields": {
+          "location_function_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(ZBO|1)",
+            "required": true,
+            "description": "Location function code qualifier (3227). Valid codes: ZBO=Booking office, 1=Place of terms of delivery."
+          },
+          "location_identifier": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Location identifier (C517/3225). Used for Branch code (Air/Sea) or Booking Office code (Road). UN Location Code when used for terms of delivery."
+          },
+          "location_code_list": {
+            "element_position": 2.2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code (C517/1131)."
+          },
+          "location_agency": {
+            "element_position": 2.3,
+            "pattern": "(3|6|87)",
+            "required": false,
+            "description": "Code list responsible agency code (C517/3055). Valid codes: 3=IATA, 6=UN/ECE, 87=Assigned by carrier."
+          },
+          "location_name": {
+            "element_position": 2.4,
+            "pattern": ".{1,256}",
+            "required": false,
+            "description": "Location name (C517/3224). Term Location name required for Road when LOC qualifier is 1."
+          },
+          "first_related_location_identifier": {
+            "element_position": 3.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "First related location identifier (C519/3223). Used for Department code (Air/Sea). Not used for Road or Courier."
+          },
+          "first_related_location_code_list": {
+            "element_position": 3.2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code (C519/1131). Not used."
+          },
+          "first_related_location_agency": {
+            "element_position": 3.3,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Code list responsible agency code (C519/3055). Not used."
+          },
+          "first_related_location_name": {
+            "element_position": 3.4,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "First related location name (C519/3222). Not used."
+          },
+          "second_related_location_identifier": {
+            "element_position": 4.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Second related location identifier (C553/3233). Used for Country code. Not used for Road, Solutions, or Courier."
+          },
+          "second_related_location_code_list": {
+            "element_position": 4.2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code (C553/1131). Not used."
+          },
+          "second_related_location_agency": {
+            "element_position": 4.3,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Code list responsible agency code (C553/3055). Not used."
+          },
+          "second_related_location_name": {
+            "element_position": 4.4,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Second related location name (C553/3232). Not used."
+          },
+          "relation_code": {
+            "element_position": 5,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Relation code (5479). Not used."
+          }
+        }
+      },
+      "MEA": {
+        "segment": "MEA",
+        "required": true,
+        "description": "Measurements — specifies measurements related to goods items, including weights, volumes, counts, and dangerous goods measurements. Used in SG21 (goods item level) and SG35 (dangerous goods level).",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(WT|CT|VOL|LMT)",
+            "required": true,
+            "description": "Measurement purpose code qualifier. Valid codes: WT=Weights, CT=Counts, VOL=Volume, LMT=Limits"
+          },
+          "measured_attribute_code": {
+            "element_position": 2.1,
+            "pattern": "(AAF|AFN|AAB|ADZ|SQ|ZOT)?",
+            "required": false,
+            "description": "Measured attribute code (composite C502, first sub-component). Valid codes: AAF=Net net weight, AFN=Net explosive weight, AAB=Goods item gross weight, ADZ=Adjusted gross weight, SQ=Sequence, ZOT=Other count. May be empty."
+          },
+          "measurement_significance_code": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Measurement significance code — Not used"
+          },
+          "non_discrete_measurement_name_code": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Non-discrete measurement name code — Not used"
+          },
+          "non_discrete_measurement_name": {
+            "element_position": 2.4,
+            "pattern": "",
+            "required": false,
+            "description": "Non-discrete measurement name — Not used"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "(KGM|LTR|MTQ|MTR|PLL|NMP|BAG|BOB|BOX|CP|DRM|IBC|JCN|LGM|PD|SB|CMT)",
+            "required": true,
+            "description": "Measurement unit code (composite C174, first sub-component). Valid codes include: KGM=kilogram, LTR=litre, MTQ=cubic metre, MTR=metre, PLL=pallet, NMP=number of packs, and DGS package types."
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "The measured value (composite C174, second sub-component)"
+          },
+          "range_minimum_quantity": {
+            "element_position": 3.3,
+            "pattern": "",
+            "required": false,
+            "description": "Range minimum quantity — Not used"
+          },
+          "range_maximum_quantity": {
+            "element_position": 3.4,
+            "pattern": "",
+            "required": false,
+            "description": "Range maximum quantity — Not used"
+          },
+          "significant_digits_quantity": {
+            "element_position": 3.5,
+            "pattern": "",
+            "required": false,
+            "description": "Significant digits quantity — Not used"
+          },
+          "surface_or_layer_code": {
+            "element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Surface or layer code — Not used"
+          }
+        }
+      },
+      "MEA_CT_SQ": {
+        "segment": "MEA",
+        "required": false,
+        "description": "Measurements - Pallet Spaces Count — measurement for number of pallet spaces at line item level. Not used for Air, Sea, or Courier shipments. Requires special pallet space agreement.",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "CT",
+            "required": true,
+            "description": "Measurement purpose code qualifier — CT = Counts"
+          },
+          "measured_attribute_code": {
+            "element_position": 2.1,
+            "pattern": "SQ",
+            "required": true,
+            "description": "Measured attribute code — SQ = Shipped quantity (first sub-component of C502)"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "PLL",
+            "required": true,
+            "description": "Measurement unit code — PLL = Pallet spaces (first sub-component of C174 Value/range)"
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "Number of pallet spaces"
+          }
+        }
+      },
+      "MEA_CT_ZOT": {
+        "segment": "MEA",
+        "required": false,
+        "description": "Measurements - Outturn Packages Count — measurement for number of outturn packages at line item level. DSV-specific code, use as agreed.",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "CT",
+            "required": true,
+            "description": "Measurement purpose code qualifier — CT = Counts"
+          },
+          "measured_attribute_code": {
+            "element_position": 2.1,
+            "pattern": "ZOT",
+            "required": true,
+            "description": "Measured attribute code — ZOT = DSV specific code for Outturn Packages (first sub-component of C502)"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "NMP",
+            "required": true,
+            "description": "Measurement unit code — NMP = number of packs (first sub-component of C174 Value/range)"
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "Number of outturn packages"
+          }
+        }
+      },
+      "MEA_LMT": {
+        "segment": "MEA",
+        "required": false,
+        "description": "Measurements - Loading Meters at line item level (SG21). Not used for Air, Sea, or Courier shipments.",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "LMT",
+            "required": true,
+            "description": "Measurement purpose code qualifier — LMT = Loading meters"
+          },
+          "measurement_details": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "C502 Measurement details composite — Not used for LMT variant"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "MTR",
+            "required": true,
+            "description": "Measurement unit code — MTR = metre (first sub-component of C174 Value/range)"
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "The measured value (loading meters quantity in metres)"
+          }
+        }
+      },
+      "MEA_VOL": {
+        "segment": "MEA",
+        "required": false,
+        "description": "Measurements - Volume in cubic meters at line item level (SG21). At least one of volume, loading meters, or dimensions is required.",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "VOL",
+            "required": true,
+            "description": "Measurement purpose code qualifier — VOL = Volume"
+          },
+          "measurement_details": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "C502 Measurement details composite — Not used for VOL variant"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "MTQ",
+            "required": true,
+            "description": "Measurement unit code — MTQ = cubic metre (first sub-component of C174 Value/range)"
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "The measured value (volume quantity in cubic metres)"
+          }
+        }
+      },
+      "MEA_WT": {
+        "segment": "MEA",
+        "required": false,
+        "description": "Measurements - Net Weight in kilograms at line item level. Only required for customs declaration purposes.",
+        "subfields": {
+          "measurement_purpose_code_qualifier": {
+            "element_position": 1,
+            "pattern": "WT",
+            "required": true,
+            "description": "Measurement purpose code qualifier — WT = Weights"
+          },
+          "measured_attribute_code": {
+            "element_position": 2.1,
+            "pattern": "ADZ",
+            "required": true,
+            "description": "Measured attribute code — ADZ = Declared net weight (first sub-component of C502)"
+          },
+          "measurement_unit_code": {
+            "element_position": 3.1,
+            "pattern": "KGM",
+            "required": true,
+            "description": "Measurement unit code — KGM = kilogram (first sub-component of C174 Value/range)"
+          },
+          "measure": {
+            "element_position": 3.2,
+            "pattern": ".{1,18}",
+            "required": true,
+            "description": "The measured value (net weight in kilograms)"
+          }
+        }
+      },
+      "MOA": {
+        "segment": "MOA",
+        "required": false,
+        "description": "Monetary Amount — specifies monetary amounts related to the shipment, including cash on delivery, insurance, invoice amounts, and freight rates.",
+        "subfields": {
+          "monetary_amount_type_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "(22|67|77|ZFR)",
+            "required": true,
+            "description": "Monetary amount type code qualifier (C516/5025). 22=Consignment cash on delivery amount, 67=Insurance amount, 77=Invoice line item amount, ZFR=DSV specific FreightRate"
+          },
+          "monetary_amount": {
+            "element_position": 1.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Monetary amount value (C516/5004)"
+          },
+          "currency_identification_code": {
+            "element_position": 1.3,
+            "pattern": "[A-Z]{3}",
+            "required": false,
+            "description": "Currency identification code (C516/6345). ISO 4217 3 alpha code (e.g., SEK, DKK, EUR)"
+          },
+          "currency_type_code_qualifier": {
+            "element_position": 1.4,
+            "pattern": "",
+            "required": false,
+            "description": "Currency type code qualifier (C516/6343). Not used."
+          },
+          "status_description_code": {
+            "element_position": 1.5,
+            "pattern": "",
+            "required": false,
+            "description": "Status description code (C516/4405). Not used."
+          }
+        }
+      },
+      "NAD": {
+        "segment": "NAD",
+        "required": true,
+        "description": "Name and Address — identifies parties involved in the shipment by function (consignor, consignee, delivery party, etc.) with their identification and address details.",
+        "subfields": {
+          "party_function_code_qualifier": {
+            "element_position": 1,
+            "pattern": "(AG|AJ|CA|CN|CZ|DP|FP|NI|OY|PW|FW)",
+            "required": true,
+            "description": "Party function code qualifier. AG=Agent, AJ=Party issuing mutually agreed codes, CA=Carrier, CN=Consignee, CZ=Consignor, DP=Delivery party, FP=Freight/charges payer, NI=Notify party, OY=Ordering customer, PW=Despatch party, FW=Freight forwarder"
+          },
+          "party_identifier": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Customer number / reference (composite C082, sub-element 3039)"
+          },
+          "code_list_identification_code": {
+            "element_position": 2.2,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Code list identification code (composite C082, sub-element 1131) — Not used"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 2.3,
+            "pattern": "(9|87|91|Z87)",
+            "required": false,
+            "description": "Code list responsible agency code (composite C082, sub-element 3055). 87=Assigned by carrier, 91=Assigned by seller, 9=GS1, Z87=DSV specific unique party ID"
+          },
+          "party_name_1": {
+            "element_position": 4.1,
+            "pattern": ".{1,70}",
+            "required": true,
+            "description": "Party name — first occurrence (composite C080, sub-element 3036). DSV uses 35 characters in first and second occurrences."
+          },
+          "party_name_2": {
+            "element_position": 4.2,
+            "pattern": ".{0,70}",
+            "required": false,
+            "description": "Party name — second occurrence (composite C080, sub-element 3036)"
+          },
+          "party_name_3": {
+            "element_position": 4.3,
+            "pattern": ".{0,70}",
+            "required": false,
+            "description": "Party name — third occurrence (composite C080, sub-element 3036)"
+          },
+          "party_name_format_code": {
+            "element_position": 4.6,
+            "pattern": "(ZAO)?",
+            "required": false,
+            "description": "Party name format code (composite C080, sub-element 3045). ZAO=Address override"
+          },
+          "street_and_number_1": {
+            "element_position": 5.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Street name and number (composite C059, sub-element 3042, first occurrence). P.O. Box not acceptable for NAD+PW or NAD+DP."
+          },
+          "street_and_number_2": {
+            "element_position": 5.2,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Additional address info — gate or building (composite C059, sub-element 3042, second occurrence)"
+          },
+          "street_and_number_3": {
+            "element_position": 5.3,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Street and number or post office box identifier — third occurrence (composite C059, sub-element 3042)"
+          },
+          "city_name": {
+            "element_position": 6,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "City name (without postal code). Required for Road."
+          },
+          "country_subdivision_identifier": {
+            "element_position": 7.1,
+            "pattern": ".{0,9}",
+            "required": false,
+            "description": "Province or State (composite C819, sub-element 3229)"
+          },
+          "postal_identification_code": {
+            "element_position": 8,
+            "pattern": ".{0,17}",
+            "required": false,
+            "description": "Postal code (without country code)"
+          },
+          "country_identifier": {
+            "element_position": 9,
+            "pattern": "[A-Z]{2}",
+            "required": true,
+            "description": "Country code, ISO 3166 - Alpha 2 code. Required for Road."
+          }
+        }
+      },
+      "PCI": {
+        "segment": "PCI",
+        "required": false,
+        "description": "Package Identification at line item level (SG24). Supports marking instructions codes 17 (serial numbers), 18 (SSCC codes), and 24 (shipper assigned package marks).",
+        "subfields": {
+          "marking_instructions_code": {
+            "element_position": 1,
+            "pattern": "(17|18|24)",
+            "required": false,
+            "description": "Marking instructions code — 17=Seller's instructions (serial numbers), 18=Carrier's instructions (SSCC code), 24=Shipper assigned"
+          },
+          "shipping_marks_1": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (first occurrence). Used with qualifier 24 for package mark/IDs."
+          },
+          "shipping_marks_2": {
+            "element_position": 2.2,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (second occurrence)"
+          },
+          "shipping_marks_3": {
+            "element_position": 2.3,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (third occurrence)"
+          },
+          "shipping_marks_4": {
+            "element_position": 2.4,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (fourth occurrence)"
+          },
+          "shipping_marks_5": {
+            "element_position": 2.5,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (fifth occurrence)"
+          },
+          "shipping_marks_6": {
+            "element_position": 2.6,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (sixth occurrence)"
+          },
+          "shipping_marks_7": {
+            "element_position": 2.7,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (seventh occurrence)"
+          },
+          "shipping_marks_8": {
+            "element_position": 2.8,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (eighth occurrence)"
+          },
+          "shipping_marks_9": {
+            "element_position": 2.9,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (ninth occurrence)"
+          },
+          "shipping_marks_10": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Shipping marks description (tenth occurrence)"
+          }
+        }
+      },
+      "PIA": {
+        "segment": "PIA",
+        "required": false,
+        "description": "Additional Product ID — provides Harmonised System codes with optional country codes for customs purposes.",
+        "subfields": {
+          "product_identifier_code_qualifier": {
+            "element_position": 1,
+            "pattern": "5",
+            "required": true,
+            "description": "Product identifier code qualifier. 5=Product identification"
+          },
+          "item_identifier_1": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Item identifier — statistical number per Harmonised system (composite C212 first occurrence). For Road, if >8 chars a space must be inserted after position 8."
+          },
+          "item_type_identification_code_1": {
+            "element_position": 2.2,
+            "pattern": "HS",
+            "required": true,
+            "description": "Item type identification code (composite C212 first occurrence). HS=Harmonised system"
+          },
+          "code_list_identification_code_1": {
+            "element_position": 2.3,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Code list identification code — ISO 3166-1 alpha-2 country code (composite C212 first occurrence). Required for Air/Sea."
+          },
+          "code_list_responsible_agency_code_1": {
+            "element_position": 2.4,
+            "pattern": "5",
+            "required": false,
+            "description": "Code list responsible agency code (composite C212 first occurrence). 5=ISO"
+          },
+          "item_identifier_2": {
+            "element_position": 3.1,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Item identifier — second HS code (composite C212 second occurrence)"
+          },
+          "item_type_identification_code_2": {
+            "element_position": 3.2,
+            "pattern": "HS",
+            "required": false,
+            "description": "Item type identification code (composite C212 second occurrence). HS=Harmonised system"
+          },
+          "code_list_identification_code_2": {
+            "element_position": 3.3,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Code list identification code — ISO 3166-1 alpha-2 country code (composite C212 second occurrence)"
+          },
+          "code_list_responsible_agency_code_2": {
+            "element_position": 3.4,
+            "pattern": "5",
+            "required": false,
+            "description": "Code list responsible agency code (composite C212 second occurrence). 5=ISO"
+          },
+          "item_identifier_3": {
+            "element_position": 4.1,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Item identifier — third HS code (composite C212 third occurrence)"
+          },
+          "item_type_identification_code_3": {
+            "element_position": 4.2,
+            "pattern": "HS",
+            "required": false,
+            "description": "Item type identification code (composite C212 third occurrence)"
+          },
+          "code_list_identification_code_3": {
+            "element_position": 4.3,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Code list identification code (composite C212 third occurrence)"
+          },
+          "code_list_responsible_agency_code_3": {
+            "element_position": 4.4,
+            "pattern": "5",
+            "required": false,
+            "description": "Code list responsible agency code (composite C212 third occurrence). 5=ISO"
+          },
+          "item_identifier_4": {
+            "element_position": 5.1,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Item identifier — fourth HS code (composite C212 fourth occurrence)"
+          },
+          "item_type_identification_code_4": {
+            "element_position": 5.2,
+            "pattern": "HS",
+            "required": false,
+            "description": "Item type identification code (composite C212 fourth occurrence)"
+          },
+          "code_list_identification_code_4": {
+            "element_position": 5.3,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Code list identification code (composite C212 fourth occurrence)"
+          },
+          "code_list_responsible_agency_code_4": {
+            "element_position": 5.4,
+            "pattern": "5",
+            "required": false,
+            "description": "Code list responsible agency code (composite C212 fourth occurrence). 5=ISO"
+          },
+          "item_identifier_5": {
+            "element_position": 6.1,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Item identifier — fifth HS code (composite C212 fifth occurrence)"
+          },
+          "item_type_identification_code_5": {
+            "element_position": 6.2,
+            "pattern": "HS",
+            "required": false,
+            "description": "Item type identification code (composite C212 fifth occurrence)"
+          },
+          "code_list_identification_code_5": {
+            "element_position": 6.3,
+            "pattern": "[A-Z]{2}",
+            "required": false,
+            "description": "Code list identification code (composite C212 fifth occurrence)"
+          },
+          "code_list_responsible_agency_code_5": {
+            "element_position": 6.4,
+            "pattern": "5",
+            "required": false,
+            "description": "Code list responsible agency code (composite C212 fifth occurrence). 5=ISO"
+          }
+        }
+      },
+      "RFF": {
+        "segment": "RFF",
+        "required": true,
+        "description": "Reference — specifies reference numbers and identifiers for the shipment, including consignment numbers, order references, and various DSV-specific reference types.",
+        "subfields": {
+          "reference_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "(AG|AAM|AAO|AAS|AAU|AWM|BN|CG|CU|SRN|STS|ZAD|ZCP|ZCU|ZDO|ZIR|ZTF|ZHP|ZHT|ZMT|ZRM|ZSM|ZSR|ZUS|ZXX)",
+            "required": true,
+            "description": "Reference code qualifier (C506/1153). AG=Multiple Deliveries Discount ID, AAM=Waybill number, AAO=Consignment identifier consignee assigned, AAS=Transport contract document identifier, AAU=Despatch note document identifier, AWM=Service category reference, BN=Consignment identifier carrier assigned, CG=Consignee's order number, CU=Consignment identifier consignor assigned (mandatory for Track&Trace), SRN=Shipment reference number (GS1, 17 chars), STS=StatusText, ZAD=On sight authorization code, ZCP=CLPartnerCode, ZCU=OrderReference, ZDO=DSV ESBDomain, ZIR=InterimReceiptNo, ZTF=Traffic from assigned by Partner, ZHP=AllowHomePortDefaulting, ZHT=HouseBillType, ZMT=DSV specific for Method, ZRM=Receiver Mailbox for Dinas, ZSM=Sender Mailbox for Dinas, ZSR=ShipperReference, ZUS=AllowUpdateShipmentFromBooking, ZXX=Unidentified Reference"
+          },
+          "reference_identifier": {
+            "element_position": 1.2,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Reference identifier (C506/1154). The actual reference number value."
+          },
+          "document_line_identifier": {
+            "element_position": 1.3,
+            "pattern": ".{1,6}",
+            "required": false,
+            "description": "Document line identifier (C506/1156). Only used when RFF C506/1153 = STS."
+          },
+          "version_identifier": {
+            "element_position": 1.4,
+            "pattern": "",
+            "required": false,
+            "description": "Version identifier (C506/1056). Not used."
+          },
+          "revision_identifier": {
+            "element_position": 1.5,
+            "pattern": "",
+            "required": false,
+            "description": "Revision identifier (C506/1060). Not used."
+          }
+        }
+      },
+      "RFF_AVM": {
+        "segment": "RFF",
+        "required": false,
+        "description": "Reference - Goods Item Information. Reference segment at line item level (SG23) for goods item information.",
+        "subfields": {
+          "reference_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "AVM",
+            "required": true,
+            "description": "Reference code qualifier — AVM = Goods item information (first sub-component of C506)"
+          },
+          "reference_identifier": {
+            "element_position": 1.2,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Reference identifier value"
+          }
+        }
+      },
+      "RFF_PK": {
+        "segment": "RFF",
+        "required": false,
+        "description": "Reference - Packing List Number. Reference segment at line item level (SG23) for packing list number.",
+        "subfields": {
+          "reference_code_qualifier": {
+            "element_position": 1.1,
+            "pattern": "PK",
+            "required": true,
+            "description": "Reference code qualifier — PK = Packing list number (first sub-component of C506)"
+          },
+          "reference_identifier": {
+            "element_position": 1.2,
+            "pattern": ".{1,70}",
+            "required": false,
+            "description": "Packing list number identifier"
+          }
+        }
+      },
+      "RNG": {
+        "segment": "RNG",
+        "required": false,
+        "description": "Range Details — Specifies temperature range details for goods items requiring temperature control.",
+        "subfields": {
+          "range_type_code_qualifier": {
+            "element_position": 1,
+            "pattern": "1",
+            "required": true,
+            "description": "Range type code qualifier. 1=Allowance range"
+          },
+          "measurement_unit_code": {
+            "element_position": 2.1,
+            "pattern": "CEL",
+            "required": true,
+            "description": "Measurement unit code (composite C280, sub-element 6411). CEL=degree Celsius. Only Celsius is used, not Fahrenheit."
+          },
+          "range_minimum_quantity": {
+            "element_position": 2.2,
+            "pattern": "-?\\d{1,18}",
+            "required": false,
+            "description": "Minimum temperature (composite C280, sub-element 6162)"
+          },
+          "range_maximum_quantity": {
+            "element_position": 2.3,
+            "pattern": "-?\\d{1,18}",
+            "required": false,
+            "description": "Maximum temperature (composite C280, sub-element 6152)"
+          }
+        }
+      },
+      "SEL": {
+        "segment": "SEL",
+        "required": false,
+        "description": "Seal Number — Specifies seal numbers applied to transport equipment (containers).",
+        "subfields": {
+          "transport_unit_seal_identifier": {
+            "element_position": 1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Transport unit seal identifier — the seal number"
+          },
+          "sealing_party_name_code": {
+            "element_position": 2.1,
+            "pattern": "SH",
+            "required": false,
+            "description": "Sealing party name code (composite C215, first sub-component). SH = Shipper"
+          },
+          "seal_code_list_id": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code — Not used"
+          },
+          "seal_agency_code": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code — Not used"
+          },
+          "sealing_party_name": {
+            "element_position": 2.4,
+            "pattern": "",
+            "required": false,
+            "description": "Sealing party name — Not used"
+          },
+          "seal_condition_code": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "Seal condition code — Not used"
+          },
+          "object_identifier_1": {
+            "element_position": 4.1,
+            "pattern": "",
+            "required": false,
+            "description": "Object identifier (composite C208, first sub-component) — Not used"
+          },
+          "object_identifier_2": {
+            "element_position": 4.2,
+            "pattern": "",
+            "required": false,
+            "description": "Object identifier (composite C208, second sub-component) — Not used"
+          },
+          "seal_type_code": {
+            "element_position": 5,
+            "pattern": "",
+            "required": false,
+            "description": "Seal type code — Not used"
+          }
+        }
+      },
+      "SGP": {
+        "segment": "SGP",
+        "required": false,
+        "description": "Split Goods Placement — Identifies masterpallet ID (Road) or container ID (Sea) the GID items are related to.",
+        "subfields": {
+          "equipment_identifier": {
+            "element_position": 1.1,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Equipment identifier — masterpallet ID (Road) or container ID (Sea). First sub-component of C237."
+          }
+        }
+      },
+      "TCC": {
+        "segment": "TCC",
+        "required": true,
+        "description": "Charge/Rate Calculations — Specifies charge and rate/tariff calculation details. Internal DSV use only.",
+        "subfields": {
+          "freight_and_other_charges_description_identifier": {
+            "element_position": 1.1,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Freight and other charges description identifier. Code values to be provided by local CargoLink country."
+          },
+          "code_list_identification_code_1": {
+            "element_position": 1.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code (not used)"
+          },
+          "code_list_responsible_agency_code_1": {
+            "element_position": 1.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code (not used)"
+          },
+          "freight_and_other_charges_description": {
+            "element_position": 1.4,
+            "pattern": ".{1,26}",
+            "required": false,
+            "description": "Freight and other charges description (future use)"
+          },
+          "payment_arrangement_code": {
+            "element_position": 1.5,
+            "pattern": "(ZCN|ZCZ|ZDP|ZPW)",
+            "required": false,
+            "description": "Payment arrangement code indicating which party pays. ZCN=Consignee, ZCZ=Consignor, ZDP=Delivery party, ZPW=Pickup party. Not used for Air or Courier."
+          },
+          "item_identifier": {
+            "element_position": 1.6,
+            "pattern": "",
+            "required": false,
+            "description": "Item identifier (not used)"
+          },
+          "rate_or_tariff_class_description_code": {
+            "element_position": 2.1,
+            "pattern": "ZAC",
+            "required": false,
+            "description": "Rate or tariff class description code. ZAC=Agreement Code"
+          },
+          "code_list_identification_code_2": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code for rate/tariff (not used)"
+          },
+          "code_list_responsible_agency_code_2": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code for rate/tariff (not used)"
+          },
+          "rate_or_tariff_class_description": {
+            "element_position": 2.4,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Rate or tariff class description text"
+          },
+          "commodity_rate_detail": {
+            "element_position": 3,
+            "pattern": "",
+            "required": false,
+            "description": "Commodity/rate detail composite (not used)"
+          },
+          "rate_tariff_class_detail": {
+            "element_position": 4,
+            "pattern": "",
+            "required": false,
+            "description": "Rate/tariff class detail composite (not used)"
+          }
+        }
+      },
+      "TDT": {
+        "segment": "TDT",
+        "required": false,
+        "description": "Transport Information — Specifies transport stage details including mode of transport and carrier identification. Used with TSR to determine product/service.",
+        "subfields": {
+          "transport_stage_code_qualifier": {
+            "element_position": 1,
+            "pattern": ".{1,3}",
+            "required": true,
+            "description": "Transport stage code qualifier — typically 20 = Main carriage transport"
+          },
+          "means_of_transport_journey_identifier": {
+            "element_position": 2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Means of transport journey identifier (e.g., voyage/flight number)"
+          },
+          "mode_of_transport_code": {
+            "element_position": 3.1,
+            "pattern": "(3|4|5)",
+            "required": false,
+            "description": "Mode of transport code — 3 = Road, 4 = Air, 5 = Sea (also used for Courier combinations)"
+          },
+          "carrier_identifier": {
+            "element_position": 5.1,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Carrier identification"
+          },
+          "code_list_identification_code": {
+            "element_position": 5.2,
+            "pattern": ".{1,17}",
+            "required": false,
+            "description": "Code list identification code for carrier"
+          },
+          "code_list_responsible_agency_code": {
+            "element_position": 5.3,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Code list responsible agency code for carrier"
+          },
+          "carrier_name": {
+            "element_position": 5.4,
+            "pattern": ".{1,35}",
+            "required": false,
+            "description": "Carrier name"
+          },
+          "transit_direction_indicator_code": {
+            "element_position": 6,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Transit direction indicator code"
+          },
+          "excess_transportation_reason_code": {
+            "element_position": 7.1,
+            "pattern": ".{1,3}",
+            "required": false,
+            "description": "Excess transportation reason code"
+          },
+          "transport_means_description_code": {
+            "element_position": 8.1,
+            "pattern": ".{1,8}",
+            "required": false,
+            "description": "Transport means description code"
+          }
+        }
+      },
+      "TMD": {
+        "segment": "TMD",
+        "required": false,
+        "description": "Transport Movement Details — Specifies transport movement type details, primarily for container stuffing/stripping arrangements (LCL/FCL) and door-to-door service types.",
+        "subfields": {
+          "movement_type_description_code": {
+            "element_position": 1.1,
+            "pattern": "(2|3|4|5|11|12|13|19|21|22|23|31|32|33)",
+            "required": false,
+            "description": "Movement type description code. 2=LCL/LCL, 3=FCL/FCL, 4=FCL/LCL, 5=LCL/FCL, 11=House to house, 12=House to terminal, 13=House to pier, 19=Consignee transportation provided, 21=Terminal to house, 22=Terminal to terminal, 23=Terminal to pier, 31=Pier to house, 32=Pier to terminal, 33=Pier to pier"
+          },
+          "movement_type_description": {
+            "element_position": 1.2,
+            "pattern": ".{0,35}",
+            "required": false,
+            "description": "Movement type description — free text (e.g., 'LCL/LCL')"
+          },
+          "equipment_plan_description": {
+            "element_position": 1.3,
+            "pattern": "",
+            "required": false,
+            "description": "Equipment plan description — Not used"
+          },
+          "haulage_arrangements_code": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Haulage arrangements code — Not used"
+          }
+        }
+      },
+      "UNB": {
+        "segment": "UNB",
+        "required": true,
+        "description": "Interchange Header — identifies the interchange sender, recipient, and preparation date/time",
+        "subfields": {
+          "syntax_identifier": {
+            "element_position": 1.1,
+            "pattern": "UNOC",
+            "required": true,
+            "description": "Syntax identifier — UNOC means uppercase and lowercase characters A-Z, a-z, including western European special characters"
+          },
+          "syntax_version_number": {
+            "element_position": 1.2,
+            "pattern": "4",
+            "required": true,
+            "description": "Syntax version number — 4 = Version 4"
+          },
+          "interchange_sender_identification": {
+            "element_position": 2.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Sender identification"
+          },
+          "sender_identification_code_qualifier": {
+            "element_position": 2.2,
+            "pattern": "(14|ZZ)",
+            "required": false,
+            "description": "Identification code qualifier — 14 = GS1, ZZ = Mutually defined"
+          },
+          "interchange_recipient_identification": {
+            "element_position": 3.1,
+            "pattern": ".{1,35}",
+            "required": true,
+            "description": "Interchange recipient identification — DSV recipient ID is 5790000110018"
+          },
+          "recipient_identification_code_qualifier": {
+            "element_position": 3.2,
+            "pattern": "14",
+            "required": true,
+            "description": "Identification code qualifier — 14 = GS1"
+          },
+          "date_of_preparation": {
+            "element_position": 4.1,
+            "pattern": "\\d{8}",
+            "required": true,
+            "description": "Date of preparation in format CCYYMMDD"
+          },
+          "time_of_preparation": {
+            "element_position": 4.2,
+            "pattern": "\\d{4}",
+            "required": true,
+            "description": "Time of preparation in format HHMM"
+          },
+          "interchange_control_reference": {
+            "element_position": 5,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Interchange control reference — unique reference for the interchange"
+          },
+          "test_indicator": {
+            "element_position": 11,
+            "pattern": "1",
+            "required": false,
+            "description": "Test indicator — 1 = Interchange is a test"
+          }
+        }
+      },
+      "UNH": {
+        "segment": "UNH",
+        "required": true,
+        "description": "Message Header — identifies the beginning of a message with reference number and message type",
+        "subfields": {
+          "message_reference_number": {
+            "element_position": 1,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Unique message reference number"
+          },
+          "message_type": {
+            "element_position": 2.1,
+            "pattern": "IFTMIN",
+            "required": true,
+            "description": "Message type — IFTMIN = Instruction message"
+          },
+          "message_version_number": {
+            "element_position": 2.2,
+            "pattern": "D",
+            "required": true,
+            "description": "Message version number — D = Draft version/UN/EDIFACT Directory"
+          },
+          "message_release_number": {
+            "element_position": 2.3,
+            "pattern": "10B",
+            "required": true,
+            "description": "Message release number — 10B = Release 2010 - B"
+          },
+          "controlling_agency": {
+            "element_position": 2.4,
+            "pattern": "UN",
+            "required": true,
+            "description": "Controlling agency — UN = UN/CEFACT"
+          },
+          "association_assigned_code": {
+            "element_position": 2.5,
+            "pattern": ".{1,6}",
+            "required": false,
+            "description": "Association assigned code"
+          }
+        }
+      },
+      "TSR": {
+        "segment": "TSR",
+        "required": false,
+        "description": "Transport Service Requirements — specifies insurance services and additional service codes",
+        "subfields": {
+          "contract_and_carriage_condition_code": {
+            "element_position": 1.1,
+            "pattern": "",
+            "required": false,
+            "description": "Contract and carriage condition code (C536/4065). Not used in standard implementation."
+          },
+          "contract_and_carriage_condition_code_list": {
+            "element_position": 1.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code (C536/1131). Not used."
+          },
+          "contract_and_carriage_condition_agency": {
+            "element_position": 1.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code (C536/3055). Not used."
+          },
+          "service_requirement_code_1": {
+            "element_position": 2.1,
+            "pattern": "(29|R[0-9]{2})",
+            "required": true,
+            "description": "Service requirement code (C233/7273). 29=Insure goods during transport, R01-R52=Road Booking additional services"
+          },
+          "service_requirement_code_1_code_list": {
+            "element_position": 2.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code (C233/1131). Not used."
+          },
+          "service_requirement_code_1_agency": {
+            "element_position": 2.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code (C233/3055). Not used."
+          },
+          "service_requirement_code_2": {
+            "element_position": 2.4,
+            "pattern": "",
+            "required": false,
+            "description": "Second service requirement code (C233/7273). Not used."
+          },
+          "service_requirement_code_2_code_list": {
+            "element_position": 2.5,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code for second service requirement (C233/1131). Not used."
+          },
+          "service_requirement_code_2_agency": {
+            "element_position": 2.6,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code for second service requirement (C233/3055). Not used."
+          },
+          "transport_service_priority_code": {
+            "element_position": 3.1,
+            "pattern": "",
+            "required": false,
+            "description": "Transport service priority code (C537/4219). Not used."
+          },
+          "transport_priority_code_list": {
+            "element_position": 3.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code (C537/1131). Not used."
+          },
+          "transport_priority_agency": {
+            "element_position": 3.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code (C537/3055). Not used."
+          },
+          "cargo_type_classification_code": {
+            "element_position": 4.1,
+            "pattern": "(Z[1-5])",
+            "required": false,
+            "description": "Cargo type classification code (C703/7085). Required when service code=29. Z1=Ordinary new commercial goods, Z2=Used trading goods, Z3=High Risk goods, Z4=Fragile goods, Z5=Household goods and motor vehicles."
+          },
+          "cargo_type_code_list": {
+            "element_position": 4.2,
+            "pattern": "",
+            "required": false,
+            "description": "Code list identification code (C703/1131). Not used."
+          },
+          "cargo_type_agency": {
+            "element_position": 4.3,
+            "pattern": "87",
+            "required": false,
+            "description": "Code list responsible agency code (C703/3055). Required for TSR++29. 87 = Assigned by carrier."
+          }
+        }
+      },
+      "TOD": {
+        "segment": "TOD",
+        "required": false,
+        "description": "Terms of Delivery or Transport — specifies Incoterms and Combiterms",
+        "subfields": {
+          "delivery_or_transport_terms_function_code": {
+            "element_position": 1,
+            "pattern": "6",
+            "required": false,
+            "description": "Delivery or transport terms function code (4055). 6=Delivery condition."
+          },
+          "transport_charges_payment_method_code": {
+            "element_position": 2,
+            "pattern": "",
+            "required": false,
+            "description": "Transport charges payment method code (4215). Not used."
+          },
+          "delivery_or_transport_terms_description_code": {
+            "element_position": 3.1,
+            "pattern": "(CFR|CIF|CIP|CPT|DAP|DDP|DPU|EXW|FAS|FCA|FOB|[0-9]{3})",
+            "required": false,
+            "description": "Delivery or transport terms description code (C100/4053). Incoterm code or numeric Combiterm code."
+          },
+          "delivery_terms_code_list": {
+            "element_position": 3.2,
+            "pattern": "(ZCT)?",
+            "required": false,
+            "description": "Code list identification code (C100/1131). Leave blank for Incoterms. Use ZCT for Combiterms."
+          },
+          "delivery_terms_agency": {
+            "element_position": 3.3,
+            "pattern": "",
+            "required": false,
+            "description": "Code list responsible agency code (C100/3055). Not used."
+          },
+          "delivery_terms_description_1": {
+            "element_position": 3.4,
+            "pattern": "",
+            "required": false,
+            "description": "Delivery or transport terms description (C100/4052). Not used."
+          },
+          "delivery_terms_description_2": {
+            "element_position": 3.5,
+            "pattern": "",
+            "required": false,
+            "description": "Delivery or transport terms description 2 (C100/4052). Not used."
+          }
+        }
+      },
+      "TMP": {
+        "segment": "TMP",
+        "required": false,
+        "description": "Temperature — specifies temperature requirements for transport equipment (e.g., reefer containers)",
+        "subfields": {
+          "temperature_type_code_qualifier": {
+            "element_position": 1,
+            "pattern": "\\d{1,3}",
+            "required": true,
+            "description": "Temperature type code qualifier"
+          },
+          "temperature_degree": {
+            "element_position": 2.1,
+            "pattern": "-?\\d{1,15}",
+            "required": false,
+            "description": "Temperature degree (composite C239, first sub-component). The temperature setting value."
+          },
+          "measurement_unit_code": {
+            "element_position": 2.2,
+            "pattern": "CEL",
+            "required": false,
+            "description": "Measurement unit code (composite C239, second sub-component). CEL = degree Celsius"
+          }
+        }
+      },
+      "UNT": {
+        "segment": "UNT",
+        "required": true,
+        "description": "Message Trailer — identifies the end of the message and provides segment count",
+        "subfields": {
+          "number_of_segments": {
+            "element_position": 1,
+            "pattern": "\\d{1,10}",
+            "required": true,
+            "description": "Number of segments in a message, including UNH and UNT"
+          },
+          "message_reference_number": {
+            "element_position": 2,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Message reference number — must match the reference in UNH"
+          }
+        }
+      },
+      "UNZ": {
+        "segment": "UNZ",
+        "required": true,
+        "description": "Interchange Trailer — identifies the end of the interchange and provides message count",
+        "subfields": {
+          "interchange_control_count": {
+            "element_position": 1,
+            "pattern": "\\d{1,6}",
+            "required": true,
+            "description": "Number of messages in the interchange"
+          },
+          "interchange_control_reference": {
+            "element_position": 2,
+            "pattern": ".{1,14}",
+            "required": true,
+            "description": "Interchange control reference — must match the reference in UNB"
+          }
+        }
+      }
+    },
+    "confidence_score": 0.9
+  }
+}

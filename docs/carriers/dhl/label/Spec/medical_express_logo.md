@@ -4,30 +4,31 @@
 Medical EXPRESS Logo
 
 ## Field Description
-A heart shape logo with a pulse line transitioning through it, used to identify Medical Express shipments which may contain life-saving commodities and/or temperature-sensitive items requiring highest priority handling.
+A heart shape with a pulse line logo that identifies Medical Express shipments containing life-saving commodities (vaccines, medicines) and/or temperature-sensitive items. Placed adjacent to (above) the scannable Piece Identifier barcodes to ensure visibility to operations teams. This logo is unique to Medical Express shipments to serve as a distinct priority signal.
 
 ## Format & Validation Rules
-- **Data Type:** graphic/logo
+- **Data Type:** graphic/image
 - **Length:** N/A
-- **Pattern/Regex:** Not specified in spec
-- **Allowed Values:** Heart shape with pulse line graphic (approved graphical file)
+- **Pattern/Regex:** N/A
+- **Allowed Values:** DHL-approved graphical file (heart shape with pulse line); must comply with Corporate Branding guidelines
 - **Required:** conditional — required for Medical Express shipments only
 
 ## Examples from Spec
-No text examples; described as "heart shape with a pulse line transitioning through it."
+No textual examples; logo is a heart with pulse line graphic.
 
-## Position on Label
-Adjacent (above) to the scannable Piece Identifier barcodes. Must not impact or overlap necessary quiet zones of adjacent barcodes.
+## ZPL Rendering
+- **Typical Position:** adjacent to (above) the Piece Identifier barcodes
+- **Font / Size:** Minimum area 15x15 mm²; original proportions must be maintained
+- **Field Prefix:** None — graphic element
+- **ZPL Command:** ^GFA (graphic field) or ^IM (image recall)
 
 ## Edge Cases & Notes
-- Minimum area of 15×15 mm² must be complied with
-- Original proportions must be kept
-- Unique to Medical Express shipments — must remain a distinct signal for priority
-- Specified in compliance with applicable Corporate Branding guidelines
-- Available as an approved graphical file for operational use
+- Must not impact or overlap necessary quiet zones of adjacent barcodes.
+- The logo is available as an approved graphical file for operational use.
+- Minimum 15x15mm² must be complied with.
 
 ## Claude Confidence
-HIGH — spec clearly describes the logo, its purpose, placement, and minimum size
+HIGH — clearly specified with size requirements and positioning rules
 
 ## Review Status
 - [ ] Reviewed by human

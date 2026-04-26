@@ -3,37 +3,42 @@
 ## Display Name
 Service Icon
 
-## Field Description
-A graphical icon indicating the class and speed of UPS service. It consists of three fixed positions representing class of service, time of day, and day of delivery.
+## Group Description
+A graphical icon representing the UPS service class, positioned to the right of the UPS Service Title and human-readable interpretation. The icon consists of three fixed positions indicating class of service, time of day, and day of delivery.
 
-## Format & Validation Rules
-- **Data Type:** alphanumeric (graphical rendering)
-- **Length:** 3 positions
-- **Pattern/Regex:** Position 1 = class of service (1, 2, or 3); Position 2 = time of day (+, A, P, or Space); Position 3 = day of delivery (S or Space)
-- **Allowed Values:** 
-  - Position 1: 1, 2, 3
-  - Position 2: +, A, P, [Space]
-  - Position 3: S, [Space]
-  - Exceptions: Black 0.35 inch square for UPS GROUND (U.S.) and UPS® STANDARD (INTERNATIONAL); Open circle for Economy (Canada); Blank for UPS Today™ (Poland)
+## Sub-Fields
+
+### service_icon
+- **Data Type:** string
+- **Length:** 3 positions (fixed)
+- **Pattern/Regex:** `^[123][+AP\s][S\s]$`
+- **Allowed Values:** Position 1: 1, 2, or 3 (class of service); Position 2: +, A, P, or space (time of day); Position 3: S or space (day of delivery — S for Saturday)
 - **Required:** yes
+- **Description:** Three-position service icon indicating class of service, time of day, and delivery day. Exceptions: black 0.35 inch square for UPS GROUND (U.S.) and UPS STANDARD (International); open circle for Economy (Canada); blank for UPS Today (Poland).
+- **Detect By:** spatial:right of service title, fixed icon area
+- **Position on Label:** Right of the Service Title and Human-Readable Interpretation, right-justified with the right edge of the Tracking Number Block
+- **ZPL Font:** Not specified
+- **Field Prefix:** None
+- **ZPL Command:** ^GFA (graphic) or ^FD (text field)
 
 ## Examples from Spec
-"1" (UPS EXPRESS), "1+" (UPS EXPRESS PLUS), "1P" (UPS SAVER), "1 S" (Saturday Delivery), "1PS" (Saturday with Saver), "2" (UPS EXPEDITED), "3" (UPS 3 DAY SELECT), "Black Square" (UPS STANDARD)
-
-## Position on Label
-Beneath the MaxiCode™ Symbology and Postal Barcode Blocks. Must print to the right of the Service Title and Human-Readable Interpretation. Right-justified with the right edge of the Tracking Number Block.
-
-## ZPL Rendering
-- **Typical Position:** Middle-right area, right of service title, right-justified with tracking number block
-- **Font / Size:** Font Size = 30 pt. (for text-based icons)
-- **Field Prefix:** None — graphic or large text
-- **ZPL Command:** ^GFA (for graphic icons like black square) or ^FD (text field) for numeric/letter icons
+Service icon values from spec tables:
+- `1+` — UPS EXPRESS PLUS
+- `1` — UPS EXPRESS, UPS EXPRESS 12:00
+- `1S` — UPS EXPRESS with Saturday Delivery
+- `1P` — UPS SAVER, UPS EXPRESS FREIGHT
+- `2` — UPS EXPEDITED
+- `3` — UPS 3 DAY SELECT
+- Black Square — UPS STANDARD
 
 ## Edge Cases & Notes
-The three positions remain fixed. Special exceptions exist for UPS GROUND (black 0.35 inch square), Economy Canada (open circle), and UPS Today Poland (blank). Saturday delivery adds "S" in position 3.
+- UPS GROUND (U.S.) and UPS STANDARD (International) use a black 0.35 inch square instead of text.
+- Economy (Canada) uses an open circle.
+- UPS Today (Poland) has a blank icon.
+- Each of the three positions remains fixed in the layout.
 
 ## Claude Confidence
-HIGH — spec clearly defines the three positions with allowed values and exceptions
+HIGH — spec explicitly defines the three-position icon structure with allowed values and exceptions.
 
 ## Review Status
-- [ ] Reviewed by human
+- [x] Reviewed by human
