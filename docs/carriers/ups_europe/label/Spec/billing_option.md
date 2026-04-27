@@ -11,7 +11,7 @@ A text description of the contents/commodities being shipped in the package.
 - **Length:** variable
 - **Pattern/Regex:** Not specified in spec
 - **Allowed Values:** Not restricted
-- **Required:** yes
+- **Required:** no
 
 ## Examples from Spec
 - `BILLING: P/P*`

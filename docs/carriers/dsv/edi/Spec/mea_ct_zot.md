@@ -7,7 +7,7 @@ Measurements - Outturn Packages Count
 MEA
 
 ## Required
-no
+yes
 
 ## Description
 Measurement for number of outturn packages at line item level. DSV-specific code, use as agreed.

@@ -7,7 +7,7 @@ Measurements - Loading Meters
 MEA
 
 ## Required
-no
+yes
 
 ## Description
 Measurement for loading meters at line item level (SG21). Not used for Air, Sea, or Courier shipments.

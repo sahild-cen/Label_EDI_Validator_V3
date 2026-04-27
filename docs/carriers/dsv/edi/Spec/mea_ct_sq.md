@@ -7,7 +7,7 @@ Measurements - Pallet Spaces Count
 MEA
 
 ## Required
-no
+yes
 
 ## Description
 Measurement for number of pallet spaces at line item level. Not used for Air, Sea, or Courier shipments. Requires special pallet space agreement.

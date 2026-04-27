@@ -7,7 +7,7 @@ Measurements - Volume
 MEA
 
 ## Required
-no
+yes
 
 ## Description
 Measurement for volume in cubic meters at line item level (SG21). At least one of volume, loading meters, or dimensions is required.

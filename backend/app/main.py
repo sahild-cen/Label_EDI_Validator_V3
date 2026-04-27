@@ -25,18 +25,18 @@ app.include_router(corrections_router)
 app.include_router(carrier_setup_router)
 
 
-@app.on_event("startup")
-async def startup():
-    """Initialize the learning system on app start."""
-    try:
-        from app.services.rule_extractor import init_learning
-        from app.database import get_database
-        db = get_database()
-        init_learning(db)
-        print("[Startup] Learning system initialized")
-    except Exception as e:
-        print(f"[Startup] Warning: Learning system init failed: {e}")
-        print("[Startup] App will continue without learning features")
+# @app.on_event("startup")
+# async def startup():
+#     """Initialize the learning system on app start."""
+#     try:
+#         from app.services.rule_extractor import init_learning
+#         from app.database import get_database
+#         db = get_database()
+#         init_learning(db)
+#         print("[Startup] Learning system initialized")
+#     except Exception as e:
+#         print(f"[Startup] Warning: Learning system init failed: {e}")
+#         print("[Startup] App will continue without learning features")
 
 
 @app.get("/")

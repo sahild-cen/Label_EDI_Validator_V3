@@ -7,7 +7,7 @@ Measurements - Net Weight
 MEA
 
 ## Required
-no
+yes
 
 ## Description
 Measurement for net weight in kilograms at line item level. Only required for customs declaration purposes.
